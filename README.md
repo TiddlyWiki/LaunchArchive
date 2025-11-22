@@ -12,7 +12,7 @@ Press, blogs, tweets and podcasts from TiddlyWiki's launch in 2004
 
 2004-09-24 a.wholelottanothing.org-archives.blah-008047:
 
-![2004-09-24 a.wholelottanothing.org-archives.blah-008047](https://github.com/TiddlyWiki/LaunchArchive/blob/main/content/2004-09-24 a.wholelottanothing.org-archives.blah-008047.png)
+![2004-09-24 a.wholelottanothing.org-archives.blah-008047]("https://github.com/TiddlyWiki/LaunchArchive/blob/main/content/2004-09-24 a.wholelottanothing.org-archives.blah-008047.png")
 
 2004-09-24 blog.sven-tissot.de-:
 
