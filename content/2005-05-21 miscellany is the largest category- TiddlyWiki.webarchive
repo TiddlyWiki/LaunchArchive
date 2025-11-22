@@ -1,0 +1,637 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO!’body {
+	color:#333;
+	background-color:#999 ;
+	background-image:url("images/bg-lines.jpg");
+	background-repeat: repeat-y;
+	background-position: right top;
+	margin:0px;
+	padding:0px;
+	font:11px verdana, arial, helvetica, sans-serif;
+	}
+/* body for archives and comments */
+body.plain {
+	color:#333;
+	background-color:#FFF ;
+	background-image:none;
+	margin:10px;
+	padding:0px;
+	font:11px verdana, arial, helvetica, sans-serif;
+	}
+	
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font-size:28px;
+	font-weight:900;
+	color:#ccc;
+	}
+h2 {
+	font:bold 12px/14px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 5px 0px;
+	padding:0px;
+	}
+p {
+	font:11px/20px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 16px 0px;
+	padding:0px;
+	}
+.Content>p {margin:0px;}
+.Content>p+p {text-indent:30px;}
+
+
+a {
+	color:#930;
+	font-size:11px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	text-decoration:none;
+	font-weight: 500;
+	}
+a:link {color:#930;}
+a:visited {color:#930;}
+a:active { color: #FC6;  }
+a:hover {border-bottom: 1px solid #FC6;} 
+
+/* classes for the content box */
+.topbar-mid {
+	color:#FFF;
+	background-color:#690;
+	border-top: 5px solid #6C0;
+	padding: 5px;
+	height: 15px ;
+	}
+
+.header {
+	background-color: #666;
+	width: auto;
+	min-width: 500px;
+	height: 180px ;
+	border-top: 2px white solid ;
+	border-bottom: 2px white solid ;
+
+	}  
+.date {
+	color:#FFF;
+	background-color:#F60;
+	border-top: 5px solid #F93;
+	padding: 5px;
+	font-family:verdana, arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	}
+	
+.blog {
+  	padding:0px;
+	background:#FFF;  							
+	}	
+
+.blogbody {
+	font-family:verdana, arial, sans-serif;
+	color:#666;
+	font-size:small;
+	font-weight:normal;
+	background:#FFF;
+	line-height:16px;
+	padding: 4px;
+	}
+
+.blogbody a,
+.blogbody a:link,
+.blogbody a:visited,
+.blogbody a:active, {
+	font-weight: normal;
+	border-bottom: 1px dotted #cc9;
+/*	text-decoration: underline; */
+	}
+.blogbody a:hover {
+	font-weight: normal;
+	border-bottom: 0px dotted #cc9;
+/*	text-decoration: underline; */
+	}
+
+.title	{ 
+	font-family: verdana, arial, sans-serif; 
+	font-size: small; 
+	color: #000000; 	
+	text-transform:uppercase;				
+	}
+	
+.posted	{ 
+	font-family:verdana, arial, sans-serif; 
+	font-size: x-small; 
+	color: #003366; 
+	margin-bottom:25px;
+		}
+
+/* classes for the col1 */
+.topbar-left {
+	color:#FFF;
+	background-color:#690;
+	border-top: 5px solid #6C0;
+	padding: 5px;
+	height: 15px ;
+	}
+	
+.topbar-left a {
+	color:#6C0;
+	font-size:11px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	font-weight:600;
+	text-decoration:none;
+	}
+.topbar-left a:link {color:#6C0;}
+.topbar-left a:visited {color:#6C0;}
+.topbar-left a:hover {background-color: #690;
+	border-bottom: none;
+	}
+
+
+.bio {
+	color:#CCC;
+	background-color:#000;
+	height: 170px;
+	padding: 5px;
+	border-top: 2px white solid;
+font-size:10px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	font-weight:500;
+
+	}
+
+.bio a:link {color:#6C0; font-size:10px;}
+.bio a:visited {color:#6C0;font-size:10px;}
+.bio a:hover {border-bottom: #690;font-size:10px;
+	}
+
+.leftbar {
+	background-color: #999 ;
+	border-top: 2px solid white;
+	}
+
+.lside {
+	color: #690;
+	background-color: #ccc;
+	border: 2px white solid;
+	margin: 8px;
+	padding: 5px;
+	}
+.lsidetitle {
+	color: #690;
+	font:14px verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	}
+	
+.syndicate {
+	font-family:verdana, arial, sans-serif;
+	font-size:xx-small;
+	font-weight:bold;		
+  	line-height:140%;
+  	padding:2px;
+  	margin-top:10px;
+  	text-align:center;
+ 	}	
+		
+.powered {
+	font-family:verdana, arial, sans-serif;
+	color:#CCC;
+	font-size:xx-small;
+	font-weight:bold;
+	border-top:1px solid #666;
+	border-bottom:1px solid #666;		
+	line-height:140%;
+	text-transform:uppercase; 
+	padding:2px;
+	margin-top:10px;
+	text-align:center;
+	letter-spacing: .2em  					
+	}
+
+/* classes for the col2 */
+.topbar-right {
+	color:#fff;
+	background-color:#F60;
+	height: 20px ;
+	padding: 5px;
+	}
+
+.cal{
+	color:#fff;
+	background-color:#F93;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding: 5px;
+	height: 170px;
+	}
+
+.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:9px;
+		font-weight:normal;
+  		background:#FF9933;
+  		line-height:140%;
+  		padding:2px;
+ 		text-align:center; 
+		}
+	
+.calendarhead {	
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:10px;
+		font-weight:bold;
+  		background:#FF9933;
+  		line-height:140%;
+  		padding:2px;					
+		}	
+
+.side {
+	font-family:verdana, arial, sans-serif;
+	color:#333;
+	font-size:x-small;
+	font-weight:normal;
+ 	line-height:140%;
+ 	padding:0px 2px 0px 7px; /* top right bottom left */
+ 	margin-bottom: 10px;   
+	}	
+		
+.sidetitle {
+	font-family:verdana, arial, sans-serif;
+	color:#690;
+	font-size:small;
+	font-weight:bold;
+  	padding:2px;
+	}		
+		
+/* All the content boxes belong to the content class. */
+#content {
+	position:relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+	width:auto;
+	min-width:450px;
+	margin:0px 200px 0px 190px; /* top right bottom left */
+	border-top:none;
+	border-left:2px solid white;
+	border-right:2px solid white;
+	border-bottom:2px solid white;
+	background-color:white;
+	padding:0px;
+	z-index:3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+	}
+
+#col1 {
+	position:absolute;
+	width:190px;
+	top:0px;
+	left:0px;
+	right:0px;
+	border:0px solid white;
+	background-color:#999;
+	padding:0px;
+	z-index:2;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:190px;
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#navAlpha {width:190px;}
+		
+#col2 {
+	position:absolute;
+	width:200px;
+	top:0px;
+	right:0px;
+	border: none;
+	padding:0px;
+	z-index:1;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:200px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#navBeta {width:200px;}
+
+.angry { color:#C66;
+           }
+.resigned { color:#9C6;
+		}
+
+.blogbody blockquote { 
+	margin-left: 15px;
+	border: dashed 1px #F60; 
+	width: auto;
+	padding: 3px;
+	font-family:verdana, arial, sans-serif;
+ 	font-size: 11px;
+	}
+
+#banner {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:14pt;
+		font-weight:normal;
+		border-top:3px solid #6C0;
+  		background:#666;
+  		padding:5px; 
+		letter-spacing: .2em; 		
+		}
+	
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:verdana, arial, sans-serif;
+		font-size: x-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+		
+		
+	
+.comments-body {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;			
+		}		
+
+.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#036;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;			
+		}	
+
+.trackback-body {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;			
+		}		
+
+.trackback-url {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;
+  		border:1px dashed #CCC;			
+		}
+
+.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;			
+		}
+
+		
+.comments-head	{ 
+		font-family: georgia, verdana, arial, sans-serif; 
+		font-size: small; 
+		color: #666; 
+		border:1px solid #999;
+		padding:5px;
+		font-weight:normal;
+		margin-top:10px;		
+		}		
+
+#banner-commentspop {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-top:3px solid #6C0;
+  		background:#690;
+  		padding:15px; 
+		}
+div.j {color:#C33;
+font:11px verdana, arial, helvetica, sans-serif;}
+
+div.b {color:#36C;
+font:11px verdana, arial, helvetica, sans-serif;}
+_+http://misc.wordherders.net/styles-site.cssXtext/cssÓO‰ÿØÿà JFIF   d d  ÿì Ducky     <  ÿî Adobe dÀ   ÿÛ „ 		
+
+
+
+ÿÀ  Iô ÿÄ ³                              !1AQaq‘±"2¡Ár²4ÑáBRb‚’Âs5$ñ¢#c³6     !1ğAQq2a¡±ÁÑ4‘"Br3á²ÂâñR‚C5’¢ÒSò#ÿÚ   ? óˆ €Òi<¸Ë€Üj hæI ö !]u&À¾ÂêF2ê9\Ùe¤¦¯…¿ÚäŒn{Æ>¥·›à÷Å1Ø(€Î¥ÆTRÎıĞÜ~T,§Pb¥˜{ì³sÛFÇR†€ÑBê¼{P1†ÚêÖËbè¦&o%—v÷>B4{‰¥-İ[Éms-¼ŸN,u;A¢’ €—g}ËğàĞÓA¥jV^¿šGO%²ŞßQ·¨<œ×5Å®sMïJRŠ’ÜÉ“ÊÉ€	4WMàô—s’¥ÀğÜŞÊ¬'6…Ö¸%ÇÛò+×¨R–kX° @ @ @ @ @ @ @ @ @ @ @ @2³¾8ã4cİÇ¸8 (zŒNş£ÉpÒÖÏî‡i«šu¡í@w²:Î9ãkct•l­ Ã´;Ğ¡•Çâ@i3b„H#i½‘±Î íó]|Pø‡^Ûgqì¹kLo7A+K‰ÜÙKìÔÔv =Ycd³ÍH÷²ìã=ÅÄè-@Q ¬7á]öÏ°/çÿ ®¿"÷³?WâõòĞì¹Ş8H+é­Èõtğ½ğ÷ué§˜ã°ç‡Í»eGºÏxú8}*~m¨òè}²ÙöşÃ½DñÏ+ø'øjù¾Kõ+×î)é¼h¯6ÿ mù„öéñQo-mŸÖ:¿òäµæ?3‡¨YX6V¦vÈ[ôÑ92•RUÖ¸¬bëœ^ó¬Øûy!t¶İ·‹kU^it,P¾8âë8òOD[;G\Ë´4jçv¥¯ÖÇO'µ½ÈšÛTI¿ÛñòRŸ5½õXï™ê«Äì‡Ü~®²¿ŸbÚÖÂ…×¢ŞM5!ÔîZÚoİ»=o‰Ùˆq"d–Ø˜ŞX÷áÄTşE‘V¯_8©F)§İó+ÆËZÊDvAi%û"Œ—Bàu®µ •~ÍMõé\æ±bù¢W9(eï8^DÈ®_>+à®è.•´ÆrŞÉ*“”Sfl¡d×Lÿ «ZwW<ÂùUL§ëô.“Œ[F/"dW/ŸN•ğ]h.•´ÆrŞÅRrŠlâ­’wXÆEiæ4Ÿ1€öÕóº>q+/àxà–ïR½CsÇQ
+ÎÍrÈœh×V´îZúıC¦™Mo_<Û>¶tÈZi€m|·
+¶¿HPr½sÔW™x–óš-ã[w’g³³Š[v¸’Ô8×ÒÕŸ§×ê-®Æ±Åcg~HaläŸ gäNÀKğxğ¢½ËuşuMËÅÿ 2Zmâ_QÒöÒŞÚİœLîïÓN*¿/×[¨¶_ú×DsU²œŸanB €  €  €  €  €  €  €  € (r×5ÆƒúMü¨
+î¬½v?<ğXì0]1úh_a‘úˆPçñÖñ25…àUÃvÇSÃ‰ğÃ¨äÑğùEƒôö±ÎğñõÑ6<ş7%íec¢s† ƒ¡äZàĞëÅcÉe®rM™¾c –3°±şó·¸ºT~ÕIÿ èò5×Xæ
+2—S®§±ãÎ ÒÎCØó÷Bù.z³¨å^öPÕx×p¾çÙ›Å ?êp^ré=>­Ö÷=Ÿ.“Ê_˜5ÄÆØ­Ÿ;ôİS_ÙjïÚìº5G«ŞÏu2â’Š7¿y~0<ñpc¦…EËkPÖğ®§%ödò•‹1ŞpwøFøÿ 9Wcÿ $ú~H¿[§aµÛœ{­C¶ÈßËUÆ¿:}Z½¬Åü±ûO-û–quŸo}fÒàv±ÔÜæšJĞ¯S¥Õ´šÌ–äÉTáaßğÜx7ëT¹ÿ Š¿_ğ‘ê÷¢º9ÃØK\8¾‚Ê£8ğÉeÜSXd¬|“#Şw8Ö¤ı’³9¥Q†’QŠÂXıäA|R­¤w¾ÇÜ>ifvqã­ Tùw4ªÂ·-ßk#¦ø¤‘øè¿{î•œ}4½_¼‰µc#øÙ|G°.ùWÓC§X£ÀŒã?ï}Ò¸çM/Wï!¨ğ3ÆËâ=wÊ¾š:ÅbÂ/2î6òqğ®¹•Ş]}xÇÛ°öéb,¹ó›4ÓÛh±ªù"UW]Ë­û·|J.)HªÇ4· Æ-.ĞÒ¾ŸšÉKI&·>z.Şó[,21	í[«á5õG©`r«7G>¯ğöì*Q./I3ğ[ø;ùV!ñYêş"m.öJ³’;¨#|šÉÔĞ8¬Í}RÓ[(ÇÃ5ììéÔCl\$ÒÜÊ«ë>áÏ Ñ}G.Òù(ş'µ÷—i¯†8#«Ä¡ @ @ @ @ @ @ @ @¹l5Ä±Iò¤}á4×˜Ayt¶ãï…‚6¾Q	vÖğğ(ùüÕ´n{°ÑÇcsœÖB@ŸºÒ€éêŒıî×YØïÛ¨òáiîäÔ¸úÓªbº6ï†HœÑRv9¾¿t -lú¯©%u$XÛÄÔšxrª××7·{‡ny à8tqˆüŸhıĞ¾O}D*÷²†«ÆŒb%†H¨Üî+¾{K…‘µuû×Oaîª8jHÛ$æÛÙ6~•<)ƒ¿Rì—Vß[İÓĞsBâŸ1uş!Ÿf?©u¢úù~iüOkıWë9;ü#|œ«1ÿ ’}?;_­Ó°‹œÿ /ó1¸Prî4ìZvëªó|™­¯·==[É¥lx¸Y;ùf‚fÎK¢¥¯×R±¹½pªÈ:ÒSì^Â¾¡(µÃ¼ç†ÔNŞd6ƒÖ¦çûë}Y­_Q
+if›Êh£…k^«gQ¬®ªøÛÙèëî,ÎÅ’E”.‡&ÈÜAskR8|%Pæ«tNi47şdCl¸«o¦ó	çR°HàÎA4áØºåzj“Œx»p³¼öˆG…<c?ï}Ò¤çM/Wï#­G˜Èş6_ì¾UôĞéÖ(ğ#8ÏÇEûßt®9ÇÓKÕûÈj<ÆGñ²ø`]ò¯¦‡N±G°Ñ€e˜ğhÚÒVo?µµ×[ÏÁêå¹!~<\™#–²ÈiÏZŸCQ^­ÓÁ8ıÈwuzÈ¦¬áÃ[ÇÊòóM<ŸWKM~•kÎãåÏ¶8_÷/'i:C8nJx]ğÉJxù?»øû³ó8œ3Z}‡,Ş@û_R³ı¼ÿ Sı?Äw¤ë1Šü=Ï‡ÔW\ëõjïø£İOŠ%bú2à@ @ @ @ @ @ @ @vÈEZÚ !\ŞÉ	4k9UıÉ÷Dase¡Õ“¢Vüıü&9d-‚W5•¥* ­COi@NÇÛİXDÏ”¸–ï5¤1Àm1hkúÔÓTÑ|ÃßóN™Ó5®‘¯'xkµñâ€õı=ƒÇŞÃó2?{økJx€€¿f+¦.Gœ?P€áü: <ög£ï­nš,šn-¥©Â•osª€¢¹¶¸¶”Åq¢‘¼ZáB€ïiùx]—»q&µ§aìY:îWçØ§ÅŒ,nÏ_y^Ú8Şrqµ¸}¼ÂFŠò#´sY¥õ¸2[ ¤°myvû™ˆÚ £[ÆŠ=†:xp§–÷³šªPX:Kó-oåÒ£uWºŠ½<¯ƒPîâÎ[xÇo§'£âÉ©½­ˆµÙÃôëûUáE"åøÔ»ø½Xôc~~^WßâÉ‹Kém‰Ûï0ñi]k¹t5nÉ.³ÛiS:Üå%š3#iø¨jO±VÒrhU.9>9#ŠôÊ//i	ä‚A$f„qˆì+KS¦…Ğá–âYÁIa“Ÿ™°†FóÅÕ¯ÑEA/½&ãØWZE¬…Ãâ¸|N“^uâµõXÙS¯rùn,N	Çó™iãn?‹ó,EÈÿ sÙüÅoé=$W_xÛ–°7n›+^TîZ0åÉiİ2–s×í&TıÎÉG2ÓÆÜæYË5şç³ùˆ¤ô‘]|MãnZÀİºl­yS¹hÃ—%§tÊYÏ_´™S÷8[%ËOqü_™g.@×ûÏæ!ş“Òs—-¾'ÆØvŠº¼E8QMO$á²2”ø¸}¾Ó¨é°Óoq®-ppâG¡nJ*I§¹–ZÉ:L }ÄSyT1ÔSwŠv,jù;S¯dñÕ»¼®´ø‹YŞG–åÏº7]Pà8ğZéiò›ÊÆ	c^#Âm{zë¢Ê´40:*_ËÖ™<<ñÕOLÚ^ü¼r3fï3iM<šŞ_çÎ2âÇ£ö‹*âiçqi @ @ @dH T Æñµƒ¤Ö·P€f…ñƒÀ½¥µõ…zŠìÙF]Í3•4÷3’˜è  €  €  € µ¼BKÚVœI(	ÍœDö‚y6š 9ßÏ¸aXu.çNÄk^›9*¶8ıĞhéKˆ¡@YYò8ƒä»sÎíÎŒ´m=<è€Ô=;˜ÁOó—Q	±¯nÙg„UÍ û»›Æˆ±_@øDÑ9¯‚QF‘İÚ
+ç›%42´„F¬{t%§BÓ_Ñ#’×Øt6(Û>ÈÌøŞıKc½§
+ƒÄ <Î!ˆÏÅg#¶¿p|S3ƒã©÷‡¨è€÷Qß2Û.n]¶6–‡}İÔÕ®-±÷x&Ş¼ùsÛ!p×vú{¨›  €  €  € Ì3„¥8Ñ²v’9Áp­‹“Šk‰uuı‡œK8ë66×-ˆLbx„ğ´í>•}n\
+K‹³;~ÃÎ%œgiÉJtz+?OŞ7lW3:V°>V)ÛÅ«åõœÏ]CÌ¡ğº)¬ºØïK§¬ÒÛ‚»½[‰dacİ)àA»iVÒ¤¿˜ë)©ÎÈB/)/nwIúeu‘d—OY‚÷ ûi\æ±­q¤¡˜*ÿ 3×OOB²)eµ¼–û\#”IÇâ1¯°–òöi#’Ág*Pkî¸óUuœËQ£U1Œ¤ã¿âˆìºjJ1]DLœ8hØÃIIŞ ş«šuroÏ„bº±ÿ É’Õ+‰`‰me¹Š'T5ïkIhMëæá\¤·¤Ù$dœÍŒVWï·ˆ¹ÌhiÔ'Q^@*œ³W-E*rÆ^wwœQcœrÈ‘E,®Ù#øíh$ĞwvË#™4—¤‘´·ˆ¡–Wì‰‘çƒZ	> –[,É¤½;’[Í¦µ¹‚tOŠ¼7´¶¾µÅZŠìğIK¹¦y§¹ˆí®dc¤'¾6üOkIÄ…ìï®-FRI¾¬‡$¶6!¶¹œ‘O”·âØÒêW¶‰mõ×ã’{^¤–öbkkˆDø‰Ô´¶¾´ªøX³	)w<ˆÉ=ÌÌ–×15¯–'±ø\æ)ë›j2M®Æ“ÜÎ£’"¢Òbı·~E×éÿ öCş¥ó9óaÚˆïcØòÇ´µí4s\(AïYŒ”–SÊgiä¾é˜áŠŞòıÌß%»I`<¨ÒãO/œçÓ”ç]	â3{~ÜõM¶£ÚmkÔÌ³C”`twc~?JãQÈ]n3Ó6¦»X—pŞTXØüíûm¢uâ}ò84kZx-½^¯È¥Ù%µuzK6YÃ²iÁÚÅ}5µİãala®ŠB ŞÜO%Ask'Llª·6ó•ÙQÜSŠÉ×#€±²‰å÷£Î/dD ]ÙÏ¹C¢ç7_%Š¾æpßg°ò½D¤ü;m°6±†êêôAç
+´)ë$.ïç«¥]uñğôìÔK‰¤³‚$¸¶?#”ÂäHó€q­i^ +•ó·EÃ];IU¸–	—4Ñ¦Úí—À+,  G¨•FzÜ£æVá	î—DEVÕ•„Îì ¸¶7w7µ¶®Ö9Ü\xs!Y×sWUUpvY×£»oá|)eœr8‰¬®cˆ¼IÔòf&ıªm2õÊXá”7®ÃªîRMöRtÍ‹%; ÖÜmÍ ’xi¹eCŸ](ñª[‡naÕI¬ğì#·¤ù{ªÉş®ĞÕĞ£šECïÊßÿ µ:öõÙø»ì?Y'õ++±œ!Å4â¥ÈM! í…€WyáíV-æ-jcDüO³¢øJï¾¢Šå¨N @u‚ãÉ.ÓWtöÿ aË‹ƒ¤:¹äğå¢4pÒ6Woi­5>¤²ÅZÊÎ—Škm&x¡pâ	w¦¨
+	ßÆİ>YY £€.${½ù”èÜ‡Ì4‹y[/0ÆÔ8x >QÓmeŞjŞİÒ7k½íh!öKŒ}Ô8¡‡¸â+,ƒGmáAâ€óñ\Z\ƒ¹ÁàÔ:ºÕ{×-½1g•h¥Í´­k¤?ó4Wã¾IñäÈÚö—	)Èq@yÌ¶_Ïc¬­\ñŒddIMÍ¨øj?DWDR €  €  €  €»yŒtıV1pwÙ©ªÀŠ“×[Ãâòöwì*,ù²Çac‘›-“\FÆİbŸ#han¦ƒU•¢«M5Iºõ
+[úóŸ°†¸Á¤ÉM}¡¢^ôŸân¢}¡|ï÷éÃó•5›—y§I•?Òw´.ÿ ¸ş›ıKâ{¬ğzËL5–.ƒä¶¼ó¦-p1Ò”Š¬iªÔN…+àVÒ½öMÇa,!¶›<w2ù1ÍdãJEcWmÖÂUÇ^ZÙöY&¬M,¼~ö+x®Ÿ¼¾t-¦Ù;j?Júm%“jS»=eÚÛk-a‹Ç[ÿ UŸx&¯ôgù_¸Yá}Äş§ÿ 1/Ùgİ;},{ß¼‡KàD®˜1[Es.Œid-?mÂ¿R§Ï”­”(ı²ûÏ‰Æ«2j+¼íanmz’íƒAå½ìğu=ª]Şn‚¶ÿ ÍıYGKŠ¤i<—‘á'nUû¤Ÿiµ‰Ô2]]Ü¤¦KW¦XŒ3Æ×‡¸ö*.ÅÁÕ¼_’ŠL}¾8Œ·lÒDhª@uIíªª£§œm²ıîÇöìì8Ä“Ÿn1±Ş˜²¬‚²öícH£]RM&ºt©Pæøëá{_Z=µÇ1ÎÔVGq8ÌÀÜ¤›ü‡ívâÊ­iÓ¤“Ó¬qÇ«¯¢,8¯-ğu“òÒfaŠïæXÛ‹)Í#}A÷H¦½œVg.†’r¯ËnÃzÿ 7oÄ†•[k$,òWîÁ_Lgq–'F#0€4Rjt4­ePQ\2RÊíØÏgT|È¬2I$²:I\÷š¹Ç‰%}%pPŠŒV.$’Â/°?á2Ÿaÿ øÊù¾qõ”~eûÈ§¨ıHôë<òúré}Ó-òc¼¿"¾Le¬ï'_¨/œçÒã•t¯Ç-¾ï‹û
+z§–£Úg¨Ún,ìr÷Ï.Jş·nåç$~]¶ÑÔWvïÓl”¢kÖäâş‹~û—_Û?O/ÎıÑ=Ñxy1Öv—8;ÜÜ‹f´×j{5!Q¦Úµ–ºáæd‰NQ²XY tËCs[Zw45à;´kKŸ6ô™}±&Õ~™×Œù©.ó­î·¼yl$ M4ª‡_¯òc:”ëÄv¾ÜwoÁÍ¶ğ¥˜åäõœÛ?ÌºÑÈ[İÿ ‰í«#¦GüvÑüª-ëêzvœÕâ™7!‹†\”·÷2ùv¶á›ƒuq- òà5T4\ÂPÓÆŠã›'í¤UÚÔRÚÊë|áP‹†‚!˜ˆK9í:}:­K¹J‡Ë~8ıìúzşDÒ£c­mSpÖÍ„MÙ»AÚ8npú‚oĞÜ%|g7ì_·à{¤Ç'½”Kè‹a @¢½ˆ =¯Bdb’ŞL\¤n©|@óSô %u-«æòüÀ+vµÀkAÚ€ªÊ;ûoBäŞí$ºk¢¼ÜùÀ ğ©ô >;gnÖúËky|È×¶uÓÃÒ€ıÒAiÄDğ<›¶ú¶Ï4{OaÎÔ,¶6³nÛCà€­êëÖÙôÄ·õR‰Ky¶6p4ïw‚@ @ @ @m,öÿ Ølâ.kœÉÜé"¶Ôòâ-uOúÛ$“IÁaãfv”_˜ß Ÿjq6’öÀûwFC-	«Ëˆàáù–v¡ju	U:ñ5-³êÇ †|s\-mí<Òú²ùsÓ3ÁÅÁšFÆ	/pmMF‚«ŸS9Â
+)Ëïõ,•uQm,všôÄğÃ’/šFÆÏ-ÃsÈh­G2ºçõNÍ> œŸÜ³Ú{ª‹pØmÓ“ÁZI%‘±°±à9Î‘Ì®yİ3™F)ÉålK=Gš˜·"V<ØÜá§³–î;wºbê¼PÚğU5ŠêµQ¶5ÊiC3éô2;8£5$³°¬ÉãmmÇA{Ñq µ”Ó¿G9jè5Ö\Úr¯¹ÛìEŠ­rßmÖ]Â÷5²5Î=À‚®êbå\’ŞâıÄ“Y‹=OŒ¿¼uÏ÷HcŞ ÙVœw…òún£OR¯Èœ±»Wğ²VÎÇéê9Ë}gŒÇCi†ü¹ït•£›¡÷I º•
+jô–êï•²ã§
+)oOvÕÕÖt«•’ry‰&;ë)®à¾tÑFù-ÉX^ĞZàE©çSENzKkªT¨ÊJ6&ÕÓ¹(¸áï+.çƒ#‹dï‘Œ¿µ×ŒäExµôÕOK¨pIºlÚ°¼/§ÃÒO¸O…û	°¾Âñøû³xËwZµŒ–	,5Ò¤hUau
+Ú•njÇ&šô‘IJ<QÆre“ZNü¼?5Fw´Ç#œHÁ®«ÉWekO?.RàO)-¡ÆKá¼ZZZŞB&¸eÔÖWBê8qÕmU©¶ê¥Á\Öî$YŒå(¼,?Ibã°²½^6á—LÙoMKk]]ØEV\Uú›kâ­ÁÖó)v÷wúÈ>ôä²±ä;9¡nş'=¢W¾2Æ+AÍ_ÔÕ'­ªI>¥—Ô¶2YÅù‘}åRØ,µ·kw¥µÈ£ØhF´äAX|çAe¼6Uú•ôöµ9aÇz'ÄŞŸÅ2YÙ3nåx¤qÕ¯ï¦œ<JÍ±ëu0quEo{WNâæY…œYfãğÑºİñ¾òâWI#*ĞkÄQ 
+k9sÔêÚš’ªI>ß_Útéã³nxR1&U¹<-Ë.Ÿw18>&Ô7pè	Ôñ	^ôš¸:ÔrX}xïöª¼»â7UOùß•¢˜àá]ÎÒ¡[şŞ¦uĞÔÓ‹ã{Ö:‘Ş’-Goi0E¿ÃÙÂûè­ß;ƒ‹k^š¨»/Ój¬šªSRìÏÉ‘æP›|-ä…jû\Fb7†ÜÁ¶•”ÓuG"î
+ş¢6kt²N¹çb~ô·’M; öa–øØpÖw²İ2ş7ùÀícœÑ´	©¯‰¯·U}Q­Õ%Ã×‡·f;>e{e9E.Å}¤–DVÖ[w5î¦Ò{HûV¦iµRºó#5¹o[»û;	¦¥	¹%”ÎykÛGIcilÿ 2JLx ú”œ»Ij¶Ø±+3÷~ÓÚk–%'½“¦ËÛGœ‘‘’ØÜ±¬”‚ĞiJÔiÜV}|¶ÉhÓIÆêäÚê};£Kuçñ"–H µËÆØåd6V9’µÀ»ÔÎkzÎí+r‹ŒøZk~>%¥'(m[ptê9¢—+#â{da£šC†Â’W(i¢¤œ^^ıgšdÔJÅ¬N @ÖÚæ{iÙ<,•†­p@zIzÔ\1¿1iW´P–¾€İFˆ
+lÎf|¤±—°E@ÓPÚñq<Ü{Pè¶÷3ÛJ&‚CƒƒšhP…½}™òvHØå’”¼TBÏİŞ]^Ngº•ÓJî/q©§bŠ €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  €  € ÿÙ_4http://misc.wordherders.net//images/archive-head.jpgZimage/jpegÔ_WebResourceTextEncodingNameUUTF-8O<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>miscellany is the largest category: TiddlyWiki</TITLE>
+
+<LINK rel="stylesheet" href="http://misc.wordherders.net/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://misc.wordherders.net/index.rdf">
+
+<LINK rel="start" href="http://misc.wordherders.net/" title="Home"><LINK rel="prev" href="http://misc.wordherders.net/archives/004135.html" title="Star Wars, The New Yorker Like Not">
+
+<LINK rel="next" href="http://misc.wordherders.net/archives/000124.html" title="Fleshing Out">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'misc.wordherders.net';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+
+</HEAD><BODY class="plain">
+<DIV id="banner"><H1><A href="http://misc.wordherders.net/" accesskey="1"><IMG src="http://misc.wordherders.net//images/archive-head.jpg" border="0"></A></H1>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://misc.wordherders.net/archives/004135.html">Â« Star Wars, The New Yorker Like Not</A> |
+
+<A href="http://misc.wordherders.net/">Main</A>
+| <A href="http://misc.wordherders.net/archives/000124.html">Fleshing Out Â»</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 20, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">TiddlyWiki</H3>
+
+<P>TiddlyWiki<BR>
+http://www.tiddlywiki.com/<BR>
+http://www.tiddlywiki.com/#TiddlyWikiAdaptations</P>
+
+<P>GTD (Getting Things Done) TiddlyWiki <BR>
+</P><BLOCKQUOTE>GTD Tiddly Wiki is a GettingThingsDone adaptation by NathanBowers of JeremyRuston's Open Source TiddlyWiki. The purpose of GTD Tiddly Wiki is to give users a single repository for their GTD lists and support materials so they can create/edit lists, and then print directly to 3x5 cards for use with the HipsterPDA. </BLOCKQUOTE><BR>
+http://shared.snapgrid.com/gtd_tiddlywiki.html<P></P>
+
+<P>TiddlyWikiRemote<BR>
+A version that should run off the server<BR>
+http://phiffer.org/tiddly/</P>
+
+<P>TiddlyWiki Tutorial<BR>
+http://www.blogjones.com/TiddlyWikiTutorial.html</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by jason at May 20, 2005 05:39 PM
+| <A href="http://www.wordherders.net/cgi-bin/mt/mt-tb.cgi?__mode=view&entry_id=4150" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+
+<BR></SPAN>
+
+</DIV>
+
+
+<DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="http://www.wordherders.net/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="4150">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="submit" name="preview" value="Â PreviewÂ ">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="Â PostÂ "><BR><BR>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+</DIV>
+
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_0http://misc.wordherders.net/archives/004150.htmlYtext/html    1 4 ; M \ r""6"?"FAÓB
+BBB<BB[X[‹                           [•

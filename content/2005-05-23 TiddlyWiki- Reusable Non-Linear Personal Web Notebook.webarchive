@@ -1,0 +1,1281 @@
+bplist00Ó8<_WebSubresources_WebMainResource_WebSubframeArchives¯ #&)*.15Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO%ˆ/*  
+Theme Name: Gila Adjusted
+Theme URI: http://www.marketingloop.com/
+Description: Three column theme based on an open source design by Haran located at http://www.oswd.org/email.phtml?user=haran
+Version: 1.0
+Author: Haran and Hendry Lee
+Author URI: http://www.marketingloop.com/
+
+	Gila Adjusted v1.0
+	http://www.marketingloop.com/
+
+	This design was built by Haran, and ported to a WordPress 1.5 theme by John Hesch
+	whose blog you will find at http://johnhesch.com/. Modified to use Drupal theme 
+	colors by Hendry Lee.
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+ single.php, searchform.php, comments.php, comments-popup.php are based on the WordPress default files.
+	
+	*** REGARDING IMAGES & PLUGINS ***
+	This theme uses two plugins and two images which are included in the distribution.
+	
+	Be sure to change the URL of the image in this file. 
+	
+	To install the plugins add both files to your wp-content/plugins/ folder and activate in 
+	the plugins tab of the admin screen.
+
+*/
+
+/* ##### Common Styles ##### */
+
+body {
+  color: black;
+  background-color: rgb(254,218,161);
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 73%;  /* Enables font size scaling in MSIE */
+  margin: 0;
+  padding: 0;
+}
+
+html > body {
+  font-size: 9pt;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px dotted rgb(1,117,190);
+  cursor: help;
+  margin: 0;
+  padding: 0;
+}
+
+.doNotDisplay {
+  display: none !important;
+}
+
+
+.smallCaps {
+  font-size: 117%;
+  font-variant: small-caps;
+}
+
+h2 {
+	font-size: 125%; 
+}
+
+p {
+  margin: 1em 0 1.5em 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 0.5ex 0;
+}
+
+dd {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+.center {
+text-align: center;
+}
+
+/* ##### Header ##### */
+
+#header {
+  color: inherit;
+  background-image: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/headerbg.gif);
+}
+
+.headerTitle {
+  margin: 0;
+  padding: 0.20em 4mm 0.25em 4mm;
+  color: white;
+  height: 40px;
+}
+
+.headerTitle a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 80%;  /* For MSIE */
+  font-weight: bold;
+}
+
+.headerTitle > a {
+  font-size: 110%;  /* For fully standards-compliant user agents */
+}
+
+.headerTitle span {
+  color: white;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.subHeader {
+  color: black;
+/*  background-color: rgb(255,181,68); */
+  background-color: rgb(239,240,239);
+  text-align: center;
+  margin: 0;
+  padding: 0.5ex 0;
+}
+
+.subHeader a {
+  color: black;
+  background-color: rgb(184,38,25);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 1ex;
+}
+
+.subHeader a:hover {
+  color: black;
+  background-color: white;
+}
+
+
+/* ##### Left Side Bar ##### */
+
+.leftSideBar {
+  width: 14.5em;
+  float: left;
+  clear: left;
+}
+
+.leftSideBar .sideBarTitle {
+  color: white;
+	background-color: rgb(255,181,68);
+  font-weight: bold;
+  margin: 0;
+  padding: 0.8ex 1ex;
+}
+
+.leftSideBar ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.leftSideBar li {
+  margin: 1ex;
+  padding: 0 0 0 0;
+  font-size: 8pt;
+}
+
+.leftSideBar a {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.leftSideBar a:hover {
+  text-decoration: underline overline;
+}
+
+.leftSideBar .sideBarText {
+  color: rgb(166,140,83);
+  background-color: transparent;
+  line-height: 1.25em;
+  margin: 1ex 0.25ex 1.5em 0.75ex;
+  padding: 0;
+  display: block;
+}
+
+.leftSideBar .sideBarText a {
+  text-decoration: underline;
+}
+
+.leftSideBar .sideBarText a:hover {
+  text-decoration: none;
+}
+
+.leftSideBar .thisPage {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  font-weight: bold;
+}
+
+
+/* ##### Right Side Bar ##### */
+
+.rightSideBar {
+  width: 15em;
+  margin: 2ex 0.75ex 0 0;
+  padding: 0;
+  float: right;
+  clear: right;
+  border: 1px solid rgb(106,180,33);
+}
+
+[class~="rightSideBar"] {
+  margin-right: 1.5ex;
+}
+
+.rightSideBar .sideBarTitleTop {
+  color: white;
+  background-color: rgb(106,180,33);
+  font-weight: bold;
+  margin: 1.25ex 1ex;
+  padding: 0.9ex 1ex;
+}
+
+.rightSideBar .sideBarTitle {
+  color: black;
+  background-color: rgb(231,242,216);
+  font-weight: bold;
+  margin: 1.25ex 1ex;
+  padding: 0.9ex 1ex;
+}
+
+.rightSideBar a {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.rightSideBar a:hover {
+  text-decoration: underline overline;
+}
+
+.rightSideBar .sideBarText {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 2ex 1em 2ex;
+}
+
+.rightSideBar .more {
+  text-decoration: none;
+  text-align: right;
+  margin: 0;
+  padding: 0 2ex 1em 2ex;
+  display: block;
+}
+
+.rightSideBar .more:hover {
+  text-decoration: underline;
+}
+
+.rightSideBar ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.rightSideBar li {
+  margin: 1ex;
+  padding: 0 0 0 0;
+  font-size: 8pt;
+}
+
+.rightSideBar img {
+ border: 0;
+}
+
+
+/* ##### Main Copy ##### */
+
+.main-copy {
+  color: black;
+  background-color: white;
+  text-align: left;
+  line-height: 1.5em;
+  margin: 0 0 0 14.5em;
+  padding: 0.5ex 18em 1em 2em;
+  border-left: 1px solid rgb(255,181,68);
+}
+
+.main-copy h1 {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  font-family: tahoma, arial, verdana, helvetica, sans-serif;
+  font-size: 175%;
+  font-weight: bold;
+  text-align: left;
+  margin: 1em 0 0 0;
+  padding: 1em 0 0 0;
+  border-top: 1px solid rgb(216,210,195);
+}
+
+.main-copy h1 a {
+  text-decoration: none;
+  color: rgb(64,64,64);
+}
+
+.main-copy h1 a:hover {
+  text-decoration: none;
+  color: rgb(1,117,190);
+}
+
+.main-copy .title h1 {
+	border-top: none; 
+	padding-top: 0;
+}
+
+.main-copy a {
+  color: rgb(1,117,190);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.main-copy a:hover {
+	 text-decoration: underline overline;
+}
+
+.date-header {
+  font-size:78%/1.4em;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+}
+
+.post {
+  padding-bottom:1.5em;
+}
+
+.post a {
+  color: rgb(1,117,190);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.post a:hover {
+  text-decoration: underline overline;
+}
+
+blockquote {  
+background: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/quote.gif) no-repeat 0 3px; 
+color: #666; 
+padding-left: 20px;
+font-style: italic;
+margin-bottom: 1px;
+display:block; 
+padding-top:5px;
+}
+
+/* image CSS */
+a img {
+  border: none;
+} 
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+	
+img.alignright {
+  padding: 4px;
+  margin: 0 0 2px 7px;
+  display: inline;
+}
+
+img.alignleft {
+  padding: 4px;
+  margin: 0 7px 2px 0;
+  display: inline;
+}
+ 
+.alignright {
+  float: right;
+}
+	
+.alignleft {
+  float: left
+}
+
+/* end image CSS */
+
+/* ##### Footer ##### */
+
+#footer {
+  color: black;
+  font-size: 92%;
+  text-align: center;
+  line-height: 1.25em;
+  margin: 0;
+  padding: 1em 4mm 1em 4mm;
+  clear: both;
+}
+
+#footer div {
+  margin: 0;
+  padding: 0 0 1ex 0;
+}
+
+#footer a {
+  color: rgb(1,117,190);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#footer a:hover {
+  text-decoration: underline overline;
+}
+	
+/* ##### Comments ##### */
+	
+.comment-link {
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+input.text, textarea {
+	background: #ffffff url("http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/input.gif") top right;
+	color: #000000;
+	border: 1px solid;
+	border-color: #888888 #888888 #aaaaaa #aaaaaa;
+	padding: 3px 3px 4px 3px;
+	font-size: 1em;
+}
+
+input.text:focus, textarea:focus {
+	border-color: #000000;
+}
+
+.alt {
+	 background-color: #f8f8f8;
+	 border-top: 1px solid #ddd;
+	 border-bottom: 1px solid #ddd;
+}
+
+.ll {
+	margin: 3px 5px 10px 10px;
+	list-style-type: square;
+}
+
+/* Navigation bar hack */
+#tabfloat {
+  position: absolute;
+  top: 55px;
+  left: 0px;  
+  width: 100%;  
+  z-index: 2;
+}
+
+ul#primary-links {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 255px;
+}
+
+ul#primary-links li {
+  _width: 0px;
+  float: right;
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 1px 0px 1px;
+  background: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/header-tab1.png) no-repeat 0% 0%;
+}
+
+ul#primary-links li a {
+  display: block;
+  list-style-type: none;
+  padding: 4px 8px 0px 8px;
+  margin: 0px;
+  height: 20px;
+  background: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/header-tab2.png) no-repeat 100% 0px;
+  white-space: nowrap;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+ul#primary-links li:hover {
+  background-image: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/header-tab1.png);
+  background-position: 0% -24px;
+}
+
+ul#primary-links li:hover a {
+  background-image: url(http://www.marketingloop.com/wp-content/themes/gila-adjusted/images/header-tab2.png);
+  background-position: 100% -24px;
+}
+
+#adsense-vertical {
+  border: none;
+  margin-left: 10px;
+  height: 240;
+} 
+
+#adsense-square {
+  border: none;
+  margin-left: 20px;
+  height: 290;
+}
+
+#adlink {
+  border: none;
+  margin-left: 10px;
+  height: 170;
+}
+_Fhttp://www.marketingloop.com/wp-content/themes/gila-adjusted/style.cssXtext/cssÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.jsYtext/htmlÓOïGIF89a„ • æ  Ì3 °·½WblÿÿÿRD»³¬í\õŠQùÔÀÿ³€÷k ±”ˆêR ği ÿåÛİuUáÓÆü^ ÌY,ÿ§lğC Åœ„¸pWÌÌÌöV ú¾¦ÿ}&¬u]ÔZæ@ ¶O'ÿf ÿõïîu3Äµ±ö›jÎÚİÏÂ¾îT Ìf3ñ™oÂF©¡®ıÜÍöwE÷¼œ¨T,Õ° }^Rî†Tùª€ÿp÷•`ŞÎÇàj#Â¨›Ü3 ïføu/Æ‡aşÍ°¾µ¾ºgFğI èI÷¸–ï¤ÕÕÎÓ|H˜X5Ï¿µÿîã­ƒv´£™ï}@ÙÙÔÿCù­êW$Ü‹gŸxh§cHÜO×ÎÈú€7¾µµíXîd.æK ¹«ªö\ ÖDúµÿ×¿Æ½µÛ«’Ş9 ¶ŠuøÆ®ö›xlWbØÆ¿Å¾Åâ˜tÿ˜TÎ<	×R$÷fºY4Ûp0÷­ßa:öK ï…`Ôº­½œİÖÎ¸~i´¾Á»½´Ñ„Vÿø÷ø…@ÿÀ›üàÕÿ™fíT
+_L!ù ÿ ,    „ •  ÿ€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤G-\2cnA--bb+||G¸ ºy¼y¥¿!~ÄÄVÇÈ9ËÌ!ÎJĞJ1144#×22\A­¯²+à´·¸¼À¥éêëìíîïîÅ~9ÊÌ::ĞúÖcÙÚ\-2À’5k…ƒ[ z™;Ã‡#Â3A±¢‰xÉê5‘¯…/R|rHI²¤Iˆ2Îa9É²¥K‡#J¡xI³&K?-J)±É³çÃ+H±â³¨ÑtW³ò¨S›!@ã’#ÑÜÑñÔe.ƒ¦áÀ$  ¯Œ4ÿcr@´å ´ˆi——IÀ,˜fÊQ{-R©d€_À3Ù&éf@ÖujÙæ¬û2ç(ªŠC_|—R0—JBhá DƒÓYe sUFˆ·h ÈjÜt°í]“©¢“WT'Æ2±€HmĞ›ë-¬è„¢ùuZN×xÀ
++wcÅFÀ…³D?AEÉª¼>EG(Şe°Y:x1y‰¡„,( –Rc…`spY±4&-€Ğ\d#5àÀ(hÙWz˜&¬px4†B+Ì"[Y9=·n¦^4ƒÂ1 W$]!•(\y¨œj×)Õ ÿz-¨––q„¢vhY±!Í=Wyp…À 8°BJCb(Qp£ÄÀ€‘Ê6À˜ĞØ5¨5'§y ´àã›]r!Zg1©N;ºZJ4ğÛHŠâ›Rd…¢V8CÑ2Ğp©4¤èÙõ¥"s`:\5xúUÒÍ…Òa¤°Æº\;RZ¡Ä2»1€B¦'uà„R ¸±¦¬ÄëB†¢f±Ì6Û,|äÉ£ÍVk­K8Äáª‘ê ‰"§‡~*a­‘$Ñè'~EzXˆÉ`ätçÆ
+8TÊ²Æ×Ş R[’BcBºÔ+š:X€Ñê´WDšWP2Ä”ÿ¹ö&F}Á…Ü
+
++×_~²·Æ”’+ˆ¡”&ĞĞr§èĞúä$ƒRÄQ¥D¢œ0ÇJ)¤ Á(zbàôÓõXLrİ	° JÄ´¡7—]É¨¹iÙ—„À^§C+!Ã[]` í¡¯ÀzÂÖÓxç]Q^  Ø÷]&4Gƒ‚˜Ó
+ 7@L!6ÇELœ
+B¢ VÀ=ˆÕÛ¹}Ÿ§…À&²ÒvâyŞ¤ã­ğ¸^Šß¢Rq6&ÕPë‡ áùán¸^p—¸xLùY´8BÊÉ&”®¼q4”gs—šÓ¿mŞ›Ò²úÆ1µà»ë®±ÿEŞ%·‡`hûIX(_ú‚(Ò
+|‰³ykÀŞ1Eöâ–p&ÀGr2‚İ u§É”^LpšJ*>š‚„ 
+M¹t€¡_JF€¬•gòëÒ},L­FG ™RÌ¥|˜ÇdšVX‘Ò€`73RÃ<Ó‰<(Á Ì›” ¨mÈ†0à§ €ÈÉ0@8`À8\@˜ @ ƒÖµNh& ™âc‘/Yá4Ò!Œã	ì`AŒ£…HD(`‰;X¦ô¨©&zkcËà*ÂCÇ°©Xš'PƒÌñ‘t_Á€¦2òqS¯øêÆ	9Ü ÿ’ eé,Ò)©ZÈÅN ÊVºÒi
+’!QÉ‚O!¬|¥.A©€­ÕÊÖ'ÄGBÒ[ßZbéT†·5Èâ‚8Câ+a…¯1|â ¥å ¶¼ÀàAT”4ñ&eîjõÁW!7A„:€2'\ jJ§”q&Ñ1ŠòVÅ¼Uè—ç¦EÆFNÁpŒd	;8 s>MoÊÙ®È{b 0PÄ›  P§Q`P$'Ä …6D~Şˆ0( 8-A~YÎ5èá—:Ğu–·:voé€8©‰ÌAHMª‚¨AtzH J™xµ@w÷ÿäBı¶¸† pvp¢XêRm q# ôàĞG~4YxABŸ¦Ô¤’.%G U¿¤‡¦"`«x¼ËE­ºUkÜ%S(ÄX	ÈĞ!5>_+()‚ƒZvâOÀëšÔ/qğiN]C1à×(..Ÿs„­îób²;À
+3ˆ¦}N¶aêãD\ÀPJEI%ıÈVÚ”´ A¹)7u •¬Ah]ÃTËP,Ô©¡4AÃ¬Ù	7À ”òÄ[S» ?+2°›*F&Ï	'uF,ó°êÔ¦Ò/»ø
+‚'Pm
+öiMD´ÀF¥Ğ¯´:[CFPÎrv/«è€ÿNWªj5» }˜&@à	,õ˜kË›l Ù¬åM:ĞBğ™\±›ÌÛê jEÊ“4åÀ „ølEà g?üS§%µ¯HÅÔå—c_^Ñ¥ŞÒªRô€Ü»”SÇ`Â†8! ÑÈCFj‘é:äGŞTğk­( 'ÈRxpûÂl×1c Ìî{Ósñ™İT¶ 8;çHg1ÛÏN,êÖ‘åV+XÀ\Aæt2hkGS¬´VŒÑ¬f'Ê`+üt×;BÏ2×5”ˆÔ×&ŒPUëòAèÂ èìJ\P¹tˆb†9‚3Ø€×¡„yoÿxÑL‘6Å:P€nÚi^¢–c°ñRgbD°˜Md¦¾	v¨º@Ş.5•Ä
+´ï&4ái:àA¦ˆê.´2Ì&à1Q/Ñ"˜štä6téæ·‡¾.~2`·Êöp„¦>)ßæ®˜‹‹PA*(›¯:LÁeFxÂŸ¦ki¢Ú]b÷xpG¨F¡šÆƒE¯X]°âOñeÙMdvåÀ¦ó“ªë{ê`&âÁAòy`[£{¸'DyÀY]âëÑ˜X¬ğ®']İCRQ½´¬oP×9¾¡xØƒ–ùë‚ÅÇòPƒ»šhrPvÿrQïôº0`-¬{]PóaÈ{‡‹‹1ùuŞÄXs;(¼è¾ùB+@™9=|¦Ãšum#;oÃŞà8úÚÛÚÕ…s¡Şo_‚;¨µÊm/zå•]÷I8¶œ‰T }ç;ñöÜw”8€k&¾ Â—~úŞ¯şëEIô’[Br˜ş÷E¿VkŒ Ò¶şğÇ?G|}EGƒÀÿj¼…™	pæ'3—xòçHwA€ë‚	|€BÆÛ†TĞs…º°„ 35zâ7àyš 0 	tÒÂ\@Ğ‚.ø >vAµg|	‡ÿHÀNE>ˆ{ˆq‚À0/x„/8°e+@&ˆƒJÅ{`s	GàƒX˜…Ò7z2ğ]ÀH†G8Ö!h‚å†7;¦4š ÀY‡r¸…C¦`¾ h †zx„÷&gˆ†œµcn¦	g@ ‡ˆˆˆ@ˆvº6 `„{‰-¨Aqæˆ˜}²G ‰Ø‰ø4K“	 ‰’(‰}H^¤wg€hø.à‰°ˆˆ
+ĞˆyXŠ¶øhÀ0à·€h	ğ†±8ŒXhy0·˜Œ;xk@}‹Hg"hr†HŒÃØº˜ŒÉ¨¼@Ä·~QR;˜	x ÿÔ‹Ú˜<€Ø¨k\÷„¤³c$“	Gà¯X¨k 0}À	Ğ	Ğ,†T †·oª†‰J…}lˆ	@v…ö˜ˆ–‡XMè‚°²´}`‘	Àn{Ğ¤8‚ĞŒ‰Tø2ˆ&Vğ‰¨k+Ğ‚‰Ğ-Ø‡†  † ù¿E‡ü‡/$'À’ˆ¨‚ †L@‘G-8p  6„ğ’.¨}0‡ª~¬ˆ	ÖƒD‡§á -oøI9Ğ„€L u08•-¸!‹>	ÂÄ_‡A±-XP€)6éˆ“ƒĞ i„d)y¨ÿGh•öøŒJR”’pØ—Xèé”Gy“9	††9G0ŠGø[˜‰{láx	O  Z€™>Q`„Fy_Ø‚30pG`–¶ù‚µ¹°‡šSH	]œ€-¨œ‡`““˜–)Í9p/hÈ‡
+é{“ĞEà°i-(6]àc\0“¡30ƒ°,¨œô‚ì˜YØ0¿‚	A ŒÁ)0‘	 6ùøÜ)`˜4'Kéˆ›RôéƒZĞ0AÉš^†œj	09h@„Ğ¡Y]P›9)—8™j<—>@È©¡ ƒşÈFÈnA±iÿP©–9Y‹0¾°%j¢ˆv“°EPÈ)Ğ)‰À¡	€¤¨\ĞˆªCŠQ?AŠ u–Ÿ—‰œJ˜êx‹TàM¤`8 úÅšÓ˜¨vV:¦z¸áœAÊf a“À¢Ù©À£t*†3`:‰¦€/=v	FŠ¤Ùé’sZ¨.x¨‚p¦ŠÊ¨œù- ŸôÙ‡çI©HÈFP©¨‹š}	…xˆ%Šj €Œ¢:“˜ ¦*¤(Z	~:”Aj©°‘¢:R‘Mğµª E¤‘ÀQà•»º!yÀ“j‹P`LP«?R€G	Áø¥»J¥„ZŠÓ:ÿ$]0Öêƒ  lJp*Y«d8$P„‘¨„+Ğ°‘åj®iĞE	; «ÖÊó:ÀlÉLĞ\ u„@„äz¯>ˆ H– Qğ˜ª…0s`x±XˆipŸ•Œày±TÀ&rH]°‚+‡i}o&	 Üú²8KŒ Ut”ğdğš9´±¨i>—°Ì*´J‹ˆP´Ù*	ğ>@K[µYˆ}éZ	eğI^{`+F5d;ot¶DĞm`l‹§V‹œø²§–0u* UP" ^Ğ·~û·€¸{+e[¶o„x¶6Àÿ9ğ¶qÈ¨úO° ^ëµƒ{¹˜›¹{¸œk^`Ûz;¸YP ¦kºd[ª{¸ˆn‹»n[¢¸|•Àp•[ šë·£û·šû»À{¹vp [¼Æ[¼}k%°¼Ì[F€~`«ºªÛºD¶ôp½°([€’“àlp¦Û·ƒkä[¾æ{¾è¸›ë·Á[·=àƒ{ôû¾î{¿ú«¿ôk¼ÍË¼ä‹~,À/ ½a°PªQ	 7p \\\Á|Á,Áe0\ÿûÁË+¾¢›·$\Â&|Ây{º¦ §ëµ*ÌÂ+¼¿Äºğÿ)`´•ğğ¬ÁğÃ@üÃLD\ÄA|Ä€ÁÜÁü·#|Â=ğÄ(|Âw »*üÂ$Ü èúw– Ãs@¾e ÄŒÄ@lÆjLÆ50CPSÇq\À¼~+ºQ,Åğ;Âv0Å$ {ÅYÀÅk*k“ğ )0Ë;Æ¬ÆüÈfŒÁn<É”,ÇSĞÄœÛÄëÇœ\v€8 ·•pi€¤6ÁiÉ¬ÜÊq\Ä°Ë”<É–\ËsÂ%À¹ê»·I¢ÜÅ	b°Ep=ÌÈ5ĞÊÊÌÊ±ÜÌÎË•lËÒ<ÍÍ[IÀkJ»¸ú§¼Á%`ÿÉÏËgLÄlÌÆá|Îè|ÎÓ<Ém<r\à Å½”  àPYIP .|Åº+åÛÁåLÁtÄÏ¼
+½ĞİĞKÎè<°<lHpÃ·ºÍ PàŠlğÑ Òlà$ípÒu€*½ P¶`¶<Ğ<$PÓ6}Ó8Ó:M­Ğ]Ä%€E÷÷{j R Õ°ÔKHNƒÔRiVÕ\m€Òu° w;Ö* ¿Ç{hÖ;½Ö9­Ğ6İÌ5P¢¬.šà 1€ÔNHR½×{=×k*Õ¢Ø8  „]Øû@ÿØR°Øj p>àÕP),½ üÌÏ¦KÂ^`fÖiÍÖ6½aàÔ•©	n | nğÚ°-B°"qğ ğo º½[@Õ¾ıÛÀíÛ8@pPÜÆ}ÜÈÜLMŠİØ'ğÜ‘=ÙuÔÍÒ™]º0ÃmuàÔ«¹„€G &² Ğ²}g`Û·ıí)~ Ë]ßËÜøÜ?°ßû]ßX R ÛÙ^-LÌà	â=Şàà |ğD<©0#À,pNà~Ğßöıáößü=â$¹	>
+âMŞn 
+4~2îLÇğ ~ãË-²'¾ãŒ¸ &+pi®
+i1®á4#®}<Şä–Àø!&î4ÀN-NåZ¾å\Şå^şå`æb>æ¤ ;_Zhttp://www.marketingloop.com/wp-content/themes/gila-adjusted/featured/marketingstudies.gifYimage/gifÔÓO®GIF89a  ³ ÿê EEE   ÿÎ ÿÉ ÿ´ ş ÿş“ÿıÿÿÿÿÿÇ333ÿÿëÿå       !ù   ,       [ĞIjØU¦ÎpœƒLA''ğ¦«v˜qj
+Ÿ?‚*pÆ‚…Ê!Ç’Ó¢	X<+Ùk»®YAb<všÁ Á5ÓXj‚\ş
+øÂ0Ã²Ô& ;_=http://www.marketingloop.com/wp-images/smilies/icon_smile.gifÓO¸GIF89aP  ‘  p€ÿf fffÿıü!ù     ,    P   ‰”©ËíÏ˜´Ú‹³Ş¼›„âH–á ¤êÊ¶î»ÃgÖ5çúÎÎhŠp¼¢±GQËe‰HéMT•8djO6bÊ@«¼+É99a•«±˜L5+·ôõĞ*Ãò,¨™öd5¥F¸W–$4†ˆØ·xã8i¥iÒHYuÕÑéù	Š1JZjªP  ;_-http://www.marketingloop.com/images/rss-2.gifÓOüGIF89aP  ¢  ÿşş‰yÈ1+ã¿´ÜĞ^fffÂŠWôï+!ù     ,    P   ÁXºÜş0ÊI¸8ëÍ»ÿ`¨lBiè  ]à¾p,Ït=£6å`ò†–mH,Æp…N©ğ	T£tzËqxÖót]—oÀ;&—Å`1F†ô,OZî—LOï÷:ìïVX„;Bh|auzfyxk€I;.˜ˆv‘v}izGj4m©„P£Ÿ°g|h{t~0¦Z»AQTÁS¹•»„'œÂÊ5Ä¼Z­ËÓÌ!×ØÙÚİŞßà	 ;_-http://www.marketingloop.com/images/yahoo.gifÓ!"OªGIF89aP  æ  åY/ë^3y°Ğ¾P0¾P2ìa3ò>{Šméb0’Ñå›başşş©Xw¨ÅÿÌ'ç…^Ú¼¬ó™NØÅ·nF4ùúûè]2û°<äëğù M¦Uğ^/ÒCn¿~ÓŸXf¾gŠ‹İàã:c›‚ƒŞÙÙ¶Ê×K‡•ÎéåæÂÖá¢}`â‚½°J €fÓ£`b¤È\¦Ï­YCñ©kë_3Çàåğg6Ìàñıüü”Òz­ÏŸfëƒXéi6×ãëîxA°œš;œÕYt¬şÁ5½¤ŸàñçÕÉÉÑ ‡ŠïƒBßçìğòï[²m—¦ªY@ìŞÖêîğ¨Vò„?ô¢8êr;Ø§8¼O2Ì¡ÊœnªØü£O$•ÏÿÏ,M¹òT¨šõ‘KäœeñIP¡Øfffÿÿÿ‰y                                                                              !ù     ,    P   ÿ€c‚ƒ„…†‡ˆ‰Š‹Œƒd‘’“”•–—˜™‚™N+C’e¢£¤¥¦§¨©ªed›=7;1¡«»¼½¥­c‘Z/)d] 3º¾ĞÑ¦À‘%8FV!2Q< Ï½d£ä¿¤æ¬ĞÔO9@	'\`aSUâ¼èèé§şÔñs)	1L@É"I&ûv‘›8Mà:Š¾ÚE²CÇ‚ 
+¾ø0 "â*uËıc•R•ÆH4h0áâ‚!-LºT™ÎÏu	Jºòa	‹[¨üĞ)­éI¡‘”t€rÀ
+(˜:İ:j$""¼Ab×³OƒeZË¶­[JâÊK×P  ;_+http://www.marketingloop.com/images/msn.gifÓ$%OGIF89aP  ³  fffíííÿ™ }°WÿÌ™™™ÿ¬0ÿÓÿÿÿÿß°ÿ¹OÿŸÿùïÿå¿ÿÙŸ   !ù ÿ ,    P   ¿ÈI«½8ëÍ'ú`(dih*Å×š@*ÏójEĞ|ÏÛ¾P,H”A‡Â@ø
+£HEhGDc!è6„®`ÑA¹"çZ»×lëà*¿Îéóİ|şpÅ_ab(/-‡‡nˆ xVzy|"b%–B"†p!‰h-‘¡$Y˜!b…mœm†quz“£¢”!b©bfU#tEY]ºSÀ%´Ã}	ºÓ	#ĞÌUYÙÜDßàáâ ;_1http://www.marketingloop.com/images/newsgator.gifÓ'(OÕGIF89aP  ‘  fffÿf ÿÿÿ‰y!ù     ,    P   ¦„©Ëí˜´Ú‹³Ş¼„âH–¡0¤êÊ¶î»ÂgÖ5çúÎÎ hŠp¼¢±GNNÌ …D¤¨ˆƒÉÊ:½¦°8é–›tB›@à)[İ¢»êv›ëN_ÃNsù´E±r9»§•†ÒÅWHG†(6´æöGÇ6·ö¤¤dvöµ÷8UçG(:u(dBu”ºã“izª
+»ZêªkÃÚ¡»ËÛ‹,<¬P  ;_1http://www.marketingloop.com/images/bloglines.gifÔÓ+,-O<‰PNG
+
+   IHDR   Z      >®—  IDATxœí˜ÍjA…Ï­”u¥ß@DÈl$àCˆ’ $ÂÄÂ¬$àø„@ÄÈ,$àÊ"„!Š ÌÂİ¸ê\wÒiº+m“jaú£UçÜê{»¨ª¡Gü9ü­N0åPqí’óÃ:ér&†£à¡¤NıŞ0D½’S¿3NPx*']Å„Wm7Ç)lwÇ),ÇÎòõ¨şøíBL^)Ï-¸Q«N®¤»ó­ñß•7n xøú{~hdb!,:%jUçJA§l{ºõ­ÜîöqwûØª/è6Ì»Vu®D”ôÊĞìå±»2àÁ«¯…¾uvWfß=¹™)¡0=S*¬h®tàHÕæšÕ·´udCK“È”¥­#{ŸüÄZ¹Ò©ÚPë÷: 73eü¹˜¼²¸y ßëô{ë×±ÎÊ•ŞèC#,ïŸŞpÿå—²BiÛŸ(åø:VE®$®‘KÈê[Ø8(èV}4,Ó+©ÍÕN©‰ì­Î˜_Dİùõ€½Õ¹r˜éÑ‡œeUçJ…*w×öË‡g·Ü[û|Ó‚µêä:?¹óâÚ|CÔk ¢] ¨çø¨¶@D} Û½aPá•AÛJÇˆ§*ÚÓb|t‚vE Bª¿rqæ×èÏŒLû¨W/_øwÖ!Ënö    IEND®B`‚_Qhttp://www.marketingloop.com/wp-content/bot-check/bc-image.php?human=yaqe/559Ge8=Yimage/pngÓ/0O+GIF89aX  æ     «±ªÿÿÿ¬²«@@@€€€­³¬¯µ®²·±®´­°¶¯   ·¼¶µº´´¹³¹¾¸ßßß®³­±·°ÏÒÎppp¸½·ŸŸŸ000»ÀºÎÑÍÃÇÂ¯´®ÄÈÃ```ÍĞÌ¶»µïïïÂÆÁÍÑÌÆÊÅÉÍÈ³¸²¿¿¿±¶°PPPÈÌÇÇËÇ¿Ä¿½Â½ÅÉÅÑÔĞËÎÊÎÒÎ»À»º¿¹ÌÏËÀÅÀ³¹²ÊÎÊ°µ¯¼Á¼ĞÓÏÌĞËËÏÊ¾Â½¼Á»ÅÉÄÀÅ¿ÊÍÉÁÅÀÇËÆĞÔĞ¾Ã½¾Ã¾ÏÓÏÉÍÉÏÏÏÄÉÄ¯¯¯²¸±ÈÌÈÁÆÁº¿º¿Ä¾ÆÊÆÂÇÂÊÎÉ½Â¼ÌĞÌÄÇÃ454ÀÄ¿ÑÔÑ¹¾¹565NON´º³ÒÕÑ(((ª­ªÅÈÄuwu‘“iki¿Ã¾(('ÂÅÁBCB\^\vwuOPN¸º·¶¹µvwv‚„‚ƒ…ƒ555gigNPNtvt\]\¶¹¶hjh‚„µ¸´„…ƒACA]^\!ù     ,    X   ÿ€ ƒ„…†‡ˆ‰Š‹Œ‰‚ ’“”——	
+&:GA"$D%B15V##<51BN,$"6G: &
+9	š˜—•“„Ò•Ğš	)¢4?FYª$,%8<#2ï2#¸I¼¾AF?4&(8 ‚&h–ª¤PÒ5l"tú
+„…R.Z<YÅ"I+ø|ÑBˆ‹84|è!dE/Q\+v,ÙŸ]SÈ°¡%LÎ8åèvcT¸Gll ÒªÇuI P€„AzÈÑ#	‘†ãçï‚DX­§ÂkÙÿ¶)˜ĞäÆª¤¤ù€„¾pÕÍb”â«…Ìş4HĞàC‘Â(w‚	0ÅQú‚…î ÀB°k ”A¢GK aõñ3†l Îµ˜0kŞ,Ñ‚¢à è@3dU‰#ÔTâºº Z®P¡¸×“(: k€,ÅÍf:ƒ·Í<<Ó¦C*Uï’V¨÷ ¨  Ä‰( A@ € È±ƒ5xµ„SÖYËä´Ózí‘'x3_>d1,PÁƒ~ @~PÀUH 
+ °Q<PÁSáÂıPZÀEƒa†Aqè!ÿ) ±Á+àğX   üı J(0Pğ+€„@2`Ì•—4nI3ÀOîu¶ä3ø@Z”#Pi%X  (ˆa@&	œ9CjDz—ÁÉœ›Ùé ¤ä¹'t~BBŒ @Àj*   ¬‘hN€eƒi
+9i‘sù4œ)iWNB)%e  
+*hÀ„ ' G˜c–¹h)iZ–]XIœ˜º÷Ş\wfàB#–xb ,ĞZu‚…ÛEÈãSdñXdg)À®¹~{©5ÄÁGÔ‡õ‰p_¨í€ *À+Xªl±`ÿ%ñ`UHØ€Y)TèŒ·”€K°†œĞ	X¤\Í‘ğ\ŸW¤aª¡‚AÀ¢dÜÈ½Aöv®ÂeQqsUdAã±Ô
+Bğ Wˆ1ˆ
+' P@ª xA´Õ ²êV&Lj![–úôP¯sÕÅé]
+ëÃS;ÀĞ†pÑG0,hN0aÇÚNÆ-ÒºÊI'DïÅ‡\8§H]Z	NÉ€D[Œ1ÇfŒÆEĞ¶R	;^{Ä>ı|L!A#Ã-°Ü™NäÙ¦O›«Ñ*T;¥;Ãñ0±CJ+%áRO8¤ÿ­VzF®çÈöÜwïıö'VÀÿÔÁX³Y)ş ‚1a%_) ÌÒ/XøôB€`U	F şòÿ´?p}úƒVÄe¥@È€‚À©!Áˆ½ZóÛ_ıLÁXƒ ßş(èAû%0„`B<‚²~h` ¬
+¨@€ŞW	P‚ùıF8ÂNp„r¡±@C‚pY!(@cèÃ®&0` ı # À¨O‚ìŒû€H !
+„ÀbûÓ¿ô¥Q Y<  úw)¦¯Š„ 0pÙp«â)X]Ğ$¢ öØÇîïJd¤ÙÅùAÀJÄcë§Å$/ˆ‚|á5xHE6Ğ…H"9	‰T 5è£`,± .^²5+” 
+”ğÃó‰”\$£)myBO¦–ñã']$ˆîï˜‚T Aãó€0¨2Np|x8¯¹MLr³]ƒ’ 5i9(T€›Z€:Ç§¬x¶³TTA§=ãù½~úóŸ ;_9http://creativecommons.org/images/public/somerights20.gifÓ234O…/* -----------------------------------------------
+   POWER PHLOGGER - v.2.2.5
+   (c) 2000-2003 www.phpee.com
+   contact: webmaster@phpee.com
+  ------------------------------------------------ */
+
+// ----------------------------------------------------------
+// SETTINGS:
+// here should be your username you received from www.automationrobot.com
+// Do not edit this file manually!! Use the one you got in your
+// confirmation-email or the one from PowerPhlogger's settings
+// section.
+   id = "mloop";
+// If you're using a frameset and are not getting correct 
+// referrers, please uncomment the following line:
+   // pp_frames = true;
+// ----------------------------------------------------------
+
+
+// define some defaults -------------------------------------
+if(showme==null) var showme='n';
+if(st==null)     var st='js';    // st means show-type
+
+
+// get the user agent name ----------------------------------
+v = navigator.appName;
+
+// get the screen resolution --------------------------------
+c=0;
+if (v != "Netscape") c = screen.colorDepth;
+else c = screen.pixelDepth;
+
+// get the screen size --------------------------------------
+s = screen.width+"x"+screen.height;
+
+// get the document's title ---------------------------------
+t = escape(document.title);
+
+// get the document's referrer -------------------------------
+var f = "";
+
+// if pp_frames is true then try getting the framed referral (without error checking)
+if (typeof(pp_frames) != "undefined")
+	if (pp_frames)
+		f = top.document.referrer;
+
+// get the referral for non-multi-domained-framed sites using a Netscape browser
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	if (document["parent"] != null) 
+		if (parent["document"] != null) // ACCESS ERROR HERE!
+			if (parent.document["referrer"] != null) 
+				if (typeof(parent.document) == "object")
+					f = parent.document.referrer; 
+
+// get the referral for the current document if a framed referral wasn't found
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	if (document["referrer"] != null) 
+		f = document.referrer;
+
+// convert all the unknown's into blank
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	f = "";
+
+// escape the referral
+f = escape(f);
+
+// getting data ready to send -------------------------------
+r="?id="+id+"&referer="+f+"&r="+s+"&c="+c+"&showme="+showme+"&st="+st+"&title="+t;
+
+// adding logid if called by st='phpjs'
+if(jslogid==null) var jslogid = 0;
+else r = r + "&jslogid="+jslogid;
+
+
+if (st=='js') { // calling PowerPhlogger by JavaScript-tag
+	if (v != "Microsoft Internet Explorer") {
+		r = r+"&url="+document.URL; // $HTTP_REFERER problem with NS,...
+	}
+	document.open();
+	document.write("<script language=\"JavaScript\" type=\"text/javascript\" src=\"http://www.automationrobot.com/phlog/pphlogger.php"+r+"\"></script>");
+	document.close();
+} else { // calling PowerPhlogger by IMG-tag
+	rand = Math.round(1000*Math.random());
+	r = r+"&b="+rand;  //force the page to load the IMG
+	document.open();
+	document.write("<img src=\"http://www.automationrobot.com/phlog/pphlogger.php"+r+"\" alt=\"\" border=\"0\">");
+	document.close();
+}_>http://www.automationrobot.com/phlog/pphlogger.js.php?id=mloop_application/octetstreamÓ67O5document.open()
+document.write(' ')
+document.close()
+_http://www.automationrobot.com/phlog/pphlogger.php?id=mloop&referer=&r=1280x854&c=32&showme=n&st=js&title=%20%20TiddlyWiki%3A%20Reusable%20Non-Linear%20Personal%20Web%20Notebook%20&url=http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/Ô9:;UUTF-8OiM<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11">        <META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+                <TITLE>  TiddlyWiki: Reusable Non-Linear Personal Web Notebook </TITLE> 
+                <META name="generator" content="WordPress 1.5">
+                <LINK rel="stylesheet" href="http://www.marketingloop.com/wp-content/themes/gila-adjusted/style.css" type="text/css" media="screen">
+                <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.marketingloop.com/feed/">
+                <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.marketingloop.com/feed/rss/">
+                <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.marketingloop.com/feed/atom/">
+                <LINK rel="pingback" href="http://www.marketingloop.com/xmlrpc.php">
+                        <LINK rel="archives" title="May 2005" href="http://www.marketingloop.com/archives/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.marketingloop.com/archives/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.marketingloop.com/archives/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.marketingloop.com/archives/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.marketingloop.com/archives/2005/01/">
+                                
+</HEAD><BODY>
+         <DIV id="top"><A href="#main-copy" class="doNotDisplay doNotPrint">Skip to main content.</A></DIV>
+
+    
+    <DIV id="header">      <H1 class="headerTitle">        <A href="http://www.marketingloop.com">Marketing Loop Blog</A>
+      </H1>
+                        <DIV style="padding-left: 10px; padding-bottom: 10px; color: white;">Non-techie guides to online content publishing.</DIV>
+      <DIV class="subHeader">      </DIV>
+    </DIV>
+    <DIV id="side-bar">
+            <DIV class="leftSideBar">        <P class="sideBarTitle">Pages</P>
+        <DIV id="adlink"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-6821510291905223";
+google_ad_width = 120;
+google_ad_height = 90;
+google_ad_format = "120x90_0ads_al";
+google_ad_channel ="8465847123";
+google_color_border = "FEDAA1";
+google_color_bg = "FEDAA1";
+google_color_link = "000000";
+google_color_url = "999999";
+google_color_text = "878773";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="120" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=120x90_0ads_al&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FEDAA1&color_text=878773&color_link=000000&color_url=999999&color_border=FEDAA1&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+        <UL><LI id="pagenav"> <UL><LI class="page_item"><A href="http://www.marketingloop.com/archives/" title="Archives">Archives</A>
+</LI>
+<LI class="page_item"><A href="http://www.marketingloop.com/ask-hendry/" title="Ask Hendry">Ask Hendry</A>
+</LI>
+<LI class="page_item"><A href="http://www.marketingloop.com/marketing-tips/" title="Marketing Tips">Marketing Tips</A>
+<UL>        <LI class="page_item"><A href="http://www.marketingloop.com/marketing-tips/weekly-rss-blog-and-podcast-tips/" title="Weekly RSS, Blog and Podcast Tips">Weekly RSS, Blog and Podcast Tips</A>
+        </LI>
+</UL>
+</LI>
+<LI class="page_item"><A href="http://www.marketingloop.com/special-report/" title="Special Report">Special Report</A>
+<UL>        <LI class="page_item"><A href="http://www.marketingloop.com/special-report/how-to-be-a-podcaster/" title="How to be a Podcaster">How to be a Podcaster</A>
+        </LI>
+</UL>
+</LI>
+</UL></LI></UL>
+                                
+        <P class="sideBarTitle">Categories</P>
+        <UL>                                        <LI><A href="http://www.marketingloop.com/archives/category/marketing-daily/" title="View all posts filed under Daily Marketing News">Daily Marketing News</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/" title="View all posts filed under Blog and RSS">Blog and RSS</A>
+                <UL class="children">        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/podcasting/" title="View all posts filed under Podcasting">Podcasting</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-software/" title="View all posts filed under Blog Software">Blog Software</A>
+                <UL class="children">        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-software/movable-type/" title="View all posts filed under Movable Type">Movable Type</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-software/wordpress/" title="View all posts filed under WordPress">WordPress</A>
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-hosting/" title="View all posts filed under Blog Hosting">Blog Hosting</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-promotion/" title="View all posts filed under Blog Promotion">Blog Promotion</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/blog-marketing/" title="View all posts filed under Blog Marketing">Blog Marketing</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/business-blogging/" title="View all posts filed under Business Blogging">Business Blogging</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/rss-feeds/" title="View all posts filed under RSS Feeds">RSS Feeds</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/rss-software/" title="View all posts filed under RSS Software">RSS Software</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/rss-advertising/" title="View all posts filed under RSS Advertising">RSS Advertising</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/blog-and-rss-marketing/rss-marketing/" title="View all posts filed under RSS Marketing">RSS Marketing</A>
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/web-hosting/" title="View all posts filed under Web Hosting">Web Hosting</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/diy-marketing-tips/" title="View all posts filed under DIY Marketing Tips">DIY Marketing Tips</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/email-marketing/" title="View all posts filed under Email Marketing">Email Marketing</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/search-engine-marketing/" title="View all posts filed under Search Engine Marketing">Search Engine Marketing</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/online-security/" title="View all posts filed under Online Security">Online Security</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/forum-marketing/" title="View all posts filed under Forum Software">Forum Software</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/marketing-toolbox/" title="View all posts filed under Tools & Organization">Tools &amp; Organization</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/special-reports/" title="View all posts filed under Special Reports">Special Reports</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/content-monetization/" title="View all posts filed under Content Monetization">Content Monetization</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/members-update/" title="View all posts filed under Members Update">Members Update</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/marketing-podcast/" title="View all posts filed under Marketing Podcast">Marketing Podcast</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/free-marketing-articles/" title="View all posts filed under Free Marketing Articles">Free Marketing Articles</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/wiki/" title="View all posts filed under Wikis">Wikis</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/multimedia-publishing/" title="View all posts filed under Multimedia Publishing">Multimedia Publishing</A>
+                <UL class="children">        <LI><A href="http://www.marketingloop.com/archives/category/multimedia-publishing/audio-marketing/" title="View all posts filed under Audio Marketing">Audio Marketing</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/multimedia-publishing/video-marketing/" title="View all posts filed under Video Marketing">Video Marketing</A>
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/content-management/" title="View all posts filed under Content Management">Content Management</A>
+                <UL class="children">        <LI><A href="http://www.marketingloop.com/archives/category/content-management/cms-software/" title="View all posts filed under CMS Software">CMS Software</A>
+                <UL class="children">        <LI><A href="http://www.marketingloop.com/archives/category/content-management/cms-software/drupal/" title="View all posts filed under Drupal">Drupal</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/content-management/cms-software/xoops/" title="View all posts filed under XOOPS">XOOPS</A>
+</LI>
+                </UL>
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/product-creation/" title="View all posts filed under Product Creation">Product Creation</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/readings/" title="View all posts filed under Readings">Readings</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/writing-content/" title="View all posts filed under Writing Content">Writing Content</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/free-traffic-tips/" title="View all posts filed under Free Traffic Tips">Free Traffic Tips</A>
+</LI>
+        <LI><A href="http://www.marketingloop.com/archives/category/web-analytics/" title="View all posts filed under Web Analytics">Web Analytics</A>
+</LI>
+                                </UL> 
+                                
+                                <P class="sideBarTitle">Archives</P>
+        <UL>        <LI><A href="http://www.marketingloop.com/archives/2005/05/" title="May 2005">May 2005</A></LI>
+        <LI><A href="http://www.marketingloop.com/archives/2005/04/" title="April 2005">April 2005</A></LI>
+        <LI><A href="http://www.marketingloop.com/archives/2005/03/" title="March 2005">March 2005</A></LI>
+        <LI><A href="http://www.marketingloop.com/archives/2005/02/" title="February 2005">February 2005</A></LI>
+        <LI><A href="http://www.marketingloop.com/archives/2005/01/" title="January 2005">January 2005</A></LI>
+</UL>
+                                
+      </DIV> 
+      
+      <DIV class="rightSideBar">        <P class="sideBarTitleTop">Featured</P>
+        <DIV class="sideBarText">          <IMG src="http://www.marketingloop.com/wp-content/themes/gila-adjusted/featured/marketingstudies.gif" class="centered" alt="Unleash the Marketing & Publishing Power of RSS" width="132" height="149">
+<A href="http://hdlee.mrktstudy.hop.clickbank.net" target="_blank">Boost your search engine rankings, increase sales and develop profitable customer relationships. Instant Download.
+</A>
+        </DIV>
+
+        <P class="sideBarTitle">Partners</P>
+        <DIV class="sideBarText"><DIV id="adsense-vertical"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-6821510291905223";
+google_ad_width = 120;
+google_ad_height = 240;
+google_ad_format = "120x240_as";
+google_ad_type = "text";
+google_ad_channel ="0294563393";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "999999";
+google_color_text = "878773";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="120" height="240" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326812&prev_fmts=120x90_0ads_al&format=120x240_as&output=html&channel=0294563393&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FFFFFF&color_text=878773&color_link=000000&color_url=999999&color_border=FFFFFF&ad_type=text&cc=98&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV></DIV>
+
+        <P class="sideBarTitle">Search</P>
+        <DIV class="sideBarText"><FORM method="get" id="searchform" action="/index.php"><DIV><INPUT type="text" value="" name="s" id="s" size="12">
+<INPUT type="submit" id="searchsubmit" value="Go">
+</DIV>
+</FORM></DIV>
+
+        <P class="sideBarTitle">Recent Comments</P>
+        <DIV class="sideBarText"><STRONG>Aristotle:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/22/should-new-blogs-have-ads/#comment-58" title="View the entire comment by Aristotle">I think new blogs should have ads.</A><BR><STRONG>Bill Flitter:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/20/best-practices-for-rss-advertising/#comment-57" title="View the entire comment by Bill Flitter">Thanks for including our best practices on</A><BR><STRONG>Toby:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/19/10-strategies-to-e-mail-campaign-success/#comment-56" title="View the entire comment by Toby">Thanks for the ping. As in good</A><BR><STRONG>Paul Short:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/17/bloglogic-decided-to-move-on-and-then-come-back/#comment-55" title="View the entire comment by Paul Short">Hi Hendry, thanks a million for your</A><BR><STRONG>Zach Christman:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/05/chicago-nbc-start-podcasting/#comment-54" title="View the entire comment by Zach Christman">For technical naming issues, one of the</A><BR><STRONG>Hendry Lee:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/09/pgp-announces-pgp-wholedisk-for-hard-drive-encryption/#comment-53" title="View the entire comment by Hendry Lee">Oops.. fixed, link added. <IMG src="http://www.marketingloop.com/wp-images/smilies/icon_smile.gif" alt=":)" class="wp-smiley"> 
+</A><BR><STRONG>John Roberts:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/09/pgp-announces-pgp-wholedisk-for-hard-drive-encryption/#comment-52" title="View the entire comment by John Roberts">Glad you're reading. Why not link, too?</A><BR><STRONG>Hendry Lee:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/06/google-web-accelerator-controversies/#comment-51" title="View the entire comment by Hendry Lee">Thanks, I've posted another update to this</A><BR><STRONG>00blogger:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/06/google-web-accelerator-controversies/#comment-50" title="View the entire comment by 00blogger">the web accelerator loses pace as google</A><BR><STRONG>Hendry Lee:</STRONG> <A href="http://www.marketingloop.com/archives/2005/05/06/yahoo-video-search-officially-launches/#comment-49" title="View the entire comment by Hendry Lee">Great insights. Thanks, Ian.</A><BR></DIV>
+
+        <P class="sideBarTitle">Syndication</P>
+        <DIV class="sideBarText">          <A href="http://www.marketingloop.com/feed/" title="Syndicate this site using RSS"><IMG src="/images/rss-2.gif" class="centered" width="80" height="15"></A>
+          <A href="http://add.my.yahoo.com/rss?url=http://www.marketingloop.com/feed/"><IMG src="/images/yahoo.gif" class="centered" width="80" height="15"></A>
+          <A href="http://my.msn.com/addtomymsn.armx?id=rss&ut=http://www.marketingloop.com/feed/&tt=CENTRALDIRECTORY&ru=http://rss.msn.com"><IMG src="/images/msn.gif" class="centered" width="80" height="15"></A>
+          <A href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http://www.marketingloop.com/feed/"><IMG src="/images/newsgator.gif" class="centered" width="80" height="15" alt="Subscribe in NewsGator Online"></A>
+          <A href="http://www.bloglines.com/sub/http://www.marketingloop.com/feed/"><IMG src="/images/bloglines.gif" class="centered" width="80" height="15" alt="Subscribe with Bloglines"></A>
+        </DIV>
+      </DIV>     </DIV>     
+<DIV class="main-copy">
+
+
+    
+        <DIV class="date-header">May 23rd, 2005</DIV>
+                        <H1 style="border-top: none; padding-top: 0;" id="post-347"><A href="http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/" rel="bookmark" title="Permanent Link to TiddlyWiki: Reusable Non-Linear Personal Web Notebook">TiddlyWiki: Reusable Non-Linear Personal Web Notebook</A></H1>
+      <DIV class="post">  <P>TiddlyWiki is a new and unique web application which takes different approach to displaying content on the web. Creating pages is just like other Wikis, by clicking on the link and compose the page. Saved pages will be displayed on the navigation pane, clicking on them will display them in an order you wish.</P>
+        <P>New version of TiddlyWiki supports RSS feed generation, autosave, keyboard shortcuts and tons of other features. Think of it as a blog and Wiki hybrid.</P>
+        <P>You have to try it out to actually understand what I mean. Powerful application, download an empty page and save it to your hard drive. Set it as a startpage and begin to jot down notes. Perfect replacement for my browser startpage, no more manually editing the HTML to add links.</P>
+        <P>As the entire application and pages are self-contained, I wonder how the performance will be affected after significant amount of data have been added, including the load time. Anyway, the title says that it is <EM>personal</EM> web notebook though.
+</P>
+                  </DIV>
+
+      <DIV id="adsense-square"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-6821510291905223";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_channel ="0294563393";
+google_ad_type = "text";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0175BE";
+google_color_url = "0175BE";
+google_color_text = "878773";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="336" height="280" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326880&prev_fmts=120x90_0ads_al%2C120x240_as&format=336x280_as&output=html&channel=0294563393&pv_ch=0294563393%2B&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FFFFFF&color_text=878773&color_link=0175BE&color_url=0175BE&color_border=FFFFFF&ad_type=text&cc=99&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+                                
+        
+<P class="postmetadata alt">                                                This entry was posted
+                                                 
+                                                on Monday, May 23rd, 2005 at 2:36 pm by Hendry Lee,
+                                                and is filed under <A href="http://www.marketingloop.com/archives/category/marketing-toolbox/" title="View all posts in Tools & Organization" rel="category tag">Tools &amp; Organization</A>,  <A href="http://www.marketingloop.com/archives/category/wiki/" title="View all posts in Wikis" rel="category tag">Wikis</A>,  <A href="http://www.marketingloop.com/archives/category/content-management/" title="View all posts in Content Management" rel="category tag">Content Management</A>.
+                                                You can follow any responses to this entry through the comments <A href="http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/trackback/">trackback</A> from your own site.
+                                                
+                                                                                                
+                                </P>
+
+<UL>  <STRONG>Recent Posts</STRONG>
+  <LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/exciting-features-planned-for-wordpress-16/" title="View post Exciting Features Planned for WordPress 1.6">Exciting Features Planned for WordPress 1.6</A></LI>
+<LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/" title="View post TiddlyWiki: Reusable Non-Linear Personal Web Notebook">TiddlyWiki: Reusable Non-Linear Personal Web Notebook</A></LI>
+<LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/wordpress-1511-fixes-two-bugs/" title="View post WordPress 1.5.1.1 Fixes Two Bugs">WordPress 1.5.1.1 Fixes Two Bugs</A></LI>
+<LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/incentive-based-model-for-paid-blogging/" title="View post Incentive Based Model for Paid Blogging">Incentive Based Model for Paid Blogging</A></LI>
+<LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/blogging-at-blogger-for-an-hour-and-get-50/" title="View post Blogging at Blogger for an Hour and Get $50">Blogging at Blogger for an Hour and Get $50</A></LI>
+<LI>05/23/2005: <A href="http://www.marketingloop.com/archives/2005/05/23/google-adsense-for-rss-supports-blogger-and-movable-type/" title="View post Google AdSense for RSS Supports Blogger and Movable Type">Google AdSense for RSS Supports Blogger and Movable Type</A></LI>
+<LI>05/22/2005: <A href="http://www.marketingloop.com/archives/2005/05/22/screencam-generator-suite-easy-program-to-create-screencasts/" title="View post Screencam Generator Suite: Easy Program to Create Screencasts">Screencam Generator Suite: Easy Program to Create Screencasts</A></LI>
+<LI>05/22/2005: <A href="http://www.marketingloop.com/archives/2005/05/22/should-new-blogs-have-ads/" title="View post Should New Blogs Have Ads?">Should New Blogs Have Ads?</A></LI>
+<LI>05/22/2005: <A href="http://www.marketingloop.com/archives/2005/05/22/understanding-wordpress-theme/" title="View post Understanding WordPress Theme">Understanding WordPress Theme</A></LI>
+<LI>05/22/2005: <A href="http://www.marketingloop.com/archives/2005/05/22/css-style-for-your-wordpress-rss-feed/" title="View post CSS Style for Your WordPress RSS Feed">CSS Style for Your WordPress RSS Feed</A></LI>
+</UL>        
+        
+        
+
+
+   
+                                
+         
+
+
+<H1 style="border-top: none; padding-top: 0;">Leave a Reply</H1>
+
+
+<FORM action="http://www.marketingloop.com/wp-comments-post.php" method="post" id="commentform">
+
+<P>        <INPUT type="hidden" name="human" value="yaqe/559Ge8=">
+        </P><P><IMG src="http://www.marketingloop.com/wp-content/bot-check/bc-image.php?human=yaqe/559Ge8=" alt="Bot-Check"></P>
+                <INPUT type="text" name="code" id="code" size="28" value="" tabindex="0">
+                <LABEL for="code"><SMALL>Enter Code (required)</SMALL></LABEL>
+<P></P>
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+<P><SMALL><STRONG>XHTML:</STRONG> You can use these tags: &lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </SMALL></P>
+
+<P><TEXTAREA name="comment" id="comment" cols="50" rows="10" tabindex="4"></TEXTAREA></P>
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="347">
+</P>
+
+</FORM>
+
+
+        
+        
+
+    
+    <DIV id="footer">
+      <DIV>        <IMG alt="Creative Commons License" class="centered" src="http://creativecommons.org/images/public/somerights20.gif">
+This work is licensed under a <A rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">Creative Commons License</A>.
+                 
+      </DIV>
+      
+    </DIV> </DIV> 
+<SCRIPT language="JavaScript" type="text/javascript" src="http://www.automationrobot.com/phlog/pphlogger.js.php?id=mloop"></SCRIPT><SCRIPT language="JavaScript" type="text/javascript" src="http://www.automationrobot.com/phlog/pphlogger.php?id=mloop&referer=&r=1280x854&c=32&showme=n&st=js&title=%20%20TiddlyWiki%3A%20Reusable%20Non-Linear%20Personal%20Web%20Notebook%20&url=http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/"></SCRIPT> 
+
+
+
+</BODY></HTML>_fhttp://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/£=CHÑ>Õ?@9AB_WebResourceFrameNameO-<HTML><HEAD><STYLE><!--
+#abg{font-family:arial,sans-serif;font-size:12px;color:#000000;padding:0px 1px;white-space:nowrap;font-weight:bold;}.sep{height:2px;width:100%;}.bb{overflow:hidden;width:120px;}.al{font-family:arial,sans-serif;font-size:12px;width:120px;overflow:hidden;line-height:16px;}.al .alt, .al a{color:#000000;font-weight:normal;text-decoration:underline;white-space:nowrap;}//--></STYLE><SCRIPT><!--
+c=0;aa=new Object();na=new Array();qs=location.search.substring(1);pa=qs.split('&');for(i=0;i<pa.length;++i){pn=pa[i].indexOf('=');if(pn==-1)continue;an=pa[i].substring(0,pn);v=pa[i].substring(pn+1);aa[an]=v;na[na.length]=an;}if(!aa['kw_type'])na[na.length]='kw_type';if(!aa['prev_fmts'])na[na.length]='prev_fmts';aa['prev_fmts']=aa['format'];aa['format']='fp_al_lp';aa['random']=(new Date()).getTime();aa['kw_type']='broad';aa['color_bg']=aa['color_link']=aa['color_url']=aa['color_text']=aa['color_border']=aa['alternate_ad_url']='';function gurl(rl,kw){if(!aa['kw'])na[na.length]='kw';if(!aa['rt'])na[na.length]='rt';if(!aa['hl']){na[na.length]='hl';aa['hl']='en';}aa['kw']=kw;aa['rt']=rl;qs='?';for(i=0;i<na.length;++i)if(aa[na[i]]!='')qs+=na[i]+'='+aa[na[i]]+'&';qs=qs.slice(0,-1);return location.pathname+qs;}function ss(wi){window.status=sl[wi];return true;}function cs(){window.status='';}var sl=new Array();//--></SCRIPT></HEAD><BODY bgcolor="#fedaa1" text="#878773" marginwidth="0" marginheight="0"><TABLE bgcolor="#fedaa1" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><TBODY><TR><TD height="18" bgcolor="#fedaa1" valign="middle"><DIV class="bb"><SCRIPT><!--
+i=0;adu='';adt=new Array();adt[i++]="Blog+RSS";adt[i++]="Blog+Search";adt[i++]="Photo+Weblog";adt[i++]="Blogging";document.write('<a href="http://services.google.com/feedback/abg?url=http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/&hl=en&client=ca-pub-6821510291905223&done=1');for(i=0;i<adt.length;++i)document.write('&adU='+(adu+='+')+'&adT='+adt[i]);document.write('" target=_blank id=abg>Ads by Google</a>');//--></SCRIPT><A href="http://services.google.com/feedback/abg?url=http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/&hl=en&client=ca-pub-6821510291905223&done=1&adU=+&adT=Blog+RSS&adU=++&adT=Blog+Search&adU=+++&adT=Photo+Weblog&adU=++++&adT=Blogging" target="_blank" id="abg">Ads by Google</A></DIV></TD></TR><TR><TD valign="top"><DIV class="al" style="padding:0px 0px"><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCkiZBAAKKBgoFeFD5TDEBEghCbG9nIFJTUxoIt33-uknPvGk','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blog RSS';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=fp_al_lp&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=120x90_0ads_al&rt=ChBCkiZBAAKKBgoFeFD5TDEBEghCbG9nIFJTUxoIt33-uknPvGk&hl=en" onmouseover="return ss(0)" onmouseout="cs()" class="alt" target="_top">Blog RSS</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCkiZBAAKKNwoFeFD5TDEBEgtCbG9nIFNlYXJjaBoIEPoeXH963Kc','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blog Search';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=fp_al_lp&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=120x90_0ads_al&rt=ChBCkiZBAAKKNwoFeFD5TDEBEgtCbG9nIFNlYXJjaBoIEPoeXH963Kc&hl=en" onmouseover="return ss(1)" onmouseout="cs()" class="alt" target="_top">Blog Search</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCkiZBAAKKZQoFeFD5TDEBEgxQaG90byBXZWJsb2caCPtAgr5NKz-6','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Photo Weblog';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=fp_al_lp&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=120x90_0ads_al&rt=ChBCkiZBAAKKZQoFeFD5TDEBEgxQaG90byBXZWJsb2caCPtAgr5NKz-6&hl=en" onmouseover="return ss(2)" onmouseout="cs()" class="alt" target="_top">Photo Weblog</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCkiZBAAKKjQoFeFD5TDEBEghCbG9nZ2luZxoIh4sngJurJ4g','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blogging';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=fp_al_lp&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=120x90_0ads_al&rt=ChBCkiZBAAKKjQoFeFD5TDEBEghCbG9nZ2luZxoIh4sngJurJ4g&hl=en" onmouseover="return ss(3)" onmouseout="cs()" class="alt" target="_top">Blogging</A></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_Îhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326762&format=120x90_0ads_al&output=html&channel=8465847123&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FEDAA1&color_text=878773&color_link=000000&color_url=999999&color_border=FEDAA1&cc=24&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123ÑDÕ?E9FGO<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="240" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://www.marketingloop.com/archives/2005/05/23/tiddlywiki-reusable-non-linear-personal-web-notebook/&hl=en&client=ca-pub-6821510291905223&adU=FreeSurnameSearch.com&adT=Free+Surname+Search&adU=www.findnot.com&adT=Anonymous+Blog+Posting&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Google</FONT></A></TD></TR><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to FreeSurnameSearch.com','aw0')" onmouseover="ss('go to FreeSurnameSearch.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BuyaxQSaSQprBDbbEFY3zxagMxZveB-6w-AjAjbcB0IYDEAEYASCy7I8CKAJAihZIizmqAQowMjk0NTYzMzkzsgEVd3d3Lm1hcmtldGluZ2xvb3AuY29tugEKMTIweDI0MF9hc8gBAdoBZmh0dHA6Ly93d3cubWFya2V0aW5nbG9vcC5jb20vYXJjaGl2ZXMvMjAwNS8wNS8yMy90aWRkbHl3aWtpLXJldXNhYmxlLW5vbi1saW5lYXItcGVyc29uYWwtd2ViLW5vdGVib29rL-ABAugBAQ&num=1&adurl=http://www.freesurnamesearch.com&client=ca-pub-6821510291905223" onfocus="ss('go to FreeSurnameSearch.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to FreeSurnameSearch.com','aw0')" onmouseout="cs()"><B>Free Surname Search</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#878773">Access thousands of free genealogy databases and record transcriptions<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#999999">FreeSurnameSearch.com</FONT></DIV></TD></TR><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.findnot.com','aw1')" onmouseover="ss('go to www.findnot.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000"><A id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.findnot.com&sa=l&ai=BG6uxQSaSQprBDbbEFY3zxagM_M_NCbzq67wBwI23AdCGAxACGAIgsuyPAigCQIoWSIU5oAHmgdf-A6oBCjAyOTQ1NjMzOTOyARV3d3cubWFya2V0aW5nbG9vcC5jb226AQoxMjB4MjQwX2FzyAEB2gFmaHR0cDovL3d3dy5tYXJrZXRpbmdsb29wLmNvbS9hcmNoaXZlcy8yMDA1LzA1LzIzL3RpZGRseXdpa2ktcmV1c2FibGUtbm9uLWxpbmVhci1wZXJzb25hbC13ZWItbm90ZWJvb2sv4AEC6AEB&num=2&client=ca-pub-6821510291905223" onfocus="ss('go to www.findnot.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.findnot.com','aw1')" onmouseout="cs()"><B>Anonymous Blog Posting</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#878773">Use our Anonymous IP not yours. 23 servers, no logs, full internet.<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#999999">www.findnot.com</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame1-->-->_ğhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326812&prev_fmts=120x90_0ads_al&format=120x240_as&output=html&channel=0294563393&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FFFFFF&color_text=878773&color_link=000000&color_url=999999&color_border=FFFFFF&ad_type=text&cc=98&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123ÑIÕ?J9KLOa<HTML><BODY style="background-color: transparent" marginwidth="0" marginheight="0"></BODY></HTML>_ <!--framePath //<!--frame2-->-->_http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6821510291905223&dt=1116874326880&prev_fmts=120x90_0ads_al%2C120x240_as&format=336x280_as&output=html&channel=0294563393&pv_ch=0294563393%2B&url=http%3A%2F%2Fwww.marketingloop.com%2Farchives%2F2005%2F05%2F23%2Ftiddlywiki-reusable-non-linear-personal-web-notebook%2F&color_bg=FFFFFF&color_text=878773&color_link=0175BE&color_url=0175BE&color_border=FFFFFF&ad_type=text&cc=99&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123      !  3  I  [  b  t  ƒ  ™ &% &n &w &€ & &¤ M_ M™ M£ Mª b bú c c c cÅ d d dÇ d÷ dş eı f- f4 hâ i i j- ja jh k@ kt k} k„ mÄ n n" n) uX u” u› ‚$ ‚e ‚ ‚† ‚¾ ƒá ƒê ƒğ íA íª í® í± í¼ íÓéì÷ÿ"$ˆ«             M             À

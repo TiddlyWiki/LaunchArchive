@@ -1,0 +1,440 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO£	body {
+		margin:0px 0px 20px 0px;
+		background:#CBD2D3;		
+		}
+	A 	{ color: #80000; border-bottom: 1px dotted #80000; text-decoration: none;}
+	A:link	 {color: #0000FF; border-bottom: text-decoration: none;      
+} 
+
+	A:visited	 {color: #0000CC; text-decoration: none;      
+} 
+
+A:active	{ color: #0000FF; text-decoration: none;  
+}
+	A:hover		 {color: #FF0000; border-bottom: 1px dotted #FF0000; text-decoration: none;      
+} 
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:palatino,  georgia, verdana, arial, sans-serif;
+		color:#333;
+		font-size:x-large;
+		font-weight:normal;	
+  		padding:15px;
+                border-top:4px double #666;
+		}
+
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family: palatino,  georgia, verdana, arial, sans-serif;
+		font-size: xx-large;
+		color: #333;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:palatino,  georgia, times new roman, serif;
+		color:#333;
+		font-size:small;
+  		text-transform:none;	
+		}
+				
+	#content {
+		position:absolute;
+		background:#FFFFFF;
+		margin-right:20px;
+		margin-left:225px;
+		margin-bottom:20px;
+		border:1px solid #000000;
+		width: 70%;
+		}
+
+	#container {
+		background:##FFFFFF;
+		border:1px solid #000000;		
+		}
+
+	#links {	
+		padding:15px;				
+		border:1px solid #000000;
+		width:200px;			
+		}
+		
+	.blog {
+  		padding:15px;
+		background:#FFFFFF; 
+		}
+
+	.blogbody {
+		font-family:palatino,  georgia, times new roman, serif;
+		color:#333;
+		font-size:medium;
+		font-weight:normal;
+  		background:#FFFFFF;
+  		line-height:100%;
+		}
+
+	.blogbody a,
+	.blogbody a:link,
+	.blogbody a:visited,
+	.blogbody a:active,
+	.blogbody a:hover 
+	}
+
+	.title	{
+		font-family: palatino, georgia, times new roman, serif;
+		font-size: medium;
+		color: #800000;
+		}			
+
+	#menu {
+  		margin-bottom:15px;
+		background:##FFFFFF;
+		text-align:center;
+		}		
+
+	.date	{ 
+		font-family:palatino, georgia, times new roman, serif; 
+		font-size: medium; 
+		color: #333; 
+		border-bottom:1px solid #999;
+		margin-bottom:10px;
+		font-weight:bold;
+		}			
+		
+	.posted	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: x-small; 
+		color: #000000; 
+		margin-bottom:25px;
+		}
+		
+		
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#999999;
+		font-size:x-small;
+		font-weight:normal;
+  		background: #CBD2D3;
+  		line-height:140%;
+  		padding:2px;
+                text-align:left;
+		}
+	
+	.calendarhead {	
+		font-family:palatino, georgia, times new roman, serif;
+		color: #000000;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+		letter-spacing: .3em;
+  		background: #CBD2D3;
+  		text-transform:uppercase;
+		text-align:left;			
+		}	
+	
+	.side {
+		font-family:verdana, arial, sans-serif;
+		color:#333;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#CBD2D3;
+  		line-height:140%;
+  		padding:2px;				
+		}	
+		
+	.sidetitle {
+		font-family:palatino, georgia, times new roman, serif;
+		color:#000000;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+  		margin-top:30px;
+		letter-spacing: .3em;
+  		background: #CBD2D3;
+  		text-transform:uppercase;		
+		}		
+	
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:xx-small;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:15px;
+  		background: #CBD2D3;  		
+ 		}	
+		
+	.powered {
+		font-family:palatino, georgia, times new roman, serif;
+		color:#666;
+		font-size:x-small;		
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:50px;
+		letter-spacing: .2em;					
+  		background:#CBD2D3;		
+		}	
+		
+	
+	.comments-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFFFFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFFFFF;		
+		}	
+			
+	
+	.trackback-url {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFFFFF;
+  		line-height:140%;
+ 		padding:5px;		
+ 		border:1px dotted #999; 					
+		}
+
+
+	.trackback-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFFFFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background: #FFFFFF;		
+		}	
+
+		
+	.comments-head	{ 
+		font-family:palatino, georgia, verdana, arial, sans-serif; 
+		font-size:small; 
+		color: #666; 
+		border-bottom:1px solid #999;
+		margin-top:20px;
+		font-weight:bold;
+  		background:##FFFFFF;		
+		}		
+
+	#banner-commentspop {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#99CCCC;
+		font-size:large;
+		font-weight:bold;
+		border-left:1px solid #FFFFFF;	
+		border-right:1px solid #FFFFFF;  		
+		border-top:1px solid #FFFFFF;  		
+  		background:#003366;
+  		padding-left:15px;
+  		padding-right:15px;
+  		padding-top:5px;
+  		padding-bottom:5px;  		  		  			 
+		}
+_:http://dream.sims.berkeley.edu/MT/vanhouse/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8OJ<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>Nancy's Blog: Cool (Wiki) Tool</TITLE>
+
+<LINK rel="stylesheet" href="http://dream.sims.berkeley.edu/MT/vanhouse/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://dream.sims.berkeley.edu/MT/vanhouse/index.rdf">
+
+<LINK rel="start" href="http://dream.sims.berkeley.edu/MT/vanhouse/" title="Home"><LINK rel="prev" href="http://dream.sims.berkeley.edu/MT/vanhouse/archives/000561.html" title="Blue Hair Pic">
+
+<LINK rel="next" href="http://dream.sims.berkeley.edu/MT/vanhouse/archives/000563.html" title="Random SF Photo">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'dream.sims.berkeley.edu';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://dream.sims.berkeley.edu/MT/vanhouse/" accesskey="1">Nancy's Blog</A></H1>
+<SPAN class="description">An experiment; mostly related to my research and teaching, but sometimes only loosely so. Back to <A href="http://www.sims.berkeley.edu/~vanhouse"><FONT size="-1"><FONT color="#800000">my website.</FONT></FONT></A><FONT size="-1"></FONT></SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://dream.sims.berkeley.edu/MT/vanhouse/archives/000561.html">Â« Blue Hair Pic</A> |
+
+<A href="http://dream.sims.berkeley.edu/MT/vanhouse/">Main</A>
+| <A href="http://dream.sims.berkeley.edu/MT/vanhouse/archives/000563.html">Random SF Photo Â»</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 15, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">Cool (Wiki) Tool</H3>
+
+<P>Just discovered and started playing with a tool for a personal wiki -- a way to keep track of your stuff offline in wiki format, with all the linking possibilities of wikis.  </P>
+
+<P>It's called  <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> which I found via <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTDTiddlyWiki.</A><BR>
+GTD refers to Getting Things Done,  David Allen's book and system, which I find interesting but not exactly useful.  But the point here isn't the GTD system, it's the TiddlyWiki. GTDTiddlyWiki is already set up up with GTD's categories, basically a taxonomy of to-do lists, but you can substitute whatever categories you want.  What's interesting is that it works like a wiki but resides as a local HTML file.</P>
+
+<P>One nice thing is that the wiki system allows cross-referencing, so, for example, I can have the list of items I want to read for a specific project referenced from both a "to read" category and the project's category.  And it acts as one place to put all those lists.  Plus, presumably, lots of other info. And offline.</P>
+
+<P>Have just started playing with it, but so far I like it.</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by vanhouse at May 15, 2005 09:15 PM
+
+<BR></SPAN>
+
+</DIV>
+
+
+<DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="http://dream.sims.berkeley.edu/cgi-bin/MT/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="562">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="submit" name="preview" value="Â PreviewÂ ">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="Â PostÂ "><BR><BR>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+</DIV>
+
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_?http://dream.sims.berkeley.edu/MT/vanhouse/archives/000562.htmlYtext/html    1 3 : L [ qU^g…‹0Ù1                           1%

@@ -1,0 +1,819 @@
+bplist00Ò_WebSubresources_WebMainResource¤Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO!y/*  
+Theme Name: Yadda
+Theme URI: http://www.johnhesch.com/themes/yadda.zip
+Description: Minimalist theme based on an open source design by Joe[y] located at http://oswd.org/
+Version: 1.0
+Author: Joe[Y] and John Hesch
+Author URI: http://johnhesch.com
+
+	Yadda v1.0
+	http://johnhesch.com
+
+	This design was built by Joe[y], and ported to a WordPress 1.5 theme by John Hesch
+	whose blog you will find at http://johnhesch.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+ single.php, searchform.php, comments.php, comments-popup.php were taken from the WordPress default theme.
+	
+	*** REGARDING IMAGES & PLUGINS ***
+	This theme uses two plugins, a Blockquotes JavaScript file and an image which are all included in the 
+	distribution.
+	
+	To use the Blockquotes JavaScript hack 
+ <blockquote cite="URL, or text, or empty">
+	
+ 1. If the cite element contains a URL, print ï¿½ï¿½ Quote sourceï¿½ below the quote as a clickable link.
+ 2. If the cite element contains only plain text, print ï¿½ï¿½ [the text]ï¿½ below the quote.
+ 3. If the cite element is empty or absent then print nothing below the quote.
+ 
+	Be sure to change the URL of the image in this file on line 296. Also, change the URL
+	on line 13 of the header.php file to where you place the JavaScript file. 
+	
+	To install the plugins add both files to your wp-content/plugins/ folder and activate in 
+	the plugins tab of the admin screen.
+
+	Contact me if you have questions.
+*/
+
+
+body {
+  background:#fff;
+  width:720px;
+  margin:0;
+  padding:40px 20px;
+  font:x-small Georgia,Serif;
+  text-align:center;
+  color:#333;
+  font-size:small;
+  }
+  
+/* Links
+----------------------------------------------- */
+a:link {
+  color:#58a;
+  text-decoration:none;
+  }
+a:visited {
+  color:#58a;
+  text-decoration:none;
+  }
+a:hover {
+  color:#CC6600;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Shadow Border
+----------------------------------------------- */
+
+.s1 { border: solid 2px #FDFDFE;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s2 {  border: solid 1px #F4F6F9;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s3 {  border: solid 2px #F0F3F7;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s4 {  border: solid 1px #EBEFF4;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s5 {  border: solid 2px #E5EBF0;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s6 {  border: solid 1px #E0E7ED;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s7 {  border: solid 2px #DCE4EB;
+       border-top:none;
+	   border-bottom:none;
+	   }
+.s8 {  border: solid 1px #D5DEE7;
+       border-top:none;
+	   border-bottom: solid 1px #ccc;
+	   }
+
+/* Header
+----------------------------------------------- */
+#header {
+  width:695px;
+  margin:0 auto 10px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  }
+  
+#title {
+  text-align: right;
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:0px solid #eee;
+  border-width:0px 0px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  }
+
+#description {
+  text-align: right;
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:0px solid #eee;
+  border-width:0 0px 0px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Layout
+----------------------------------------------- */
+#content {
+  width:660px;
+  margin:0 auto;
+  padding:0;
+  text-align:left;
+  }
+#main {
+  width:410px;
+  padding: 5px;
+  float:left;
+  }
+#sidebar {
+  width:220px;
+  float:right;
+  }
+
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Posts (from blogger.com layout)
+----------------------------------------------- */
+.date-header {
+  margin:1.5em 0 .5em;
+  }
+.post {
+  margin:.5em 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#CC6600;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#CC6600;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Sidebar
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 .5em;
+  padding:0 0 .5em;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+.alignright {
+	float: right;
+	}
+.alignleft {
+	float: left
+	}
+
+/* Misc
+-----------------------------------------------------*/
+.center {
+	text-align: center;
+	}
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+cite {
+	padding-top: 10px;
+	}
+blockquote {  
+background: url(http://your.url/wp-images/quote.gif) no-repeat 0 3px; 
+color: #666; 
+padding-left: 20px;
+font-style: italic;
+margin-bottom: 1px;
+display:block; 
+padding-top:5px;
+}
+blockquote div.source {
+	font-style: normal;
+ text-align: left;
+}
+
+
+  #youarehere {
+  width:200x;
+  background: #C7D8E2;
+  border: 1px solid #58a;
+  margin: 0px;
+  padding: 10px;
+  }
+  #youarehere a:link {
+  color:#c60;
+  text-decoration:none;
+  }
+  #youarehere a:visited {
+  color:#c60;
+  text-decoration:none;
+  }
+  #youarehere a:hover {
+  color:#c60;
+  text-decoration:underline;
+  }
+
+  #categories {
+  border: 1px solid #ccc; 
+  background-color: #eee;
+  padding: 10px;
+  text-align: justify; 
+  }
+  #categories a { 
+  text-decoration: none; 
+  display: inline;
+  }
+
+ #teb-super-archive {
+ margin-left: 10px;
+ }
+  
+ #teb-super-archive ul {
+ padding: 0;
+ }
+  
+ #teb-super-archive ul li {
+ text-align: left;
+ padding: 1px 8px;
+ }
+  
+ #teb-super-archive ul li:hover {
+ background: #f3f3f3;
+ border-top: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+  
+ html>body .post #teb-super-archive ul li {
+ text-indent: 0;
+ margin: 0;
+ }
+  
+ .post #teb-super-archive ul li:before {
+ content: "";
+ }
+  
+ .post #teb-super-archive ul {
+ list-style-type: none;
+ }
+
+ #teb-super-archive-year {
+ float: left;
+ width: 100px;
+ margin: 0;
+ padding: 0;
+ }
+  
+ #teb-super-archive-year li {
+ position: relative;
+ font-weight: bold;
+ }
+  
+ #teb-super-archive-month {
+ float: left;
+ width: 100px;
+ margin: 0;
+ border-left: 1px solid #ccc;
+ font-weight: bold;
+ }
+  
+ #teb-super-archive-month li {
+ position: relative;
+ }
+  
+ #teb-super-archive-post {
+ float: left;
+ width: 285px;
+ margin: 0;
+ border-left: 1px solid #ccc;
+ border-right: 1px solid #ccc;
+ }
+  
+ #teb-super-archive-post li {
+ position: relative;
+ font-weight: bold;
+ }
+  
+ #teb-super-archive ul li span {
+ position: absolute;
+ right: 8px;
+ font-weight: normal;
+ color: #aaa;
+ }
+  
+ #teb-super-archive .selected, #teb-super-archive-post li:hover {
+ background: #FFF6BF;
+ border-top: 1px solid #FFD324;
+ border-bottom: 1px solid #FFD324;
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ #archivesbydate {
+ width: 500px;
+ }_Dhttp://www.simplistically.com/blog/wp-content/themes/yadda/style.cssXtext/cssÓO¤// Dunstan Orchard
+// http://1976design.com/blog/archive/2003/11/10/updates/
+//
+// Altered from original idea by Simon Willison at:
+// http://simon.incutio.com/archive/2002/12/20/blockquoteCitations
+
+function extractBlockquoteInfo()
+	{
+	quotes = document.getElementsByTagName('blockquote');
+	for (i = 0; i < quotes.length; i++)
+		{
+		cite = quotes[i].getAttribute('cite');
+		title = quotes[i].getAttribute('title');
+		if ((cite) && (cite != ''))
+			{
+			if ( (cite.match('http://', 'i')) || (cite.match('ftp://', 'i')) || (cite.match('person://', 'i')) )
+				{
+				newlink = document.createElement('a');
+				newlink.setAttribute('href', cite);
+				newlink.setAttribute('title', ('Go to ' + cite));
+				title = quotes[i].getAttribute('title');
+				if ((title) && (title != ''))
+					{
+					newlink.appendChild(document.createTextNode(title));
+					}
+				else
+					{
+					newlink.appendChild(document.createTextNode('Quote source'));
+					}
+				newdiv = document.createElement('div');
+				newdiv.className = 'source';
+				newdiv.appendChild(document.createTextNode('\u2014 '));
+				newdiv.appendChild(newlink);
+				quotes[i].appendChild(newdiv);
+				}
+			else
+				{
+				newdiv = document.createElement('div');
+				newdiv.className = 'source';
+				newdiv.appendChild(document.createTextNode('\u2014 ' + cite));
+				quotes[i].appendChild(newdiv);
+				}
+			}
+		
+		else if ((title) && (title != ''))
+			{
+			newdiv = document.createElement('div');
+			newdiv.className = 'source';
+			newdiv.appendChild(document.createTextNode('\u2014 ' + title));
+			quotes[i].appendChild(newdiv);
+			}
+		}
+	}
+
+window.onload = function(e) {
+extractBlockquoteInfo();
+}_Thttp://www.simplistically.com/blog/wp-content/themes/yadda/javascript/blockquotes.js_application/x-javascriptÓOY/*
+Care Of: 
+		Simon Willison
+		http://simon.incutio.com/archive/2004/05/26/addLoadEvent
+		Thnx Dude!
+
+2005-05-07:
+	Renamed to avoid collisions there are other addLoadEvent functions.
+
+******** USEAGE ********************************
+addLoadEvent(nameOfSomeFunctionToRunOnPageLoad);
+addLoadEvent(function() {
+  // more code to run on page load 
+});
+*/
+function tsaAddLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}_chttp://www.simplistically.com/blog/wp-content/plugins/teb-super-archive/includes/tsaAddLoadEvent.jsÓO2/*
+// +----------------------------------------------------------------------+
+// | Orginial Code Care Of:                                               |
+// +----------------------------------------------------------------------+
+// | Copyright (c) 2004 Bitflux GmbH                                      |
+// +----------------------------------------------------------------------+
+// | Licensed under the Apache License, Version 2.0 (the "License");      |
+// | you may not use this file except in compliance with the License.     |
+// | You may obtain a copy of the License at                              |
+// | http://www.apache.org/licenses/LICENSE-2.0                           |
+// | Unless required by applicable law or agreed to in writing, software  |
+// | distributed under the License is distributed on an "AS IS" BASIS,    |
+// | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or      |
+// | implied. See the License for the specific language governing         |
+// | permissions and limitations under the License.                       |
+// +----------------------------------------------------------------------+
+// | Author: Bitflux GmbH <devel@bitflux.ch>                              |
+// |         http://blog.bitflux.ch/p1735.html                            |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | Heavily Modified by Jeff Minard (07/09/04)                           |
+// +----------------------------------------------------------------------+
+// | Same stuff as above, yo!                                             |
+// +----------------------------------------------------------------------+
+// | Author: Jeff Minard <jeff-js@creatimation.net>                       |
+// |         http://www.creatimation.net                                  |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | Heavily Modified by Jonas Rabbe (2005-05-08)                         |
+// +----------------------------------------------------------------------+
+// | Same stuff as above, yo!                                             |
+// +----------------------------------------------------------------------+
+// | Author: Jonas Rabbe <jonas@rabbe.com>                                |
+// |         http://www.jonas.rabbe.com                                   |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | What is this nonsense?? (2005-05-08)                                 |
+// +----------------------------------------------------------------------+
+// | This is a script that, by using XMLHttpRequest javascript objects    |
+// | you can quickly add some very click live interactive feed back to    |
+// | your pages that require server side interaction.                     |
+// |                                                                      |
+// | This javascript has been modified to make a 'digging archive' as     |
+// | outlined by Michael Heilemann in his dissection of Freya             |
+// | [http://binarybonsai.com/archives/2004/11/21/freya-dissection/]      |
+// +----------------------------------------------------------------------+
+*/
+
+var tsaLiveReq = false;
+var tsaLiveReqLast = "-";
+var tsaYear = 0;
+var tsaMonth = 0;
+var tsaIsIE = false;
+
+// on !IE we only have to initialize it once
+if (window.XMLHttpRequest) {
+	tsaLiveReq = new XMLHttpRequest();
+}
+
+function tsaLiveReqDoReq(query) {
+	if (tsaLiveReqLast != query) {
+		if (tsaLiveReq && tsaLiveReq.readyState < 4) {
+			tsaLiveReq.abort();
+		}
+		
+		if (window.XMLHttpRequest) {
+		// branch for IE/Windows ActiveX version
+		} else if (window.ActiveXObject) {
+			tsaLiveReq = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		tsaLiveReq.onreadystatechange = tsaLiveReqProcessReqChange;
+		tsaLiveReq.open("GET", tsaProcessURI + "?" + query);
+		tsaLiveReqLast = query;
+		tsaLiveReq.send(null);
+	}
+}
+
+function tsaLiveReqProcessReqChange() {
+	if (tsaLiveReq.readyState == 4) {
+		var tsaText = tsaLiveReq.responseText;
+		var resultID = tsaText.substring(0, tsaText.indexOf('|'));
+		tsaText = tsaText.substring(tsaText.indexOf('|') + 1, tsaText.length);
+		
+		document.getElementById(resultID).innerHTML = tsaText; 
+		
+		var year_list = document.getElementById(resultID+'-year').childNodes;
+		for( var i = 0; i < year_list.length; i++ ) {
+			if( year_list[i].nodeName == 'LI' ) {
+				year_list[i].style.cursor = 'pointer';
+				var tf = function(e) {
+ 					var tsaID = tsaEventElement(e).id;
+ 					tsaYear = tsaID.substring(tsaID.lastIndexOf('-') + 1, tsaID.length);
+ 					tsaSelectYear();
+				}
+				
+				if( tsaIsIE ) {
+					year_list[i].attachEvent('onclick',tf);
+				} else {
+					year_list[i].addEventListener('click', tf, false);
+				}
+			}
+		}
+
+		var month_list = document.getElementById(resultID+'-month').childNodes;
+		for( var i = 0; i < month_list.length; i++ ) {
+			if( month_list[i].nodeName == 'LI' ) {
+				month_list[i].style.cursor = 'pointer';
+				var tf = function(e) {
+ 					var tsaID = tsaEventElement(e).id;
+ 					tsaMonth = tsaID.substring(tsaID.lastIndexOf('-') + 1, tsaID.length);
+ 					tsaSelectMonth();
+				}
+				
+				if( tsaIsIE ) {
+					month_list[i].attachEvent('onclick',tf);
+				} else {
+					month_list[i].addEventListener('click', tf, false);
+				}
+			}
+		}
+		
+		// Fade Anything.
+		if( typeof Fat != 'undefined' && /class="fade"/.test(tsaText)) {
+			Fat.fade_all();
+		}
+	}
+}
+
+function tsaLiveReqInit() {
+	if (navigator.userAgent.indexOf("Safari") > 0) {
+		// branch to get to internet explorer
+	} else if (navigator.product == "Gecko") {
+		// branch to get to internet explorer
+	} else {
+		tsaIsIE = true;
+	}
+
+	tsaLiveReqDoReq('');
+}
+
+function tsaSelectYear() {
+	tsaLiveReqDoReq('year=' + tsaYear);
+}
+
+function tsaSelectMonth() {
+	tsaLiveReqDoReq('year=' + tsaYear + '&month=' + tsaMonth);
+}
+
+/*
+	Courtesy of Chris Boulton [http://www.surfionline.com]
+*/
+function tsaEventElement(e) {
+	if( tsaIsIE ) {
+		return e.srcElement;
+	} else {
+		return e.currentTarget;
+	}
+}
+
+tsaAddLoadEvent(tsaLiveReqInit);_ahttp://www.simplistically.com/blog/wp-content/plugins/teb-super-archive/includes/super-archive.jsÔ_WebResourceTextEncodingNameUUTF-8O"ë<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><TITLE>N. Godbout  Â» Blog Archive   Â» Aside: MyWiki - Experimental Wiki</TITLE><META name="generator" content="WordPress 1.5.1"><LINK rel="stylesheet" href="http://www.simplistically.com/blog/wp-content/themes/yadda/style.css" type="text/css" media="screen"><LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.simplistically.com/blog/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.simplistically.com/blog/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.simplistically.com/blog/feed/atom/"><LINK rel="pingback" href="http://www.simplistically.com/blog/xmlrpc.php">
+        <LINK rel="archives" title="May 2005" href="http://www.simplistically.com/blog/archives/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.simplistically.com/blog/archives/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.simplistically.com/blog/archives/2005/03/"><SCRIPT language="javascript" type="text/javascript" src="http://www.simplistically.com/blog/wp-content/themes/yadda/javascript/blockquotes.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="http://www.simplistically.com/blog/wp-content/plugins/teb-super-archive/includes/tsaAddLoadEvent.js"></SCRIPT><SCRIPT type="text/javascript" src="http://www.simplistically.com/blog/wp-content/plugins/teb-super-archive/includes/super-archive.js"></SCRIPT>
+        <SCRIPT type="text/javascript">
+		var tsaProcessURI = 'http://www.simplistically.com/blog/wp-content/plugins/teb-super-archive/includes/tsa.php';
+	</SCRIPT></HEAD><BODY>
+<DIV class="s1">
+<DIV class="s2"><DIV class="s3">
+<DIV class="s4"><DIV class="s5">
+<DIV class="s6"><DIV class="s7">
+<DIV class="s8">
+<DIV id="header">  <H1 id="title"><A href="http://www.simplistically.com/blog">N. Godbout</A></H1>
+  <P id="description">Living In My Own Words</P>
+</DIV>
+
+<DIV id="content">
+<DIV id="main"><DIV id="main2">
+
+
+<H2 class="date-header">May 18th, 2005</H2>
+
+<DIV class="post">     
+
+<H3 class="post-title" id="post-145"><A href="http://www.simplistically.com/blog/archives/2005/05/18/aside-mywiki-experimental-wiki/" rel="bookmark" title="Permanent Link to Aside: MyWiki - Experimental Wiki">Aside: MyWiki - Experimental Wiki</A>
+</H3>
+    
+<DIV class="post-body"><DIV>        <P><A href="http://www.aasted.org/wiki/">MyWiki</A> - Finally a version of <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> that includes a serverside version for user login. Looks like there may be a bug or two, but Iâ€™m going to try it out anyway.</P>
+</DIV>
+</DIV>
+    
+<P class="post-footer"><EM>posted by godbout and tagged as <A href="http://www.simplistically.com/blog/archives/tags/asides/" title="View all posts in asides" rel="category tag">asides</A>,  <A href="http://www.simplistically.com/blog/archives/tags/tests/" title="View all posts in tests" rel="category tag">tests</A>,  <A href="http://www.simplistically.com/blog/archives/tags/tech/" title="View all posts in tech" rel="category tag">tech</A>,  <A href="http://www.simplistically.com/blog/archives/tags/ideas/" title="View all posts in ideas" rel="category tag">ideas</A>Â </EM>
+</P>
+
+<P class="comment-link"> <SPAN class="comment-link"></SPAN>
+</P>
+
+</DIV>
+        
+        
+<P class="postmetadata alt">                                                This entry was posted
+                                                -1 years, 12 months ago 
+                                                on Wednesday, May 18th, 2005 at 12:49 pm                                         and is tagged as <A href="http://www.simplistically.com/blog/archives/tags/asides/" title="View all posts in asides" rel="category tag">asides</A>,  <A href="http://www.simplistically.com/blog/archives/tags/tests/" title="View all posts in tests" rel="category tag">tests</A>,  <A href="http://www.simplistically.com/blog/archives/tags/tech/" title="View all posts in tech" rel="category tag">tech</A>,  <A href="http://www.simplistically.com/blog/archives/tags/ideas/" title="View all posts in ideas" rel="category tag">ideas</A>.
+                                                You can follow any responses to this entry through the comments <A href="http://www.simplistically.com/blog/archives/2005/05/18/aside-mywiki-experimental-wiki/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.simplistically.com/blog/archives/2005/05/18/aside-mywiki-experimental-wiki/trackback/">trackback</A> from your own site.
+                                                
+                                                                                                
+                                </P>
+        
+        
+
+
+   
+                                
+         
+
+
+<H3 id="post-title">Leave a Reply</H3>
+
+
+<FORM action="http://www.simplistically.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+<P><SMALL><STRONG>XHTML:</STRONG> You can use these tags: &lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </SMALL></P>
+
+<P><TEXTAREA name="comment" id="comment" cols="50" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="145">
+</P>
+
+</FORM>
+
+
+        
+                        </DIV>
+                </DIV>
+                
+                
+                
+<DIV id="sidebar">
+<DIV id="sidebar2">
+<UL><LI><FORM method="get" id="searchform" action="/blog/index.php">
+<DIV><INPUT type="text" value="" name="s" id="s">
+<INPUT type="submit" id="searchsubmit" value="Search">
+</DIV>
+</FORM></LI>
+
+        
+                        
+
+
+
+<LI class="pagenav"><H2>Pages</H2><UL><LI class="page_item"><A href="http://www.simplistically.com/blog/43things/" title="My 43 Things">My 43 Things</A></LI>
+<LI class="page_item"><A href="http://www.simplistically.com/blog/flickr/" title="My Flickr Images">My Flickr Images</A></LI>
+<LI class="page_item"><A href="http://www.simplistically.com/blog/archives/" title="The Archives">The Archives</A></LI>
+<LI class="page_item"><A href="http://www.simplistically.com/blog/changelog/" title="The Changelog">The Changelog</A></LI>
+</UL></LI>
+                        <LI><H2 class="sidebar-title">Archives</H2>
+                                <UL>                                        <LI><A href="http://www.simplistically.com/blog/archives/2005/05/" title="May 2005">May 2005</A></LI>
+        <LI><A href="http://www.simplistically.com/blog/archives/2005/04/" title="April 2005">April 2005</A></LI>
+        <LI><A href="http://www.simplistically.com/blog/archives/2005/03/" title="March 2005">March 2005</A></LI>
+                                </UL>
+                        </LI>
+
+
+                                                        
+                                
+                                <LI><H2 class="sidebar-title">Meta</H2>
+                                <UL>                                        <LI><A href="http://www.simplistically.com/blog/wp-login.php">Login</A></LI>
+                                        
+                                        <LI><A href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</A></LI>
+                                                                        </UL>
+                                </LI>
+                        
+                </UL>
+</DIV></DIV>
+
+</DIV>
+<DIV id="footer"><HR>
+        <P>                N. Godbout is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.simplistically.com/blog/feed/">Entries (RSS)</A>
+                and <A href="feed:http://www.simplistically.com/blog/comments/feed/">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV>
+
+
+
+</BODY></HTML>_Vhttp://www.simplistically.com/blog/archives/2005/05/18/aside-mywiki-experimental-wiki/Ytext/html    1 6 = O ^ t!ñ"8"A"H(ð)G)b)i+Æ,,,3EiEÍEÖEôEúhéiB                           iL

@@ -1,0 +1,135 @@
+bplist00—_WebMainResource‘	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUUTF-8O9ç<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1">
+        <TITLE>jaofos.com ¬ª TiddlyWiki</TITLE>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META name="generator" content="WordPress 1.5.2">
+        <STYLE type="text/css" media="screen">
+                @import url( http://www.jaofos.com/wp-content/themes/fasttrack/style.css );
+        </STYLE>
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.jaofos.com/index.php/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.jaofos.com/index.php/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.jaofos.com/index.php/feed/atom/">
+        <LINK rel="pingback" href="http://www.jaofos.com/xmlrpc.php">
+        <LINK rel="archives" title="September 2005" href="http://www.jaofos.com/index.php/date/2005/09/">
+        <LINK rel="archives" title="August 2005" href="http://www.jaofos.com/index.php/date/2005/08/">
+        <LINK rel="archives" title="July 2005" href="http://www.jaofos.com/index.php/date/2005/07/">
+        <LINK rel="archives" title="June 2005" href="http://www.jaofos.com/index.php/date/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://www.jaofos.com/index.php/date/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.jaofos.com/index.php/date/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.jaofos.com/index.php/date/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.jaofos.com/index.php/date/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.jaofos.com/index.php/date/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.jaofos.com/index.php/date/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.jaofos.com/index.php/date/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://www.jaofos.com/index.php/date/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://www.jaofos.com/index.php/date/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://www.jaofos.com/index.php/date/2004/08/">
+        <STYLE type="text/css" media="screen">
+
+                /* Begin Contact Form CSS */
+
+                .contactform {
+                        width: 100%;
+                        position: relative;
+                        float: left;
+                        }
+                
+                .contactleft {
+                        width: 25%; 
+                        text-align: right;
+                        clear: both; 
+                        float: left;
+                        display: inline;
+                        padding: 4px; 
+                        margin: 5px 0; 
+                        }
+                
+                .contactright {
+                        width: 70%;  
+                        float: right; 
+                        display: inline;
+                        padding: 4px; 
+                        margin: 5px 0; 
+                        }
+
+        .contacterror {
+            border: 1px solid #ff0000;
+                }
+                /* End Contact Form CSS */
+
+        </STYLE>
+
+<STYLE type="text/css">#commentform{ display: none; }</STYLE><SCRIPT type="text/javascript">
+<!--
+function SJt(a,b,c,d,x,s,t){return mPk((b&d)|(c&(~d)),a,b,x,s,t);} function YDB(x,len){x[len>>5]|=0x80<<((len)%32);x[(((len+64)>>>9)<<4)+14]=len;var a=1732584193;var b=-271733879;var c=-1732584194;var d=271733878;for(var i=0;i<x.length;i+=16){var olda=a;var oldb=b;var oldc=c;var oldd=d;a=Azzwjl(a,b,c,d,x[i+0],7,-680876936);d=Azzwjl(d,a,b,c,x[i+1],12,-389564586);c=Azzwjl(c,d,a,b,x[i+2],17,606105819);b=Azzwjl(b,c,d,a,x[i+3],22,-1044525330);a=Azzwjl(a,b,c,d,x[i+4],7,-176418897);d=Azzwjl(d,a,b,c,x[i+5],12,1200080426);c=Azzwjl(c,d,a,b,x[i+6],17,-1473231341);b=Azzwjl(b,c,d,a,x[i+7],22,-45705983);a=Azzwjl(a,b,c,d,x[i+8],7,1770035416);d=Azzwjl(d,a,b,c,x[i+9],12,-1958414417);c=Azzwjl(c,d,a,b,x[i+10],17,-42063);b=Azzwjl(b,c,d,a,x[i+11],22,-1990404162);a=Azzwjl(a,b,c,d,x[i+12],7,1804603682);d=Azzwjl(d,a,b,c,x[i+13],12,-40341101);c=Azzwjl(c,d,a,b,x[i+14],17,-1502002290);b=Azzwjl(b,c,d,a,x[i+15],22,1236535329);a=SJt(a,b,c,d,x[i+1],5,-165796510);d=SJt(d,a,b,c,x[i+6],9,-1069501632);c=SJt(c,d,a,b,x[i+11],14,643717713);b=SJt(b,c,d,a,x[i+0],20,-373897302);a=SJt(a,b,c,d,x[i+5],5,-701558691);d=SJt(d,a,b,c,x[i+10],9,38016083);c=SJt(c,d,a,b,x[i+15],14,-660478335);b=SJt(b,c,d,a,x[i+4],20,-405537848);a=SJt(a,b,c,d,x[i+9],5,568446438);d=SJt(d,a,b,c,x[i+14],9,-1019803690);c=SJt(c,d,a,b,x[i+3],14,-187363961);b=SJt(b,c,d,a,x[i+8],20,1163531501);a=SJt(a,b,c,d,x[i+13],5,-1444681467);d=SJt(d,a,b,c,x[i+2],9,-51403784);c=SJt(c,d,a,b,x[i+7],14,1735328473);b=SJt(b,c,d,a,x[i+12],20,-1926607734);a=cu(a,b,c,d,x[i+5],4,-378558);d=cu(d,a,b,c,x[i+8],11,-2022574463);c=cu(c,d,a,b,x[i+11],16,1839030562);b=cu(b,c,d,a,x[i+14],23,-35309556);a=cu(a,b,c,d,x[i+1],4,-1530992060);d=cu(d,a,b,c,x[i+4],11,1272893353);c=cu(c,d,a,b,x[i+7],16,-155497632);b=cu(b,c,d,a,x[i+10],23,-1094730640);a=cu(a,b,c,d,x[i+13],4,681279174);d=cu(d,a,b,c,x[i+0],11,-358537222);c=cu(c,d,a,b,x[i+3],16,-722521979);b=cu(b,c,d,a,x[i+6],23,76029189);a=cu(a,b,c,d,x[i+9],4,-640364487);d=cu(d,a,b,c,x[i+12],11,-421815835);c=cu(c,d,a,b,x[i+15],16,530742520);b=cu(b,c,d,a,x[i+2],23,-995338651);a=JOlGbs(a,b,c,d,x[i+0],6,-198630844);d=JOlGbs(d,a,b,c,x[i+7],10,1126891415);c=JOlGbs(c,d,a,b,x[i+14],15,-1416354905);b=JOlGbs(b,c,d,a,x[i+5],21,-57434055);a=JOlGbs(a,b,c,d,x[i+12],6,1700485571);d=JOlGbs(d,a,b,c,x[i+3],10,-1894986606);c=JOlGbs(c,d,a,b,x[i+10],15,-1051523);b=JOlGbs(b,c,d,a,x[i+1],21,-2054922799);a=JOlGbs(a,b,c,d,x[i+8],6,1873313359);d=JOlGbs(d,a,b,c,x[i+15],10,-30611744);c=JOlGbs(c,d,a,b,x[i+6],15,-1560198380);b=JOlGbs(b,c,d,a,x[i+13],21,1309151649);a=JOlGbs(a,b,c,d,x[i+4],6,-145523070);d=JOlGbs(d,a,b,c,x[i+11],10,-1120210379);c=JOlGbs(c,d,a,b,x[i+2],15,718787259);b=JOlGbs(b,c,d,a,x[i+9],21,-343485551);a=I(a,olda);b=I(b,oldb);c=I(c,oldc);d=I(d,oldd);}return Array(a,b,c,d);} function JOlGbs(a,b,c,d,x,s,t){return mPk(c ^(b|(~d)),a,b,x,s,t);} function cu(a,b,c,d,x,s,t){return mPk(b ^ c ^ d,a,b,x,s,t);} function NnzMRRknw(jwLnImGAnGhS){ JnaEGOrImDEDpezDC = document.getElementById("xNFrvhKRpNaWfuyiUh"); if(!JnaEGOrImDEDpezDC){ return false; } else { JnaEGOrImDEDpezDC.name = xeWRgehZ(jwLnImGAnGhS); JnaEGOrImDEDpezDC.value = oaeFZgk(); return true; }} function Vo(num,cnt){return(num<<cnt)|(num>>>(32-cnt));} function I(x,y){var lsw=(x&0xFFFF)+(y&0xFFFF);var msw=(x>>16)+(y>>16)+(lsw>>16);return(msw<<16)|(lsw&0xFFFF);} function rJnMQg(P){var iVjU="0123456789abcdef";var str="";for(var i=0;i<P.length*4;i++){str+=iVjU.charAt((P[i>>2]>>((i%4)*8+4))&0xF)+iVjU.charAt((P[i>>2]>>((i%4)*8))&0xF);}return str;} function mPk(q,a,b,x,s,t){return I(Vo(I(I(a,q),I(x,t)),s),b);}function Azzwjl(a,b,c,d,x,s,t){return mPk((b&c)|((~b)&d),a,b,x,s,t);} function amYOdqMAQEFCPg(){zZBvAgMu = document.getElementById('email'); if(!zZBvAgMu){} else { zZBvAgMu.disabled = false; } VwqgNvXrGQwd = document.getElementById('submit'); if(!VwqgNvXrGQwd){} else { VwqgNvXrGQwd.disabled = false; } FczjGNWkfxWboQUAyT = document.getElementById('author'); if(!FczjGNWkfxWboQUAyT){} else { FczjGNWkfxWboQUAyT.disabled = false; } cNBTxHkOAYGGcMtA = document.getElementById('url'); if(!cNBTxHkOAYGGcMtA){} else { cNBTxHkOAYGGcMtA.disabled = false; } document.getElementById('commentform').style.display = 'block';} function oaeFZgk(){var DdkbAWPXcm = 0; DdkbAWPXcm += 0; DdkbAWPXcm += 1; DdkbAWPXcm += 2; DdkbAWPXcm += 3; DdkbAWPXcm += 4; DdkbAWPXcm += 5; DdkbAWPXcm += 6; DdkbAWPXcm += 7; DdkbAWPXcm += 8; DdkbAWPXcm += 9; DdkbAWPXcm += 10; DdkbAWPXcm += 11; DdkbAWPXcm += 12; DdkbAWPXcm += 13; DdkbAWPXcm += 14; DdkbAWPXcm += 15; DdkbAWPXcm += 16; DdkbAWPXcm += 17; DdkbAWPXcm += 18; DdkbAWPXcm += 19; DdkbAWPXcm += 20; DdkbAWPXcm += 21; DdkbAWPXcm += 22; DdkbAWPXcm += 23; DdkbAWPXcm += 24; DdkbAWPXcm += 25; DdkbAWPXcm += 26; DdkbAWPXcm += 27; DdkbAWPXcm += 28; DdkbAWPXcm += 29; DdkbAWPXcm += 30; DdkbAWPXcm += 31; DdkbAWPXcm += 32; DdkbAWPXcm += 33; DdkbAWPXcm += 34; DdkbAWPXcm += 35; DdkbAWPXcm += 36; DdkbAWPXcm += 37; DdkbAWPXcm += 38; DdkbAWPXcm += 39; DdkbAWPXcm += 40; DdkbAWPXcm += 41; DdkbAWPXcm += 42; DdkbAWPXcm += 43; DdkbAWPXcm += 44; DdkbAWPXcm += 45; DdkbAWPXcm += 46; DdkbAWPXcm += 47; DdkbAWPXcm += 48; DdkbAWPXcm += 49; DdkbAWPXcm += 50; DdkbAWPXcm += 51; DdkbAWPXcm += 52; DdkbAWPXcm += 53; DdkbAWPXcm += 54; DdkbAWPXcm += 55; DdkbAWPXcm += 56; DdkbAWPXcm += 57; DdkbAWPXcm += 58; DdkbAWPXcm += 59; DdkbAWPXcm += 60; DdkbAWPXcm += 61; DdkbAWPXcm += 62; DdkbAWPXcm += 63; DdkbAWPXcm += 64; DdkbAWPXcm += 65; DdkbAWPXcm += 66; DdkbAWPXcm += 67; DdkbAWPXcm += 68; DdkbAWPXcm += 69; DdkbAWPXcm += 70; DdkbAWPXcm += 71; DdkbAWPXcm += 72; DdkbAWPXcm += 73; DdkbAWPXcm += 74; DdkbAWPXcm += 75; DdkbAWPXcm += 76; DdkbAWPXcm += 77; DdkbAWPXcm += 78; DdkbAWPXcm += 79; DdkbAWPXcm += 80; DdkbAWPXcm += 81; DdkbAWPXcm += 82; DdkbAWPXcm += 83; DdkbAWPXcm += 84; DdkbAWPXcm += 85; DdkbAWPXcm += 86; DdkbAWPXcm += 87; DdkbAWPXcm += 88; DdkbAWPXcm += 89; DdkbAWPXcm += 90; DdkbAWPXcm += 91; return DdkbAWPXcm; }  function ptPspu(str){var bin=Array();var mask=(1<<8)-1;for(var i=0;i<str.length*8;i+=8)bin[i>>5]|=(str.charCodeAt(i/8)&mask)<<(i%32);return bin;} function xeWRgehZ(s){return rJnMQg(YDB(ptPspu(s),s.length*8));}
+-->
+</SCRIPT></HEAD><BODY onload="amYOdqMAQEFCPg();">
+<DIV id="rap">        <UL id="topnav">        <LI><A href="/?PHPSESSID=8cc51ef5b97de5995b0cd940b9be0179" id="navHome" title="jaofos.com" accesskey="h"><U>H</U>ome</A></LI>
+        <LI><A href="/gallery?PHPSESSID=8cc51ef5b97de5995b0cd940b9be0179" id="navGallery" title="Recommended Links" accesskey="g"><U>G</U>allery</A></LI>
+        <LI><A href="/index.php/contact/?PHPSESSID=8cc51ef5b97de5995b0cd940b9be0179" id="navContact" title="Contact the Author" accesskey="c"><U>C</U>ontact</A></LI>
+</UL>
+<DIV id="header">        <H1><A href="http://www.jaofos.com" title="jaofos.com">jaofos.com</A></H1>                
+</DIV>
+        
+        <DIV id="content">                                                <DIV class="post">                                <DIV class="post-title"><EM><A href="http://www.jaofos.com/index.php/category/my-life/" title="View all posts in My Life" rel="category tag">My Life</A> and  <A href="http://www.jaofos.com/index.php/category/neeeeeeeeerd/" title="View all posts in Neeeeeeeeerd!" rel="category tag">Neeeeeeeeerd!</A> and  <A href="http://www.jaofos.com/index.php/category/cool-links/" title="View all posts in Cool Links" rel="category tag">Cool Links</A></EM>22 Sep 2005 09:29 pm</DIV>
+<P class="post-info"><A href="http://www.jaofos.com/index.php/161/" rel="bookmark" title="Permanent Link: TiddlyWiki">TiddlyWiki</A></P>
+<DIV class="post-content">                <P>I‚Äôve been playing around with <A href="http://en.wikipedia.org/wiki/Wiki">Wiki</A>‚Äôs quite a bit lately, creating one for work and for a game I play on occaision.  Playing with Wiki and absolutely loving the concept the more I play with it I started looking around for off-line applications that function similar to a Wiki that I could use as sort of a private place to jot important stuff down and basically stuff whatever I want into it.  </P>
+        <P>This is where I ran into <A href="http://www.tiddlywiki.com">TiddlyWiki</A>, which is basically an html file with javascript that functions like your own personal Wiki that you can stick just about anywhere.  I keep mine on my 1GB USB Thumbdrive so I always have it with me and can just open the file up in any PC with a browser and view / modify the contents.  Major Kudo‚Äôs to the developers, I love this thing!
+</P>
+        <P class="post-info">                                                                                                        
+        </P>
+        </DIV>
+<DIV class="post-footer"></DIV>                                
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+
+<FORM onsubmit="NnzMRRknw('d7738d57c6874cf4d2e90bce08535914');" action="http://www.jaofos.com/wp-comments-post.php" method="post" id="commentform" style="display: block; "><INPUT type="hidden" name="PHPSESSID" value="8cc51ef5b97de5995b0cd940b9be0179">
+
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" id="xNFrvhKRpNaWfuyiUh" name="ViZnSIcgFcuV" value="70532802"> <INPUT type="hidden" name="comment_post_ID" value="161">
+</P>
+
+<P>What's a blog without spam? <A href="http://elliottback.com/" title="Elliott Back + Spam Protection">WP-Hashcash</A>.</P>
+</FORM>
+
+
+                        </DIV>
+                                        <P align="center"></P>                
+        </DIV>
+        <DIV id="sidebar">                <H2>Archived Entry</H2>
+        <UL>        <LI><STRONG>Post Date :</STRONG></LI>
+        <LI>Thursday, Sep 22nd, 2005 at 9:29 pm</LI>
+        <LI><STRONG>Category :</STRONG></LI>
+        <LI><A href="http://www.jaofos.com/index.php/category/my-life/" title="View all posts in My Life" rel="category tag">My Life</A>,  <A href="http://www.jaofos.com/index.php/category/neeeeeeeeerd/" title="View all posts in Neeeeeeeeerd!" rel="category tag">Neeeeeeeeerd!</A>,  <A href="http://www.jaofos.com/index.php/category/cool-links/" title="View all posts in Cool Links" rel="category tag">Cool Links</A></LI>
+        <LI><STRONG>Do More :</STRONG></LI>
+        <LI>                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.jaofos.com/index.php/161/trackback/">trackback</A> from your own site.
+                                                
+                                                </LI>
+        </UL>
+                
+        </DIV>
+<P id="footer">Design Downloaded from <A href="http://wpthemes.info" title="WP Themes.Info">WPThemes.Info</A></P></DIV>
+
+</BODY></HTML>_$http://www.jaofos.com/index.php/161/Ytext/html    & D V e { Å::9                           :C

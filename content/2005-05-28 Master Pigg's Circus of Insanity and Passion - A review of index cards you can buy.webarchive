@@ -1,0 +1,927 @@
+bplist00Òp_WebSubresources_WebMainResource¯%"%(+.147:=@CFILORUX[^adgjmÓ	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO$mbody {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+td, th, input, select, textarea {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+img {
+  border: none;
+}
+
+.top {
+  height: 50px;
+}
+.topbody {
+  background: url(../images/head_XPblue_normal_wl.jpg) repeat-y right;
+  height: 50px;
+  margin: 0;
+}
+
+.topbody td {
+  padding-left: 10px;
+  color: #6e89dd;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+.topbody .searchArea {
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: none;
+  font-style: normal;
+  padding-right: 15px;
+  color: white;
+  vertical-align: middle;
+}
+
+.main {
+  background: #F9F8F8;
+}
+
+.pathbar td {
+	padding: 0px 10px 0 10px;
+	background-color: #f1f1f1;
+	height: 27px;
+
+}
+
+.util {
+  border-top: solid 1px #999999;
+  border-bottom: solid 1px #999999;
+  height: 27px;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+
+.maincontent {
+  padding: 15px;
+}
+
+.right {
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+/* ---------- common buttons --------- */
+
+.commonButton {
+  background-position: 0 1px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding-left: 20px;
+  text-decoration: underline;
+  cursor: hand;
+  cursor: pointer;
+  padding-top: 1px;
+  padding-bottom: 4px;  
+  vertical-align: 2px;
+}
+
+.searchbox {
+  margin-right: 3px;
+}
+
+#bid-search {
+  background-image: url(../images/btn_search_bg.gif);
+}
+
+/* mt_business styles */
+
+td,tr,p,div {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	}
+
+/* Styles for dhtml tabbed-pages */
+.ontab {
+	background-color: #6e89dd;
+	text-align: center;
+	cursor: hand;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.offtab {
+	background-color : #eef3ff;
+	text-align: center;
+	cursor: hand;
+	font-weight: normal;
+}
+.tabpadding {
+}
+
+.tabheading {
+	background-color: #6e89dd;
+	text-align: left;
+}
+
+.pagetext {
+	visibility: hidden;
+	display: none;
+	position: relative;
+	top: 0;
+}
+h4 {
+	color: #6e89dd; font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px; font-weight: bold;
+	}
+
+h5 {
+	color: #6e89dd; font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px; font-weight: bold;
+	}
+
+h6 {
+	color: #6e89dd; font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px; font-weight: bold;
+	}
+
+/* For content item titles that are hyperlink instead of Read On */
+a.contentpagetitle:link, a.contentpagetitle:visited {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align:left;
+	}
+
+a.contentpagetitle:hover {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align:left;
+	font-weight: bold;
+	}
+
+/* Horizontal Line */
+hr {
+	background: #C0C0C0; height:2px; border: 1px inset;
+	}
+
+hr.separator {
+	background: #C0C0C0;
+	height: 1px;
+	width: 75px;
+	border: 0px;
+}
+
+/* --Default Class Settings-- */
+
+a.mainmenu:link, a.mainmenu:visited, a.mainlevel:link, a.mainlevel:visited {
+	}
+
+a.mainmenu:hover, a.mainlevel:hover {
+	}
+
+a.sublevel:hover {
+	}
+
+a.sublevel:link, a.sublevel:visited {
+}
+
+/* Content - Sections & Categories */
+.contentpane {
+	}
+
+.contentpaneopen {
+	border : 0px ridge #DCDCDC;
+	margin : 5px;
+	}
+
+.contentheading {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+ 	color: #6E89DD;
+	text-align:left;
+	vertical-align: middle;
+	}
+
+.contentpagetitle {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:left;
+	}
+
+table.contenttoc {
+        color: #333300;
+		background-color: #eef3ff;
+        }
+
+table.contenttoc td {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: normal;
+        text-align:left;
+}
+
+a.toclink:hover, a.toclink:visited, a.toclink:link {
+	font-size: 9px;
+	}
+
+.contentdescription {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #808080;
+	text-align: left;
+	}
+
+.contentpane td {
+  padding: 2px;
+}
+
+/* Links */
+a.blogsection:link, a.blogsection:visited {
+	font-weight: normal;
+	font-family:  Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	}
+
+a.blogsection:hover {
+	
+	}
+
+a.weblinks:link, a.weblinks:visited {
+	font-weight: normal;
+	font-family:  Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	}
+
+a.weblinks:hover {
+}
+
+a.readon:link, a.readon:visited {
+	font-weight: normal;
+	font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	}
+
+a.readon:hover {
+
+	}
+
+table.moduletable {
+	margin: 0px 0px 10px 0px;
+	border-left: solid 0px #000000;
+	border-right: solid 0px #000000;
+	border-top: solid 0px #000000;
+	border-bottom: solid 0px #000000;
+	}
+
+.right td.modulecontent {
+  background-color: #eef3ff;
+  border: solid 1px #c4d4f3;
+  padding: 10px;
+}
+
+.moduletable .moduleheadertext, .contentpaneopentitle {
+  height: 19px;
+  background-image: url(../images/comptitle_bg.jpg);
+  background-position: right;
+  background-repeat: repeat-y;
+
+  padding-left: 9px;
+  vertical-align: middle;
+  text-align: left;
+  color: #ffffff;
+}
+.contentpaneopentitle {
+  padding: 0;
+}
+	
+.right .moduletable .moduleheadertext {
+  background-image: url(../images/comptitle_right.gif);
+}
+	
+.moduleheaderleft {
+  height: 19px;
+  background-image: url(../images/comptitle_left.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 3px;
+}
+	
+table.moduletable th, .content-header {
+  height: 19px;
+  padding: 0;
+  background-color: #6e89dd;
+}
+	
+table.moduletable td {
+}
+	
+.componentheading {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+ 	color: #333333;
+	text-align:left;
+	}
+
+.button {
+	}
+
+select.inputbox {
+	}
+
+/** category text format and links **/
+.category {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; font-weight: bold;
+	}
+
+a.category:link, a.category:visited {
+	font-weight: bold;
+	}
+
+a.category:hover {
+	
+	}
+
+.poll {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	line-height: 14px
+	}
+
+.sectiontableentry1 {
+	background-color : #F9fbff;
+	}
+
+.sectiontableentry2 {
+	background-color : #dfe9ff;
+	}
+
+.sectiontableheader {
+	background-color : #6e89dd;
+	color : #FFFFFF;
+	font-weight : bold;
+	padding: 2px;
+	}
+
+.frontpageheader {
+	font-size: 18px;
+    color : #8caae7;
+    font-weight : bold;
+	 margin-top: 10px;
+	 margin-bottom: 10px;
+    }
+
+.small {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6e89dd;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+.smalldark {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #333333;
+        text-decoration: none;
+        font-weight: normal;
+        }
+
+
+.newsfeedheading {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #333333;
+        text-align:left;
+        }
+
+.newsfeeddate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6e89dd;
+	font-weight: normal;
+}
+
+.createdate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #6e89dd;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+.modifydate {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #808080;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+ul {
+	margin: 0px 0px 0px 0px;
+	}
+
+.fase4rdf {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; color: #000000; font-weight: normal;
+	}
+
+table.searchintro {
+	}
+
+table.contact {
+	}
+
+table.contact td.icons {
+	background-color: #eef3ff;
+	}
+
+table.contact td.details {
+	background-color: #eef3ff;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+
+.pagenav {
+	font-weight: normal;
+	color: #ffffff;
+}
+
+/* Content voting */
+.content_rating {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.content_vote {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+/* for modifying {moscode} output.  Don't set the colour! */
+.moscode {
+	background-color: #eef3ff;
+}
+
+/* Text passed with mosmsg url parameter */
+.message {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size : 10pt;
+	color : #6e89dd;
+	text-align: center;
+}
+
+/* end of mt_business */
+
+.pollstableborder {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mosimage_caption
+{
+	font-weight:bold;
+	border: solid 1px #cccccc;
+	background-color: #E7EDFD;
+	color: #666666;
+	margin: 2px;
+}
+_Qhttp://masterpigg.com/circus/templates/xplike.plesk.blue.rss/css/template_css.cssXtext/cssÓ
+O/* colors */
+.left {
+  background-color: #6e89dd;
+}
+
+.navOpened,
+.navClosed {
+  background-color: #ffffff;
+}
+
+.navOpened .navTitle .titleText {
+  color: #215dc6;
+}
+
+.navOpened .navTitleOver .titleText {
+  color: #428eff;
+}
+
+.navTitle .titleHandle {
+  background-color: #215dc6;
+}
+
+.navTitleOver .titleHandle {
+  background-color: #428eff;
+}
+
+.navClosed .navTitle .titleText {
+  color: #215dc6;
+}
+
+.navClosed .navTitleOver .titleText {
+  color: #428eff;
+}
+
+.left div.modulecontent {
+  background-color: #d6dff7; 
+}
+
+a:link,
+a:visited,
+a:active {
+  color: #215dc6;
+}
+
+.left td {
+  color: #215dc6;
+}
+
+a:hover {
+  color: #428eff;
+}
+
+
+/* common part */
+
+.left {
+  padding: 12px 11px 60px 12px;
+  width: 185px;
+  margin: 0;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.left img {
+  margin: 0;
+  border: 0;
+}
+
+/* opened tab */
+
+.navOpened, .navClosed {
+  background-image: url(../images/nav_bg.jpg);
+  background-position: right;
+  background-repeat: repeat-y;
+  width: 185px;
+  margin-bottom: 15px;
+}
+
+.navOpened th, .navClosed th {
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 22px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.navOpened .titleHandle {
+  background-image: url(../images/navopened.gif);
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 20px;
+}
+
+.navClosed .navTitle,
+.navClosed .navTitleOver, 
+.navOpened .navTitle,
+.navOpened .navTitleOver{
+  height: 22px;
+  empty-cells: show;
+}
+
+.navTitle .titleHandle,
+.navTitleOver .titleHandle {
+  width: 20px;
+}
+
+.navTitle, .navTitle td, .navTitleOver, .navTitleOver td, .left th {
+  cursor: hand;
+  cursor: pointer;
+  font-weight: bold;
+  -moz-user-select: none;
+}
+
+.navClosed .titleLeft,
+.navOpened .titleLeft {
+  background-image: url(../images/topleft.gif);
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 14px;
+  vertical-align: top;
+}
+
+.navClosed .titleRight,
+.navOpened .titleRight {
+  background-image: url(../images/topright.gif);
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 3px;
+  vertical-align: top;
+}
+
+.navClosed .titleHandle {
+  background-image: url(../images/navclosed.gif);
+  background-repeat: no-repeat;
+}
+
+.left div.modulecontent {
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+.left .navOpened div.modulecontent {
+  display: block;
+}
+
+.left .navClosed div.modulecontent {
+  display: none;
+}
+
+.left a,
+.left a:hover,
+.left a:visited,
+.left a:active {
+  text-decoration: underline;
+}
+
+.left div.modulecontent td {
+  margin-top: 4px;
+  padding: 2px 0px;
+  vertical-align: middle;
+}
+
+
+
+
+_Ihttp://masterpigg.com/circus/templates/xplike.plesk.blue.rss/css/left.cssÓO¿var treeopened = null;
+function opentree(tree)
+{
+	var cls = '';
+	if (document.getElementById) {
+		var el = document.getElementById (tree);
+		if (el && el.className) {
+			el.className = (el.className == 'navOpened') ? 'navClosed' : 'navOpened';
+		}
+	}
+	if (navigator.appName == 'Microsoft Internet Explorer' && document.documentElement && navigator.userAgent.indexOf ('Opera') == -1) setH();
+	return false;
+}
+
+function setActiveNode(id)
+{
+	if (activeItem == id) {
+		return false;
+	}
+	if (activeItem != '' ) {
+		var cur = document.getElementById(activeItem);
+		cur.className = 'node';
+	}
+	activeItem = id;
+	var el = document.getElementById(id);
+	el.className='nodeActive';
+	
+	return false;
+}
+
+function openScreen (id, url)
+{
+	setActiveNode(id);
+	top.mainFrame.workFrame.location.href = url;
+
+	return false;
+}
+
+function mover (o)
+{
+	o.className = 'navTitleOver';
+}
+
+function mout (o)
+{
+	o.className = 'navTitle';
+}
+_Thttp://masterpigg.com/circus/templates/xplike.plesk.blue.rss/javascript/leftframe.js_application/x-javascriptÓO+GIF89a  €  ÿÿÿ   !ù   ,       D ;_Khttp://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gifYimage/gifÓÓÓÓO©‰PNG
+
+   IHDR   	   	   ×Oö"   tIMEÓ ´XQ    	pHYs    Òİ~ü   gAMA  ±üa   PLTEÿÿÿÿ„ ´µºÜ   tRNS @æØf   IDATxÚc`À,F‹ÁbÄCÕ Œ ²ª{û    IEND®B`‚_6http://masterpigg.com/circus/images/M_images/arrow.pngYimage/pngÓÓÓ !OŠ‰PNG
+
+   IHDR         (-S   +tEXtCreation Time Thu 6 Nov 2003 15:30:00 -0000K|?   tIMEÓ\|şŞ   	pHYs    Òİ~ü   gAMA  ±üa   BPLTEÿÿÿssskkk„„„ÆÆÆ”””œœœ{{{ŒŒŒÿÿÿ÷÷÷ïïïçççŞŞŞ½½½ccc¥¥¥ÖÖÖµµµZZZ­­­ÎÎÎpãÀX   tRNS @æØf   ‡IDATxÚMÏQĞ‘Á ‰0äşW][ÛÊÏ«ŠëÑwí(qŒ‰°ÉÒ0&Ä_§OˆˆŞù%
+¨Z¿À›	Yôf'TİÏªÀDÌ| r+HSÖHìMi„Wãvô¶&Ri7Ä@ÈAÌ†`iìILòRb€ôx Ø0p[7ş0ï<¬;«ú¢)    IEND®B`‚_;http://masterpigg.com/circus/images/M_images/pdf_button.pngÓ#$Oª‰PNG
+
+   IHDR         (-S   ,tEXtCreation Time Fri 23 Jul 2004 21:02:51 -0000Ü±y¹   tIMEÔ!Së   	pHYs    Òİ~ü   gAMA  ±üa   BPLTEÿÿÿ­­­„„„kkkcccÿÿÿŞŞŞïïïççç¥¥¥ÆÆÆ½½½œœœµµµŒŒŒÖÖÖ”””ÎÎÎ÷÷÷sssBBBJJJ]¬Ÿd   tRNS @æØf   ¦IDATxÚ%ÎY‚Ä PÜ
+„Ô¹ÿU›¤Ë¿g!i Ønô‹ad¶½¢î%Xâ¨&àœ=O68»^h=w3‡ÀŠ÷çıÔ=äÔˆ®!Zÿş—IîFz±ÖÏd¾¡häEÏ`köü¦SÑ8:WwJöÖâ+	óâC|…˜<[î¨1bİl$ĞìSí*`ê só¥¶LÏÓZı_Gã—    IEND®B`‚_<http://masterpigg.com/circus/images/M_images/printButton.pngÓ&'O¨‰PNG
+
+   IHDR         (-S   ,tEXtCreation Time Fri 23 Jul 2004 21:05:44 -0000 ÿMù   tIMEÔp/œ   	pHYs    Òİ~ü   gAMA  ±üa   HPLTEÿÿÿÆÆÆkkkZZZœœœ­­­sssµµµccc¥¥¥{{{ïïïÎÎÎ½½½÷÷÷çççRRR”””ÿÿÿÖÖÖŞŞŞJJJŒŒŒ999í1ıø   tRNS @æØf   IDATxÚMQƒ0D!†DL4½ÿMët¿xÌìÜBŞR…G˜ËHÍš$½PsÇÃÌÄûi©™äDk¸ @Çİ.…—¥‰4³Ã9œW„JsÖ¬^I\qú{)µª€y.TvTŸb›W#Ä)½ÏÇlwñĞíU®dZ}¾Ê¯Bwò­îBK¢§•šV†¿ªiÉøƒ/Ä zß/
+¦    IEND®B`‚_<http://masterpigg.com/circus/images/M_images/emailButton.pngÓ)*OOGIF89a  ÷  ÌËË5UoÜÜÜÍãğŒ®ÍÄİïp©—¦³·¸ºççæ«´»z|}IPU¨ÉçazéééXˆ«¨©ª·Ñçhqzííí™®•••Xu’êîò6f‹ÖÖÖ¶Õòóóó=WÅÒß„•âââ__aÓÛäIe|¶¿ÅPxšŒ‹ŠØÖÔÒĞÎàçîÎÍÍğğğäääÔÙß½¿ÂŞãæÌÏÓÒ×ŞÚØÖo¢Ââéì­ÒòßßßïïïÕÕÕÙÙÙÊÊÊñññÇÇÇlllÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !ù  ? ,       ş #ôH° A‚}(\È°áÂ>0Ü`b‡‹3®H 1X<`aãÁ“'7
+€Ãƒ(( p"Á›7€ÈQ€‚ZD8P E7)<°Á³‡
+*&8 ¢„FYPPÊâ:\5Ğ! V	¸6õñ•„.„á  tuºƒ…‹3ôàqÂÂ	/\hØËöX°é‚Áˆ"0Ş±"Ç‡
+¨ÀÁÃƒ
+l^qÆ,ø Aƒ=Vß€ºÀ@J8ÀÀ‚îİQK€ĞáBhÍk9oU
+`Bğ Í7¨°vÅHàm-¸XĞc‰<p‡˜@€ğãË‡ÿ~ *tèßÏ_?  *ô ĞAdA@  ;_Ghttp://masterpigg.com/circus/components/com_akocomment/images/bburl.gifÓ,-OGIF89a  ÷  ÜÜÜÍÍÍÂÂÃæææ™™™öõöééé¤¤¤‘‘‘®®®ááá©©yvui©©©êêêîîîäää§§g½½¿««}’’’ğğğÖÖÖòòò¥¥všŠ g”˜—ŞŞß™™—Ì\¿µ¸‹›cè|ş½¤¶¶n©©wÃâõßûÿŒ‹y¯íÿ”ŸgäÊÂûûúòğïòòğGx©–i³°¸··ìììßßßÕÕÕâââÊÊÊÙÙÙóóóïïïñññÇÇÇlllÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !ù  ? ,       ÷ ôH° A‚}(\È°áÂ>rHœHqâ…@¼°££Ç3€¸£B(SªÔa@’JdÈĞM›2`@ãe;ÜĞ@€£GW„ø ¢'I $ĞP„œşÜAÆ 
+ØPÀaÇ
+1@hŠÀB	1àD
+Ö5 pÀX˜×'[¾>* …,
+“ÜàÂaÃz` aÁ„Ï8‡~¡w¥iè­ğ`†ë×°à`¸‚6rëŞ=€á ,ÔN¼xÂæ°à†óçĞŸĞCàÁë) ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/bbemail.gifÓ/0OGIF89a  ÷  íííìììZZZÖÖÖààà<<<---ÑÑÑòòò©©©æææ†††êêêÍÍÍiiiÜÜÜçççÌÌÌáááÛÛÛKKK’’’äääŞŞŞËËËØØØôôôéééîîîÂÂÂèèèßßßâââ³³³ÕÕÕÙÙÙÊÊÊóóóxxxğğğñññïïïÇÇÇlllÿÿÿ   ÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             !ù  0 ,       ß ´H° A‚](\È°áÂ.NHœHq")@D ¢£ÇSD€ QEŠF¨Ty`…Ë(”(™bŠ8s ° ˆ3[¸0i§ p2èù3èĞš7_ŒX1'
+¦@i}Á`„€
+ZúÌ*”hÔœ/ğëÔ¬Q¼€µ-TœSW<ÀËVkÔ¼p~è[öî’¾(P×/Ú¹(Ö6¥é!€åË˜,Èà4E"B‹-‚ „#T@¢µë×$°Èa€¸sëÆ­a‚ƒ
+/x!  ;_Hhttp://masterpigg.com/circus/components/com_akocomment/images/bbbold.gifÓ23OêGIF89a  ÷  ÖÖÖ³³³ZZZ©©©•••òòò<<<ÑÑÑÂÂÂÍÍÍÜÜÜêêêæææçççàààäääîîî†††éééôôôÌÌÌÛÛÛËËËŞŞŞ’’’ØØØáááèèèßßßìììíííâââÕÕÕÙÙÙÊÊÊóóóğğğñññÇÇÇlllïïï   ÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      !ù  - ,       Ç 	¤H° A‚Y(\È°áÂ,JHœHq¢&@4p¢£ÇM<` ñ„	*RªÀR€J
+F”D©RÅ¤ÑÁƒÌ,LÖL© €J>gM°ÁÑ?ƒÒT9!@M¤Q…Ö0à*T¥5}š¨Ö”šz-+µf«k³NUÁu(V°LW¬ĞIV®„€nà CT"„XÌ¸q6@|p€ˆË˜3‹ `y` HˆMZ4R<Èº †€  ;_Jhttp://masterpigg.com/circus/components/com_akocomment/images/bbitalic.gifÓ56O÷GIF89a  ÷  ³³³ìììxxxÖÖÖààà©©©òòòÑÑÑæææÍÍÍÜÜÜçççÂÂÂêêêÌÌÌËËË¤¤¤ÎÎÎ±±±éééŞŞŞ†††’’’KKKØØØîîîôôôÀÀÀÛÛÛáááèèèßßßííí<<<ÕÕÕÙÙÙÊÊÊóóóğğğñññÇÇÇïïïlll   ÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !ù  / ,       Ô °H° A‚](\È°áÂ.NHœHq¢(@4¢£ÇQ4` 1
+ ¬X¹Ò‚•>”(‰b€,W°Bˆ3Y¸0igÎ=ZófÎH}¥YôiT¥Tå)u)Q­,¯NúÕhX®XÉÖDĞâ%Ë’eª3Ë	ÈõZs	F8à`eWš(@¡ƒbÅXXŠâA‹Ë˜3_&À@ÄMº4‰¢r°À„ë×°]G€°€…Àƒ¸b ;_Mhttp://masterpigg.com/circus/components/com_akocomment/images/bbunderline.gifÓ89OGIF89a  ÷  4^‡ûúøåååÎÍÍŒŒcbb•Ÿ©UnˆêêêİÜÜîúÿ³³³õõõttr“’’¼»ºÒİçííí¸¸¸¶µµÒÒÒ©©©¾ÂÄÇÊËááá/Oòòòöúşëğôßğÿ€›¸®¬¬ËËË¸·µÆÆÆk€–€ãñÿ¦µÃQRO-::9WvŞäìÜØÕŞêöçççN^dÖÔÑ´±¬èèèßßßìììâââÕÕÕÙÙÙóóóÊÊÊğğğïïïñññÇÇÇlllÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !ù  ? ,       ø +ôH° A‚}(\È°áÂ>nHœHq¢9@Ô°££Çs´H qG:Rª\©%s ğ`Â‚›$L°!†˜=|˜ÀaD‚†>Èğ	Th
+2<pH Ó˜!¢ÂxÁŠz¸Ôä„,¤  â   øóƒJ°`ĞE€cé–ÍáÀ‚,¼PàY§œ˜|‚„
+.p xl2%…Ïx@QAGOÁNY¦lAàƒiÎ9"Ì˜M»6¨e
+ Á»·o4Y£¸ñãÈ2¨1 ‡óçĞƒ 1 ‡ÀƒØ: ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/bbquote.gifÓ;<O%GIF89a  ÷  ÙàêÜÜÜ˜ÈşÌßõªªªssŠa`fèèèWVŒ–µ×““˜:…Ò\˜ÖÌÍÎÁÉĞ¦´ÉåååMPVÅºÌòòòÀº¹”ºä›¿æíííYY`ÒÑÔÓàõãçìààà¼¼»ÌÚê‹Œ‹®Õú­ÊäÃ×ñÏÙâÏÕÛ@j‘ëíî¯®­‡Ä`·°ÀÜÕàys¾€±éÂÀ½`ƒ¥X–æ~¦ÑßßßìììâââÕÕÕÙÙÙÊÊÊóóóğğğñññïïïÇÇÇlllÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                !ù  ? ,       ş 	ôH° A‚}(\È°áÂ>pHœHqâ„	9 @œ ££Çs QG;Rª\¹ã %Qî0QbØqá€˜=|˜Ü ‚
+.H0 ¡ FÏŸ1XĞ Â@/Z¬hê¨PS«vHÉ£„€­5 ÕCÄƒV6("C—% `1À€”,€€á„Z¡9j @¡!ÄˆÀ$DèĞ5æ{$  CO½İQ£@Š5zàÁ³òZ™;x|8‘áÄ‰”¡c^˜Á»·ï®}ˆ„@£¸ñã48ğ:²†óçĞ£ÄQ£ÁëØ³coĞ ‡Àƒà* ;_Hhttp://masterpigg.com/circus/components/com_akocomment/images/bbcode.gifÓ>?OÜGIF89a  ÷   Yw m{fLLLlll«æhh’’’©©©²²²Œ´ÁÊÊÊËËËÌÌÌÍÍÍÕÕÕÖÖÖØØØÙÙÙÛÛÛÜÜÜŞŞŞßßßàààáááâââäääæææçççèèèêêêìììíííïïïğğğñññòòòóóóôôôÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ,       Á H° A‚O(\È°áÂ'JHœHq"	"6@$a €€ CŠÁÄ<†1 ¥K—$œ@seƒ›8qZIàÄ+ƒ
+]	¢ÃÎ“@‡-z´ç (Ê”§Ï QW¾ÜÚÔ'€¯+ˆ;¶ëÏ©B«"EKÕ¨Õ§YÑªuŠU*Ë­.Í~ğáÙ¿¬Šğ !ƒáÃˆ3\ "‡	HLù„ÈM@p° ³çÏ4p@@àÁÓ ;_Lhttp://masterpigg.com/circus/components/com_akocomment/images/bblistopen.gifÓABOØGIF89a  ÷   Yw m{LLLlll’’’©©©²²²Œ´ÁÊÊÊËËËÌÌÌÍÍÍÕÕÕÖÖÖØØØÙÙÙÛÛÛÜÜÜŞŞŞßßßàààáááâââäääæææçççèèèêêêìììíííïïïğğğñññòòòóóóôôôÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ,       ½ H° A‚I(\È°áÂ$DHœHqbˆ0@q    CŠü!D<zğ  ¥K—œ@s¥‚›8qN9€ˆ+ƒ
+]ÙAÃÎ“@‡-z´'ˆ ”eÊÓgÊ¨,_¾lê“&V`Ã†åúSªPªHÍN5Zõ©J³h^]©uk[¯8ˆİ+¡ê‡,LØ… f€Ğ€ãÇ4h<pDƒ2kŞœ9‚]@@  ;_Lhttp://masterpigg.com/circus/components/com_akocomment/images/bblistitem.gifÓDEOÜGIF89a  ÷   Yw m{fLLLlll«æhh’’’©©©²²²Œ´ÁÊÊÊËËËÌÌÌÍÍÍÕÕÕÖÖÖØØØÙÙÙÛÛÛÜÜÜŞŞŞßßßàààáááâââäääæææçççèèèêêêìììíííïïïğğğñññòòòóóóôôôÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ,       Á H° A‚O(\È°áÂ'JHœHq"	"6@$¡  € CŠÁÄ<†1 ¥K—$œ@seƒ›8qZIàÄ+ƒ
+]	¢ÃÎ“@‡-z´çˆ ”eÊÓgÊ¨,_¾lê“&Ö`Ã†åúSªPªHÍN5Zu„Ô¢uZ îJ­[Û
+ØûáƒØ¿ªŠğ !ƒáÃˆ3\ "‡	HLù„ÈM@p° ³çÏ4p@@àÁÓ ;_Mhttp://masterpigg.com/circus/components/com_akocomment/images/bblistclose.gifÓGHOÉGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !ù	   ,      ¦ X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtT²`
+¢HĞ±Ä‡+
+¦ YĞÄ‰=„\!æ	3–è R$I“((¸¡E‹5*(0µ†%80tA	SZ¸Pâ‚
+”0Va	< ®Â,P€®_‚% (€6bB…z ;_Jhttp://masterpigg.com/circus/components/com_akocomment/images/sm_smile.gifÓJKO¯GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\ìüĞ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      !ù	   ,      Œ X¢`ÁÔC–ğğÁC‡(<PPb`	!
+‚è¡à†\‘bb‰J$èXâCŠ,XÄ0ÁÄ‰=:h‰%D´Hª4éÒ 78eº´)Ô¦Šhj•¦…U¹–€J0BLª%ØÀQµ)=ÊDP€ÀÕ„r& ;_Lhttp://masterpigg.com/circus/components/com_akocomment/images/sm_biggrin.gifÓMNOÉGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !ù	   ,      ¦ X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtT¢Ä
+‘%8D‘ c‰)V$YĞÄ‰=„|Â‡h-Ñ¤H’&Q"PpCŠ1jTP€j	b2tA	TZ¸Pâ‚
+”0Va	< ®Â,P€®_‚% (€6bB…z ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/sm_wink.gifÓPQOºGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !ù	   ,      — X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtT²`
+¢HĞÑ Í›6=„Èi3Á€‚@$™¡`Ê 7t h£F–ÀP”C‡” €T¡…%.X  ¡A	]F0áæ i6pĞ`‚hã,‘ A®*´™0  ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/sm_cool.gifÓSTOÄGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\š  Æ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     !ù	   ,      ¡ X¢`ÁÔC–ğğÁC‡(<PPb`	!v0¸ AG…!W¤áÃ	%t,ñ!Å
+*AtÀ0ÁÄ‰=„°¹²åK	€–è r¥Î ”PpÃÄŠ3n,Aµ†Ã$@U¡…Z´p¡6²
+#H˜ Am‹ÀUØÀAƒ
+Üê=é1&‚d#&T6a@ ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/sm_razz.gifÓVWO"GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 !ÿNETSCAPE2.0   !ù	  ,      ¤ X¢`ÁÔC–ğğÁC‡(<PPb`	!JàÑ!ƒÈ:*	 ÀÄ-K$èXâL"\Àér@A0ñáÓ)´gÁ Dâ+ÑAi	
+nèàSŒVˆZC:„À ¨
+-\ÀpÁJ@«0‚„	@Wa(H0·/A™
+œ˜PaŞ„ !ù	  ,      ¡ X¢`ÁÔC–ğğÁC‡(<PPb`	!JàÑ!ƒÈ:*	 ÀÄ-K$èXâLøğİÌYb@A0sê ´gÁ ‚–è A€‚:x ±#U–ÀA†!0H@à©B0\°@BƒÌ*Œ a‚Á‚ÈUØÀAƒ
+ÄİKP&‚e#&Tx7a@ !ù	  ,      Ÿ X¢`ÁÔC–ğğÁC‡(<PPb`	!JàÑ!ƒÈ:*	 ßÄ-K$èXâL|8oæPĞL9 uÉ³D?&E à†HÅ(UA¦%0dĞÀ¡ChªĞÂ,P€Ğ „²
+#H˜`°à p6pĞ`‚oó”‰ ÀØˆ	ÖM !ù	<  ,        X¢`ÁÔC–ğğÁC‡(<PPb`	!J Ñ!ƒÈ:*iĞƒÁ	:–øP@A›6k–PĞ% "pµÉ³D5mvHZA€‚:¸4Š± ‚OK`È C‡$ ğT¡….X  ¡A	eF0áe‰â*là Á	àê%A²*|™0  !ù	  ,      ¥ X¢`ÁÔC–ğğÁC‡(<PPb`	!JàÑ!ƒÈ:*Yqb	J$èXâC‰;”Ğ ÓA‰=ˆÄGthQ %:€¨)T'ÌÜĞÁ‰¤¯*( µ†80tARZ¸€á‚
+”0Va	< ®Â,P€®_‚2@1¡B½	 !ù	H  ,        X¢`ÁÔC–ğğÁC‡(<PPb`	!J Ñ!ƒÈ:*iĞƒÁ	:–øP@A›6k–PĞ% "pµÉ³D5mvHZA€‚:¸4Š± ‚OK`È C‡$ ğT¡….X  ¡A	eF0áe‰â*là Á	àê%A²*|™0  !ù	  ,      ¥ X¢`ÁÔC–ğğÁC‡(<PPb`	!JàÑ!ƒÈ:*Yqb	J$èXâC‰;”Ğ ÓA‰=ˆÄGthQ %:€¨)T'ÌÜĞÁ‰¤¯*( µ†80tARZ¸€á‚
+”0Va	< ®Â,P€®_‚2@1¡B½	 ;_Mhttp://masterpigg.com/circus/components/com_akocomment/images/sm_rolleyes.gifÓYZO`GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\“  Ğÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    !ÿNETSCAPE2.0   !ù	  ,      ¢ X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtTÒ…H.¸@‘ c‰)\”pIR§‹
+zhù2æÌAKt )’¤I”ÜĞ¢EŒZC4„À ©
+-\ÀpÁ`ƒĞ*Œ aÄ% WaÆíK0/‚g#&ThpåÀ€ !ù	  ,      ¤ X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtTÂ…Ë8¸t‘ c‰)\”p‘‚¤N'ôĞòeÌ™	„–è R$I“((¸¡E‹5*(0µ†8h0ASZ¸€á‚Á	¤UAÂˆ-J$8`®Â”ë— ^ĞFL¨ĞàÊ !ù	  ,      • X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤šéa¥‹%>„,!rfÈ[®Ôig‰ E’4‰ @Á(ZÄ¨QA£%0dĞÀAƒA0ªĞÂ6H`€«Â&@lQ"Á f6pĞÀ`Ù¸Û"(°5bB…S !ù	  ,      œ X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤ºÁÒ…‡•-;–ø°²„ EØt1 àK–7¶ìY¢H‘$M"PpCŠ1jTP€i	4pĞ`ƒ˜*´pÃƒ«0‚„	[”Hp  […40¸ö.Á¹
+„˜P¡Á” !ù	  ,      • X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤šéa¥‹%>„,!rfÈ[®Ôig‰ E’4‰ @Á(ZÄ¨QA£%0dĞÀAƒA0ªĞÂ6H`€«Â&@lQ"Á f6pĞÀ`Ù¸Û"(°5bB…S !ù	  ,      œ X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤ºÁÒ…‡•-;–ø°²„ EØt1 àK–7¶ìY¢H‘$M"PpCŠ1jTP€i	4pĞ`ƒ˜*´pÃƒ«0‚„	[”Hp  […40¸ö.Á¹
+„˜P¡Á” !ù	  ,      • X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤šéa¥‹%>„,!rfÈ[®Ôig‰ E’4‰ @Á(ZÄ¨QA£%0dĞÀAƒA0ªĞÂ6H`€«Â&@lQ"Á f6pĞÀ`Ù¸Û"(°5bB…S !ù	  ,      œ X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤ºÁÒ…‡•-;–ø°²„ EØt1 àK–7¶ìY¢H‘$M"PpCŠ1jTP€i	4pĞ`ƒ˜*´pÃƒ«0‚„	[”Hp  […40¸ö.Á¹
+„˜P¡Á” !ù	  ,      • X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤šéa¥‹%>„,!rfÈ[®Ôig‰ E’4‰ @Á(ZÄ¨QA£%0dĞÀAƒA0ªĞÂ6H`€«Â&@lQ"Á f6pĞÀ`Ù¸Û"(°5bB…S !ù	  ,      œ X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤ºÁÒ…‡•-;–ø°²„ EØt1 àK–7¶ìY¢H‘$M"PpCŠ1jTP€i	4pĞ`ƒ˜*´pÃƒ«0‚„	[”Hp  […40¸ö.Á¹
+„˜P¡Á” !ù	  ,      • X¢`ÁÔC–ğğÁC‡(<PPb`	.B‚è!¤šéa¥‹%>„,!rfÈ[®Ôig‰ E’4‰ @Á(ZÄ¨QA£%0dĞÀAƒA0ªĞÂ6H`€«Â&@lQ"Á f6pĞÀ`Ù¸Û"(°5bB…S !ù	  ,      ¤ X¢`ÁÔC–ğğÁC‡(<PPb`	!R„ Ñ!ƒtTÂ…Ë8¸t‘ c‰)\”p‘‚¤N'ôĞòeÌ™	„–è R$I“((¸¡E‹5*(0µ†8h0ASZ¸€á‚Á	¤UAÂˆ-J$8`®Â”ë— ^ĞFL¨ĞàÊ ;_Khttp://masterpigg.com/circus/components/com_akocomment/images/sm_bigeek.gifÓ\]OâGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\±                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        !ÿNETSCAPE2.0   !ù	  ,      · p1P`Á‚ºXH°!Bƒ&ŒÈpáCƒŒˆ±£Ç 1–9äH0T€PR¤‡%:lÀPâ‚K€‘"DÌ ,@€S@	#}r‰"ÎR¬™D‡‘&NéçŠ8\ĞtkÌ=­f:4ÀÈ<œ« €Û2”±·/_nZğK8°Ñæ’`Øh(H`€qÑœ% ( ¸¥GÅ !ù	  ,      ³ ¸HP@Á*$¸aÃ„FœøĞ!C‰'jÜÈ±cÄ Av©!†
+DN,ááC‰0”x  ÄG!R„xYÂ„l
+(‘äN Q$°YâCŠ S€è ÒÄ‰ =ä\¡Ó‡”b}‰SçÔ> ¹¡ƒ‡pX[C†"ğêÍK`íP{ûAÜmà Á	$ú±DúªÜxXc@ !ù	  ,      ¶ p!p AƒtÁ Ã‚	J|ØaÁ‹J¼È±£ÇKˆùQ¤†*@ ÒÃ‡6`(ñ@A‰‚%@„Hf	 ¸) ÄN‘=9ˆD‘àf‰)VˆL¢ƒH'ˆô°sO.H`ª¦NU3 @ä†FÊUP m	JˆĞËw/¶E-ô¸h	rG(\´ƒ$0°˜(Î	øË²cb !ù	  ,      ´ p! A&<È!Á…	#BDèPâÃ†)jÜÈ±ãÆ Av©!†
+DR,ááC‰0”x  Â B¤ñ²„ØPB'H@¢H`³Ä‡+@¦ Ñ¤‰@zĞ¹b§$,Íú2çNª~ rC!ã*(À¶†%Däİ«— [¢ø
+şK4‚„¸!&ÚÀAƒ
+P<ôf‰
+øUù1®Æ€ !ù	  ,      · ¸(€àÀ‚
+tÁp C„B,HqaC‰%F¬È±£ÇKˆùQ¤†*@ Y±„‡%:lÀPâ‚K€‘"DÌ ,@€S@	"}r‰"ÎR¬™D‘&NéçŠ8\ĞtkÌ=­f:4€È<Œœ« €Û2”±·/_nZğK8°Ñæ`Øh(H`€qÑœ% ( ˜eGÅ !ù	  ,      ¸ t!€ Á‚"4XĞ…Ãƒ	.8‘bÃ‡
+”h±£Ç ;–9äH0T€PÒb	JtØ€¡Ä%(– "E™%,@X€ §€=Gşä0E‚œ%>¤X12ˆ#Mœ0ÒCÏ>=p¸ Á)W™<}^Í ”h€‘:x IWA·%0d(!‚¯ß¾Şµğ·°à£$Ğ%àğÑ,PÀ@c£:K$@P pK‹; ;_Jhttp://masterpigg.com/circus/components/com_akocomment/images/sm_upset.gifÓ_`OGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\±                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        !ÿNETSCAPE2.0   !ù	<  ,      Ã K(  ÁƒK \XP¡€FlÈ¢Â‰ÌÈ±£Ç-f¨!†
+,ááƒ‡0Px  b	!‚èAàKä\‘‚e‰J$¸ø!Å
+Dwb˜`âÄ B8MÂ¤(\-Ñ'×,@ø@à†-_Æœ© @Û2hàP²J	´}há†(@hÀÀà‡$L€`‚‚<~ØÀAƒ—oÖ˜ AÁ*CBD !ù	(  ,      Â K,!  Áƒ	"\(@á@&d‘"B…>Ä˜±£Ç‹
+ÔC–ğğÁC‡(<P€±ˆAtÈ p‡8W¤XYâ‚„	–øb¡:1L0qb€@!š¦áƒQ	¬–èps«Î ø pC–.aÊTP€m	4p Yâ$ƒØ6´pÃ 4H`@pÃ&@0Á@A‚7là ÁË5kDŠ @à”C !ù	  ,      À K,!  Áƒ	"\(@á@&d‘"B…>Ä˜±£Ç‹
+ÔC–ğğÁC‡(<P€±ˆAtÈ p‡8W¤XYâ‚„	–øb¡:1L0qb€@!š¦áƒQ	¬–èps«Î ø pC–ÊTP€m	4pĞ0ƒØ6´pÃ…Ü0‚„	L0Pà@ Æ8h°€òbÌ‘"(8eÄ !ù	<  ,      · K(  ÁƒK \XP¡€FlÈ¢Â‰ÌÈ±£Ç-f¨!†
+,ááƒ‡0Px  b	!‚èAàKä\‘‚e‰J$¸ø!Å
+Dwb˜`âÄ B8MÂ¤(\-Ñ'× ü pC‡–i`[C,2H@€íC0XL`ÀïÃ&¤˜à@ Ã8h°@áÇ#(ĞWeHˆ !ù	(  ,      · K,!  Áƒ	"\(@á@&d‘"B…>Ä˜±£Ç‹
+ÔC–ğğÁC‡(<P€±ˆAtÈ p‡8W¤XYâ‚„	–øb¡:1L0qb€@!š¦áƒQ	¬–èpsë@|¸¡Ë3¬-!ƒ$ °¶¡…6&0Ğ·a	P
+Lp @á†4X `°c‘"(À7eÄ !ù	  ,      À K,!  Áƒ	"\(@á@&d‘"B…>Ä˜±£Ç‹
+ÔC–ğğÁC‡(<P€±ˆAtÈ p‡8W¤XYâ‚„	–øb¡:1L0qb€@!š¦áƒQ	¬–èps«Î ø pC–ÊTP€m	4pĞ0ƒØ6´pÃ…Ü0‚„	L0Pà@ Æ8h°€òbÌ‘"(8eÄ ;_Jhttp://masterpigg.com/circus/components/com_akocomment/images/sm_sleep.gifÓbcO³GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\±                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        !ÿNETSCAPE2.0   !ù	d  ,      º H° Áƒ*\È°¡Ã‡	–˜8áD0T€PQ¢‡.:lÀàâ‚K€á"ˆ,¸X€ ¥€,W¤áÃ	. ,ñ!Å
+.R¼DjâÄ€‰B¤@Ê“R	–è°rçË˜h˜¸¡ÃG"1P0Y`l	4XEŠ”AcoZ¸àâ‚
+¸0÷f	 ˜`  Á …o6pĞ`AcÂ‘NL€  Ş)‚ !ù	–  ,      Ê (ÀÁƒ*DxĞ…C†	J4±àÃŠ3RÄ¸£ÇKˆ	Q¤†*@ I°„‡.:lÀàâ‚K€á"ˆ,¸X€ §€<W¤áÃ	.à,ñ!Å
+‡)~:4qb€H!R8dÊÁ!Š^KtØ¹ôgPDˆÜĞá¥™(Ø, ·†ÊNd€€Ü£.¸¸`„.>AÂ&(Hp Àä£4X°Yòg" (`˜eÈ‘F !ù	, ,      Ï páb @‚<¸0¡À…#DøP¢Eˆ
+3^|È±£Ç CŠ)°„I“ MjÈ€¡”Kxøà¢Ã.((ñ°ˆ.B€èÁ‚‹x
+(tEŠ8\à"ÏR¬ ˜b(A'˜ô"A¨¢H ¶D‡ŸO‡…€4€Éfz°‰‚ÎvK`È !-A‚°»ÔÂ,P€ĞÀ…ÆK#H˜ Á	À¼´ƒ@_&]²DÃôxr¶À€ ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/sm_sigh.gifÓefO´GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\±                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        !ÿNETSCAPE2.0   !ù	  ,      ¯ H° Áƒ*\È°¡Ã‚%"FDQC L$XÂÃ6` ğ@A‰%@„HD‡ ,@pR@‰•CxàE‚“%>¤X1…Ëˆ&Nˆèaå
+–;/Hğ¹´D•,]Â”‰ @Ä<‚IRA¯%0dĞÀÁ"FğjÓÂ#&0@×f	% ˜` àg€¾68h° 0_Äõ"(0w£Á¼5 !ù	  ,      º (!P Á‚*Tx`Â…B|HQ¢Å‹+"ÄÈc‰9~ÔC!3zøà¡Ã(HXDˆ!@tÈ`Âo~áÃG	~H±âc
+MœğÑÃÍ8‹^€”j‰6qêäéA€:¬lù2¦‚gK`È I“$ pv …@~L` ïÀJ@0Á@AÒ †6pĞ`ãÂ‘–H€  ß”? ;_Mhttp://masterpigg.com/circus/components/com_akocomment/images/sm_confused.gifÓhiO…GIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !ÿNETSCAPE2.0   !ù	x  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@€‚UK`È !©Á¨ªĞÂ…,P€Ğ „¶
+#H˜ Á	À«°ƒ ß%L°&‚k#&Tx6a@ !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`	 	TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@h ÀÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ ÜUØÀAƒí&XAµ*4›0  !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒ L°&‚j#&Th6a@ !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ V&Th6a@ !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4 a@ !ù	x  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"H #KZ€2@Á(z¸ˆÂÆVK`È !©Á°ªĞÂ…,P€Ğ „¶
+#H˜ Á	À«°ƒ ß%L°&‚k#&Tx6a@ !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à† x¸ˆÂÆUK`È !©Á¨ªĞÂ…,P€Ğ „¶
+#H˜ Á	À«°ƒ ß%L°&‚k#&Tx6a@ !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞ À`A	TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUhá€(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$ €`‚‚ÜUØÀAƒí&XAµ*4›0  !ù	  ,      © X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØ @ƒí&XAµ*4›0  !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí& ‚j#&Th6a@ !ù	  ,      ª X¢`ÁÔC–ğğ¡D‡J<PPb`	!J„ Ñ!ƒ…tTrEŠ8\P"AÇR¬(˜‚dA'ô"EA˜
+¢H Ô"È—$MBH à†=\Ä@acª%0dĞÔ`		TUháB‰(@hPÂÀZ…$L€`‚‚ÜUØÀAƒí&XAµ0»r`@ ;_Hhttp://masterpigg.com/circus/components/com_akocomment/images/sm_cry.gifÓklOÇGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !ù	   ,      ¤ X¢`ÁÔC–ğğ¡D‡J<PPb`	!R„°XÂ„:*Yp$‡‚(t,ñ!ÅŠ‚)@t(hâÄ€‚B®éÃ	1Z)Rg“(ÜĞ¢Á‚H-!ƒ†BL@@ªB\/X  ¡L³
+#H˜ Á	€«°ƒğØ«Òc‰
+”˜PáÕ„ ;_Hhttp://masterpigg.com/circus/components/com_akocomment/images/sm_mad.gifÓnoOËGIF89a  ÷ Öèşn ÀÀÀop"u"t#u'y*{	3‚:‡;‰>‹@ŒF‘M—O˜T V!Z¡#^¥%d©)j®,l°-w¹3~¿7{½6Á8‰È=“ĞC—ÓE›ÖG¨áNÿÿÿ½½½SSS   G-~A¯êTm¹3³ñY¶ö\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        !ù	   ,      ¨ X¢`ÁÔC–ğğÁC‡(<PPb`	%R„(Ñ¡„ˆ:*‘¢`
+¢HĞ±Ä‡+
+¦ Q²„‰
+z¹¢¥‡$”H”$–!xf8¹ A€‚:P´ˆQ£‚WK`È !¦Á¸ªĞÂ¤-â6(a€­Â&@ˆÛ"Á v6pĞ`‚u\Š ÀÚˆ	M ;_Ihttp://masterpigg.com/circus/components/com_akocomment/images/sm_dead.gifÔqrstu_WebResourceTextEncodingNameUUTF-8OS<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><SCRIPT type="text/javascript">
+	function insertAtCursor(myField, myValue) {
+		if (document.selection) {
+			// IE support
+			myField.focus();
+			sel = document.selection.createRange();
+			sel.text = myValue;
+		} else if (myField.selectionStart || myField.selectionStart == '0') {
+			// MOZILLA/NETSCAPE support
+			var startPos = myField.selectionStart;
+			var endPos = myField.selectionEnd;
+			myField.value = myField.value.substring(0, startPos)
+				+ myValue
+				+ myField.value.substring(endPos, myField.value.length);
+		} else {
+			myField.value += myValue;
+		}
+	}
+</SCRIPT><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><TITLE>Master Pigg's Circus of Insanity and Passion - A review of index cards you can buy</TITLE><META name="title" content="A review of index cards you can buy"><META name="author" content="Master Pigg"><META name="description" content="Master Pigg's Circus of Insanity and Passion"><META name="keywords" content="mambo, master, pigg, paul, edward, riley, gallery, renton, desoto, rolla, washington, missouri"><META name="Generator" content="Mambo - Copyright 2000 - 2005 Miro International Pty Ltd.  All rights reserved."><META name="robots" content="index, follow"><BASE href="http://masterpigg.com/circus/">
+        <LINK rel="shortcut icon" href="http://masterpigg.com/circus/images/favicon.ico">
+        <LINK rel="stylesheet" type="text/css" href="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/css/template_css.css"><LINK rel="stylesheet" type="text/css" href="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/css/left.css"><LINK rel="shortcut icon" href="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/favicon.ico"><SCRIPT language="javascript" type="text/javascript" src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/javascript/leftframe.js"></SCRIPT><STYLE>
+                .pollstableborder {
+                border: 0px solid;
+                padding: 0px;
+                }
+</STYLE><TITLE>Master Pigg's Circus of Insanity and Passion</TITLE></HEAD><SCRIPT language="javascript">
+<!--
+	function setH() {
+		var s = document.getElementById ('stick');
+		var y;
+		if (self.innerHeight) {// all except Explorer
+			y = self.innerHeight;
+		} else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+			y = document.documentElement.clientHeight;
+		} else if (document.body) { // other Explorers
+			y = document.body.clientHeight;
+		}
+		s.style.height = (y-100) + 'px';
+	}
+
+//-->
+</SCRIPT><BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onresize="setH();">
+<DIV class="top"><TABLE align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="topbody">
+ <TBODY><TR><TD>Master Pigg's Circus of Insanity and Passion</TD><TD align="right" class="searchArea" valign="bottom"><FORM action="index.php" method="post" name="search_form">                      <INPUT class="searchbox" type="text" name="searchword" height="16" size="15" value="search..." onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';">
+                        <INPUT type="hidden" name="option" value="search">
+                                                <INPUT type="submit" value="Go" class="">
+                </FORM></TD></TR></TBODY></TABLE>
+</DIV>
+<TABLE align="center" width="100%" border="0" cellspacing="0" cellpadding="0"> <TBODY><TR><TD class="left" valign="top">             <TABLE cellspacing="0" cellpadding="0" align="center" class="navOpened" width="100%" id="sw_n0">                                                <TBODY><TR><TH valign="top" onclick="opentree('sw_n0')"><TABLE border="0" cellspacing="0" cellpadding="0" width="100%" class="navTitle" onmouseover="mover(this)" onmouseout="mout(this)">        <TBODY><TR><TD class="titleLeft"><IMG src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gif" border="0" alt="" valign="top" width="14" heigth="1"></TD><TD width="100%" class="titleText">Main Menu</TD><TD class="titleHandle"><IMG src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gif" border="0" alt="" valign="top" width="20" heigth="1"></TD><TD class="titleRight"><IMG src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gif" border="0" alt="" valign="top" width="3" heigth="1"></TD></TR></TBODY></TABLE>
+</TH></TR><TR><TD class="modulecontent"><DIV class="modulecontent">                        
+<TABLE width="100%" border="0" cellpadding="0" cellspacing="0"><TBODY><TR align="left"><TD><A href="http://masterpigg.com/circus/Home/" class="mainlevel">Home</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Random/" class="mainlevel">Random</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Technology/" class="mainlevel" id="active_menu">Technology</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Music/" class="mainlevel">Music</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/News/" class="mainlevel">News</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Gallery/" class="mainlevel">Gallery</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Personal/" class="mainlevel">Personal</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Links/" class="mainlevel">Links</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Forum/" class="mainlevel">Forum</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Arcade/" class="mainlevel">Arcade</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/Search/" class="mainlevel">Search</A></TD></TR><TR align="left"><TD><A href="http://masterpigg.com/circus/About" class="mainlevel">About</A></TD></TR></TBODY></TABLE>        
+                            </DIV></TD></TR></TBODY></TABLE>
+        <BR>
+          </TD><SCRIPT language="javascript">
+ <!--
+	var y;
+	if (self.innerHeight) {// all except Explorer
+		y = self.innerHeight;
+	} else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+		y = document.documentElement.clientHeight;
+	} else if (document.body) { // other Explorers
+		y = document.body.clientHeight;
+	}
+	document.write ('<td id="stick" style="height: '+(y-100)+'px; width: 1px; background-color: #cbcbd5" valign="top"><img src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gif" width="1" height="1" border="0" alt=""/></td>');
+
+ //-->
+ </SCRIPT><TD id="stick" style="height: 570px; width: 1px; background-color: #cbcbd5" valign="top"><IMG src="http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/1x1.gif" width="1" height="1" border="0" alt=""></TD><TD class="main" valign="top">
+  <TABLE align="center" width="100%" border="0" cellspacing="0" cellpadding="0">   <TBODY><TR><TD height="27" class="util">                        <DIV align="left">                          <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="pathbar">                <TBODY><TR><TD align="left" class="pathbar">                            <SPAN class="pathway"><A href="index.php" class="pathway">Home</A> <IMG src="http://masterpigg.com/circus/images/M_images/arrow.png" alt="arrow"> <A href="http://masterpigg.com/circus/Technology/" class="pathway">Technology</A> <IMG src="http://masterpigg.com/circus/images/M_images/arrow.png" alt="arrow"> <A href="http://masterpigg.com/circus/Technology/Hardware/Page_2" class="pathway">Hardware</A> <IMG src="http://masterpigg.com/circus/images/M_images/arrow.png" alt="arrow">   A review of index cards you can buy </SPAN>
+</TD></TR></TBODY></TABLE>
+          </DIV></TD></TR><TR><TD valign="top">
+
+<TABLE align="center" width="100%" border="0" cellspacing="0" cellpadding="0"> <TBODY><TR><TD valign="top" class="maincontent">                     <TABLE class="contentpaneopen">                        <TBODY><TR><TD class="contentheading" width="100%">                                A review of index cards you can buy                                                         </TD><TD align="right" width="100%" class="buttonheading">                        <A href="javascript:void window.open('http://masterpigg.com/circus/index2.php?option=com_content&do_pdf=1&id=158', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no');" title="PDF">                        <IMG src="http://masterpigg.com/circus/images/M_images/pdf_button.png" alt="PDF" align="middle" name="image" border="0">                        </A>
+                        </TD><TD align="right" width="100%" class="buttonheading">                                <A href="javascript:void window.open('http://masterpigg.com/circus/index2.php?option=com_content&task=view&id=158&Itemid=44&pop=1&page=0', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no');" title="Print">                                <IMG src="http://masterpigg.com/circus/images/M_images/printButton.png" alt="Print" align="middle" name="image" border="0">                                </A>
+                                </TD><TD align="right" width="100%" class="buttonheading">                        <A href="javascript:void window.open('http://masterpigg.com/circus/index2.php?option=com_content&task=emailform&id=158', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=400,height=250,directories=no,location=no');" title="E-mail">                        <IMG src="http://masterpigg.com/circus/images/M_images/emailButton.png" alt="E-mail" align="middle" name="image" border="0">                        </A>
+                        </TD></TR></TBODY></TABLE>
+                        
+                <TABLE class="contentpaneopen">                                        <TBODY><TR><TD valign="top" colspan="2" class="createdate">                                Sunday, 22 May 2005                             </TD></TR><TR><TD valign="top" colspan="2">                        For a few months now, I have been carrying my hipster pda around with me wherever I go.  My particular version uses my pocket calendar sent to me by my union (btw, thank you SPEAA for printing Mother's Day on the <I>wrong</I> date, I almost didn't call my mom because of that!) and some blank cards ( perference over ruled) and a few graph-line cards.  Here's a review of some of the others you can buy, with a redux on his method of printing cards (you should also check out <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD Tiddlywiki</A>, which can print on 3x5 cards).
+<A href="http://gurno.com/adam/j2/index.php?p=51">Link</A>
+
+<P><TABLE width="100%" border="0" cellspacing="1" cellpadding="4"><TBODY><TR><TD class="sectiontableheader">Comments</TD></TR></TBODY></TABLE></P><P><SCRIPT language="Javascript">  function x () {    return;  }  function ac_smilie(thesmile) {    document.akocommentform.comment.value += " "+thesmile+" ";    document.akocommentform.comment.focus();  }  function validate(){    if (document.akocommentform.comment.value==''){      alert("Please insert at least a comment.");    } else {      document.akocommentform.action = 'index.php';      document.akocommentform.submit();    }  }function DoPrompt(action) {  var revisedMessage;  var currentMessage = document.akocommentform.comment.value;  if (action == "url") {    var thisURL = prompt("Enter the URL for the link you want to add.", "http://");    var thisTitle = prompt("Enter the web site title", "Page Title");    var urlBBCode = "[URL="+thisURL+"]"+thisTitle+"[/URL]";    revisedMessage = currentMessage+urlBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "email") {    var thisEmail = prompt("Enter the email address you want to add.", "");    var emailBBCode = "[EMAIL]"+thisEmail+"[/EMAIL]";    revisedMessage = currentMessage+emailBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "bold") {    var thisBold = prompt("Enter the text that you want to make bold.", "");    var boldBBCode = "[B]"+thisBold+"[/B]";    revisedMessage = currentMessage+boldBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "italic") {    var thisItal = prompt("Enter the text that you want to make italic.", "");    var italBBCode = "[I]"+thisItal+"[/I]";    revisedMessage = currentMessage+italBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "underline") {    var thisUndl = prompt("Enter the text that you want to be undelined.", "");    var undlBBCode = "[U]"+thisUndl+"[/U]";    revisedMessage = currentMessage+undlBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "image") {    var thisImage = prompt("Enter the URL for the image you want to display.", "http://");    var imageBBCode = "[IMG]"+thisImage+"[/IMG]";    revisedMessage = currentMessage+imageBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "quote") {    var quoteBBCode = "[QUOTE]  [/QUOTE]";    revisedMessage = currentMessage+quoteBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "code") {    var codeBBCode = "[CODE]  [/CODE]";    revisedMessage = currentMessage+codeBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "listopen") {    var liststartBBCode = "[LIST]";    revisedMessage = currentMessage+liststartBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "listclose") {    var listendBBCode = "[/LIST]";    revisedMessage = currentMessage+listendBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }  if (action == "listitem") {    var thisItem = prompt("Enter the new list item. Note that each list group must be preceeded by a List Close and must be ended with List Close.", "");    var itemBBCode = "[*]"+thisItem;    revisedMessage = currentMessage+itemBBCode;    document.akocommentform.comment.value=revisedMessage;    document.akocommentform.comment.focus();    return;  }}</SCRIPT><TABLE align="center" width="100%" cellpadding="4" cellspacing="1" border="0"><TBODY><TR><TD colspan="2" class="sectiontableheader">Write Comment</TD></TR><FORM name="akocommentform" action="index.php" target="_top" method="POST"><INPUT type="hidden" name="option" value="com_akocomment"><INPUT type="hidden" name="acitemid" value="44"><INPUT type="hidden" name="contentid" value="158"><INPUT type="hidden" name="func" value="entry"></FORM><TR class="sectiontableentry1"><TD>Name:</TD><TD>Guest<INPUT type="hidden" name="acname" value="Guest"></TD></TR><TR class="sectiontableentry1"><TD>Title:</TD><TD><INPUT type="text" name="title" style="width:75%;" class="inputbox"></TD></TR><TR class="sectiontableentry1"><TD width="130">BBCode:</TD><TD><A href="javascript: x()" onclick="DoPrompt("url");"><IMG src="components/com_akocomment/images/bburl.gif" hspace="1" border="0" alt="Web Address"></A><A href="javascript: x()" onclick="DoPrompt("email");"><IMG src="components/com_akocomment/images/bbemail.gif" hspace="1" border="0" alt="Email Address"></A><A href="javascript: x()" onclick="DoPrompt("bold");"><IMG src="components/com_akocomment/images/bbbold.gif" hspace="1" border="0" alt="Bold Text"></A><A href="javascript: x()" onclick="DoPrompt("italic");"><IMG src="components/com_akocomment/images/bbitalic.gif" hspace="1" border="0" alt="Italic Text"></A><A href="javascript: x()" onclick="DoPrompt("underline");"><IMG src="components/com_akocomment/images/bbunderline.gif" hspace="1" border="0" alt="Underlined Text"></A><A href="javascript: x()" onclick="DoPrompt("quote");"><IMG src="components/com_akocomment/images/bbquote.gif" hspace="1" border="0" alt="Quote"></A><A href="javascript: x()" onclick="DoPrompt("code");"><IMG src="components/com_akocomment/images/bbcode.gif" hspace="1" border="0" alt="Code"></A><A href="javascript: x()" onclick="DoPrompt("listopen");"><IMG src="components/com_akocomment/images/bblistopen.gif" hspace="1" border="0" alt="Open List"></A><A href="javascript: x()" onclick="DoPrompt("listitem");"><IMG src="components/com_akocomment/images/bblistitem.gif" hspace="1" border="0" alt="List Item"></A><A href="javascript: x()" onclick="DoPrompt("listclose");"><IMG src="components/com_akocomment/images/bblistclose.gif" hspace="1" border="0" alt="Close List"></A></TD></TR><TR class="sectiontableentry1"><TD valign="top">Comment:<BR><BR><A href="javascript:ac_smilie(':)')" title=":)"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_smile.gif" border="0"></A> <A href="javascript:ac_smilie(':grin')" title=":grin"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_biggrin.gif" border="0"></A> <A href="javascript:ac_smilie(';)')" title=";)"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_wink.gif" border="0"></A> <A href="javascript:ac_smilie('8)')" title="8)"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_cool.gif" border="0"></A> <A href="javascript:ac_smilie(':p')" title=":p"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_razz.gif" border="0"></A> <BR><A href="javascript:ac_smilie(':roll')" title=":roll"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_rolleyes.gif" border="0"></A> <A href="javascript:ac_smilie(':eek')" title=":eek"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_bigeek.gif" border="0"></A> <A href="javascript:ac_smilie(':upset')" title=":upset"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_upset.gif" border="0"></A> <A href="javascript:ac_smilie(':zzz')" title=":zzz"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_sleep.gif" border="0"></A> <A href="javascript:ac_smilie(':sigh')" title=":sigh"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_sigh.gif" border="0"></A> <BR><A href="javascript:ac_smilie(':?')" title=":?"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_confused.gif" border="0"></A> <A href="javascript:ac_smilie(':cry')" title=":cry"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_cry.gif" border="0"></A> <A href="javascript:ac_smilie(':(')" title=":("><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_mad.gif" border="0"></A> <A href="javascript:ac_smilie(':x')" title=":x"><IMG src="http://masterpigg.com/circus/components/com_akocomment/images/sm_dead.gif" border="0"></A> </TD><TD valign="top"><TEXTAREA style="width:75%;" rows="8" name="comment" class="inputbox" wrap="VIRTUAL"></TEXTAREA></TD></TR><TR class="sectiontableentry1"><TD> </TD><TD align="left"><INPUT type="button" name="send" value="Send" class="button" onclick="validate()"></TD></TR></TBODY></TABLE></P><P align="center"><SPAN class="small">Powered by <A href="http://www.mamboportal.com/" target="_blank">AkoComment 2.0</A>!</SPAN></P>                    </TD></TR></TBODY></TABLE>
+                                <TABLE align="center" style="margin-top: 25px;">                <TBODY><TR><TH class="pagenav_prev">                                <A href="http://masterpigg.com/circus/Technology/Hardware/Broken-VCR-reveals-interesting-audio-track">                                &lt; Prev                               </A>
+                                </TH><TD width="50px">Â 
+
+                                </TD><TH class="pagenav_next">                                <A href="http://masterpigg.com/circus/Technology/Hardware/Technology-Magazines">                                Next &gt;                               </A>
+                                </TH></TR></TBODY></TABLE>
+                  </TD><TD valign="top" class="right">   
+     </TD></TR></TBODY></TABLE>
+
+    </TD></TR></TBODY></TABLE>
+   
+  </TD></TR></TBODY></TABLE>
+
+<TABLE align="center" border="0" cellspacing="0" cellpadding="0" width="100%"><TBODY><TR><TD>   </TD></TR><TR><TD></TD></TR><TR><TD align="center" width="100%" style="background:url('http://masterpigg.com/circus/templates/xplike.plesk.blue.rss/images/footer_bg.png');background-repeat:repeat-x;"><A href="http://www.netshinesoftware.com/">Mambo Template Supplied by Netshine Software Limited</A></TD></TR></TBODY></TABLE>
+
+
+
+
+</BODY></HTML>_Thttp://masterpigg.com/circus/index.php?option=com_content&task=view&id=158&Itemid=44Ytext/html        1  Y  `  r    — % %\ %e %l 0… 0Ñ 0Ø 4› 4ò 5 5 5B 5 5š 5¡ 5¨ 5¯ 5¶ 6b 6› 6¥ 6¬ 6³ 6º 8H 8† 8 :; :z : <- <l <s @Æ A A E5 E Eˆ I IÙ Ià MÎ N N" R Rm Rt V“ Vß Væ [ [Z [a _A _ _— cs cÂ cÉ g© gù h  kÍ l l! oÔ p# p* s÷ tC tJ x xT x[ |# |o |v „œ „ì „ó W ¥ ¬ ˜’ ˜ß ˜æ  ü ¡I ¡P § §S §Z ¬ ¬b ¬i ¼ò ½= ½D Á ÁZ Áa Å0 Å| Å… Å£ Å©Ä             v             %

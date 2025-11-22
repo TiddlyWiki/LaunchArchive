@@ -1,0 +1,815 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO"/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_<http://www.b-ve.com/blog/wp-content/themes/default/style.cssXtext/cssÓOJ`GIF87a;÷     U   U$    i$(  4u  $i$$ $$$$i$m$e(m((((q](,,,q,,,U  ,q,,0™  0q0u00,0000u4u4y4444y8y@<8}48<888 8}(<Y< <}<<8<<<$<$@‰$(@@@@LyL}a8((D…DD@DDD PÆ(H…,H…,H‰DHL,L‰0L‰$UUº0LuD a¥]‰0PUP44P4P‘Ê8U‰8U‘4Y•UUU8Y‘<Y•<]•ee @]™yU,@a™™H,uºDa™DaYau,m®iaLDeHeHe¡$qÒHi¡Li¡Lm¥™e Pm¥Pq¥em…PqªUqªUuªUu®Yu®Yy®Yy²4¥,]y²P}Æ²aY]}²}yya}²a•8uyªa¶}}e²}}•iyy}®e…ºa‰º®…i‰ºi‰¾i¾iÂm¾]‘Öa•¶mÂ‰‰m‘Âq‘Âq‘Æu‘¾q•ºÊuuÎ‰u•Æ•eu™Âu™Ê…•¾y™ÊyÆ‘™¥}Î}¡Î¡Î¡Ò…¡Î®™•¥ÒÊ¥…¥ÖÚ‰‰…ªÖ‰ªÖ‰ªÚª¥¥‰®Ö‰®Ú‰®Ş‘®Î™ÂL®Úªª¥ªªª²Ú²ŞiÂò‘²ŞÖ®<Æ®i®®®²®¥®®²•²âÖ¡‘¶Ş‘¶â•ºâÂ®®ºÒºº‰®¶Â™ºæº¶®º¶¶™¾æ¾æÂêÂº¶¡Âê‰Îö¡Æî¥Æî®Î®ÂÂ¾¥Êî‘Òú™êe¥ÊòÂÆÂºÆŞÊÆ¾æº²ÎÆ¾ÊÊÊÎÊÆÎÊÊÎÎÆÎÎÎÒÎÆÒÒÊÒÒÎÎÒÚÖÒÊêÎ®âÖ®îÚ¾âÿÒŞæÎÿeîâºúêyòâÚêææÎÿºîîºâêÿúöªòîîîòÿúöÊúòòòúÿúúêÿÿÿ,    ; ÿ H° Áƒ*\È°¡Ã‡#JœH±¢Å‹3jÜÈ±£Ç CŠI²¤É“(Sª\É²¥Ë—0cÊœI³¦Í›8sêÜÉ³§ÏŸ@ƒ
+J´¨Ñ£H“*]Ê´©Ó§P£JJµªÕ«X³jİÊµ«×¯`ÃŠK¶¬Ù³hÓª]Ë¶­Û·pãÊK·®İ»xóêİË·¯ß¿€Ã¸°áÃˆ£ş©¥m0<mµş¬¯–GÇ˜3g&HÙòCÇ‰C‹MúæŸÆšµMp±êŠšcc&Èz k„µKëŞÍ»·Æ?²+ON›0ìà±9˜»8<ßĞ£KŸNµ6É şœÆÎ°9FïÁÿO½¼ùó|s—Hbû„âß£ŸO¿~Zù›?xÚzd…äå7lÎ%Ôß`­gß‚6øj
+®6›~„Zjğw€û1§¡…²½æàˆ$–e…÷á€Ï!ÔX‚† n+JØ¢‡7Ş‹ÿeg‰@)dL2>æY†9²èâcB¸a:®_/69X„Cf©å–i$–Jhpğ`I¦ˆb"e’8D¦™3r)çœtJ„¢cG¦I!›  ¨¦57e’~ÒÈgˆ&Š(cxªç@"Çç{‚B&¤’Ê(G‡Ò¶¡¢ †ŠÖ
+V:i¦):úg›O&‰jªMÿ8sø)­úá*ê®¼zÅIœ¬ûh¬–
+{éšÈjÔi®ğ…wëjºö*í´U™š,ˆe²Wì×v€“±iÜ„µ‰‹«¬³ÚšRëî»<Y;ì·Wj»ì±øn¸Ğ2;«¿®«kì
+ì/¼'¼Ó¯°r;ï™öÖêª¥ÍA¼QÀ GK°ÁÿvÜqÁ+,òÈ-Æ	v‹5úè¾Õ–§Š÷6Ç2¦Ù¶¼¿ã(eÎ!ò¿’,ôĞ!İ‰¡·(^—İ‘E*#'hz«ª@IK¶Ø@U·fw@Ï÷òÏg6Ñh§­Q¤˜9=,ÛhzyôÔ­·ÍÊYÔŸÿı3Ç-’í©Ù«møáAmÛR÷¹ø˜Ú\ytWî8‚Q¹ä0~–Ák(+‹¡KxqÌ¶‹øê¬·îúë°Ç.ûì´×nûí¸ç®ûîàûïÀ/üğÄoüñÈ'¯üòÌ7ïüóĞG/ıôÔWoıõØg¯ıöÜwïı÷à‡/şøä—oşùè§¯şúì·ïşûğÇ/ÿüô×oÿıøç¯ÿşü÷ïÿÿ   HÀğ€L ÈÀ:ğŒ 'HÁ
+Zğ‚Ì 7ÈÁzğƒ ¡GHÂšğ„(L¡
+WÈÂºğ…0Œ¡gHÃÚğ†şû‡wÈÃúğ‡@¢ÿ‡HÄ"ñˆHL¢—ÈÄ&:ñ‰PŒ¢§HÅ*ZñŠXL".¶ˆÃ.j/‹`£ÇHÆ2šñŒhL£×HÆ-âÂ‹p´çHÇ:ÚñxÌ£÷hF7ÆñÒã£ IÈBòˆLdıÈF6O‘Œ¤$'IÉJN’‘Ì$ò,ÉÉNzò“ %1©ÉRO”¨L¥*WÉJ>’Ò”°ô]+gIËZÚò–£äb,w \úò—À&*_ÉKM
+ó˜ÈL¦2÷HLö…à™ĞŒ¦4§IÍjZóšØÌ¦6·ÉÍnzó›àç3@Nã-óœèL§:­ØÌõAàğŒ§<çIÏzÚóøÌ§>÷ÉÿÏ~úóŸ è;Éy s®ó M¨ByØNõ	ô¡¨D'JÑŠö“ ]¨F7ÊÑ_64}©HGJÒ’B£Åë¨JWÊRQ~}&©LgJSŠ¢”x-Í©NwŠÈ—¯¦@ªP‡:Ğr¦”§HMªRÙèSóõ©PêDozÊ¥ZõªXe§.á‡Ovõû«<±ÆÓ¬ğ+Z¥ÊÖ’RUxY«\çzÄ¦–¯«iµçZñZÖy¢u¯€}ç^ÛJØŠ¾5xtM¬bkWòñU°õ¬^!;ÖÇæµ¯…Í¬E¼Åzö³Vmìø,«V
+v‡e5-e1V¯^6µiEíiUkVÙÿöÕ´¶Õ¬nçÉÙßö·Àm©hÅGZÌ²Ö¯«Uëj_{\ÊÖÖ¹—¥ín§[ÏŞÊ2¸ØÍnB‡¾âöp¹²}nsÏJ^ã*º©oy©Ë^X·—Ú¯|•É]ğy¹èïy×;Şı7°üm¯nß;ßØ—õıŞcı›\ô6Àfp—Ka–ÀÎ°†U™`ï}Uµ³e®m]ËÚ¿®—Ä(qrAlaÍbxÃ0±%;Ü½ÛøÆş|±ŒwÌãCÒ˜{8²«kTœb÷¨ØC‘¬ä0¹ÇPÖã·7ä*WYÇG\*™‰uìñ™^æ!4©¨M~#ßâ˜¸æ5GùÿÍtœ²ö¬Lgc¹ˆ¬˜&+Â8o4ÙˆÏÜC>ÄüL2gS‡nöa¢{ØæBÃùÑk”söêLißyˆyA&æñ~da\ô¡™	B‡ ‹¢v2šÕìè6úÔõ%½JÛšº—â<ÍC~pŒ©fõ3÷ŒèV[1Ø£66£lY;»Š´¾Ş­§íâ"WÕˆ™N3›Á¼‡€úó`E·½æ;{Æ¯ÿ1Í†{Ü¨(7»£f7¿û™ñŞa&9èN?“:Ì—M­èD¯cß!†Á®pfûŞä^vÖÑío?ûâAŒ¶õÊñ{üã ¹ÈGNò’›üä(ÿO¹ÊWÎrg´ˆãî·«¥éåuP“Ø:Ìt4éQìhêĞæzŞ!4.èyÃèÒ$6Ğ•æœ7]èÊ6:¬ÿ¡siî°ê>7ú‘MœKıéû"·ú>qšıìhO»Ú×ÎönæzÛSŸ¹¦wH.œ[^µëp¨Oï™¸{Şµ=æn—zÌ€ü3µ=n§‡€Ø¼&xÁÎeNïÚÑ@ß4¸_­ÃÄwzğ~/µØG?ö7ÆÚ¨oëÛå.Dh\‡½¿Ñ½C~ˆÛê=ßaìkyÄ{Ì»×!?"Ÿi/[ÉK—8ëÿpçùÏt¾Ö§üÙÿÙõ¤Ï¾5^½Ô{ª«÷aÿã…mêjüÜYŸş×ÛM}«c3àşºÍ˜+òÏ~¢9¿~Ü«_û£Ç}0€X€x€ø}
+(T…€ˆDy'}øçwÔÔdGx­æf×Ôdn†~ıMÆphvf'z’wûçpqÇèw ˜}nä€28ƒ4Xƒ¸€8HS(ƒHtnë–h'{¨~n6„ä×y>‡„AÄuù pĞ$où'yã„V….8}Lw/Hz1hƒ`†4˜ƒdhR;è€I4n¬ pô°—hg¦iÎÇêfnü¦jøL¿‡™0‡u8…wj|è‡ë¦CÇgˆ‘w÷—i™0h—ÿkŒèˆü7ˆÂ÷‡SØ…÷…b¸‰œ( eø‰"u†˜Dù€~Ã–…WGM‡uQ{YÇŠŞ†Šˆ‰ªØCÙff§X„'ˆpì}Ô4‹Î‹?Øl˜gšØ‰ÈXƒù$^‘uOÌŠu&Š¨D¶oò&jë0Çg‰NÖm{ğ~¦wÿĞp–Ûh…q÷|·uÚhÜøPØoñ¸|ŠHuãˆ<t{	·f@§mÿ`îXˆÄXŒQvŒÉx¸ŒÌ…_ÍXaĞ8dÒh€9‘Ïfy‘ˆW­e\ı´‘ùt‘H‘$	i‰‘©‘·[¥5[Ïå‘gb)æ 9T"ù€%ÿ™“Pv’(™Œ*ù‘å%a0ÉŒB¹5IT79€:¹”;Æ“=Ù‰?É‘êe^“.Y”4y”@•”À”^¹aNù”›èŒU™_v\ÿÅ¦•OÅ•_ù––b†dÙ`Ö`Di—úe”l¹•ä4ƒGT‚9˜„Y˜†y˜ˆ™˜Š¹˜ŒÙ˜ù˜™’9™”Y™–y™˜™™š¹™œÙ™ù™“YW[4—Y—T©b–—*všé%Y}9Sn	—²©]rIšÊøš¸Id ˜³Ù›ÀU›¶9ƒ¹9œò›¾yœ‹œÁé€ÄÙœîõ—<ˆœÒIWÊ¹œèœÄiœÓ¹WUÖyƒØ™›ÚÿÉä‰TŞù¸9åÙÂ5šè)†ê¹Ğ‰†îyŸï‰ñ)†-×ŸşùŸ  : +Ç›øy uèÙvÚ ú zvì¹D ğCšDÊCºCº¡Jä¡O¢h$¢c$¢$ZD
+D'JH+:
+úóùšD¡C&JD
+¢:Ê¡NÔ¢j£Mä£CD¢BJj¡AÊ£HJ£f$¤Jê¤²ù¢Ö£}9£Cª¡Iz¥=t¡Pª¢TÄ¥YjEEª¤G´£Lä£-Ú¥P¤¦@êRºœTÊ–V*DZ¡Á¡z§[:ÿ §}Ê§6
+¨}Š§)ê§„š§uj¨€j§9ÿ*¨ƒú¤~j¤{š¢<©z*©^J¦‚J©ŒŠ¥z¢Š¨xª©>$©ª¡…Ê¥Šº¨¬j¢ªj¨Ûù¦Á§Z9§L:ªú¨+Z§mª«¤š«ªº¤¾Ú¦œº§½z¬½
+¦É*¬ÅJ¬¥Š£Ú¬ºª¬Ãš«Ñú«ÊJ­[ú«×ú§ØÊ­”º­ÈÊ²j›´z”¶š©Ëê¬·
+¤¼Ê«îÚ­â¯•*¯ëJ¦¤
+¯Öz¬…j¯ãú¬õ°ì
+¬Öj¦ój§¥
+«öš£ [°;°ûz¯åY®¤y®5™®ÂJ°Éz£Xú®İZøŠ¯[©˜ê­K¤îŠ©®zª+ªÿÚ°ƒê±÷š­*{§ÿ³	Û®ú:®ˆz©àZ²şJ;—ËÈbebéCYaû£;¯ëz³ü:µğª­/+³ôê¥;‹²Vû¯\²ÕJ§OÚ±à
+±µâŠ²Së©"Û°áš¦`K®ğ¹Ÿ6¸`åš§Å—ú„´6^N[Ÿ£ø£eµk+­Ò·{¸Ï®W¶qË±Œ±«±Õj¸/¶Š¹3³­o«¥+·úI·u;Y…·°••–EO †ºÃù´lK¹¯J¤ÔZ³–ú©ˆû§–š¨=+±.µ,«£‘ú±ê³	«Å»¨&ë²§Šªyº±Úêª¸k¡ÆK¨¨Z°¯ª®Ë+´sKºÂiº•ÿE[2)¾ãû’+¶–DY[#6•é•WF‹®€;rÅ¦*vC+–¦“¯µVM»—iY–v)•z]zéº »-E¿õ‹q÷û”ù+b(&],)Áù]+	”|š{ÙšM+£ñ+‘Y¥°<‘Ü“^øÕ¿)ì·e‰ÁH»ÁwYY¯ûÁ#9Â6¬N%Œ’v›Á1Ì·şU”V‰ÂLÀC<Ã»7œÄôÕ½ŞËœ¶¹µ¾,)bS¼¿2|¾ê+“«iÀLÃ8©Ä`,L9Œ‘’ÆhJc\šegœÆpÌIkœ’mÜÅGlŸqœÇ¬4ÇYÇvl zÈ.ÅÄM|~\†o,ÈŠÿ\H|ì“‡L†‰¼È’ÌL„|‘pÉ˜œÉš¼É˜üÈLNœŒÉ“<Ê”äF¡|Ê¨œÊªœÉÚÊ®üÊ°ËŠÊ¤\ËdÊ«œËºœÊöĞË¾üËÀÌÂ<ÌÄ\ÌÆ|ÌÈœÌÊ¼ÌÌÜÌÎüÌ½œÒLË¶\Í†„Ë»œÍÚ< ĞÜÍŞüÍàÎâ<ÎË,ÍÉ@ÍÖœÎ®´EÛÜÎºLÎğÏò<ÏôìÍæŒÎêœÏw„ÍîÜÏ¡\Ï Ğ=Ğâ|Ï§¬ÏmGüìÏÉıĞÑÍÓ|Ğ	}Ñ‘ÆÎ½Ñ—<ÑıÑ ÎÊ]Òh´ĞİÏ!½Ò,İÒÅ<ÒœlÒ2İFÿÒíÒ8Ó+Ó›<Ó>F(mÓÛ¬ÓD]ÔÍÓšüÓJ­U¸ Ô7mÔPÕñŒÔ™¼ÔV-EAíÔ»,Õ\İÕö\Ñ¡lb=Öd]Öf}ÖhÖj½ÖlİÖnıÖp×r=×t]×v}×x×z½×|İ×~ı×€×Y­Õ¹|Ìğ$ÎàÕŠ-ĞTÉıØÙ’=Ù”]Ù–}Ù˜ÙšMÙ5MØÚlÌ‰MÎ¡½Ø¤-Ï}É›Úª½Ú¬İÚ®ıÚ°Û—İÔ=ÔÅ<Úˆ]ÚºÏ§]Û¾ıÛÀÜÂ=ÜÄ]ÜÆ}ÜÈÜÊ­Ò·Ì‡İËÏm‰ıNĞMİÕmİÒ½ÛÚíÌ½½ÜŞÿıİàŞâ=Şä]Şæ}ŞÿÚ£½ŞÀÚØÍŞÙİò½İôÌİŞøßú½ßüİßşıßÌîO¾üÜ¸Ûóßõ½àÇ|ß şàá>á^áí,à	^àó}àÎ­áşáÄìà>â$^â&~â(Ü®àî½á¿ß0â2îË"â6~ã8ã:Nâê}àØ-İÖàÑã3.ã5¾ãHäJ¾äLNÜEşä}äM>åT^åV~åšåZÑRå^şå`æ¾åd>Ğ].æhæj¾æË]æn^Ï½}ÕrîDƒ}Üo~çSÖ1=ç|®Eíİxè­ç=İç†^DuÿnÜ‚¾è_}Î}èD‰^ÜŒ^éÜMèIéš^zâmé®Ìq¾é¢ş“îäÄ¼ ¨êª¾ê¬Şê®şê°ë²>ë´îê×Pæ¡>êš^êÃ]Ì Q·Næ¹®ëÎëÂíëÀë˜^ÕÄéÆ®â§ìÂ¾ì¢ÜìÅşçmíì[>ìÖÎçÏÜÈ¾íÊîè$ıí†î¿=î
+ÅíZîíè~ÕêîÛìPîåğïK=ïµ]ïuïOïúşÓüîÙş~P _ä?ğ3]ğ„}ğë”ğ3¾ğoÒ¯Õ¯NoäÔ~É/ïØ®ÜŸNâÿñ}ñN=òèTò~ò(Ğ*ÿ/Ô,N.Ïà0óù<óšL >ÿó@ôBÿó5¿L7¿àæ<ô?¯ó¿EJÿôPõRôE¯LG_ßIÿôLïÓn4õ^ÿõRïë×0öd_öföhŸöj¿ölßönÿöi_îP¿õïô`÷xïóŸ¾÷ÆœõJO÷2İõy?ø^Ï÷†/Ì~?ô€oñvOøÿô‡ù4.Ís¿ø-øŸùA/ù’ŸøBŸDwÈCPxDgæDú;4ú–ï…¯ù®Ïù‘ïùAD—gúxXˆ­u@Tû=‡¸¿úÙú®Ÿù°ø²ô=˜ˆ³(…K&Ct¶üÀo¿Â?ü_ü†üKOúĞÿ$sPèüS‡!àıĞdûÓ/k˜oıı|¯ı>Dèâ?vXl72ÿ;4ÿî¦ jİ?‚ÿB„˜ÇjÏÁaù
+QĞàA‰-^Ä˜QãF=~RäH’%MD™RåJ–-/â‚I@æLš5mŞÄ™3§==}şTèP¢EEšTéR¦MòLU'HT÷\xUAV!Ò#è5¬W¯óV=x•`Ö[ÿ­#{ÕÃ¸ÍNŒH7¯K¾}ışXğ`Â…c„‰KçbÆq…9òSÊ•-_ÆœYsÔdS?j=–è½G‡¦wlˆo»†È4­ÿhÒÿNgâ÷ÚÖx{¿W"ÄÃÅG\ùræ&;†}'Qš­_Ç]ûRÎ=ü¶pn×=ß(ä§¬jáìÁ‹ÿGŞ|Äas£O»zøyâì›ÿ0@$pÀç¤CAÈ¶c°Atª»œ>šÇ.¸®Zh
+ú'¶ÄÒ¯=ı6œçÂ2$±.û‘E„1Fg¤±F‹L0ÇÆüI²ª›Ì²Ç ‡¬§$‡„°I'+“§àâP¼®Úp LÀ±=‰£Ò,+±<ˆJÕú’¿óº´±M7ß„3N–pÔ±ÎÇ¨CòG%“RÏ>•ìQ( õä“Ï'ÿEÔ¨(oúh>³æcíŸ[c±R5K#ÎÑ mmÒ-C¸ï¢4óUNSOE5U9é´³Õ™xôóOCİ“ÉXktIÉhM´W_íYÔ¦êãˆrÛ0µ¬‚Ô½5…#Ö,cí“”¡ù2K·aîz±¿¬Zã‡ØÒT%·\sÏ=ŒUW[…PwgŠ×@ßÍÕİ_ï½7Øš>B‹«æ’->òòYâúuí_º¶z,·º=Ò¸Ğ¥¸b‹/.Iİuël÷OY}*Ô^y?şxÉ[ñEB}iúlÍ
+¹í/¼+¿‘¹·şJeñeöÖ&«=¶õOD™Û2c£Fc7Î±c!‹¤ÕV[ÿq%2äªSÆºÉ•gJºk¯¿ûâ¥™V0k³Ïîuk™Âf»m·ßql²£C»n»T› ¸÷æ»o¿“{nÇî&¼pëòş;qÅg\£ÀgÌpÉ'Pª	Ç<sÍİ~r(=ô¢ß¼tÓO§¸sÏï½u×Iï¨Ùg§½vÛoÇ=wİwç½wß>xá‡'¾xãG>yå—g¾yçŸş#ÕW·ÉuëE‡uí·ç¾Æé©§ézñ'Ï¾{óÏG?¹ïÁ—i|÷	/?}ùç§ß¥õÙ?´ã¯¿ÿÿïÈıÀg&¬2&Ó_şø@6ğ¤¬h	&p|t`5h>ÿ®:A1 e*hÁëapƒ'D¡æ:è¹ÆëjT{š¼
+h/–ĞrRJau˜¹B®…ó
+YÔN2zÕP|&Üa•¶
+î‡DôXw%Ã#ÑĞˆ­C¢I’°E$¡‹ñbEÂø1’DÙ²04²ŠUhäŒ¡‡ûVF‚Ğ‘Œ±ã·×Ä¹=ÑOV‹bÂ+.‹bÜbÅ(’01‘Ä#%YÇ“$¡é†"	ÂFX“šDI"µ¸‘2‚#%%¹Ê;êñ||$›‹è1’Ñ²ˆ#,$è)Gv’‘‘d¥/WiÊ$1;yL‚$³/Êäˆ)KYeÚÿ±‘®D,™FÀ"ÉêHİœÚk™K]ŞQ™f¹¨ÎuB²•ïld*U©N<ÊÓğ\çÛ™O‚¼c‹¢Ùâ;š¹Å7¦2	ÏHæı™€&A ÿÈ¤'ëˆĞ$¼‘Œñ¼ˆ5/ÊN^Ô£½¼&GçÙK`Ò“´g=A
+Ml¶M›#gL´Ëy¶’¤ğæMoZRU’T§#5é;+âOH\²É|(Aè‘„6nô¢ôğ§‰jT¤BÔ¡ş¼äS£jR~Ö´%)NªÏæ¬¼¦YÇêS–¶Ô¥1aİd:×ëĞT¨^L§MÑš×z¯{E+%Ó™×Šdò¨ÿ(ªDêQ®zÑ°ÿÇLì%IFfî³±“då4ùZÓkv6°¥chï:ZÁ~Ö­<„k\GWÖbÆ®š½§^Ë:V¡ò”¬‘ìIûÚU«.ÕŸK½¤0êTËn4“¾e¨'Q‰Qâ27°™uçOukV¼Ş´Á¼miÕŠJÛ6q/]WkÅ%s
+jÍ,z¥ûÜÙjw¶ÍhE„‹Xc’QÅÅ¯ç›ÌcV”¾`dnqÙËYÌ®×´•¤gmÖìÊ¾Şex]5^
+7…¦>+q3\ÛÚ†ÕÃèí®WçkXûöv¡`Éï?F¬\5öE½,}¡ÊÛsØ¹}%­"ó)ZÓ¶×§˜…°â$Ì®
+)–ÿ§H9‹à‹î¥F©“¬äR&™KEq›I¦˜‹Xvêb!‘­â¾ø ¼m2ƒ›ÜÑ»Æs§Q&ÁjO:S9ÈNíÆ
+°g>÷ÙÏæ³‘=º¨ šÏ|ië½è$ÆĞ†t¤%İçAW:(œ4¢½iN£ÄÑ“u¨#miR÷ÓvI¢;½êUZÔ¯†uJ]êSšÕ·Æµa\k^K2á¤à¬³Vk@çÚØÇîË®{½l@ËR;„ö“ˆıgdWÛÚ'Q6³µ½ggGûŠÓöóµÅ=nd{ÛÌîö'3ÅBU†y™··î>“ÛŞ÷®ˆ¹Ïİkg[j³¬WÀÿƒ+hËû)ô>4¾Nn}ï;Ö¿†Ú®h8ÈÊ›yTÁ^¹ddzá·vÃşj§ñ
+^$£8Å•ñgá{yÌ-ò‘‡ºä„¢ÊM¦ò’õIã-çN¡Q-s¢³šæ5Ÿ´Óbx+ÏPdà"Ğ/óòİêœ>:ÒG-uñRıê_WtÖµşh®w]è¶{ÚO+ö±7»ì¬õºÚåîJ¶·İÏo‡ûÙ‹=w¾'±îv4Şç÷¾…¼¬/SÂŞñD<àÏx½Sûñ—g`äí>ù˜6óŸŸŸæÛÎyrzô§ç LOrÒÒô¨‡=êD?ö£ {(?o=Ş*ÿîØ÷^{³×:£ÎôÜ§ìõ¾G>q±zQwÌ€¸/¾Övßg+Tßú×Ç~öµ¿}îwßûßøÅ?~ò—ßüçGúÕ¿~ö·ßıï‡üå?òéÎ¯•®Öİnşó?úØ¡:úÀ$À4ÀDÀTÀdÀ<@Õc>PÃ¿@¢¥	²@[ú¿Í˜>>sÀôÀÁÁ$ÁTÀå‹À¤ó£¬Àx£@èËÀ#ÛÀ¤Á´ÁÄÁÔÁäÁôAœ@Ë9œsÁÌªûÁ$TÂ%dÂ&tÂ'„Â(Ü7á+B)rA@Â@#<¸”Â.ôÂ/Ã0Ã1$ÃÚ'©±ÀË•ÿnÒBòê82„Ã8”Ã9¤Ã:´C›k
+lCİ{Ã;ôÃ?Ä@ÄA”¼<ÜC³ABBTÄEdÄFtÄ1<ÄâÂG¤ÄJ´ÄKÄÄÍ‹DêÃLôÄOÅPÅ?ÛDNÅSDÅTTE@,Eë9¾äƒE¿±¿škÅ×áÂXÄÅÅ™Å‘«E,ºÅ\Æ¾ÙE‡ëEìùÅ`DFÎ@,ÆĞyÅd„F£Æ)lFÊyÆhÄÆÔYÆ}3€nôÆoÇpôÆj´Æ¨GoÌÆt<šÄ8ÇvtÇw„ÇoŒ½p GwTÇ{´vŒÇ}äÇwœÇzlG|ÈsÑÇ~4Èƒ4€{È†L•‚DÈˆ„G…dHÿ‡´È8H‰ÔHq¤È€¼Èt“ŒÜÈ‘ìÆ<GDIï	’dIt„=z\HLÉ™,‘lI‰4I¤É›¼I„ÌÉpäÉ¡üŸüIƒJp$Ê¥T£<J~LJydÊ©,§|ÊxŒJ—¤Ê­«¼J|I€<I®$KÀYÉ¯ŒÈ¬,É²dK¾ğJ´KŒ €¹œË  • ƒŒÈË ƒ½‰¾ôË‹ÌÀ‰ºL˜¬È¶TÌ”xK¸Ê¸K‚ˆL” L‰¨L½,	¿¼L‚ØÌÂ,Ä”ÉÅÍŒ9KÇìG˜LºLMÃ´KÃ¤K‹ØKÀŒMÀäÌ¾,ˆ¼ÄMÛüÚ¬MÍÔMÿÂÌÍß¤MáœMİÜMãlÍÈ|MÉ´Ë6Í¸Íèl´Ò4Í}DÍ‚HÍædÎÉÔÎîäÌïOÍ¼ÍÚÏŠÀÍñOàÜÍòÌõüÎô”Kæ”OÖ¬‘çÔIéÄÏr£ÎêœHÈÄÎÿTMåÄNÕ4OğtOßäÍöìÍó´LÙtOôdOË|P=Ğ‹Ğù|û|ÌüäPÇÙOşLÌø”ÏæäÎÿôÎP­L…O	uQO	mÑ­ˆÕÎ¥UÊåÑ—øP…NíÎ»ÌN 5ÑQ5Ğ
+}OeÒ'MuR5Ñ"ÅÑÑQ©4™ù™“øTP‹¿øÒ0µˆ1%3íÑÿjL½ÎUN×dÍåtQñ$Ïã¤SMPãäÍŞ¼Í==ÎğüMôDN7ÓËûì²ønùˆOá“p‘ŠP‘õØ”HÁˆHİRy–4İ 5åO·éL¿ÉR­LÔºH)9ˆà@	™‡ğXIÕÔqÉÔŒ¸™MåÔòÔêUÍÕµüóÈby@‡H‰R±L­ÔŞ[uY½ÕÊUÓTË„l™Ò@‚áe%	d•TgİVp-hV šVÇ¬Vp‘Óx˜„È
+Ğa‹EšZİ‹‰™Õo}–uøq‘~e{•wÕ
+m]uXˆ­@Ø´ƒ-×¿9W¸L×ÿkÕW‚0¯ |²Èdµ	šWõ—ºY|e‘‹…€yÕ29²PÕ‡…ØÒ=½^µÖ_â¸ÜØGåVÛ`6Øe“IU³Ø¼ ’L@Ú¡İYİà½xYˆpzpX˜å›ˆEË‰ÅÙŠ%–P™4ÙÔôøXÍWoÍ×Šı‡OA£ş`Ûg%ˆ¯-ˆ°Õ‹PiÙ¸Z¬F™Y-­ÙC¥Ùp-|HU¼P6ñ’…³%ÚÛÇm‘K9Ü¢MÜ+É[½}­ıJ–¸Rÿ´ˆÎÅÙŒÒmRØ,Ï
+]Ñæ İ–°YuİW¹0Ü¸ÛÒø›¹”³5gUÖ¡\ÿL¹İØUT¢Mˆ`VÌİÍ½JÎ=PUÏË¼S*Õe‰Ö¥X¬°‹µ¥–KÍİ{ıİŞMÛïe¬€™óßÇı»MVp%Ü+1Ş½Å…¾ËŒXN+­KMNÉPüÅ_"åß8•ÓÓ%Îâ<O:àeĞÙ¬ÑB}S_×¬Rÿ¥Ï¿ Ş®•”O˜kÉ–pßÒX–J%_.	ŞÅF-Ú‡HÚ„ZF 	Ùuˆõ%×öe"¾…ß›µP#İÎ=R"ÅPõáì,RÒ¥Ğ#^ONâ¥ĞõáÖtS‰è\ îá*>Q¿˜àR‹âm¯xéb¯‰¡Ô¬@#ÿqÉYİ]G¥TìU\3Va‡_6¶TÎ\†_(Q+•â¾Ñ æN*â=İ%.]CFâ~Oõ”âùĞÿõNû¥âü-bÀÈbÁMÕo0Öí†İàŠàRšYˆŞè*)^b!SÇeõ@0Î
+}‹G}‹N¾.Z€;>^<î[=~â!õã*¾Ğ"äL)=äfbC^bèåcBşÜ(ä=>RKÜåå¶DŞ§f+dj®æ ÆP"ÖˆöœQf¦RtVÒa6ææc=æÁ¸ämæÊn>JÈ„àşmäıäíTà`'à¥Q Væ'İ_½ßF^ÍB}äÿG–Ş•¨g{¦J|şI	ç•UQÍf¿µè­Äè›¬ûM‰AmœŠé¥é–äÚ•¾h_Ù—Şè±é›ÆéœÖéæéöéŸê .é‘i ¥i˜fé¢fÓ°ŒÉ Ej¢li–<ê§æÉ¨&É©¦jš´êàê®öê¯ë®öÜ¿˜hW‚É°ë¬Nj\@ë¶vë·†k¯V²Ö£³nkµ^ë¸Öë½†k=î_kO.g‡6ç†.fnèAî»Fk¼†j˜àëÈ–ì´–_aöãÂ¾QÀÎì(>ìŞìóaì°vì¡LŒÉ6í½öÏJgp–fË~g d‰fèÅ¦G·íª†ìÓÖmÿÛfÕmÖ¾âhfØvíiFŸĞë”¸Rºîã`f’`îˆî¾˜î•Xî’Pík.éä+íİöîäîmíşmÅíâæl!gá6äşjPÁvn!mmÖî¨îo¾ïÖ¶où–_H–î†îúÖo÷‹è.ïÏëîïVğHíúä}o9}ğwNl	Oö–k‘ğloÓæÎoğ+şˆëoqñ¯lŒû&q«Kğ÷n”xqNÃpÊvï>ößˆNàú}èÿaf`	§Ïÿuä6éHFìäòJæ_Orã&T
+ò İ"×ß,·lÂ^òPd–è…îòsÿÔ‹q×m“h|»q®öL27où–gqs(–ò:Wo;×lw~îæóòèî7¥æìşãBÿg ßò*ÕòAîëğË;s47m…äíı~ôHWòôösA>tçöôP—fß¾s%ŸïN7uú.qQôËösÇlğîkurqCÇ¼I§tÉ¶ô»æğL×òWWìb/f“†t+&Ñ$‡hS7î¿6ôü%öÕLq[ßta_`®uîg!¥uUgò:Ò(gôŞãõ^çë_olLçóøNu÷ğSWtc?qe§uNvbçvU/kõgD¯wyÿt\GuñõRgo÷½sGw½VwÿÑf÷-wkÿór×w€øi&uxÖï|·x~¿x
+ÿtGømÏøhïóQ×wBOxE¯ñ¢cø†ïk¦¾ô/øÌ^s=ó2×ófÿ\"ŸğÏî5únwhŠÏön_nH6ò#ğ1?ú,hB^z¨Gì=.òPs)·s3Ïm™÷ušvÿyùÛ›¯ûtûu'{³W¾´{ÔksïŸœwû^fk¸W{¹¯í±¿ûŒy½o¾‡šÿ{‹|ÁÏpÂ7üÃoÈÄW|7Ïˆ> üÊ·|Ê/º¹w|ÀGûÈ÷{‹èƒıÑ'}shP”]í?%‰Né¾gûÍüÎ÷|ˆÇˆĞÏÿÓGhp}=iîÑ|ÙwHÈ|À}ŒĞıvŞSeä$NPóÔS=5à‚>àş$~Å7şÈıMdA•şÑ…ÒB6`%½ÓÍ±şëÇÇìüíïş>àï7İvş ¦ÿûçUØ·}õ¿Gö×{÷ˆ
+4GŒ@„ÿ£áÁ!"„¸PbBŒ3ìèñ#È"G’,iò¤Àp*°lé%Ì˜2gÒ¬ió&Îœ:wòìéó'Ğ B…â*êò(Ò¤J—2=*²O5^œxqcÄ‡T«b´zõkÅ­CÇ’M¹riÙ´j×²mëö-Ü¸rç,Š«)Ş¼z_†„*kU‡ÿV$6£á„‚O$Ì‘ñc‹t'‡T)åÌš7sîìù3èŸv÷’.ôiTSMR$)94ì›–1Ç®mû6îÜºwmú7iÔQ&vÍû¸ÈÙh‘3oîü9ôè}¯Şô©¹ìÚ·¯–î]öY¥ßÇ“/oş¼h£Ö×‹Gïş§òöïçÓ¯oÿ9uöúYŞï/3~Rş	8 º•ß~ì¸`G Æ „J8aH&h…:èT†zøa}^ˆımÈW‰)ª¸âq"h‹óØRŒ5Úx£f.¾åÍÈ’A
+9$‘Ey$’I*¹$“M:ù$”QJ9%•UZy%–Yj¹%ÿ—]zù%”:î¨W>†—˜iª¹&›mºù&œqÊ9'nª7&‰e÷ãuúù' 
+:(¡…ç]xæ	R:úh£z†Æ§¢•Zz)¦™jº)§zú)¨¡6Å ©¥šz*ª¥¢V«­¶Úd29“Vb…4kM¯IgYª½úú+°Á
+;,±Å{,²É*»,³Í:û,´ÑJ;-µÕZ{-¶ªö•ÚG°zENºŠ$.­çñš-ºéª».»íºû.¼ñÊ;/½Å
+§`ƒ5öĞbÍZÜB‚	ì˜ÀıÛ®	_õ/®Ş[/ÄK<1Å[|1ÆŸzo·ù"üX‘u5òF­YåÕÿ·ş*&ò·»ª¤1Ì1Ë<3Í5Û|3´{ÔİkÅí»ØÂ‰¡\2Ñü*0ÃıŠÕrtãü4ÔQK=5ÕU+«sG<{”òc«,2G­qrV‡½´­Ï9m5Ûm»ı6Üq³‹5AŞ’òax‡Ür­bÆ÷ŞS•7¹È­-7â‰+¾8ãoÓ=¬Hë[Ø¾±J¾7ĞkÂ™¬ïæ.‡Ó8é¥›~:ê?^¤ :ì±Ë>;í¾®şOä­gözí½ûş;ğmcÇwº{Æ{ğÉ+¿<óßôËÍK?=õÕgû<tÈ[¿=÷İ{¯-öÍiÿ=ùå›ß{øÎ>ûí»ŸxúâGÿ>ÿıõÛ/|ü†Ï?ÿıûsşô7ºÿ°€¤W ³¾2°\Vy³ÀR°‚ÜX_ ¥ÁÊe‚ü ¸*W¹Šg —Ù>B®Â¥lò`c(CúİNkàòXÚfÂÂÁp†>ü¡÷ Üå`Ië[æ‚Ö/ÊuÎh…á\	ÔC R±ŠÌ£ †hB¥uml\Z­&F²…Ñ‹„s¡¦hÅ5²‘vÂ¢@²¨Å"Œ`#3ŒVÂ˜Ç³!­Œgš†ö×ÆAxo¢Y‡6ÄÜ-,şšàú2½lp`!3©IÙ2‘Šìb%ÉÈPšQ”{ä£(K™Cú¨q“®ÿ|¥ÔîåÉOöñŒ}¼¥YI>‰z¼Ü€Z	ËaSfƒ#ä8a³™ÎtŞ¶†£L·0ó™Ö¼æ»†G<íLó-ÕÄ&8Ãy­nŞæ›â<':›ENÛ˜3î|ç°ÖY›vÂ³ö4•<cCÏ{òóù„Í>û)PqşsR‚(BŠÏ‚~& 
+}è0ÚĞƒB´¢ö”èñ(jÑ¦£q(GCjE‘ 3ÇÉâLJJÒ=iT¤.}æH©RÜÌ´D })NCHDÄ“25iIúŸ¢¨C%Qå(Ó¢ö´¨HjGéT©õ¨LU*A„êÓ•š-Í)X7Y¡BU«*ıiÿP¹zT“²•«p|+TÛÊV³Fµ®hU+O»×¶æµ¬x­iZnÖÁvo†=,b«ØÃU­~«G´ÚÔ­ò5R…¬RÏZÙ½fµ³wÅ¬[ÛÕÏÆ°UÉbS«ÚÕ²¶µ®}-lc+ÛÙÒ¶¶¶½-ns«Ûİò¶·¾ı-pƒ+Üá—±;ul_áZ×ÍÎ”¬É-­^#Ë\˜U¹Ğ­®t­û\Î¶Å2Åı.xÃ+Şñ’·¼æ=/zÓ«ŞõÊ¶±••ìr9»]çî5¯p%+dóû‘ûÆ—¿Ñµë{ñºLÔ²·À>0‚¬à3¸ÁV¬{-»T§î—ªFî_QªÜ·2¹Wì‡­ÿ:ßúJ¸¹Y½*e½Ià³¸Å.~1Œc,ãëöCi5ÉEëºÓ¸Ç>ş1ƒ,ä!ÛDXEÉ‘-ËN¹ÉN~2”£,åñz”3Ş2–³¬å-sËUŞÌ•»,æ1“¹Ìf^ï—5æ3³¹Ín~3œ[›æİ19Îv¾3óå9SfÍzş3 -hóy2~4¢­èE7¥ú=îf—kÚÎr÷&\ób#W©Bé8Œş4¨C-j9ËD³8ÆpH&Íi\º‹–t5
+ã«bOºÖ¶¾õ cŠb#2©©öë]y=Õ³öºÃVlTıÅ Qi)Vß]«:'‡Æ5¶³­mÿ1¯T¯Öñ~İTGúÑÙ©×J™71>{’\$›vI<”ko»Şö¾wIŠUøæ˜ºâ–«v“lîËu²*}öÉ¾†p°µz®û·Oèï‰S¼â„ş5¥¡ËİIót»ú5­uQ½q/|”E 'IîWÛÚu¶8Ìc.sóvû±7q¥åğH›çòÍøL÷ËÍ¥œiñnùN$>ó¥3½é5Ö÷„~ì‚—;ÇÃ^µ±÷­l‡Î–?c,ra‚ÏûåN?;ÚÓÎÚBç¼ßğ1»Úã.÷³³°\;­ç®÷½3ísQ:ß/xlû½ƒp<âêÂwZñüâ?kÈSÿ¾ò–üä-¯ùÍ¿ó^Í;çC/z.{¾»‡=êSä’ìĞg8Azş ¯úÙÓŞÅ¬¿}*kûøÉ¾ö¾ÿ=‚qÅÀÓgIƒø4{üå3ŸæÆ!%SùÇ»!_™Êo>ö³?ÜÛ'Ü&—¾»e½Îëk¿üæÏ-÷©8”yNlTï&ùÏ/ÿù¿6ÖÓÿısÈİ‡/şôÿ? "ÖH´´¹^ñ0å\ò^ 6 N€ZP„ûUŸõ1à^àü­…ñMÆå“ÿa ._é±Å† 	ÒŞ®E	 ^
+ªÅ
+¶ jŞèÍ 
+ì ö ş Ö`YX¡ÿ!&¡.!6¡>!F¡N!V¡^!f¡n!v¡~!¡†¡!¦¡®!¶¡¾!Æ¡6á’¡JÌ!æ¡î!ö¡ş! ">…¢!""&¢"."#6â!šG
+¢$N"%V¢%^"&f¢	u¢'~"(†¢(")–¢)æô„ƒ&®"+¶¢+¾",ÆbŞ böÜ¡,æ¢.î"/ö¢/¶!-ˆ-ª.şâ€1&£2.#3Zb0È0ªO16#f5^#6f£6‚¡,e–MdVM…\„±E4Ê*n#":®#;¶£;ö ,‰ÿL˜Úë½E92G$ºã[½#?ö£?şb<ÊãIĞãMğOÜ£ õ£Lı#C6¤Cbb@İSM•ñWÀuØD$N ¤Mc;ÕC†¤H$FdÕ)ÙZ•–7¢ä·­‡½ŸPp¤y$;IŞ$NæävãJ–X¼™ÛO†œ8ê\YÈänäãGF–N.%S6¥šä£ı¤Æ¹¤Ã%ÙSÁdP¥n eMî—S~%X†%TNåTÂU’e¸%Yhenpå:Ú]XÆ¥\ŞäX
+%Ï\Pîœ¼á×ZB"M¾eªÍ¥`¦?¥Jj˜Îq˜Uºä,MZ[â†[¢cs)a^&fjã3
+ÿ…FºEd–Ó_R&^e&i–f3nfPtf[|æ’ã;¾äP™¦lÎ&/¢æO¨æjú¥kêclbÀ>Ò&pç*jÓ6§q'r&§r.'s&§n*$2îào
+'uV§ ÖaÙíæGúàtZ§w~çb§PLækÆx'z£xy–go¦'|Æg®'{†&?v§|æ§~J!}âHZã~¨€ÒaöD{(‚&¨HÚƒ6¨ƒ>(„F¨„N(…V¨…^(†f¨†n(‡v¨‡2h2„¨‚(‰ä‡(Š¦¨Š®(‹¶¨††h2”¨ŒÎh?º¨Ş(æ¨¢(ŒÒ¨ş¨6î¨)‘ÿ)‹ö(&©’£‘6©“>)”‚¨ˆ.)•Vi,Rhd©–n)—v©—~)˜†©˜.ƒj™)š¦©š®)š²@”¾i„"©•Î)^"–Š)æ©î)™6(›ş) ¦©›Â)¡JiŒÖ)¢&* Şé6ª£6jŸ2h NêŸj¡Â©œ*ª¦nj2ê£~*¨vi¤Ú¥–ª ^*¡f*§®*«¡§†*¬~ê¨š*­j¥¢*”ªj«î*¯fá«Æ*°êé¬Öj©Ş*®:©®öª².ëşj–zD–æC>|ê<ğC´N+¬+›¾Ã?¼šÒ?˜)¸Vê±Fi²2+º¦k:«–
+Ä–Jÿë§ºkÀk¶–éŸæÃ?äš
+„™ò+›k¹é¹ª+Áª+»>ë?«¼«¶ª)''œ©¿úëšlÀéÀ¬Æ*ëÁ¶ÁÂÄ³®C¾¢?ğÃ:d)¸ş=øÂz¬»ª,?ä+Ë¶AÊ®,˜6lšƒÊş0Hì?ôëÏşëÅ"ë”n¬Ñ¢kÇ.¬Ë"¬/DÓZ+=üƒ/<mË.­ÓRmÔNí?Xë—âì·ò¬Êú,Ğ’ëĞiÆ-ÚjjÒ&l»²íË&ìÛDÕ¾mËBk×ÚëšÆ¬l­ØîmĞVlÙšmÑ¦-á®êÚn©¼Ò-İ¶ÁÌ.­Õº-Ü²mãz©×š)*t*Œÿ­ß’màbìà.è
+hŒ.é–®é.énÛÖmäÒì?¬CÓÒÓ>nËF-ìªìÍâmšrkÏê¬·úmÄ
+DÄnçzn2 .ò&¯ò./ó6¯ó>/ôF¯ôN/õV¯õ^/öf¯ön/÷v¯÷~/ø†¯øoêNh˜*mâ¶®¼¦,?Ìì0ğƒì.îúÆlûæ®Ÿ®)¾FìÃê«¬·ú¯Ğ¯Â(ù°0'°/07°?0Gpôvl°V0—V.±¯ ë(K°0‡°0	—°	ŸğéR°¯0gğ©n0‡(
+Ï0×°ß0ç°o¯
+¯p·°Ÿ©ÅÂÿğ‘Êğ1'±/17ñõö°+±­qv°g±o1w±/p‡1Ÿn)*ˆ1£ñ¬ñ·±¿1Ç±§1S.—ñ¿Ö±3,Ë±ÿ1 ² Kğ²!2"ãé/Á 7²#?2$Gòó&2%W²%§ñ"K²&o2'wò_2(‡²(;j&{²)Ÿ2*§2
+2+·²+gi)«²,Ï2-×òø¾2.ç2%Ç²-÷²/ÿ20'¯.31Ó1/32'³2Ÿr17³3ÿp/³4O35ò3_36“r4W37w³7gq6‡³8wí6³9Ÿ3:Ïğ8¯ó:ÿs:¿3<Çs‡) hi=gé=ƒi>ê>;j>÷óşsÑó@ãsA·ÙsB³³;Ë³C?4Ds/=Û3EOt¨t@W´?ßó?iGtEc´87tD—´IŸôòŠi=¯4B+´@´R¹´L#ôB×´FwiG4GßtKï4>ã)KÿtN‹t8“4J5R—´J÷tK75S5Eƒ´F÷sP;5N¯4@W5F¿4Pÿ4T{õB3t9'5Y—u</5KstLKuOÇ´SµMuZ7µ[W5—ú´U{)^k5X³sµY¶`O3Z?5UG5bã´W?5]çõ–Î5_3ö]/6Q¿ubçÿue;3`6gwv/w5e_6_çôW3öNôc÷õP;v_ƒõaOµe§¶X3²g×¶möR/6M¿td×ôA×uX¿vk«õoëóLëvféôq‡u;õm?7to²3·?ƒjfû5¤:wto7wr1´nôu{4v[ğfw7z§7—7{óy«7|Ç7·7}çò{Ë7~ç·:×7³ò}ë7€ø÷7‡ò8‚'¸8ƒWò+8„G8ø68…òƒK8†g¸õV8‡ëñ…k8ˆ‡8óî©Ü:*ÛÆ+È’8—x‡c²v‹8ŒÇxóªø³šx¨8‹‹içx‹‡ñ‡Ë8ƒÿ8{,ÂBîÇ¦8’wD‘»m»ù’§oâ:yûğ¹•Gøï8‘×8o9‘3ù—7y—#î–3y—Ãm“O¹y¿ø•·¹ˆ“xŠ»ìËŠ9sy‡9—Ç¹Ü‚9šÛ¹’«94Ó¶›ºŒÓ8˜ã9¢÷9›yzŸ3ºŸzW9¡W:|g¹—+º¦gz™Û¹§'z§ƒú¦Kº³¹¥Ÿz€ù—ƒì˜—8’ßù¦³xäÎy§»º”“z¬R:ªïúsãº¯k³ óº°ø¯{êú°'{`;³ß¬©+;´Çs	L;µW»µ_;µ7»¶_ğc»·;¸‡»¸;¹—»¹Ÿ;º§»º¯ÿ;»·»»¿;¼Ç»¼Ï;½×»½ß;¾ç{¶o;¿/²¾ÿ;À¼À<Á¼Á<Â'¼Â/ü¹ó{¿w;ÃG¼ÄO<ÅW¼Å_<Æg¼Æ_»Ão»¿o<È‡¼È<É—¼ÉŸ<¼w¼¶<Ê·¼Ë¿<ÌÇ¼ÌÏ<»«|³³<Íç¼Îï<Ï÷¼Ï¼Í3;Îÿ<Ñ½Ñ=Ò÷<œ¿:™“9ëxš#zÔ7ıŠ+í£ş¹š}Òo=×w½×=ÂÛ8˜jùÓŸoÔ+:Ô¯øÔ‹=®k=Ø¿=ÜÇ½ÜÏı·³=”ù£l™G9šãıÜŞıW=Şù¡7:á×·ÛÓ½â/>ã7¾Î³½¨Óy«~˜?ÿzšÇz©å‹º;:§·wâ;¾è>é—>ÅC>æû¹­O}ß‡z­«ı§#.«ÃºœÓ:Õ+9Ö—wè›>ï÷¾ïÿ¾¼£>§Ÿ¹—¯=ñoşëß~ñşæ£ıòşÚƒ>Ä?õW¿õ_?¸?ñG:íÃ>ô·úğ_~æ7ø{ÿö?ÿlc¿ú¯?ûó¾ğ×ş’ïı˜Ë¹ò3?¬G9ó>ùÓÿóËúáÓ7@,X‚`Aƒ&T¸aC‡!F”8‘bE‹1fÔ¸‘cGA†9’äÄ6'Q¦T¹’eK—/aÆ”9“fM›7qæ<)pIIŸ?:”hQ£G‘&URgS§O¡F•:µÿ&Ï¥W±fÕº•kW¯_ÁR¤:–lY³gZ»–m[·oáÆ•[m]»wñJU;—o_¿2oaÃ‡ï8˜qcÇ!GÆš˜reËQ÷JÖ¼™sgÏŸ/‡=úeæÏ§Q§V½Z+i×¯C›f=›vmÛ·%ÂÖ½»°lÜ¿¾¹æ?”ÆYşS®ü$ò—Î—3oã¼¹JãÔygŸé{xwïßÁ‡-~¼%ö™ØÍ§D?]{ûí‹ÃÇ—?Ÿ¾ĞñÕÙWGüzsæÑÉóÏ?é äO:öÒs6îêkĞÁ!\¨¸ëø#@ü´NC9Ô/¿üT0;#,ÑÄ½£©¿şÄO=?Œÿ1F[ô0º
+ElDyìÑGÔTl±B_”º=LRÈ•ÌÑµŒRÊ)Ä$Í#2Àõ:¬qIÔJ*É,ÓÌ¯¬$òÈ¡ñ@ê$p9ßsDøÎÌSÏ='{ªI;½kL>	-ÔĞœ
+1ĞEóôĞG!T!F)ÑQI1Í´ĞJ9OMAõĞNIÕíRQQMõÄRY%íTUau¾Vi½ìUYqÍ5¸ZyMìV]vµ^‰ííSa‘MÖ6/<Ï¥uJğÏbÍúUÙk±ÌÊ›¦6&i©5ÌÚlÉ-—¨ĞMWİuÙMwÛçœ.ŞœQÎñ^}Ã­ÿV vXà	.ØàƒNXá…nØá‡!Xâ‰)®Øâ‹1ÎXãİ=o^0×\óC‘Y²K0]ô¶ßœxâØå—aYæ™i®Ùæ›qÎYç„ß½ÒK-i™Ş+ŒSÍfWªå™nÚé§¡Zê©©®šİq¤èëEYëŸSNú¬¥­.Ûì³ÑN[íµÙk·|ÎzKVrÅ¸Ã[éÛîÛï¿\ğÁfvÎ¬åuSd?&ºñfïÕ›*²	¯ÜòË1Ï\ó™©òVåç$ïÍI/İôÓQß¼óç>=tË(O]öÙi¯İvœ_Ïİ¦Øoïİ÷ß^`İ‰—‰wá‘Oÿ^ùå//Şy—g^úé©¯êç±W)zë¹ïŞûï+Î^ü6¶ßüóÑO¿ãñŸ/_ı÷áyö±w_şûñÏ¿túÛ]ÿÿÀÊñÏyöà˜À§°xTà!A—1x”à1˜A†QPwÔàAÂõqPrá	Qø@¾Î„)táó·ÂĞµ†5´áù^ ê°) Ğ‰OÄ›q‡9äaØ†""1‰Ä¢á¡ÅéÅDˆ?´bqrD"¶d‹]D	«H­'J‘Œeü¿˜F%&q‰;£ÕÈ’-2‹uL#ãèz±a,ÖÍHA¢vÜãÿS2GDÚq%<l"™HCÂTãÅè¿An’“½+¤ïèÆIö± ä"(¹F8ú±y”ã$çXÉ?j²“µ´¥é>ÉG•È2•¦ìe#QÌV²Ò—®Üe{Fb¶
+·tæ3Ë–ËEšÒ’Õ,&«XÉdZó˜Ô|c7aéÊe²ª™Ğ4ç9›öIU¾‘_l#&•)Éb®Ó˜Èlb6E©Jwbsœä¤%:ĞªU&YÌI?³WN.”¡KÌ#*Çˆ¾r…
+mèE1Z8êÍ¢õèG¶Qş¤%5©FEº²”¥MiÒVÚR™6ô¥*%éLqšÓÔ´_1ÕéOÉÿÓpù¨Eåä}dT$&uM¨º©Q¡zQ¤¶nM=Q£šÕ(Nõ8rJÉºj´¼YU'XÕêYa8!y-lkÍİFFÖ¦˜­u=aîöU¸ŞB‡ëUåª½§Ú•°Gu_ãV´%q©­½	]Y	¦	®`Cœb+ëØİV²Mà@ZÑ–´¡¥,2„Ù¬½µ€Õ,ùRZÙÎ–¶µµímq›[İî–·½õío\á—¸Å5îq‘›\å.—¹Í5íkKÅçN—ºÕµîu±›]ín—»İõîwwİèÆ¼å5ïyÑ›^õ®—½íu/iÅK*é¾—¾õµï}ñ›_ıÿî—¸ñíÔ|ù`˜À6ğë_NÁvğƒ!a	cWÁ•bğ„1œao˜Ã®0¥.Üa˜Ä%61w?Ì¨Ÿ˜Å-vñ‹a<Û/jÅ1¶ñqœcÏ8P5Öñd!£—Ç€òñ‘œd%/Ù¸E¶Ó‘™e)O™Ê ur˜ \e-o™Ë1¾²“²Üe1™ÌşrÂ\f5¯™ÍûõÀ›ág9Ï™Îu¶óñœg=ï™Ï}öóŸè7§¹Í…6ô¡Í+hE/šÑvô£!ígò"šÒ•¶´w#iMošÓnô.jQšÔ¥6õ©QjU¯šÕ­võ«akYÏšEÖµ¶õ­qk]ïš×½öõ¯la›ØÅ6ö±‘le/›ÙÍvö³¡miO›ÚÕ¶öµ±mmo›Ûİöö·Ánq»Ö ;_7http://www.b-ve.com/blog/wp-content/uploads/tiddler.gifYimage/gifÔ_WebResourceTextEncodingNameUUTF-8OS<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <TITLE>my weblog  Â» Blog Archive   Â» TiddlyWiki - a reusable non-linear personal web notebook</TITLE>
+        
+        <META name="generator" content="WordPress 1.5">
+
+        <LINK rel="stylesheet" href="http://www.b-ve.com/blog/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.b-ve.com/blog/wp-rss2.php">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.b-ve.com/blog/wp-rss.php">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.b-ve.com/blog/wp-atom.php">
+        <LINK rel="pingback" href="http://www.b-ve.com/blog/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://www.b-ve.com/blog/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                            #page           { background: url("http://www.b-ve.com/blog/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                  #header         { background: url("http://www.b-ve.com/blog/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://www.b-ve.com/blog/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /*
+                #headerimg      { background: url('http://www.b-ve.com/blog/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                */
+
+        </STYLE>
+
+                <LINK rel="archives" title="May 2005" href="http://www.b-ve.com/blog/?m=200505">
+        <LINK rel="archives" title="April 2005" href="http://www.b-ve.com/blog/?m=200504">
+        <LINK rel="archives" title="March 2005" href="http://www.b-ve.com/blog/?m=200503">
+        <LINK rel="archives" title="February 2005" href="http://www.b-ve.com/blog/?m=200502">
+
+        </HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://www.b-ve.com/blog">my weblog</A></H1>
+                <DIV class="description">babblings!</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">Â« <A href="http://www.b-ve.com/blog/?p=46">tamil Google</A></DIV>
+                        <DIV class="alignright"></DIV>
+                </DIV>
+        
+                <DIV class="post">                        <H2 id="post-48"><A href="http://www.b-ve.com/blog/?p=48" rel="bookmark" title="Permanent Link: TiddlyWiki - a reusable non-linear personal web notebook">TiddlyWiki - a reusable non-linear personal web notebook</A></H2>
+        
+                        <DIV class="entrytext">                                        <P><STRONG>TiddlyWiki: </STRONG><BR>
+Its a simple notes taking application on the web, with little tweeking you can use it to make 3x5 print cards or shopping lists etc. Unlike wiki and its complicate installations complications, this one doesnt need any server side thingi required. Everyting is encapsulated into one single file, you can carry it along with you in your thumbs drive,or mail it.<BR>
+Jus save a page and get going. <A href="http://tiddlywiki.com/"><EM>Office page</EM> </A><BR>
+<A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD tiddly wiki</A>: a nice implimentation, with clean css<BR>
+<IMG src="http://www.b-ve.com/blog/wp-content/uploads/tiddler.gif" alt=""><BR>
+<EM>screenshot of GTD Tiddlywiki</EM></P>
+        
+                                        
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Wednesday, May 18th, 2005 at 3:10 pm                                         and is filed under <A href="http://www.b-ve.com/blog/index.php?cat=7" title="View all posts in software reviews" rel="category tag">software reviews</A>.
+                                                You can follow any responses to this entry through the <A href="http://www.b-ve.com/blog/wp-commentsrss2.php?p=48">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.b-ve.com/blog/wp-trackback.php?p=48">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://www.b-ve.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name </SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) </SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="48">
+</P>
+
+</FORM>
+
+
+        
+                
+        </DIV>
+
+
+<HR>
+<DIV id="footer">        <P>                my weblog is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.b-ve.com/blog/wp-rss2.php">Entries (RSS)</A>
+                and <A href="feed:http://www.b-ve.com/blog/wp-commentsrss2.php">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV>
+
+
+                
+
+</BODY></HTML>_http://www.b-ve.com/blog/?p=48Ytext/html    1 4 ; M \ r##B#K#Rm¶mğmúnn!n'~Ÿ                           ©

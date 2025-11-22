@@ -1,0 +1,924 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO!ªbody {
+	margin: 0px 0px 20px 0px;
+		background-color: #8FABBE;
+	
+        	text-align: center;
+        
+	}
+
+a {
+	text-decoration: underline;
+	
+	
+	}
+
+a:link {
+	color: #8FABBE;
+	}
+
+a:visited {
+	color: #8FABBE;
+	}
+
+a:active {
+	color: #8FABBE;
+	}
+
+a:hover {
+	color: #006699;
+	}
+
+h1, h2, h3 {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	}
+
+#container {
+	line-height: 140%;
+		margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	padding: 0px;
+	width: 700px;
+	
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	}
+
+#banner {
+	font-family: Verdana, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #999999;
+	text-align: left;
+	padding: 15px;
+	border-bottom: 1px solid #FFFFFF;
+	height: 39px;
+	}
+
+#banner-img {
+	display: none;
+	}
+
+
+#banner a {
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+#banner h1 {
+	font-size: xx-large;
+	
+	
+	
+	}
+
+#banner h2 {
+	font-size: xx-small;
+	}
+
+#center {
+		float: left;
+	width: 500px;
+	
+	
+	overflow: hidden;
+	}
+
+.content {
+	padding: 15px 15px 5px 15px;
+	background-color: #FFFFFF;
+	
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	}
+
+#right {
+		float: left;
+	
+	
+	width: 200px;
+	background-color: #FFFFFF;
+	
+	overflow: hidden;
+	}
+
+.content p {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	font-weight: normal;
+	line-height: 150%;
+	text-align: left;
+	margin-bottom: 10px;
+	}
+
+.content blockquote {
+        border: 1px solid #000088
+	line-height: 150%;
+	}
+
+.content li {
+	line-height: 150%;
+	}
+
+.content h2 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: left;
+	font-weight: bold;
+	
+	
+	margin-bottom: 10px;
+	
+	}
+
+.content h3 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	
+	text-align: left;
+	font-weight: bold;
+	
+	
+	margin-bottom: 10px;
+	
+	}
+
+.content p.posted {
+	color: #999999;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	border-top: 1px solid #999999;
+	text-align: left;
+	
+	
+	
+	margin-bottom: 25px;
+	line-height: normal;
+	padding: 3px;
+	}
+
+.sidebar {
+	padding: 15px;
+	}
+
+
+
+#calendar {
+  	line-height: 140%;
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	
+	
+  	padding: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	}
+
+#calendar table {
+	padding: 2px;
+	border-collapse: collapse;
+	border: 0px;
+	width: 100%;
+	}
+
+#calendar caption {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: center;
+	font-weight: bold;
+	
+	text-transform: uppercase;
+	
+	letter-spacing: .3em;
+	}
+
+#calendar th {
+	text-align: center;
+	font-weight: normal;
+	}
+
+#calendar td {
+	text-align: center;
+	}
+
+.sidebar h2 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: center;
+	font-weight: bold;
+	
+	text-transform: uppercase;
+  	
+	letter-spacing: .3em;
+	}
+
+.sidebar ul {
+	padding-left: 0px;
+	margin: 0px;
+	margin-bottom: 30px;
+	}
+
+.sidebar li {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	text-align: left;
+	line-height: 150%;
+	
+	
+	
+	margin-top: 10px;
+	list-style-type: none;
+	}
+
+.sidebar img {
+	border: 3px solid #FFFFFF;
+	}
+
+.photo {
+	text-align: left;
+	margin-bottom: 20px;
+	}
+
+.link-note {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	line-height: 150%;
+	text-align: left;
+	padding: 2px;
+	margin-bottom: 15px;
+	}
+
+#powered {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	line-height: 150%;
+	text-align: left;
+	color: #666666;
+	margin-top: 50px;
+	}
+
+#comment-data {
+	float: left;
+	width: 180px;
+	padding-right: 15px;
+	margin-right: 15px;
+	text-align: left;
+	border-right: 1px dotted #BBB;
+	}
+
+textarea[id="comment-text"] {
+	width: 80%;
+}
+
+h1, h2, h3 {
+
+		margin: 0px;
+
+		padding: 0px;
+
+	}
+
+
+
+#banner {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#FFF;
+
+		font-size:x-large;
+
+		font-weight:normal;
+
+		border-bottom:1px dotted #FFF;
+
+		border-top:3px solid #99CCFF;
+
+  		background:#000033;
+
+  		padding:15px; 
+
+  		text-transform:uppercase;
+
+		letter-spacing: .2em; 		
+
+		}
+
+	
+
+#banner a,
+
+#banner a:link,
+
+#banner a:visited,
+
+#banner a:active,
+
+#banner a:hover {
+
+		font-family:verdana, arial, sans-serif;
+
+		font-size: x-large;
+
+		color: #FFF;
+
+		text-decoration: none;
+
+}
+
+
+
+.description {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#99CCFF;
+
+		font-size:x-small;
+
+		font-weight:bold;
+
+  		background:#000033;	
+
+  		text-transform:none;	
+
+		letter-spacing: none; 		
+
+}	
+
+				
+
+#content {
+
+		float:left;
+
+		width:65%;
+
+		background:#fff;
+
+		border-right:1px dotted #999;
+
+		margin-right:15px;
+
+		padding-bottom:20px;
+
+}
+
+
+
+#links {
+
+		background:#fff;
+
+		padding-right:15px;				
+
+		}
+
+		
+
+.blog {
+
+  		padding-left:15px;
+
+  		padding-top:15px;
+
+  		padding-right:15px;			
+
+		}	
+
+	
+
+.blogbody {
+
+		font-family:georgia, verdana, arial, sans-serif;
+
+		color:#333;
+
+		font-size:small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding-left:10px;	
+
+  		padding-right:10px;
+
+  		padding-top:10px;			
+
+		}
+
+
+
+
+
+.blogbody a,
+
+.blogbody a:link,
+
+.blogbody a:visited,
+
+.blogbody a:active,
+
+.blogbody a:hover {
+
+		font-weight: normal;
+
+		text-decoration: underline;
+
+}
+
+	
+
+.title	{ 
+
+		font-family: verdana, arial; 
+
+		font-size: small; 
+
+		color: #000000; 
+
+		text-transform: uppercase;
+
+		font-weight:bold;	
+
+		}			
+
+		
+
+#menu {
+
+  		margin-bottom:15px;
+
+		background:#FFF;  							
+
+}	
+
+		
+
+.date	{ 
+		font-family:georgia, verdana, arial, sans-serif; 
+
+		font-size: small; 
+
+		color: #666; 
+
+		border:1px solid #333;
+
+		padding:5px;
+
+		margin-bottom:10px;
+
+		font-weight:normal;
+
+}			
+
+		
+
+.posted	{ 
+
+		font-family:verdana, arial, sans-serif; 
+
+		font-size: x-small; 
+
+		color: #003366;
+
+		margin-bottom:15px; 
+
+}
+
+		
+
+		
+
+.calendar {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#444;
+
+		font-size:x-small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:2px;
+
+  		text-align:center;	
+
+}
+
+	
+
+.calendarhead {	
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#001144;
+
+		font-size:x-small;
+
+		font-weight:bold;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:2px;				
+
+}	
+
+	
+
+.side {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#333;
+
+		font-size:x-small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:2px;				
+
+}	
+
+		
+
+.sidetitle {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:x-small;
+
+		font-weight:bold;
+
+  		background:#EEE;
+
+  		line-height:140%;
+
+  		padding:2px;
+
+  		margin-top:10px;
+
+  		text-align:center;
+
+  		text-transform:uppercase;
+
+		letter-spacing: .2em;  					
+
+}		
+
+	
+
+.syndicate {
+
+		font-family:verdana, arial, sans-serif;
+
+		font-size:xx-small;
+
+		font-weight:bold;		
+
+  		line-height:140%;
+
+  		padding:2px;
+
+  		margin-top:10px;
+
+  		text-align:center;
+
+  		background:#EEE;  		
+
+}	
+
+		
+
+.powered {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#003366;
+
+		font-size:xx-small;
+
+		font-weight:bold;
+
+		border-top:1px solid #CCC;
+
+		border-bottom:1px solid #CCC;		
+
+		line-height:140%;
+
+		text-transform:uppercase; 
+
+		padding:2px;
+
+		margin-top:10px;
+
+		text-align:center;
+
+		letter-spacing: .2em  					
+
+}	
+
+		
+
+	
+
+.comments-body {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:10px;			
+
+}		
+
+
+
+.comments-post {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:x-small;
+
+		font-weight:normal;
+
+  		background:#FFF;			
+
+}	
+
+
+
+.trackback-body {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:10px;			
+
+}		
+
+
+
+.trackback-url {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:small;
+
+		font-weight:normal;
+
+  		background:#FFF;
+
+  		line-height:140%;
+
+  		padding:10px;
+
+  		border:1px dashed #CCC;			
+
+	}
+
+
+blockquote {
+	border:1px solid #000099;	
+
+}
+
+
+.trackback-post {
+
+		font-family:verdana, arial, sans-serif;
+
+		color:#666;
+
+		font-size:x-small;
+
+		font-weight:normal;
+
+  		background:#FFF;			
+
+}
+
+
+
+		
+
+.comments-head	{ 
+
+		font-family: georgia, verdana, arial, sans-serif; 
+
+		font-size: small; 
+
+		color: #666; 
+
+		border:1px solid #999;
+
+		padding:5px;
+
+		font-weight:normal;
+
+		margin-top:10px;		
+
+}		
+
+
+
+#banner-commentspop {
+
+		font-family:georgia, verdana, arial, sans-serif;
+
+		color:#FFF;
+
+		font-size:large;
+
+		font-weight:bold;
+
+		border-bottom:1px dotted #FFF;
+
+		border-top:3px solid #99CCFF;
+
+  		background:#000066;
+
+  		padding:15px; 
+
+	}
+
+
+
+
+
+_+http://www.undefined.com/ia/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O‚<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META name="generator" content="http://www.movabletype.org/">
+
+<TITLE>Indefinite Articles: MTIFGOMLAALA</TITLE>
+
+<LINK rel="stylesheet" href="http://www.undefined.com/ia/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.undefined.com/ia/index.rdf"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://www.undefined.com/ia/atom.xml">
+
+<LINK rel="start" href="http://www.undefined.com/ia/" title="Home"><LINK rel="prev" href="http://www.undefined.com/ia/archives/2005/06/school_state_an.html" title="School, State and Choice Revisited">
+
+<LINK rel="next" href="http://www.undefined.com/ia/archives/2005/06/even_better_del.html" title="Even Better - Delicious backups">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.undefined.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="container">
+<DIV id="banner"><H1><A href="http://www.undefined.com/ia/" accesskey="1">Indefinite Articles</A></H1>
+<H2>Agile Software Development, Open Source, Technology, The future, etc.
+</H2>
+</DIV>
+
+<DIV class="content">
+<P align="right"><A href="http://www.undefined.com/ia/archives/2005/06/school_state_an.html">Â« School, State and Choice Revisited</A> |
+
+<A href="http://www.undefined.com/ia/">Main</A>
+| <A href="http://www.undefined.com/ia/archives/2005/06/even_better_del.html">Even Better - Delicious backups Â»</A>
+
+</P>
+
+<H2>June 17, 2005</H2>
+
+<H3>MTIFGOMLAALA</H3>
+
+<P><EM>(Memes That I Finally Got Off My Lazy Ass And Looked At)</EM></P>
+
+<P>* http://del.icio.us</P>
+
+<P>I found that it works really well with bloglines - when I come across a blog entry I like, instead of saving it forever and continuously cluttering up my bloglines tracker, I copy it over to Del.icio.us and save it there.</P>
+
+<P>If Del.icio.us shuts down, I'm hosed.   But then, I have a a href="http://www.tiddlywiki.com/"&gt;TiddlyWiki on my flash drive, so at regular intervals I'll try to copy the links over the TiddlyWiki.<BR>
+</P>
+
+<DIV id="a000200more"><DIV id="more">
+</DIV></DIV>
+
+<P class="posted">Posted by jb at June 17, 2005 07:40 AM</P>
+
+<H2 id="trackbacks">Trackback Pings</H2>
+<P class="techstuff">TrackBack URL for this entry:<BR>
+http://www.undefined.com/cgi-bin/mt/mt-tb.cgi/197</P>
+
+
+
+
+
+
+</DIV>
+</DIV>
+
+
+</BODY></HTML>_>http://www.undefined.com/ia/archives/2005/06/mtifgomlaala.htmlYtext/html    1 3 : L [ q""M"V"_"}"ƒ4	4J                           4T

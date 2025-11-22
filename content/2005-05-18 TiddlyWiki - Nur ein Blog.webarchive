@@ -1,0 +1,872 @@
+bplist00Ò(_WebSubresources_WebMainResource¯ !"#$%Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO&½img {
+   behavior: url("http://www.robertlender.info/blog/plugin/pngbehavior.htc");
+}
+.bb-code, .bb-php, .bb-code-title, .bb-php-title {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+}
+
+.bb-code-title, .bb-php-title {
+    margin-bottom: 2px;
+    background-color:#CCCCCC;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.bb-code, .bb-php {
+    font-family: courier, "courier new";
+    background-color: #DDDDDD;
+    padding: 10px;
+}
+/*   
+	Kubrick v1.2.5  for  WordPress 1.2
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+    background: url("templates/kubrick/images/kubrickbgcolor.jpg");
+    }
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+    background: url("templates/kubrick/images/kubrickbg.jpg") repeat-y top; border: none;
+	}
+
+#header {
+	background-color: #73a0c5;
+    background: url("templates/kubrick/images/kubrickheader.jpg") no-repeat bottom center;
+    margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+img.categoryIcon {
+    float: right;
+    border: 0px;
+    margin: 5px;
+}
+
+#serendipityQuickSearchTermField {
+    width: 90%;
+}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.graybox {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+    background: url("templates/kubrick//images/kubrickfooter.jpg") no-repeat bottom; border: none;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, .serendipity_commentForm input, .serendipity_commentForm textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+.serendipity_commentForm {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 130px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+.serendipity_calendarDay {
+    text-align: center;
+}
+
+.serendipity_commentsValue input, 
+.serendipity_commentsValue select {
+	width: 100%;
+	padding: 2px;
+	}
+
+.serendipity_commentsValue textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+.serendipity_commentForm submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.graybox {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+.serendipity_commentForm {
+	margin: 5px 0;
+	}
+
+.serendipity_commentsLabel {
+    vertical-align:top;
+    }
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+#header { background: url("../blog/templates/kubrick/images/kubrickheader.jpg") no-repeat bottom center; }_5http://www.robertlender.info/blog/serendipity.css.phpXtext/cssÓOÿØÿà JFIF      ÿş <CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 100
+ÿÛ C ÿÛ CÿÀ  @ n" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ü²ğwüş
+3i¥ØÇãoø%çÄMKX´±Ó­.n´_ß¡²Õg´’îõ;»kÉm}©4kwöúp³»Ÿì6uÔPÜVå¯ü'öòµº‹íğJ¯ŒÚµ” Óµ+ÖoÚ_àn™xš°ÒçÕ<9¥y_ï-mÖ$×¬,õ]FfèhñhWr/ö‚jqİÿ §çŒï,ítäºÔìô³s‹×·eGˆy¯
+Ïöİ<ÄòG(”^AådÊÏ±W“ø`Í©Zx–ÂÚfûD¾ÕàÕ/#ŸdóG0³Ó|O©jBhÛ£[­µâ™ŞŞ[ßµ}˜ŸŒ­ÂÙ{Är<fszÚµßN{û°§%È»$âíf¬~ƒş¾ç5#R«¥‡Šz8GœF?gX¸æ‰Å-t‹²×M­ş^oÿ êÿ ÁU.õ{Ùäı…¾.é;\Çö7âGìã:ZÇkh’´³j_$÷Wböa–í-"h"]ì‘ÿ Ä9¿ğU?2Aÿ Kñ¤EºäÂßğ°fF“h™~Æ²'ü.…RÒ@\\ºÈSh’db«ş‘Á^0Ôá§Mñ™½¸ŠÊk#u«şÕÖ*pá-õ_Æ—0Å,jêq,Ö‹¥¢]¬=¾¤ŞWc¤7Ä?Új6úm§ˆ¦î´ûá.­£şÑ2‚ŞÊ	d†¬`»Õõ3–·—túu…Í©uP±–=,H}9e(Æ4ÒÅÔQŒR©)BjVI{îêW½›n^Å§+]ëÌº¡âVzÒ^Ë+VJ<’3™¤’Rr.1•í«u\¥«³º¿ù¥ø73ş
+ß±GÆ×ÎA9=ı˜£³ùE¤hTül‘|ï<,(Ş_”æåŸ|BÖjwğnwüxiR›Øãkb/Ü%ßÄOÙ¡4¦Ÿ|?ëd‡ãİÇAqÂG#—0ò¡_wúu[ë¥Ó,5)a¾Íwkm=‰ğ‡Äë2i¢i.UíğkV6W~h¼şÓ¾†âßFÕt–{¨îc«?Š~*\8h,ïmäE.ÇşßÆÅ{[{;	l„qıºÚk‰äû\WÒÇ=ÌFhÖî+»¸/%,¡4š‹³·Åˆ”ZM]¶¥æM4’‹WwmÚÜ£ÿ ˆ›)/ÜeÎÍ]ª8©'¬n®±í5ß—Gm½Ïòìÿ ˆt?à´?ôc~.ÿ Ã¡ğÿ µñ‡ü‡şŒoÅßøt>óÖ¯õ “âÆèİ¦‹JÒç²2Å5»…Ÿ£º[¬Ú}I$²û\=èîÚ>û+]„]ò¼ŞCaø‡ñ¬"4šu´ŒÁâX×áÄøB²Ø$·Ì…åw†Şy-ŞØyöo©4—p*OÒizÇ'ÂÍÉ*˜¯uÙóC‘z§:1R^qºÕ;ÛRŸŠüyo‚ÉÒjĞÅKùt|¸÷Êöº•úi§ùpÿ Ä:ğZú1¿áĞø	ÿ ÏZø‡CşCÿ F7âïü:?ùëWúÿ ÂÈøÜ°ét[7š{{yuO…?¼ˆìÃ-Æ§t|Ô·¸ŠşeúnŒÑ¥íıÜíûœÇ$V±ø—ñhæë@Hïy
+>'5²À ¹‘mm¥»şÍæêh¡îó‚ÛÜÆ¶;n.µ;[KJy.&İLE•Şœ´»(Ómú%"WŠYş‹êYFê×¥‹K¬wxë%½ÛÑnûŸåÃÿ èÁhèÆü]ÿ ‡Cà'ÿ =jç<_ÿ ÿ Á_¼ákÆ>.ı‹üS¢økÃÖRj:Î«?Ä¿³ÃceQ%Ä‘YüP¸¹uBË•†	œ… ª
+|JøÆ©c$Ú,“	­åšæ!ğŸânŸr'{È­R8İ-5»{j±Ër‘Ş}¦K«yÒ2Q ­ÆGí/©xšçö7ø¹©ø¶ÇNµ×[À·÷wÖÖ²G§º››{‹`úv­4Ó@<†Š»=N@şls˜m•ÚÚâøÃ‡¸GŠ8‡)O‘ğæwœáéâ`åFuòÌ³¥E(}^´©Jtc´áZ…G(F­9ûÑôr¯óÌvm–åõpyZ†71Áa*:tñ1š#JŒ9¼]H)(Ëİ“„â›Œ–üaÿ ‚d~Ü×
+^€ºœè©x|iğÒE %K'ŒØ”‘œàƒĞŠş¢àÚ?Ù[ã÷ìåâ¿Úö÷ãOÃ»ßZø¯Ãß­|?-ŞµáTj7N¥ñ2mB4_ëz³Âm£¿´fk¥_Î&r®ôjÃö•×f•`¹ø{û6£Ê’cı~ #|ß»D‹ÃW“I#´*G´4RåˆÚ+éïØoÍ7|£lbğ;¡Ü¸ó<MÂ¤r[ªFü *Œx7ô¯â9ñ«Ãş¦¸k–q'=†g‰¡Â¹ŞAÀÒËøs3Ìğ“Áb1|gŸa±2¯‰Â:5ÕL=•8I$çV3§úßˆÙl/ñ&'…T)eÏ£˜ÑÇF³i§55¿áÈ¬ÓR—4Ÿ*‹Rı÷ñ†‰â[Ë¹§´â[y-®9tæÔtÓe;Ê#»’Ûâ'†â»ºZsir4æTgŒO$1£É\Ï„õ+{¡â5¼vÂ5¨ÎnÛ^´DÓaGhÅ÷Ú ø‰ãK}>ßO‹iŠøè¶ñY¤o› ñÜY?­][ø¦K›†²Õôk38û$^Ô/nb‡ìĞ+­ÅÌ^&±ŠyZì^J¯¤¶ÒÛ[˜š[ynnrf°ñ`‹^®» \éW-Í½…¶™àıjNÎôÚ”êæx¼a¨¾±?œğizv›¥ß0xà‹P’eó%ÿ E>®½·<yãkÉ·Ë%&Ò·,¹œãg{óEöNÖOù?Û?eÈùì’I§?´¹yZv[;êï«Óæ«+QÕ®-ìãøÿ öËûÛ“i§Ã¤|nÒ$º’ú(5?+L·³ƒáß•¨Íy%á¸¹Í³]ÛÉ§Úı'²·6ôÅ>ÆŞÉíü%©[EízŸ‰µ«‹ûÉDÈ7]İ[ø>ÎëšşrXƒ,¾\f(Â¼òyv—áÛy3êmãÛx,dë:GÃh›v“Og%°ojW6w0C+J÷S–åu–”‡·½”Y§`—º#H"×¾5D´fO	xùƒ4BMòŞ]^x*C¶{™£‰ÈS	Üê\©¤"|ÎÖŒªP‹iÙ]9A_],¯ºî’!ï¶Õ´·jd——»>İÿ ¶z&™?Œè¦³¥øfÚÇhÿ HÒõíVúïÌ0•ß†ôøv4~o·nDb6»F?øşÉ\4(Y|]ã’Ê² xüBö­¶á£,XZ[@"+’#I»yL§iWGà•‰m”x¯ÆïöiÖEy<C$.%YU.K@EÄ`(„¤¡ƒÁ¹dŞÎîİÔ£ÌäÛÕó¸¶¶ÒñŒSKÒï«1“Mè’[{¼ÖÑoï6îú°ÿ ÙÛùğ}!ıq\^Š @ñwœ0oŠ¯$)æùûŠ³!f`eÌfBâ.!P©à(ÄlâïÈ²*‚[ÅJêcX£HË2á\,†8·©
+CY'yØÿ ¸?­ŸDşuÀ7€Pı¤§Œ|]Eµ™|O<‚!ö¯µfÚ;ˆ&Šİ†°h£V™‡8ffGøWñÄÈòŒxªê&s4BY¢ycD±G#‚pdcß p@îŞ™_éŸé_"şŞú´ºìoûBêÖößk¸±øyªKomæ¬tÆâÚ8SÎeeŒrÅp ä£ßcğqIs(ñ®DD¾)º–83ÅæÛÄñ˜¢—2™C„?¾H›‰|Ïÿ €Z~ÃŸ´-¯Ÿ<â×á­Å¿Únäóîfònôäóîf;LÓÈÌšRÌ³3_=Å¸jŞâl*œkaq|=a±4gÌ£V…|·Jµ98¸ÉFtç(¾YFVnÍ;3ÖÈdáä²‹´£›eÒ‹ÕZQÆQié®nµ?Sâ÷t+KyÛáş£§[¼çÜÜø‡FÖ!3
+yìal„slª³;Ù&‰ÜKêwü3â‡ü,K¿Œ(t	t)4ÛOÈÑÍ©C¨4‹qqâèĞfh#L,øyr)ÚÊsù]­:-6D7MöÖky#•oŞ²LÒ™4ı'Z¸‚¹…‘£òİ.ÿ ªßğDŸhš×ÿ hİ;VA¨ÛZø{áÕÄ"	õ[!§Sñta$2C¥]<‘Æå_Ì·HËÈ¸ ào<7à‹\!Ä™árÜë,ÄæÓÂc0U³*4×Ö2Ç	YË<lğõ¥ì*ÎšúÅ:¼®ntœfäÏén:Îq¸ßø††"s’äÁŞrŒåícı«’÷ëJ¥Tá$•¥RÖÒêåõ2;¼ßû5rş6Ô.t¯x¯U³ó…Ş›áPµû<°C?ÚlôË«ˆ<™nc–Ú)|ØÔÅ%ÄRAíiQãVVéÇşÎßÈÖ‰ákĞOsC.‰«Ã42¢É±Ic<rE$n
+<n¬QÑVRT‚	¯ôhşSõ?6—ãÆİEŠş!Çl#¶û{Xê¿³ü÷ÖMt-ßU—ìßZŞ@’	/g7XCiw§^Åukir—’{?‡~7j7GWÕ~(øÔİXC5²x—FøÛÁj×K&Ÿƒ¼sáW¸šx'I&7I{ö‹{[ce™ŒŸhú™~|;B¬ğj²ªº2øcD¯±Ü#+-ÊRx¢™0FÙcEÃ¢‘"|<ğ1É>ğŒQÈÒK,qxsG$–tx®%‘Ì+É4O$r»ÒFîYX‚iÒûßVßõ×úCÓ³ôÓkw¶÷ßCÇôÚ#L›QŸOÕü=¯Ú<‘X3¯ƒ,ÍÍÔRùW0"ÃñYINéôõ…VXç\…ƒ@òè'í!à–¹Í¥x’±Œ%>@©,q°`á(c*¢ÈŞk@%Tòe$à!oQ‹áç€­ß|	ğ”,¢Ş5h¼;¤FÁ-Ì-–`…€Ána\â#&0¦$ÚğïÀ2mxÂ/²h¥MşÑßd@ÖĞH»¬ÎÙ!µw·ŠA‡xP¬lTšZkø†~[oúúéèyšşÑ~8ó4Ÿ@Á&•Òy<)‰Æ=B/9ÏŠLQ5İ´ñ8¤‘e¸gBˆÑ™ÍûCøA-^étH°,>r,Dg²:†×â¤Qä[Ç7Úr‘IÑ—%oLo‡¾råüá'óÙÌÛ¼;¤7šLÉpL™³;É§%²LÑG!ùÑHá÷€ÕŒ‹à¯	¬¯j–"ø{HWkXQb‚ÙœZmâˆ,qÂO”‘€Š¡@ ïøÁş¿=:ßúåë©æVÿ ´G„.nRÑ4_,Ó·W>r÷ék,	+â–¸f_Ú\I˜•ˆ›sûKxDôŸ!»…§µV“ÂK%Ä1Å,ûáˆø¬JåÑ¢„Ş~ÓhJ…úü+_‡X€ÂàÌZJ·v£ş×h‘Æ—0±~æác‚Y£Û"¤Q¨`¨€]±ğ7‚ô«øõM/ÂÓµ;vİm¨Øè:U¥ôö¯`ÍÜ±ÜDÍe$–D¤ŠM¤oş¥ÙÓòü•ûîïéØ4ìşût×¿Ÿ_‘åÇö…ğ¨Şâ”‘Q&ÌŞ·™Ñ¥ºkqâÈA5“Ã¸°EšH¡vYK¤5şÛô?şÃµ-æ›m¨ZZhÿ ïê[ét¦IQ¯¡c-¼º>«©¯”«m+’Hd «*“¿¡Ç¯ü ?­|'ÿ ş÷ö©Ü&e?­·v™'eşØÕÙ–å&#"&·e_i…„Mx¼EgÃùê×şDÙ¥í¿û•}¼ûy¦G®w“ÿ ØÓ/ë¿û]-?øŞÔ¼}á¸ –ãMÕ|<òÛC,Ğ:«^¬ql… òu+oHY– %ÚT&Åie¿à…ÚÛøƒÇß´¤ÑYB&ğ·Ã«aoöxI§Š•ß,^y]äV‘ye`ÎV2¬q'â·"&šÏ¤é¿ã›÷²	–ïâ8
+¸.^òhe¶Ì1™‚ƒ3˜¡Íû]ÿ {Ÿ~Ñ“\\ßİI'…~?›©Ş^ß^|ú¯Šä+4÷óÜ]nRäyÆÊ€0kø÷ÁºaÇ¼?RêÅû|Â	×”D¿²±îI¨wiY·{+%cú(Ó\ŸÕŒ,Õ<ªJ2­ó,³QVå“½œ¥Ì’åK•3ú‰½™¿“ëYZØ´]T\›¡lÚf¢.Š$—«¶—Í6‘É±Ér>B<r#Ë±Y§P'oäOõ¬ÍjÚ{½T³µŠ®.´íBÚŞ‰&†	fšŞXâi­Ş9â‰İ•d’dBÍ«…aı¶1/¢|YÑõ«Û+!'Å=%o‰ŠísÁVf›‰îau¼½—Ah¬Ûí,÷¦İM¼ªÈÍ,±ZúƒÏh¨ò7çT\#;OáUUr]B3*œ«€	•p2Tãä¸¾øş+HmNğô‰¯§’í Õ~#Û´—fŸìÓÅãh®n(ÅÁ‚Şycˆ	Í¸G=ÌÇA~
+üG‡QºÕ"Ñ>›©u[ûåİ¨ø+Y¡»²{?ŞØÙOciKTkuŠ{[æm=a‘$×¬èÅ8Ò«VRºJœ’i]s4ïŞ—³ôoCjT£QÙÕ…4š»¨ÔtËºo}.­£nÏO©öŒ"øŞvw±Oáb`ÿ ^Å†´vŸ4’`ïÆ1/,$p‘øîI¤xÕçÂìñ¢´ŠtrK¢º3 ‘YK 'æ™şüFûU›C¥|9kx¤·{“ŸÚ]:]Gk.©s[x“ËßÊËk§´¶Ò<öp¬·ó]M
+äIğ;âDÓÂÒé^>{¤—·‘_øâÖò9MªZË*¸ñŒæi.Ú(ï5-¦&¼‘J¼’Ï;ŞÁ1–!Â”)E½gj’j-Eéî'Î½ëÅ«'d¤õ`ãEJINn+H¾Xjû¿}û»;ï½ÒzX¼Ö±Éã{ˆÀÜÄ¼Ş@ ÁÜwhÃŒ:’z|Ã¦E$sÚÈ¡ãñ½Ä‹–Œ2Oág]êë@Ë£»ÌÄey!ÈCó“ßàGÄ{é¿áønÓ]Ê°	UñëÊğÜZ477Ó8ñmÙÎ]í--ŞV™"·:|¶„Ş[²øãiÒŞÒşÏÁÚ|`åu=OÇ7¿b•…´±Ü¾“'ŠíbÕc²¸ûNËk›øä¸a·wWLÓ›9å(©R[¶š«”ŞÚ'o›ŠVÕ]jO,bÚ›},àá4Ó³Ş3¶ÏkèÕµ·Óí}¦¡(Ş>e`£*×~>Up:@ –6ºÈœ2“(¸³g(¾8œv	ü*\ˆÔÊçhÑòFŒqò ,ß(Íx¼ß³äsÁ,jmÀG‡Ãş1ŠÍrËø»î"·šx.PÂ°ı•6[ˆŞÚÚ·ü3«+İãÄCs§ÛÙ²Ç x½nŒ±i·š[\K¨‰ÿ k>m¾¥¨Æéo%¤Æ;ˆXİ5í¤7¢!,O<ÕHQPIòJ')JWVR‹¥ÕÛjRiè“Ü©*±pW+®xÊœRK«Œ•FÛ]šŠ}Ïv	-|gvÒLF$ğÁs¼°Bh»‰fŠ@ ˜Æà±±ñ¯üÖ/øaÿ Ú{UƒX½ÖEÿ Â«˜bZÒDòl¯Ì±Ğlì®$–I/¦ ’IË¤Klb‘IoVÙ×)C¯è–wMµÕŸ‡¼Q—l‚i7Ç/ÄyØÈd’o³Ü¼¯qlŸdI^ÆŞZñïÛÃJ¾Ğ?`ÚfÃX¼Ñ.mí~jßdÑæğ–²é¿èî—~!Ö1v&W3ê¿Ú13\+5½¹…ç—ËÏ½£áü÷Ú(¯øHÌ­ìÛm¯©W¿Å“í¹èäªÛy7#“¾i—ßš)[ı®­i4úïcø¢»—ÄÂ	-­ôo_ÚIÃ3}£âôvé,
+é<:œ±FÑˆİ’â„¸‘KD.#_Üø 8#Å´fá0sá¯‡Å¼öÔ™:Ç‹ÿ ÈMä»`^¶îÜP#?ˆ· ğÌ–‰õïŠ®­¥Ä+ñ#CÔŞHİşğ´µøƒ|ÒæPîbv‰ã‘§òæŠ3_¸¿ğAK«;ÏşÑ÷|rÇdşøz¶‚{¨/&6ñë,Hš[›k«È¥—‰[í31>÷fËäŸy—ä	ÓœWÖ1¾ó’’“YNc»U$œéF1I$İîè¾9“|ÄÙ¸§OÔõjVÌ°+Y{I.~ê1Šµ›rº·ÿÙ_Nhttp://www.robertlender.info/blog/uploads/Wiki/tiddlywiki.serendipityThumb.jpgZimage/jpegÓOoGIF89a  ‘  fffÿÿÿÿf    !ù     ,       ?„©ká£”MØ‹³Æ¡îv@À]¤p¢Vjz¦º’Îª‰,ıÊ8çÒé¿kJ8 j&¼–¨si›H§†õz(  ;
+_?http://www.robertlender.info/blog/templates/default/img/xml.gifYimage/gifÓÓÓÓÓÓÓOÔ‰PNG
+
+   IHDR         ä…ªÖ   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<  eIDATxÚbüõÿ?8røğáC‡líìllm°€ b j€£}‡…şÿÿïêæöí÷ïïşüü÷Y¦j àää|ıáÃ‡¯_ÚĞ4 ¦êÿ`Gr€'¸¹»Õ U¦j\ÀÙÅåÓ÷ï Ò Ôıïß?üªÿş´ğá³g Äñúë×¯YYYB@ò Ìß¿ıšüÿù³g ÒPQ]-..şèÑ£?ş°±±ıd@¥@#ÔÔÕß¿@ À ß¹w¯œœPÄ$YYY UÈzTÕÔƒ‚€€ ‚:	S·nêyğàPõ¤©Syxx€daª™   @ A9ÌÌÌNÎÎë7mRPPxøğ¡¦––0ˆˆ õ@Ô uõ #<i ]tÏ]»öìŞt®¾¾Pƒ  DĞf ¹  N–1ˆ!8®    IEND®B`‚
+_@http://www.robertlender.info/blog/templates/default/img/back.pngYimage/pngÓOİ‰PNG
+
+   IHDR         ä…ªÖ   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<  nIDATxÚbüõÿ?6päğáÃ‡ÙÚÙÙØÚ"‹PVäæîşlÖîıû¿ÿùóóß?ˆ8@ áÔÀÉÉù€z¶ìØñùÇˆ€ iØwèĞ<NT T÷€ìõ›6Aô Üvü ® € ¶ÿşı¿†ÿşYY[?}õ
+ €X ^ÿüù3333rx0Ğ¬?~ ÉŸ?¾}ó €@€a÷ıûw Ÿ‘‘Yüúõ¨ANN®¶¡áãÇ ÒPQ]ôÈd|üø1Ğ c€ªó544€â Ä‰8 ïß¿şìüñı;P$<$äÎ;@Õ
+
+
+E%%ºzzâ222 Ä·‡‡GRJJPPğÏŸ?@S33 U@Õ--jjj¼||’’’Â"" µ(÷÷ï_ R 	4(rüØ±ChëèÈÉË¹bââ|||  S&>¶ü:İê    IEND®B`‚
+_Chttp://www.robertlender.info/blog/templates/default/img/forward.pngÓÓÓÓÓÓ&'OA‰PNG
+
+   IHDR         (-S   ÕPLTE33f½¥BıĞéØšƒpBÿìŸîÂ¢†0ÿõÌıÜX„ƒ{­¢ŠRNhàÅ_œ‘dÿ×9úæ”lllÿğµÿúä¤¡«ıËÿäv•ŒjFDh‰|^]€õè·€ujÏ·`üÒ,ÿî¬ÿøÜ­¦ÑÀ‰“‡ÿÛLÿèhgˆÿóÄÿıó¤¡«ûÌÿæ„=;gÆ©:çÜµ‹u?ÿí¥õÇ¥‰.ÿöÓÿâkƒƒƒ­¤”WSkçÍjÿÚGmh{ÿñºÿûìüÌ
+ÿåMKo‹†vcb†ûÓ3¡•~ÿê–¡¡¶   ár%½   GtRNSÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ ÇœVo   ÓIDATxœ-‹n‚@EG«ø Ç·îZ±ñ±«Ò‚VÔıÿOrØx’Iæd’¹ J°Do
+hµ„±º•ã[ ›y<XZ4à¹ÒÂ³¨ûîê6ò¸9?6Ã|« “,ûñØ€eaGfà²Gèã? ã<¦üÇêË}À‡IPßpvphÁnì2ñùÕ²ª†•÷÷ºhŞO›iŠXˆá“všGvù)ÎÂğÒK¬t©»DXø¾SÅˆ²jkPY£bËw[ÂîØRêí›,(|`HÆ    IEND®B`‚
+_Jhttp://www.robertlender.info/blog/templates/default/img/emoticons/wink.pngÔ)*+,-_WebResourceTextEncodingNameUUTF-8OW+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD>
+    <TITLE>TiddlyWiki  - Nur ein Blog</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <META name="Powered-By" content="Serendipity v.0.8.1">
+    <LINK rel="stylesheet" type="text/css" href="/blog/serendipity.css.php">
+    <LINK rel="alternate" type="application/rss+xml" title="Nur ein Blog RSS feed" href="http://www.robertlender.info/blog/feeds/index.rss2">
+    <LINK rel="alternate" type="application/x.atom+xml" title="Nur ein Blog Atom feed" href="http://www.robertlender.info/blog/feeds/atom.xml">
+    <LINK rel="pingback" href="http://www.robertlender.info/blog/comment.php?type=pingback&entry_id=104">
+
+
+</HEAD><BODY><DIV id="page">
+<DIV id="header" onclick="location.href='http://www.robertlender.info/blog/';" style="cursor: pointer;">    <DIV id="headerimg">        <H1>TiddlyWiki</H1>
+        <DIV class="description">Nur ein Blog</DIV>
+    </DIV>
+</DIV>
+<HR>
+
+<DIV id="content" class="narrowcolumn">    
+
+    
+
+                    <DIV class="post">            <H2 id="post-104"><A href="/blog/archives/104-TiddlyWiki.html">TiddlyWiki</A></H2>
+            
+                        <SPAN class="categoryIcon">                                                    </SPAN>
+            
+            <DIV class="entrytext">                <P>                <BR>
+</P><DIV align="justify"><A href="/blog/uploads/Wiki/tiddlywiki.jpg"><IMG width="110" hspace="5" height="64" border="0" align="left" src="/blog/uploads/Wiki/tiddlywiki.serendipityThumb.jpg" alt=""></A>Bei all meinen Recherchen rund um Wikis ist mir <A href="http://www.robertlender.info/blog/exit.php?url_id=742&entry_id=104" title="http://tiddlywiki.com/" onmouseover="window.status='http://tiddlywiki.com/';return true;" onmouseout="window.status='';return true;">TiddlyWiki</A> erst jetzt "in die HÃ¤nde gefallen". Die Bedienung ist recht "stylish". Klickt man auf einen Link wird nicht eine neue Seite geladen sondern der Artikel zu den vorhandenen dazu "geschoben". Jeder offene Artikel lÃ¤sst sich auch wieder schliessen. Das ist gewÃ¶hnungsbedÃ¼rftig aber kein uninteressanter Ansatz.</DIV><DIV align="justify">Aber die Ãœberraschung kam als ich begann den Background zu lesen. Das Programm basiert auf HTML, CSS and <SPAN class="tiddlyLinkNonExisting">JavaScript und braucht <B>keinen </B>Server. Richtig gelesen. TiddlyWiki ist eine einzige HMTL-Datei die die "Programmlogik" als auch die Daten selbst beinhaltet. Man kann also in seinem Webspace als auch zu Hause auf seiner Festplatte hunderte TiddlyWikis (aufgrund einer Open Source Lizenz ist das auch rechtlich kein Problem) betreiben. Damit ist TiddlyWiki auch USB-Stick tauglich. Das bringt natÃ¼rlich ganz neue MÃ¶glichkeiten, wie z.B. das Programm als "intelligenten" Notizzettel zu verwenden etc. </SPAN></DIV>
+                                <A id="extended"></A>
+                                <P></P>
+
+                
+            <P class="postmetadata graybox">                <SMALL>                
+                                Dieser Eintrag wurde geschrieben von  <A href="http://www.robertlender.info/blog/authors/1-Robert-Lender">Robert Lender</A> am Mittwoch, 18. Mai 2005 um 20:47.
+                                   und ist abgelegt in <A href="http://www.robertlender.info/blog/categories/11-Wiki">Wiki</A>.
+                                                    Sie kÃ¶nnen einen <A href="#serendipity_CommentForm">Kommentar hinterlassen</A>, oder ein <A href="">Trackback</A> von Ihrem eigenen Blog senden.
+                                    
+                                
+                </SMALL>
+            </P>
+            </DIV>
+        </DIV>
+                
+
+                    
+            
+            
+            
+                            <A id="trackbacks"></A><H3>Trackbacks</H3>
+                    <DIV class="serendipity_center">                        <A style="font-weight: normal" href="http://www.robertlender.info/blog/comment.php?type=trackback&entry_id=104" onclick="alert('Dieser Link ist nicht aktiv. Er enthÃ¤lt die Tracback-URI zu diesem Eintrag. Sie kÃ¶nnen diese URI benutzen um Ping- und Trackbacks von Ihrem eigenen Blog zu diesem Eintrag zu schicken. Um den Link zu kopieren, fÃ¼hren Sie einen Rechtsklick aus und wÃ¤hlen "VerknÃ¼pfung kopieren" im Internet Explorer oder "Linkadresse kopieren" in Mozilla.'); return false;" title="Dieser Link ist nicht aktiv. Er enthÃ¤lt die Tracback-URI zu diesem Eintrag. Sie kÃ¶nnen diese URI benutzen um Ping- und Trackbacks von Ihrem eigenen Blog zu diesem Eintrag zu schicken. Um den Link zu kopieren, fÃ¼hren Sie einen Rechtsklick aus und wÃ¤hlen "VerknÃ¼pfung kopieren" im Internet Explorer oder "Linkadresse kopieren" in Mozilla.">Trackback fÃ¼r spezifische URI dieses Eintrags</A>
+                    </DIV>
+                    <OL class="commentlist">                            <P class="nocomments">Keine Trackbacks</P>
+
+                    </OL>
+        
+                        <A id="comments"></A><H3>Kommentare</H3>
+                <DIV class="serendipity_center">Ansicht der Kommentare: 
+                                    (<A href="/blog/index.php?url=archives/104-TiddlyWiki.html&serendipity[cview]=linear#comments">Linear</A> | Verschachtelt)
+                                </DIV>
+                <BR>
+                <OL class="commentlist">                        <P class="nocomments">Noch keine Kommentare</P>
+
+                </OL>
+
+                                <A id="feedback"></A>
+
+                
+                
+                <BR>
+                <H3>Kommentar schreiben</H3>
+                <DIV class="serendipityCommentForm">    <A id="serendipity_CommentForm"></A>
+    <FORM id="serendipity_comment" action="/blog/index.php?url=archives/104-TiddlyWiki.html#feedback" method="post">    <DIV><INPUT type="hidden" name="serendipity[entry_id]" value="104"></DIV>
+    <TABLE border="0" width="100%" cellpadding="3">        <TBODY><TR><TD class="serendipity_commentsLabel"><LABEL for="serendipity_commentform_name">Name</LABEL></TD><TD class="serendipity_commentsValue"><INPUT type="text" id="serendipity_commentform_name" name="serendipity[name]" value="" size="30"></TD></TR><TR><TD class="serendipity_commentsLabel"><LABEL for="serendipity_commentform_email">Email</LABEL></TD><TD class="serendipity_commentsValue"><INPUT type="text" id="serendipity_commentform_email" name="serendipity[email]" value=""></TD></TR><TR><TD class="serendipity_commentsLabel"><LABEL for="serendipity_commentform_url">Homepage</LABEL></TD><TD class="serendipity_commentsValue"><INPUT type="text" id="serendipity_commentform_url" name="serendipity[url]" value=""></TD></TR><TR><TD class="serendipity_commentsLabel"><LABEL for="serendipity_replyTo">Antwort zu</LABEL></TD><TD class="serendipity_commentsValue"><SELECT id="serendipity_replyTo" name="serendipity[replyTo]"><OPTION value="0">[ Ursprung ]</OPTION></SELECT></TD></TR><TR><TD class="serendipity_commentsLabel"><LABEL for="serendipity_commentform_comment">Kommentar</LABEL></TD><TD class="serendipity_commentsValue">                <TEXTAREA rows="10" cols="40" id="serendipity_commentform_comment" name="serendipity[comment]"></TEXTAREA><BR>
+                <DIV class="serendipity_commentDirection">UmschlieÃŸende Sterne heben ein Wort hervor (*wort*), per _wort_ kann ein Wort unterstrichen werden.</DIV><DIV class="serendipity_commentDirection">Standard-Text Smilies wie :-) und ;-) werden zu Bildern konvertiert.</DIV><DIV class="serendipity_commentDirection">Die angegebene E-Mail Adressse wird nicht dargestellt, sondern nur fÃ¼r evtl. Benachrichtigungen verwendet</DIV><DIV class="serendipity_commentDirection"><A href="http://www.phpbb.com/phpBB/faq.php?mode=bbcode">BBCode</A>-Formatierung erlaubt</DIV>
+            </TD></TR><TR><TD>Â </TD><TD class="serendipity_commentsLabel">                <INPUT id="checkbox_remember" type="checkbox" name="serendipity[remember]"><LABEL for="checkbox_remember">Daten merken? </LABEL>
+                    <BR>
+                <INPUT id="checkbox_subscribe" type="checkbox" name="serendipity[subscribe]"><LABEL for="checkbox_subscribe">Bei Aktualisierung dieser Kommentare benachrichtigen</LABEL>
+                </TD></TR><TR><TD>Â </TD><TD><INPUT type="submit" name="serendipity[submit]" value="Kommentar abschicken"> <INPUT type="submit" name="serendipity[preview]" value="Vorschau"></TD></TR></TBODY></TABLE>
+    </FORM>
+</DIV>
+
+                        
+        
+            
+    <DIV class="navigation" style="text-align: center">    
+    
+    
+    
+    </DIV>
+
+
+</DIV>
+
+    <DIV id="sidebar" valign="top"><UL>        <LI>            <H2>HauptmenÃ¼</H2>            <P><BR>
+<A href="http://www.robertlender.info/blog/exit.php?url=aHR0cDovL3JvYmVydGxlbmRlci5pbmZvL2Jsb2c=" title="http://robertlender.info/blog" onmouseover="window.status='http://robertlender.info/blog';return true;" onmouseout="window.status='';return true;">Startseite</A><BR>
+<A href="http://www.robertlender.info/blog/exit.php?url=aHR0cDovL3JvYmVydGxlbmRlci5pbmZvL2Jsb2cvcGFnZXMvaW1wcmVzc3VtLmh0bWw=" title="http://robertlender.info/blog/pages/impressum.html" onmouseover="window.status='http://robertlender.info/blog/pages/impressum.html';return true;" onmouseout="window.status='';return true;">Impressum</A><BR>
+<A href="http://www.robertlender.info/blog/exit.php?url=aHR0cDovL3JvYmVydGxlbmRlci5pbmZvL2Jsb2cvcGFnZXMvYXJjaGl2ZXMuaHRtbA==" title="http://robertlender.info/blog/pages/archives.html" onmouseover="window.status='http://robertlender.info/blog/pages/archives.html';return true;" onmouseout="window.status='';return true;">Archivsuche</A><BR>
+<A href="http://www.robertlender.info/blog/exit.php?url=aHR0cDovL3JvYmVydGxlbmRlci5pbmZvL2Jsb2cvcGFnZXMvaGlsZmUuaHRtbA==" title="http://robertlender.info/blog/pages/hilfe.html" onmouseover="window.status='http://robertlender.info/blog/pages/hilfe.html';return true;" onmouseout="window.status='';return true;">Hilfe</A><BR>
+<A href="http://www.robertlender.info/blog/exit.php?url=aHR0cDovL3d3dy5yb2JlcnRsZW5kZXIuaW5mby9ibG9nL3BhZ2VzL2NvbnRhY3Rmb3JtLmh0bWw=" title="http://www.robertlender.info/blog/pages/contactform.html" onmouseover="window.status='http://www.robertlender.info/blog/pages/contactform.html';return true;" onmouseout="window.status='';return true;">Kontakt</A></P>
+    </LI>
+        <LI>            <H2>Kategorien</H2>            <P></P><DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/5-Allerlei.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/5-Allerlei" title="Allerlei" style="padding-left: 0px">Allerlei</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/8-Blogging.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/8-Blogging" title="Blogging" style="padding-left: 0px">Blogging</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/4-Heinz-Conrads.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/4-Heinz-Conrads" title="Heinz Conrads" style="padding-left: 0px">Heinz Conrads</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/6-Intern.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/6-Intern" title="Intern" style="padding-left: 0px">Intern</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/10-Mobiler-Alltag.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/10-Mobiler-Alltag" title="Mobiler Alltag" style="padding-left: 0px">Mobiler Alltag</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/7-Retro.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/7-Retro" title="Retro" style="padding-left: 0px">Retro</A></DIV>
+<DIV style="padding-bottom: 2px;"><A href="http://www.robertlender.info/blog/feeds/categories/11-Wiki.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A> <A href="/blog/categories/11-Wiki" title="Wiki" style="padding-left: 0px">Wiki</A></DIV>
+<BR><A href="/blog/index.php" title="Alle Kategorien">Alle Kategorien</A><P></P>
+    </LI>
+        <LI>            <H2>Kalender</H2>            <P><TABLE style="width: 100%" cellspacing="0" cellpadding="0" class="serendipity_calendar">    <TBODY><TR><TD class="serendipity_calendarHeader">            <A title="ZurÃ¼ck" href="http://www.robertlender.info/blog/archives/2005/04.html"><IMG alt="ZurÃ¼ck" src="/blog/templates/default/img/back.png" style="border: 0px"></A>
+        </TD><TD colspan="5" class="serendipity_calendarHeader" style="text-align: center; vertical-align: bottom">            <B><A style="white-space: nowrap" href="http://www.robertlender.info/blog/archives/2005/05.html">Mai '05</A></B>
+        </TD><TD class="serendipity_calendarHeader" style="text-align: right">            <A title="VorwÃ¤rts" href="http://www.robertlender.info/blog/archives/2005/06.html"><IMG alt="VorwÃ¤rts" src="/blog/templates/default/img/forward.png" style="border: 0px"></A>
+        </TD></TR><TR><TD scope="col" abbr="Montag" title="Montag" class="serendipity_weekDayName" align="center">Mon</TD><TD scope="col" abbr="Dienstag" title="Dienstag" class="serendipity_weekDayName" align="center">Die</TD><TD scope="col" abbr="Mittwoch" title="Mittwoch" class="serendipity_weekDayName" align="center">Mit</TD><TD scope="col" abbr="Donnerstag" title="Donnerstag" class="serendipity_weekDayName" align="center">Don</TD><TD scope="col" abbr="Freitag" title="Freitag" class="serendipity_weekDayName" align="center">Fre</TD><TD scope="col" abbr="Samstag" title="Samstag" class="serendipity_weekDayName" align="center">Sam</TD><TD scope="col" abbr="Sonntag" title="Sonntag" class="serendipity_weekDayName" align="center">Son</TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstRow FirstInRow">Â </TD><TD class="serendipity_calendarDay FirstRow">Â </TD><TD class="serendipity_calendarDay FirstRow">Â </TD><TD class="serendipity_calendarDay FirstRow">Â </TD><TD class="serendipity_calendarDay FirstRow">Â </TD><TD class="serendipity_calendarDay FirstRow">Â </TD><TD class="serendipity_calendarDay FirstRow LastInRow">1</TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstInRow">2</TD><TD class="serendipity_calendarDay ">3</TD><TD class="serendipity_calendarDay ">4</TD><TD class="serendipity_calendarDay ">5</TD><TD class="serendipity_calendarDay ">6</TD><TD class="serendipity_calendarDay ">7</TD><TD class="serendipity_calendarDay LastInRow Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/08.html">8</A></TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstInRow Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/09.html">9</A></TD><TD class="serendipity_calendarDay ">10</TD><TD class="serendipity_calendarDay Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/11.html">11</A></TD><TD class="serendipity_calendarDay Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/12.html">12</A></TD><TD class="serendipity_calendarDay Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/13.html">13</A></TD><TD class="serendipity_calendarDay Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/14.html">14</A></TD><TD class="serendipity_calendarDay LastInRow Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/15.html">15</A></TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstInRow Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/16.html">16</A></TD><TD class="serendipity_calendarDay Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/17.html">17</A></TD><TD class="serendipity_calendarDay Today Active Link"><A href="http://www.robertlender.info/blog/archives/2005/05/18.html">18</A></TD><TD class="serendipity_calendarDay ">19</TD><TD class="serendipity_calendarDay ">20</TD><TD class="serendipity_calendarDay ">21</TD><TD class="serendipity_calendarDay LastInRow">22</TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstInRow">23</TD><TD class="serendipity_calendarDay ">24</TD><TD class="serendipity_calendarDay ">25</TD><TD class="serendipity_calendarDay ">26</TD><TD class="serendipity_calendarDay ">27</TD><TD class="serendipity_calendarDay ">28</TD><TD class="serendipity_calendarDay LastInRow">29</TD></TR><TR class="serendipity_calendar"><TD class="serendipity_calendarDay FirstInRow LastRow">30</TD><TD class="serendipity_calendarDay LastRow">31</TD><TD class="serendipity_calendarDay LastRow">Â </TD><TD class="serendipity_calendarDay LastRow">Â </TD><TD class="serendipity_calendarDay LastRow">Â </TD><TD class="serendipity_calendarDay LastRow">Â </TD><TD class="serendipity_calendarDay LastInRow LastRow">Â </TD></TR></TBODY></TABLE></P>
+    </LI>
+        <LI>            <H2>Suche</H2>            <P></P><FORM id="searchform" action="/blog/index.php" method="get">    <DIV>        <INPUT type="hidden" name="serendipity[action]" value="search">
+        <INPUT alt="Suche" type="text" id="serendipityQuickSearchTermField" name="serendipity[searchTerm]" size="13">
+    </DIV>
+    <DIV id="LSResult" style="display: none;"><DIV id="LSShadow"></DIV></DIV>
+</FORM>
+<P></P>
+    </LI>
+        <LI>            <H2>Archive</H2>            <P><A href="/blog/archives/2005/05.html" title="Mai 2005">Mai 2005</A><BR>
+<A href="/blog/archives/2005/04.html" title="April 2005">April 2005</A><BR>
+<A href="/blog/archives/2005/03.html" title="MÃ¤rz 2005">MÃ¤rz 2005</A><BR>
+<A href="/blog/">Das neueste...</A><BR>
+<A href="http://www.robertlender.info/blog/archive">Ã„lteres...</A>
+</P>
+    </LI>
+        <LI>            <H2>Blog abonnieren</H2>            <P>        </P><DIV style="padding-bottom: 2px;">            <A href="/blog/feeds/index.rss"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A>
+            <A href="/blog/feeds/index.rss">RSS 0.91 feed</A>
+        </DIV>
+        <DIV style="padding-bottom: 2px;">            <A href="/blog/feeds/index.rss1"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A>
+            <A href="/blog/feeds/index.rss1">RSS 1.0 feed</A>
+        </DIV>
+        <DIV style="padding-bottom: 2px;">            <A href="/blog/feeds/index.rss2"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A>
+            <A href="/blog/feeds/index.rss2">RSS 2.0 feed</A>
+        </DIV>
+        <DIV style="padding-bottom: 2px;">            <A href="/blog/feeds/atom.xml"><IMG src="/blog/templates/default/img/xml.gif" alt="ATOM/XML" style="border: 0px"></A>
+            <A href="/blog/feeds/atom.xml">ATOM 0.3 feed</A>
+        </DIV>
+        <DIV style="padding-bottom: 2px;">            <A href="/blog/feeds/comments.rss2"><IMG src="/blog/templates/default/img/xml.gif" alt="XML" style="border: 0px"></A>
+            <A href="/blog/feeds/comments.rss2"><NOBR>RSS 2.0 Kommentare</NOBR></A>
+        </DIV>
+<P></P>
+    </LI>
+        <LI>            <H2>Powered by</H2>            <P></P><DIV class="serendipityPlug">    <DIV>        <A title="Powered by Serendipity" href="http://www.s9y.org/">Serendipity PHP Weblog</A>
+    </DIV>
+</DIV>
+<P></P>
+    </LI>
+        <LI>            <H2>Links im Artikel</H2>            <P></P><UL style="margin: 5px; padding: 10px; text-align: left"><LI><A href="http://www.robertlender.info/blog/exit.php?url_id=742&entry_id=104" title="http://tiddlywiki.com/" onmouseover="window.status='http://tiddlywiki.com/';return true;" onmouseout="window.status='';return true;">TiddlyWiki</A><BR><DIV style="text-align: right; margin: 0px">[3]</DIV></LI><LI><A href="http://www.robertlender.info/blog/exit.php?url_id=741&entry_id=104" title="http://www.robertlender.info/blog/uploads/Wiki/tiddlywiki.jpg" onmouseover="window.status='http://www.robertlender.info/blog/uploads/Wiki/tiddlywiki.jpg';return true;" onmouseout="window.status='';return true;"></A></LI></UL><P></P>
+    </LI>
+        <LI>            <H2>Kommentare</H2>            <P></P><DIV style="margin: 0px; padding: 0px; text-align: left;">Robert Lender zu <A class="highlight" href="http://www.robertlender.info/blog/archives/101-Oracles-Fool.html#c27" title="OracleÂ´s Fool">OracleÂ´s Fool</A><BR>
+Mit, 18.05.2005 22:33<BR>
+Ãœber die Datenbank habe ich<BR>
+keine Ahnung. Aber interessant<BR>
+welche Assoziation so ein Name<BR>
+auslÃ¶st [...]<BR><BR><BR>
+
+DreaMer zu <A class="highlight" href="http://www.robertlender.info/blog/archives/101-Oracles-Fool.html#c26" title="OracleÂ´s Fool">OracleÂ´s Fool</A><BR>
+Mit, 18.05.2005 22:08<BR>
+Und ich dachte schon, du<BR>
+meinst die Datenbank Oracle<BR>
+<IMG src="/blog/templates/default/img/emoticons/wink.png" alt=";-)" style="display: inline; vertical-align: bottom;" class="emoticon"><BR>
+<BR>
+Prog-Metal liegt auch auf<BR>
+meiner [...]<BR><BR><BR>
+
+Olli zu <A class="highlight" href="http://www.robertlender.info/blog/archives/95-Perun-hatte-so-einen.html#c23" title="Perun hatte so einen">Perun hatte so einen</A><BR>
+Mon, 16.05.2005 20:28<BR>
+Ich habe noch meinen alten<BR>
+[url=http://cbmmuseum.kuto.de/<BR>
+cbm_c128.html]C128D[/url]<BR>
+(immer noch voll [...]<BR><BR><BR>
+
+</DIV>
+<P></P>
+    </LI>
+        <LI>            <H2>Verwaltung des Blog</H2>            <P><A href="/blog/admin" title="Login zum Blog">Login zum Blog</A></P>
+    </LI>
+</UL></DIV>
+
+<HR>
+<DIV id="footer">    <P>    Dieses Weblog wird betrieben mit  <A href="http://www.s9y.org">Serendipity 0.8.1</A>.<BR>
+    Design is <A href="http://binarybonsai.com/kubrick/">Kubrick</A>, by Michael Heilemann, ported by <A href="http://blog.dreamcoder.dk">Tom Sommer</A>.
+    </P>
+</DIV>
+
+</DIV>
+
+
+</BODY></HTML>_>http://www.robertlender.info/blog/archives/104-TiddlyWiki.htmlYtext/html    1 E L ^ m ƒ'D'|'…'ŒB”BåBğB÷CiC«CµC¼CÃCÊCÑCØCßCæE¾FFFGóH9H@HGHNHUH\HcJ¨JõJşKK"¢Q¢’             .              ¢œ

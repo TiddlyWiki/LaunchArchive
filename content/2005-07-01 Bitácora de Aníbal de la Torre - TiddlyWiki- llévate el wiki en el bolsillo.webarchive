@@ -1,0 +1,1073 @@
+bplist00ÒP_WebSubresources_WebMainResource¯"%(+.147:=ADGJMÓ	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO\/* Designed by François PLANQUE http://fplanque.net/ */
+
+@import url(../../rsc/basic.css);	/* Import basic styles */
+@import url(../../rsc/forms.css);	/* Import default form styles */
+@import url(../../rsc/comments.css);	/* Import default comment styles */
+
+div.main {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+/* Styles for main area (left) */
+h2 {
+	margin-left: 8px;
+}
+
+/* Styles for posts */
+.bPosts {
+	vertical-align: top;
+	float: left;
+	width: 66%;
+	overflow: hidden;
+}
+.bPost, .bPostpublished
+{
+	clear: both;
+	margin-right: 10px;
+	margin-left: 20px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border: 1px dashed #000000;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.bPostSide
+{
+	margin-bottom: 8px;
+}
+.bSmallHead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #339999;
+}
+.bTitle {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.bText {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.bMore
+{
+	text-align: center;
+}
+.bMore a
+{
+	font-weight: bold;
+	font-size: 110%;
+}
+.bSmallPrint
+{
+	clear: both;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/* Styles for comments */
+div.bComment {
+	border-color: #990000; /* override */
+}
+
+/* Styles for comment form */
+input.bComment, 
+textarea.bComment
+{
+	background-color: #f0f0f0;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: .5ex;
+	width: 98%;
+	margin: 0ex;
+}
+select.bComment
+{
+	background-color: #f0f0f0;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: .5ex;
+	width: 100%;
+	margin: 0ex;
+}
+
+
+/* Styles for stats */
+div.statbloc
+{
+	float: left;
+	width: 44%;
+	margin-left: 2%; 
+	margin-right: 0%; 
+	margin-bottom: 2ex;
+	border: 1px solid #33BBBB;
+}
+div.statbloc h3
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	color: #FFFFFF;
+	text-align: center;
+	background: #33BBBB;
+	padding: 1ex;
+}
+
+
+/* Styles for sidebar (right) */
+.bSideBar {
+	width: 33%;
+	vertical-align: top;
+	float: right;
+	overflow: hidden;
+}
+.bSideItem {
+	margin-right: 20px;
+	margin-left: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border: 1px dashed #CCCCCC;
+	padding: 8px;
+}
+.bSideItem h3 {
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+.bSideItem ul {
+	margin-left: 8px;
+	padding-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.bSideItem ul ul{
+	margin-left: 8px;
+	padding-left: 8px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.bSideItem form {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.dimmed
+{
+	color: #aaa;
+	font-size: 84%;
+}
+input.SearchField
+{
+	background-color: #f0f0f0;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: .5ex;
+	width: 96%;
+	margin: 0ex;
+}
+
+/* Styles for Calendar: */
+caption.bCalendarCaption
+{
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	margin: auto;
+	white-space: nowrap;
+}
+table.bCalendarTable
+{
+	margin: auto;
+	font-size: 84%;
+	border: solid 1px #ccc;
+}
+tr.bCalendarRow
+{
+	text-align: center;
+}
+th.bCalendarHeaderCell
+{
+	font-size: 84%;
+}
+td.bCalendarCell
+{
+}
+td.bCalendarEmptyCell
+{
+}
+.bCalendarLinkPost
+{
+	font-weight: bold;
+}
+#bCalendarToday
+{
+	background-color: #DEF;
+}
+
+_+http://www.adelat.org/skins/anibal/blog.cssXtext/cssÓ
+Oë/* Designed by François PLANQUE http://fplanque.net/ */
+
+@import url(../../rsc/img.css);	/* Import standard image styles */
+@import url(../../rsc/blog_elements.css);	/* Import standard blog elements styles */
+
+body {
+	font-family: Trebuchet MS,Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	margin: 8px;
+	color: #000000;
+/*	font-size: 84%; 	poussé vers l'extérieur pour éviter des combinaisons en trop grand nombre */
+}
+div.main {
+	margin: 8px;
+	font-family: Trebuchet MS,Verdana, Arial, Helvetica, sans-serif;
+	font-size: 84%;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+A 			{
+}
+A:link		{
+	color: #3366CC;
+}
+A:visited	{
+	color: #3366CC;
+}
+A:active	{
+	color: #3366CC;
+}
+A:hover		{
+	color: #3399CC;
+}
+h1 {
+	color: #009999;
+	font-size: 225%;
+}
+h2 {
+	color: #009999;
+	font-size: 120%;
+}
+h3 {
+	font-size: 150%;
+	color: #990000;
+
+}
+h4 {
+	font-size: 110%;
+	margin-bottom: 0ex;
+}
+table.wide {
+	width: 100%;
+	clear: both;
+}
+td.cartouche {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 84%;
+	color: #009999;
+	background-color: #FFFFFF;
+	padding: 1px 4px;
+	border: 1px solid #990000;
+}
+table.thin
+{
+	border: 1px solid #990000;
+	margin: auto;
+	border-collapse: collapse
+}
+table.thin td
+{
+	border-bottom: 1px solid #990000;
+	padding: .3ex 1ex;
+}
+table.thin th
+{
+	color: #FFFFFF;
+	background-color: #990000;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	padding: .3ex 1ex;
+}
+
+table.invisible
+{
+	margin: 1ex;
+	border-collapse: collapse
+}
+table.invisible td
+{
+	padding: 0ex 1ex;
+}
+td.right
+{
+	text-align: right;
+}
+p.baseline {
+	font-size: 65%;
+	color: #009999;
+	text-align: center;
+	margin-top: 8px;
+}
+hr {
+	height: 0px;
+	width: 50%;
+	border-top: 1px solid #990000;
+	border-right: 1px none #990000;
+	border-bottom: 1px none #990000;
+	border-left: 1px none #990000;
+
+}
+dt {
+	font-weight: bold;
+	color: #009999;
+}
+blockquote {
+	border: 2px dotted #990000;
+	padding: 12px 16px;
+	background-color: #DDEEEE;
+	margin: 10px;
+}
+.center
+{
+	text-align: center;
+}
+
+.FigZone {
+	text-align: center;
+	margin: 8px;
+}
+
+.FigCent240 {
+	width: 240px;
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 12px;
+	margin: 0ex auto;
+	border: 1px solid #FFFFFF;
+	text-align: center;
+}
+.FigCent320 {
+	width: 320px;
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 12px;
+	margin: 0ex auto;
+	border: 1px solid #FFFFFF;
+	text-align: center;
+}
+.FigZone img{
+	border: none;
+	margin-bottom: 8px;
+}
+.FigZone a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.FigZone a:link{
+	color: #FFFFFF;
+}
+.FigZone a:visited{
+	color: #FFFFFF;
+}
+.FigZone a:active{
+	color: #FFFFFF;
+}
+acronym {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #000000;
+	cursor: help;
+}
+abbr {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #000000;
+	cursor: help;
+}
+del {
+	color: #999999;
+}
+ins {
+	color: #009999;
+	text-decoration: none;
+}
+
+_,http://www.adelat.org/skins/anibal/basic.cssÓ
+O1/* Designed by François PLANQUE http://fplanque.net/ */
+
+body {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+div.pageHeader {
+	background-color: #ffffff;
+	width: 100%;
+}
+div.pageHeaderContent {
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 84%;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	/* border: 1px solid #990000; */
+
+}
+div.pageTitle {
+	white-space: nowrap;
+	padding-left: 0px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	background-color: #ffffff;
+	margin-top: 3px;
+	float: left;
+	width: 75ex;
+}
+h1#pageTitle {
+	font-family: Trebuchet MS,Verdana, Arial, Helvetica, sans-serif;
+	color: #990000;
+	font-size: 220%;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+div#Logo {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 270%;
+	font-weight: bold;
+	vertical-align: bottom;
+	margin-top: 3px;
+	margin-right: 3px;
+	padding-left: .6ex;
+	padding-top: 8px;
+	padding-right: .6ex;
+	padding-bottom: 8px;
+	float: left;
+	background-image:   url("img/maria.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 238px;
+}
+
+div.NavBar {
+	clear: both;
+	height: 1ex;
+}
+.pageHeaderEnd {
+	clear: both;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	height: 5px;
+	font-size: 0ex;
+}
+a.NavButton {
+	text-decoration: none;
+	background-color: #33AAAA;
+	border: 1px solid #FFFFFF;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-right: 3px;
+	margin-top: 3px;
+	display: block;
+	width: 14ex;
+	float: left;
+}
+a.NavButtonCurr {
+	text-decoration: none;
+	background-color: #990000;
+	border: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-top: 3px;
+	margin-right: 3px;
+	display: block;
+	width: 14ex;
+	float: left;
+}
+a.NavButton2 {
+	text-decoration: none;
+	background-color: #33BBBB;
+	border: 1px solid #FFFFFF;
+	vertical-align: middle;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-top: 3px;
+	margin-right: 3px;
+	display: block;
+	width: 14ex;
+	float: left;
+}
+a.NavButton2Curr {
+	text-decoration: none;
+	background-color: #990000;
+	border: 1px solid #FFFFFF;
+	vertical-align: middle;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-top: 3px;
+	margin-right: 3px;
+	display: block;
+	width: 14ex;
+	float: left;
+}
+
+A.NavButton:link		{
+	color: #FFFFFF;
+}
+A.NavButton:visited	{
+	color: #FFFFFF;
+}
+A.NavButton:active	{
+	color: #FFFFFF;
+}
+A.NavButton:hover		{
+	color: #FFFFFF;
+	background-color: #990000;
+	/* text-decoration: underline; */
+}
+A.NavButtonCurr:link		{
+	color: #FFFFFF;
+}
+A.NavButtonCurr:visited	{
+	color: #FFFFFF;
+}
+A.NavButtonCurr:active	{
+	color: #FFFFFF;
+}
+A.NavButtonCurr:hover		{
+	color: #338888;
+	/* text-decoration: underline; */
+}
+A.NavButton2:link		{
+	color: #FFFFFF;
+}
+A.NavButton2:visited	{
+	color: #FFFFFF;
+}
+A.NavButton2:active	{
+	color: #FFFFFF;
+}
+A.NavButton2:hover		{
+	color: #FFFFFF;
+	background-color: #990000;
+	/* text-decoration: underline; */
+}
+A.NavButton2Curr:link		{
+	color: #FFFFFF;
+}
+A.NavButton2Curr:visited	{
+	color: #FFFFFF;
+}
+A.NavButton2Curr:active	{
+	color: #FFFFFF;
+}
+A.NavButton2Curr:hover		{
+	color: #33AAAA;
+	/* text-decoration: underline; */
+}
+.pageSubTitle {
+	font-size: 109%;
+	color: #009999;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 4px;
+	text-align: center;
+	vertical-align: middle;
+	border: 0px;
+	padding-right: 6px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+}
+div.stats{
+	float: right;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 0px;
+}
+
+_,http://www.adelat.org/skins/anibal/fpnav.cssÓOÿØÿà JFIF  H H  ÿÛ C 	!"$"$ÿÛ CÿÀ  1 –" ÿÄ              ÿÄ 9       !12AQa‘"q#R36CS±$%BrÁÿÄ              ÿÄ "          !1Aa"QÿÚ   ? q”qÖ´&ÜãÆï¸‘úÖÄÕ”°¢:â¸í_/q$¯á}ÁŸø¤šãZ®µ“¥8|™Ü#Ş¢;İu>õ¶ÔÖœî¨O­ZúúÍÅiô:®a
++«èıoÆÖ$9…x‚k<nÓ:ºirki8*åÛƒ(GPÅrû¯h‘Á“ÓSµnâ*ÙÇ×0°:f­ÉA¥Ğßá…ğ—SŸ­n5tŠ´qSïIuËt¦$´ê±Ÿ:ß—¸÷ë{”òÈL”7ƒÔæ¯@Ü?~†Ú°^O½}bûÃÉäûÒw}ÜÔ	)jZÈZĞ0|i³º—&Ï'UïG3±Ğ:_"%XíSïXÕ¨a¤àºŸzP­û©9Ç€ZÔ¥(àõ¬wÊ¸µ$¶¾Ñµ©W#O04¡ÁN¡†®§Ş…jiêê}éB·n5Õ¦§ğ`œ‘ÈşµæNäÜ¥¼S:á$ g§,t¡¾ûÇûÉ÷£ï/ï'Ş“V÷ğãN:„º¦Ûï¨IúÖËZêô«J®¡gáÒçfNyæc&„8bÿ íS­eyŒò°‡OÖ”·Qÿ …á./­\vË[J¸J-K-…`ŸVWyx#BÒÂÓ‘EFéùBL8œŠ+jyFvwå-0œ(V+›ù}ºBb2£Jqµ)Jâ õ¦sS©bŞç^Jwí1!•Ş_ù¬W£Eši¹·+Î©à|ä%ÃÌVÎ{×·mí¼IBÏ‡ ©5YÛç¿Sş*oK»Ö ŒãºÓ¿2kÍ‹èÒ‹PÔ–->Õ}OÄò“U}ÊvEÃZ.rT¥ğ¥?¨ª¦Å^Ùh0éZ]'Î®óVÛ;¶ßm€0”óóáåNr‰é"Ï¥mÊøK•ÆJæÿ d>TŸ*ØÜT0Ú,HŒáqÂxF23UEj5¦œeÅ8]8å×Xuãkj.ŸmÄ”­1Ò=G:?Ò5¬VfêÈ_x²‡#¶?.UR¿[^µ]]‚á$¡XIüÃÀÕ‡sV¦ï±“…&3d{Tóv¶õL{Uäcğ@DÃÿ _e¨]mÍß1rñOáÎÏò
+’Ü&¾%vÛ£c"[)
+#óF¢5¥Ïí;ãÎ şg±ä‘Vİ+ï—ŠÁKƒ$è}Ü†œÒNØ4T¿ë¦«Ú4|¼]É]ŸbÙ>g­l[®‰p_J•–_âcÆ}ÖqÕbÒÑí'“¼§=<*ß£úDXaÈ“¦®Ò›˜¶Ûk„­±Ñy>5¿?ºÉÿ •óI#ßşˆÿ 5%¤İ·1·Î½smn2‰ ğ'ÄàP€­[ì_íK¹Ü¤Ícğ’{ÎAW-¬9véRcJZ[mÄ‚ßæçPºæÓĞÕâÅûq %	ş—¡|ÙSö Frê*Ğ_Ğ1‘ÛŞU™)x ‘Eoh¸¡ä1‘E{4óñF)zN^ø~|C#°ï„'îD0Ó9KdğàyÓM5óe&ª7!kÅN4}+zn}"Ô¤£è“Û¬·{MÁ£°{FóŒUânĞ®¦âĞ[O••dväíä €Ê}ª¯yÚx¯•),§?JÄí$vÚ……ÍY¨]Ç,´¼üÎ!°¯Öµ¥±w½İMÉÄ ãšF:S­©Jáü|ªÓ¦v½†p§YúUU´Ùm‹ì]ŒÍT#)†”àN¥¬¯Ş«º™ëÕÁqÕ9JœuúÓ¢½½€[ÇbŸjªêM°Œâ	mú
+»µ–jb‘z‘q¼JCÒZH@@á®z~Â×¡_ñöÓ•Â”øšìp6¡?óGÀÏ•]m;g”%+l:áU¬½&Ô… éK‰ù‹
+çéRº}«í…!ôğ¬(Sƒû½·ğc±OµD\6Ò*—”´=©v²]¢*±(ö+“SS)¶ÕÚ¥|`ãÆ²ëyºÈD‹‹xRÂ001MÄ´Š“•4=ª7Ví{Æ!–F}i`vGÁP²‹£vÙVøíe©XãÈçÊ¤Yµ^Å‰VÇúu¹Ú\óL†—ÚÖ¢ XúŠ¹ÅÛø=˜âe>ÔÆÖL6¤(v+uşÖ‡e®6][kI®Ÿ´é±Ö¨ëd!·V wA·öñıûT…³HÅ„°¦Û J¼md˜:Ë¾dµ)ô¢¤b5Ù6”W£„eo,ØWJÄ;ÔQK{5‰Şé¢Š„#WüZİQU^‰œÖ¤Îé¢Š³kEïš’EP…«”QK o¥c•İ¢ŠŸBbc»[Mwh¢„F{¢Š)!ôQE¢¬ÿÙ_(http://www.adelat.org/media/image073.jpgZimage/jpegÓOzGIF89a 	 ³	    ÿÿÿ¸¸¸÷÷÷ııığğğéééÜÜÜóóóÿÿÿ                  !ù  	 ,     	  '0%@©¼„mñÜCåDYã ŠH!·caÜ‚{‡àç£ŠH ;_8http://www.adelat.org/skins/anibal/img/icon_minipost.gifYimage/gifÓOrGIF89a  ÷       @  €  ÿ     @  €  ÿ @  @@ @€ @ÿ `  `@ `€ `ÿ €  €@ €€ €ÿ     @  €  ÿ À  À@ À€ Àÿ ÿ  ÿ@ ÿ€ ÿÿ     @  €  ÿ     @  €  ÿ @  @@ @€ @ÿ `  `@ `€ `ÿ €  €@ €€ €ÿ     @  €  ÿ À  À@ À€ Àÿ ÿ  ÿ@ ÿ€ ÿÿ@  @ @@ €@ ÿ@  @ @@ €@ ÿ@@ @@@@@€@@ÿ@` @`@@`€@`ÿ@€ @€@@€€@€ÿ@  @ @@ €@ ÿ@À @À@@À€@Àÿ@ÿ @ÿ@@ÿ€@ÿÿ`  ` @` €` ÿ`  ` @` €` ÿ`@ `@@`@€`@ÿ`` ``@``€``ÿ`€ `€@`€€`€ÿ`  ` @` €` ÿ`À `À@`À€`Àÿ`ÿ `ÿ@`ÿ€`ÿÿ€  € @€ €€ ÿ€  € @€ €€ ÿ€@ €@@€@€€@ÿ€` €`@€`€€`ÿ€€ €€@€€€€€ÿ€  € @€ €€ ÿ€À €À@€À€€Àÿ€ÿ €ÿ@€ÿ€€ÿÿ     @  €  ÿ     @  €  ÿ @  @@ @€ @ÿ `  `@ `€ `ÿ €  €@ €€ €ÿ     @  €  ÿ À  À@ À€ Àÿ ÿ  ÿ@ ÿ€ ÿÿÀ  À @À €À ÿÀ  À @À €À ÿÀ@ À@@À@€À@ÿÀ` À`@À`€À`ÿÀ€ À€@À€€À€ÿÀ  À @À €À ÿÀÀ ÀÀ@ÀÀ€ÀÀÿÀÿ Àÿ@Àÿ€Àÿÿÿ  ÿ @ÿ €ÿ ÿÿ  ÿ @ÿ €ÿ ÿÿ@ ÿ@@ÿ@€ÿ@ÿÿ` ÿ`@ÿ`€ÿ`ÿÿ€ ÿ€@ÿ€€ÿ€ÿÿ  ÿ @ÿ €ÿ ÿÿÀ ÿÀ@ÿÀ€ÿÀÿÿÿ ÿÿ@ÿÿ€ÿÿÿ!ù  ã ,       O Ç	Hp\‰Û
+Dø¯„Âƒ·ı{ã C†JÄXqàÅo(v4¸Q`Ä6,i²¡Ã•-"´1¦E‰YzÄ™ráDˆ#=TX0  ;_5http://www.adelat.org/skins/anibal/img/chain_link.gifÓ_(http://www.adelat.org/img/chain_link.gifÓÓ !O+GIF89a  €  ÿÿÿÿÿÿ!ù
+  ,       L ;_#http://www.adelat.org/img/blank.gifÓ#$OAGIF89a2 2 æ  ¹
+2]Š±sØ*?n¶]¹s ÌÌ œE¢¾NŠ?`6ÎÉ×[lmm#]ˆ—Å³ #-NÃÁ½vIsÓÖ…œL¾4J#¿®Şr[†¼¤¶ÕĞb‘–~”†SLmrºT`¾˜x?÷ÍÚ #ô¶¾GhN;uu‘s™x˜!%5Å±W_Mq‡jrõ»ÕGNS¸\&rk\Á‘ÙÖÖ?f™µ½Œ™•®šğ£¹€JUÀ¾ÿÿÿ~ Özm™MVˆR1K)4¹“\Dq&‡’tymKzŸ¹˜”ÔO»ØÊ¶“i§ö÷‡s3ÚÕù~?OY2)¡yÓ›>mLTkœŠÀÆr†şÿ°É³5Æ¬òTzštËano6I5 ¤¨Åò6˜_«>8MçØ»w½œ|R™»¾âô[È¼Œt!–~Ç|ØYrVjqÌj…péáûz“¡u»3^ñëµ333ÒÕ)7Kl>vU™™fõ—¶}zÁM.7XrLÖÏòEnr?8v¼!ù ÿ ,    2 2  ÿ€YkiiY‰(‹‹Y[!‘!86S6[¤¥¤¨7cB&557³77D968¼!2M8H•6)CC.¤—³³[)v2_[<<C[cßc7by__.!%
+“?N?vTlóL|öól|V|ó;WÆÔ¸Ò@Á @®Yx¤ƒŒ. ñS¢Œ)N€(HÅ+R°`yòdäŒ`ĞaÂ|0!äÂ…+°r^q‚dZd˜hÃ•	)R,˜‘D¤›n2xyªe™	>]C,mˆ…õÁI„>»j¡ J:tÿp¥˜ArÆÑ-$$ybDÊJ%eNxÚš!C’§[²|øpåCzli¡ ò—¢‡`ø‘0`ÀŒ?üùãÃ3¸Xü’BYÜÔñ’$Z8Öù  ¶–éH±Â¤E“&¸„é#`áèsÃLU2ApÌ×R½Ôi‘¡‡â?ZppñE‹–Ê gĞ°%Gƒ¹íş‰râOrüB¥Œ
+(àtEIô`Xu´aˆ6”BqT¦@„}¡4 †0ÔÃoü€†\a@ÅQÜ°Æb}ĞC†HÁb2„ Áœ'6Å¡EDøÇnx‘H~á…ÿ40TØñÅ'50pÅàe[kĞHŞ\±é‘÷…+˜‘ÊùPO˜ÁÂPÚAÀTÉÀ2-ÖØb¸à_H¡ G•c@Ğ„]x ¦\øV4!ÀÑ´Ñ‹°ˆeê•ä Ã
+)¸°BpˆAÀ8˜G\4é‡3¸àD=ôáAùÀÆ‘á ‹}.èÀğC|ñp„à)Œ E °‘‚øá„`Fb0Qpdàbm!Sm,C\âÂ2t‘B	#hàƒ ÿ
+:ƒ»vD€E*ƒ]hPÏÿ,P‡‚òÉ( Jiœ3M„Àx@@%Š¦)hkÄMø1¬=³X‘Á¡Pp
+À`ÂY ÀG¤1Äk€C,ìC—h€)O`úƒ°3dìƒÜ0„	1®ÑCPD& ÀF Q!üpÂØ°ÀLìÃ‡»- ƒ*x°lA-ö¶‚Bak´‘&q÷Hl )èpÀaÏë>°kã09DAc€.aY˜=¤qÁ;¾`Ø`°A /îÚÃEŒ«`†l0aDr‘ÿq3 „
+Àu¾‰ØÄÀ|”AU€Á'ˆàÃÇØ3ƒœ°Ÿh€U Ã€‚ôÆË‚w2ĞÛÈ j#(]ˆA ˆàÒÃ€ÿŒtÀ Ä@ÊÀ2|`Y¨ƒ  Ğ° hàÂ Â`…„¡/b7á¦H/cİ³ö.¨ ¶; ”p…´ 34\lĞ/äM\@C	€øì-È[j‡°Ás@Rd§-°`ŠUlÁ
+ …t¡	6à"f@H4„¡ŒPâz €P¢Ã±‡RàDâ4a	‡“BÈ @$Áÿ
+	 ÁD Œ 
+^(¤!Ç8‚1¦CG8¸ApHITĞ&ì f8‹
+9éOÎ –°€ú`ƒ
+@•Sãxöè M(Ã‚à8”n˜ƒ
+¤0ÀùhİT×ƒ0ôQbx€~Ğ‡˜Â^ D^¼€>xÃ
+ô` 	Ip
+öàK&ôA]9pA
+°Î7d` { Arp¤À@ƒHÃ0… öóHà@¢‡)ì€gH‡B´°A¡Pìp$]Phfú  €:ĞABy‡¦65[°ƒ(ğ!IÿÈ€z@½y,ÀÇC˜A  ô 5PXÂ\ƒtF4¨B,ğ€*á4hÃBN ‡\@B—I„[Üt<àám=8¬Ë2 R4 Õ`SÊ@Nr’48€fÛÀ¬¡~ÈhI)ÀÈàzŞ!´€Ô a@CrĞ …9@a€&0%³š}@"U¢}Â‹AÖÀÜ5âl³ŠpQ{`	X‚<[2l 
+ox-ƒa(hÀùè !œ§½ïÕÂ_Û"ô 33Øƒæà9T », ‚H@‚ (‚²ô¹—G_Xÿ V°„ø†½
+€mP"¤`¶P¨ ¸ÛÃ	X­2ğh"œ€p1O…€&t¡ƒ]è‚o*…Ë-¸¨!€€> 
+3XÀbP&ğ@Ê|€P4ĞA 0O–‹ 3¬ ÇÑÂL„ €ô`Ôé P,aK(2`5\Âg¨«â !Ë¬å—Z&”ãÊdA^AÚÒ¼Ç=8Z­X L®€p¢ `9¬Í#ˆ¶†P·…Â  Ğœàº"6€° ğ>À[¨ƒZ¹€7àˆÚWèğÀEÂ¹
+ “„{ÿóV»šÈPØÃÂ0ƒÄõv0Îfø X\z“:ŒÎís²ãÀ›G_­^ó«m{šl`HA4‹A2@AŒ»0ìQ7×¹pB¾‡0 E¨ƒlÀÇıò*¸µ4[…¤ØÁh`[R™4 Û0àâ„Ä!
+D˜.gPÛ´à¿×¬Î`ƒ àİŒƒĞ…®¼7Ù_8ÁÒGˆ”ãµÉÙC* İ
+@˜²Î5+(akiA9.  @Wº^#„Z¸İmøA¸P /@aÖ„Ô@h0e9h]™,xÉ.°‚(T† «_‘t=¤Á—#‚Ef€)+„a	hÀÔä *(¿í;Ì [ˆ»_p±2„@¨Æ+`µƒdp…P>¤ö4p 0èÌ>,$âøŒ1UÈ?ñÜ!Ü @D†ü@.èÜ Ó¡6ág A@ ‚)ˆ!18XT' (şıõY–ù¬$ @¡= ;_'http://www.adelat.org/images/proaci.gifÓ&'O
+9GIF89ad  ÷  ÿÿÿ¼»»®®®ÿıÿşøÿıôÿşúÿıúÿ    ++,ûûÿßßà²²³ÌÏÕÒÔØ“°ÕãıÏÙìàéúÚàë¸Ìíœ§¹ÁÍàÃÛşÂÑç´ÁÔÔáôÛèûâíıÜåòàäê';ÁÕğËÖåïõıÈÖè¦°¼·¾ÇäñÿCWléôÿwz}öúşÁÂÃÌãù(ğùÿúıÿîòô›×òÿìüÿöşÿñşÿâÿÿ$&&ùÿÿûÿÿGHHıÿÿ÷ùùÄÆÆşÿÿòóóìííÛÜÜ¶··¹É¹€÷ÿöûÿùïğîşÿüèèâŒààÜCCBÍÍËppohhgyeşıùjT v[ ÿÔbÿæ§ÿê´ÿì½ÿô×ÿ¶ÿ·ÿ½$ÿÂ=ÿ­–dÿÓ{ÿà À©zßÉşøìÀ¼´şúòÿ£ ÿ§ ü£ µs ªo ü ÿ£nHı£ş¦ÿ¥	ş©
+ş«_Aÿ·6ıÀSıä¶øâ¹®¤‘™‘ƒÿ  ùš ¡d ˆT ıúõšæüŸÿ¡ÿé™{Râ™%ë©=şÆg£FşÌzıÒª•tüå¾¢šú– õ“ î â‡ Ú‚ °j zJ ş™ş–ÿœ½xÊ„ı§'â´nïÔ«íÖ³ÿëÎÙÊ´†zìˆ Êt sB ş’ûÿ•ş’ÿª3ÖšHºSşÛª…rYüÜ²Ğ¹™õˆ Ôv Äl ¸g …J ıŠ°b˜UÛzûó‰ü	é†	ç‚
+ö“ê‹ÙŒ+~V$§t4]3„iH–hâÈ¨ãØËıƒ ôƒ ì} …[.şäÆıë×Ûl ¥U æuƒDY$€W,¥¤£¯®­Á\ ~< 3 ‰T"•d5ùàÈøîåût ¶T ™G g. ƒ;M‡KU'ŠZ2ók ëh ©H Š= 5 ²E Š4 . ÄD š6 u( ¯7 üûûùùù¥¥¥‘‘‘€€€^^^WWW222ÿÿÿ!ù  ÿ ,    d   ÿ ÿısÁÁ€ƒ*\È°¡Ã‡#FdÀ/€Àú0@2I€Ç CŠI²¤É“(MN’e€”&˜I³¦Í›8sêÜÉ³§Oš“(ø³¨Ñ£6«H;“f¦Ò3g€R‰Ô«XqæµÜŠ y\‰£"ÈQ}³e]›Ø£iõ6ğõÈY=Hàs	4û€°e¤¨iñL0\í.Ò ä,2¥Ÿ¿ËG8‰0dpÖ º\!Vú™<¼G]D¾¥Çşzôğ×Oø<c-:ñÒ§‘ª ™æÄî'{BtnÖ›´+Ó¨B&N3Ÿ×ı¦Tÿî¡ãˆˆšÒ¢IÛá#gšY±Àí0›SZ¬YÒxèLCj}ûĞ£ıv]p5M4áè‡Óv’9°Oı°@ƒ?¯}§İÓB,[±ÒÌ:Õ,CßLÒ4‚(ªˆÃN1KØD ‡®t¢Ë:ì„¢ M%Æ8£0á¸‚G€À¡öb# p¢‹Š¯Üpƒ ÜÀ>E!„@¨Ã…p4ãÓË/­Ô2,4Íòx#0ª<3O)4pæ L+«L34Es&½l38®hQİ«\÷^œ™‡-¼ ‚Š.ÕÌó„MLÎDCU” €*ôÑOå8Ó‰+ ÜbE¹ô²‰.ô ÿ )«©Ò‹*ÎØÅLè‘Ç4šÄ‘
+ Î¨b5; pÆ#ZèBNĞxC/ øÑKb¨¢(
+Œ±íÄ!‹)ßŒSÉ3ö|PS¦ 8¡g`‘‡"S@È'” rŠNŒ0¿ud‚Ìd¡J.èœ°»œrˆ-äØÀÅ#cTc…,ŒÏ6”øAM$ Œ‹í˜sB) 0Î*ˆ`â	p‚Ç)Ü\$yl“
+ğ€CÓ¬ÑÆ7ï®6“x ÄbÇÕÜ!A ˆB‰· 3ÂL£\}Ë5O@‚‡-©œà. +LC‡ äpËjğ¢ÎÌDË)u@šB#üÿKC3QÊ3uÈlB‚ÜlÍŒ!H ,Ô@®xQ	=$Ğ/S(¡Ç^ì¢Î
+3IÂ†¸¤ãÁLÑœ~Ë7Ì<5êP@SŒ¬Q‡‘D“'W8M;ÔbG!Ô@ É¨X“AM<Tâ…áˆãaI.4ò;&¯4‚…öd40Æ¼ô¡¹Ò h³çu„M
+3éQÇ¸x8 ’ÌñÅë€/É°AMa‡İ)£•¸Â	jCX´h„ná00qÔ{ƒõÁ/àAƒ D-FXB€â—„,/'L	òsü ğ9úÙ¯tr`^2B†.ì"|¢‰öÿÖ S€Â‚ ÂkâŠ<"eƒlqÕÕ„`È õra„0€âm ‚&¬a\äÂî°F=’1< ÀkS¨Bwñ¾øé¯~÷“D_GA’›‰œÆ°‰+H€o˜ƒ”QZ¡y ˆÔ„ ÈâÌ
+ AKhâvPÃ!Ä€dà”Ğ€^Pƒ´Èèã\æXGŞñ†øÓß-Ò1KŒ‘ O,H±?y\À—€ƒ%¨Aö€ZXC QƒET¨8†’ ğ"iØA‹–°†Bq
+l^ãA0È0|¢ô—òQ=<µ´§ó8ÿ?Tœ#¡@Å ‰E4\ÀB!6Ö ¢o°„-òğˆXpuïÈš°?ÅØÃ 	†5\b“r C%œƒ[T‚˜øD‹H¡‡,taåà€f2œâÌ1Ğƒº	lÌP~è.Œq¿h$õŠğ@<J„a^Àó¬`ü  %€*ÔpU0`Ad©0ÒY†qboğƒ‹S„æ ÙºPˆEù€ğÀÁ‰0äA¡Üx,@ŸáğåvA˜E;‘
+Eœm“-Öı0M¤Â3q=Ä‰LPCÜH:3ğ"R™Ø9¬`'ÿ˜€	4‰Äh!†+ÄA¼èl=HĞ€[äBw1KÈÁ‹6 ™8.2N Úó@-Iáƒ)LÑ‡8E»Ü­.ÀÛ"Ğ$Ê@6!‹Pà«5Ù6’l$Ã¨nM@Ğ‡dÜ÷@C”Â	‚“ €>$èÀF{M0ƒ@/ÉÉxpƒÜÃÉ†o _šØàXA,½Tà%à‹irÄ`§ àvğÕ ø€÷ø…oğx +¾	Zøé8ùÉ:¡Šj°å*;Y/ø‡ $dã³˜ÇLæ2›ùÌhN³š×|ædC-y‰@†b‰ØùÎxÎ³)"  ;_+http://www.adelat.org/images/moodlelogo.gifÓ)*O
+ÆGIF89aZ X æ     jjï>>³!!ˆƒƒ÷­­ÿ’’¾\ss–''(İİíLLYkkÜÌÌÌ  3II›’’óddÃppÇÃÃÿ··¸33fŒŒ”{{õ333  „„¿™™ÿ;;…fff::ÊïïôPPŠ))[››äJßßß……‰BBQˆˆãbbŠuuç!!N[[Å;;˜>>]½½âZZ»½½ş™™™{{ÿˆˆßssöcc×33™rrŞUUlßßÿwww××şu6tt©¦¦¹ ××ßRRÎTT¶……ÖŒŒÿ÷÷ÿ\\¬&&@;;{ƒƒ®A¥¥ÿRR­ÀÀÀCC•22u**e¶¶ÿ88L¦¦ãssï¢{{¿XXĞllä\\_j.††™ÌÌÿïïÿGGÊ||ˆ„„ÿRR§ææækkv>>u™™Ìttüff™**ˆII»::§AAŒVVx¦¦ÇffÌKK§ææÿeeâCÖÖÖ++s··ÎTTT££¥ççñÿÿÿ!ù  ,    Z X  ÿ€‚ƒ„…†‡ˆ‰Š‹Œ„Ma“”•–Š"weFv—Ÿ †UotM¡¨©”.blT~ª²³ƒ.MC ^8’´À .C›^oEÁÌ–U[)HL7n&gB'§Íß…a0C5F8LW=5e8y<636àõâ33eehHef\80õ¾¹¸oÆ:V–©!ÏÊš5e.¬pR%a³3ÖÕp¢BO™û^ĞtN” hbyfçÄ#VB A¬Ì(7Ä”cÀæŠŒ™´ìè SîI x´ìc%Š¦2D¤`x‚t–Ÿ3J €ƒ}DXXÙÇ.	]ÿUÙq"‘R®`x°o†“7ú>øÑÀ#0ƒ€ñªÈÅŒT$xR…m7pîèÛ‚@&8`Œ¤€1Œ|“¦&SÃ(WJ ƒ6JŠû ,ùãÃ}ƒŸQ`B#¸/¼ìóç·Oòe|`á	j@(8¼{¾ˆÙÉ>£”	ú) —.‰È¡ğL÷øóë÷Ş„‡!;FäcDcì0Û3@GPÄ#M…ÃCSÄÖ>t„ ¡êQU+\À–pMLá_à³I”ğ‡}e8¡G"¦d@3:´FC)àçYAœ7Æ8à@n¬°ÅÿZÃ2Åá€Â:4QlpĞ×¨Q_C¢IÁ*@¬pzàq@]Œ gg	WÆ5rÀÄè ]ApÓ> ğY_8èD QÔqá´‚yÌBœ#¬´epVDÀ2ø9ƒ8,„ù¤ğÀõAG†AÄl0±wÁ$‰{´G„8œ` Äve0 ÂÈ–Q@xÔG²Ò:Æ)x—ÏYò=à@Á¥°ÇBú0Ä4TpÍÔÀAÁG	à:\
+iäQÈô ‰lYÑF	íæ#}qıA
+°§m>tPÁUÿ!{H@nw6¼AÑà0aØÆa|pÂbGûlñ†f•Á bDG#ƒ’l@ñşq¶œzB >X®tÀaÃf($ÍLÓ¯aĞGa€ì´CD0á¢ KXÃ
+/ğƒv6´Â2‡—( *@€àÙ£>s”İQc ÁÃ¦9Ï€ÀõüıÚ H8§ Ä{Z>6´AÁlÀ [GD*ƒc_® Ä——ÃSŞ†(YÑ‚o¿‘gc˜¡ïÙf.ÈæÛîcÃgh …pÀäò(Á_±7ÄA6Ë[aFÿÑ‚Ê@)œõ˜Oë>€Õ}CmDı‡ğñCª†şáşpşÇÿê  Üj~O[›Ãş ƒ}XÁvhÂ. b§	G`p† Î[Î|¡Aœ€ÀHC"`8øÆ +)À¡°+Hƒ	ªS,È¡¨Ğş` 7Ô)ÆÑ`CÀ7¤`9[”€3 È…8C‚S A(àÌÇÚœÉ9pAíœV÷¨g ğQCíüÂ,£>~Ñ÷9kHc0Áòg§œÈ`q8¨@	ÿğ	0à.HİÀ©€‰Ìø†Ä.ÿEŞÙÂR°8pÀ¼6I!HÒ‹•ä0÷­€c`ƒY¸ÿy/s€À	P06™@N”|ƒ,i	÷Ù —ºŒÙ Ö8"˜á`"
+°Ä+b"¾¨ÌK*ñ}œ\€!6g†˜`ˆæHì dœ7(§€˜I?¡Zê\'Ğ@†ÔaÅô9ƒY‚Cr8Lç"` Øïx€ –ù#€­6B.ƒÀCphÀz,?e°%
+ ˜,
+Ñ ®øá¢¡@Â/–bM¤´:Ê$±ƒ $¡IğP!l48ìû†OsU‡j¡ASÿ°‚Tà„`V
+ô„`É|xã3ÿ3‚8™„¨­ñ;²‚
+ À†’^bpbhî´Ñ³bƒÂ>õÍ _¨'– ¿òµ`XC™ƒ1´ wAbÖJ 	Îcë!ªty¡€Gz	5Àiz#Rì«HÃ{¶ÀÎ€*`%%X@VîÈ¶+¿Ul°÷Ğ¡r½ª'~0€Ô·+aÀUÀµ\  ‘:ğ‰,ôÀœÁuãÂ¼|¼€F @*¯ñ’h€Pİà„§aĞ>„s
+Œ¡ª€P+A…@U—;]0ÿ#¿À }µNKFXAîÊ„1àa`ÒùoÃ² 	ç'ú°€4HBøzÀ‚8!½Ä‘ğ`œd6g8dYh…FäyÈƒü‡ @	^ÀCzŒ«°a4¸±¢ĞÁáà0Öâ$’@æ2SaWğÂp Øg"ğjH•(˜x86X|ƒOrH²ªŞ°‚Ô6dWKòQh†XÁ·¹š
+âà… xáÒ^2 B`ƒ­1î$`XiBö0àœ¥@E ¤t¸„ÂVG€D8Ëñ6p2	û!D°ÓB°_"08EqÃ
+ áä¤B€Ô
+¢ÿPá_'ƒr„Ù¬°‚¸†€ ™{Æ°0ÀÀ×-»ÅzL‚%„Ğ'Jx”ó ƒì K¥ãÙ6 ¨FûBX 2’‚lÁ`‚ìà@&`›:˜B`poàá£` í{»€øéôZ¶ ¶läJ ç½AQ¡€Xaã*pQvWÀ„Ühä©(€aÕºƒ?ø "/ÌQÑ ”á1Vˆ
+şp†S•A
+UÜy(&€€lÁX­ Š ë(,Xéø[¢àƒ`Á‹úXAX…uP †qˆAÍ'y‚jÚ«ì¡@Ù„pğuië#	.Ü=aoÿíÃ÷İ{*h€ƒ#:ˆSğ³x‚¼ĞYÄ£Bñd­ãU ¼rò¨xDÅ1o‰@  ;_$http://www.adelat.org/images/rdr.gifÓ,-O(èGIF89aÑ Ø æ    f¿½'¿  L20w–Ó®aBv—¼ŒŒ“ºD,êìÒ??Œ˜—væ¬¯ñÎĞµk{âcÎÆÕÄ%||~ZZcÎ °°°O©goÛ­j„~Œ¹®ˆ©SYàß¨ßß—¼»×ëî÷ppsDDa×ÓÓ{®®°ÛndÜ„‹Ğ©I»_W½´dĞ|¨¸×õòä33fÎÒ¹»H?c…¹Ä²‡ÌffàÛä¿Î%àz~ÓÚzROIÎÎ{ÒNNf}Ã²§¥¶ÅÆL¬¡“Î¾qéêï·¯uº€Ší¾½èâÇâ˜Ì33Ã„{oo©ĞÕäĞÄ[È·”Ïc>¾¾½ÃllÏeV»¿I‘«ÚÎC+½¹xfff¹±”ÎÎIff™ôÜàÎ¹%""u®«u^M‚hS<DÎÎ(Ÿ}™™™ÀRQßßi11~ÎE@éëâ×ËrĞæŠ±®Á™väáºÈÕ‰ÃOP\ÌÌf’“®Å-%»ÌŞ½_BùöùíÙÔ¾¾qÏ®zİ²—ÎfzÏ´¶øóñÒQiÌÎ„»uXÿÿÿ!ù  ,    Ñ Ø  ÿ€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûÜtt ù=£$I’3èlF'É
+" YÈlO‚&MÒH¤¸lÏš>K4Nä˜Ì"f| ©l3@ş±œI³¦Í›—>È‘sp%Nar¢DY±ñ'/@f$	ú0ÉD‚2} ¢{Œ*èaE3b*!‰ÏBtÌÈ1cu‡µÿ ®Ø±ãŠ‚»xñr¡»ƒ‡‡$æfxà!TÎYA3ÒxH¨Ğ‡$i’XåĞî*Á<v Q@€çÏ C‹Mfïbp3xÀYa¶ñ $H”9hOöXLÀ‚Ó
+.(ØáSp]£“+_º‹$<flKæ@D.ªTQ,–
+*ĞŞôáÊè.Á™«_Ïœ˜fìè¬å½¬=I\aÀ€D-1Û{ÌĞÀEBPÅIzìE(!{]pß$<œGÜ+dy°“W`‡ÑÇ[ÍA%0áâÌ•&pLhãêiÁC$æ)×İ¥ò˜A;-µÂ‘rHÇBÿD4Ù[p@D&”PÂE¤4c|]à(æ˜¡éèrë]¤)Iåp"¤ÒJkŒqwA Dp€ÇN6Ğ@@ìáÚ%é¨£W0R£„
+\8Ê¬ âš„¸ÔÁ=œ€ÁƒÔñ§/<Ğ›(;<êª˜\VHaÚX©(¸§‚°°Æ"tå«şQG‚NøG± pñê³6îˆš8šùI¦:ˆ(Çxƒ$pGK0;HäqÄˆë¹O”á®»OZµĞÖËœHõ¨²RòØN]­P¤¬­!Bk|)H4ìp
+3²G`ñÿÅPÆƒĞkïÇ£Q@‚!+¼ÚÅ†–ÈA€„a¦‹öJ±ÿÁ€G¡VìñD·ïCÔğDÅ? ˆÇ 7@Pp@!­>{2¯Šø#“Êı‘@¢!.,\ZÃiF1 pD“<q±E RBĞY1íôÇD-2!U×«¦#CN¤r‹qÛ-"ô1ö%A.°¡&Ô1Éb¡ÈÒ÷İM‡ ÷´}^¯ÒBÇ˜&‘tLõ»³¯‰‹ğÖ3dTAUL¡
+hş	Hkì¹Õ@ĞÂò!4ß¼n8ïüò-$_ë„yëB¾Ç;ıãšÍ ‡ÿWB¦“Y…ğ¹Æ.¸ ‡kğöÇG8á„G,°ÄÔŒÉÄ@³X„g:ì1OtzK È@
+„`y`8¯d¨D<è [_;D:€6Ø¡
+M(ÊŠP†8Äp€üw	,” €+ƒğşpÁä$¯Ík ‡HD¶àz]Ğgº 5 '<]sàºfë+ı”†u’5 duøÓp®"T 1»Är±pŒoìA`çHGVÏ9p¸‚È×I§‡wS@¶t0¢¨‚o°®‚EıE˜ƒ0 ‚5*QšØÃŠ' 	<`ÿ‡p\Ïé‚	d a FVU®’Õ™ ¨@*€`–TÈ€j2pË^R¡‚	¤˜À0‡°JĞĞXæHÁÂœ€ ?TR]–h€Û‚ö¶%¡å™Ê”dÂ Á2p€Ìr>æ	‡0,@$0CvôS4?2ˆĞ¼¡2ƒ(È•ğŒ€Xi¬Dp("Ğ0”êe.Ë‰5KdIC@ †ø€(åF :a	ğAœõÏäX«6PÂl×›Õ%¡	$¨ß˜PlV8|ÂE©ÇÑ	”<PDLlôÀ !¨AÿÈêP É#Á`uBØ£<§YkIˆÃAâ§› È~(xº¼¹	ÎYÌ 'hä†QÆ´YC40‚#8À@ $ *V±RP¬ØÓ‚¨±i±¡Nq0™İá	q PÀ€O°ÑbnÂjÀÚÖ²ö:ë^FõÖ×Nì¡Dc@x°;‡1 }TÕCŠPX¯kÈMîÀ@VèMğ²ëúÄøÑAšÄõC	XË%ºrb›oÆ8¦×ÏğÕfĞCı˜ ƒÃÕE¨#Y „AÙ÷¾øMYopèE-üÌp•¬¡exÁFĞ€AñÌXh×ÿ»Şµ]×JX©Q%m/…ìÁC¨‚PP1 €Äî"*(Ñ¨õ@À^p®ü1-Æ|Bd_PT\”×3r™%÷‡¬*Èƒd †9Ì!|(Á	–5‰«ğBü+c7ØoM¨@\Ä>0`©®ø1 äxK Á‘æF‡:« EO¨óú@¬*“5Ë^ào;)à\B·À^Zp€–N0Äöjfó%f !¡°cÌÁL0à¡aD[dDaeæ`y ¨ö‚â9Ò	FÍĞ}Öğ@´!¬˜‘Ö[›+Qğ$RvâÆ‰R/§¨Nvÿ ¬ xuó¾ìª.À¡¹Ú®)Ñ  À	ÇAà]Cğ)Jè®®å„L[9/Nö 
+ V!ğ ™ ¡§GmG¥.Ù¦À¶'Ñ€ä ¾ø]jú …XááJ8a ‘ÇIçİ>¼’­Ø9\ `8€B”ZêÆ®º¶.>pI«olÄ’:Ğƒ à8ÿB
+¶°ØÄ¦	'+4j`¿àã˜€ÈGLÀä¼™"ğ¦jû{8Ğ­A4¼Á
+7Ï¹ à;láì¨BĞ]Lh¢ı; yx°+A4]ßü½A¬ÇÄ…ªkøê¥ ÈêhNÿäç=xƒìÀĞ€ş€ñÑdoèóÃ2 ƒÁ$H’köà*} ı®VaÁòÀ›aF¶x(¤`ñv€`{ÉS^èQã¯Àè (ğèÿ2‘sËôy?4™´ i«¼ip „Ãã
+A˜‚N­ öø¾ò¢¹|ÔààÁ‚ X5İ%3ÂX  WƒÉ½L&Ø¢õ¤ OS`J@~‡gg_gY€sV`~“—À÷j;àAtqŠU ¬A	`J 'ğRâ<@KnàRg+µ €£°p Ş÷Vğ:õu_ÿ:ˆs(=0°2p (Y0X'H‚F7lcâ³à‚°$	0BJ`s3Xƒoğ—ƒ'Ğ€=€. ' |Ğ0 ÃURàB/à < Àc06€"ƒ MG°q¨¶‚Bu €5€`F`1POP+F…œàw8o …wx:˜÷…4¨JHo±*B=ĞÓGÑ #ğ†q`&†3wP]WX,XÀ 5PzPĞ'}7Oe	&^ó;äOÌ!i„ xº!xõ,Ğ9WxÎXx—Ø€ÎˆsJ°Y•á=[v}ÄBFàBqY0ÿ–S˜SR`QŒC à@8ÒS³	>ƒ1e s† e€15°4Ö·má8ícá Êˆ•øÏHÑhsPxgƒ:%. >GÎã<Ğ{À †RğãX¥Â #0T=fw$@! ˆ.V[™pZTZ‡087v3Ä(±$ iG"ÀyIp‰_À7W›UBM$)JÒ>ACP’elR á±bCàŠÅx1{À’êÑñx	ssWK5Ó 7)9I •öUò‡RGq–’>L²ğÓˆsÎ¸ƒK©…_`ƒ¶3ÿ,9•õ<np >9ÀÁæB%&)A%6sğ~pVM ©·Ü(QASn‡ ^%P—á¤kŞÁB
+ òt" ° )Ğ”X˜Gi”Ş÷|6_ŠÒ²e®Ù'€™o(F`NPaVF30E _‰`š¦F-	v% 9Ğ5ğ6²¹W´ùI \°e8ãU`PZàC- )ğpÅyx	¹…È¹1ñ4Íéjà’{ ÓY (`oBàÔYM1§a`ËÑĞQ “JÃry1ñi^ÿeŸ\0Tß)ærÿ°DçAjƒ	©˜øp6gœù1ÀO§0ºa„H'ğ9`%dôUŞlrõ¡Š¸!n»¸ùh1)º+j1-êÀ’2zï•gæÂæÙ$Š=@œ9˜ØYĞFigĞ?pÛñ“^â q¡aÀ3t@"p&e`R%àŞ‰ Š8‹"É3Ğ›W¡h†0¹Œğ”¦Ë!£J6F®Š^špT`X˜VĞºêpégyÈg S°Úñ>.`Éz ,½¡>R9ĞBFPbb°Nğ À?F…IğÿŸâè9	¨j<Œ ^9 ªğÆu–ï%Y,Ù”ˆé€›å…Åix‰°$cğÕ8ApvU@*gÈzÃ_T`c€°{È GŒeb CßÊ@ –>D `¢‰À t³{€CÀ® Õ\pJ&.ò‘/ ‚¡!@7§”b—«ºj˜…° ú³	ó5¨SSP¬.`|ÂgE, ±ËXªè ¬£Šú%!¢ã’0¦P‹ğ–Ğ{€²¡¡²à ğú²]yn°‚7àxa7ƒvû})° Qa`O)‹4#K›w7 4S±8ÿ±Œ•Š^)U¬•0L’=Ü	€1ej0) ¥…¶ ÑpKö^Á¶\kÊc³wÛºßgj0AÀ$`dlp»»}†¨ëÁ_æ¬ââDP20©e/°°K £Æ º4Ê	E@g6rˆCl û¢ë¦e i9Y^P=ŸÑ!0W Îh¯÷šsg0&å·Ë'r…¼¡¤ìAtüã+x`ˆåB š€BNA	è7•µ7’0œtWá•;ô½!ºN cPÆ/€ “•¾j=°¯Å	¿è}6ygwvv ¿‚«“ËÉÿ»êñ„pjz™ÖyÁ–&å »ÂÈMDaªp4áÕã«¥ ¢›|š¶0öe4û›ºw G¹ºjsºWÆº—áÃRÒfÀ>1ò»:ìµØUPšy°Zí"Ä>À•0\5ÿF	µæš„0Å-°ï:T°w$jaè§´g‰;Ø‹Y ¸‡ƒJp?°S	Ğ/U$p	»Æ¤2*À×‰ÇÁÃÊ «æÇ“[¹QC«×	ˆ¬Èu&(€º
+ ®T¼ §ƒ…Y‰Ñø}e|{‹çp´1 nD %K°MĞÀ@ÌÌ‘ÃÎuÿ «ƒ[³ZãÆ lS49Â(pötC&!z3È ĞËïškÛŸÔp·‡Ù§‰s™¬?0¨)ƒ· ³Ô	àK,µCQ¡ªŞ=`ŠŒu@(†æ†Á¶ÎBàjw	G¼¥ĞËK¶dì¼[z”Ëûl·…×«©ƒÕHĞ·sM €}»kÅ,ª*Ç7 ŸI–ş3:lë j K	%CY¹œ¼,&‰ì"%ÖÒm¹\·Î¨{³‡”~Š€è”8`½ J7O@`°¿¯¨0ªšwçN°d%½† Ô\)y,G0y—ÀÍÇ¦7@ÿ
+†M!-p@[Ğ¦7¬Ë³4 É'üŒ4ˆØ¯»Ó @ %|–ªJhnl%–ÔK]©y€ô†˜@¹ª™ËEŒ	¢<rD~àªbà•(åÕP«ÍèŒ5gs;Kƒº˜›e¬> ´©Ô.ÀúÕó¢°§7 ğypFå×XÛô¦¥“ Ö'Ï0	£{.( CsWr¶´ 'l·dÜ…(vı=y´[ lp´¾7-cªı*á½ÔLg²íæ=	ÁØ¢ÀŞÚÃ²uÌ zMP½Ë‰‘(¤6Ç‰9««iKĞ“&t´x»Iÿ61Á±¡‘‚òö|#O%ŞØ83á’ ªş±Îvlû®YµlğL.Á¿Wh0_¿Ø…ÎŒS°SĞ^ş”;µf1t "€ü¿~ˆj(0:3j~­X€m?`È’`Û¦FÙB
+ìMN>@º6zX àÏt´#{fı«Š7€
+h\ş”?-;E:eş^šæ^€.[§½nç2p?>@ç‘0ÕêÑDQÓ–Ÿ0 @ÒaŠcdX ¹îœQ¾>ëSPˆ€‹W€Š·YGûˆ#‘a‚Şªi¸T0£®ŞBxlXœ™	í}ä¡50Yùà#pÿXBPæ4” {4xœ¬S^î;“7B"ÀOœRæ<±´ÔÇR¼^ë—ûÎ
+«=¹]	˜í‚àê®ï2	&!{?pÍXIëÃK€0À'SB‘…ğaA!
+”@.ÅkÏşyûn	òË#¿X°ZîrWe°]+ğ#A.õëuğ¼‹À€ş­’·œ	€M‚‡
+¡á^›`|°•!°šPòÅmÕ†Ğ‹¾x1ÀhÃ«ŠØ1_ïêÚ©‘à'ÑƒÕƒ€ó10‘†´$0AË
+o
+tôˆôKã›|	6.Ÿz“ç´N¶Sæ|  ¶`ÿª0?ğ\ßá°6–6"@à‹ó}0qBI kÀ(1ìX÷	$÷‡@÷“z
+æz 	‹NÄ0)2Ù×5yÊwí[ÿ®î†4	
+K`†o0.ğ™ù›?Fßñ&¥?¬X¤õôı>:‹p®F°T"{1ø óæâôæ5K¼	 •$?:ÉöÎ{ö	Ğö®qæ×®ÊŠp`eğã›­ ä’ õRÃì­ÉúSØ¯ı€0âWàçã1ó—¨¸ÈØø—ĞÁ‘àHYé€™©©	AáéV¹8ô$…€ &ãà 4$úÊ¸)«ùé9!ú  ›ûW£+`4;Ûi”XWÿt4"HhˆØKÉB”°§È’À­x9¼Yü
+K*'–çÄÁ-:ó½ÙUK1aM™üĞË ,ÏéÓ„cêàavgP¡CîÑaIRCo „óD¢©srÔ8Â®!%Š /Ö»ç¨Œ>ş*b
+7ÙAf~jò`(R‹5k¶¹#ÏdOÎÅ)ó
+®r2ÚáÒ"={•òéªÑë—®6QaLvdYØ#"@sêhFmAo(,9ŒJ)óâ
+=hqy;U”Vez• –£«À¯ÊÆñQölßÉ‰x ®%÷]»¦ `@ù–¨!èÕo+JJ{Ú sp¹ÿã<ÌÂ
+‰ZÑŒ$N¡º„‹™¨Ñ29Ä ğz2¼¨nL¿R©«Ä«Ã[~.;Qƒ"´ïŒxŒ»ï8dä]IãÎwEì2‹"e$„2|ÌñÓ´/œ¨ èQ8-JşÁÚZ7v1T3µ	™Y@´åN
+ ÔÅÑ¨{¸WÉ5”ŸNáÇkPv¡K&ıKş”Á JÛáVÎ‚]_ÍT[X>àAöòÁüiŞ+Æã!ˆ”4`/xæÄ?ˆ@Ädğç!‘#?ºàhfMí(vã<"‚wÚ6d«‰BÇåñ‡		QòäuqõB¥•ÿÇƒ=M¶iôPÑN4EäP¦™„åßlnâ¦"üp‡œß=æƒwZÒŸ™´  %HÄæ‰d•z¥[ÁÂ©æÒ<ô€ k/XAl¦ŒlªI§‰ì$B¡ñÀ¨[˜Š$¯ò´Ğn´Ğ&c:ÒbE¥Õ,#{[b¼p„¢>õµ/‚›#È®*"j­!Â–0`BG,@-,á&{CÂõ„Áƒµ˜xÒj#Ç3î'å.ò¯	Oˆ!Æàz¤SSìß-õÛ›Ë®CO<‡jèñn%vá†	OÀÃÖ¤J‹·•Œ<LÅ±Š²yäPFKéñg_ÿ÷]*Ÿ¬iÊŒ°ÀÁx°N°DÍ| ´&Í¹AÅ$¤‘Ä_DÅÅ=‹ÑØıGÒ%0!…/l DN¶§‹şQ!e½S ¬¾C8øs 0¯¼Êéõ°ÁÆÛI| T'Tˆ‚·,zó½€~Šp ŸÙÖB/Ö‹<y"{üË E˜à„qG¸`†® !^Ü ‚kpĞ	fWî”$ĞêHÁqÏ!Ä!´;…¶¼şQp5Ö¼çk.òsRø¡ò ‹ÜPÃUĞC,“¬zˆ‚?Ş«Ä€Š<¨@˜ÁùDÆ'½Q ÿRºÛÖ*î”G¨‚ÏôL	S˜€ƒá€œ¢@è¨OPÁ l€
+ŒÀT Eh€ò6Ä§m°ƒüü(…ƒÈ ëğAfğ§ÈaÜƒÜ¨ @"ğk90AÒPÃV‚¸ã¡#°À€t‰!ˆ`@ÌÖxñÉCP#³æDPˆ"øÁò³Û˜EIˆÒ†‰çƒk?`‚j€ìÙ‡.ùUÔ0V‚ùğA`EœL Y%rğ€\Ïà$«¸I,H‡F@	“KÉxI,Ì_k<Ùlàá	¢T5‡–SªJƒ›ÿdåèJA"ÍC¸Ã.à ¬Àr˜A.)çA#„y(C0ÿPÃö-â˜¸ûä#\„9Ì'E<b/¤™ÄõQ R¬T‚^Éš®àdØ
+ä„-ê1]HA
+¥®"h.œ¬2õÅµ)øáqÈ?¡é€òI Ú+è‘Æ²Ìa¦ğÁ
+V…‡3»GF”‡Âƒ{p‘g"×Ÿz*‚„LÈå"¨Q´ğ •ôOã¢‘´”€85¨ÁĞƒæ¡iá˜0‡Á! @’À^RÀò‹c‹ôƒÕôüşD‡5üÀ€;
+œ‰Ò†pNU¾òÿüÉš ÉR[ÉJÅª:²Â’x(.´5
+ih¸¥‰ÜÀ	]5A0,>DI™è„TÜnA}cÀß`‡€#uDÃT•	~('“ÆºZf£úf7Q±o‘C`Ø¾K€4¤!w  §¼€€sğÁXÖÕÄ<Lf/Uç (aAÜ"·›¦@`Ï^L*H¬"†à´Á×Mí'®êˆÀa Àà€a!Œà H'ŒÀ.ö>‰m|E.«–ÅÙàWp¨À~‘ò 7åÛd¤W48ƒp#äĞV B‚œÿà‡Ä MĞKêÀˆ ²uÉŒ1¡€Äğ¯“Ù¬à
+ı±µÙA¬;ÆD¹d!‡ÁG[MF°†‘A`#ĞŸ":í6ñÊ èB¼€^Ü‡,@¡V°ƒ+(€ª„n¬cmÜˆ(”şØG{]òæh Ù aĞ@XdÀ?3@c›`'Mí Ì<¾í 	=‹.¡‹¸Ær—šTÊLxXÑf „ºthö€¼È‰°…˜]êŞ²JFì´×Ü¾²¥ıcÔœpÚRe(ğŸslJ¤0	Ç 2‘G*.ãMHBx­*¡9‚Öİî·¯•ë#ÿİiúVÙ
+V>-®‹r`H#ß}œ`â)p[ÌÂïæ…`Ê¼]mıò³” LÜCÁ€•d/;t »[¾Å&¬!hÂ&>ñšÔd*(BBP’ŠA.K_ÈŞ-å2ÎšŠÀ±‚Ş=…/"—xsHÀ A°YÈ¹dP)ÁM{ÂÔ@À½ØòkfÀ«bSE:ÒùX5c-5º€:ÉÚ£í$ ¢]AØP"` ë'ğCøÀ4#H@qxşôÀƒ	tMpãp;§ÒvÇu¨©CA£¥c÷4%œş„kF%8‹Øƒ–Sv›ÿÁÛPüÄ•pÈ<|İ“×Y<ğè0 «O	€@õÚŞH_ú=şzƒzçÆ†]†ê.‚Ğ€Àš„^Ñ^@¸½`ğVg«…8Á–ğ`‚	‚}òxÁ(…Ài@ôvEğÎ–°Ğl Û‚}Ù÷ºµ}KW/{P~gÒ4e`ºP(‘qø"uŠ Eğ~°ì'8 ·BCP[%yFÀ1ˆ$` ° >Põfo”yrKpş³vè"·£tİ—¤0lÄVÇÖ"x‹ EB6pˆÀP oÀ%Æü÷'‚H«€P `ÿq7…4goT0 s8 Eh„Ä€zSi“±ÄÂ @,G´XcE."Qr°E¥IàĞ,"À‹¢52 µHêr%z±
+(E€¡(Š£HŠ¡ès BàZ@‡tØvh„‡à¶‡LeT…3ây3€Sr`€@ `" } ¹B!É00,ñxö@¤.cGv÷1S×ˆÙ8SyAÄ‘à?ˆö<9“vv×²¸}şA}¶Ø@À¯-@M Œ Kp8{@H8 "`6ç<PFHE G"cGñ!p
+ÙFáÉçpÿ£t@ à!ğŠ˜J- é¸8oÇh1©t×cNº´fÁT0oğ`6ÀÓ ÄÕ7,@?™h?wQ§À¦8FA”+fDI#0	Ğš'P	’jG•U	’W9‹"9$W’9A¿.å$f±c`^¸w2*ğUŒ G%ğLPX^q`FIi”)&åZxĞ%‰ğ”T ’‹É˜:´•]M€’¸“U<À¶3PkĞ?  2Œà[5 …¾Sšæ‡Ep—©ö:9 ›±›˜O`›OP›¶™dvi°Õÿ ¸²@  ˜iœ‹Ğ™9a$p…¬–b¦0 0@ rğDĞ/ r˜@%À^Ğ #ÀO0­)ˆäîÉñ‰HaáËpgà€GÁÑ9™Ç)’Tp…WÔœìh0€ ğVİ)8`},‡.ğ Ïuš”PZö9%£yš‰õIŸ½9Ósú‰$@@œ ŠœÌËY ]ià5–ˆà8€l°"µçt–qù
+Q4xPC°U&ÅM3Jï)0cÁ u°j19ÌØP=aÄYœJGaz…Î×‹T£ìØÿr@°89QÚ@ĞY7	¨9zPUpKC`ŠFB%`tY5àZ€¨>çs¡8÷@ğ5/æjZÚMÀa0£—z©•Z©>s¦ÊplJx·f§k	<Š50¥Zj8° XPu°{¤À«½z«¿
+¬¸º,€ûªÇÚAIQPar€€û¢(§¢“ZZ4:¹¡š}1,Ã}ˆÈZ£‚§| 7‚<1š-¯efP¡q@lOUEúHnOÀ§ğ@$b)d'~î°NàZ Aº Ò	'ø’_èx0Nà
+XğÿHYW¡<Û¯–‚¯•Pk~Mh~å9+ + Ûœr |HpaÖ£À°âÉ%Ph€˜.(°…ÑƒAXz`˜3lm`³Š€5°±'`k²	d0psf*ğ²¤³&°O ²|' *#[ñ¯¤9]§ÙÀğÊó}Àppät5ëMÛ•qÖ¦$.@q* "¥t¡ğµºpš²fÓ /“%â"ûX0Y8o·ìØHcÉˆS°K`·¹E¼Z\°:«åçzäÇö·†å—¸ fÑq³’;¹LÔlÍ–{À/}Pÿ~V{Uš»ÂR(æùÚèiN·¶‚¢»<+~‘³ËDëfo=ØlÓ FÕ°5ÿ¢`Dïqrp¶Œ ¸}×åwp“´¢ğ·%[{×§I½êk½X3ª7e$Ñ «Pö@MØ%¯÷+¿««¶‰0lï[	ƒa£0lF``œ¿ºÃ‹mš{:É C4¾#°æëÀær¼½Ği‰À¾Yñ¼¾C[Q€X,ô³¸zÁ¹q»Af¹„4k¼ŠĞ Í%°_È¸F{Â¾`¶½0YW¾[±õ{Ã^R–múP>è@»Œ!ºÏ{Äàt¼ğ
+N§ºÀÿwö
+|lG«UèÆØ\¸±SŒtğÙ‹E\		àeŠ‚úâJëX`Ä¨1 ‹P~bÌÛLÇÍI¶§0x’ñ·màƒA]”À³‚œXà% +]¼}›Æ²ûÈì¨«C°0$m¨ÄºpImüÆMã%ü/L50¼Z5Ğ\Š<
+Ø°:\"rrç'œÊª<9B’…‹P\±¥«Ğ\«& 4Â”%aË \½Í¬ÊuÀ z€Î‹øI¿\¨ĞÕU°U,¿ìUGôSîdW¨_üÉZ~mÀUàÜÀlÍKÎÖ¤>l€!SĞÍĞíĞEÑ-ÑMÑmÑÑıÈj¡íÑ]É5yûÑ#ÍJ;!Ò$ÒXsĞ’šÒ-íÒ/Ó1-Ó3MÓ5mÓ7Ó9­Ó;}Ñ  ;_$http://www.adelat.org/images/cep.gifÓ/0OGIF89aA > æ   “:Og?Gµµµ`ht¸—Œ"#B=D`‚opgM™™™¯¹ÈË˜6/&ÅÄÂRG>}xp’–YcX{o`‚|ÍÚÿÍ¦£KSg–!!9r{o[aC-0SHA<™™Ì^K@ƒ‚`…uğ¿´W\U! /“H˜o¶³¬¬®£kqh‹~ƒÊ¹Êè`w+¹‹wE83{„¶İ¥RXSv{Fv|ˆâ´¨ÌÌÌ¤š’_RLAS#cjXŠ`™™f½·´¼½·€˜kiFQW2µ±Ä./HŒcn”iwCK>'.#ff3µ³š§£  Œ‰>InU[„ˆ‰333¢œ~+ØÀ‘x€b4:Y©raBH1‹€UU}KX|“Qº‚uæ®³v†Ä€lO_W9gtZà¯¢Ğ‚¤¦“oZHóÉÁÎ—`oFwxQ²¼ó*(E Ÿqp|²\o‰ìºªMe8QTH½½¿IVDº-|n[Z «Ù($;l2j|GÃ‡¬­¬IY+dcW!ù ÿ ,    A >  ÿ€7	
+
+4!emA<meL+(s+?˜>((˜? (>££ œ¨¨?IQQ­())?UU!	'<4'e)?8+>"?Ê}œ¤>¦×Ø>8°00®0L(}}"+’R=jj<íK+Ê8"Îãsùs}>?ÕÖØøÁ–İÀ‰ëS&K4hDHBMeúÜÂÑDPŠ6?ú0±¥S¾Qøç£ Á„á8E˜%BŒ„)¤¢À„ÀeÊÌAñ M~>JR:Ù“Êl.aEAhg¹ğH B
+
+(,(³äÇ
+ÍR™sc ²q?ÿô¡L‰Í“İ‚0 tƒà!ª*µÀ*àQ¨PeB”Y±––„Ÿì# /Ÿ]§ç\ÆË‚^&›PHıç0¨Áá‚‡%RŠ´d²àA'}*ËMJ›eO`Œ’Æ‚Ğ8Æí‘AWÃs>¶I @¦à$ù2´Ë˜Aın¶Âç„àBkìC¡=X
+	ÚíÁ%ˆ>Î¦À‘"CÊú|™dúÔuÙ*À ‚zuƒT2¤PX{L,€Ä$ÖDU“`µ\É$B"×5àı f0x+"Â"  +˜SA8"0Áş9ƒ‰H5Ô ÿP}„7]ñxC‹E!‡?£Hp_Mb¬“Á]á€Rà@Û$å¥Œ³äEØag@@•rÀp¥@šŒ‚Â‡jˆ°Ä	`¨DDµ¤éZ7ÔãåhÕ@"tŠdmÕÊ®ä B|9`G¡>Pša]¤•	=ÜpÂ	äSD
+pfÊE@ƒgœ1Â²pØp¥¥NI@Ø‘WØ"—>,ñQĞšRàºûíc‡;,  )v°ì¼ô^€C%j´ÂTVæà$pës$°B<BzÀE~ B}DĞ“ÿ)!Ùi½óÂ1†MüGgœĞt+\¿zE «*,ÀDbü!…¡ÀÂ+dçl0ŠLØQÁÆÏò,€(ãtëÀAyEvÕÈaÇA”BO+¸'$e 0;ü7eHYÈ{A\ÁÇct
+GP@3*>°¨g|1!°:«AC;iÀ	E{‹‘EE¹â\3Ç\0ÆW\†Û¨İa@Eà6ÆE$a¥ ~ÆHÊˆÀğ!¼ˆPEW"à€ƒ!´Q”™rwÀİ@•Ë Ãf\Î9-µ`…èµ’ƒÀ>@EH z$Q‡‹‚¸Ïáùÿ2t·Çp{qğWtQÒã˜=Ğ¾€ —3@ObÜB‚ãÁ:(•áEh™ËŠ ‡&ác€F ·ØàShA\?UĞOU €Áæğ,ì¡ThCí""@¤AXX8À	H Xs`‚
+Tğ©ÂAh ƒÉ ·õ€w3É `%„D!¡…ô 5( ô‰ˆ p`$P	ìÀ	ô¡PÁ€>4`w•ãÑĞ…T¤âHBı¼á€-m‚Bpv35¤‹©‚T …	¤‘ÁT@
+ÀM/xÁùÀ4\ ÿ3€‚Sò€D¡~‚€(ªÑƒ6ÔR‚,ƒĞ#¬ ià@êâ‡*ˆ	HƒvPï˜dèğĞ ìa”ÃF²œ’U	qM*V *œaa†*¤ÁqÀ‚Ò‡=pa; ¡&` 7Ê nÉü3W€ºÔı˜i¤®é/X(-¨H…ÚPŸqÒ
+tà ° ‡?p@HƒP§‚Hî÷,âĞğ)¼I(•Š„	
+!4¨¡P°˜AuH ­Ì@À ŒÂœ 6P,(0AzPğ]&I¼ $ f°Ã0ª€“ÿÜ@^@ğ/Wøe;£PAvÕ%(¡Ef@ÁäÀVˆàG¥SŠ00à’”³j*€$`al;èÑ
+0%œ¦Ä
+| VH>È€r€%€àsH£a£°¨`4…B>`ò¹ñw•s[’$DšI[×T :l$IDÁp‚ „¡GaĞƒÂ`†ü
+rè#v8«ak° 2xÌÓ¢¡R‰ÂJg0,l@H¬ğÓş…"¤"*8˜A	á¤ ’-‘mu=‚:ğX`|8f:ù>Èµ¬Â$]&$çİÁ3şRÿn8¡!,'µ –8   H˜
+p„7lÁ
+V ‚¢û_>0“™]°¶ ÌX°–P`pşµ nØÏ1Aşšô!UCV€„GÄG0‚Ğ[á nğ¯ZÀI4ğnCpÂzúN€Á˜ <ã
+äÀ™"À „ †¨A"È€ƒ4
+[²œ°…-°(&Bğ å`s@pÃ¬ğ†78©‘Ú5êT°f|#„Yø'và $„ ¾àÀ Â„Ğ!	[xÃNì àÊVft-ğ ¡pÃ`…@Kù$c.pÿ…Äè†
+D‚ùbA4Œƒ0çs"`¿Øà+tàĞVîÀÖğôúO0‚¸	½1á¯n©B—h»Âñ²‚@Ã4²ÛqÀ€Ø"`€*fJ0…)  âĞBÜıy›Ğµµ€$ØíFøøŠ˜èÁØ0;ã !( Û·>·ˆ`œ›˜B	(^q 8x`4 €TÙÊ„~Â  Ïàô»AÑ†RÌš)œ  @°`†yRYç;?€Ú tä!è°ĞÀÖà†\ãÈ{• f¤IÀÇ÷óFHæ‡ÿ¨¡'A†p,„Áì??@	ò ô·³aíĞÀĞ`„58 CÏCÎ~è§o¡£¡ÃVC˜¥-`¢
+«BşP(¬ 5¼5Ã>…·ç¡l¿¼Ú5?'|Aò“§üÙEÏ†§ °®|ƒ6…Yòblà@.*wà ¢Ÿ‚æ‡^‚C‹şüÊ×€úhˆŸŸı@`‘ƒ‹
+á_uC£d©†ašP : 
+qD ~AG~åÇpè÷{nGyìgn ~ï7b ¯/ à +@ )6K¸4 HpkDÀ~êWqä·€ç×€Xzh'zå‡ $ÿ¸´Ã¥v¢ A Û7g~àB ¶†v(t—|èg€ïÇ~‡Ö„bpUë¤m.À (a) NàDptVX`·†bm·‚'t.èvV€~Th€Aw~[ ~ \.°}4`V¬–#;Ñ–sy·†  zBG‡tøp.øv¨áVU  H(ëa ãpqBpA SĞ†ˆç&‰QpwNXØ‚‘8‰<×ÀGèJ KçDB" .0P¸§ f°ği˜hëw«xqØŒPˆ~Íø~[  qp#.à&($îÄ{@\Ãè  uÿŒO×DĞ)‹Ø†Î8‰êGtG~”¸P~mÙC°(T”Âh? €5pŒ¶FSÀĞM°ˆ¬Ø†â7‰CÇCçs…¦Õ¨èT³Q\Ô“5P3`"–k“W€pmX€×ãgw	“;gNP Bà:`‘~°ƒbÀ&àN\eà{°dÃ¤×pl0t×¶†bQi—†¶¦g€k×oÀ¹“:ì„KÙ¸+4PT`àR0	à~ÑÈ|ˆvn6YnygkßÖ`r zç—wÅ6fPx…K½”P¸¤'ĞÔ³íB9péŒ®H¿'q)È|ép^  @‡T¹0í$QXÁe¹Ø”»R¨s*`~¿—,™|tH…äÖRâg™”I‰* Lb@H0E=;x'ÀF¡"˜4c!)Fƒ’™¡Gƒ0#4‘ LğCb@óÓ=$\  nÅ!È0n§öÙŒM` w…tètà B%&`iğÅ¤Vz0 €®·I~êxŸ Q@0Ğ{”éŠtˆ $p„šHC\°i@  ;_.http://www.adelat.org/images/curriculumpeq.gifÓ23O	kGIF89a< 1 æ     éÔ·ä¥N«jfffHHH¤¤¤ —Şßê `t¯ƒãÅšHS©ÿ  ep»)))Ò¸—Üİİ6E¨ÿvuj¥pğ¾ôš+å¸}¶†Nê¶oÚµ„sssZZZm©tÿÿÿ¨©ÊÌÌÌä‹!áÊ©éÚÇÿª6ØŒ1(|4Ç§€Ù§lıİÜœ—¯ˆ’ĞR–[şPPÅÄÜ’lE¸¬›ŞšMñÑ¨ÿ÷æ””ÿÖ ù®RÏ¢nÒ~›­}ÿ??333ÅÅÅfffsx¹æ®l}|{­­­ùæÌ’Ã»ºÌWd¶İ¬q0;šÿÌ™öêÙÿûÛÿ™™ÿ©©™™™½}1ğğğ‘½™á©cÿá¸:::}ƒ¹æ@ƒ˜ZRRRÿff¶a÷ÄˆÅ·¦µµµ×ªtÍÍà÷¦Dm™™Ì………ÿÌÌŠ‚÷÷÷ÿï×Ì™fµŸ„Íƒ+å¾Œúºrİ–Aş¹cäĞ¶ïÈ—EY¶ÿ33ìØ½ ©Ş5ˆF!!!öàÆä§\ÿîÉ¿§‰ÿ¹º™f3ÑÃ°!ù ÿ ,    < 1  ÿ€i‚ƒ„…†‡ˆ‡]pmuKn‰“”•‰Unnmr]ru–¡¢ˆU]zAA •Eyu²E£¢˜3T¨A¬®ˆEuq^Ãu´µ”·TÌ»­‰EÁ^2Õ2^qÈÉ¤n¸Í¼‰Â2ÔeBeÙÛÜ†ËàÏˆäÕeB×qyí—ŞÌ¹áY; Äƒ6dØ³§‰Ã‡Mª4,äá ‡iŞ€óFG=¬öb¸GĞ!ìi9(d,†„¸¢æ=2¾H©Á³ÆJÔ‚&Â•#RÒù•§©,­ªÜXBuÉ‰Ô„ĞR €–dÌ™ƒ	e8(‹„Ì$!ÿZ qà Å•+Î^Ñ‚®;sxéÂ	a7]º\ı3O+1N±k¶­ $¤	 @Ò=[–ŒY%F®HP"AFâ
+Ş¼™¤á8Ódœ„ŒA)R„A ‚Lˆ0Èa‘b\
+½@„#Gäa¤„<@†$9f°a£&É…
+d‘€@Qh€˜?ÿ³#dÈyd»Ù+H\‘_~y]a„ÄÑz¨ *¨pAèUrh aT¨1C
+‚`ÇZcI ÁXs´`ÇJuâ‰(šÅ€!Ò0Cmä˜#'\@Âmh¨Aªd@ÃRLÀÇÿlÀBM@ „^ñd¬á¤B@áCg@SMUpã&r¤™&zq $…œ§Ê]d € 8ˆ¡ÁaÁ	rˆ¡CuaÂÀq‚UÁ‘ İ‰Ã¤“fP¡…4ä¨œ=öØÆxt§
+qbè	ˆE	iÔpƒ	'¨ (L¤‰ ¹ r'XXà«¸¢òc›¢×é„ ê! ¯*H’FªêaÂªİ€3ˆñ­¶Â¦K±½qB”Å{«!§~*¯XPQjKDk„6amjÀªA­¥œ¢Ë²T$F
+|$œp
+êg»ÉÂ«‡‚Ü€ÿAº@¶â&X À]äª+zx"4ˆYB	êÈ®§ÉÎ0tQEKèÀ…¾R±”Å@ †oHREÍœŒE„©©f ªiìy¸«ÇaÖÀG½Z vlpQ‚¾ŠA¡’wŠñõV_°ójvŠ †
+ôj˜~”ÄˆáÆb3!‡¾Â/3«¨måAÈ¼Ïr	=ªÃ§A`ÀÅ¦zÈ¦Ã kQ'Ô~Â ÌÛãFÁ†
+j¨AÅ„9`À;.j°ói.°@š,GräÃm^ FQ¬1oÀÿìSCï©‘\ä 9€!=î•w†±CYìG	2àßş‡õ ¿X€Rm"` z‘† 0Pz„HP&Ô!‚€ÀH &  .˜‚
+UxB
+4!"I0âpŒBäAL´a ê€À¦,†‚(B H@BJáø€0%* @CO¦È„*N±'UdÂ·ÈE*fq(.@A
+)p‡<
+‘×ÈÆ6º‘>h¸Ãî€9Ö‘x£‚VĞ=úQGL€ ]12yüc&ğÇFÎçˆ†œ£"9†Dúñ	Npd#Ñ  
+¸àÿ“Hü€'§ĞH'lašô£"ÀÊVº8h fK5¢a<@%cYËY‚ –óAƒœ”Ø`"¦¾L4øàÏ4€4¿­`[0C6`€jJ™"0 5Ah~ÁKÂ2#P”!lÀVx ğ -Ü#%eæ¶b<àx‚‚ù'  D(†€ô ˆ€8 ®À6h’ Àxâ¡èJz  „â¡ À=6à %í@5û°…	LàO8( ¬€(ÁD  DÀÒt 0È;	P€”ôà@p’®ô3¤ÿ‚ö)O<äó 0 &Ğ ¼àfĞ) ÂI8u¨Pğ€<­P + *Õ‚¬À/§ ,¹^OzØ€ şì Ú2Ü“<ØBOK
+ !¡­oA\åùP<À+5€€#…Ğ³'õÊˆ@„£„5ˆWWà„”•‘P l6 ÑÌnVªA
+’Rpe¤ÀEhüÔ’Î¬”%ÂV0:Ô”‘6 €‚ëYßÊuµ%µBEõÚ\“z%¥+ÕŠDº^z†´ÇDC^0'àÙ5 LĞ[¡jö»N@Øk\pÓ S-¼$¼“eØ ÈëO…ÒÇ	fm@P™] ¦€)\¿»Z"Ğ•®BÈh2çcÏ­Ú šC¨GJ¶J€®
+a˜  îYĞGü®u1-IëY×Ó~T¼{]‰ …!Xá †±cğé°–8¦î¶   ÀRh®>¬[+ô@®5³QKÊÚ¶¦Xš>h0Êáá¸À1æËHúá" Áz`…8{ ÉPx§AV‚•nE¤ZHeˆÀƒL*¨–~&i})é6Î·ÇÖc   ;_+http://www.adelat.org/images/nukemoodle.gifÓ56OŒGIF89a< ; çÿ š •450•ˆ˜<>;•z% B?8 ˆ!&‡#Q=>`95w/,›# GHCREA„/>™*&€4=u:F18Œ50QPL/3`KG‹:4›5.„;R…@:TUTš95VWOsJFjMSmPF€JC„HC˜@=Y\YlTQmPfP]€¡B<§@=baY`a_]bdm\^£GEKH„XL‹UPBp‘ggc–TPHqŠœRLlh[—SZke{=s¼Ou‰‹^cnmeseƒ„e^Cw¯nhŒxkakpr_u€d_†gh[q©_s–qro›c[wumˆjztrˆovŠT¤sn‡qi|yk]•{zrD„Úe‚sm{|z­hcm€—g€¹E‹Û~€}|{£~ƒ‚yOÅŒ}z•xƒ¨smaˆ¾‚ƒ€’}uP× zn…†ƒU‘Ôk£‰‹m‹¹‰ˆ€‘……ˆŠ‡ŠŒ}}˜f“¼P˜Ş ‚{”ˆƒ—ˆ}Œ‹ˆ‘†”‹‹`—Ú‰••“–‘“•‹”“‹ˆ–š’‹”—ˆ±†•†™§™–ˆ™š£‘Š•—”´‹‚i¡Ù˜—ƒ™À“˜šc¤á£›œ‡™›˜‘œ›’—œ•šš¸Ÿœ˜Ÿ” š™{¥Æœ œ›Ÿ•’¢¨~¤Õ¥–Ÿ£“¢¡™›¤Ÿ ¢Ÿ˜¥¥¢¥£¤§¶Ÿ¥›¦£•¢¦–ŒªÀª¢›¥¥œŠ©Ñ± ™oµã¨¤¥Äš”‘©Ô¡ª¦¦ªš¦¨¥¤ª ¹Ÿ£©¨ ¬©›¬«£¯¯ ¹ª¥«²§®°­–´Ú¹×±°¨µ®ª®°´—·ÓµÓÆ©§Ÿ¹É²¸®¸¸¨«·Ñ´¸´ºµ´…Æê«»Á¸¸¯´¸»ŠÈæ¢ÀÖ¾½µÂ¾¯«ÄÓ«Âá¿¿½ºÁÃÁ¾Ã±ÅŞ¿ÁÎ¸ÅÕ¼ÆÍÅÅ¼µÏßÉËÈÀÍÜÍÌÃÌÌĞÅÍâÈÓÚÑÓĞÕÔËÕÙÜ×ØâÙÛ×Ğàíßàİİéìçéæîïìöøõúüùúşÿıÿü!şCreated with The GIMP ,    < ;  ş ÿ	H° Aƒı*<È°¡Ã‡ÿüıëÇoß<vê¾mkÆq›:wöôñë7P"Ä“ùés×Œ'J”8qEIT @B±jÆN$ÊŸ÷±…è¢š¢Dm²D¨'J†İ´È˜»}şLu(q;cúC(êK¦<mòôh¡H"Bô.uúHnmØ_0JuàÜDˆPD…
+µšÅj)¡G‰ò$JÓ\J¬ÙãqoA}ã"ıDºPBˆa*Ôiñ¯N…'Bé”¨Y«XZõ-¯çˆ}ƒ*™P¢ÕÆÕ+S¸\•uêÉÕ,aÅŠ«E×ªcø8şkEéŸ«B‘fŸ.¤“{÷¯\½zËU«ûÄŒ;¶°ÿÀÌBK1óèuRVıÌ£‰!MÅÈl–t²‰s¯üŒ…°D¡+¦´"Œ0ÀCcÄhGË)³ãg(ñ#'‰–&–Ì÷ËÒ÷L0¯¬5&›óvÂÔL3ÔPÌ,œ 3‹õu
+!„†I|*L0ÊÜhŠ+šhÒ‰)X²É&®„H0ØeW8’¨‰&´ cO?ã¤O0w”Õ	,_¾rá¿´Œ0ÍüâI'ŒjÈh+É sL3Ú±™Œ:_ 0@mSL3ú<ÄO3²á,öãImœ´¢	'ş¬´‰£bvâJ~Æ¢0¹4œ ‚ğ±J,ß@yĞ<ŸDÂ	.³˜RÙ)†D¢I+ĞáÒ
+'ÃyB_+è­)1ˆ6“Ì1ˆJH˜qÃ ´
+.w2¤0œ|2cÜ.X­&b¯®Üñ˜t‰)¿ƒ‹LÉ4£Æ«œ áA <(‚ˆ ±H-ÍìsP?ê|‚K(3‰ÂÊ,âŠ+¢ıq1ÁhbÇ‘"!0sŠ&§pbÌ"Œ¢Œ3¼ôÑÀ 52†fPR.î8>ÅĞ²JR¬°âI S¦‰' {‹%€Œ["v¼ÌŠ&uŒ+|Ô Æ¸Ğ‡ş€‚‹PÊ,µl#2Aş|“	Q¡Ô"Êàu˜QÇ† b‰!p”êÉ8ˆ!³óKÎ³D¢Ê4Ğw{ƒ`‚‡ˆ²
+.¬#OAüC	"úÖ2u¬Şlˆ&‘ •†±QşG$³4ãŒ.Ä4óÍô Ü`l,òÇ)¸h²²öd²H(´äâ¼Ú2ë«c'6ü(€œUH©®|Q"ÕPãA~P†.€‚:ÀŠ‘8
+¬jaŒP	„êà]-fñ‰UÔB³@.„aS˜bV‰± ‘Kïm¢X‚  
+u`Ï½øÂ L`VlÇkR™Ú,
+$} ÃşŸLˆAZ|‚S3†! !–as°C!ÂÔŠ\ı‚‚XšŠÁƒ  ˆÂ"Æ%Š:qâ‡Ñ8X„ô…‚*¢ğcÑ¤YXâ“ ÊÀÇ2xÂµKÆ6¶áV,¡€‚#L`áØ9¹fqˆ€/¡ò;2áˆó‘qÄ…]¶¤Œg”Œ²„bƒ'°Á’;„3ô—‚(\‘Pè,¥FŒ5…È”8„!NA‹`àc"êpÄ*¶v8ãïxG<êqx˜ôx†™Øà…Q¸‚°€E)x/D Kø$”† ;pãä`Ç8¶eéaIşÁ…íşÁpÄ‚B„!Î\ø"©ğÅ Ä0ˆz<£˜˜Ã8Ğ‘‹e˜ÃâX†56p'ÈB"hPŠI"è@G:Î±Rn(ƒÅ¨EnØ1‘cÄ"A<D0Òás¬ã§ñÈCéñ(‚¾Ø‚Èğ&„¡	  ÄÑ 	‚8Ç¶0	yütæH)7šŒ"®B!7´Æ
+W„#İØE6æº\ìáñè„’0r,cƒ ˆ@†0°` `õ& M¼cnHE<æÚ¸vÃÊ`1”‘}ä£áÈ-baŒpìbF8Ã.v[¬AïHş„d0n˜ÃdXƒ(°#4á0À0‚Œâz8)â±Ú)L»ğF0pñOmtãù¸„-ğğ1axcg0‚.q	s4YÀF!B@[eXÃ8‚ˆ€€Á-(ÁZƒN”8 C;&1‰ü€—`¯aY\búH…,z€‡Xà‚nÄà†=˜wAxF"Ø;nX£€H1…`
+zh/˜"AØÚ1ˆ8øÖ‘İF-21„Fäı¸F(|ÄhÄ!Vª9„,<c½2Ã5Ö)   +ş †i”Ccˆş)Ş‘%äbØB†œ‹mĞC€Ã8üÑjh¡fĞW3¸Ám¤Ôõx…jKözçğÁ.°€ ¤ÁT`Â1MÔ¸éàBòk†íHG9@tˆ!`á#QÇ!°P‡@„ò	8€Bğ„È š¸ƒ
+T r#LC#6 !ÈÂŞXG§{‰w ÂeØcf ‚'œ";ÅøDAÓ~ÈÃ6©ƒ]>ñ„àİğ>À°aàO( 6Ş¡0ÚáÜG0Da†<Á!8€Âàîô€pÂøç¾ì!}tòµÆríîw+<9è¦3şÆñ`€@æà
+.)ÃQv®=® 	H@Z(‘ˆ,ª*ã&fH#.(‡(<!1ˆ`0„1ôA ĞĞ· @188ğ(
+8!9PAºm†1€í’ú-X‘,à°ÃpğÂ÷–É
+J8ËwğÄ!<qŠTàX@ìÀ8 ÛO(Ãò8Á²;8>p@„&f¡‰¡×aÅ@¢ïØ¡—~è£(h¨Ãƒyˆ;ÀÁ€§h†1xQa7H|-ƒƒA£`—(I6ºqE%)ŒXdø 	Ÿûî:°¡&§`´‚‰:Ä.W)@–şÀ„< •^ğ‚ğ³Ylég­¨Cîş€	tÛ)Æ6”õyÔâc`ƒL4ÁŠk<O‚!]P Ğ àJv€”ñAºgÑÂ	¦ ùfĞbqG¡OÂ y²Çàf ‡”à
+ÈP ‚ †0&  73+dä0¿ĞV¦÷ql09Gñ	Ÿâ@ˆ#‡`u@	w 
+Æ 4 ÀO`}eà* l x3+1Ñ
+¤OC	šà
+'y‘g
+Œ!UsüêFc*$ 30ˆ ‚ğ|´u¥2
+3<şœğ2­ 
+-G;äò!³P-(Rı‡„Ñ¢p¨,(€€1àw0‘Çc¤X³‚¦4/!
+§Æ 2&"
+ŒWär'yRî@	« 
+¸„$`ZWPNhzÃ	ïó%‘`ÖbŒlr
+‡À
+ÜDÄ°FÁû@¡P.  €¨
+Éƒw.h2SkNXzÇ	§ H$P† 2„CÕp8!×µ à!õ6÷ÓGù'w`e 7£¥Â	tÄ	s1&8/³ğ<ş°Í€:m0PÆ(ilPB˜eÀş£ÀŒÇh0p0;Ÿ@ó°‹Qqº` <POPv_‘e ‘c0^ğ…Üó”l07Y*†ô(ì@ ‰40 ğ ğ I€me0p°–Ü4Û~^ ^ •ppvµVkÌx
+\É@ùÁ 0– 9`Myc`p“Q•P™…l€Ûsz?;¡p
+NÒ—\áü`¼Ğ	Âôk¹˜BwÜ3—áÇ=và˜}wP‚€À
+Û|x²x¢ú€Î€/s ,É=ª9•v˜kùš9‰œPxñ±|İ8Í@¯éx,YhdÀ=M)÷xR³ğø Ğ™'ÑÔp
+K67ãšÖg}s±FH·	\‘úÀ× J)Psa:ù	Â°òàš©ŸZ‘!‰AÍ0.Æß óYñ ;_'http://www.adelat.org/images/master.gifÓ89OnÿØÿà JFIF  H H  ÿÛ C 		
+
+
+
+          ÿÛ C                                                 ÿÀ   … ÿÄ              ÿÄ 2       !1"2AQa#R$4Bbq‘ÁÿÄ              ÿÄ *         !1A"2Qaq#‘¡±ÿÚ   ? õNˆNÑ	šn­ç¹$RïXÍVÉ¦ı´ô6¹$'ıß3~Ä(r…áuÁ—;}ˆÓŞEœÑ–¿‡îÜ=²©¹5rÅèÀãÎÌ¼ıÁËıÜ3ù×OO«Ã¹©DâK½Ù'vuØ¦Áú´J$$-©"¢§)­Ïè?ˆ?‹°wË46ùZ”»K‹Qè`G“-ÑÍŠgåDî«Ù5ÇÓõ1-Ù'ù’G¥Ö[ù˜½7.©ì)¡»ÇŒé@É0<û'T˜uî—»·½>úéûŠõ¦¿yjEEL§t]tG‘JiÇc:Ón+Nƒ©äUSIÿ Ã	Ÿü
+²Ü6›(¬.¦¹5Ç¥8‘MÕäHĞ ÍççBó®.™±ÛŞK	$oş –{;JºùOE”ÕƒB
+Ã„ß.`~p©áQ1¥úè{ÌÏÄÓ€T@EK’¢aKïù×¡-Cİ”7İ½R½x#²£q$À–;¡*q\sá~º˜Ì¥Š÷u¨ßT;D'h„ízoqZP|G†K¹ç[¶Ve]s×Œ\ª 2ÇUÒ^’ªåD0±ùñ|B™}DïFrj¦æ3Œæ÷ƒq¼.Û¼4ô6¨§¼]axÔ'Ay.@‚Lcÿ 4ãÄÚöS}Ï´7uÇºø¢ÍUibAÃn¸Ø°ëg×^"D-a|Á¿W~Âk_š@ÄíÃ,öûµïA_L­,•†İv½ñQUe¢l›"Rm	1œß:ÀÌ-ulsí<_hÃ}Í4İTOXL³‰úYÎ®IŞéÖğâ*	½ÓåÍ=ŠYñÛIÓe>e²EX¹˜Û‘mÊãÛw4’,Q¨ğ§möjë,T›nZaâ{
+7Ö#%DÏ|yÕq®†ÁZ˜Ê(şÑ-UÄƒ´7×NÆŞ]ƒì­KD¹1‘zFÛJ™é¯uíøÊöÔ‘ÆemÍñ ƒïbÜ”µõ=}Éaê%DGÙ§`zLÇF„[2òºddÛ‚’¯nÿ YçÔ y­#h¯c¿icµÜv»‡xle®“¾OéGd6RÄ¸ó”*ËíJM¡¯íøşş5ĞùºU®ÿ 1ËY­Û{Ulm—Q·Ü(éhìî£Í¸Ó=WBQˆ6/=ìqÏÍsÈ¸Ğ/{ÿ bY T»-vø—µjk÷{¬K’åä h„l”Œ_ DûrŸß]zr÷ó	J5¿¼¨ÊÜ—;C”öå™bcf1/Y$áøõaµqIŞ’÷F“è½³ß˜ådÉê'}ı¤õÜÇ»gfÄ°ø«¼ÙRÔàafBÈ|]UppÚ6ˆ“Ùã8ÿ ­[s?;GUó¦o+×+vµÜÊã,+â¸à€àÉ³ãí"ÇÍß]ù²iBG K1Úg[S~^¹S¨îYµ—iO.hÏg*¦ÁKŒ€ùTEW”Néö×.¡ª®íIù*çú‹Øİ¿ø4îízİÉd…Œ6QoÔtJA¡;‘QOv>3ßH3dğ5ÜÍM¢á›)ıÒÅ}–ävİYbÍ¾ËÊM§¨MQsŸ	ßM€¸$¾&¥ûÍ(öËrÅÛ')b99óê¹ Ú%s<¹¦|{å;ë¿íñİĞ¹mÖØ¢l¬—Ò£lè¿=§¿u·DEàyô¢øó¦ğ—™ºD†ÓhÕY¨º®7úÄ6àKé*&k©ÁC(H„rü~5„ù0¬š¿jíÚú·jâW²Ü¡%	‡P²…ÔşyÊùÖ®%€ÚD†«dm’R­¨‹ÅhœÇ™Ÿ0‘|Ê‹
+ºÄÀ‹À6=%K#P1€« :IßİŸğTs–Sğº`‚«´Ú„7#hĞ¶Ë`,Š("‰ÀQ0‚8ğˆŸDÓP›Üm¯s-™–ÕqçIœqöĞğ9ÏÏeL¯…Ò>cd\R Ï‰Û'iO…Ê˜ÏD…şQ•m8´‹å~ÚÆÀ„Q„
+	=‘@ÎŞ]¿&3s*‘çj3 œAxŞútúœE~ÚÁtéäC@ª„¦ÔÛ£TMÀm¨¸/6ËyosG‡Ë’g–s¦ğVª¶†‘‘°¶\›¬dRÄzkëÉ×ÜhIT¿—|à»yNúSÓã&è\4	,]­_qÌ¿ŠãÌË±ÆÁ‘$V^èÈ„‘USøªkF Ws;Üol-¿CmoiOÔ\ŸRR8¨bŠ¤FH²ˆJ}ÑU~š\}:¡$w˜¨ammØc aÖE‰êÅBJÇdW¼¡( ªçT”pm",±ƒ·vöØR•òV‰X&!#ï@ª®rs¦Jú¶¤˜,rÎ{¦3©²ª%QÓñ€ÄC³6Õ|‹»ûhµ‹SM%cG­aô}DÔ{¢¢
+(dïlŠg@³¡µvŠ‹¼ÿÙ_&http://www.adelat.org/images/email.jpgÓ;<O­GIF89a$  Õ  ÕXñÔÀá]ÿöğÿrà§‚÷éàå^ôdíÉ±ğcúôïßrÿ«s÷àĞĞr3ç½¡ÿãÑŸAÿæÕå„Cÿ…4ÿÚÁÎUÍg#ÿíáç³‘è«‚Ôağläw.İn$ğÁ¡ø×Áÿ|$æ{3óÂ¡ú–Sğ®‚!ù²‚ÿÑ²ÿDÿ´‚}3ÿšWÂP?ÿÈ¤ÿÿÿÿf                                        !ù     ,    $   ÊÀ	lH,È£§%k:ŸĞ¨4ÊbN¯XªµÙˆ2U,BXÅb•&ìY¦Uh(– db‹9AÎ1.b RqO"11.fŠ+g‚1„†[N%g.2ft$–ƒ…ZQb1Mf g¨˜ªP‡NŒ±1#t.·™«O)g¢Ã. ·++*O»2]Ÿ(®²N·€1&
+NŞ2ÕM..2ôçNõ2
+õşù2ŞeHEÂ‹ƒ*\Èpá‰  ;_!http://www.adelat.org/img/xml.gifÓ>?@OR‰PNG
+
+   IHDR   P      D¸½   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<   PLTEÿ™    ÿÿÿ‰€÷Sõy   ÌIDATxÚb`¦2  f&ªf€ ‚ÈÈÈˆ!G`b ¸©e @ aÈ ”@H‚}2j"33„`†bƒ"ˆ„« !€ Bq!30!ÈŒ¬”™	Å@4	 €ĞdbBw!PŠVB”11aÈ¢„: €°ehÌ@Í…„<Ô0l @ !„%EÊ’@ aä¸™ä@è20À"yÕó2@ 1P»´0 ¯ ³œÒ§    IEND®B`‚_0http://www.adelat.org/img/b2evolution_button.pngYimage/pngÓBC@O	n‰PNG
+
+   IHDR   X     #ÊD  ˆPLTE   ŞççÎ{9­­­ŞŒB¥„Bï½c½ZZŞ„BÎ{{Ş¥¥œ”{ŞµRÆssŞ­Rœ÷½Z”Œs”{Rc”½19JcŒ½”  ½ÖçŒ­Îï­R¥½ÖÖŞï„¥ÆÎŞçÎÖçZ”Œ)½J!{{{ZZJŒs9JŒZRJsssµ”J „k1!  „c1kkk­ŒBÖs9ÆœJÿïïcccÎk1Îc1­kcR„µk”½99JœµÖœ Ækkœ  Æ¥Z”µÎµ9999¥R)”{9{c1”s9111½œJ­!ŞŞŞ 1{½”J Œk1 ){)))¥ŒZÖÖÖµŒBÎÎÎçï÷ÆÆÆ½¥Z„9))cœsœ½½µœZ„µÎ¥Zÿ÷ÖkcRÿïÖcR)cJ) 9„ïÆc 1„œ{9œ„Z”s1­”Z{sk­ŒZ”””­ÆŞ÷ÿÿ÷÷ÿB{­BJJ½ÆÆsœÆÖçïBs­ŒŒŒBBJï÷÷ïï÷ÎÎÆç”JÖŒŒÿŞkB9skR)!sZ1ÿÖkB1scRÿÎkç½ZRB!Î¥RkR)çµZ÷Îc„sR÷ÆcZZZµœZ9BJÆZ)µ”ZJ”RRRµÎŞ!Zœ JŒÿÿÿÿÿÿ1k¥”k) BŒJ{­JJJ{œÆÖµcŞçïcZR÷÷÷÷÷÷Ö­cBBBŞ­­ç½cïïï91çµcŞµZ{sR1)””{J9{kR1!”Œ{ZJ!Ö­R)!sZ)ï½ZZB!ÿÖcÖ¥RŒ{RÿÎcÿÆckR!„­ÎÿïsÆÖçZ”ÿçs½œZR”µJ!½ÎŞ½½½9s¥JŒRRJ9k¥RJJ!R”µµµŞµc B„”€?¤   ØtRNSÿÿÿÿÿÿÿˆÿlIÿÿtÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿyÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ]ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ ÿÿÿÿÿÿÿÿÿÿÿÿÿDÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿq>`  ½IDATxÚ•V‹_EË»ìaFÚŠ QYˆ	DT§rDiPP"ŞÉÃ|¡‡Òê94Bé"ñ:$½4Àó•G):[F‡‰œùèş~3»w·öÑïÍÎîÎ~÷»¿ù=fsì@Å´{"ñÕ”€5àCÅY±e”°F$°›Wˆã¾õPªğ¥ÈVìFt'¥Œ1|N¯cÄâÖŞDc>1ÜYÕÃ•-{ı~B†I`è[ş%¥[vĞ[•ë³ã#˜I³$£H%aD|D	cO«Ü(L¦Œ³µoÆğau„(¢)y*ÊÃ‰a‡Òº÷)}*`&l¯éÜŞfÿ§0üwví÷‚Ó¿ÉfX„¶mMÙ>DØ²›n9küäZ2ps!aé’cfª&ƒIŒa:T²©à‹qsr=åÖ4OnÌXşL†|ÖÔ¤j¹˜ÈÅarÜ|ºc9í‹Gî¤+@yuÒÇJÒÁ\#’—1tĞØwAÁ#G4H_¶5îŠšA=¿xÄb9°ÀÑ*¡t<¨Ûl>İî5·o{–»xé˜5IÒ,M™öóÖ*£ô:äÛ	AºNŒä —¼(Y$IÒmÂÀ9H˜bÖmi’ô	–f¶eNBÛK~¿İn÷‹f‡k~²û[¾pòcªD1 Ôí6ÄÊ´)@¾¿™hi)²M?R&‹È…HY‹)m³¢4§Z­¹Ãd¨ÚTÍtòî#4~"ãñTÑ%¨ô.eøVvíÿÕ%_òÉÈ¥Xó«“Ãd^.Ğªhùlz•fRJd„d×s*»tYFç\ÃÉÕù8LhX:ÖUï Ş"Í_ë7e[íÃÍÊ†i…ÍgÈJË;œÜ½³¬®¯¬q¶g§7:AQOzrğ‚øŸ`ƒ7Pa×aáÍü†aˆøLá¼gÏ4è¼@>‘Ã	ûn;¹‡±4¸Ëãšëúëhì[ÙÇl`óİ`Æ'Nší¸æ
+!Ò¨	ÒóİÏ WOË<sé]ÔÆÍÀ9`ƒro:Ä-¶Å²´ö~Äs°r;¿t;@7×Ş?ÜŒ¨èÓÄo§Â}YU5ïñCò+m÷ ÓnÈf» Oğ_ÜSVÊQI¾ü'İîf_í…‡V/*<JUE—¡STí©Š*pQxÁrx»ûN,)é-èƒØœXL‹¦qa|9)%ÍêÚHR?$lM0™Î <ÓÀkíÇr2Bùj”Œ!zO-şÜ1
+ıVÏ1èËmYqàótğÖG‰'¯^/ÒÖ'ÜŒZ0Q]ˆÃ¥âGÃXÎC‹·šĞ¢”d]˜L.é™àÂU`e}B°„Æ{®ÁzzR¬½¼"+1!×°kq+±¦(˜%Y‚[Ğe.Üš†PÚ)”X‰†òòòÁgŸø*âãò5±´?ÔëXN³mut¾­'»‘vy#›/ßˆJÂYHÂË•¸$¼ ˜*.ñ½Ç×æÇ^×„ƒ	£­»yßÇ«µ®ÓKK½Ñà…—mÃĞ;}ó ‘½“y†…WŸ4óG=+æ;<¡8ú»#ä÷ã¡Î-Æ¬€W±¹ãTXSí¸R³„…a‡‡e†ÄUae‰¦[oÕsĞOTeÑ¸Ù [Õ{£T<Øü¨ø“¢®ßæthÂ5s‘S]ícºğRXÑf5a™ËÂïÍIy<Ş	6ĞÑ #ášãÏAZ´bIbêâ>æ*oÊÑ…•›G`¸£ı¼fï3ï
+;yƒß_+'H½6sáÖİsGµAoÑªhåáµ9‡AØq>g­<rzNÖ]Œ¿“¸68áü•Ç…Ç.ƒöëõ/;î<ºïŸh$‰<[›.“‡+éŠğfah#ÄğÏÉMé˜ÿ!ŠH‘·øÆÿcûöÏ
+
+
+
+ù!P9DŸAŸ‘aúMş¢Éªî; ›    IEND®B`‚_+http://www.adelat.org/img/valid-xhtml10.pngÓEF@On‰PNG
+
+   IHDR   X      TúÒ  )PLTE   ##GYUJ€vYŞŒE‹dˆÁ´Ÿg}}}}ë§Qmmmòßß·>¥!]]]ª$\UH\UHOOOİ²jT|ºùïïîîî?<5™  ™  Î§Q¾K$à¾s]K$³“^¾šK±ÃàNK@NK@ÎÎÎÌÌÌ¸OOQD<,$¾¾¾÷Á^Ÿn	Ep´®®®¿__¡·Ù×>lz‘îÁ^}e1Ş´XĞÛì	6d®mX+&Y¨ìÏÏ’«ÓL>!U¦<1ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿLLL§ÒîòøWSP<<<£9$ÁÏæD«//,,,M¢®ŒEƒŸÍ>ÿÌfŸŸ³E)s”Çr8µµµßæòÀL“£   ctRNSÿóÿÿÿÿÿÿÿÿÿÿÿÿÿ ÿÿÿÿóÿÿÿÿ¢ÿÿóÿÿÿÿÿÿÿÿÿÿóÿÿÓÿÿÿÿÿÿÿÿ¢ÿÿÿÿÿÿÿÿÿÿÿ0ÿÿÿÿ¢ ÿ 0ÿÿÿÿÿÿÿÿóÿÿÿÿÿÿÿ0Óÿÿÿÿÿÿÿ³z›  ‘IDATxÚí•}SÓ@Æ×Õj¢ØúR«DŒEA¡Rû’¾OÄˆQ’¶'–¿ÿ‡pï.eÒêL+şr§Él/“_î{vÖfï?pÀMrúx:÷ü¢À/şƒ/ÜÇ¿œÇ¼bDQáà`‹Rg¯ FDÛŠE´sT8€ùÎü9¤@Ü&òWôÄßù~Ñ§4œt Rç Ì¨|ıD^ NV‰²3h|{/oc@TGliY<êjm Í
+1¸2B4kœ…®n‘Ëæ$üüæ{{ß€#¥Ó°N—ÿvy
+	WTÖøçÔd‘ï (kNzãà›—ÛûÆnìóà.µøÊóÜ}–"i·8–¬°eœPD‡` C1ş²ÄqÜ6à.¶xïØvu5ë²r…O‡I°ÍøÍ½]‘–JÀµFÁ?–t¼4`æu±¡$P:ù–)Û\¬ö¤UmŠ_”µ-”@#ÜeÃıö0®¼€uè²¨A,5z«Ipf®3^¨O¸ XWÊ&8å~ŒÁ½sl_íe]-şhIÛzáë#@(-G'j%‹ËãÜ½Ì.3C‚ßš¬0,é°)l½QVUˆª²[­êŠfhxË¥Qî°	yFUıV¤WJé'Ù[Dór¥!÷†âv·¼Ö Ãµ]Æ†Ï.S'­úLì×/sŸ¼i›»\pJˆ¢@7¡:mAçàˆ¦›ñ0î<=ó"İ3=Õ?WT¨ùoqÊ¦è	rîÁx£w¯ş~ç”[šñ	²3äÎühÚÙ4ÜÙŸy›š{‡éÂbé²NéŸ“cnúx}ín¾ÿyrÜ›>®>º¢Á¿^a¶õ'‘    IEND®B`‚_"http://www.adelat.org/img/vcss.pngÓHI@Oó‰PNG
+
+   IHDR   X      TúÒ   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<  €PLTEÿ¯>è´jÿÜ¬ÿÊè¸tÿÌ†ôÃ}ÿÔ˜ÿÆvÿÉ}ÿÓ”ÿâºè¯^ÿÂlÿÎŠÿõåô»mÿ¦)ÿÖÿ«6èºyÿ²FôÈŠô­KÿØ¡ÿÀhÿ¾dÿºYÿùğÿÄrô¿uÿ¶Pÿöêÿ¦*ÿ½`ÿàµÿ±Eè½ô©@ÿ¼^ÿÎˆÿß±ÿ¬8ÿÏŒè±dôÆ‡ÿ­:ÿ´Kÿ¹WÿµLÿşıÿıûè°aè¾‚ÿÇxÿÀfÿ¾bÿ»\ÿ°Aÿ×ŸÿÒ’ÿĞÿª3ÿ®<è¶qÿéÊôÄ‚ôÅ…ô±Tÿ£#è®]ô©?ÿæÄÿóâÿ¼]ÿ¤$ÿ¤%ÿµNÿ©1ÿ¥&ÿ¨/ÿíÓÿÚ§ÿÈzÿ§,ÿ¨.ÿ¥'ÿçÅÿ¬7ÿ¸UÿíÔÿÕšÿÆuÿ³Iÿ±Cÿ× ÿÅsÿ¿fÿ©2ÿÄqÿúòô©BÿïØèÅ”è»|èÜÊôßÃÿã¼ÿèÇÿÃpÿÙ¤ÿÖ›ÿÑÿçÆÿûôÿü÷ÿ·SôªCÿæÃôµ]ÿÃnÿìĞè¯`ÿ¨-ôôôèèèÿ£"ÿÿÿé2Ã9  ùIDATxÚb¨%d¦‹˜Š°ˆ¨šªªf¨±ˆ‹0êèğğğ Cm™ K@\@LÌYWtÀÙÙÉ‰äÊ]t hp=Y Ê2Ô€•‹•ÓÌŒƒ#&&
+d8‚9Í]L ˆ\ƒƒåµÙY“Í¥,”ÔÕ½à@]İB’×BTÜ €È5˜É_˜9Ÿ•×2’“S_´@TTH]TÈLT]¨@(^BJO0• €È48E)ÄÜÚ–×ÀWT3E+›_8»_8ÍQX¸^¢ŞQ³^ÉU €È4XÓ_O›CÚPÅ^¾^¿^(¤¹^*''$¤Ş¶ŞV00Ü[M €È4ØLQÊZ;Q^Ô^8T&ªŞ_»>ª><<Üß¿¯Ï;PÙ'µ
+ €ğèáá	ezxxÈ Kñ30GsÄ2‡
+j×‡»zzò)×{Ô{ •‘ñ¬g¨sw „ÁAuàÇ«â²û8@¶L0XÜ×a0·¿J´¤¼Š^Rˆ¿·k&pw $Ã…ù€æ©à °C½€–ñ){x ¹ØFP)ÕRß
+è`læ $ƒ=€õ¾@Ê³è^vhˆ ùh¡”#d)jot0š‘PƒÕ`/ å	6H(#ì“A382”•~ˆbò@˜Ë€]Ì TˆçAñz¢ÌÀÅ•è§ èƒjnX!0ÀFPxúÂÃ¸Î—äT^“7Ùà ?!.%C«ˆĞ0ÔğáJæ‚ 4ƒÁ€‘*ü€æÉğEÚ')K]Óà< œ†+Ø`€ Âf0˜+ŠÆ:P x²3€LÆåb!¨F.ƒ|@Áîî@hy Mó«GJÚìˆ´ˆ=Œ9ERÈ\NP^‡%7€ Âˆ<P\ÁÃa0$°¦Šl @Y0êë³}`fª ºÍ*Â°„*XÒ±(dÓ",ëë+á €Ps<C(³³³ƒÂhÅÇ zÔœWÊÑ …" éIˆœ@¨eX/ÈÿĞDJo¬Î€œŞàeE Ğ` É	Æ Q=¤,@ØJ7H±àéáˆYÎ¡•nvş®u®@£¥á[‹\V eå±J„ Ğ`o`š“22*A)„ ˆ²DŸ!Àh0(KJ¡–n Da§¯'è
+
+
+€HÀ: €(¬¥¥õíÅ+ÔWWo5€ ¢°]‘«'ˆb0„@”¶„*|CPÌuÑ    
+Ûnºr.¥îp P¦@ 1PÔÚTea4qC 7	  şP6$oa    IEND®B`‚_'http://www.adelat.org/img/valid-rss.pngÓKL@O¸‰PNG
+
+   IHDR   X      TúÒ   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<   ÀPLTEÈÇÇæëölpvÜâï­Èèüüü„—­z‡—²²µÎÔã[XY……ˆ™·ØÖÛåÙ×Ø÷óçîíí¨·Ëòôúw{‚Š¢»óóóòëÙ•«Å²ÁÕíñø^hs-,-ÂÀÀÂÊÕ›¼á~¡¦ÂS^hECCûùöÌÛïãááôïâ––™ÉÑßöøûâçò–±ÏEKRÓßòÀÔîOU\èæå=CHùöïéèèĞÎÏŒŒ6;@`]]¡Ÿ¡ßŞŞSQP^^^   ÀåÿÿÿâPÜ  ~IDATxÚbP·¡	 {dÀ'#`O ÙÖ Ä`ÃÇÀŠ¢Í„A™É,D@6ªš(ºDeø¬ÔÉ,+ÂÃ¬!ÂË+¡ÀbÛ©ğŠhğòò
+*ğ€ QTmÆh°³€”¸½»½¥±”ˆ=ƒ”ˆ¯½”†½‰½°ˆÈ`€ b°A5‡UH’QÆ„€Á*@ƒí™8ìõ-ì…í™Øí9tØ€2ØK3Ùskƒ ƒ5%µ˜™µyÑı€˜:ÅíÕùÌ,…íÕ¥ì9A›1Ø›±Û+*€ Mc„©Œ’šö¬Z„BY¨“¨ˆÉÄSÕ±çãæĞælÍao1 €lìM@!À4U”>4µ´ø$F;pXØK[ØsIÛKÄØeAÛ«2ƒ €ln”†€$ĞTK&{If-V¨'pIP¼‹3ê0Ié(2éë+ê˜êKéë+êH±’…5@ 1Øhp2²‚B ,le˜˜2áMÁ<
+òl
+"l
+Ú"llòììò@JDC’@ 1ØprjhÁ’„’­0È[+Âc,º°@ ƒ99%!YÕÂVÉH›ÛJ[™ÃEØ˜¢ì-Í9„Í…--Ì™ài—¹*B,<rƒl°3ÈX-f)[[˜Á–Ò¶æJ@.ƒ­­•’­­´¹­­%ÌdæêjJˆ‹ó@ ˆ‹95…uµøl…í¥•@AÁLÛL s”¤i OÀ–âs1£ Ì`€ ‚t®0ê8ìMAÆ¶5Ç&Äööpƒ±‡1£½ 0ê A@0ƒÕÄøQgnnrY3ÚKÈÃÍµ³ Hó²²‰ÉØ*™››KKC¶2ì­lí±,‰Õ\vv¸¹vÖ 1˜pÂ¶FöÀ°à †(“)0H­,ÌmM±ÌˆÍ\fva6m9xy@àtÌlÊË¶ÒjbjÊ–¶VöJ¶@çr IS{lk!§\p©¯k/$l®5@ r3«T‡²š˜«½¦¦(ÁÒ
+ô€õ‰ˆg’—CªA ˆÁ†YÒŞHLŒZìğ«±2òrr2k(a ˜yX4í5˜„ä«&€ –n–ÆöÊübbjFºOKšª&(àáµ·—`¶fãA©ó ˆÁÆH”¡XÔÀf³jò‚ÓŸ†+q‹ kI`|0ÉkË¡@6¢2ªĞ æšÍ/É	1_` ÕÒrâ² j- €È`¸e~#!Â£´+@¾½j@  ÔRÕWƒQàá¬™@›YÒFŠ]\Í`€ ŒZÛMÖàÔÂwº(Fğ²K	£;ØÎ €@µ4J¢UÕVª’öÄ%
+p(Ë³³iË¡@Q[X<À2X£‰@ÜÖ´  K(!ƒ]òµ    IEND®B`‚_(http://www.adelat.org/img/valid-atom.pngÓNOO+GIF89aX  æ     «±ªÿÿÿ¬²«@@@€€€­³¬¯µ®²·±®´­°¶¯   ·¼¶µº´´¹³¹¾¸ßßß®³­±·°ÏÒÎppp¸½·ŸŸŸ000»ÀºÎÑÍÃÇÂ¯´®ÄÈÃ```ÍĞÌ¶»µïïïÂÆÁÍÑÌÆÊÅÉÍÈ³¸²¿¿¿±¶°PPPÈÌÇÇËÇ¿Ä¿½Â½ÅÉÅÑÔĞËÎÊÎÒÎ»À»º¿¹ÌÏËÀÅÀ³¹²ÊÎÊ°µ¯¼Á¼ĞÓÏÌĞËËÏÊ¾Â½¼Á»ÅÉÄÀÅ¿ÊÍÉÁÅÀÇËÆĞÔĞ¾Ã½¾Ã¾ÏÓÏÉÍÉÏÏÏÄÉÄ¯¯¯²¸±ÈÌÈÁÆÁº¿º¿Ä¾ÆÊÆÂÇÂÊÎÉ½Â¼ÌĞÌÄÇÃ454ÀÄ¿ÑÔÑ¹¾¹565NON´º³ÒÕÑ(((ª­ªÅÈÄuwu‘“iki¿Ã¾(('ÂÅÁBCB\^\vwuOPN¸º·¶¹µvwv‚„‚ƒ…ƒ555gigNPNtvt\]\¶¹¶hjh‚„µ¸´„…ƒACA]^\!ù     ,    X   ÿ€ ƒ„…†‡ˆ‰Š‹Œ‰‚ ’“”——	
+&:GA"$D%B15V##<51BN,$"6G: &
+9	š˜—•“„Ò•Ğš	)¢4?FYª$,%8<#2ï2#¸I¼¾AF?4&(8 ‚&h–ª¤PÒ5l"tú
+„…R.Z<YÅ"I+ø|ÑBˆ‹84|è!dE/Q\+v,ÙŸ]SÈ°¡%LÎ8åèvcT¸Gll ÒªÇuI P€„AzÈÑ#	‘†ãçï‚DX­§ÂkÙÿ¶)˜ĞäÆª¤¤ù€„¾pÕÍb”â«…Ìş4HĞàC‘Â(w‚	0ÅQú‚…î ÀB°k ”A¢GK aõñ3†l Îµ˜0kŞ,Ñ‚¢à è@3dU‰#ÔTâºº Z®P¡¸×“(: k€,ÅÍf:ƒ·Í<<Ó¦C*Uï’V¨÷ ¨  Ä‰( A@ € È±ƒ5xµ„SÖYËä´Ózí‘'x3_>d1,PÁƒ~ @~PÀUH 
+ °Q<PÁSáÂıPZÀEƒa†Aqè!ÿ) ±Á+àğX   üı J(0Pğ+€„@2`Ì•—4nI3ÀOîu¶ä3ø@Z”#Pi%X  (ˆa@&	œ9CjDz—ÁÉœ›Ùé ¤ä¹'t~BBŒ @Àj*   ¬‘hN€eƒi
+9i‘sù4œ)iWNB)%e  
+*hÀ„ ' G˜c–¹h)iZ–]XIœ˜º÷Ş\wfàB#–xb ,ĞZu‚…ÛEÈãSdñXdg)À®¹~{©5ÄÁGÔ‡õ‰p_¨í€ *À+Xªl±`ÿ%ñ`UHØ€Y)TèŒ·”€K°†œĞ	X¤\Í‘ğ\ŸW¤aª¡‚AÀ¢dÜÈ½Aöv®ÂeQqsUdAã±Ô
+Bğ Wˆ1ˆ
+' P@ª xA´Õ ²êV&Lj![–úôP¯sÕÅé]
+ëÃS;ÀĞ†pÑG0,hN0aÇÚNÆ-ÒºÊI'DïÅ‡\8§H]Z	NÉ€D[Œ1ÇfŒÆEĞ¶R	;^{Ä>ı|L!A#Ã-°Ü™NäÙ¦O›«Ñ*T;¥;Ãñ0±CJ+%áRO8¤ÿ­VzF®çÈöÜwïıö'VÀÿÔÁX³Y)ş ‚1a%_) ÌÒ/XøôB€`U	F şòÿ´?p}úƒVÄe¥@È€‚À©!Áˆ½ZóÛ_ıLÁXƒ ßş(èAû%0„`B<‚²~h` ¬
+¨@€ŞW	P‚ùıF8ÂNp„r¡±@C‚pY!(@cèÃ®&0` ı # À¨O‚ìŒû€H !
+„ÀbûÓ¿ô¥Q Y<  úw)¦¯Š„ 0pÙp«â)X]Ğ$¢ öØÇîïJd¤ÙÅùAÀJÄcë§Å$/ˆ‚|á5xHE6Ğ…H"9	‰T 5è£`,± .^²5+” 
+”ğÃó‰”\$£)myBO¦–ñã']$ˆîï˜‚T Aãó€0¨2Np|x8¯¹MLr³]ƒ’ 5i9(T€›Z€:Ç§¬x¶³TTA§=ãù½~úóŸ ;_*http://www.adelat.org/img/somerights20.gifÔQRSTU_WebResourceTextEncodingNameUUTF-8OX^<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><TITLE>BitÃ¡cora de AnÃ­bal de la Torre - TiddlyWiki: llÃ©vate el wiki en el bolsillo</TITLE>
+
+
+<BASE href="http://www.adelat.org/skins/anibal/"><META name="description" content="Bitacora de Anibal de la Torre: e-learning, integracion TICs, Sistema Educativo, ..."><META name="keywords" content="elearning,tenologia,internet,educacion,tic,tics,formacion,tutoriales,blearning,manuales,educativo,formativo,profesor,alumno,profesores,alumnos,enseÃ±anza"><META name="generator" content="b2evolution 0.9.0.11"> 
+<LINK rel="alternate" type="text/xml" title="RDF" href="http://www.adelat.org/xmlsrv/rdf.php?blog=2"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.adelat.org/xmlsrv/rss.php?blog=2"><LINK rel="alternate" type="text/xml" title="RSS 2.0" href="http://www.adelat.org/xmlsrv/rss2.php?blog=2"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://www.adelat.org/xmlsrv/atom.php?blog=2"><LINK rel="pingback" href="http://www.adelat.org/xmlsrv/xmlrpc.php"><LINK href="blog.css" rel="stylesheet" type="text/css">
+ 
+<LINK rel="stylesheet" href="basic.css" type="text/css"><LINK rel="stylesheet" href="fpnav.css" type="text/css"></HEAD><BODY>
+<DIV class="pageHeader"><DIV class="pageHeaderContent">
+  
+
+<DIV class="NavBar"><DIV id="Logo">Â </DIV>
+<DIV class="pageTitle"><H1 id="pageTitle">
+  BitÃ¡cora de AnÃ­bal de la Torre</H1>
+</DIV>
+</DIV>
+
+<DIV class="pageHeaderEnd"></DIV>
+
+</DIV>
+</DIV>
+
+
+<DIV class="pageSubTitle">  EducaciÃ³n - FormaciÃ³n</DIV>
+
+
+<DIV class="main"><DIV class="bPosts">
+  <H2> Detalles del post: TiddlyWiki: llÃ©vate el wiki en el bolsillo</H2>
+  
+  
+<H2>30.06.05</H2>    <DIV class="bPost" lang="es-ES">                <H3 class="bTitle">TiddlyWiki: llÃ©vate el wiki en el bolsillo</H3>
+            <DIV class="bText">                    <P><IMG src="http://www.adelat.org/media/image073.jpg" border="0" alt="TiddlyWiki" align="left">SÃ­, ya sÃ© que todos los dÃ­as salen nuevas herramientas y no tenemos tiempo para estar probÃ¡ndolas y mucho menos, usÃ¡ndolas. Pero es que uno, despuÃ©s de algunos aÃ±itos, sabe diferenciar el tufo que desprenden las herramientas cuando se trata de algo diferente capaz de iniciar algÃºn nuevo camino. Y lo que os presento hoy tiene bastante de novedad e interÃ©s.</P>
+        <P>Todos habÃ©is oÃ­do hablar en mayor o menor medida de los <A href="http://es.wikipedia.org/wiki/Wiki">wikis</A> y del impacto que estÃ¡ suponiendo en la <A href="http://www.adelat.org/index.php?title=construyendo_documentos_entre_todos&more=1&c=1&tb=1&pb=1">construcciÃ³n compartida</A> del conocimiento (<A href="http://es.wikipedia.org/wiki/Portada">1</A> y <A href="http://www.adelat.org/index.php?title=wikipedia_g_matematicas_g_planetmath&more=1&c=1&tb=1&pb=1">2</A>), o como simple <A href="http://www.adelat.org/index.php?title=el_wikicuaderno&more=1&c=1&tb=1&pb=1">wikicuaderno</A>. Claro que para crear un wiki hasta el momento habÃ­a que suscribirse a alguno de los servicios que se ofrecen por ahÃ­ de pago o gratuitos, o disponer de un alto grado de conocimiento tÃ©cnico.</P>
+        <P>Pues <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> <STRONG>es una simple, y a la vez muy compleja, pÃ¡gina web que la guardas en tu ordenador (un solo archivo) y en el mismo puedes incluir bloques completos de informaciÃ³n y estructurarlos mediante elementos de navegaciÃ³n, quedando todo al final en el mismo, y Ãºnico archivo de partida. Y sin necesidad de servidores web, ni bases de datos ni tecnologÃ­as del lado del servidor; este "pseudowiki" se construye al completo mediante HTML, CSS y JavaScript.</STRONG></P>
+        <P>Yo lo he probado y he alucinado tremendamente, sobre todo con los efectos javascript incluidos (que seguro se generalizarÃ¡n en breve) tanto para la ediciÃ³n de los contenidos como para la navegaciÃ³n que va incrustando los bloques enlazados justo por debajo del bloque sobre el que has hecho clic:</P>
+        <UL>        <LI><A href="http://www.adelat.org/media/varios/rss.html" target="_blank">Mi prueba</A>, que ha consistido en coger unas cuantas definiciones de la wikipedia e incrustarlas en bloques de contenido en un TiddlyWiki, creando un minimanual sobre <A href="http://www.adelat.org/media/varios/rss.html" target="_blank">RSS</A>.</LI>
+        <LI>La plantilla original te la puedes bajar a tu equipo haciendo clic con el botÃ³n derecho de tu ratÃ³n sobre <A href="http://www.tiddlywiki.com/empty.html">este enlace</A>, y seleccionando "<STRONG>Guardar enlace como...</STRONG>"</LI>
+        <LI><A href="http://www.tiddlywiki.com/">La pÃ¡gina del proyecto original.</A></LI>
+        <LI>El bloque <STRONG>MainMenu</STRONG> controla los contenidos del menÃº de navegaciÃ³n de la izquierda.</LI>
+        <LI>El bloque <STRONG>DefaultTiddlers</STRONG> controla los bloques que se visualizan al principio.</LI>
+        <LI>Para enlazar algÃºn bloque creado no tienes mÃ¡s que encerrar su tÃ­tulo entre doble corchete, por ejemplo [[RSS]].</LI>
+        <LI>En cada bloque de contenido puedes incluir palabras claves (tags) que luego son accesibles desde los enlaces de la parte derecha</LI>
+        <LI>Puedes incluir imÃ¡genes fÃ¡cilmente.</LI>
+        <LI>Y hasta genera RSS del documento.</LI>
+        </UL>
+        <P>Desde mi punto de vista, una herramienta fantÃ¡stica y con innumerables posibilidades educativas y ventajas que ya os contarÃ©. Con esto se despide el curso (observa dÃ­a del post), pero yo seguirÃ© contando cosas durante el verano...
+</P>
+                            </DIV>
+            <DIV class="bSmallHead">              <A href="http://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1" title="Enlace permanente al post"><IMG src="img/icon_minipost.gif" alt="Permalink" width="12" height="9" class="middle"></A>
+                  17:15:00, CategorÃ­as: <STRONG><A href="http://www.adelat.org/index.php?cat=16" title="Navegar por la categorÃ­a">Herramientas</A></STRONG>        </DIV>
+  
+                <DIV class="bSmallPrint">                    <A href="http://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1" title="Enlace permanente al post" class="permalink_right"><IMG src="img/chain_link.gif" alt="Permalink" width="14" height="14" border="0" class="middle"></A>
+  
+                        <A href="http://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1#comments" title="Ver comentarios / Hacer comentario">2 comentarios</A>                                     
+                                    </DIV>
+                <A name="feedbacks"></A>
+                        <A name="comments"></A>
+                        <A name="pingbacks"></A>
+                
+                
+                
+                <H4>Comentarios, Pingbacks:</H4>
+        
+                                        <A name="c360"></A>                <DIV class="bComment">                        <DIV class="bCommentTitle">                        Comentario de: 
+                                                hormigo [Visitante] 
+                                                 Â· <A href="http://lalunarosa.com/hormiguero/">http://lalunarosa.com/hormiguero/</A>                                                                      </DIV>
+                        <DIV class="bCommentText">                                Impresionante. Â¿La guardas, la editas y luego la subes al servidor? Y sÃ³lo necesitas un cliente FTP, Â¿no es asÃ­?                     </DIV>
+                        <DIV class="bCommentSmallPrint">                                <A href="http://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1#c360" title="Enlace permanente a este comentario" class="permalink_right"><IMG src="http://www.adelat.org/img/chain_link.gif" alt="Permalink" width="14" height="14" border="0" class="middle"></A>
+                                30.06.05 @ 22:47                      </DIV>
+                </DIV>
+                                                                <A name="c361"></A>                <DIV class="bComment">                        <DIV class="bCommentTitle">                        Comentario de: 
+                                                AnÃ­bal [Miembro] 
+                                                 Â· <A href="http://www.adelat.org">http://www.adelat.org</A>                                                                      </DIV>
+                        <DIV class="bCommentText">                                Exacto, sin mÃ¡s, y un solo archivo. Y lo del FTP si quieres publicarlo pues se podrÃ­a usar solo como medio de ediciÃ³n local de informaciÃ³n; lo veo sobre todo para la realizaciÃ³n de pequeÃ±os trabajos o recopilaciones de informaciÃ³n, de forma individual o compartida.                    </DIV>
+                        <DIV class="bCommentSmallPrint">                                <A href="http://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1#c361" title="Enlace permanente a este comentario" class="permalink_right"><IMG src="http://www.adelat.org/img/chain_link.gif" alt="Permalink" width="14" height="14" border="0" class="middle"></A>
+                                30.06.05 @ 22:53                      </DIV>
+                </DIV>
+                                                <H4>Hacer comentario:</H4>
+                
+                                
+                                <FORM action="http://www.adelat.org/htsrv/comment_post.php" method="post" class="bComment">                
+                        <INPUT type="hidden" name="comment_post_ID" value="104">
+                        <INPUT type="hidden" name="redirect_to" value="/index.php?blog=2&c=1&page=1&more=1&title=tiddlywiki&tb=1&pb=1&disp=single">
+
+                        <FIELDSET>  <DIV class="label"><LABEL for="author">Nombre:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="author" id="author" size="40" maxlength="100" value="" class="bComment">  <SPAN class="notes"></SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="email">Email:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="email" id="email" size="40" maxlength="100" value="" class="bComment">  <SPAN class="notes">Tu email <STRONG>no</STRONG> se mostrarÃ¡ en la pÃ¡gina.</SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="url">PÃ¡gina web:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="url" id="url" size="40" maxlength="100" value="" class="bComment">  <SPAN class="notes">Se mostrarÃ¡ tu URL</SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="comment">Comentario:</LABEL></DIV>  <DIV class="input"><FIELDSET class="input"><IMG src="http://www.adelat.org/img/blank.gif" width="1" height="1" alt=""><TEXTAREA name="comment" id="comment" rows="12" cols="40" class="bComment"></TEXTAREA></FIELDSET>  <SPAN class="notes">etiquetas XHTML permitidas: &lt;p, ul, ol, li, dl, dt, dd, address, blockquote, ins, del, a, span, bdo, br, em, strong, dfn, code, samp, kdb, var, cite, abbr, acronym, q, sub, sup, tt, i, b, big, small&gt;<BR>URLs, email, AIM y ICQs serÃ¡n convertidos automÃ¡ticamente.</SPAN></DIV></FIELDSET>
+
+                                        
+                        <FIELDSET>                                <DIV class="label">Opciones:
+                                <BR>Â                                 </DIV>
+                                <DIV class="input">                                                                <INPUT type="checkbox" class="checkbox" name="comment_autobr" value="1" checked="checked" tabindex="6" id="comment_autobr"> <LABEL for="comment_autobr">Auto-BR</LABEL> <SPAN class="notes">(Saltos de lÃ­nea se convierten en &lt;br /&gt;)</SPAN><BR>
+                                                                        <INPUT type="checkbox" class="checkbox" name="comment_cookies" value="1" checked="checked" tabindex="7" id="comment_cookies"> <LABEL for="comment_cookies">Recordar mis datos</LABEL> <SPAN class="notes">(Fijar cookies para el nombre, email &amp; url)</SPAN>
+                                                                        </DIV>
+                        </FIELDSET>
+                
+                        <FIELDSET>                                <DIV class="input">                                        <INPUT type="submit" name="submit" class="submit" value="Enviar" tabindex="8">
+                                </DIV>
+                        </FIELDSET>
+                
+                        <DIV class="clear"></DIV>
+                
+                </FORM>
+                
+    </DIV>
+    
+        <P class="center"><STRONG></STRONG></P>
+  
+</DIV>
+
+<DIV class="bSideBar">
+        <DIV class="bSideItem">                <H3>                                                Los datos
+                </H3>
+                <P>BitÃ¡cora dedicada a Elearning, integraciÃ³n de TICs, Sistema Educativo, TecnologÃ­a Educativa y otras cosillas...</P>
+                <P class="center"><A href="http://www.adelat.org">Inicio</A></P>
+                <P class="center"><STRONG></STRONG></P>
+                
+                
+                                
+                
+                
+                
+        </DIV>
+
+        <DIV class="bSideItem">                <H3>                                                Las categorÃ­as
+                </H3>
+                <FORM action="http://www.adelat.org/index.php" method="get">                
+<UL><LI>
+<A href="http://www.adelat.org/index.php">All</A></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="20"><A href="http://www.adelat.org/index.php?cat=20">Centros TIC</A> <SPAN class="dimmed">(7)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="25"><A href="http://www.adelat.org/index.php?cat=25">Con los pies en la tierra</A> <SPAN class="dimmed">(3)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="15"><A href="http://www.adelat.org/index.php?cat=15">Elearning</A> <SPAN class="dimmed">(3)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="18"><A href="http://www.adelat.org/index.php?cat=18">Eventos</A> <SPAN class="dimmed">(7)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="16"><A href="http://www.adelat.org/index.php?cat=16">Herramientas</A> <SPAN class="dimmed">(25)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="17"><A href="http://www.adelat.org/index.php?cat=17">Impacto infantil-juvenil de las TIC</A> <SPAN class="dimmed">(16)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="23"><A href="http://www.adelat.org/index.php?cat=23">Materiales</A> <SPAN class="dimmed">(12)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="21"><A href="http://www.adelat.org/index.php?cat=21">Modelos</A> <SPAN class="dimmed">(6)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="24"><A href="http://www.adelat.org/index.php?cat=24">Plataformas</A> <SPAN class="dimmed">(5)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="26"><A href="http://www.adelat.org/index.php?cat=26">Repositorios</A> <SPAN class="dimmed">(2)</SPAN></LABEL></LI>
+<LI><LABEL><INPUT type="checkbox" name="catsel[]" value="19"><A href="http://www.adelat.org/index.php?cat=19">Sistema Educativo</A> <SPAN class="dimmed">(20)</SPAN></LABEL></LI>
+
+</UL>
+                <BR>
+                <INPUT type="submit" value="Ver selecciÃ³n">
+                </FORM>
+        </DIV>
+
+
+        <DIV class="bSideItem">                <H3>Mis Proyectos</H3>
+                        <TABLE>                        <TBODY><TR><TD><A href="http://www.adelat.org/moodle/course/view.php?id=2" target="_blank"><IMG src="../../images/proaci.gif" width="50" height="50" border="0" align="left" alt="Proaci es un programa que nos facilita la creaciÃ³n de Adaptaciones Curriculares Individualizadas. DescÃ¡rgatelo y bÃ¡jate un manual completo de uso.">DocumentaciÃ³n Programa Proaci (Software Adaptaciones Curriculares)</A></TD></TR><TR><TD><A href="http://www.adelat.org/moodle" target="_blank"><IMG src="../../images/moodlelogo.gif" width="100" height="30" border="0" align="left" alt="Mi aula virtual">Mi aula virtual (Moodle)</A></TD></TR><TR><TD><A href="http://www.juntadeandalucia.es/averroes/rdr/" target="_blank"><IMG src="../../images/rdr.gif" width="61" height="59" border="0" align="left" alt="PÃ¡ginas Web educativas. Por niveles y Ã¡reas. ValoraciÃ³n de recursos existentes, propuesta de nuevos, etc.">Portal con casi 600 recursos educativos clasificados por niveles y Ã¡reas.</A></TD></TR><TR><TD><A href="http://www.loracep.org" target="_blank"><IMG src="../../images/cep.gif" width="61" height="59" border="0" align="middle" alt="Sitio del Centro del Profesorado de Lora del RÃ­o. Oferta formativa. Recursos para profesores y profesoras de habla hispana.">CEP de Lora</A></TD></TR><TR><TD><A href="http://www.adelat.org/curr_web.php" target="_blank"><IMG src="../../images/curriculumpeq.gif" width="65" height="62" border="0" align="middle" alt="Curriculum">CV</A></TD></TR><TR><TD><A href="http://www.loracep.org/docum/054132ES003.PDF" target="_blank"><IMG src="../../images/nukemoodle.gif" alt="PHPNuke y Moodle en un Centro Educativo (FormaciÃ³n on-line - acceso restringido)" width="60" height="49" border="0" align="left">Curso: "PHPNuke y Moodle en un Centro educativo"</A></TD></TR><TR><TD><A href="http://www.al-red.org/cepsevilla/file.php/1/054127TE05.htm" target="_blank">Curso: "TutorÃ­a on-line (Moodle)"</A></TD></TR><TR><TD><A href="http://www.formacion.pntic.mec.es/formamos/Php.htm" target="_blank">Y tutor del CNICE (PHP en la educaciÃ³n)</A></TD></TR><TR><TD><A href="http://www.adelat.org/master" target="_blank"><IMG src="../../images/master.gif" width="60" height="59" border="0" align="left" alt="Zona personal de trabajo del Master Interuniversitario en TecnologÃ­a Educativa: DiseÃ±o y elaboraciÃ³n de materiales educativos multimedia y entornos tecnolÃ³gicos de formaciÃ³n."></A></TD></TR></TBODY></TABLE>
+        </DIV>
+
+
+        <DIV class="bSideItem">                <H3 class="sideItemTitle">                                                La bÃºsqueda
+                </H3>
+                <FORM name="SearchForm" method="get" class="search" action="http://www.adelat.org/index.php">                        <INPUT type="text" name="s" size="30" value="" class="SearchField"><BR>
+                        <INPUT type="radio" name="sentence" value="AND" id="sentAND" checked="checked"><LABEL for="sentAND">Todas las palabras</LABEL>
+                        <INPUT type="radio" name="sentence" value="OR" id="sentOR"><LABEL for="sentOR">Alguna palabra</LABEL>
+                        <INPUT type="radio" name="sentence" value="sentence" id="sentence"><LABEL for="sentence">Frase entera</LABEL>
+                        <INPUT type="submit" name="submit" value="Buscar">
+                </FORM>
+        </DIV>
+
+
+
+        
+                
+
+        
+        <DIV class="bSideItem">
+        <A href="mailto:anibal@adelat.org"><IMG src="../../images/email.jpg" width="133" height="24" border="0" alt="emailme"></A>
+                <H3>                Sindicar esta bitÃ¡cora <IMG src="../../img/xml.gif" alt="XML" width="36" height="14" class="middle"></H3>
+                        <UL>                                <LI>                                        RSS 0.92 (Userland):
+                                        <A href="http://www.adelat.org/xmlsrv/rss.php?blog=2">Posts</A>,
+                                        <A href="http://www.adelat.org/xmlsrv/rss.comments.php?blog=2">Comentarios</A>
+                                </LI>
+                                <LI>                                        RSS 1.0 (RDF):
+                                        <A href="http://www.adelat.org/xmlsrv/rdf.php?blog=2">Posts</A>,
+                                        <A href="http://www.adelat.org/xmlsrv/rdf.comments.php?blog=2">Comentarios</A>
+                                </LI>
+                                <LI>                                        RSS 2.0 (Userland):
+                                        <A href="http://www.adelat.org/xmlsrv/rss2.php?blog=2">Posts</A>,
+                                        <A href="http://www.adelat.org/xmlsrv/rss2.comments.php?blog=2">Comentarios</A>
+                                </LI>
+                                <LI>                                        Atom 0.3:
+                                        <A href="http://www.adelat.org/xmlsrv/atom.php?blog=2">Posts</A>,
+                                        <A href="http://www.adelat.org/xmlsrv/atom.comments.php?blog=2">Comentarios</A>
+                                </LI>
+                        </UL>
+    <A href="http://fplanque.net/Blog/devblog/2004/01/10/p456" title="External - English">What is RSS?</A>
+        </DIV>
+
+
+        <P class="center">powered by<BR>
+        <A href="http://b2evolution.net/" title="b2evolution home"><IMG src="../../img/b2evolution_button.png" alt="b2evolution" width="80" height="15" border="0" class="middle"></A></P>
+
+</DIV>
+</DIV>
+<P class="baseline">
+        <A href="http://validator.w3.org/check/referer"><IMG style="border:0;width:88px;height:31px" src="../../img/valid-xhtml10.png" alt="Valid XHTML 1.0!" class="middle"></A>
+
+        <A href="http://jigsaw.w3.org/css-validator/"><IMG style="border:0;width:88px;height:31px" src="../../img/vcss.png" alt="Valid CSS!" class="middle"></A>
+
+        <A href="http://feedvalidator.org/check.cgi?url=http://www.adelat.org/xmlsrv/rss2.php?blog=2"><IMG src="../../img/valid-rss.png" alt="Valid RSS!" style="border:0;width:88px;height:31px" class="middle"></A>
+
+        <A href="http://feedvalidator.org/check.cgi?url=http://www.adelat.org/xmlsrv/atom.php?blog=2"><IMG src="../../img/valid-atom.png" alt="Valid Atom!" style="border:0;width:88px;height:31px" class="middle"></A>
+        Â 
+
+<BR><BR>
+<A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.1/es/"><IMG alt="Licencia de Creative Commons" border="0" src="../../img/somerights20.gif"></A><BR>
+Esta obra estÃ¡ bajo una <A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.1/es/">licencia de Creative Commons</A>.
+
+
+  </P>
+
+</BODY></HTML>_Ehttp://www.adelat.org/index.php?title=tiddlywiki&more=1&c=1&tb=1&pb=1Ytext/html        1  L  S  e  t  Š ê  ! (  F M (‚ (± (¸ 0Ö 1 1 1 1 1Ë 1Õ 1Ü 5R 5Š 5‘ 5¼ 5Ã 5Ê 5ø 6 6% Aj A” A› KØ L L V× Vş W ñ € € ³ ä ë ˜Z ˜ˆ ˜ ¨ ¨I ¨P °Â °ë °ò ²£ ²Ç ²Î ´$ ´W ´a ´h ½Ú ¾ ¾ Â Â¦ Â­ È¤ ÈÎ ÈÕ Î‘ Î¼ ÎÃ Õò Ö Ö( ÖF ÖL.®.ö             V             / 

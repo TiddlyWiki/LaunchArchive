@@ -1,0 +1,253 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO£/*
+diveintomark common stylesheet (shared by all media types)
+copyright (c) 2002, Mark Pilgrim (f8dy@diveintomark.org)
+GPL-licensed
+*/
+
+.divider, .calendar table th, #search label, .invisibletitle, a.skip {
+  display: none;
+}
+
+.formaltitle {
+  text-align: center;
+}
+
+.formalpara {
+  text-indent: 2em;
+}
+
+cite {
+  font-style: normal;
+}
+
+del, span.strike {
+  text-decoration: line-through;
+}
+
+address {
+  font-style: normal;
+}
+
+/* quotations will be surrounded by curly quotes in browsers that correctly
+   mark up the Q element (Opera, Mozilla, IE5/Mac), and italicized in
+   browsers that don't (IE5/Win, IE6/Win) */
+q {
+  font-style: italic; /* for IE only */
+  quotes: '\201C' '\201D' '\2018' '\2019'; /* for compliant browsers */
+}
+
+/* put nested quotes back to normal in IE */
+q q {
+  font-style: normal;
+}
+
+/* negate above italic definition for compliant browsers */
+*>q {
+  font-style: normal;
+}
+
+/* use curly quotes defined above around Q in compliant browsers */
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+/* Mozilla doesn't properly quote nested quotes (sigh), so force it */
+q>q:before {
+  content: "\2018";
+}
+
+q>q:after {
+  content: "\2019";
+}
+
+_http://vsbabu.org/common.cssXtext/cssÓOfunction OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'vsbabu.org';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+_#http://vsbabu.org/mt/mt_comments.js_application/x-javascriptÔ_WebResourceTextEncodingNameUUTF-8Oå<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><HEAD>    <META name="ICBM" content="38.8820305,-77.0919724">
+    <META name="DC.title" content="vsbabu.org">
+    <META name="generator" content="HTML Tidy for Linux/x86 (vers 1st July 2002), see www.w3.org">
+    <META name="rating" content="General">
+    <META name="description" content="I just had to write about these. I used it for 4 hours and I was hooked.">    <META name="author" content="S Babu">
+    <LINK type="text/css" rel="stylesheet" href="/common.css" title="default">
+    <LINK type="application/rss+xml" rel="alternate" href="http://vsbabu.org/mt/index.rdf" title="RSS">
+    <STYLE type="text/css">
+        /*<![CDATA[*/
+         @import "/stylesheet.css";
+         img.righty {float:right;}
+        /*]]>*/
+    </STYLE>
+        <TITLE>TiddlyWiki and GTD</TITLE>
+    <SCRIPT type="text/javascript" language="javascript" src="/mt/mt_comments.js"></SCRIPT>  </HEAD><BODY>    <DIV id="header">      <A id="page_top" name="page_top"></A> 
+
+      <H1><A href="http://vsbabu.org/">vsbabu.org</A></H1>
+
+      <FORM method="get" name="search" id="searchform" action="/htdig/htsearch.cgi">      <A href="/sitemap.html">sitemap</A>
+      <SPAN class="separator">|</SPAN>
+        <A href="/htdig/">search</A> <INPUT type="text" size="15" id="searchbox" name="words" maxlength="100"> <INPUT type="submit" value="go" id="searchgo" name="go">
+        <INPUT type="hidden" name="method" value="and">
+        <INPUT type="hidden" name="format" value="builtin-long">
+        <INPUT type="hidden" name="sort" value="star">
+        <INPUT type="hidden" name="config" value="htdig">
+        <INPUT type="hidden" name="restrict" value="">
+        <INPUT type="hidden" name="exclude" value="">
+      </FORM>
+    </DIV>
+
+        <UL id="main-navi">        <LI class="current"><A href="/">Home</A></LI>
+        <LI><A href="/personal/" title="About me, my photos...">Personal</A></LI>
+        <LI><A href="/profile/" title="My work, resume, skills...">Profile</A></LI>
+        <LI><A href="/software/" title="Free software I wrote">Software</A></LI>
+        <LI><A href="/techbits/" title="Some technical articles">Tech Bits</A></LI>
+        <LI><A href="/tutorials/" title="PHP, Perl...">Tutorials</A></LI>
+        <LI><A href="/webdev/">Web Development</A></LI>
+        <LI><A href="/gnu/">GNU/Linux</A></LI>
+        <LI><A href="/oracle/">Oracle</A></LI>
+        </UL>
+        <UL id="sub-navi">        <LI><A href="/about.html">About</A></LI>
+        <LI><A href="/thanks.html">Credits</A></LI>
+        <LI><A href="/history.html">History</A></LI>
+        <LI><A href="/mt/index.html">Blog</A></LI>
+        <LI><A href="/guestbook.html">Guest Book</A></LI>
+        <LI><A href="/services/index.html">Services</A></LI>
+        </UL>
+
+      <UL id="bread-crumbs">        <LI><A href="/" title="Home Page">Home</A> â€º</LI> <LI><A href="/mt/">Blog</A> â€º</LI> <LI><A href="/mt/archives/">Archives</A> â€º</LI> <LI><A href="/mt/archives/2005/">2005</A> â€º</LI> <LI><A href="/mt/archives/2005/05/">May</A> â€º</LI> <LI><A href="/mt/archives/2005/05/17/">17</A></LI>
+      </UL>
+    <DIV class="container">
+
+
+
+
+<DIV class="highlight">        <H2 class="itemhead">Related Entries</H2>
+    <P>            <A href="http://vsbabu.org/mt/archives/2003/11/21/quick_links.html">Quick Links</A><BR>
+            <A href="http://vsbabu.org/mt/archives/2003/10/24/quick_links.html">Quick Links</A><BR>
+            <A href="http://vsbabu.org/mt/archives/2003/10/14/quick_links.html">Quick Links</A><BR>
+            <A href="http://vsbabu.org/mt/archives/2003/09/27/quick_links.html">Quick links</A><BR>
+            <A href="http://vsbabu.org/mt/archives/2003/09/21/java_is_an_suv.html">Java is an SUV</A><BR>
+    
+    </P>
+    
+
+
+    <P>        Â« <A href="http://vsbabu.org/mt/archives/2005/04/27/mpp_to_sqlite_via_ruby.html" title="previous">MPP to SQLite via Ruby</A>
+    
+    
+    </P>
+
+    <P>    <A href="#commentform">Post comment</A>
+    <SPAN class="separator">|</SPAN>
+    <A href="/printit.php3">Printer-friendly</A>
+    </P>
+</DIV>
+
+        <H2 class="blogtitle">TiddlyWiki and GTD</H2>
+
+                  <DIV class="leadin"><SPAN class="leadinDropCap">I</SPAN><SPAN class="leadinPhrase"> just had to write about these. I used it for 4 hours and I was hooked.</SPAN></DIV>
+        
+
+    <P>If you like Wiki way of taking notes (I do) and also like to have a Wiki you wanted to carry around without the need to install any software, make sure you check these out:
+</P>
+
+<UL><LI><A href="http://www.tiddlywiki.com/">TiddlyWiki</A> - a reusable non-linear personal web notebook.</LI>
+<LI><A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD TiddlyWiki</A> - a GettingThingsDone adaptation.</LI>
+</UL>
+    
+
+    <DIV class="bloglinks">    Posted: May 17, 2005 05:08 PM 
+        | <A href="http://vsbabu.org/mt/mt-tb.cgi?__mode=view&entry_id=1002" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+    
+    <BR>
+        <A href="http://vsbabu.org/mt/archives/categories/www/index.html">www</A>
+    
+    </DIV>
+
+    
+
+    
+    <H4 class="comments-head"><A name="comments"></A>Comments</H4>
+    <OL>    </OL>
+    
+    
+    
+
+
+    </DIV>
+
+    <HR class="invisible">
+
+    <DIV id="footer">      <DIV id="utils-navi">        <A href="http://vsbabu.org/">Home</A> <SPAN class="separator">|</SPAN> <A href="http://vsbabu.org/htdig/">Search</A> <SPAN class="separator">|</SPAN> <A href="http://vsbabu.org/sitemap.html">Sitemap</A> <SPAN class="separator">|</SPAN> <A href="#page_top">Top</A>
+      </DIV>
+      Copyright Â© 2003-2005 <A href="mailto:vsbabu-canyoudeletethisplease@vsbabu-deletethisalso.org">Vattekkat
+      Satheesh Babu</A>
+    </DIV>
+  
+
+</BODY></HTML>_@http://vsbabu.org/mt/archives/2005/05/17/tiddlywiki_and_gtd.htmlYtext/html    1 4 ; M \ r8AHÜ&DJ%3%v                           %€

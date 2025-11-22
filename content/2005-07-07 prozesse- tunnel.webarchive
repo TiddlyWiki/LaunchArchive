@@ -1,0 +1,1034 @@
+bplist00Ò@_WebSubresources_WebMainResource¯ #&)-147:=Ô	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUutf-8OÎ/* 2c_center_right */
+/* orientation 2c right  */
+
+#container {
+  float: left;
+  margin: 0px -210px 0px 0px;
+  width: 100%;
+}
+
+#content {
+  margin: 0px 240px 0px 10px;
+}
+
+#sidebar01 {
+  float: right;
+  width: 210px;
+}
+
+/* orientation fixed width - center  */
+
+body {
+  text-align: center;
+}
+
+#wrapper {
+  margin: 0px auto;
+  width: 750px;
+}
+
+/* admin styles */
+
+/* messages */
+.message {
+  background-color: #FFEC03;
+  border: 1px solid #FF7006;
+  color: #A21A1A;
+  padding: 0.2em 0.8em 0.15em 34px;
+  background: url("http://twoday.net/static/icon_message_24.gif") 2px -1px no-repeat #FFEC03;
+  margin: 1em 0;
+}
+
+div.admin ul li {
+  list-style: none;
+  background: url("http://twoday.net/static/bg_listicon16.gif") 0 0px no-repeat;
+  padding: 0 0 5px 22px;
+}
+
+div.admin ul {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.listItem ul.taskList li {
+  background: url("http://twoday.net/static/bg_listicon16_simple.gif") 0 2px no-repeat;
+}
+
+.listNavigation {
+  margin-top: 1.5em;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+  padding-left: 7px;
+}
+
+.listNavigation span {
+  color: #ffffff;
+}
+
+.listNavigation a.active {
+  font-weight: bold;
+}
+
+div.admin small, 
+div.admin .small {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* lists */
+
+div.pageNav {
+  margin: 5px 0 13px 0;
+}
+
+div.pageNavSummary {
+  /* float: left; */
+}
+
+div.pageNavBar {
+  /* float: right; */
+  text-align: right;
+}
+
+span.pageNavItem,
+span.pageNavSelItem  {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+table.listItem td.leftCol {
+  width: 70%;
+  vertical-align: top;
+}
+
+table.listItem td.rightCol {
+  width: 30%;
+  vertical-align: top;
+}
+
+
+/* forms */
+
+div.admin fieldset {
+  -moz-border-radius: .8em;
+  border: 1px solid #ffffff;
+}
+
+div.admin fieldset legend {
+  font-weight: bold;
+  font-size: 1em;
+  left: 1em;
+  padding: 0 0.6em;
+  color: #444444;
+}
+
+div.admin fieldset.formList {
+  padding: 0 1em 0 1.5em;
+}
+
+div.admin .formList p {
+  border-bottom: 1px solid #333333;
+  margin-top: 0.5em;
+  padding-bottom: 0.8em;
+}
+
+div.admin label {
+  font-size: 1em;
+  font-weight: bold;
+  font-color: #999999;
+}
+
+.formText {
+  width: 95%;
+  font-family: Trebuchet MS, Verdana, Arial;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.formWide {
+  width: 90%;
+  font-family: Trebuchet MS, Verdana, Arial;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+div.admin .intend {
+  display: block;
+  margin-left: 1.8em;
+}
+
+p.buttons {
+  margin-top:3em;
+  text-align: right;
+  clear: both;
+}
+
+p.buttons input {
+  padding: 0 1em;
+  text-align: center;
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #333333;
+  font-size: 13px;
+}
+
+
+a {
+  color: #666666;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #666666;
+}
+
+td {
+  vertical-align: top;
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #333333;
+  font-size: 13px;
+}
+
+p {
+  margin: 6px 0px 6px 0px; 
+}
+
+img {
+  border: 0;
+}
+
+
+/* wrapper */
+
+#wrapper {
+  text-align: left;
+}
+
+
+/* header */
+
+#header {
+  background-image: url("http://twoday.net/static/prozesse/layouts/prozesse/header.gif");
+  background-repeat: repeat-x;
+  background-color: #e6e6e6;
+  border-bottom: 1px dotted #ffffff;
+  height: 100px;
+  
+}
+
+#header div.icon {
+  float: left;
+  width: 100px;
+  padding: 30px 10px 0px 10px;
+}
+
+* html #header div.icon {
+  padding: 30px 7px 0px 10px;
+}
+
+#header div.icon img {
+  border: 1px solid #ffffff;
+}
+
+#header h1 {
+  margin: 0px;
+  padding: 32px 0px 0px 0px;
+  font-size: 24px;
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #444444;
+}
+
+.tagline {
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #444444;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* pagebody */
+
+#pagebody {
+  margin: 32px 0px 0px 0px;
+}
+
+
+/* content */
+
+#content {
+  line-height: 1.3em;
+  padding: 5px 0px 32px 0px;
+  overflow: hidden;
+  width: 100%; 
+}
+
+body>#wrapper #content {
+  overflow: visible;
+  width:auto;
+}
+
+#content h1, #content h2 {
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #444444;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px 0px 18px 0px;
+}
+
+.pagelinkTop, .pagelinkBottom {
+  padding: 0px 0px 10px 0px;
+}
+
+small, .small {
+  font-family: Trebuchet MS, Verdana, Arial;
+  font-size: 12px;
+  color: #999999;
+}
+
+
+/* story */
+
+.story {
+  margin: 0px 0px 28px 0px;
+  text-align: justify;
+}
+
+h3 {
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #444444;
+  font-size: 16px;
+  margin: 0px 0px 13px 0px;
+  padding: 0px;
+  border-bottom: 1px dotted #ffffff;
+}
+
+.storyContent {
+  padding: 0px 0px 13px 0px;
+}
+
+.storyContent cite {
+  margin: 0px 0px 0px 20px;
+  font-style: italic;
+  display: block;
+}
+
+.storyDate, .storyLinks, .commentLinks, .commentDate {
+  text-align: right;
+  font-family: Trebuchet MS, Verdana, Arial;
+  font-size: 12px;
+  color: #999999;
+}
+
+
+/* story images */
+
+.storyContent .left {
+  float: left;
+  margin: 7px 10px 7px 0px;
+}
+
+.storyContent .center {
+  display: block;
+  text-align: center;
+  margin: 7px auto 7px auto;
+}
+
+.storyContent .right {
+  float: right;
+  margin: 7px 0px 7px 10px;
+}
+
+
+/* comments */
+
+.comments {
+  margin: 10px 0px 0px 0px;
+}
+
+.comments h4 {
+  font-size: 13px;
+  padding: 0px;
+  margin: 0px 0px 2px 0px;
+}
+
+.commentLinks, .commentDate {
+  text-align: left;
+  margin: 0px 0px 2px 0px;
+}
+
+.reply {
+  margin: 10px 0px 0px 30px;
+}
+
+
+/* form */
+
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+fieldset {
+  padding: 5px 0px 5px 8px;
+}
+
+fieldset legend {
+  padding: 0px 8px 0px 8px;
+}
+
+input, textarea, select {
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #333333;
+  font-size: 12px;
+}
+
+.searchbox {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #999999;
+  font-size: 12px;
+}
+
+.formTitle, .formText  {
+  width: 420px;
+  border: 1px solid #333333;
+}
+
+
+/* sidebar */
+
+.sidebarItem {
+  font-family: Trebuchet MS, Verdana, Arial;
+  font-size: 12px;
+  color: #999999;
+  background: url("http://twoday.net/static/layouts/twodayclassic1/ring.gif") 11px 2px  no-repeat;
+  border-bottom: 1px dotted #ffffff;
+  line-height: 1.1em;
+  padding: 0px 0px 10px 25px;
+  margin: 0px 0px 12px 0px;
+}
+
+.sidebarItem td {
+  font-size: 12px;
+}
+
+.sidebarItem h4 {
+  font-family: Trebuchet MS, Verdana, Arial;
+  color: #444444;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 0px 0px 7px 0px;
+  margin: 0px;
+}
+
+.sidebarItem ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sidebarItem ul li {
+  list-style: none;
+}
+
+.historyItem {
+  margin: 0px 0px 6px 0px;
+}
+
+td.calender {
+  white-space: nowrap;
+}
+
+
+/* footer */
+
+#footer {
+  background-image: url("http://twoday.net/static/prozesse/layouts/prozesse/footer.gif");
+  background-repeat: repeat-x;
+  background-color: #e6e6e6;
+  border-top: 1px dotted #ffffff;
+  height: 50px;
+}
+
+
+div.clearall {
+  clear: both;
+  height: 0px;
+  font-size: 0px;
+}_#http://prozesse.twoday.net/main.cssXtext/cssÓObody > #modToolbar {
+  position: fixed;
+}
+.modToolbar {
+  position: absolute; 
+  top: 0px; 
+  left: 0px; 
+  width: 100%;
+  z-index: 99;
+  text-align: left;
+  color: #999999;
+}
+#modToolbar-spacer {
+  position: relative; 
+  z-index: 0;
+  text-align: left;
+}
+.modToolbar .favicon {
+  margin: 0 6px 0 4px;
+  float: left;
+  vertical-align: absmiddle;
+}
+#modToolbar-collapsed {
+  width: 20px; 
+}
+.modToolbar a, .modToolbar a:link, .modToolbar a:visited {
+  color: #336699;
+  text-decoration: none;
+}
+.modToolbar a:hover {
+  color: #000000;
+}
+.modToolbarBorder {
+  border-bottom: 1px solid #555555;
+  background-color: #F7F7F7;
+  font-family: Trebuchet MS, Verdana, Arial; 
+  font-size: 11px; 
+  font-weight: bold;
+  padding: 2px;
+  line-height: 150%;
+}
+#modToolbar-collapsed .modToolbarBorder {
+  clear: both; 
+  width: 20px; 
+  border-right: 1px solid #555555;
+}
+.modToolbarLeft {
+  text-align: left;
+  float: left;
+  margin-right: 4px;
+}
+.modToolbarRight {
+  text-align: right;
+  float: right;
+  margin-right: 4px;
+}
+.modToolbarDropdown {
+  border: 1px solid #7C89A1; 
+  background-color: #F7F7F7;
+  width: 150px;
+  z-index: 99;
+  filter: alpha(opacity=90);  
+  -moz-opacity: 0.90; 
+  text-align: left;
+  visibility: hidden; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.modToolbarDropdown a, .modToolbarDropdown a:link, .modToolbarDropdown a:visited {
+  display: block;
+  color: #555555;
+  width: 150px;
+  padding: 3px;
+  font-family: Trebuchet MS, Verdana, Arial; 
+  font-size: 11px; 
+  text-decoration: none;
+  padding-left: 6px;
+}
+html>body .modToolbarDropdown a, 
+html>body .modToolbarDropdown a:link,
+html>body .modToolbarDropdown a:visited {
+   width: 144px;
+}
+.modToolbarDropdown a:hover {
+  width: 150px;
+  display: block;
+  border: 1px solid #cdcdcd;
+  padding: 2px;
+  background-color: #edf3fe;
+  color: #000000;
+  padding-left: 5px;
+}
+html>body .modToolbarDropdown a:hover {
+   width: 141px;
+}
+.clearall {
+   clear: both;
+}
+_)http://prozesse.twoday.net/modToolbar.cssÓO²GIF89a  ó  fffihfmjflllsofqppurmyvpvuu}}}€……„ŒŒŒ•••²²±½½½,       gHÄ¼8 ¥PÀW°$d² ”  ÂI:,ª"a0Ëò<=†@°Ph€Şm`¼$P.Àlpø\f.Ï´`…=p K@˜¦€¡	‡QÃAZ22@ïÎ|OOH)3]V„w ;_4http://twoday.net/static/prozesse/images/favicon.gifYimage/gifÓOqGIF89a0 0 ÷  fffihfnlfllltofspj~vfyuktttywt|||„{gŠ~f†}j‚l‡u„„„Œ‚•••™™™¦¦¦­­­···½½½ÆÆÆÌÌÌ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ,    0 0  ş H° @*\È°¡A„#Jlq¢Å‰ 8  ãÅ€  „$ 	R$	(Äœ0A‚„
+XJ0’æ’4KÂüÉSgC4%  &S †æ4ªĞ$…”Tğ‚Gª@ 05ë„§Ô;p M
+µäª”mO´fñ†µùU§[²åD ³/K®†
+&`BYc%,”€!ÃÙªW©°‰ ³g2h=á³ç—‰2XÍ 
+°cÇ¶0z4Ù¸%4`Í{µ ƒ‚`Ó¤q“jk¨pÜ8ÌÂ£¨ 3ğ
+£/ À×hÏ…`ş§ Á«@,7SØ÷²A·7Ï§Úİàâ
+”zDÏò/û‚÷uDÓW  ×N MØ}›)åRT ğŸE0Å—AÄÅM°½…•EVÚ…!uR?u–"WW=%Q AĞ9¥Òkåáè‘[SPI)ŸO3%U?aèAH}x‘ô§\/I¦¤‹tùb!â§`A<Ä™Q	¤V}m-9+éT&T#Îe{YYR™b•ÆÓ
+ˆ¦‚{òT™°šàm¶)*Ó«-ğ\	iiI~’ui~NNšĞ@c%ÁXÓx½Iœ‹²: `Xn~Z¢Mz…YĞKzº¦‹¶¦ùe¬ƒq5a¯=§ÙC–Õ+q(€*UnÕ´T˜=™ÄCŒôZM2ùtÒµAGRq¥±
+.C<9í¹ ñÇîGî¾kQ¼ ;_;http://twoday.net/static/prozesse/layouts/prozesse/icon.gifÓOûGIF89a0 0 ÷  
+		 $%.)3!-7#/;&2?(6C*8F+9F1AK2CT8K]<Pa<QeAWgAXiC[mMf€¦¦
+¦¥¥¥¥ ¤#¤"(¤$-¤+4£/;£7E£:G¢CT¢IV¢HZ¢J[ Vl \n¡Ob¡Re¡Vj¡\r cuŸiv d|Ÿk€RnˆSnŠUqXu’Yw‘Zy—]~Ÿn…Ÿt†ŸsŒ|—˜y›d†¥g‰¬j¬k²o•¶o–»r™³r˜¾vº}§¸y¡¾xŸÇ©È{¥Ë‚–„œ‰œ…£‹¥‘°œ–¶œ™µœ›¾‡¥º«««œŸÃ„©È‹«Ã¬Ëœ£Å›«Çœ¦Ì›©Ğ›²Ìƒ¯Ô›¯ÕŠ·ß›±×›´Üš½Üˆµâ¾æ¾êš¾èšÀé™ÆÜ™ËÜšÒÜ¬ÄØ±ÈÚÁë•ÇäšÂã’Ãî™ÌïÇÿ”Æô™Æô–ÉøšÎ÷’Èÿ–Êÿ™Ìÿ˜ÔÿœÒş˜Ûÿ¡Çë¡Ïÿ¥Óÿ¬Õÿ¦Üş®Ûÿ±Øÿ¶Úÿ½Şÿ—èÿªãı¼ãÿÃÃÃÂàÿßéğÆãÿÌåÿÑèÿÖëÿÜíÿÕ÷ÿùõğãğÿæòÿëõÿïüÿñøÿöúÿÿÿÿ                                                                                                                                                                                                                                                                                             ,    0 0  ş !	H° ÁƒÅ°¡Ã‡#JœH±¢Å‹3iÜÈ±£Ç CnœC²¤É“(Sª\YË—0cÊœI³&Ì>8sâ¤©³§N™{Ò¤±ã2h>€ö<É£©SCôÀ\#ä©U§Eb²‚Â„7€Ä¨@qf– ¨]àÁA.yYÀ¶®Ú ´Jñ CA_@|3ˆJ† v8x×‰‚Äu!h¥ÂWÃˆ1`¦rƒk%\Ğ!õ¥RGH  …ÔxLöĞaÄ†XB.,‘£wÉ8B$‘qGK¨eĞÇ¸ñÙ Âxø@Csá¸î6[S’jşÜ©ˆ²<,4„Ø°›
+víÜiz@|Ì=hÊ´	4Åƒ@[ˆ í½@ ÛÙ4_xã½È(”ğCaşÒ‡¸™Æ7Ó‚õ5èR W„ AƒDÑ.Q‚lˆ Ù˜`wß1S eÄ°Âl/M±h<Èáòå¢LD9b ;R	"5ğ„‡2hŸM`êÁFtxÄtüÑ$}_‚Y$ ÀZ$PkêèfM6 f×b\Æåd›{Ê”ˆ&Šètê’ *Ai`şa©¥0™¡Ä¦œnêR1©i!]d‘ Ò¤& ‡´zˆ!ş.©¹ˆ%—Xòˆ ¸â:Ó!”\ÂI'Àn2	¬42‰%œ$ËÉ&”È$Ÿ€ò	%6ı¡È&}²É!3QÂI´i«´Ub“"œ<.Cœ²ªK•„».(ŒŠ¹4-âICœ[ˆ½ tbˆšDâ'‘RH!ŒTm½àâ;S¼y¢È¥0².%j’.»Šø1 Œlq¹5aË%~ÄdICš ’1¸Ÿ02Ó
+Û+qL‡¬»HË0ÙÛ. /3´	±~$­´È:Ó¤ˆC‡ ı’Æ_|IC— â‡!–tíµ%ÆFì4ÔR»D5(ÿqõÊZ'ÑÉ÷KvLg{âîÚ \Rˆã‰|2/½MÓô1(“”%ı‡½Ÿ\lÈ$ŒP².ÜcŒ) xo"óK†¨Š%.õÜè—²/Cp[²ğê›íèI‚7(‹¬Z´´¤çaÈé€¯ë÷ïŸì’äüv=ï$ïîîĞ'—ô:ù$}«šÄg;I¨‡lò÷òŒD²‰²à'{t¬ÏnÂ;ÚšDr³!”˜ïP'œ\â¯«ôÓ/“!‹L¢ÿ$‹&şû›„"^õËP&ï*`¥X@:ğŒ )AÁ
+Zğ‚Ì 7XAŒxğƒ ¡GHB‡(ä„(L¡@ ;_<http://twoday.net/static/prozesse/layouts/prozesse/icon3.gifÓO
+vGIF89ao 9 ÷     †Ãÿ³ßïÿ¦  ,:I¡L_‰·ä¥Ñÿõïç¤(1r˜¾¬æÿÏÿKi‡Ÿh‚øüÿ˜Öÿ½Şÿ¿Ü¸¸¸9L^œ—½Àğ¥­Öÿ†¨˜Şÿï÷ÿÔéÿ
+£:IÏŞë _wÎæÿ”Æ÷Xu‘ˆµÜ¥İÿ–ğÿ„°Ü&–]z£££«àÿÈäÿÿÿÿÚøÿ{œ¾í¢@Pú÷óCZm¦Ôÿ0@Pœ¡É&2?$§ÔÿÄáÿËïÿ™Ìÿ`‡¯ c{¤!)¤/;¡Xn›¬×¶Ûÿ{¥ÎÕòÿ
+ŒÅÿ’Èÿ“˜ÄQl†´Ùÿ—öÿŸ½×Ÿrš·å’·µòÿ Uiæòÿª  Œ¯Ìÿÿ£4BJZkèôÿŸk{‡³Ü™™Ì–·Ó Ûÿ \söúÿ€“š¼ë¥BJ¥Yx—¡HZ™ÿÿ<QešÃô¡Re™ÌÿTo‹‹ºèœ ·.<LÅíÿ#¡^u%/Ÿu“¦¥!›¥Ëœ­Şœ„­^~œš¿¡Ti:Jcšºèµ÷ÿG_m                                                                                                                                                                                                                                                                                                                                                                                    !ù ÿ ,    o 9  ÿ YTH° Áƒ*\È°¡Ã‡¾˜H±¢Å‹3jÜÈ±£Ç‚I²¤É“!+ \É²¥I‘i$˜I³¦Í›8sêÜÉ³§Ïœ4RVŠÑ£H“*]Ê´©Ó§P£*B(ÅK~hİÊµ«×¯`ÃŠK¶ì×V'bıq£m[³lİÊuv®İ¹`%pØË•¯V½{óL˜ƒ´aªÍŠA†cp?ìø+	Ê˜)•£N´êñ\D‚uD¨^…Íê×«™øHûb­¸íÀ½»·ï#a¸(á»¸qİ^9!À\€éÍ÷¶aN¹)Õ³X‘…öÚ Â7ÿ€>¼ùóÀ…¿9Ï¾ıøä ª—á°ù½b˜+è¤ÿ6ıugğ„lŞeµƒy;À•D{è·Õ	M@ha_q0 s"<Q÷q"¨Â‰ü°
+jÂ^‡%øÃ‚á5hÖ5ÔP^xkäxÀ\İ°@9BcxYÃÆ—Ø ÇöáÇÜdÜ¡eiZq C„öÃˆM¤Xm
+2×	'PƒyÜÀ @vuCx¶@…ç‘À@-4I€Ø@€ST)¢vÄ¢Š_†©™2iãšÀ)Ccğ¦y?¥!‹0ƒ¢#
+Ñ†¬æ ¦—WŠÿIib*]•fpiuB¦á}°iYjW¦™¦b|gHPFv!HÄ‰	i¬“–ùÂ™kYšë»jÊ©XÁ‚ú­VE`…« ;-uÍ2G
+ÅJ+˜²Z‹í­ \jV·½şJV¸á»u0Â^êª¸ªÇ1ÅÃ~i½•ª™+¿ ø:.X  p—"07Ã^Ëáñ—Ô	°WŒÚ0ğúQLkEÙZŒ©·À~ğ¸^1D¦‰1Ä\¥á3ºwø¬´ÏilušÏÈlf­‹Íhó¾¼fìo§:{¼q¼ë´Ø?Äk6±dÏ:5ÍøêlÖç,ìÆÛÖÍ•Ú×R¦Õá©ÿÆ]·Å€p’pİ]uü±İŒW[±x^¤ ùä)àÕ)P œG˜	\ÏİøèÏl+ß†gÇ¸t¤@za)8éfá}/ê©¯ŞUë©ÃÎq×‹Ó«íz¯õ ë 40îñúşUY{-<ãÄ³ıMd¯ıöÙ÷1.öÜoÇìZñÀù`0üì³_VûğßmoñYj?aäï•ılöBXYá ƒÎaLdÉ
+FÀ@N`R`ÉÊèÀI±o~l["ÀÁzĞÈJW6ÈA.À¥ÀHFpze	ğ /ôà…1Œ€
+;à(ƒ¶ZB
+ÿ9²®ñxŸ8’Ä¯I‡L”7Òƒ  q1BôHµrÄ&Še	KìHàB­Xk#Ø
+Ş¨hÅeq"ğ€¹`‘1t¥‹d€E¬àÄĞ"há¤&púqz|µÂƒ=á~4‚Æ0‘*^MoD¢6¹Td‘[Á£Xœ`Ào	„¬ˆ)Ci#(á”Ôá¤zP‘Àr	7Ğ@,éFQş@	©œÈ ÊèË¯(!ŒáBi­1d•‰€–©%hÀ³ü$İ§F?ş°—±%ûpÄh€˜áK"«Ö'LqĞ
+2‘HÍ»e3š#p‚ÆÄÿÍ1]+™|:E+œóé,Âƒz–³J¸Ez Â[öó”ÄH¸0†>óŸì+'Fø¨„NÄ‹_YhEê•‡feŠ/pûn`…šÚ´¦P£'9ò@‚³#95bBÁ¢RŠ°Ô¤•|iE¦‰Kt…–1á7M‡Å#ÁX5Â·XL¯u"ıŠK S™6# œ R‹Œ TÅdOÙL¡t,È4¿’×„ğå&.Ê…¾¦U?0Âzg‚4“(]‚>iW$Šå˜@I¹ÌZNj§9lg)’V2ª±}F(§cJÏö ªp¬¬8oéSÒÿ†•+V¨ˆ	µ¢‹ö™ÁTä,#pÎe€”‰@õ‚ØÅC.¦«äb8Kİ­À”¸íC@n—ZÑy¾` ñTB &KÚ{@-lßÖùLumÌıˆi¥ËDêÒ·#ğî\PFô5™dï"— ÛÄQ2´Ş›·¶#[¬+z_ğ·+0ü¯SÇTà ô±0Õèm­ÛgªQ¦EøG4b“·)ç_—‹ÅPğÆ#àXlŒãßĞ+=¡­à‚ùFP€$ì Fğã®h ¿ä X[øVÍ¢ê –ã÷B:÷—f))u³Œáq¹Œ4ŞÛôÖÌf¸¤ÙSØ²œçLç:ÛùÎ° hL‘LàÏ€´ MèBúĞˆN´¢ÍŞ3¹äÑ†´£#MéJ“dÒ–Î´¦1‚éM{ZÓDFMêR›úÔaA@  ;_;http://twoday.net/static/prozesse/images/litblogsgraph1.gifÓOÕGIF89ak  æ  ØØØ£££   ŸŸŸœœœ›››™™™˜˜˜———–––”””“““ŒŒŒ‰‰‰‚‚‚|||wwwtttqqqpppnnnmmmjjjiiigggeeedddaaa___\\\YYYWWWUUUTTTRRRQQQPPPNNNMMMLLLKKKJJJIIIGGGFFFEEEDDDBBB???>>>===;;;:::999888777666333111000///---,,,+++***)))((('''&&&%%%$$$###"""!!!ÿÿÿ                                                                                                                                                      !ù  M ,    k  @ÿ€M‚ƒ„…†‡ˆ‰Š‹Œ‘’“”†L4.L2†K‡LJM,L †
+<L‚<E„Lƒ/L‡GJ °J„LD¶…HJ‚ ‡*L	•Ñ1*Ö×%ÒÜİŞßÒ—!„1LB„L'£J‹L°²ƒ´ÅM>ô†BK¾M­Í`¢Œ	3CÎ 	¢ÀdD¡C˜`„aÉ†QL4À„I@|8!ÄÜ L(lÒñ "Iüı`ânP‹>rœø¢•ÁA5:–àà¡Œ(À)]Ê´©Ó§P£J½$ÂP¹"èÈ$ˆ \#âa¤¬‘"F˜,q1¨$¡KbÿÑê¤‚…]M
+Ñ‘’‚¸°kE%L2BùáĞÑW‚.Íp°@ÛY`"Ê)SM„°q£té.–@5«Ö Cùá°Bd˜.]£ƒ%]J8H¡KÖÚÜ¹©¬8Òï!	®}PÂ•kVµoÂ„¨‡tì+Y¢@j´âË_°Ép òëwÏ¿¿ÿÿ (à€hà$(ÑÁ!! 1Ã „p?ü0ÃrB	rhB6„t Ê 	ÄP“ ˆ€ƒB¡S	Š¢	¦ ÈEDDô°B÷(€Â‡LPUqLŒCÿI‚Ğ…¤ĞÕ"à•!kõd×DPq @¼ÆÄ‚ŒL€XpÍ<ƒ¤’M”3DfÅè\;‹P·š>MØóˆ!„?;0P#0 ×ÄfÂB\dİu4¨fœ²D)M8ĞQ4Ø é\İÙÚ==ÈA„Ì +t¤CšÒàh"åJ—Œ¸%1à–;4aƒ¡†xàÊ<ŸÂQ, ,	.ÌÄ„©ÂÔ€ÈL]d
+j2Ê¦ `ÙÊ;ÁUcL  ˆed©#$<ûË©‚x´Ò ğ"HjõJÈL'v¶rÀa]2‘!<*A5ÜÃÃ8à`œMD§Â2 ¤ÅÈçrÃ›…|0ƒ¦8ä€ƒ4$zBq·D%¨¾vG¤Ì8ç¬óÎ<K ;_&http://twoday.net/static/knallgrau.gifÓ!"OGIF89aD  ¢ óLÿÿÿ   ÌÌÌ            !ù   ,    D   ÚHºÜş0ÊI«½8ëƒ„ŠáW_@®&‹¾§ÚšŒ`Ú Nèüíç¿]°,6 R±T&›Ğ§”9uR¯Ö,gË6€®w–\è€ô"¬`§Õ;³B0¯Õlâ±¼îàlvuƒ„q†YMon‚ut„’†6–_~‚›p›r”’”‡£.y4Œmš¢¡xB°¢BFŠb¹X¸º½d'Á¦ÃÀÄ0¦wFzËCÍÊÎµ{»UQÓÖ‰ÔÙ¾Û¿ÇÅßŞáÂàÁÉÑÌÏéçĞèÒØ×Õïòñô|Ü÷øù	 ;_0http://twoday.net/static/powered_by_antville.gifÓ$%OëGIF89a)  Ä ãããüüüïïï÷÷÷ÂÂÂ===«««UUUÖÖÖqqq(((ÿÿÿ                                                   !ù   ,    )   ÿ $d)Ê¢‰é¾0j4ÌcÛŒ ì(¡v+ï7¤Æ¨´H@,
+°‚8ív‘‹	á-›„ÃèÀ}èÚEÂp.6F
+cb@˜uEbq37tdH4P6‹}7„E y
+t	 ªd¬Œš7)¹ «¶…¥y6´6I¦
+< 	n·¶V¦¬­™"…7àÑ¨
+»ÊĞ¥ôÑãåh  4¨V+@!h
+h@_ç‘»ñGÁ»a(`P
+
+*†vmq@‰ûjhå²•ç@ …–DTåƒR	0k&b'(Hˆ4À„¤ÏĞ A#¥qƒAlI-‚€Ä8SËÀB"˜²J©¢†W!b-)yÊD„×X$cÑö
+]\P"¦®_	
+îë7 ;_-http://twoday.net/static/powered_by_helma.gifÓ'(O+GIF89aX  æ     «±ªÿÿÿ¬²«@@@€€€­³¬¯µ®²·±®´­°¶¯   ·¼¶µº´´¹³¹¾¸ßßß®³­±·°ÏÒÎppp¸½·ŸŸŸ000»ÀºÎÑÍÃÇÂ¯´®ÄÈÃ```ÍĞÌ¶»µïïïÂÆÁÍÑÌÆÊÅÉÍÈ³¸²¿¿¿±¶°PPPÈÌÇÇËÇ¿Ä¿½Â½ÅÉÅÑÔĞËÎÊÎÒÎ»À»º¿¹ÌÏËÀÅÀ³¹²ÊÎÊ°µ¯¼Á¼ĞÓÏÌĞËËÏÊ¾Â½¼Á»ÅÉÄÀÅ¿ÊÍÉÁÅÀÇËÆĞÔĞ¾Ã½¾Ã¾ÏÓÏÉÍÉÏÏÏÄÉÄ¯¯¯²¸±ÈÌÈÁÆÁº¿º¿Ä¾ÆÊÆÂÇÂÊÎÉ½Â¼ÌĞÌÄÇÃ454ÀÄ¿ÑÔÑ¹¾¹565NON´º³ÒÕÑ(((ª­ªÅÈÄuwu‘“iki¿Ã¾(('ÂÅÁBCB\^\vwuOPN¸º·¶¹µvwv‚„‚ƒ…ƒ555gigNPNtvt\]\¶¹¶hjh‚„µ¸´„…ƒACA]^\!ù     ,    X   ÿ€ ƒ„…†‡ˆ‰Š‹Œ‰‚ ’“”——	
+&:GA"$D%B15V##<51BN,$"6G: &
+9	š˜—•“„Ò•Ğš	)¢4?FYª$,%8<#2ï2#¸I¼¾AF?4&(8 ‚&h–ª¤PÒ5l"tú
+„…R.Z<YÅ"I+ø|ÑBˆ‹84|è!dE/Q\+v,ÙŸ]SÈ°¡%LÎ8åèvcT¸Gll ÒªÇuI P€„AzÈÑ#	‘†ãçï‚DX­§ÂkÙÿ¶)˜ĞäÆª¤¤ù€„¾pÕÍb”â«…Ìş4HĞàC‘Â(w‚	0ÅQú‚…î ÀB°k ”A¢GK aõñ3†l Îµ˜0kŞ,Ñ‚¢à è@3dU‰#ÔTâºº Z®P¡¸×“(: k€,ÅÍf:ƒ·Í<<Ó¦C*Uï’V¨÷ ¨  Ä‰( A@ € È±ƒ5xµ„SÖYËä´Ózí‘'x3_>d1,PÁƒ~ @~PÀUH 
+ °Q<PÁSáÂıPZÀEƒa†Aqè!ÿ) ±Á+àğX   üı J(0Pğ+€„@2`Ì•—4nI3ÀOîu¶ä3ø@Z”#Pi%X  (ˆa@&	œ9CjDz—ÁÉœ›Ùé ¤ä¹'t~BBŒ @Àj*   ¬‘hN€eƒi
+9i‘sù4œ)iWNB)%e  
+*hÀ„ ' G˜c–¹h)iZ–]XIœ˜º÷Ş\wfàB#–xb ,ĞZu‚…ÛEÈãSdñXdg)À®¹~{©5ÄÁGÔ‡õ‰p_¨í€ *À+Xªl±`ÿ%ñ`UHØ€Y)TèŒ·”€K°†œĞ	X¤\Í‘ğ\ŸW¤aª¡‚AÀ¢dÜÈ½Aöv®ÂeQqsUdAã±Ô
+Bğ Wˆ1ˆ
+' P@ª xA´Õ ²êV&Lj![–úôP¯sÕÅé]
+ëÃS;ÀĞ†pÑG0,hN0aÇÚNÆ-ÒºÊI'DïÅ‡\8§H]Z	NÉ€D[Œ1ÇfŒÆEĞ¶R	;^{Ä>ı|L!A#Ã-°Ü™NäÙ¦O›«Ñ*T;¥;Ãñ0±CJ+%áRO8¤ÿ­VzF®çÈöÜwïıö'VÀÿÔÁX³Y)ş ‚1a%_) ÌÒ/XøôB€`U	F şòÿ´?p}úƒVÄe¥@È€‚À©!Áˆ½ZóÛ_ıLÁXƒ ßş(èAû%0„`B<‚²~h` ¬
+¨@€ŞW	P‚ùıF8ÂNp„r¡±@C‚pY!(@cèÃ®&0` ı # À¨O‚ìŒû€H !
+„ÀbûÓ¿ô¥Q Y<  úw)¦¯Š„ 0pÙp«â)X]Ğ$¢ öØÇîïJd¤ÙÅùAÀJÄcë§Å$/ˆ‚|á5xHE6Ğ…H"9	‰T 5è£`,± .^²5+” 
+”ğÃó‰”\$£)myBO¦–ñã']$ˆîï˜‚T Aãó€0¨2Np|x8¯¹MLr³]ƒ’ 5i9(T€›Z€:Ç§¬x¶³TTA§=ãù½~úóŸ ;_9http://creativecommons.org/images/public/somerights20.gifÓ*+,O ‰PNG
+
+   IHDR   P      ü«ßØ   çIDATxœåW±Ã Åß*s–ı€]:óµv°r*h<›šÁ7‡¼ ñbœs°, ÑİeL"Úhšò‘½Ÿäùöí €ÇİeÌÆr‚mé ÿ5Ò!—N5,G!ò};Ò/%1åÊl2L²Ô<B0k _éÑŠæ:»à6Œ”’:kçj‚C÷Xšs~Áı,ä5bj•óÄ²òÆÖšŸ	£²{†ât‚Ô M0DÍ¬Š¬Bn5tkS¹z-À8çˆh‘{—»––w¸øJâ—/ó˜Õş–>³ñ–<OAÓl    IEND®B`‚_)http://twoday.net/static/rss_complete.pngYimage/pngÓ./0O function plugNS(){var b=1;var o=0;var p=new Array("Shockwave Flash","Shockwave for Director","RealPlayer","QuickTime","VivoActive","LiveAudio","VRML","Dynamic HTML Binding","Windows Media Services");var np=navigator.plugins;for(var x=0;x<p.length;x++){for(var i=0;i<np.length;i++)if(np[i].name.indexOf(p[x])>=0)o|=b;b*=2;}return o;}function plugIE(){if(!document.body)document.write('<body>');var db=document.body;var o=0;var b=1;var p=new Array("D27CDB6E-AE6D-11CF-96B8-444553540000","2A202491-F00D-11CF-87CC-0020AFEECF20","23064720-C4F8-11D1-994D-00C04F98BBC9","","","","90A7533D-88FE-11D0-9DBE-0000C0411FC3","9381D8F2-0288-11D0-9501-00AA00B911A5","22D6F312-B0F6-11D0-94AB-0080C74C7E95"
+);db.addBehavior("#default#clientcaps");for(var i=0;i<p.length;i++){if(p[i])if(db.isComponentInstalled("{"+p[i]+"}","componentid"))o|=b;b*=2;}return o;}function nedstatbasic(id,options){var n=navigator;var ver=n.appVersion;var d=document;var verIE=parseInt(ver.substring(ver.indexOf("MSIE")+5,ver.indexOf("MSIE")+6));if(verIE>0)ver=verIE;else ver=parseInt(ver);var u="http://m1.nedstatbasic.net/n?id="+id;var r;if(options&1)r=d.referrer;else r=top.document.referrer;if(!(options&2)){var rc=r;var i=rc.indexOf('?');if(i>=0)rc=rc.substring(0,i);i=rc.lastIndexOf('/');if(i>=0)rc=rc.substring(0,i+1);var l=''+d.location;if(l.indexOf(rc)==0)r='';}if(r&&(r!=d.location))u+="&r="+escape(r);if((n.appName=="Netscape"&&ver>=3))u+="&p="+plugNS();if(verIE>=5&&n.appVersion.indexOf('Win')>=0&&n.userAgent.indexOf('Opera')<0)u+="&p="+plugIE();if(ver>=4){var s=screen;var w=s.width;var h=s.height;var c=s.colorDepth;if(w)u+="&w="+w;if(h)u+="&h="+h;if(c)u+="&c="+c;}u+="&v=1";d.write('<a target=_blank href="http://www.nedstatbasic.net/stats?'+id+'"><img src="'+u+'" border=0 width=18 height=18 alt="Nedstat Basic - Free web site statistics"></a>');}_#http://m1.nedstatbasic.net/basic.js_application/x-javascriptÓ23OœGIF87a  ò   1A´s‹”´Şœ”½î 1œÍÿs½ÿæöÿ,       ixºÜ^.ÆbT¹8ë\ [HW÷…š@¥r¢Ø*´Ãˆ™6¼r.[n 	èvÁÂjEŒ±€µU ÷+›È(é²¤nx³õ©á¡ªåäí«^C_îìgN¯Ó)A»~?ÄÙ‚ƒ„……ˆˆ	 ;_‡http://m1.nedstatbasic.net/n?id=ADXMQgPRof8O4342CAyhGb1EK8Wg&r=http%3A//www.technorati.com/search/tiddlywiki&p=15&w=1280&h=854&c=32&v=1Ó56,O‰PNG
+
+   IHDR   P      ü«ßØ   	pHYs     šœ   gAMA  ±|ûQ“    cHRM  z%  €ƒ  ùÿ  €é  u0  ê`  :˜  o’_ÅF  ŠIDATxÚbLKKcI  €X€¸§§…x¼¼¢C×·ééé Äa-_)ıúõ—‡ßË022BD"#§võWQß–¶I€ bÂ£âß¿ÿ?ş’Ã)INûöûòåçoß~;wîépò0@ áôğ÷ï¿~üød|ùòW
+ äƒ•ÉEÁª+,¦c0m € ÂéáOŸ~²±1C6VÌŒ–¥1}T DÈâh"˜jàlˆ®Üˆé¸b¬nƒ € Âéáß¿ÿşıò*33#Š4?@üŒ«€DA\†` Ä‚S‚ ³²2ÓÚÃã\<~&²ú  œ1,&ÆÃÀ Š[EEaâ]€3.Z\aŠ_©àñ!‘1@ŒÀ–°áµ¾téù“'\]Õà‘¬‡§Ïéºõ0°á@øêa..V^^vf†a ˆœˆ÷¯_‡“ ˆVÉÎKC ÈÃ%%5#§·` r^Àİ]:ÈÖ    IEND®B`‚_$http://twoday.net/static/twoday1.pngÓ89,O-‰PNG
+
+   IHDR         šñ#   	pHYs  ‰  ‰7ÉË­   gAMA  ±|ûQ“    cHRM  z%  €ƒ  ùÿ  €é  u0  ê`  :˜  o’_ÅF   £IDATxÚbLKKc *   9s&µŒKOO ‹‘‘
+Æıÿ"ˆ‰Ú  €¨o"@ ±àr<r8@Dà‚h\4 @,˜ÆÁµ¡1)€ ÂéFüÇª K8µár~5 @,C¨WÈb5 €Xp¹Y5¦ñ € ¢~ê ê›@,ãT @,ìME7 {Æ!§Ásô    IEND®B`‚_ http://twoday.net/static/agb.pngÓ;<0Oµ
+/**
+ * A compact JavaScript-Helper Libary for Cross Browser Scripting
+ * Used for twoday / antville
+ * 
+ * Written by Matthias Platzer at http://knallgrau.at
+ * inspired by code found at various places in the net
+ * especially by HTMLArea by Mihai Bazon http://students.infoiasi.ro/~mishoo
+ *
+ * use it as you need it
+ */
+
+addEvent = function(el, evname, func) {
+  if (el.attachEvent) el.attachEvent("on" + evname, func);
+  else el.addEventListener(evname, func, true);
+}
+
+stopEvent = function(evt) {
+  if (evt.preventDefault) {
+    evt.preventDefault();
+    evt.stopPropagation();
+  } else {
+    evt.cancelBubble = true;
+    evt.returnValue = false;
+  }
+}
+
+addEvents = function(el, evs, func) {
+	for (var i in evs) { addEvent(el, evs[i], func) }
+}
+
+removeEvent = function(el, evname, func) {
+	if (el.detachEvent) el.detachEvent("on" + evname, func);
+	else el.removeEventListener(evname, func, true);
+}
+
+removeEvents = function(el, evs, func) {
+	for (var i in evs) { removeEvent(el, evs[i], func) }
+}
+
+removeClass = function(el, className) {
+	if (!(el && el.className)) return;
+
+	var cls = el.className.split(" ");
+	var ar = new Array();
+	for (var i = cls.length; i > 0;) {
+		if (cls[--i] != className) {
+			ar[ar.length] = cls[i];
+		}
+	}
+	el.className = ar.join(" ");
+}
+
+addClass = function(el, className) {
+	// remove the class first, if already there
+	removeClass(el, className);
+	el.className += " " + className;
+}
+
+hasClass = function(el, className) {
+	if (!(el && el.className)) return false;
+
+	var cls = el.className.split(" ");
+	for (var i = cls.length; i > 0;) {
+		if (cls[--i] == className) return true;
+	}
+	return false;
+}
+
+hitTest = function (ele1, ele2) {
+	if (getAbsOffsetLeft(ele1)+ele1.offsetWidth<getAbsOffsetLeft(ele2)) return false;
+	if (getAbsOffsetTop(ele1)+ele1.offsetHeight<getAbsOffsetTop(ele2)) return false;
+	if (getAbsOffsetLeft(ele2)+ele2.offsetWidth<getAbsOffsetLeft(ele1)) return false;
+	if (getAbsOffsetTop(ele2)+ele2.offsetHeight<getAbsOffsetTop(ele1)) return false;
+	return true;
+}
+
+isUnderMouse = function (evt, ele) {
+  var evt = evt ? evt : window.event;
+  var sl = (window.pageXOffset ? window.pageXOffset : document.body.scrollLeft);
+  var st = (window.pageYOffset ? window.pageYOffset : document.body.scrollTop);
+
+	var x = (evt.clientX + sl);
+	var y = (evt.clientY + st);
+	if (x<getAbsOffsetLeft(ele)) return false;
+	if (y<getAbsOffsetTop(ele)) return false;
+	if (x>getAbsOffsetLeft(ele)+ele.offsetWidth) return false;
+	if (y>getAbsOffsetTop(ele)+ele.offsetHeight) return false;
+	return true;
+}
+
+function getAbsOffsetTop(ele) {
+  var offset = 0;
+  var st = (window.pageYOffset ? window.pageYOffset : document.body.scrollTop);
+  do { offset += ele.offsetTop; if (window.getComputedStyle && window.getComputedStyle(ele, "").getPropertyValue("position")=="fixed") { offset+=st }; ele = ele.offsetParent; } while (ele!=null)
+  return offset;
+}
+
+function getAbsOffsetLeft(ele) {
+  var offset = 0;
+  var sl = (window.pageXOffset ? window.pageXOffset : document.body.scrollLeft);
+  do { offset += ele.offsetLeft; if (window.getComputedStyle && window.getComputedStyle(ele, "").getPropertyValue("position")=="fixed") { offset+=sl }; ele = ele.offsetParent; } while (ele!=null)
+  return offset;
+}
+
+
+// Array functions
+Array.prototype.contains = function(el) {
+  for (var i=0; i<this.length; i++) {
+    if (this[i] == el) return i;
+  }
+  return false;
+}
+
+// Cookie Functions
+function ClientCookie() {
+	if (document.cookie.length) { this.cookies = ' ' + document.cookie; }
+}
+
+ClientCookie.prototype.setCookie = function (key, value) {
+	document.cookie = key + "=" + escape(value);
+}
+
+ClientCookie.prototype.getCookie = function (key) {
+	if (this.cookies) {
+		var start = this.cookies.indexOf(' ' + key + '=');
+		if (start == -1) { return null; }
+		var end = this.cookies.indexOf(";", start);
+		if (end == -1) { end = this.cookies.length; }
+		end -= start;
+		var cookie = this.cookies.substr(start,end);
+		return unescape(cookie.substr(cookie.indexOf('=') + 1, cookie.length - cookie.indexOf('=') + 1));
+	}
+	else { return null; }
+}
+
+
+userAgent = navigator.userAgent.toLowerCase();
+isIE     = ((userAgent.indexOf("msie") != -1) && (userAgent.indexOf("opera") == -1));
+isOpera  = (userAgent.indexOf("opera") != -1);
+isMac     = (userAgent.indexOf("mac") != -1);
+isMacIE = (isIE && isMac);
+isWinIE = (isIE && !isMac);
+isSafari = (userAgent.indexOf("safari") != -1);
+isGecko  = (navigator.product == "Gecko" && !isSafari);
+
+KEY_TAB = 9;
+KEY_REFRESH = 116; //F5
+KEY_ENTER= 13; 
+TAB_INDENT = 2;
+KEY_SPACE = 32;
+_#http://prozesse.twoday.net/jsLib.jsÓ>?0OÌ
+var openMenuDiv = null;
+var doTryToCloseMenu = false;
+var dropDownTimer;
+function openMenu(id) {
+  if (openMenuDiv) {
+    openMenuDiv.style.visibility = 'hidden';
+    openMenuDiv = null;
+  }
+  var dd = document.getElementById('modToolbar-dropdown-'+id);
+  var te = document.getElementById('modToolbar-'+id);
+  var tbSpacer = document.getElementById('modToolbar-spacer');
+  dd.style.visibility='visible';
+  dd.style.display='block';
+  if (tbSpacer.offsetWidth < (getAbsOffsetLeft(te) + 160)) dd.style.left = (tbSpacer.offsetWidth - 160)+'px';
+  else dd.style.left = (getAbsOffsetLeft(te)-5)+'px';
+  dd.style.top = (getAbsOffsetTop(te)+te.offsetHeight+2)+'px';
+  openMenuDiv = dd;
+  window.clearTimeout(dropDownTimer);
+  dropDownTimer = window.setTimeout("doTryToCloseMenu = true", 2500);
+}
+function tryToCloseMenu(evt) {
+  try {
+    if (openMenuDiv && !isUnderMouse(evt, openMenuDiv)) {
+      openMenuDiv.style.visibility = 'hidden';
+      openMenuDiv = null;
+      window.clearTimeout(dropDownTimer);
+    }  	
+  } catch (e) { }
+}
+function tryToCloseMenuOnMove(evt) {
+  try {
+    if (doTryToCloseMenu) {
+      doTryToCloseMenu = false;
+      if (openMenuDiv && !isUnderMouse(evt, openMenuDiv)) {
+        openMenuDiv.style.visibility = 'hidden';
+        openMenuDiv.style.display='none';
+        openMenuDiv = null;
+        window.clearTimeout(dropDownTimer);
+      }
+    }
+  } catch (e) { }
+}
+function repositionToolbar() {
+  var tb = document.getElementById("modToolbar");
+  tb.style.top = document.body.scrollTop+"px";
+}
+function hideToolbar(open) {
+  var tb = document.getElementById("modToolbar");
+  var tbCollapsed = document.getElementById("modToolbar-collapsed");
+  var tbSpacer = document.getElementById("modToolbar-spacer");
+  tb.style.display = (open) ? "block" : "none";
+  tbSpacer.style.display = (open) ? "block" : "none";
+  tbCollapsed.style.display = (open) ? "none" : "block";
+  // setCookie("tbisopen", (open)?"1":"-1");
+}
+_(http://prozesse.twoday.net/modToolbar.jsÔABCDUUTF-8O,–<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><HEAD><TITLE>prozesse: tunnel</TITLE><META http-equiv="Content-Type" content="text/html"><META name="robots" content="all"><META name="MSSmartTagsPreventParsing" content="TRUE"><LINK rel="alternate" type="text/xml" title="XML" href="http://prozesse.twoday.net/rss"><LINK rel="stylesheet" type="text/css" title="CSS Stylesheet" href="http://prozesse.twoday.net/main.css"><LINK rel="shortcut icon" href="http://twoday.net/static/prozesse/images/favicon.gif"><LINK rel="stylesheet" type="text/css" title="CSS Stylesheet" href="http://prozesse.twoday.net/modToolbar.css"></HEAD><BODY>
+<DIV id="modToolbar-spacer" class="modToolbar"><DIV class="modToolbarBorder">Â </DIV></DIV>
+
+<DIV id="modToolbar" class="modToolbar">  <DIV id="modToolbar-line1">  <DIV class="modToolbarBorder">    <DIV class="modToolbarLeft">      <IMG width="16" height="16" title="" class="favicon" src="http://twoday.net/static/prozesse/images/favicon.gif" alt="o">
+      <A href="http://twoday.net/">twoday</A> &gt; 
+      <A id="modToolbar-topic-menu" onmouseover="openMenu('topic-menu')" href="http://prozesse.twoday.net/">prozesse</A> &gt; <A href="http://prozesse.twoday.net/topics/lesen%21">lesen!</A> &gt; <A href="http://prozesse.twoday.net/stories/740036/" title="tunnel">tunnel</A>
+    </DIV>
+    <DIV class="modToolbarRight">      <A href="http://prozesse.twoday.net/members/login">Anmelden</A> - [<A href="http://prozesse.twoday.net/modToolbarSwitch?settbisclosed=1">&lt;&lt;</A>]
+    </DIV>
+    Â 
+  </DIV>
+  </DIV>
+</DIV>
+
+
+<DIV id="wrapper">
+ 
+     <DIV id="header">    <DIV class="icon"><NOBR><A href="http://prozesse.twoday.net/"><IMG width="48" height="48" title="" src="http://twoday.net/static/prozesse/layouts/prozesse/icon.gif" alt=""></A>   <A href="http://www.litblogs.net/"><IMG width="48" height="48" title="" src="http://twoday.net/static/prozesse/layouts/prozesse/icon3.gif" alt=""></A></NOBR></DIV>
+    <H1><A href="http://prozesse.twoday.net/">prozesse</A></H1>
+    <DIV class="tagline">was sind literarische weblogs?</DIV>
+  </DIV>
+  
+    <DIV id="pagebody">    
+        <DIV id="container">
+            <DIV id="content">
+
+
+<DIV class="story">
+    <H3 class="storyTitle"><A href="http://prozesse.twoday.net/stories/740036/">tunnel</A></H3>
+
+    <DIV class="storyContent">hochinteressant ist das tiddlywiki-projekt von pommerland. beinahe tÃ¤glich sind neue stollen, streben und schichten in der autorenversion des <A href="http://abgebr.antville.org/stories/1125252/">tunnel</A> zu entdecken ...</DIV>
+
+    <DIV class="storyDate"><A href="http://www.litblogs.net">prozesse</A> - 4. Jun, 11:36 - <A href="http://prozesse.twoday.net/topics/lesen%21">lesen!</A></DIV>
+
+    <DIV class="storyLinks"><A href="http://prozesse.twoday.net/stories/740036/#comments">1 Kommentar</A> - <A href="http://prozesse.twoday.net/stories/740036/comment">Kommentar verfassen</A> - <A href="http://prozesse.twoday.net/stories/740036/#trackbacks">0 Trackbacks</A></DIV>
+
+</DIV>
+
+
+<A name="comments"></A>
+<A name="740722"></A><DIV class="comments">
+
+    <DIV class="commentDate"><A href="http://abgebr.antville.org/">pommerland</A> - 4. Jun, 18:49</DIV>
+
+    <H4>danke.</H4>
+
+    <DIV>froh wÃ¤r ich, wenn tatsÃ¤chlich beinahe tÃ¤glich was dazukÃ¤me. bin textarm im moment. aber bug-reports oder kommentare sind willkommen.</DIV>
+
+    <DIV class="commentLinks"></DIV>
+  
+    
+
+</DIV>
+
+
+
+<DIV class="comments">
+  <P class="small">  Trackback URL:<BR>
+  http://prozesse.twoday.net/stories/740036/modTrackback
+  </P>
+
+  
+</DIV>
+
+
+
+
+
+
+      </DIV>
+
+    </DIV>
+    
+        <DIV id="sidebar01">
+<DIV class="sidebarItem"><H4>Meta</H4>
+<A href="http://www.litblogs.net"><IMG width="111" height="57" title="" src="http://twoday.net/static/prozesse/images/litblogsgraph1.gif" alt=""></A><BR><BR>
+<UL><LI><A href="http://avenidaperdida.twoday.net">+ Avenida Perdida</A></LI><LI><A href="http://albannikolaiherbst.twoday.net">+ Die Dschungel. Anderswelt</A></LI><LI><A href="http://hanginglydia.twoday.net">+ Hanging Lydia</A></LI><LI><A href="http://itaipu.twoday.net">+ Itaipu</A></LI><LI><A href="http://kritik.antville.org">+ Nicht bei Trost</A></LI><LI><A href="http://parallalie.twoday.net">+ parallalie</A></LI><LI><A href="http://abgebr.antville.org">+ pommerland</A></LI><LI><A href="http://snafu.twoday.net">+ Stigma</A></LI><LI><A href="http://www.abendschein.ch/weblog.php">+ taberna kritika</A></LI><LI><A href="http://lofico.antville.org">+ Zentrum fÃ¼r Archivpoetik</A></LI>
+</UL>
+</DIV>
+
+<DIV class="sidebarItem">  <H4>User Status<BR></H4>
+  <DIV class="sidebarItemBody">Du bist nicht angemeldet.
+<UL><LI><A href="http://prozesse.twoday.net/members/login">login</A></LI>
+
+</UL>
+
+  </DIV>
+</DIV>
+
+<DIV class="sidebarItem">  <H4>MenÃ¼<BR></H4>
+  <DIV class="sidebarItemBody"><A href="http://prozesse.twoday.net/">prozesse</A><BR>
+<UL><LI>+ <A href="http://prozesse.twoday.net/topics/begriffe/">begriffe</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/kollaborative/">kollaborative</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/lesbarkeit/">lesbarkeit</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/lesen%21/">lesen!</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/netz/">netz</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/poetologie/">poetologie</A></LI><LI>+ <A href="http://prozesse.twoday.net/topics/rezeption/">rezeption</A></LI></UL>
+
+<BR>
+<A href="http://twoday.net/">twoday.net</A>
+
+  </DIV>
+</DIV>
+
+<DIV class="sidebarItem">  <H4>Suche<BR></H4>
+  <DIV class="sidebarItemBody"><FORM method="get" action="http://prozesse.twoday.net/search"><INPUT name="q" class="searchbox" value="">Â <INPUT type="submit" value="go" class="searchbox"></FORM>
+  </DIV>
+</DIV>
+
+
+<DIV class="sidebarItem">  <H4>Aktuelle BeitrÃ¤ge<BR></H4>
+  <DIV class="sidebarItemBody"><DIV class="historyItem"><A href="http://prozesse.twoday.net/stories/821340/#821858">das habe ich mit lustvoll...</A><BR>
+und die lust ist die spielregel in der eigenen wohnung.
+<DIV class="small">hab - 7. Jul, 15:16</DIV></DIV>
+<DIV class="historyItem"><A href="http://prozesse.twoday.net/stories/821340/#821806">Ich Ã¤uÃŸere...</A><BR>
+Eine Zensur ist es schon von daher nicht, als daÃŸ...
+<DIV class="small">albannikolaiherbst - 7. Jul, 14:59</DIV></DIV>
+<DIV class="historyItem"><A href="http://prozesse.twoday.net/stories/821340/">poetische massnahme oder...</A><BR>
+"Wegen stÃ¤ndiger auch sehr persÃ¶nlicher Kommentare,...
+<DIV class="small">hab - 7. Jul, 13:01</DIV></DIV>
+<DIV class="historyItem"><A href="http://prozesse.twoday.net/stories/776144/#813229">Was haben Sie.</A><BR>
+Gegen "literarisch"? Wenn man es in franzÃ¶sischem...
+<DIV class="small">albannikolaiherbst - 4. Jul, 08:47</DIV></DIV>
+<DIV class="historyItem"><A href="http://prozesse.twoday.net/stories/776144/">zum Begriff â€œliterarischâ€</A><BR>
+"Sowohl bei der AnkÃ¼ndigung wie bei der Definition...
+<DIV class="small">prozesse - 19. Jun, 11:59</DIV></DIV>
+
+  </DIV>
+</DIV>
+
+<DIV class="sidebarItem">  <H4>Status<BR></H4>
+  <DIV class="sidebarItemBody">Online seit 83 Tagen<BR>
+Zuletzt aktualisiert: 7. Jul, 15:16
+
+  </DIV>
+</DIV>
+
+<DIV class="sidebarItem">  <H4>Credits<BR></H4>
+  <DIV class="sidebarItemBody"><P><A href="http://www.knallgrau.at"><IMG width="107" height="30" border="0" src="http://twoday.net/static/knallgrau.gif" alt="Knallgrau New Media Solutions - Web Agentur fÃ¼r neue Medien"></A></P>
+<P><A href="http://www.antville.org"><IMG width="68" height="24" border="0" src="http://twoday.net/static/powered_by_antville.gif" alt="powered by Antville"></A>Â <A href="http://www.helma.org"><IMG width="41" height="24" border="0" src="http://twoday.net/static/powered_by_helma.gif" alt="powered by Helma"></A></P>
+<BR>
+<A rel="license" href="http://creativecommons.org/licenses/by-nd/2.0/de/"><IMG alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.gif"></A><BR>
+
+   <PERMITS rdf:resource="http://web.resource.org/cc/Reproduction">   <PERMITS rdf:resource="http://web.resource.org/cc/Distribution">   <REQUIRES rdf:resource="http://web.resource.org/cc/Notice">   <REQUIRES rdf:resource="http://web.resource.org/cc/Attribution">
+<BR><A href="http://prozesse.twoday.net/index.rdf"><IMG width="80" height="15" border="0" src="http://twoday.net/static/rss_complete.png" alt="xml version of this page"></A> 
+<SCRIPT language="JavaScript" type="text/javascript" src="http://m1.nedstatbasic.net/basic.js">
+</SCRIPT>
+<SCRIPT language="JavaScript" type="text/javascript">
+<!--
+  nedstatbasic("ADXMQgPRof8O4342CAyhGb1EK8Wg", 0);
+// -->
+</SCRIPT><A target="_blank" href="http://www.nedstatbasic.net/stats?ADXMQgPRof8O4342CAyhGb1EK8Wg"><IMG src="http://m1.nedstatbasic.net/n?id=ADXMQgPRof8O4342CAyhGb1EK8Wg&r=http%3A//www.technorati.com/search/tiddlywiki&p=15&w=1280&h=854&c=32&v=1" border="0" width="18" height="18" alt="Nedstat Basic - Free web site statistics"></A>
+
+
+<P><A href="http://www.twoday.net"><IMG width="80" height="15" border="0" src="http://twoday.net/static/twoday1.png" alt="twoday.net"></A> <A href="http://twoday.net/terms"><IMG width="27" height="15" border="0" src="http://twoday.net/static/agb.png" alt="AGB"></A></P>
+
+  </REQUIRES></REQUIRES></PERMITS></PERMITS></DIV>
+</DIV>
+
+
+    </DIV>
+
+    <BR clear="all">
+    <DIV class="clearall"></DIV>
+
+  </DIV>
+
+    <DIV id="footer">Â </DIV>
+  
+</DIV>
+
+<SCRIPT type="text/javascript" src="http://prozesse.twoday.net/jsLib.js"></SCRIPT><SCRIPT type="text/javascript" src="http://prozesse.twoday.net/modToolbar.js"></SCRIPT>
+
+<DIV id="modToolbar-dropdown-contributor-menu" class="modToolbarDropdown"><A name="contributormenu" style="display: none;"></A>
+
+</DIV>
+<DIV id="modToolbar-dropdown-admin-menu" class="modToolbarDropdown"><A name="adminmenu" style="display: none;"></A>
+
+</DIV>
+<DIV id="modToolbar-dropdown-topic-menu" class="modToolbarDropdown">  <DIV><A href="http://prozesse.twoday.net/topics/begriffe/">begriffe</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/kollaborative/">kollaborative</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/lesbarkeit/">lesbarkeit</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/lesen%21/">lesen!</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/netz/">netz</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/poetologie/">poetologie</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/topics/rezeption/">rezeption</A></DIV>
+
+</DIV>
+<DIV id="modToolbar-dropdown-imagetopic-menu" class="modToolbarDropdown">
+</DIV>
+
+<DIV id="modToolbar-dropdown-account-menu" class="modToolbarDropdown">  <DIV><A href="http://prozesse.twoday.net/members/edit">Profil</A></DIV>
+  <DIV><A href="http://prozesse.twoday.net/members/logout">Abmelden</A></DIV>
+
+</DIV>
+<DIV id="modToolbar-dropdown-abo-menu" class="modToolbarDropdown">  <DIV><A href="http://prozesse.twoday.net/subscribe">Weblog abonnieren</A></DIV>
+
+</DIV>
+<SCRIPT type="text/javascript"><!--
+IS_IE = (navigator.userAgent.toLowerCase().indexOf("msie")!=-1 && navigator.userAgent.toLowerCase().indexOf("opera")==-1);
+addEvent(document.body, "mousedown", tryToCloseMenu);
+addEvent(document.body, "mousemove", tryToCloseMenuOnMove);
+// if (IS_IE) window.onscroll = repositionToolbar;
+// -->
+</SCRIPT>
+
+
+</BODY></HTML>_*http://prozesse.twoday.net/stories/740036/Ytext/html    1 E N l ~  £ ©{¡ª±$·$ã$ê%Ÿ%Ö%à%ç+\+š+¡2 2ß2æ=`==¥B~B§B®CÇCúDEğF F'MVM’M™N½NéNóNúVVDV_VfWWW–Y®YÕYÜ[[0[7lğmmtíuu!u'¡Á¡î             E              ¡ø

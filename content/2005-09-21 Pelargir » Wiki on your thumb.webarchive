@@ -1,0 +1,120 @@
+bplist00�_WebMainResource�	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUUTF-8O!�<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><META name="generator" content="WordPress 1.5.1.3"><TITLE>Pelargir » Wiki on your thumb</TITLE>
+
+<STYLE type="text/css" media="screen">
+        @import url( http://blog.matthewbass.com/wp-content/themes/boxy-but-gold/style.css );
+
+/* Theme switcher css */
+.sub-sidebar #themes ul li select {
+        width: 175px;
+        font-size: 90%;
+        color: #000;
+        background-color: #fff8df;
+}
+</STYLE>
+
+<LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.matthewbass.com/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://blog.matthewbass.com/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://blog.matthewbass.com/feed/atom/"><LINK rel="pingback" href="http://blog.matthewbass.com/xmlrpc.php"></HEAD><BODY>
+<DIV id="header">        <DIV id="pages-menu">        <UL>                        </UL>
+        </DIV>
+        <DIV id="name">
+                <H1><A href="http://blog.matthewbass.com">Pelargir</A></H1>
+        
+        <DIV id="tag">Just another WordPress weblog… by Matthew Bass</DIV>
+        </DIV>
+</DIV>
+
+<DIV id="sidebar">
+        <DIV class="sub-sidebar">        <UL>                <LI id="calendar">                <TABLE id="wp-calendar">    <CAPTION>September 2005</CAPTION>
+    <THEAD><TR><TH abbr="Monday" scope="col" title="Monday">Mon</TH><TH abbr="Tuesday" scope="col" title="Tuesday">Tue</TH><TH abbr="Wednesday" scope="col" title="Wednesday">Wed</TH><TH abbr="Thursday" scope="col" title="Thursday">Thu</TH><TH abbr="Friday" scope="col" title="Friday">Fri</TH><TH abbr="Saturday" scope="col" title="Saturday">Sat</TH><TH abbr="Sunday" scope="col" title="Sunday">Sun</TH></TR></THEAD>
+
+    <TFOOT><TR><TD abbr="August" colspan="3" id="prev"><A href="http://blog.matthewbass.com/2005/08/" title="View posts for August 2005">« Aug</A></TD><TD class="pad"> </TD><TD colspan="3" id="next" class="pad"> </TD></TR></TFOOT>
+
+    <TBODY><TR><TD colspan="3" class="pad"> </TD><TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD></TR><TR><TD>5</TD><TD>6</TD><TD>7</TD><TD>8</TD><TD>9</TD><TD>10</TD><TD>11</TD></TR><TR><TD>12</TD><TD>13</TD><TD>14</TD><TD>15</TD><TD>16</TD><TD>17</TD><TD>18</TD></TR><TR><TD>19</TD><TD>20</TD><TD id="today"><A href="http://blog.matthewbass.com/2005/09/21/" title="Wiki on your thumb">21</A></TD><TD>22</TD><TD>23</TD><TD>24</TD><TD>25</TD></TR><TR><TD>26</TD><TD>27</TD><TD>28</TD><TD>29</TD><TD>30</TD><TD class="pad" colspan="2"> </TD></TR></TBODY>
+        </TABLE>                </LI>
+        </UL>
+        </DIV>
+
+
+
+
+
+        <DIV class="sub-sidebar">        <UL>                <LI id="meta">Meta                <UL>                                                <LI><A href="http://blog.matthewbass.com/wp-login.php">Login</A></LI>
+                        <LI><A href="feed:http://blog.matthewbass.com/feed/" title="Syndicate this site using RSS">RSS</A></LI>
+                        <LI><A href="feed:http://blog.matthewbass.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <ABBR title="Really Simple Syndication">RSS</ABBR></A></LI>
+                        <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+                        <LI><A href="http://gmpg.org/xfn/" title="XHTML Friends Network"><ABBR title="XHTML Friends Network">XFN</ABBR></A></LI>
+                        <LI><A href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</A></LI>
+                                        </UL>
+                </LI>
+                <LI id="search"><LABEL for="s">Search</LABEL>        
+                <FORM id="searchform" method="get" action="/index.php">                        <DIV>                        <INPUT type="text" name="s" id="s" size="10"> <INPUT type="submit" id="submit" value="Search">
+                        </DIV>
+                </FORM>
+                </LI>
+        </UL>
+        </DIV>
+
+</DIV>
+
+<DIV id="content">
+        <DIV class="post-header"><H2>September 21, 2005</H2></DIV>      <DIV class="post">        <H3 class="post-title" id="post-9"><A href="http://blog.matthewbass.com/2005/09/21/wiki-on-your-thumb/" rel="bookmark">Wiki on your thumb</A></H3>
+                <DIV class="post-content">                        <P>Yesterday I began getting irritated with my Instiki install on my PC at home. Don’t get me wrong, I like Instiki itself, but having to start it from the command line was getting annoying and I haven’t yet had time to figure out how to set it up as a Windows service. Add to that the fact that I want to have access to my Wiki from other computers and yet not open up my home network to the world, and you’ll see the dilemma I was facing.</P>
+        <P>The ideal thing for me would be to store my Wiki on my USB thumb drive. Instiki’s data files could theoretically be stored there I suppose, but where would that leave me if I wanted to update my Wiki on a different computer which didn’t have Instiki installed? My thumb drive is too small to host a copy of Ruby/Rails on it. In desperation, I ran a Google search for “wiki on usb drive” and, behold, <A href="http://www.tiddlywiki.com">TiddlyWiki </A>appeared.</P>
+        <P>TiddlyWiki is an experimental “micro-content” Wiki designed by Jeremy Ruston. It’s written in HTML, CSS, JavaScript… and that’s it. No web server whatsoever is required to run this thing. It’s basically a self-updating HTML file. Clever! And useful. I can store the HTML page on my thumb drive and access it from any computer with a reasonably up-to-date browser. Theoretically, I could even go a step further and embed the Firefox browser itself on my thumb drive, complete with a custom profile and bookmarks.</P>
+        <P>I highly recommend you check out TiddlyWiki if only for the novelty. The install is dead-easy (just save a file to disk) and I found the non-linear navigation structure based on “tiddles” (small chunks of information) to be quite logical. I haven’t seen something this cool since I was first exposed to AJAX!
+</P>
+                </DIV>
+
+                <DIV class="post-meta">                                Posted by Matthew @ 11:41 am :: <A href="http://blog.matthewbass.com/category/general-interest/" title="View all posts in General Interest" rel="category tag">General Interest</A> <BR>
+                <A href="http://blog.matthewbass.com/2005/09/21/wiki-on-your-thumb/feed/" title="RSS 2.0 feed for comments to this post.">Comment RSS</A>
+                                :: <A href="http://blog.matthewbass.com/2005/09/21/wiki-on-your-thumb/trackback/" title="Copy link to send Trackback to this post.">Trackback URI</A>
+                        
+                </DIV>
+
+        
+<H3 id="comments">No Comments 
+        <SPAN class="meta-comment"><A href="#postcomment" title="Leave a comment">»</A></SPAN>
+</H3>
+
+
+<P id="postcomment"> </P>
+
+
+<FORM action="http://blog.matthewbass.com/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SUP>name (required)</SUP></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SUP>email (required/not published)</SUP></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SUP>web site</SUP></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="9">
+</P>
+
+</FORM>
+
+
+        </DIV>
+
+
+        <DIV id="nav">                <DIV id="nav-forward">                <A href="http://blog.matthewbass.com/2005/08/11/pair-programming-at-sas/">Previous post »</A>              </DIV>
+                <DIV id="nav-backward">                                </DIV>
+        </DIV>
+
+</DIV>
+
+<DIV id="footer">
+<P>Copyright©2005 Matthew Bass<BR>
+'Boxy But Gold' theme design by <A href="http://szub.net/" title="szubNet">Kaf Oseo</A>
+</P></DIV>
+
+
+</BODY></HTML>_:http://blog.matthewbass.com/2005/09/21/wiki-on-your-thumb/Ytext/html    & D V e { �""V                           "`

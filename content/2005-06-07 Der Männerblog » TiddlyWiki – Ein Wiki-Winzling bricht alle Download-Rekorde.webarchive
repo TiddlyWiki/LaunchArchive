@@ -1,0 +1,1319 @@
+bplist00Ò,_WebSubresources_WebMainResource« #&)Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO<html>
+<head>
+<title>maennerseiten.de - Error 404</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body bgcolor="#2e6273" text="#FFFFFF" link="#FFFF00" vlink="#FF9F00" alink="#AA5F00">
+<table width="95%" border="0" cellspacing="0" cellpadding="2" align="center">
+  <tr valign="top">
+    <td>&nbsp;</td>
+    <td> 
+      <h2><a href="http://maennerseiten.de">http://maennerseiten.de</a><br>
+      </h2>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td><img src="x4-flirt.gif" width="78" height="192"></td>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="1" bgcolor="#FFFFFF">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#FFFFFF">
+              <tr> 
+                <td bgcolor="#26515f"> 
+                  <h2>Fehler 404<b></b></h2>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#367487"> 
+                  <p>a) Es kann sein, da&szlig; <b>zuviele Leute gleichzeitig</b> 
+                    etwas downloaden wollen; einige Minuten sp&auml;ter klappt 
+                    es meist <b>problemlos</b>;</p>
+                  <p>b) Eine Seite fehlt, dann dr&uuml;cken Sie den <b>&quot;R&uuml;ckw&auml;rts&quot;-Button</b> 
+                    Ihres Browsers. </p>
+                  <p>c) Oder Sie gehen direkt zur <a href="http://maennerseiten.de/h-suchen.htm"><b>Suchfunktion</b></a>.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="500" border="0" cellspacing="0" cellpadding="1" bgcolor="#FFFFFF">
+        <tr> 
+          <td> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#FFFFFF">
+              <tr> 
+                <td bgcolor="#26515f"> 
+                  <p><b>Aktuelle Tips:</b></p>
+                </td>
+              </tr>
+              <tr> 
+                <td bgcolor="#367487" valign="top"> 
+                  <ul>
+                    <li><font face="Arial, Helvetica, sans-serif" size="2">Linkliste: 
+                      <b> <a href="freesms.htm">Free-SMS</a></b> mit vollen 160 
+                      Zeichen.</font></li>
+                    <li><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.maennerseiten.de/sms-spruche/sms-spruche.htm"><b>SMS-Spr&uuml;che</b></a></font></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;
+
+</p>
+
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"> <img src="http://webhits.b-online.de/cgi/Count.cgi?sh=0&amp;df=1553.dat"
+    vspace="0" hspace="0" border="0"> 
+<p align="center"> <a href="http://de.nedstat.net/viewstat.asp?name=Herby"><img src="http://de.nedstat.net/scripts/nedstat.dll?name=Herby"
+    width="0" height="0" vspace="0" hspace="0" border="0"></a> 
+<p align="center"> 
+<p>&nbsp;</p>
+</body>
+</html>
+_&http://maennerseiten.de/blog/print.cssYtext/htmlÓO2€// new edit toolbar used with permission
+// by Alex King
+// http://www.alexking.org/
+
+// modified by Donald Noble http://drnoble.co.uk
+// updated to use additional WP 1.5 quicktags changes
+
+var edButtons = new Array();
+var edLinks = new Array();
+var edOpenTags = new Array();
+
+function edButton(id, display, tagStart, tagEnd, access, open) {
+	this.id = id;				// used to name the toolbar button
+	this.display = display;		// label on button
+	this.tagStart = tagStart; 	// open tag
+	this.tagEnd = tagEnd;		// close tag
+	this.access = access;		// access key
+	this.open = open;			// set to -1 if tag does not need to be closed
+}
+
+function zeroise(number, threshold) {
+	// FIXME: or we could use an implementation of printf in js here
+	var str = number.toString();
+	if (number < 0) { str = str.substr(1, str.length) }
+	while (str.length < threshold) { str = "0" + str }
+	if (number < 0) { str = '-' + str }
+	return str;
+}
+
+var now = new Date();
+var datetime = now.getFullYear() + '-' + 
+				zeroise(now.getMonth() + 1, 2) + '-' +
+				zeroise(now.getDate(), 2) + 'T' + 
+				zeroise(now.getHours(), 2) + ':' + 
+				zeroise(now.getMinutes(), 2) + ':' + 
+				zeroise(now.getSeconds() ,2) +
+				// FIXME: we could try handling timezones like +05:30 and the like
+				zeroise((now.getTimezoneOffset()/60), 2) + ':' + '00';
+
+edButtons[edButtons.length] = new edButton('ed_pic_drop_shadow'
+                                          ,'pic shadow'
+                                          ,'<div class="img-shadow">'
+                                          ,'</div>'
+                                          ,'p'
+                                          );  
+                                          
+edButtons[edButtons.length] = new edButton('ed_txt_drop_shadow'
+                                          ,'text shadow'
+                                          ,'<div class="p-shadow"><div><p>'
+                                          ,'</p></div></div>'
+                                          ,'p'
+                                          );  
+
+
+
+edButtons[edButtons.length] = 
+new edButton('ed_h3'
+,'H3'
+,'<h3>'
+,'</h3>'
+,'3'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_h4'
+,'H4'
+,'<h4>'
+,'</h4>'
+,'4'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_strong'
+,'str'
+,'<strong>'
+,'</strong>'
+,'b'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_em'
+,'em'
+,'<em>'
+,'</em>'
+,'i'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_link'
+,'a'
+,''
+,'</a>'
+,'a'
+); // special case
+
+edButtons[edButtons.length] = 
+new edButton('ed_block'
+,'bQ'
+,'<blockquote>'
+,'</blockquote>'
+,'o'
+);
+edButtons[edButtons.length] = 
+new edButton('ed_quote'
+,'Q'
+,'<q>'
+,'</q>'
+,'q'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_small'
+,'-'
+,'<small>'
+,'</small>'
+,'-'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_big'
+,'+'
+,'<big>'
+,'</big>'
+,'='
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_sup'
+,'^'
+,'<sup>'
+,'</sup>'
+,'6'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_del'
+,'del'
+,'<del>'
+,'</del>'
+,'d'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_ins'
+,'ins'
+,'<ins datetime="' + datetime + '">'
+,'</ins>'
+,'d'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_img'
+,'img'
+,''
+,''
+,'m'
+,-1
+); // special case
+
+edButtons[edButtons.length] = 
+new edButton('ed_ul'
+,'ul'
+,'<ul>\n'
+,'</ul>\n\n'
+,'u'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_ol'
+,'ol'
+,'<ol>\n'
+,'</ol>\n\n'
+,'o'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_li'
+,'li'
+,'\t<li>'
+,'</li>\n'
+,'l'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_code'
+,'C'
+,'<code>'
+,'</code>'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_bc'
+,'bC'
+,'<pre class="code"><code>'
+,'</code></pre>'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_more'
+,'mr'
+,'<!--more-->'
+,''
+,'t'
+,-1
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_next'
+,'pg'
+,'<!--nextpage-->'
+,''
+,'p'
+,-1
+);
+
+function edLink() {
+	this.display = '';
+	this.URL = '';
+	this.newWin = 0;
+}
+
+edLinks[edLinks.length] = new edLink('WordPress'
+                                    ,'http://wordpress.org/'
+                                    );
+
+edLinks[edLinks.length] = new edLink('alexking.org'
+                                    ,'http://www.alexking.org/'
+                                    );
+
+function edShowButton(button, i) {
+//	document.write('\n');
+	if (button.id == 'ed_img') {
+		document.write('<input type="button" id="' + button.id + '" accesskey="' + button.access + '" class="ed_button" onclick="edInsertImage(edCanvas);" value="' + button.display + '" title="<img src=`` alt=`` />" />');
+	}
+	else if (button.id == 'ed_link') {
+		document.write('<input type="button" id="' + button.id + '" accesskey="' + button.access + '" class="ed_button" onclick="edInsertLink(edCanvas, ' + i + ');" value="' + button.display + '" />');
+	}
+	else {
+		document.write('<input type="button" id="' + button.id + '" accesskey="' + button.access + '" class="ed_button" onclick="edInsertTag(edCanvas, ' + i + ');" value="' + button.display + '"  />');
+	}
+}
+
+function edShowLinks() {
+	var tempStr = '<select onchange="edQuickLink(this.options[this.selectedIndex].value, this);"><option value="-1" selected>(Quick Links)</option>';
+	for (i = 0; i < edLinks.length; i++) {
+		tempStr += '<option value="' + i + '">' + edLinks[i].display + '</option>';
+	}
+	tempStr += '</select>';
+	document.write(tempStr);
+}
+
+function edAddTag(button) {
+	if (edButtons[button].tagEnd != '') {
+		edOpenTags[edOpenTags.length] = button;
+		document.getElementById(edButtons[button].id).value = '/' + document.getElementById(edButtons[button].id).value;
+	}
+}
+
+function edRemoveTag(button) {
+	for (i = 0; i < edOpenTags.length; i++) {
+		if (edOpenTags[i] == button) {
+			edOpenTags.splice(i, 1);
+			document.getElementById(edButtons[button].id).value = 		document.getElementById(edButtons[button].id).value.replace('/', '');
+		}
+	}
+}
+
+function edCheckOpenTags(button) {
+	var tag = 0;
+	for (i = 0; i < edOpenTags.length; i++) {
+		if (edOpenTags[i] == button) {
+			tag++;
+		}
+	}
+	if (tag > 0) {
+		return true; // tag found
+	}
+	else {
+		return false; // tag not found
+	}
+}	
+
+function edCloseAllTags() {
+	var count = edOpenTags.length;
+	for (o = 0; o < count; o++) {
+		edInsertTag(edCanvas, edOpenTags[edOpenTags.length - 1]);
+	}
+}
+
+function edQuickLink(i, thisSelect) {
+	if (i > -1) {
+		var newWin = '';
+		if (edLinks[i].newWin == 1) {
+			newWin = ' target="_blank"';
+		}
+		var tempStr = '<a href="' + edLinks[i].URL + '"' + newWin + '>' 
+		            + edLinks[i].display
+		            + '</a>';
+		thisSelect.selectedIndex = 0;
+		edInsertContent(edCanvas, tempStr);
+	}
+	else {
+		thisSelect.selectedIndex = 0;
+	}
+}
+
+function edSpell(myField) {
+	var word = '';
+	if (document.selection) {
+		myField.focus();
+	    var sel = document.selection.createRange();
+		if (sel.text.length > 0) {
+			word = sel.text;
+		}
+	}
+	else if (myField.selectionStart || myField.selectionStart == '0') {
+		var startPos = myField.selectionStart;
+		var endPos = myField.selectionEnd;
+		if (startPos != endPos) {
+			word = myField.value.substring(startPos, endPos);
+		}
+	}
+	if (word == '') {
+		word = prompt('Enter a word to look up:', '');
+	}
+	if (word != '') {
+		window.open('http://dictionary.reference.com/search?q=' + escape(word));
+	}
+}
+
+function edInsertChar(tmpChar) {
+	edInsertContent(edCanvas, tmpChar);
+	document.getElementById('ed_char').value=0;
+}
+
+function edInsertCharSelect(){
+								//  1/4    1/2    3/4                         ^2     ^3
+	var edChars = new Array(
+	'nbsp','trade','copy','times','#188','#189','#190','euro','times','deg','#178','#179',
+	'agrave','aacute','egrave','eacute','igrave','iacute','ograve','oacute','ugrave','uacute',
+	'Agrave','Aacute','Egrave','Eacute','Igrave','Iacute','Ograve','Oacute','Ugrave','Uacute',
+	'ccedil','Ccedil'
+	);
+
+	document.write('<select id="ed_char" onchange="edInsertChar(this.value);" title="">');
+	document.write('<option value="0" selected="selected">char </option>');
+	for(i=0;i<edChars.length;i++) {
+		document.write('<option value="&amp;'+edChars[i]+';">&'+edChars[i]+';</option>');
+	}
+	document.write('</select>');
+
+}
+
+function edToolbar() {
+	document.write('<div id="ed_toolbar">');
+	for (i = 0; i < edButtons.length; i++) {
+		edShowButton(edButtons[i], i);
+	}
+	//document.write('<input type="button" id="ed_spell" class="ed_button" onclick="edSpell(edCanvas);" title="Dictionary lookup" value="Dict." />');
+	document.write('<input type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" title="Close all open tags" value="</>" />');
+	edInsertCharSelect()
+	//	edShowLinks(); // disabled by default
+	document.write('</div>');
+	
+	document.getElementById('ed_bc').style.backgroundColor='#dfd';
+	document.getElementById('ed_code').style.backgroundColor='#dfd';
+	
+	document.getElementById('ed_small').style.backgroundColor='#ede';
+	document.getElementById('ed_big').style.backgroundColor='#ede';
+	document.getElementById('ed_sup').style.backgroundColor='#ede';
+	
+	document.getElementById('ed_img').style.backgroundColor='#fdd';
+	document.getElementById('ed_link').style.color='blue';
+	
+	document.getElementById('ed_em').style.fontStyle='italic';
+	document.getElementById('ed_strong').style.fontWeight='bold';
+	
+	document.getElementById('ed_ul').style.backgroundColor='#ddd';
+	document.getElementById('ed_ol').style.backgroundColor='#ddd';
+	document.getElementById('ed_li').style.backgroundColor='#ddd';
+
+	document.getElementById('ed_more').style.backgroundColor='#cff';
+	document.getElementById('ed_next').style.backgroundColor='#cff';
+
+}
+
+
+// insertion code
+
+function edInsertTag(myField, i) {
+	//IE support
+	if (document.selection) {
+		myField.focus();
+	    sel = document.selection.createRange();
+		if (sel.text.length > 0) {
+			sel.text = edButtons[i].tagStart + sel.text + edButtons[i].tagEnd;
+		}
+		else {
+			if (!edCheckOpenTags(i) || edButtons[i].tagEnd == '') {
+				sel.text = edButtons[i].tagStart;
+				edAddTag(i);
+			}
+			else {
+				sel.text = edButtons[i].tagEnd;
+				edRemoveTag(i);
+			}
+		}
+		myField.focus();
+	}
+	//MOZILLA/NETSCAPE support
+	else if (myField.selectionStart || myField.selectionStart == '0') {
+		var startPos = myField.selectionStart;
+		var endPos = myField.selectionEnd;
+		var cursorPos = endPos;
+		var scrollTop = myField.scrollTop;
+
+		if (startPos != endPos) {
+			myField.value = myField.value.substring(0, startPos)
+			              + edButtons[i].tagStart
+			              + myField.value.substring(startPos, endPos) 
+			              + edButtons[i].tagEnd
+			              + myField.value.substring(endPos, myField.value.length);
+			cursorPos += edButtons[i].tagStart.length + edButtons[i].tagEnd.length;
+		}
+		else {
+			if (!edCheckOpenTags(i) || edButtons[i].tagEnd == '') {
+				myField.value = myField.value.substring(0, startPos) 
+				              + edButtons[i].tagStart
+				              + myField.value.substring(endPos, myField.value.length);
+				edAddTag(i);
+				cursorPos = startPos + edButtons[i].tagStart.length;
+			}
+			else {
+				myField.value = myField.value.substring(0, startPos) 
+				              + edButtons[i].tagEnd
+				              + myField.value.substring(endPos, myField.value.length);
+				edRemoveTag(i);
+				cursorPos = startPos + edButtons[i].tagEnd.length;
+			}
+		}
+		myField.focus();
+		myField.selectionStart = cursorPos;
+		myField.selectionEnd = cursorPos;
+		myField.scrollTop = scrollTop;
+	}
+	else {
+		if (!edCheckOpenTags(i) || edButtons[i].tagEnd == '') {
+			myField.value += edButtons[i].tagStart;
+			edAddTag(i);
+		}
+		else {
+			myField.value += edButtons[i].tagEnd;
+			edRemoveTag(i);
+		}
+		myField.focus();
+	}
+}
+
+function edInsertContent(myField, myValue) {
+	//IE support
+	if (document.selection) {
+		myField.focus();
+		sel = document.selection.createRange();
+		sel.text = myValue;
+		myField.focus();
+	}
+	//MOZILLA/NETSCAPE support
+	else if (myField.selectionStart || myField.selectionStart == '0') {
+		var startPos = myField.selectionStart;
+		var endPos = myField.selectionEnd;
+		myField.value = myField.value.substring(0, startPos)
+		              + myValue 
+                      + myField.value.substring(endPos, myField.value.length);
+		myField.focus();
+		myField.selectionStart = startPos + myValue.length;
+		myField.selectionEnd = startPos + myValue.length;
+	} else {
+		myField.value += myValue;
+		myField.focus();
+	}
+}
+
+function edInsertLink(myField, i, defaultValue) {
+	if (!defaultValue) {
+		defaultValue = 'http://';
+	}
+	if (!edCheckOpenTags(i)) {
+		var URL = prompt('Enter the URL' ,defaultValue);
+		if (URL) {
+			edButtons[i].tagStart = '<a href="' + URL + '" target="_blank">';
+			edInsertTag(myField, i);
+		}
+	}
+	else {
+		edInsertTag(myField, i);
+	}
+}
+
+function edInsertImage(myField) {
+	var myValue = prompt('Enter the URL of the image', 'http://');
+	if (myValue) {
+		myValue = '<img src="' 
+				+ myValue 
+				+ '" alt="' + prompt('Enter a description of the image', '') 
+				+ '" />';
+		edInsertContent(myField, myValue);
+	}
+}
+
+
+_2http://maennerseiten.de/blog/wp-admin/quicktags.js_application/x-javascriptÓ
+Oevar edButtons = new Array();
+
+edButtons[edButtons.length] = 
+new edButton('ed_strong'
+,'fett'
+,'<strong>'
+,'</strong>'
+,'b'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_em'
+,'kurs'
+,'<em>'
+,'</em>'
+,'i'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_link'
+,'Link'
+,''
+,'</a>'
+,'a'
+); // special case
+
+edButtons[edButtons.length] = 
+new edButton('ed_block'
+,'Zitat'
+,'<blockquote>'
+,'</blockquote>'
+,'q'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_pre'
+,'Code'
+,'<code>'
+,'</code>'
+,'c'
+);
+
+edButtons[edButtons.length] = 
+new edButton('ed_strike'
+,'durchstr.'
+,'<strike>'
+,'</strike>'
+,'s'
+);
+
+_Ehttp://maennerseiten.de/blog/wp-content/plugins/comment_quicktags.phpÓO%bGIF89aÚ ´ ÷c †›‡‘ÎRv  Ëß?DPÄÄ«Á†g}HÖéËDDQ¤Ä«êéÇƒÇ·D :¼?jFšÿ¤vG›G›Ìà?‚ªÀçîòÜçí~†hp* QaÂœ›I4>«ÆÖ™þfš£h9tL˜  }o•ÌéŽ«««îÆ ëÿßÔýÝ^DQs¼û7AË¾/«ÕÙ˜tyØb“SdX  »êVœÙØ×Ø–¸ÊœŽyDQ¸d ¡èÙv G	NlYjÿÿç‘šeÌþLâøØÇÙãX¢ZÇúcëßœéýÊwVgY2<µ¼y^Õ¤ºè”4  JT:Wh§V~Sq¿Óß9œZæº—ÌþšYVgí±k` ]ÖÕÿ¤ÎRÖœHšS Íÿ¤»à§‘ H44>d  ’½ìþþÿ†  šÕ¤“  s¼âíìWh¾ÏÚ´}`þþ¾xV—_„¨‘ÄË}šG«VgM  Ž²Æìòõy†Ã©  ¤¼ØÕþý=F´ÿe›¼ÏÎÞæÌÿet×—Hœà]¿f§> 8—WÖ½’¡„S_‡¯ÛW¸‰Sx£ÙtÑ_o>JëœHÍÕƒ~£-m”ÂÿÿÕs ì×¯Á½ì´àµÿ¤‡àa: ¿ÏÀß¿Çl ]Ò¢ªHœ‘ñ›Ö¿t6§Ž´Ä«<<HÂœ„´Ä’‡KZø¹—ÅS·ìÁêÙk@Œÿ¿tÀtœš‰¸°øŸr›ÏýÝÝ~ê¤¸¸¬«€M´w7|Ïÿ‘œßJHwnk±àÃ‰ÀHtÃÖ<¤«n¤š%^½‰[*|_„[Y’d7Cv sRRb‰3 ë¿v&M/eµ¡¼ª¿ÿßßÌ×âèSzLKZmN]ÀßßÃôaâ–oª HáÿÿþÞœ´œ‰•‚ÊÊÊ¿äÇºËËÁ£Ä³ÌÙ«Õù¦ÂÒÔý¾_°ÿÏ°íúûá·°þþÙÿÕ¬ÿ¿¿wt¿“ ‹S<HÿéÅÕ¡eÖßœ¿H ˜ØV}ßf—ØÄ’Y£”Áêô}HtL`]šßó¶¿î”gJY¡èÿÀßÿ´œ?šVg[M ,    Ú ´  ÿ H° Áƒ*\È°¡Ã‡#JœH±¢Å‹3jÜÈ±£Ç CŠI²¤É“(Sª\É²¥Ë—0cÊœIóâ1€È`x3çN =uÖ
+âO&-÷ðùÃ”é‚ÇŠ6J•©ÎcïªE
+UªÖªB(ýc­!VŸ<³†="!¦-
+Š{ð-ÙcË
+ŒúÇW…y7Öûú‡H‚½^	7½šõk[¾Š§†ÂôhÚœa.ÉT-gˆc-ŒÚvàYÃ)oEl4CÕ¢/
+Š¬rd«2Î*>LôöâŸ5ÿTÈögq‰§yüçiÁ±~ñ.ÕÛ;vÂàí:]Ž!_ë¦q–ÿžÛ{Qðƒ~N¨~¯øõUSHž.AùùZp}’ùû}ÇßhjÇÚæµ¶Q1(ƒA÷WoÝí¥–r	Fg’n xÞ„¦yfÐX`hÚ‡‘·ÝˆK1E=">×ba0bfa…ä9Wse±…¡Í*ÉÚ~‘gY‘:R4Vi*hÐq‘7ß‰RÄd•„AY$UkÅ(ÖR
+4j ¨Öd‘ òHßT:~÷—jömié¡8å{1Wfu Þ·â›ÝA¶Y’åQxhgR‰¥†cÙÇWži¢šòÇx˜Z”#EÇx£B.¥¡i¢"Ô©@xvUa«X†ÿYašL]éæa1÷B§|AÉ«œ½¡)¨‘ 6fâ˜S0 «è1ºèhE!	íjªÚ«Îrv-6Åg¦ˆ–8¬s³éd ™ùiÐªúE [“©:‘,Nu*³Ë†8ë£¦zÐª·Bå`ÀúÊêeaÊM*ã]
+÷iAìFË„•Õ;¯±×™š/kÍ¶gÐ¹}mlÅ:>,p·&¬­˜éÖ:®Üî3 º²­Äê'BSÇ²*ïD)/Üñy;‹mËNItB¼bÌ­PºK%©½…UîÍª%P®qEYé¿Ö&VYÑ«R„BÐ=òÓ7ã|%ÇÆk$½l;+uŒÛÛŸÌñÿS€³Y0ÄÏ>çìUgCLxDÌA)µPù{²ãïN)¹âs;=ùNQO	!„Ç5ó´M5	¤ã8;ªT~%·îâ
+­0Æäø¶@h<êÒžw;,ê—ëm&á6o1®+û^°[ËµØz¶ý™:¸4Ãõúñ"÷]± {Ad  W_+…Ï;ØÄªþÀÖ¿ã¾HûMú}6þã«¯ÜÎQ_È¯²A¤úâÙ°úÂþeÊÈK ä¦uKÇ+…à¥A í@LéÙþ÷¤¶MnøëÕzÈ
+Pcv`d¤EžŠºÑ
+P7¦ÁbõøaÒÿµÃá1~DlËQG"4ëM”ËŠôÒôÃ8é)]?œÏªxÀ È <a:„ÃhEÀ‚äsÖÈÆ)"Æ‰qcÕáÄ5¦0l,MÈÇ<HB,Óo·"HDø_jæx"'.+kTÎ	4´  @Ã¨ó¼‚O?qƒ$Ù¨ÈO‚€»(š@IÉÑÀ kŒüñJ(Ý„°”%-e‰­ F£LQÁ¥OTJ¥‘Ñ`0w"¥ ’?È,eBV Ž1˜B œþ²9”’Ü$ÌìfH¶ClšSœC9Æ"¢tÊ„›ãs§I$0ƒMž'Aã9ñIÿ’!Ì àgFÈÏ‚|=	ÜDh! 
+gB+rP‚fS¢q E÷iŒz² aÁ ´Ð‹ˆÄ£]ÈAE²QƒRä¢u©6Ï¹Òr‚”£1MNSšÑò¯¦4µ©NmúÓ—B}-êD—:”¤îô!(eªT›Têó¦SÍ*K«ÚR­zõ«>åêCz@V5ô@hEëY{²¶õ­n]kYÓJ×´’õ®xµ«YÍŠ×¾Êõ®{¥«_KX´F¡®j­k^Ïº×·ª®m]ë^›Ø¿¶°b•iD”
+ Äzö³ ­hGKÚÒšö´¨Míi£JÔÌž´ ª­lgKÛÚÿÚ6µ­•)krÛÞúö·À®°Ú§>¶ÂM®r—ËÜáš©ñ„.t÷ÙÕéB°¹ØÍ®vqK\“V5"Û¯xÇ‹V—J7ºVkEqJYòº´òèB4À\(L 
+V@+ºP'€Ö¾ø­«DÈÉY˜v6´=°¯|´B!Ž°„¡† XBÂ]hpZŒaS¸¹ñ­}G«à$ V	&®ë~ñÛƒøfX¿üõ¯g[,_§½ç=¯J»›ÍöÖ•Ã±šáG˜Âî°‡\d#Ë÷ÃÌñˆG«„ÓõÁý½2„?`+œu¿Yþl—|T£7·8ýïä›býB¹ÿ®.žrZ-¼ä
+_¸Ît•rxi<ßÒ†8¿s¶ž“¬aƒYÆ3N,]Íœãî•§ñ±ƒ!ŒgÑê¹®I–3‡gùÊ™¶œøt]CÖK“xÍ6VÃ~»Ðf5üù³‡ÆífMëZÛúÖ¸Æuv]ø:aÁg]œêÑš:Ð•.1bè#{vÕ]¨Â#hU/XÚÔvu´G¼ß7£µÊŽè¸ÓJdù†YãNr´ëo{ZÝœ¾±¯çMïzÛûÞø& °-Ð4º­lÚ8#–Î¢®ò¹K½íƒ_XÂñ²„5,ñkØàvŽ·ÜàWÛ¹‚1Çí,_[;Ì+ÿÎ/¼½LW2äûå0Ÿwô­o~ûàžåp«IËìŒ‹:å®ô·mìâ6¯ºÁå^òÑ7Né_Zç”}õÈ­„*§Øã®®§cMè<k½Úå¹Øa¾ï`ß<àˆzÁŽé‹úÏíÅ¸hî_CYÙvßðš¯Îö“#zÜgµ:“Eß,;­!~Æ—c\îÃ}Ñc¼½g¾ï~ÿ›ží:]¡-t¹#ûí_º¨=wµœÂ¦?¼©LßßwÊ…w‚…ûËz§Úã‡>¼×5>\ôÚ×¿÷ý¼ƒ/yš—Ýò8O;ªUá·÷ýóËŽ¶âóüü+¯9ÂV{¹Q¿üIwáÃž¼ÿ¶ÏÍúý&¬VG8õMfP<9úU˜~Z]^üàÛÿå•?;b£ l‡w¾ú>‡Xí†x 8p—}[¦w¬Ætß§€|‡g±7p­&n¬KVx¾@p¥zÖÆWiXv0GÕ4«PoyÐùFyÇwv§{t¥~ÖgmGƒ–€3øsæ&c·t§t5ænø|§`Ÿ¶_f
+ÆfA÷0c¨m&70wÕ0¾f…XH $Øb—ÿ3Ös2¸~¢V†÷b¢÷c8¸ñVeGWphqXg÷}ƒ×fX}òÀ@×nv½7|†¸š€Ê`‚`’ÿàk¶0W¸‚5gsaXeåzëÖW™&Yg%e’eV™–XIÖ_–…qkÅqxUeñWVK¸myõŠ"†WÇX=@gf°€žd‰¥è˜w=phd%Œ4Æb€EøFÆàkˆˆÌH ; º H ‹8;^H`a€	¤Ð
+&ð¿à‰|u‹©¸fBöWqæ‰ê8‹fµj6Wful=PnYVnë–vg©‡Èd%7zQØxíÕb€Hp=À	¼ /w^‰>ÐÃð	 …¶p‚¶p…Ã`ÃÃ 	ƒ€	ÚÀtp?ÐV“•Žê†a¦è‰ ÿè‰5‰}^–‰eŠ3Xr]@
+ž°€Öf“2mvnù|P9g®°sª&d@W7°‰Uynà
+j˜xíE‘Âgo9ß0ÐÐÑ¨Ûhx’e0’’pvàiÀ9€	¡Pt€×€Ž–¥”ß·X|“¥Ž×“™¨VÇ(jÐ•]€"ö˜®}€‘m‘™ePà	P‰™Ÿf ’9e”Ù?p•i¥šQŸö˜•€hjp•`£Yçv›v¨šÊ|ôF[@EðiY–z0;³#	;°³s‚Vø{À¦—|é—€X—5“–¥éè“‹Šµš³ÿ‰VW©šåÉå9›”ÅY‰©fžíª)žªÙ•ø_é9ž³™žæÉŸä¹ŸÐü™ŸèÙŸúy•bio½6ì0Ù8mð–“Øˆ«@œ[H Ã0’€’^PÔÙ—×À×©X‡)¢ÜYY(*pþ¹¢:žçy•‰šê¢ç™©	 Ê›q@£è¹Ÿ.Ê¢,Ê£B
+¤åù›÷v'HoÍy\hP‚cðˆÜˆ0á¸— j¢€I˜[ª¥ß9“uež8Z dZ¦èÙžšè€°ø@Ð™jÊlê¦pÚ£fzn:§fÚ§~ú§€¨ ùvÊ9^sð¤3ÿW‰È'†×9¢Z:©¡h‹`JW/*¨dZ§KÐ©žº©Émú©žÊ§e
+
+žÊšºª¬ºªFZ|ôf¨³¡2×‚—H©‡©¸*—úŸ™ŠžMÀÁ:¬ÂZ¬ÄÊ—P	ÊZ	I@¬MÐÉº¬I ¬Îj¬  ¬Î`¬ÚZ­Üº­ÞÚ­àª­by°zoê¨7Gº:¢ëŠ«&¦e:¬òÚôJ­ôJ¯@­úz¯üZ¯üj¯ÿÚ¯;°[°+° Û¯¯säŠ”×o.xY;±[X¾J¦k üª±Û¯Û±›± Û!»±{²(›²P²ýJ¨
+jˆ°Ú¨`p‹‰Ùÿ)}•«èˆ© :¯+û³@´B;´D[´F{´H›´Jû³.[®ci®¶J³rå¥_*±:»Xyu±ÀŠ¯A»àµ_»²^;¶b[¶dK¶e¶`{¶j¶n»¶i·ok¶m+·h;·j»°Äç´4÷k–øo5ë9K±Ú‰‰áÙ³Âú³{°¸‹Ë»Ž¹Œ+¹”¹Žk¹–Ë¸—;¹‘[¹’»¹ û¹¢ºû¸›kº¥Û¹  ±¬Ûº®ûº®KÈwyP»Lp»Ý¸ƒuµ…•³ê¯$+¶ËÄ[¼Æ{¼È›¼Ê»¼ÌÛ¼Îû¼ÐËdkÔ[½¹ÆkÁgvXkµ‘Ê½W›»ÿ
+¬ ¸Ñ[¾æ{¾è›¾ÆÛ´|k®~kv——«T{³…ëW:¾Z \Û¸Ð¿þû¿ ì  ÀLÀ|ÀœÀÜ¿¬À
+¼°íµf±º»»ÞkYƒ¾Æ*¶ÄëÀüÁ Â"<ÂþË¾,sÆ÷·Wµ»ZÁ[JYù»µÌ$\Ã6|Ã8ì¿|Â(<³êêÂÄ*±ø«¿Á;¼9œÄJ¼ÄL‘ËÃï¿4»«ó[¿›Žä)¾ÂÛÁLÜ¿u5Ü`,Æ]|ÀB~pÀ;Ü°nì¾,(Å?Äƒ+Äx CLVE¬?[¼g|}0;ÜPÃ~0;|À0ÿpÀ&œ%˜¤Y8«x`o 
+
+`¥R¼ÂtÜÉ—¥ÁÁJ¾4|Æ<ƒLÂ³#‡\À‰¼È¼ÃY8¡ZØ‘É…[@É–L™l‰0ÇžüËz¬ÇèÉ\ëÇ¤,È$Ì³Ó«<À­ÌÈÀioÏ¸ˆ Éœû¨ËhÉ˜l¥{‰ÀüÍÁ¼µÁkÌ]\Ê§,Â ÈÍìÌêüÊøÖkÑ(‰ÈŒ%©‚óÖœÚÈ…ÚœÉ,‰²À—¾Îž¾ÄÌ¢\ÃuÐ
+]Àæì¿
+ml³³
+ly ÑIüÌ^œ	Ì|.K|Ùˆc‘Inyo&¹œÉw°éÊÉMÇxŒ±}ÿL¼ÂÜ`‡ªÈRP-ÈuPÈÊ‰f|ÀR0;>ý¿€-:=;v@Ñ ì,UÀÏœÓ‡*°\–g™–ÌH(`ÏÂ‰´£–û¼’Úé:Xý0ý×tM×rm×x-×z×|½×sÝ1¥0Ø8ÀÂ H€ÎÊùÔÊyÎ¥Ì;­œÞ€À:Í<;ÀØ‡* œÎvPÀ=Z=vÎ‘ËÂIœÆÙ¹¤±JÒ) Ö—¼Ëa²ð½<XG°Û¼ÝÛ¾ýÛÀÜÁý¥ðÏ€Ï* Âà!¼©œÔàíØ‡êÞÐB0;âÿ@Ýÿ›³ó—­œðu`Ò=;Ý¿žÚ¤=Ú³ƒÜ`6ð: {‹¡ú ´zä ‚©… þ %iàÙ É2p³ µ}%ÜáîÛÆÊ­éàÜÐÂ:íÊ lÈóÞ°ÞRÀýÙåm™ À™0;–í¿ï=À¡-ßçìÅc Ë	Éõ&«c°_àœ« 'Fð °É€ØààxU
+>åTþG`å~áþÜ!ŒÙÜÐ\MVÀuÊ<;k<À¦­ÔñMãmî¿ÀRÐÆ‘¬œØ,y>¬ÛT¾çUžÜZþÜþÁ‰<äÀ`Žâ†ÿÀÊ<íý¿h^ÀG=Ô=ãˆ.Úlîáÿë-vûoq¼ÉzÎç¢ÜXnÜÉ½Ü[è¼è¤íÜâÿ{èÿÛÝ’>Ú˜îècæŠ>;EMéÿÙâ`ël:~Âq<»¡>êÊÎÛ¥ná¨®á"Lë;í.ëþéà-Ñ¦|Àf>ÀÞ0;“Ý¿iðæ¿žèpÞÎdNÁ2;³0}W¾-å¾Ý³SË.ÜXîìí"lR`Ú‡ÚÞÖÞ¿Ø>ëæ^Þºþ¿ î2Nîþ›âÂ>ÀuÐÈP|ìoíW1 áÝ°»­¦ ó œ> ýÐÛòáRÞìZÎï5lÜ0îc?ÿ½ínnéþ[Ùüè¼Þí=îÁ^óïâ¯úÆÑü´ž^‰ îWî ¹ cPGàs°Ûb@÷¾Û¦~êûÎå9<è3ã7ó
+Ïð\æ¹^ÀkÞð6_îkqþ¿kPìœNvÐdábÀñn
+sÐ@õ¦°ÛwPM$?ø#m
+NïOáXïç¨è!LâþKë_ïí]î*Îíc Ê®óýÚ’?î™ß¿oó«»¨ÿº²ÛÍézy g»·›ì¿í÷ƒOs b½ò°ñºOÀï¦¾Ü[¯êÕÜá3Ïù]Mßí¿fÏÙ9?cî¿6ðÔ¾èÎÿÈ ?Úv@âé<½Ö[þÖ‹½µzžñ»Íþº¿Ý€ Rï¹/‹ïÉ9ë`ø¶Ýà ïÈ@‚ÏŽ|–/Ÿ
+éÒyðpAâDŠ/ŒÁè‡›7oRì`ü0±Æ1â˜I‘’dÈ‰k0Ú°H‘äfB¤0#)¥b’i¤I3S\E$3Øô##M>…UêÔ0UÃÈ “5Bo¸rAPìÀ;“‘,GPL®ÝÖá¢¶N•±wô;ðÙÞ„Ó!Sð…¢3gr£8ÒðL–‹f|çâœ1½-Çç¢”1f`:Uôh¨a˜¶*kÖ¯­óŠu3nÿ^1¦ž%G©ÜYŒTºõ[JïA…~FŒl±OJ;Í3¬©³SÊ™˜5Ç $zbŒˆ#c’Év?}÷oô¦Wä&åC)š3šô~ÒV¯®Þª5®^ƒmŒ|@€À×IKA„ö*®¡ã’£°ÂäüÀˆÂŒ,äÐBýø±´ÓªR-+:ôJAUãÀU4ˆ¸…$¬C+TÊÇÐñF+ú0DÊpŠHªF$@\±I'äkF‡jü±Ê‰>ÀÈ¼È&ëÑJƒ4rÈ"Ç²©ÔV;Ñ+×ždóÉ!”"ä¼¬r?„¨<:¿Ü¥ÆXå©s0j
+ÿPhç)Ôü+‘Ž «MIa<(!)'Ü3ÓïxÔ´ÃÐÂ„êœjFhJTRÏñ!Q
+¶84Q©Î4qÉ&¥5/áŒpÊ9;åU¢>lØ®×ä‚„jMðPPl‘d‡}yªUUrÉ±"=ÛZÄÕ8*…7ÜÁˆmŠH
+ŒiÊXC&W‡”–jJ’$Œ>¨Zè@†PœuÛ6µN¿ä7a…'SPhmƒœv†ù„#ðˆÑv&•¬Â„9#®ÔäÊ
+•Wf¹e—_†ùebˆ±‚gn^ gQDŒ…—\§Îid˜o¦¦s¥uªÕAI²cÿ¨¡†ŠA¸ª§µ9ú;l±Ç&»l³ËŽ!í´K)a	$,‚¤n»ïÆ;o½÷æ»o¿ÿÜo¡›Z•‚"¾Hšhg%	Óéj@Åe™A°` k­»P`Íq½ô[‰Þ =tÑG'½tÓOG=uÕWO}p†ag„d	Åø‰_ÿdãaôäõoFÀ%ì¹:ë­­ÕœÖ7¦q×ÏY‡>zé§§tý@:P©žc‹lIÕÏ1Œøx‡<jXÇDŒ—•àäÙäÜ/Àœ¿ zûïÇ?úÁä~hË<S‰dÐ5½oRÂÑ‹¥¼E¿ü5Ð$öÊ4­5j+(c’%µÿ-Ð"a§çºÑHP4ÔŠò4è¦‚(°!«ˆe8ÃÓ‘p‚Š:M-0aki¶„H!B)JŒáéÀ¡r t`¢i8EÖ}È„P¹âõŸbÐ}bqËmls›µé,êÐ–uõAÔEtKl¢ôhàCP‚S	ÓÅ´:JV*r@!Î’Ì¡-ä0d›¤ð¢©SA¥ø7F¯t´£mxC3åVt 
+³51¬ãnHÅú ;  tCÆ€ ØlAµ9BmZ4†uÄFê˜ƒaÉ6.&Ž”<POAp€cÅ3“ù(Nÿ3“Ð#ƒj´¹MnvÓ›Û%š´r2	˜Cç²Ê;ˆ‘bH¨ uôCi‘glÐ˜KXæ"6ñ¤Ë+N Î1P‰ú0&0À‰™Ðq™Í|Ã3£I:.´¡u¼æêÈ0ŽvÔ£iHEZ’:å*aø£‚JÙÒÀE
+ Œy @ž¹4Å?²œ¢2AÊðÁì0‰Räê‘I]%¡ØÄgRÁ™c ÂCŸ:Š7\£M}ªS3ªºMr5HjÔ‰D™—²ðfi1ëYoºŸî4-Ý ‚NÝÒÈ‚²Ñt’|c¥9“¨2sªUÅdD£Õ­¢®«œ4i’°7ÔCMÿ)RPlf3ž2”°Mm*‹=ÕŸ©Höar°Á‘ž«_II¦ButËTÇ!ªIU«fµ°úC,¶˜$Ö,I”5Ð,_”¼å©q~v-^ß ÉeR´Ž	mIÒWçÞ¶u¹Õ­™xÊÌ­pƒlrKWIÖ:º®}ŒÍå2Ôµç%¬uKwXÄúç?XAgcß—ßz7~áM¢||]ìŽÆ4žTlJ½Ë­æj˜Hp„Mw=2ÁëOÚ#ÒÓ
+µÇ¨ìV›'slÌ­#˜˜FqèHhªRŠ ¨RÕøˆ¤ª(xÁEË×à£ØuêJV ˜å¬ÿõ§“öEÿ'æú;b± Ä¨¨íq]w®të\ƒŠønG*üPÝ°Ã 
+fÁÆ£$bšˆ@?øyQ–ð§*L´eÍrb»ØS†AÞ£P~’„*‚ ´{Œ@
+xÀWôÛƒ˜5ÚÑ®Ífv3gèŒg>«4­éfpšõ§EÝéQ—ZÔ§uªKMjV{Õ®~õ©cÝêUóÀuD3Ò”f¦™+ÏkU°MAËêlÇFv²Á¦¶°­mo†Üè8jWÛÚ×ÆvÝ¦ÌªÃ%®‹‹Ö†(a+mÐ¯´Œ(7œ»Ý‰:G@EìwÕ÷ÈŠÕŠxá,_¡	v²#É†ÿmÇ±ÜñîÅ&wÂÍ(xjw}&Ç@l‰?Üw†
+‚Ä|oÞ:Jßû¾íŠµîyO|©š¸Âƒý§Û Å¹ëq-Kœi>p óÍc[×ŠÛ›I‘{óçöÀæbV>ÞóŒÒ·èD/:v= ¥3=“û+aÔµ¾ñOF êÕS/zSw
+q@TÊQÑãÖÕnôF›;?1êN‚IžŽì³ÄèØýe
+ï{i_{àÕq:|=tXMD¡'U¾ûDy¬0äÃÝ&Ýë<O.Cc›ºZ¬VuŒ?ûäE¿ö®>½cp	UßÀøgv ¡½,IFQM¼¯~^9&í1Iÿv—Ô~†Ùüfð…?|âßøÇ§‰Æs2ÁôµPG0ôQ²C´õ¯‡ê^g9Žª’¤‰Íõ¾BÝ›Lðã¾î Ü¨HÕ¿~ö·ßýï‡?HIZRíÊÀðËtê•¹w‰.Õ‰µU/Õ[.}p(þË>ôj*Ø’-Ì»rºÑƒ@K¹¼¸+ís-Öƒ&¼*?Lªçb<üÃ@¨b½À¡ŒÀÄ¡O*<Ìó2?\"ör£„=Å³*Æû@*@¼ÐÑÀD?B!É¹ÒsÁÐQ/³“(Ü@7R¯øª-„…ò‹`èÀý³>tÀ!äBÙ¢°ªºÀ…Š­°ƒ  ª¿ÿŠr¯<ƒp(¿c‚/ÛËB ¼£.ÄÃ+ª;ÂÒóŠ„Í³:+—È3ÄBDD“<E<DFLÄE„Ä
+›–Ž«@!4»A|eš©7­ƒ:ÒÓ.J4=ûÙ«LÔÄs±s1[•ÀÅÀûB49EMÜBÑ 2e²}è<T»Ey;ëC\ü½C¤2P—¥É³ŒaqX…28¹D)gÁh‘Æ?aœCyFsÐ”ëÄmT
+”sÄrÄž"4Åb4Æ:ƒ‰¡
+¸ˆQ8R±8?Ã"kŠ',·{L¹‰q—×q[¹¢«E¸›U{ƒMs5R“µWS5ÿZ‹HŠô´Š¬µ‡äŽ|ÈNóHMÉŽIO»µ¢9š¤aFŒH@#œ_s¢ëŸ1—È™¬IhÔº…T:Šp€lÊ ÊjÛ6ÃAœvÀ5ƒkID!q‹I¦šV$¨tR	šä:³ [\Çb
+Hü·ÙƒUQ¸¦ÈÇB7ðG‹3C¡J1¸·t
+eˆÆF\Dª <®ìJü¹©€˜kÈ¦GWÙ3Áœ¸ÂÌÁœÆ:K–d»ªp»­TÇ¾Ô¤ýè¡C»¢ËK4B´LBA`¤E­äCÐÍ\|D!ù;© ¼¨‹ÄDœÄ¤kAÔTÅKM#Í´ãÍ¬ì£ÿJ|³ä"¯¿ÊMÃâ0<jÄ¬ÛLÙ\M,’Äã¬/ÞŠ€Ú´ÄÒñ¿ÑÁÍâœ0å|<Ò´7û¢LÛÌ+Ï,ÔNÒ!—×|
+õdÎÑ‹M½¤MÃ«Aìc/,ÝS&qk9àC¾ÿÐ ÐaT¾åk¾¯“$Ú“=dÃ‹¢Bò”²ø“Ð	¥Ð
+U¿ù‘Ï&R¯Í“(Äk*%Ajˆ-(ÒÂÆóÎe
+DP½b¯òA¬´ÃÍÝ:ž¤Îà/}Ã©êAÛì¹ÅÑ¬4M†äÑÑ‘$&œÂÛ«½+¤Cg:ÑÐ;Ò.üª½TG7¢BªšÃöš®)¨*µÑr¼Ò¤–GÅâËó¬"î|Ï7ÅË8mNs|Î+E0¬L6•N¼0Âa¹P¼YdMÛC¬XS=ÕÍ©`1WiÑGT…,ÔM-Dm €  ;_Ghttp://maennerseiten.de/blog/wp-content/maenner-pics/gtdtiddlywiki2.gifYimage/gifÓO+GIF89a  €  ÿÿÿ   !ù    ,       D ;_`http://www.gravatar.com/avatar.php?gravatar_id=d41d8cd98f00b204e9800998ecf8427e&rating=R&size=40ÓO	SÿØÿà JFIF      ÿþ ;CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 80
+ÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ  ( d" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑð$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RðbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ©âÿ kÖþ-Öáƒ[Õ"†;éÑ.äUU0  x²?á+ñýõoü“ühñ·üŽzÿ ý„.?ôcV-}•4ýœ}Õ²è|ejÕ=¤½ç»êmÂWâ/úêßø'øÔ‰âŸç^Õ³ÿ _’ñUƒZ¦_#[£Ú\,—!Z10iC}Ò£0=ˆë[F+ë÷#	Õ«m$þöiø„wTünä?Ö—þÏÐwTÿ À§ÿ ¯y k6VÏq{¤êöéÒËlè«“’F$
+Ž=#Pk¿ûßöüüù-åuÇßÆ:ñ×¯¤cAì—n†2•u{·ß©®¾&×öÚÞ©œsþ—'øÒÿ ÂM¯ÐoTÿ À¹?Æ©Ûé—÷6’Ý[XÝMk|É£‰™',4ûSÔ!2Øi×—QÚ^Ô¸ÈynéáÕî£§¡ÎªbÎZú“kàÿ ÈsTÿ À¹?Æ“þ}þƒš§þÉþ5ZËK¿Ôƒÿ gXÝ]ùxßäBÒmÏLàt?•Tš) ™â™9cb®Ž0ÊGz='D?m_•IÉÛÕ“Mâ¯,¬?·µn½¯$ÿ gü%~"ÿ  þ­ÿ ’f^ %ã¸¨+žXzIü+î:c‰«eï?¼ú3àn¡{©xJîmFîâîe¾t<­#òã8É=9?Wö|ÿ ‘2÷þÂÿ ¢ã¢¾2ŠŽ*iw>ë.“–ö<'Åú¾›qâÝnh59a’úwGI••”ÈÄAäÉþÑ±ÿ ŸËoûú¿ã]'¿äs×ÿ ì!qÿ £±kï(¸{8èö]àYÇÚKN¯úØÖø¨øwþ3û~òÇû7Ì>g(Ù§fîznÛœñŽ¼f»ÆVÓi··>%Ö´ÛíN×U‚M=%Ô"Ýæ	”+…ˆ¨ÿ «ôäWœUÑ¨\Ï$"îâi–8ÖüÇ-å è£=g¥g<5:µ9Ÿ—]¬ï¦v}ÑqÄªTí÷ë½ÕµÓ¦ëÌê.õOë÷^"77f™x«-ô7?ÚK!–PÄ´'æØá‹¥  (ûüæÆ“ãÛ^ÕuÍ>òòHÆÛNIâÑ…Ú|Ø×„ˆvLÇžIÅ¸Ôïîm"µ¹¾ºšÖ,ypÉ+2&œ*çü$Ú÷ýõOü“ükg‚÷ym§¯NÉ´Þ½ç2ÇRææ³¿Ë~í+-:~=‹^ñ]Œ?cÕµ?Z-¾û»;+{˜ÒIœó·jýÔ?Ç!0ãæ=3tÿ i­[Üj×ªÖ0ÎfŠÚÎõa[rÎùc'hëÀ*z|Ã©añµ):Æ£Q¨TD¹pª  ™o®êöÞoÙµKø|×2ÉåÜ:ïsÕŽ$úÖŸVW“qZùÚË^ÑónþfZ¥h¥Í§£»Ó¿¢Vò$ñoˆôÿ øHµ/µ»-GO{“pÉ¦Þ$QHÌ¼:ýå‚8cÁ“ÍGñ_Ó/<Cå¾±¦Ü[\[Dñys)’4Û€“ÌL£1,Iã§ R¶Õõ9¤mýÕ¦üoû<ÍìtÎ8ÉüÍTv’âwšáÞI‹»¹Ë;I$õ'Ö”((Ô‹KáVõÛ¥¬¶è9âiÊM?yß}·ë×~¦UÞ§`Ò·¶¤c´«þ5öüþ[ßÕÿ ½9Ý3Ÿ|Tu¤¥íøÿ À&<¶Ùýÿ ðgøâÏi¾»‡Q×ô‹IšùÜ$÷±ÆÅ|¸Æp[§ò¢¶ÿ gÏù/ì ÿ ú.:+às)QúÕKÅïÝò'ÝeÉýVìyw‹ü3¯\x·[šT–/§tt´‘•”ÈÄ@äÈÿ „SÄ_ô Õ¿ðOð¢Š÷)cê(%e·õÔðª`©¹·w¸Â)â/ú jßø'øQÿ §ˆ¿è«àŸáEÚ;/ëæGÔi÷×È³oáß 
+ú®W×ìrqÿ ŽÕÁáxŒÿ bjŸø	'øQEoO4­µ—õó9ªåto{¿ëäðŒëßôÕ?ðOð¦·†uò04MT{ý’Oð¢ŠÑæu{/ÇüÌ–YK»ü?È|+®ùê™ÿ ¯I?Â‰|5âŒ•ÐµRÝ±g'ÿ E/3ª–‰~?æ\rÚMêßõò(Â)â/ú jßø'øQÿ §ˆ¿è«àŸáEÍý¡S²þ¾g_Ôi÷×È÷/º}î›á+¸uK‹IšùÜ$ñ4lWËŒgtàþTQE|®6nuå'ÕŸMƒ‚…ÅtGÿÙ_Vhttp://maennerseiten.de/blog/wp-content/plugins/trencaspammers.php?ts_random=237954774Zimage/jpegÓO&ÿØÿà JFIF  x x  ÿÛ C 	
+
+			
+
+		
+ÿÛ C	ÿÂ  k Œ" ÿÄ             ÿÄ              ÿÚ    6õä_@y•“ÁÚÑØ÷>=íÈ7<ò³ÙŸ<®ÆCêšô¹ScÎ<çB¯;¤|¦sÎyö“¹Z²†é°ìÂ9ég¡]ºv 	ƒsO‹ô2YÏž7üÍÊùž»®Rî®‹¶>!mlµ7/¬{Š’–šì#ž´2ÈfË*Ú©ávÐš YR„­D(w Èº–Á»dzÓCÌ ˜õ‹âÍŽÖ€“†L¿¢ Ò5x¦z¿UÛ5-)Ð	A8¶—3ÔQ[bó¢c;n…™TîÛM;«œ*µÄP	q€SØ­#3«>G8–jì«ilgÆSÊÜ•¬ù©µc›XFg†f×r_ãvÚmñí«©Äƒõ<=`÷bá®‡ QÕ@Ó ÷¹•BUÌ&cxQíqgf?¼—!pEt{’›øB(Ñ?ÿÄ '        !"#$%24ÿÚ  ÍêGY¸æÃeñÑvjz¨ÁÀÐ“.ÛcôzŸyBÿ 7Ú/×—‚}Ú°ë@K›}K›¨‚T µ(ÃUQ[¤[4¸Tt§À òê ±ò­ƒkŒ¤çFÐ ?Q-]„'•7“@•ÇÊiÒ-7ˆ’cH>î¾ÀIº•&tÞê:\?|k–„(ÐêüÚº%ùÎT¹zN,ž›š'©&Æ¬þÐºs4—éjw€VäÏï,þÝLçLýsK77)vj²ªª®Â‹tb³ê±íññÔ
+wòÉ,Uq_"M|À“ÖS¨9éü"ÿ ©ŸÞK~ð4½e”|¨H(ô3¥ïP£t^¬ÅÅù’¾YS-!Ë7Be‰X–P´Øa™é?¤¼MHqŒþàDgK¿åõ©F¶5ÁÛÉ»(º“£iÞK­é'·«Ùjÿ 
+¡Çj×Ù[…¨8§Û*pºž\8çm~nhyMJ(|Ó?îõEsëŽªœéRÕŸX±6´¦ýÑS„Œl5MG F·,iÌHïØßÝÐÌt{Ú¤¸ºR#Q†Y0—5mŽãOIaÛWYßd®"–-ÓVªƒ1ynäõ‹¤¿¹êN¦$F=/ÛÏs1É?ttßå·Ö¸)[H‘[ÍMƒÛäèÃM%œeÈëP‘t6W\fyæÊÝ¿«Üzó§Å»Õ­ÿ ˜/M¥/BÚ'+ZÎÆòÑ¥N˜Jk%ªã;_¼ùDñé½êÎ¦¢k¬SÔW]€˜Xƒ!Y'N'u°qµÖ¤^)^M^[ï˜%ðêê_´8U\IiƒHOåhDïÀ»73õ1µÕÌR)ìÔ1©ÌæM:„÷¨_³CÜ
+yâ4òFXæP¯mjz«ä]2g2¢çK]FI¥¦
+±éç'YÕ	;áJkW“OX¶‰³k¢H·&Þ”£1[\•$#c«²Ã”¨"yE<ª4»“VxÈdXj¯^ë	’€Df"Ñ_Nx¦xÈDxÑÎºœ·}£¶{©[zaŽ—Ð›G)11íäÛ–¿ÑiCPðUh»è×Ÿ"1Ë9õ^ZÖ™ŠVcxtŒþéô¬DÖŸcÊ`Õm”µß"#ÒßQižWï†"[¹Ìu1¢?ÿÄ $         !A"1 2QÿÚ ?„Û'/,—–98‹QØÉ¶‰=»¼hÕwE—Óþ²?dÒk%^Ü}4pì”«$ß|Hò2KôƒoPû#lõs·¸¯¦Ÿì•<2mU!sµ’ÑŸÅòð[mÑ˜º2>­iôÏKOM[öÞ_ùü.k‘al¤ã´ó4O/»zB®OÿÄ '         1!"2ABQaqÑÿÚ ?ž%vb‡gGÉ<kgsêŒxã.IbIrEv˜ÒäŠlBu˜–ÛZ(íÈ}Cí#âBR^&æ…È‹Ó?UD#}¦5øäMU‹ëG¦ƒ'Ín¬™_â·Ûüÿ t­³læ–ƒ%ì²h‚•îcöÿ ú(‡•i.ˆÛÐ¢RšrcXßT&_¡ZeðdU-¢(ÜÐ­ÿÄ ; 
+     !"1AQa#2Rq‘¡ÁBb±$’á4Ccr²ÑðâÿÚ  ?ÇUäã
+ô Ó0~½jhtyŸd
+:}lŠ:’÷¡€«ZísßP	ç¥·î4²gùºPó_'¤‘_s˜¹£æÞJÏ³]†Ôxä‚Od•?·àhêu2äš'i$Í¥eŸµL³ÙE#sðÔg{e!ôiìšy„!·{µ,ÍG~J£vµýõæ“ËÆòs<ö¶]8%u?Rw¯E©~ÒÄ^ÔÚ–`±¡lö¨Ò6-’²û¨ÆI¼lEë™ñ·"×XË*¤v&ÔÒŠåÅkî+°“uu ð×¨×Í·î5–¯2ËÜ¿øÑŒÆp¹±^v©uó¨²¶*!AÑÁ¸ÔQ÷pw4ƒ'ò§†íùª=oh2··^”ú©"Rös||M,:•;-˜ÌÓ¤aÚlwéIä·V0Yw…ê}> œT»zÖëZYÇdø¯¤>È?zšN/Ê>Ÿ>£ÂµOç³†OÜŸµjŸ òÈfn­j2N8c½¾5æ:r ŽCœ–7?ZÁU¯8ÊÁ:‘ÖÆŽ¤jS59 ÇÖÞ±é!ó€õÛz//677ëX1¶Õ§,¸Á<ê]f¤™[çZ†’6ôÏÛÀµM±æ:þŸÀû©}Õ­ÓHxßTYEºïûÔÈàîyr;øÖ éË4v[gÖŒÁ’›Åù}(TˆÏúE**ùwÑ"WË÷¥y&.Þ5Àý™½³cµ	dÔ<Äwì*Ë_¾¯ÈÒ¯kÉmj±}ùÔ¦ÃÖH¡cÒ›7µ.Ôåsÿ ×À_l«É½¼=œvnÝRÿ *±µ’ã¯ÒŸLLq!ñ%U¬»8‘‹W¬Ùej0ÛÚ­7”É©Þp@õÁk[åc\Nß:ÿ êŽ BˆOŠ>µ,)¥È#Y[>)üžÞN+Ú[Œ8î§‚3¿î\T‘êš%u&-I&£iNØªyÿ ‡o.íé¼kA·–D…åî¦óVL`²Ô©!VvßÝø	áÈQêA¨t®«hà\žU&‘QÇ§à¸ßÕ¯ïV®+mãZE~]¨4#‹O#¦Bë½v§É*Ç•À<¨ˆ¼’2_CQå ±JÑÜ·"GÚ†¦¥bvjHÒ!¥!r½¯h"’V”ò$ó¬<˜éÜFØtØÖ¡ZvW‘7–WiY—poÝMoïZdÙ±`ß-þÕª¿¢oÚ¹Õ”Ú­zÓx7Ú´“«+þ•.·)n#µ‡}	\Í‘îQÿ U.’G™_Ñ>V {½ôb!ÁnÌ1·w÷J–?(ÊÉ·ßÂ´	¦²"KíÎ¡M4h¾˜r÷ ´|6_3£÷§WÀìÖÎ™ÿ Ô§lr+µ»ïRïl†6µqÅ¯G§´j*+í±®Å$´Ê]©òG`[£U–9€¿·ýéæŸE$¶7]ƒoã^p±ê9|+VÞm$¼?•yqVg…âº¿÷úT"°2‚×7èjg•À\üè<r†÷¦ÆV\¶6ñ4È^ýE^µL¸Ñ=e·SQha²ÿ ˜ö®"ß
+ÚY>Uë}*¾ÙZ·{~~êhÙM¯XÑ„_+òjLÃ_™§¾¦Th…ÕmpÆÝw­[@b¹¶Y^´Qê\_Þ=©‘Õ¦¿¥9QQ¦ŽÇ˜Æ±Ž5AÜ©r^>ûøÕŸE*‘úV6"×£©2^çç\«Õ¨ßœU˜ƒ‰èÇ™¯9ix¹šyÄ»Z¥2Hx­eHtÚhßÖ•‰Ü|ifIä+ HyÓÅ­¤ï.¢™ÌÉ@Û;ozìæÖöÍíX
+³0#Â¸ŠÖ)!ÝJÌ¶ÕÊô8GÆ¯`)%ÒÇœ‹¸­	,;¹ÕÌ#úkŠþŠ8b·ý"‰*ok]h,®UBQ1ËÐî­F†š!FØWûªÊ+fø
+ÉcºŒ‘ú™XÌxU²#ÃðþÔ­!'%ÿ pÿ Æ·µúþÞ¹Ö÷¬ZÏàiÕ!>•Œº7V=U¨fÞ°Ú‹BÝBÃ¥XÑÚœÛªõñ«S7\‡Þ™ŽäR(}·n]q4ÅÞþ¯Þ‰¡ï¦£@š°Í€¸5Å½¹U„­ó¯ÿÄ $        !1AQaq‘¡±ÁÑðáÿÚ  ?!±˜ø7˜WÀÄß‡£¶)p´NŠë¾ P®Óþ!YÜLP°M<Eaj†-´âPU¥ x+Liï]Œ]{™¸>üXï¦[8báeYPÐo^&¼µÈKÁña¦žÝüË{´×û˜õ¿z»ƒ$s•ÚC­k9˜–áÅ©0¸ê*PÞ÷Åsm¢ ï~<Ã@nóxOãlo/0Ä16y!q&…õÊ„ÿ ªZÌ úL"âÊ;Ä4¬”¬ŒÃ2pê¥1‰CÎ„Áƒ—.ß¶&­~YÈ‰¬%*e×è·ŸRœ;¦5n|Ö&]v¯ø#°ÊÊ3]ZcÎ_Kš¼,3 ¸úF¦ÙuäöÃc4y]©ŒN¿ÆYq-goÜÓ [($i‘Û|?©²ÃÅ3²gˆZ˜&Áºc~fóÜZ0²°ÿ 5*·’_ú=JŽ`
+Ð#®
+½_3•‘²µìy•ÔE{Q•¨W_?¨]\%þ!QÙSÄ‹ª½ë¯î’³¾“¾s>Ë ë„u(U,sÙ­ÀwQy\ú‚R÷•ÛÁ‡~ ëÌª`XÇ”8|²-FÂQiœü s+R¼D½‘Å·-šÖ_p—•ZeÌL:”Iè­¤5_Ô@,MÄ&w¦\E9¾*ã¢]X–_^£Y‰Š:K«:ŒUÄa£‹þæ=Iê°ëŽc=bS~bQŠÞ°Kf‹ý.Íç¹^ô`%ÚªÁý³4g³bYdôQ€]ÓñP*A)&˜³Ä©ÕáL@Ø¹Ô¡2c™¦ÓëdÎÊÄˆ¯.IÒb *òçS$ËŽ"Tõè¾êT¢G×jºŸ”f…ùnWÂ\{òãS„ÑU1Zp\(£PÕüApÕs¦à0Y%2•zÄëíË“m×Ì+nz•¦În•
+òæ¨ßƒNé[¿¥<óµZx<Jð(¦ÏosqhíÝ~àÃ†ÿ Ïq.ÆñÇ¡ã5	‘j º!BƒWÏÄØ?sg‘\ç”*’õ¡û>QEÓf¥\+tŒFå¥È)»CíôÜ!SäØÙBê¶ÒåMQDZ¼å÷ABe}Ï1ý„44Õlâ"É -kQ‹ÖœlÜ£kSjà¢XuÑ¦á(AåŽMªÀñO^BlêTe†uZ)ñÜÎ‹
+•‹®¢9ée±*c!T6-‚÷*kuÀ¹7q”;4á]é!V27îg`uz3@/H¤à-¨Ÿ$d;almÃÔ£
+Ú8]ÿ ÂLÕ&dÈ‹€ZßœA¤1òÄIÌ,ÑŠ1Ûq‡dÆazX¤`v£‰\ævôD]º©pÎûp§æS¨8:ˆgÆDÌËMºcñ6Ò‚‹¹aÍ‡ê —»Ï±ê:Ë$‘·›4.ê–ºZZ{ñ€êÉój·8©ƒù¹¥·¿ê1|–hýs>ô+‚Q”rôb^†Ýêè/É+@\ýá4Öô‚¿7L~2Šñ×F}:™­wÌ:ÁØêd(ÁâTÂÎ;|Ìû§Œ};³1Øø`±Ä×ë–&ñ»Ëß™«“Z§q³T.£áSæWÅàa
+‰ê¥«_EÄ8 _üû–KÈr›9À©s[ëù3r¨ÁY4·/r€%ñL±‘ïÄÚ–ùÌWƒë2¹Ñ2Ä¾ýFt.þæ¦$yzyŠ›i‘å©i,õ,£¸&V!”YfJä¸À0øþ„hbó3.¬QÂÜ¿Ð)@sÒ,ÝM&ƒÌ¤/C1±ZçÜEDpæPàí¸†Á:ÿÚ      Éÿ «\µsú<)^ç ™¨zC•òTtÄ	xèÇ™™zôlS>_Õµ<|Ó?ÿÄ #           !1AQ±aq‘¡ÁÑÿÚ ?ÂµX©M©ý	´9‚7cBâ–à¢žFnó'¤^	 j´É‘ª„x‡b¯ÐÆHŠ''-u`‘³o·qÛù"Nëñ½›ûÿ ‚Ê,ÂR¾®°dtÁ‰›ûÿ HJ!@ÄU©µ~7=`™À¥fÁF„Ó$0ü%ó|r-…‚y$>á6n;¡²9Èð<Ú0àÿÄ #          !1AQqa¡±ÑáðñÿÚ ?QÄþ	“ä2¬©QÄPÇnþ…ÃLÎ­<ŠIäÂy..9-M¿×àkÅ%ìc³ ÚÛTsÆã’G\¥öÅh»um[äfÁT‚(p²žW÷sB²¥[ƒ 8ÞJAè\Áœ‡cÌ;F›–ÿ ‰‘OB¥é†1#§¦$.4½û½. Öi
+l,èÄx:b½Ð©¼Ê>†ÿÄ %       ! 1AQaq‘¡±ÑÁáðñÿÚ  ?äø’Ù`|8Ód§ýxH"T¹†|úzËDÅ"¨KÚfVÌ¼ˆÒ‘	›‚€“ å ´þr ¤hôp…T€v Žìœ¿&$–ÁQ'Q:Èâˆ.À“©‡ÆR‹‘úráÿ ‘1Ñ+i®ð¢:VÊ}çtªÔãm¶l$Ž$$¢ÇW˜rbVüšÑ$¯ˆ¼]¡Ù øÉ
+  LW”È ìÐ}ôwˆ–³9œ”ÛÉ>p6g“Ë a„`‚ÊŠDàâE@Ê,(œ.ŒhÑüàª¦4 §— *ÓfÞ¦²@ ÖN@CšKnç) £õ”Ùg0mÈ-.œ&Zš“YYï‚ƒ˜jÆi…JTV£(iK¼@;ð”ŠŒI¾o5JIÓÍûÈ(A&°—$'ŽQT´$Bl>œ¸n­âÓ(?Ì.ÐÄ>//kéÄ~Sã6Ð®…:E<Î ,-P.ð,Cðf#‘L„™ƒÀ&CËô3EW·(»w¢
+ôå@–Ì¨ˆ§á”‡H§Ç¬@*h!€ÐbåÀ>T©XJñŠ¹zšœÑuÃ¤ºUÚ›^[Ä ¯jÜdæÉ ˆ¤iÙ*‚Ñc–KL¢D4 šºÆ…'%ŠH|§‚×’ž¬®Ì˜†èÀð!‹& )=@©¡eáRÐˆH'Cq¼d, 	iÊÃ)ñ$ï$4ýa ˜Ö 'äÄ?¤ŽtÛÈD5P¢âúYq~B@m0Õ`È¶¢‰ešhor
+Ã¤JI(çà&½9À/$„LLGÞPëëkxE#B—7³¿“ @@fWò¹
+SB—?¼äªøn#0¦9‰¨ƒ¼e'&§~S !²O¡ÈAÓáL·²rrb“WJHLê/" ((ðÈ‚ñ$q0£
+(S@—5¥R”¾\¨R¤ EÙY"7d>82[RETø›ÈMÊ’¢5N æŠšb §HÅ0Sá	ä¬²Ü‚I¡ùzÎƒ=E·”)4r¶ L]à8ˆ.•¨{ÄÑå	‚7u9Ð B  
+çœ¨•dØ³	²	€á$£nò"‰&¨•ˆœÀHFF‹RNLP, $¦òkDÍâ
+ŒØ šÄ,æo·¦ ‡„(•þLà$TPH`]Ö¯é¨³Dñ‰«[OÛ‘ _N{ëô•Í&#m’ÿ 0,:ZÆŠ»1:0 qS`JƒjK	œF–÷Š£»©i"5>àYdì TX•* €ÎXÈGAL‘‚L¡ˆ‹”¯’ç®È‚Øeå¹Ä™IõV&…hïI€j÷ÏŒ™”’)Ê¡@(Nƒóç-9E¨®Ç6!§¼")°oíËÎX(á–p58CÐï×82n .^&@.4\$ Q©¿ºŒÖ{#Ñ¹úÊ´ŠKI >Ò¡¥ F/Ðlf‚yƒA I ïˆ¬²r¨´SÞ0F	'ËJ¯—œ„`’~Û¬Z$TwBå
+˜°ØLð†@ª‰Vò %	q
+z’®c4(,Gà©+SùÄÂW ¿3ˆ@KvÆðà6ÿ ¬@	NQàHxœ@Ä-Ê‰6‰ï‡'La¼\àúºKD±d$¾ÏL#Œ.üÂˆáÄ‘lö[!|nÂRS-!DF÷!Jb*ôŒ´ÎˆhÁà>ñMu#Ó|â²¤ŒAsã DPÎÄ‚IÞ·–S’™¦õyD0 £FÝtxÊ(~Ì pƒîL„ˆ8íùÂî‚J/Òò ‚U,¤ÄÂ“pt%Mäƒå˜ÃÜ´Ëˆ'f`)ÁÞ+‚$-#8ˆº@¥ï”¶ßF-@Æ+Yç! ‰	\d 6%%€xr`dˆX ¼(˜XšpQÒ€ªë€Ê&üâ"•îL”òàŒFè'~&2àG‰Ê\oY,%m3ØbÎÌ’",„¤´Ôkó€“¶UCñ…º‘h¦uê° SÄŒÅûÆn]`AiYXÛâÂ° 8y „·:£”zJ!ƒûˆëaBX¤q½&@ã'Dm»É Öœ á$øTŒVÉ2…ƒjHô"JJÄ¥æåWÉò2†çVá(,úÇt	BæSXÊª@’0ù3'Þ\&`ý˜*$Ã$
+=Ûï U Av %{x’FL	$¤h¯œPi›”‘?=e){¼+²ZIµÙ\@’Kþžy êkÍøÈ#¸­ŠÛˆ€%t`ÚÎœ€•­'à‘ºÆ¦§éç4Ýÿ ¼ØÊAí# Ld¢špšaÅZ~!PÐ€Q'‰‹¸¡êšùÉˆvE+/<F%‚¤=Þ8…K0iÖVG˜—Gþb(-Ä©”Ä®¾ó	'Ü€”dô$§S
+H y£6RÌ9
+C¯Y "£ë$|aHP;rABT¶(frX(Ÿ‡Öª¦²KP «4^±J½16"ÝU\ÿ €ñ€6ü?ÌF¡³ŽrÁ$Êž¿ ¯^wçyQGæ7ó›ì6BcÐùÏÿÙ_.http://maennerseiten.de/blog/fotoblog-wien.jpgÓ!"OêGIF89a„ j ÷N I‰ª‰Çö„%³‡TDD;ÊÄ ÐäÊ†VC­„ÊS	PG<HÝ§„bbV…M²©êÊ¡ïåÏ€ fÎm$ $'çäá‚‡Nfˆ±²ºénèööÊËÍOHu…dgë†<æq*'Á’†äÏÀE.!êwpK0«—ŠÅ«‹‘ŒŽsfW°*#RêÙÂŽlOÈÚæ´¨mýlùôä° Àæ_	STSóæØ´˜Šh)KRƒ¥·<
+1("Å†KöÚÁii”uur·ÝóÚÔ¾’…zeŠpk×Çµ¡?95$Ä´¶§pfš¨±“”“üüüÍ·Œ¬ÁÂªW(Rtµ¸¡Ü¤eõíÌüq„—›c(ÎõúŸ”{pjj¬ª¦E/FˆkªW£ÏÖÐÐèÜÒµž˜ÈaQJMlU;úåÈëëèûvŸ†v‰zm˜˜©±“VÚÚÙv{‚éÖ§ôëÛûe\YVh‡—ÉåôM¶žß¹Ž±Çà¶¸¼©Ÿ“‚†«³n+œ²¸š–Úšo<F{4g|3:WfHn²FÁk>j9X?x›´š¬bA2TuÌ¤qý¨jQYk€·Þ@VbYuŒn•¹Á–oF:0ý¸‡R–È²mL“V¢…cLpºØþ›V¡¥ž™ÑûN<GkW{®Ñé`qqƒ‚}ÅN¦`+qIRªnŠB0GYx3	8O$1?üŽ9]'I6€˜¼¬{8¬yS…4Ý´o¾èðiYQdˆ¶[[””zWÀŸô«~š¾Ø·©•¸Ô›G—Åß›S6¤Y.T›`9üÈžRm®sw«Xy¥÷{'¢HÉ{S’HÄ‰p77773G.4|m§ÖÚn}l‘¸ÆÁªÒcdeI<cFi›º»wØW¸U×èò?GM¬ˆqÂ¯¢1+0’ªÑÚõó®•tŠ~°u,	¦|jW10„‘‚CYw©ªúÖªÕbÆÄ¼5
+X…»þÒµÎ˜hý†/‹;$%jŽÂ½ºÇº¨ºÒÛ|X.x\J·J§ž¸`–4_i‹,    „ j  ÿ ƒ H° Áƒ*\È°¡Ã‡ÆHÑD`Ä‹3jÜ1œQ9ŠI²äÁ×º„4É²¥Ë†)W¾\xgæÈ'5EÆ sMæL9	"™‚àR9ŸåPødÖ“„GƒbÌ1gN¢wö´I0„Œ9F‘È¨ñtà9û’š#µà¬9³žMK°­YUe>1T•ï6‘<}º|Vu «s¶=+èjŽ¡Uó\ë*ac$ÍÍÁ\êR×* kF”[¹8;ÇÕ¶ª<$x«
+ aÐ	­Ê&ø6îÀ×l>#¥`NmÒº»r|b#5WÏ}MäË  9KžåŒºÙªVžÿý¤êâ’Z·ÔžÔyƒˆ¿Þ=p¨]‚ñë'FÌ} UÐoaöÌ,³ðÀƒo§5§K×ÕÀWUHHBdåá†Ð|	M8ÇSåÇšT¯ÅÅWeàmƒ‚¥§r…0TUÇ@Õ_·)„˜B3ôÖ†ÈÕpÞŽOíÓ !äÔ]]ãœMCYÂƒ¤<5f^Õ•*³Ô„XPOä0ËRCñ`[_	¹Ù‹•Í–Ødpi¤¢jo!ib ­•]qŸíÜš;n³ÏZà…šÁéõ`U
+º9wäð¢t=ñÈ’6Ýaa2<)CšO¼X•ƒ9”5bŸ’2KQB.uÝ_=ãJïéÿuÝ_U•Ýi­¸R=#[!ÐG¤¯B:ôÎkÉ‰Ñ¹ê*­IkÅŠÑ›Óf«-BJ.¨à†+î¸ä–kî¹è¦«îºëžmDìÆ+ï¼ôÖ;îA’Rê½üöë/½îêÛÐ¿l0¸ø¾‘¸2È ÆjD,ñÄÉ€PÂÅ%D|Å2lìñÆs|ÜqU7\2Ç!ÓºqÃ´†\òWW¤L«É+Ì±Æo¬†‹°·	‰ëñÃK\<äƒ*†´“qÍ+W¥,KÍ	'1½òÃYÇÜrÃ›œ²ÇUqì1Ø`k¬³Ú>Ô-F§±ÃjÍ±O<ñÎ S¯ÿLsÌ9§<Ïàþ3È#wM²É/³sÈ ·Ò
+ã`-1âm„íÂá:|óÅO‡¾ƒ„Ù•Cž2ÌŽ€[ÌN”à·–$ãwå”sòƒñpvÊÉn<a›¬'–´Âuñ™5)Ð1<ñÅ;«¬^!0ƒ2Ó¨v€O­A	| ®#É81ÃÌ·ÎNñ_Å?Ç<¯ÍóÀ>áÅ0¾K¸ŽX^üš7Í=Dh£^	”q½¼½ƒ˜6&;š­ÊÈ òà„(#NØ…Ê6&<KˆqW¸’7ÿ9kshÅð6ƒ˜Lx3`‡%æ? ZcÃÿn&±~p‰Ê ¸!n´cT“x¦ndX$@‡:¸'¤A
+í h%'Ìã„àžè¸ÖÅ#de|#Ì’Ñ0š±cTƒŸ|hÀ}…Ëf0"éÐQŠEÐãŠOÁ;²°³i þ`Àb`SÄ Nà€œÀ†ìÍ‚˜‡ÐµZÍ!°KÆÌÀ“>4Ì¡u3Èåìè9 !ÅpÄMæC ¼í"ÜX%É¡,ÃïÈ‹ù6B’ èA
+>ñÃQ8Áö WºÐs(ã"”xZg‰¯ÕŠN¸ÁnðÂ9p¢–€§ïdÐŠxÀn\ýkvÿÀ?nLtï0ŠL*Òk‘¤¸‚ÊÀ€`yÄeÅ5Ÿð‰-‚‹˜ZžŽÊ íüZÈÐàGìÑ	W@'¸Ø¹QÊáÑ°Û…>Ã…¯çÁ-\Ó %C-äm !P…2¸QžÍYÈÛD¼‚tÁ	€ÐKŒ°'Œ!Nø É::rÂ£É`§+¯ .5ÄðŒ]-)åüæ¾™"Ì }˜?§‘Tƒ(‰bäX4 ‚$3ëh‚3òÒ'¤  1øÄžš†pˆÁ	 ë,±‹vpðcÙ.`÷ð”±_K_K‘Ç‰VÌƒŽ¨Ÿ#håC Bï «âõà
+ -ÿ˜Œb$ß#éÁ€Ð!fhjA0¹‡d`XÝ€´@p¥á$W30ÁÒ°4„µc<Z’¢¡ae,)YKS¸òÓà’Ì!¬˜ ‡Ì‚9èAf0€èð „k6Œ‹£ˆÁ$cÐ…M†½hF3DÐ†«ª,[UG.:Ê€~h˜-qé»–õò—ð
+—lé“·W+o¤CqS9d
+¨äÎ°Q¢tC
+ÊX†ð€,x‡h©¸J«d´B¥&uéáÂFÞ·jî¼r]…ÉPÙ( &T´Àà“º8A¼n( SGe>9(Ùÿ‚Ž›Ckm
+Ìp1#Ya±ÞàŠ†>$of G%PLd ƒ.tAˆ@"h@™¹Á´<oV²ßH¶Ï .D\Ðdˆp[	¢®y‚3T@„#ŒátˆqóLp(d8Ai0x	˜PÆ¥½÷fÔÏÃå¥µ§¿®+D8r«”e’q†Æp	p[-PÂØr?AŠÆ8tã 8ÀCÆüfÐcØ(‹Ÿ¦EÆËd$®BlvCžðŒ,Ze˜7°B@, ®DhÁ$ 4P\7ÃRP€k¡Ñ8ø2Þ ];zÞçÿXB0ðÄ>ö­g~ûð²ƒ&p‰äÅHäÆ_O ¦JÆî¸¸ä0ôŒg¼fGœA„€Üä&w·æý{—-Îûæã:ýZƒô_ÊÁ ú6A	'p kK„n[aèrˆ»Ñå0„Ü`M?Nõ÷ÞóA0†-ÒLûyþÖCìä*¿ãï`À²@ 5àÜ1†èå‡1àÅ­ ¸›^Ý¾ÁŒ@„ ‚ï‰þò—Ý}rÌ{eÀ´¾‹­Ç“6¾€Pøïáz”œF	&Xm€Ã¶ ‡RP–pTÂGˆ{éM¯aÇ}dÈ»ÿÓ¾k]Ì;ä ‡®	€„1‚ÌåšvikƒÿéÄÛ5hÆÙá(@(á'0÷1àC€zr0i i è}pà`%wü fð†b†\p~	Ð+7Fò£oìc6zÄu75|FñR xÄ5£^eÀîp' T@€|`]Öec`q7Þç}ràtF°üP|w!— ß°ä@N¸þ0dh´V½'s]W­T<0Atƒ#%ÐyP„TàmD <xF`@Ðl Ð€qg|0ó†|7~$çk@…"¸8™F9Mæ?“‚ŠˆOÿ€31‘(L>p†G0¥Çƒ¨7G`p 1FÜ'|0D°†øz€Prkàç7ˆþY-·oð#gö—/[H½ôÀS#‰“¨PU` -pzç}ÞF0
+¬×¾ä€c@=`ÜæxÇÈ­÷Š8o¯øÌ€f.sˆ¸ÓoÃpõ×xM! <S40X7-àCPzÝGtVzî \6¶ð7À]ÀJ }<8JÀ] \@¯è=¶kpÄÐ~†hxgãVød3=þæ@ð†Es%0ýàì`cÜ§aPtCÀ]@CÿðƒC@YÖbÀm70\`l@G0	`‘ç'x
+çà³èrð'75ã{IÞŒ¨‹d|<³6kó0e 
+n - wr°}Dw¤wcàî–àð^0¨§zöpb G`ƒ¯hïöw¹€æ˜31X2T Í¡[©7Á@O£6ó¨Ó`=À‰°–§gzÛ7t “Cwî@f@x©zpP	¶ f fF 	°øD@ˆŒ³J.u6aÓ<á`s»8>óæ F—‰ó(:!Ðq—}È–§×mŸ„©^0€Ð÷€q÷ÐfÿP	* hðPðèçh"ð„TXp†ˆhÓCÉVf $pÅ	 mcÓð‚–C4,`30o—×yÛ„®f]@ž¶à Ý6)ÀzGÐ?ðà ž¶×c\pÁ`aÃd†G9mf   ûyœw@/H4“8ö5=ð
+—ŠqÚgp@8tîÀ1 =@^pƒ7`h0ç9Úç˜ ç l²tB½y‚åå6@] Mà/Z^ïÀ‡³œ˜©Éô1 
+hšdzpgÛ·}HÇx¶`ÎP	d@qD§zÚñ ¥q …	ÿ@	L™ ˜`ª„6#èrUé‘ à˜ø™Øt¦“H³¨1Ó3–³56 >Np |jh9th)0ép”D€n#07“‡Oš¨ñÐ(0oîF 8lñYl(.Á)Ð	ÀžÚˆÇEE3Êjšã ;÷àÀªš‡C0
+T kp„çùVÐàö¤ª¨-€é— 0uÍÀbD©ŽÓ›ã{{¦=1
+€àðÑš7YÐ~CS†È",ÎðÎPz¥g@hT0
+]ÐJ0q°Íð²°¡‡‰-yGp¨Š\€<¦`‡`j63¨sˆ·ÿã\6ð˜dêÕ i­ïà•C£SØJÞ Ûêi˜€Ô)ö0X=Ð.Ð¥°>€	? zh p÷ð—-à±? ¡p‘.@DE*ÇÊ{ˆç×ÐpÀ©{ I­Éé‚Sí0É4pÎài`p9»}7  ›F‡  eÀ´ð÷ z÷—Rú«qp¨-pÁ lC6•s ùpP
+íP¢mët£à¬‹UÑZQ¤PV„g
+Qé@3à{q|`vJ@Z°HÜ Ó@ft‘@Îë fÐáp\ ×½Ð¹+ >»÷=+ê¼rÿxšP¢è¸y+wèÑš5`£~vO`i°»HtºêmG¥£¥°¢6pŸ<¡$gà“â?Ð ô°,'3`À¬Aàƒ‹àâdú¬wXUÑÊW PæÐ@‘ I€Ui€@(—70¶ðCzÁ $ð«à _à Ià= ppl€ññ I”Y€S¢¥ °*1
+p)’µuÍMð¬o°›‚Àª`Ä’Î`¸A\@Ü†Š²±t6I°
+é`ð ’À^`ÂÐ	0°ñÛ@‹[e2+Úd
+àˆ|Çÿæ3fÀ©îpÅYÜ) €
+¨‘€©ð	°vácÀTPzñâù[]ÀÉ1XÐ0
+}@}PÀPö°ˆ*{È´RaÚ£P¦`ÕpË{ðRŒ01p0·WÌ¾=PÞÐ¬P	ápÀÞ@¬° Ö¬ÉœÌ^0À!Îàyz¦9¬P ÞàðÃŠÀuð’ -ãà‰oì°{µ‘$“Q¦=ûžhoÐËÜˆtPÅö€ÐuËOPIÍ=ÐÍéÜÎa¼ „`Î *P	¬ ÊAi`ä Y@@¬@€1`Í×ÿpÎ€pL øð“°i°€¨Ë@x‹C+À¢0
+m°b ÉD­Ð“j•QÎÍÒÁ©ÄAðÐM`Èz|ÈfM`¡WÌÖ¾DOá˜¬$*qkÐ€Åç‚Åb íy®] $ Ä KÅ<{ÅUUU)èø‘×àÈW¬aœ³× 
+c:
+)`È^p\{€Ëà·œËàÐà©iÐÑb°Í^×`Ý¬^ Í|]Uå²oàÐ) A\ÜLüÌ{Âà"Ôoð›õéÔPý³át€ÙÝÂÄ€ÀÅÌQÿÐXœÐo °^ )Ð+t éðé0A€ÙKœáÙpÌÑŒ.á]Þ©­Ö£€×ÞÄáŒUã‚Å€©qeº×+áb¶0Ó‘ð=<ÖˆlP°ÅBýá)=ú0Ë§-émÒÑ hX °¢À• 	‡ŒÈ{°îðÝÉ.ìP	Þà	â¢Ðå}… € úÀG~g 	Õp
+4°UõF 	NPUbÀ1À‰¾Õ`gÀ
+“b‘ðMpÈÝÍáÞÛB-“ðË¨]ƒ5cå|à ÞœíÈÚ¤íÝo Õã"ø``WÿîE¡(îÚ{`0€Çe\pÛá2à Îe€ÁWé» °p6 
+*ã ç@ŒÀƒ¨¨ €	ZRPô / 3|	>ˆ¯@oÜ€6ÐŽ,-£ð<£p>PÀ ¬€zC@ 
+ˆÀ.nÐ1  ê#¯pIPÀXp÷ Ó›(@õÐ	åp ) rP
+ ŠpèpÝŠ9Ó+° œçM0
+*ðPùÀ°Â`&€
+Àà—pë0 ðØ€(ð€ Uÿ°R~(°à€€M`‘½
+PÃ$
+_¢À± °\pf ; È Ð§Páb ½à±põQ@àv0÷ÀPpzPì>(@÷°õ)ç) õÎ ¦J2ÌÏšƒî€€|`
+60	( TÞ	é ã@÷C°@gPq r L [@ÀÛGàñÂ¼^€¯‘g0cÍpò 	à©0	L Nð¹P  À õÐõâÒ|Ð	pÐ	µ0å ¿ÿ¦ B0GÀ3ÿ°z ›PKJ ZßÎíß_Ü_-·H«ÐGÀÿÀ`
+“ P(Ðm êPÄp qâ tlÔ±tOE6\çÄÉâPÔ‰Â\QAl<Òéš™:^2@P'Ÿ1Yu<ºkC :¹0 
+bäŸ"S“"Jü‘"T•0N üs‹®Hä00!÷¯qÔêÄ¦N‚¡œ¤±ð†Ã/Mš¤HÑ¤So6€=¢5ã=|P.ØiÁå ÕÖ`áƒeŸQ…ÓÑ¸á‘Qå¶HtòæÅÝÞ9êBlàxøÅ‡!ºFÁ9fàtaqãØ¥•xÍÿ¨>ˆôyùM9vœäæŽ2D¢¬©¥Ú	=ìþÁÑÐ±N6lËÁ^/Ý½ìá ÆÂ×4`-X(ŸfÃëÝ¿‡ß}òæß¼“_Ì}õôåÿ0@á£/,±8¨f´¶,¸ÎºôÞúj@‰6pB	­{,ËÂBo½ö.üDß{ë>ýöëÐ‰(´pDC¼.ûñE[Âþ,èæ¼!c>ÿr$’ÄÿtŒPD'”ˆ=%ìïÁ!á›á—Zâ[²—=–¬±Ë÷œpƒÐñ¤ÂøÀlrZœ¡‘B„øKãÐG/”o†ýœoŒöÛà1ºqYÿñÍÏ^ òƒƒnnxÃ‚üÖ{c„Nx!Ô‰1º‘ƒuBw(S"A»ÑÓ-‰üŒ´GôTìf„nÆ §	8_u·û$’ <`!u>	g€BI¨ â?Ñ¤YJlA¦S'Ž '_fða
+@QäŒAˆ‚J.Ñ.l‰Ä—*¦0%	F¼ša‘Kò0cM1–\X €To d[ æßfX¦ÜsQøçqò`D&ô©ä‘+`G‡$ñàsêØâ‡\Ì B‘.zjPÄ¾¹ ÔÙ"\8€ "Ò)Ä+'ÐàB¥l¶`§ƒ´Ñƒ	=Ð€å €‘ W!ÿh	 hÆ¹GÈŠ‘¦M`p€
+_(Ù„ÛTóH§‰a ¸ 7‰ÐèÃi`Æ¸‡_¤hœ]#h‚xP ‚?¶¨B ‰PHíkß’K“áèŒnâ˜œ=»K¢¸à`Ã_ØG]¢øC'šaâ6þ0 !Š¹$xf0@k‰hoS*ôÈÃÊnäì.àèƒ
+".ØÕ‰@vðÂî4¼ÐƒI6ˆÅÍÿæB… ðÅðn)
+*|)Æq‘â>&–TR0cº â±8t@Æ5tR¡! A’5T‹ÇØ@#0r8 ¾ðA*ô€øÌ
+¦¸ÆÔa‹ÿh‚ÀààA¡À nˆšwÀq(Ð
+.è%¼	Z˜ÂØ€…ªð[¤"ˆ8ƒ BÑt¡û2‚_$‡{ìA{èÆìÁ¼ öˆ…f „êÌÀTÈ [À#|¬‡P+*70„=Ø!XšÁ”=Ü#AG/ÂX‰´@	z`#ØtÆõbàâÁÈG9ì
+ÕÐN	5‚=àãÌ€µ¦ô$NvÒ“Ÿ¼Ð&A9JR–R>¢ÄÒÌ3+ ¡’@¬„ŒzâãÊÑÒ” šA/Ö4,!áˆ4rã„F$‚ÿ™A3Â!‰æYEy2ñ“TBÿ†Mò ‚o@‰&qi@åƒ%÷@ÍH*™ˆb7†ÀÀâJ¨†j…ˆ³y‚"à Žc€âª™rj§:GÈ€6=§/!ŽÕÁ2°¦\FA£"|(ÉÆPDêt1ä¢†ÑpñE±È#B—*ÈEV@€5(QÀ"8¢L%q‚GÁž ÀàDÀ1°@ö@CÆ‚&DakŒà1Œà „¡làÐ…Blb¹Å(®Ñ[äÐ=3 D:a¯FE.ÁSø"ð ,4	9k¾Ç
+k¨¡‡Ä¹Ç
+ÿð…Dò ‰x!)u°Ã&*¸c±‰“ ?@=÷@¾Ø >á0Œ	cd€EðÜ 
+6t 7VàBmkA Q\Ã’EàIt¡k $àƒ^8-¨ZÑ\ÔBÀ G ¾m‘VèC7Û¤^ðÓ	˜ìÁQx@¹ ¬ ØÄµ€ã -dòð,ØmM`ÂÀ†ßo¦m ÁOÐP–m m Ãì`‰KøàÁ^PÚ.”Ÿ`!
+.ØÁ¾…6à¨0²&>øxÓ°¹9
+0ŠJS²p† £Î¨+à`\ `Ï…œ1
+@ãBfC6´izx£€
+Bü!8C4¢p²Åf0Câà‚4!H„Ölƒk@a†@™[ZŽq4`ÉŠ„
+Â‘‚0âPA4€ñ¢1TJ<8¦ž80iV`Ò“¶Ô6`éüˆ*<ë¼¦›„"IÝ Ò‚JÃ~Ä²`“v,œ`iDŠ‘Ê~ða2S"ôA£¤ócI`?‚¼e²_DÄ€Í×F)J[*ÛÚ×þ&¶µ=Jƒ2  ;_+http://maennerseiten.de/blog/blog-buch3.gifÓ$%OKGIF89a^  ÷  ¼¼¼úúúùùùÌÌÌ×××ÛÛÛôôôÝÝÝñññïïïßßßîííáááæææäääéèèëëêêêêýýýZ¯ÐÓêòÑãÅÅÅ„ÄÛ~ÂÚììì½ÞëûûûÍçñÊÊÊ<ŸÅ½J£Åäíð> ÆM¨ËqºÖy¿Ù,—À©ÐÞ÷÷÷üüüøøøÿÿÿóóóðððE¡ÅQªÌX®ÎºÚåÄ×ÝV¯ÏÒÒÒ1™Âº™ËÞöûýº×àààà‘ÉßØØØÝéí¡Óåþþþ”Àl¼Øi²Îq¾Ùz¾×m¸Õ¾Öß%’¾–ÂíêéÁâîL§ÊÔÕÕ›ÍàÍâêlµÒu¾×ÁÚãöòðÚÚÚŽº¶Ûée´ÒJ¦Ë›ÆÕþüú˜Ã7£É6›Äòñð>¥ÉñîìñøûÝïõàêí°Úéb²Ñ= Æ¾àíA¢Çí÷ú"‘½òòòŠÈÞÿúö[¯Ï5›Ãëîï.žÆ@ Æ8žÅõõõûýþ©ÖçßðöÇßéB¢Ç¨ÏÝãããèèèøôò8¤ÊÐâé¡ÉØ¦ÏÝÙãçþÿÿ;ŸÅ;žÆéõùõôôu³ÌÚçìýþþáñ÷R¬ÍÞÞÞÇáê°Ôâü÷õØÞáÑæí^±ÏÈÈÈÛïö.—Áâéëäëí¶Üë= Å–ÍàŠÆÛŒÆÛE¥ÉI¤ÈéééO©Ì—ÈÛ¡Õçüùø±Ùç­ÕãÃáìðòòD£È; ÆH¥Ê«Õä«Öçððïd³ÓñððññðÎàæDªÏ…ÈßÁÔ —Â ˜ÃíïðäååýýþêëëæâàÇÝïõ÷¢ÉÖ¨Ë×áããôíë÷ôót¸Ñt»Õ7œÄ>§Ìÿÿü¯×çççç®ÚèÆâíÖìóÕìôôéåÕÚÜùóñžÈÖùöôÿöó¨Ðà:§Ìüüýëéé×äé¢ÌÚØêð.ÃøùùÑáæêåã¦Óäìèæc´Ñìîí†¾Ô>ŸÅ•ÅØÊàéËäî‹ÆÝæêëôïí@¡ÅÇäï8ÄÍÍÍÒèðC¢ÈB§ËÍÏÏµÔÞ­ØçÔæìJ¦Éðíë’ÀóóòÞçëÚäèÞÝÝ©Ôä¢ÏàÌßæ!ù     ,    ^   ÿ H° Áƒ*\È°!A#JœH±¢Å‹3jÜ(@`€ CŠI²¤É“(SªàqeÉSxL‰é²¦M—èÜiàTˆŸ!X<2Ä‚çÎ2DøôÉ¨Ó§P£JúT ‚«XùÄðâ%ž—ŽºtÁJ¶@‡,Èª½êP6=ÖÊEdoÉ‹FXTz"·¯_¾Ê4mAbJÚàÇ<:hñXpRý.%è¬„,*‹NðÆTTî!	ƒ€Ñ°c\@»¶”<¶ìc“çƒ¨,µƒG~œv%q…XÀ‚9
+†ˆÙDâmKDvœ³ž —)”ÿúV¥P€‘"­ÒÔƒv½¼ôÑ6WK´âBØÏ_ -<²$pP2
+0€  ¸Ÿ+°S‰­@ÐÄsùXòÂ 0p¡E¼Ås@Å >l qxp â$ÀâÇ‹¸a…8wÀãKà @iäy 1ÃµlñÎ1)%p£””Ô0EÐ1GMˆ@ÈAe´¡càp…D…lA:Ì”E QŒk€’(\P€Üp:Šàð–= é¤÷ ‚Ä>ÑGØ\3é§Tª Ë§’ÊqÁ‹ ÁMÄAAë´ÿ±‚0t‚I%h @$3g’G	<`E	‚4g¤¡Š'G˜q	•RG¤
+ÔÀ¶Ü&‘”°Ì	ø!·èÒ0€
+{ »-!+är†-4&-<¼0‚&pp‰$p6`D°­eÛ€PHÀÉt Ò‰"€‘H{‚A¸+$—ÎàNã0ÛÈ²AÉ0««B20“|œ `€7´CAÿ 2B8ª˜Ãn¸"Â8C*	“lD&Ä:à
+	¿ È*,ÒÆˆä11Pà±BÍ1 öÚÞDD9ü!Ä³H°öÝò€.w«ÿ½É%(±tS0à$˜±
+TÀŠ¿)0 Év 6$Ãp ŽpðC˜¬ÀÀ2%0Æ<‡"3?ô-´×¾Ë/pôaLÕÌÆ+µïŽÞz_û)l †´/ ‚Í§ 
+¸ðãU¤@»($P;,@»,(° 
+Ì# )4Ð‚5ì·`¼@Ôo??ÏÈ‹~\ÂGö«ß$,@ÀI¨€L X?,Ðb¡ €
+HA2â T @
+ÀÁzðƒ¤˜@ƒ@ L¡
+=ˆ‚ü@ X¡gøAà†8Ì¡ux èà‡àÁ(‡HÄ"ñˆH¼¡@ÀÄ&:ñ‰PŒ¢§HÅ*ZñŠpˆ·ÈÅ.j1  ;_/http://www.bloglines.com/images/sub_modern1.gifÓ'(O+GIF89a  ð        !ù   ,       L ;_4http://www.webhits.de/cgi/Count.cgi?sh=0&df=1553.datÓ*+OœGIF87a  ò   1A´s‹”´Þœ”½î 1œÍÿs½ÿæöÿ,       ixºÜ^.ÆbT¹8ë\ [HW÷…š@¥r¢Ø*´Ãˆ™6¼r.[n 	èvÁÂjEŒ±€µU ÷+›È(é²¤nx³õ©á¡ªåäí«^C_îìgN¯Ó)A»~Ž?ÄÙ‚ƒ„……ˆˆ	 ;_4http://de.nedstat.net/scripts/nedstat.dll?name=HerbyÔ-./0
+_WebResourceTextEncodingNameUUTF-8O˜Â<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1"><TITLE>Der MÃ¤nnerblog Â» TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde</TITLE>
+
+        <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <META name="generator" content="WordPress 1.5">
+
+        <STYLE type="text/css" media="screen">
+                @import url( http://maennerseiten.de/blog/wp-content/themes/haupt/style.css );
+        </STYLE>
+
+        <LINK rel="stylesheet" type="text/css" media="print" href="http://maennerseiten.de/blog/print.css">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://maennerseiten.de/blog/index.php/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://maennerseiten.de/blog/index.php/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://maennerseiten.de/blog/index.php/feed/atom/">
+
+        <LINK rel="pingback" href="http://maennerseiten.de/blog/xmlrpc.php">
+        <LINK rel="archives" title="June 2005" href="http://maennerseiten.de/blog/index.php/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://maennerseiten.de/blog/index.php/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://maennerseiten.de/blog/index.php/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://maennerseiten.de/blog/index.php/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://maennerseiten.de/blog/index.php/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://maennerseiten.de/blog/index.php/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://maennerseiten.de/blog/index.php/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://maennerseiten.de/blog/index.php/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://maennerseiten.de/blog/index.php/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://maennerseiten.de/blog/index.php/2004/09/">
+        
+        <SCRIPT src="http://maennerseiten.de/blog/wp-admin/quicktags.js" type="text/javascript"></SCRIPT><SCRIPT src="http://maennerseiten.de/blog/wp-content/plugins/comment_quicktags.php" type="text/javascript"></SCRIPT>
+        
+<META name="scripts" content="CITAGEN - Quotegenerator (c) 2001 P. Kerl [www.peterkerl.de]"></HEAD><BODY>
+
+<DIV id="rap"><DIV id="container">
+<DIV id="masthead"><H1 id="header"><A href="http://maennerseiten.de/blog">Der MÃ¤nnerblog</A></H1>
+</DIV>
+
+<DIV id="main"><DIV id="content">
+
+
+        
+<DIV class="post"> <DIV class="trackbackbox2"> || <A href="index.php?PHPSESSID=8764ef302e01f72d4f94dfcc10153a0a">Start</A> || <A href="http://maennerseiten.de/blog/index.php/2005/06/06/google-sitemaps-generator-plugin-fur-wordpress/">Google Sitemaps - Generator-PlugIn fÃ¼r WordPress und Preview-PlugIn</A></DIV><DIV class="clearer">Â </DIV>
+
+         <H3 class="storytitle" id="post-310"><A href="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/" rel="bookmark" title="Permanent Link: TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde">TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde</A></H3>
+        
+        
+        <DIV class="storycontent">                        <DIV class="img-shadow"><IMG src="http://maennerseiten.de/blog/wp-content/maenner-pics/gtdtiddlywiki2.gif" width="218" height="180" alt="Die Evolution eines Wiki-Systems" title="Die Evolution eines Wiki-Systems"></DIV>
+        <P>Ein Wiki-System, das nur aus einer einzigen HTML-Datei besteht? Ein Wiki-System, das man auf dem USB-Stick bei sich trÃ¤gt? Ein Wiki-System fÃ¼r Singles? Moment, lieber der Reihe nach â€¦ Wiki-Systeme an sich sind etwas bekannter geworden durch das Lexikon <A href="http://de.wikipedia.org/wiki/Hauptseite" target="_blank">â€žWikipediaâ€œ</A>. Man hat eine ungefÃ¤hre Vorstellung, dass an und in solchen Systemen viele Autoren gleichzeitig schreiben kÃ¶nnen, dass sich die Angelegenheit meist auf einer Webseite abspielt, dass man Textinhalte leicht verÃ¤ndern und ergÃ¤nzen kann, wenn man eine kleine Syntax lernt ('â€™fett'â€™ ergibt <STRONG>fett </STRONG>usw.) â€“ und dass es inzwischen eine stattliche Anzahl von unterschiedlichen Systemen gibt. In diesem Wikinger-Meer fristete <A href="http://tiddlywiki.com/" target="_blank">TiddlyWiki</A> von Jeremy Ruston als ein System unter vielen sein Dasein. Einige kannten es, manche benutzten es, die meisten Ã¼bersahen es.<BR>
+Bis, ja bis Nathan Bowers kam. Der verpasste dem Design ein neues Outfit und erweiterte die Funktionen so, dass sie ideal fÃ¼r Notiz-Sammlungen, To-Do-Listen, Mini-Projekte, Gliederungsskizzen usw. wurden â€“ und stellte sein <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html" target="_blank">GTDTiddlyWiki</A> der GTD-Gemeinde zur VerfÃ¼gung (Getting Things Done = <A href="http://www.amazon.de/exec/obidos/ASIN/3492240607/herbertsmannerse" target="_blank">Dinge geregelt kriegen</A> â€“ eine in den Staaten sehr bekannte Zeitplan-Philosophie). Diese erkannte umgehend die Vorteile des MicroContent-Managements, befÃ¶rderte es bei Ã¶ffentlichen Bookmarksammlungen wie <A href="http://del.icio.us/" target="_blank">del.icio.us</A> in die Top-Ratings und lÃ¶ste so einen Boom an Weiterentwicklungen aus, der durchaus beachtlich ist (und vor einigen Tagen mit 4 neuen Tagging-Versionen einen neuen HÃ¶hepunkt erreicht hat - siehe unten).<BR>
+Aber was genau begeistert die Leute an dieser Mini-Geschichte? FÃ¼hrt sie wirklich zu einer â€žneuen Art des Schreibensâ€œ, wie manche der Entwickler behaupten? Schauen wir uns die Einzelheiten â€¦ <A id="more-310"></A></P>
+        <P>â€¦  einmal nÃ¤her an. </P>
+        <P><STRONG>1. TiddlyWiki ist fÃ¼r Singles</STRONG><BR>
+Die TiddlyWiki-Systeme sind <EM>eigentlich</EM> (siehe unten) nicht auf Gruppenarbeit angelegt. Sie sollen der persÃ¶nlichen Notizsammlung dienen. Keine Installation. Kein PHP oder MySQL. Kein Server. Eine einzige HTML-Datei wird gespeichert und neu im Browser abgerufen. Fertig. Diese ca. 40 KB groÃŸe Datei enthÃ¤lt das gesamte System samt Content. Ich kann beliebige VerÃ¤nderungen vornehmen, diese Datei auf meinen USB-Stick laden, ins BÃ¼ro mitnehmen, wie ein Notizbuch immer bei mir tragen.<BR>
+Ihnen ist es lieber, wenn Sie ein System online haben, in der Gruppe arbeiten kÃ¶nnen, PasswÃ¶rter benutzen kÃ¶nnen usw.? Kein Problem: Inzwischen haben sich von PHP bis CGI etliche Adaptionen des Originals gebildet, die all das erlauben.</P>
+        <P><STRONG>2. TiddlyWiki denkt in ZusammenhÃ¤ngen</STRONG><BR>
+Beim ersten Test des Systems wird man eine Reihe von Animationen (die man Ã¼brigens abschalten kann) erleben, die die kleinen Tiddlers (= Textpassagen) wild hin und her schieben. Das sieht spaÃŸig aus und man denkt erst mal: Da hat einer zu viel mit Javascript gespielt. Erst auf den zweiten Blick wird klar, was das bedeutet: Man â€žspringtâ€œ nicht mehr von Link zu Link. Ein Klick auf einen Link â€žziehtâ€œ vielmehr die betreffende Textpassage heran und lÃ¤sst andere verschwinden. Oder wenn ich im Suchfeld Buchstaben eintippe, so werden ab dem dritten Buchstaben alle Passagen, in denen diese vorkommen, â€žzusammengezogenâ€œ und untereinander aufgelistet (das Suchwort selbst wird automatisch farblich hervorgehoben).</P>
+        <P><STRONG>3. TiddlyWiki ist einfach â€“ genial</STRONG><BR>
+Okay, ich muss mit der Ã¼blichen Wiki-Syntax arbeiten (plus dem WikiWord-Linksystem, das Vor- und Nachteile hat) â€“ aber die hat man sich in 10 Minuten beigebracht, wenn man sie nicht ohnehin von anderen Systemen her beherrscht (fÃ¼r Firefox gibt es da auch eine Erweiterung fÃ¼r die rechte Maustaste).<BR>
+Wie Ã¼blich genÃ¼gt ein Doppelklick auf einen Textabschnitt und ich bin sofort in dem Editor-Fenster. Aber das gilt eben nicht nur fÃ¼r meine Texte â€“ es gilt auch fÃ¼r die MenÃ¼leiste, fÃ¼r Seitentitel â€“ ja sogar fÃ¼r das Stylesheet (!), mit dem ich das Layout verÃ¤ndern kann. Und Programm-Updates kÃ¶nnen mit einem Handgriff eingepflegt werden. Alles auf der gleichen OberflÃ¤che mit dem gleichen System â€“ das ist schon genial.<BR>
+Automatisch geschieht auch die ErgÃ¤nzung der â€žTimelineâ€œ (eine Art â€žHistoryâ€œ), des Glossars usw.</P>
+        <P><STRONG>4. Und es geht noch besser</STRONG><BR>
+TiddlyWiki ist zwar der Ursprung und der â€žVaterâ€œ aller grundlegenden Weiterentwicklungen, aber wie das bereits erwÃ¤hnte GTDTiddlyWiki gezeigt hat, kann man die Sache noch besser machen. Einen kleinen Quantensprung hat das System aber durch Adaptionen erlebt, die mit der Zuweisung von Tags (= StichwÃ¶rtern) arbeiten und das volle Potential dieser Methode ausreizen. Die beiden neuesten Systeme (es gibt momentan 4) sind <A href="http://informationality.com/gtdtagglywiki/gtd_tagglywiki.html" target="_blank">GTDTagglyWiki</A> und <A href="http://homes.jcu.edu.au/~ccscb/" target="_blank">Simon Bairds Weiterentwicklung</A>, die mir persÃ¶nlich besonders gut gefÃ¤llt. Simon hat nun auch die MÃ¶glichkeit von sortierbaren Tabellen, gruppierten Tags und eine â€žDoneâ€œ-Markierung aufgenommen (die Punkte, die erledigt sind, rÃ¼cken automatisch nach unten in der Liste).</P>
+        <P>Ich denke, es lohnt auf alle FÃ¤lle, sich mal 15 Minuten fÃ¼r einen kleinen Test zu reservieren. Wenn man das System einmal richtig verstanden hat (und zumindest â€žWiki-Erfahreneâ€œ werden das nach ein paar Minuten geschafft haben), wird man schnell die MÃ¶glichkeiten fÃ¼r den eigenen Alltag entdecken.</P>
+        <DIV class="infobox">Zusatztipp:<BR>
+Eine wahrhaft riesige Sammlung von Checklisten und Ordnungstipps fÃ¼r BÃ¼ro, Haushalt und Freizeit ist bei <A href="http://www.lifeorganizers.com/" target="_blank">LifeOrganizers</A> zu finden. </DIV>
+        </DIV>
+
+        <DIV class="meta">6. 6. 2005 - Kategorie: <A href="http://maennerseiten.de/blog/index.php/category/computer/" title="View all posts in    Computer" rel="category tag">   Computer</A>, <A href="http://maennerseiten.de/blog/index.php/category/nutzliches/" title="View all posts in NÃ¼tzliches" rel="category tag">NÃ¼tzliches</A> - <A href="http://maennerseiten.de/blog/wp-print.php?p=310"> drucken</A> -             <RDF:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">              <RDF:DESCRIPTION rdf:about="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/" dc:identifier="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/" dc:title="TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde" trackback:ping="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/trackback/"></RDF:DESCRIPTION></RDF:RDF> <BR> StichwÃ¶rter: <A href="http://maennerseiten.de/blog/index.php/tag/Wiki" rel="tag" title="Search site for Wiki">Wiki</A>, <A href="http://maennerseiten.de/blog/index.php/tag/TiddlyWiki" rel="tag" title="Search site for TiddlyWiki">TiddlyWiki</A>, <A href="http://maennerseiten.de/blog/index.php/tag/Notizen" rel="tag" title="Search site for Notizen">Notizen</A>, <A href="http://maennerseiten.de/blog/index.php/tag/Zeitplanung" rel="tag" title="Search site for Zeitplanung">Zeitplanung</A>  
+
+
+
+</DIV>
+
+
+
+<DIV class="clearer">Â </DIV>
+
+
+        
+
+        
+        
+
+</DIV>
+
+
+
+
+<DIV class="kommentarbox">
+<H2 id="comments">1 Kommentar 
+        <A href="#postcomment" title="Kommentar verfassen">Â»</A>
+</H2>
+
+<OL id="commentlist">
+        <LI id="comment-473">        <DIV class="img-shadow2"><IMG src="http://www.gravatar.com/avatar.php?gravatar_id=d41d8cd98f00b204e9800998ecf8427e&rating=R&size=40" alt="Ein Gravatar-Bild"></DIV>        <P>[â€¦] egen - eine in den Staaten sehr bekannte Zeitplan-Philisophie). â€¦      In dem restlichen Beitrag bietet das MÃƒÂ¤nnerblog noch  [â€¦]
+</P>
+        <P><CITE>Pingback von <A href="http://www.iblogging.de/2005/06/06/tiddlywiki-bricht-alle-download-rekorde/" rel="external nofollow">iBlogging.de Â» TiddlyWiki bricht alle Download-Rekorde</A> â€” 6. 6. 2005  <A href="#comment-473">-</A></CITE> </P>
+        </LI>
+
+
+</OL>
+
+
+<P>
+</P><DIV class="trackbackbox"><A href="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/feed/">RSS-Feed-Link fÃ¼r Kommentare</A> 
+<BR>
+
+
+<A href="http://maennerseiten.de/blog/wp-trackback.php/310">TrackBack-URL</A>
+
+
+</DIV>
+
+<H2 id="postcomment">Kommentar verfassen</H2>
+
+<P>Ihre Mail-Adresse wird nicht Ã¶ffentlich angezeigt (die Homepage-URL - sofern angegeben - aber schon). <BR><A href="http://www.gravatar.com/">Gravatar-Bilder</A> werden angezeigt. </P>
+
+
+<FORM action="http://maennerseiten.de/blog/wp-comments-post.php" method="post" id="commentform"><INPUT type="hidden" name="PHPSESSID" value="8764ef302e01f72d4f94dfcc10153a0a">
+        <P>          <INPUT type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1">
+           <LABEL for="author">Name</LABEL>     <INPUT type="hidden" name="comment_post_ID" value="310">
+        <INPUT type="hidden" name="redirect_to" value="/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/">
+        </P>
+
+        <P>          <INPUT type="text" name="email" id="email" value="" size="28" tabindex="2">
+           <LABEL for="email">E-mail</LABEL>     </P>
+
+        <P>          <INPUT type="text" name="url" id="url" value="" size="28" tabindex="3">
+           <LABEL for="url"><ACRONYM title="Uniform Resource Identifier">URI</ACRONYM></LABEL>
+        </P>
+
+
+
+        <P>          <LABEL for="comment">Ihr Kommentar:</LABEL>
+        <BR>
+          <SCRIPT type="text/javascript">edToolbar();</SCRIPT></P><DIV id="ed_toolbar"><INPUT type="button" id="ed_strong" accesskey="b" class="ed_button" onclick="edInsertTag(edCanvas, 0);" value="fett"><INPUT type="button" id="ed_em" accesskey="i" class="ed_button" onclick="edInsertTag(edCanvas, 1);" value="kurs"><INPUT type="button" id="ed_link" accesskey="a" class="ed_button" onclick="edInsertLink(edCanvas, 2);" value="Link"><INPUT type="button" id="ed_block" accesskey="q" class="ed_button" onclick="edInsertTag(edCanvas, 3);" value="Zitat"><INPUT type="button" id="ed_pre" accesskey="c" class="ed_button" onclick="edInsertTag(edCanvas, 4);" value="Code"><INPUT type="button" id="ed_strike" accesskey="s" class="ed_button" onclick="edInsertTag(edCanvas, 5);" value="durchstr."><INPUT type="button" id="ed_close" class="ed_button" onclick="edCloseAllTags();" title="Close all open tags" value="</>"><SELECT id="ed_char" onchange="edInsertChar(this.value);" title=""><OPTION value="0" selected="selected">char</OPTION><OPTION value="&nbsp;">Â </OPTION><OPTION value="&trade;">â„¢</OPTION><OPTION value="&copy;">Â©</OPTION><OPTION value="&times;">Ã—</OPTION><OPTION value="&#188;">Â¼</OPTION><OPTION value="&#189;">Â½</OPTION><OPTION value="&#190;">Â¾</OPTION><OPTION value="&euro;">â‚¬</OPTION><OPTION value="&times;">Ã—</OPTION><OPTION value="&deg;">Â°</OPTION><OPTION value="&#178;">Â²</OPTION><OPTION value="&#179;">Â³</OPTION><OPTION value="&agrave;">Ã </OPTION><OPTION value="&aacute;">Ã¡</OPTION><OPTION value="&egrave;">Ã¨</OPTION><OPTION value="&eacute;">Ã©</OPTION><OPTION value="&igrave;">Ã¬</OPTION><OPTION value="&iacute;">Ã­</OPTION><OPTION value="&ograve;">Ã²</OPTION><OPTION value="&oacute;">Ã³</OPTION><OPTION value="&ugrave;">Ã¹</OPTION><OPTION value="&uacute;">Ãº</OPTION><OPTION value="&Agrave;">Ã€</OPTION><OPTION value="&Aacute;">Ã</OPTION><OPTION value="&Egrave;">Ãˆ</OPTION><OPTION value="&Eacute;">Ã‰</OPTION><OPTION value="&Igrave;">ÃŒ</OPTION><OPTION value="&Iacute;">Ã</OPTION><OPTION value="&Ograve;">Ã’</OPTION><OPTION value="&Oacute;">Ã“</OPTION><OPTION value="&Ugrave;">Ã™</OPTION><OPTION value="&Uacute;">Ãš</OPTION><OPTION value="&ccedil;">Ã§</OPTION><OPTION value="&Ccedil;">Ã‡</OPTION></SELECT></DIV><TEXTAREA name="comment" id="comment" cols="40" rows="4" tabindex="4"></TEXTAREA><SCRIPT type="text/javascript">var edCanvas = document.getElementById('comment');</SCRIPT>
+        <P></P>
+
+        <INPUT type="hidden" name="ts_random" value="237954774">
+        <P>        <IMG src="http://maennerseiten.de/blog/wp-content/plugins/trencaspammers.php?ts_random=237954774">
+        </P>
+        <P>        <INPUT type="text" name="ts_code" id="ts_code" size="8" tabindex="5">
+        <LABEL for="ts_code">Wegen Spam: Bitte Ziffer eingeben.</LABEL>
+        </P>
+        <P>          <INPUT name="submit" id="submit" type="submit" tabindex="5" value="abschicken">
+        </P>
+<P>        <INPUT type="checkbox" name="subscribe" id="subscribe" value="subscribe">
+        <CITE><LABEL for="subscribe">Benachrichtigung bei Antworten (bitte E-Mail oben eintragen)</LABEL></CITE>
+        </P>
+</FORM>
+</DIV>
+
+
+<DIV class="trackbackbox2"> ---
+</DIV>
+</DIV>
+
+
+
+<DIV id="menu">
+
+
+
+<DIV id="navcontainer"><UL id="navlist">
+        <LI><A href="http://maennerseiten.de/blog/" title="Bloganfang">Startseite</A></LI>
+        <LI><A href="http://maennerseiten.de/diskussion2/" title="Diskutiert mit anderen!">Forum</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/ueber-den-blog-und-mich/" title="Ein paar Worte zu meiner Person">Der Blog und ich</A></LI>
+        
+        
+
+</UL> 
+<UL id="navlist2">        <LI><A href="http://maennerseiten.de/" title="Die eigentliche Site">&lt; MÃ¤nnerseiten</A></LI>
+        <LI><A href="http://maennerseiten.de/harry_potter/harry_potter.htm" title="Rund um Harry Potter">&lt; Harry Potter</A></LI>
+        <LI><A href="http://medienmami.de/" title="FÃ¼r mediengeplagte Eltern">&lt; Medienmami</A></LI>
+
+</UL>
+<UL id="navlist">        <LI><A href="http://maennerseiten.de/blog/wp-mobile.php" title="Fr Handy, Palm">Textversion</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/pdf/wp2pdf.php" title="Eine Datei wird erzeugt">PDF erzeugen</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/#4rss" title="?er Neuigkeiten informieren lassen">News-Feeds <SPAN style="background:#FE6600"><FONT color="#FFFFFF"><B>Â RSSÂ </B></FONT></SPAN></A></LI>
+<LI><A href="http://maennerseiten.de/brief1.htm" title="Mail-Formular">Kontakt</A></LI>
+
+
+</UL>
+</DIV>
+
+
+
+
+
+
+
+<UL> 
+<UL><LI>                
+Die Top Artikel:</LI>
+
+
+
+<LI><A href="http://maennerseiten.de/blog/index.php/2005/03/10/spuelbecken1/" rel="bookmark" title="Permanent Link: Zeig mir Dein SpÃ¼lbecken">Zeig mir Dein SpÃ¼lbecken</A>
+
+</LI>
+
+
+<LI><A href="http://maennerseiten.de/blog/index.php/2004/10/21/schwing-die-hufen/" rel="bookmark" title="Permanent Link: Schwing die Hufen!">Schwing die Hufen!</A>
+
+</LI>
+
+
+<LI><A href="http://maennerseiten.de/blog/index.php/2004/10/29/pladoyer-fur-das-glaserne-ebook/" rel="bookmark" title="Permanent Link: Rainer Maria Rilke und das glÃ¤serne Buch">Rainer Maria Rilke und das glÃ¤serne Buch</A>
+
+</LI>
+
+
+<LI><A href="http://maennerseiten.de/blog/index.php/2005/03/06/nass-rasur2/" rel="bookmark" title="Permanent Link: MÃ¤nnliche Vibrationen - Teil 2">MÃ¤nnliche Vibrationen - Teil 2</A>
+
+</LI>
+
+
+<LI><A href="http://maennerseiten.de/blog/index.php/2004/12/09/frauen-fragen-manner-antworten/" rel="bookmark" title="Permanent Link: Frauen fragen - MÃ¤nner antworten">Frauen fragen - MÃ¤nner antworten</A>
+
+</LI>
+
+
+
+</UL>
+
+
+
+
+<DIV class="box">Fotoblog des Monats
+<A href="http://www.zoomvienna.com/" target="_blank"><IMG src="http://maennerseiten.de/blog/fotoblog-wien.jpg" titel="Der Fotoblog des Monats" width="140" height="107" border="0"></A>
+<DIV class="boxklein">Tom zeigt in <A href="http://www.zoomvienna.com/" target="_blank">Zoom Vienna</A>, wie wunderbar man die Einzelheiten einer Stadt einfangen kann.
+</DIV>
+</DIV>
+
+<UL>
+<UL>
+ <LI id="neueposts">Neue Kommentare <P>  
+ </P></LI><LI><STRONG>iBlogging.de Â» TiddlyWiki bricht alle Download-Rekorde:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/#comment-473" title="View the entire comment by iBlogging.de Â» TiddlyWiki bricht alle Download-Rekorde">[...] egen - eine in den Staaten sehr bekannte</A></LI><LI><STRONG>sams weblog  Â» Blog Archive   Â» Google Sitemaps: Plugin fÃƒÂ¼r WordPress:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/06/google-sitemaps-generator-plugin-fur-wordpress/#comment-471" title="View the entire comment by sams weblog  Â» Blog Archive   Â» Google Sitemaps: Plugin fÃƒÂ¼r WordPress">[...] man ebenfalls auf dieser Website.      Also, heute Abend</A></LI><LI><STRONG>Herbert:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/#comment-470" title="View the entire comment by Herbert">Bei Dir geht er bis zum Knie? Das hat</A></LI><LI><STRONG>kho:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/#comment-469" title="View the entire comment by kho">Das hast du wirklich schÃ¶n geschrieben:-)!
+
+Vor allem, wenn man</A></LI><LI><STRONG>Thomas Fuegner:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/#comment-468" title="View the entire comment by Thomas Fuegner">1a geschrieben.
+MuÃŸ ich verlinken, 
+DANKE</A></LI><LI><STRONG>Thomas Fuegner:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/05/26/towel-day/#comment-467" title="View the entire comment by Thomas Fuegner">Jau.
+NÃ¤chstes Jahr bin ich dabei.
+Bitte vorher noch dran erinnern!
+Danke
+TF</A></LI><LI><STRONG>David:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/#comment-466" title="View the entire comment by David">Ich habe die Sennheiser MX200. Wirklich astreiner Sound. Die</A></LI><LI><STRONG>Ralf Eichler:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/#comment-465" title="View the entire comment by Ralf Eichler">Man steckt einen MP3-Player doch nicht einfach in die</A></LI><LI><STRONG>Thomas Fuegner:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2004/09/19/killing-blogs-der-erste-thriller-rund-um-einen-weblog/#comment-464" title="View the entire comment by Thomas Fuegner">Klasse Idee!
+Mach weiter!
+Einfach klein anfangen, gut machen, besser werden</A></LI><LI><STRONG>Herbert:</STRONG> <A href="http://maennerseiten.de/blog/index.php/2005/06/01/winamp-usb-plug-in/#comment-462" title="View the entire comment by Herbert">Okay, das ist nachvollziehbar. Werde mal sehen, wie ich</A></LI>
+</UL>
+
+<UL> <LI id="neueposts">Neue Postings</LI><LI><A href="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/" rel="bookmark" title="Permanent Link: TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde">TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde</A></LI><LI><A href="http://maennerseiten.de/blog/index.php/2005/06/06/google-sitemaps-generator-plugin-fur-wordpress/" rel="bookmark" title="Permanent Link: Google Sitemaps - Generator-PlugIn fÃ¼r WordPress und Preview-PlugIn">Google Sitemaps - Generator-PlugIn fÃ¼r WordPress und Preview-PlugIn</A></LI><LI><A href="http://maennerseiten.de/blog/index.php/2005/06/05/dark-start-bombe-entschaerfen/" rel="bookmark" title="Permanent Link: Philosophische BombenentschÃ¤rfung">Philosophische BombenentschÃ¤rfung</A></LI><LI><A href="http://maennerseiten.de/blog/index.php/2005/06/03/sennheiser-zu-kurz/" rel="bookmark" title="Permanent Link: Sennheiser fÃ¼r KleinwÃ¼chsige">Sennheiser fÃ¼r KleinwÃ¼chsige</A></LI><LI><A href="http://maennerseiten.de/blog/index.php/2005/06/01/winamp-usb-plug-in/" rel="bookmark" title="Permanent Link: Podcast: Winamp-PlugIn fÃ¼r den USB-Player">Podcast: Winamp-PlugIn fÃ¼r den USB-Player</A></LI>
+
+</UL>
+<A name="4rss"></A>
+<UL><SPAN style="background:#FE6600"><FONT color="#FFFFFF"><B> 
+Â RSSÂ </B></FONT></SPAN>
+<LI>Sie kÃ¶nnen sich jeweils Ã¼ber neue BeitrÃ¤ge im MÃ¤nnerblog via RSS informieren lassen (z. B. durch ein zusÃ¤tzliches Programm oder direkt im Firefox-Browser). Falls Sie nicht genau wissen, was RSS ist, hilft Ihnen <A href="http://www.m-e-x.de/blog/archive/000483.html" target="_blank" title="leichtverstÃ¤ndliche EinfÃ¼hrung">dieser Artikel </A>weiter.</LI>
+                <LI><A href="http://maennerseiten.de/blog/index.php/feed/" title="vollstÃ¤ndige Artikel mit Bildern">1. RSS 2.0 = vollstÃ¤ndige Artikel</A></LI>
+                <LI><A href="http://maennerseiten.de/blog/wp-rdf.php" title="gekÃ¼rzte Artikel ohne Bilder">2. RSS 0.92 = nur erste Zeilen</A></LI>
+                <LI><A href="http://maennerseiten.de/blog/wp-atom.php" title="vollstÃ¤ndige Artikel mit Bildern">3. Atom 0.3 = vollstÃ¤ndige Artikel</A></LI>
+                <LI><A href="http://maennerseiten.de/blog/index.php/comments/feed/" title="Die letzten Kommentare fÃ¼r alle Artikel">4. Kommentare in <ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A></LI>
+<LI><A href="http://feeds.feedburner.com/Maennerblog" title="Feedburner">5. Feedburner RSS (Username: "aaa", Passw.: "bbb"</A></LI>
+<LI><A href="http://maennerseiten.de/blog/index.php/category/podcast/feed/" title="Podcasting">6. Podcasting RSS </A></LI>
+<LI><BR>Â 
+Freeware-Tipp:<BR>
+Ein empfehlenswerter kostenloser Newsreader ist <A href="http://www.activerefresh.com/abilon/" target="_blank">"Abilon"</A>. 
+</LI>
+
+</UL>
+
+
+
+</UL>
+
+
+
+
+
+</UL></DIV>
+
+<DIV class="clearer">Â </DIV>
+
+
+</DIV>
+
+<DIV id="rmenu">
+
+
+
+
+<UL><LI id="Search">
+   <LABEL for="s"></LABEL>
+   <FORM id="searchform" method="get" action="/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/"><INPUT type="hidden" name="PHPSESSID" value="8764ef302e01f72d4f94dfcc10153a0a">
+        <DIV>                <INPUT type="text" name="s" id="s" size="15"><BR>
+                <INPUT type="submit" name="submit" value="suchen">
+        </DIV>
+        </FORM>
+ </LI>
+
+
+<DIV id="navcontainerre"><UL id="navlistre">
+        <LI><A href="#archive" title="frÃ¼here Artikel">Monatsarchive</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/tagging4/" title="Stichwort-Ranking">Tagging</A></LI>
+        <LI><A href="#blogs" title="Weblog-Empfehlungen">andere Blogs</A></LI>
+        
+
+
+</UL>
+</DIV>
+
+
+
+
+
+
+
+ <LI id="categories">Kategorien:       <UL>                <LI><A href="http://maennerseiten.de/blog/index.php/category/einfach-so/" title="Was in die Gedanken purzelt â€¦">Einfach so â€¦</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/funny-hanni/" title="Was es nicht alles im Netz gibt â€¦">Funny-Hanni</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/erotik/" title="â€¦ aber bitte mit Niveau!">Erotik</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/blogging/" title="Weblogs, Blogs, Blogger und das DrumRum â€¦">Blogging</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/computer/" title="Was uns sÃ¼chtig macht â€¦">   Computer</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/killing-blogs/" title="â€œKilling Blogsâ€ - Der erste Thriller rund um einen Weblog">Killing Blogs</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/flirt/" title="Wir MÃ¤nner sind immer auf der Jagd!">Flirt</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/politik/" title="unvermeidlich">Politik</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/design/" title="Rund um die schÃ¶nen Dinge des Lebens â€¦">Design</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/firefox/" title="Tipps und Tricks zum Firefox-Browser"> Firefox</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/top-artikel/" title="Diese Postings gefallen den Lesern besonders gut.">Top Artikel</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/nutzliches/" title="Tipps, die uns im Alltag weiter bringen!">NÃ¼tzliches</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/podcast/" title="Audio-Dateien fÃ¼r das Podcasting
+RSS-Feed-URL = unter den anderen Feeds aufgelistet">Podcast</A>
+</LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/category/hommingberger-gepardenforelle/" title="View all posts filed under Hommingberger Gepardenforelle">Hommingberger Gepardenforelle</A>
+</LI>
+        
+        </UL>
+ </LI>
+
+
+
+<LI id="categories"><UL>
+
+Zufallszitat:
+<LI>
+<I>Die Demokratie garantiert, daÃŸ wir nicht besser regiert werden, als wir es verdienen.</I>
+</LI>
+
+</UL>
+</LI>
+<BR>
+
+
+<DIV align="left"><A href="http://maennerseiten.de/blog/index.php?p=62"><IMG src="http://maennerseiten.de/blog/blog-buch3.gif" title="Online-Story" width="132" height="106" border="0"></A></DIV>
+
+<A name="archive"></A>
+ <LI id="calendar">       <TABLE id="wp-calendar">    <CAPTION>June 2005</CAPTION>
+    <THEAD><TR><TH abbr="Monday" scope="col" title="Monday">M</TH><TH abbr="Tuesday" scope="col" title="Tuesday">T</TH><TH abbr="Wednesday" scope="col" title="Wednesday">W</TH><TH abbr="Thursday" scope="col" title="Thursday">T</TH><TH abbr="Friday" scope="col" title="Friday">F</TH><TH abbr="Saturday" scope="col" title="Saturday">S</TH><TH abbr="Sunday" scope="col" title="Sunday">S</TH></TR></THEAD>
+
+    <TFOOT><TR><TD abbr="May" colspan="3" id="prev"><A href="http://maennerseiten.de/blog/index.php/2005/05/" title="View posts for May 2005">Â« May</A></TD><TD class="pad">Â </TD><TD colspan="3" id="next" class="pad">Â </TD></TR></TFOOT>
+
+    <TBODY><TR><TD colspan="2" class="pad">Â </TD><TD><A href="http://maennerseiten.de/blog/index.php/2005/06/01/" title="Podcast: Winamp-PlugIn fÃ¼r den USB-Player">1</A></TD><TD>2</TD><TD><A href="http://maennerseiten.de/blog/index.php/2005/06/03/" title="Sennheiser fÃ¼r KleinwÃ¼chsige">3</A></TD><TD>4</TD><TD><A href="http://maennerseiten.de/blog/index.php/2005/06/05/" title="Philosophische BombenentschÃ¤rfung">5</A></TD></TR><TR><TD><A href="http://maennerseiten.de/blog/index.php/2005/06/06/" title="Google Sitemaps - Generator-PlugIn fÃ¼r WordPress und Preview-PlugIn
+TiddlyWiki â€“ Ein Wiki-Winzling bricht alle Download-Rekorde">6</A></TD><TD id="today">7</TD><TD>8</TD><TD>9</TD><TD>10</TD><TD>11</TD><TD>12</TD></TR><TR><TD>13</TD><TD>14</TD><TD>15</TD><TD>16</TD><TD>17</TD><TD>18</TD><TD>19</TD></TR><TR><TD>20</TD><TD>21</TD><TD>22</TD><TD>23</TD><TD>24</TD><TD>25</TD><TD>26</TD></TR><TR><TD>27</TD><TD>28</TD><TD>29</TD><TD>30</TD><TD class="pad" colspan="3">Â </TD></TR></TBODY>
+        </TABLE> </LI>
+ <LI id="archives">Archive:       <UL>                <LI><A href="http://maennerseiten.de/blog/index.php/2005/06/" title="June 2005">June 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2005/05/" title="May 2005">May 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2005/04/" title="April 2005">April 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2005/03/" title="March 2005">March 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2005/02/" title="February 2005">February 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2005/01/" title="January 2005">January 2005</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2004/12/" title="December 2004">December 2004</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2004/11/" title="November 2004">November 2004</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2004/10/" title="October 2004">October 2004</A></LI>
+        <LI><A href="http://maennerseiten.de/blog/index.php/2004/09/" title="September 2004">September 2004</A></LI>
+        </UL>
+ </LI>
+<BR>
+<A name="blogs"></A>
+<BR>
+<A href="http://www.bloglines.com/sub/http://maennerseiten.de/blog/wp-rss2.php"><IMG src="http://www.bloglines.com/images/sub_modern1.gif" border="0" alt="abonnieren via Bloglines">
+</A> 
+
+
+
+
+        
+
+        <LI id="linkcat-1">    Freunde
+        <UL><LI><A href="http://allesalltaeglich.de/" target="_blank">Alles allTÃ„GLICH</A></LI>
+<LI><A href="http://beissholz.de/index.php" target="_blank">Beissholz</A></LI>
+<LI><A href="http://cydome.com/de/" target="_blank">Cydome</A></LI>
+<LI><A href="http://www.einfach-persoenlich.de/" title="ausfÃ¼hrliche Artikel" target="_blank">einfach persÃ¶nlich</A></LI>
+<LI><A href="http://jc-log.jmirus.de/index.php" title="live aus KÃ¶ln" target="_blank">JC-Log</A></LI>
+<LI><A href="http://www.journal.kylaloo.net/" title="tolles Design!" target="_blank">Kylaloo</A></LI>
+<LI><A href="http://medienmami.uni-ulm.de/" title="ein Blog fÃ¼r geplagte Eltern">Medienmami</A></LI>
+<LI><A href="http://www.moving-target.de/index" title="... die Frau mit den vielen Blogs" target="_blank">Moving-Target</A></LI>
+<LI><A href="http://www.perun.net/" title="tolle Inhalte - tolles Design!" target="_blank">Perun</A></LI>
+<LI><A href="http://www.the-exit.net/" title="Lesen auf eigene Gefahr" target="_blank">The Exit</A></LI>
+<LI><A href="http://unblogbar.com/" title="prima Design!" target="_blank">unblogbar</A></LI>
+<LI><A href="http://zorra.twoday.net/" target="_blank">zorra im wald</A></LI>
+
+        </UL>
+</LI>
+        <LI id="linkcat-7">  gute Blogs
+        <UL><LI><A href="http://bateman.twoday.net/" target="_blank">Bateman</A></LI>
+<LI><A href="http://www.qxm.de/" target="_blank">esse est</A></LI>
+<LI><A href="http://klog.kfiles.de/" target="_blank">Konrads Weblog</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/" target="_blank">MEX Blog</A></LI>
+<LI><A href="http://www.mynethome.de/index.php" target="_blank">Mynethome</A></LI>
+<LI><A href="http://nelly.blogger.de/" target="_blank">Nelly</A></LI>
+<LI><A href="http://www.nosexinthecity.de/" target="_blank">No SEX in the CITY</A></LI>
+<LI><A href="http://weblog.plasticthinking.org/" target="_blank">Plasticthinking</A></LI>
+<LI><A href="http://www.20six.de/steckschuss/" target="_blank">steckschuss: Der volle Blog</A></LI>
+<LI><A href="http://www.tautoko.com/" target="_blank">tautoko</A></LI>
+<LI><A href="http://www.waking-vision.com/blog/" target="_blank">Telltaleheart</A></LI>
+<LI><A href="http://weblog.yauh.de/" target="_blank">yet another useless homepage</A></LI>
+
+        </UL>
+</LI>
+        <LI id="linkcat-8">frisch dabei
+        <UL><LI><A href="http://interieur.blogger.de/" target="_blank">Interieur</A></LI>
+<LI><A href="http://www.cellopages.org/" target="_blank">Cellopages</A></LI>
+<LI><A href="http://www.alext.de/" target="_blank">Ansichten eines Clowns</A></LI>
+<LI><A href="http://www.x-ploration.de/" target="_blank">Thomas Gigold</A></LI>
+<LI><A href="http://gutes-von-morgen.de/blog/" target="_blank">Gutes</A></LI>
+<LI><A href="http://www.kulturstau.de/" target="_blank">Kulturstau</A></LI>
+<LI><A href="http://www.lostfocus.de/" target="_blank">Lost Focus</A></LI>
+<LI><A href="http://lazerte.de/" target="_blank">Lazerte</A></LI>
+<LI><A href="http://lost-moon.de/index.php" target="_blank">Lost Moon</A></LI>
+<LI><A href="http://crm.blogg.de/" target="_blank">Customer Relationship</A></LI>
+<LI><A href="http://www.das-netzbuch.de/" target="_blank">das Netzbuch</A></LI>
+<LI><A href="http://www.nullserver.net/televisor/index.html" target="_blank">Televisor</A></LI>
+<LI><A href="http://zeitverschwendung.benedikteger.de/" target="_blank">Zeitverschwendung</A></LI>
+<LI><A href="http://www.kahunablog.de/" title="Australien und mehr" target="_blank">KahunaBlog</A></LI>
+<LI><A href="http://myblog.de/hophnung" target="_blank">Hophnung</A></LI>
+<LI><A href="http://bloggingtom.ch/" title="ein Blog aus der Schweiz" target="_blank">Blogging Tom</A></LI>
+<LI><A href="http://xchyl.de/" target="_blank">Xchyl</A></LI>
+<LI><A href="http://www.fuegner.de/Blogg/Seeblick.htm" target="_blank">SeeBlickBlog</A></LI>
+<LI><A href="http://www.zorno.de/tagebuch/" target="_blank">Zorno</A></LI>
+<LI><A href="http://tempa.antville.org/" target="_blank">Tempa</A></LI>
+<LI><A href="http://textundblog.de/" target="_blank">Text und Blog</A></LI>
+<LI><A href="http://revirement.de/weblog/index.php" target="_blank">Blogotronic</A></LI>
+<LI><A href="http://whocares.de/" target="_blank">Who Cares</A></LI>
+<LI><A href="http://www.itst.org/web/" target="_blank">WWWorker</A></LI>
+<LI><A href="http://ideengeberin.de/index.php" target="_blank">Ideengeberin</A></LI>
+<LI><A href="http://sammler.blogg.de/" target="_blank">Litartworld</A></LI>
+<LI><A href="http://www.spassamleben.com/" target="_blank">Spass am Leben</A></LI>
+<LI><A href="http://toaster.michael-timm.de/" target="_blank">Toaster XP</A></LI>
+<LI><A href="http://www.burned.de/wordpress/" target="_blank">Burned</A></LI>
+<LI><A href="http://traumfrau.blog.de/" title="Man achte auf die Kategorie" target="_blank">Traumfrau</A></LI>
+<LI><A href="http://oui-ja.de/" target="_blank">Gwendolyn</A></LI>
+<LI><A href="http://www.blaustrophobie.de/s9y/" target="_blank">Blaustrophobie</A></LI>
+<LI><A href="http://www.schneyra.de/ee/" target="_blank">Schneyry</A></LI>
+<LI><A href="http://www.shopblogger.de/blog/" title="Neues aus dem Supermarkt :-)" target="_blank">Shopblogger</A></LI>
+<LI><A href="http://www.lyssas-lounge.de/peepshow/" target="_blank">Peepshow-Blog</A></LI>
+<LI><A href="http://blog.ulfgermann.de/" target="_blank">Ulf Germann</A></LI>
+<LI><A href="http://joerg.antville.org/">New Joerg Times</A></LI>
+<LI><A href="http://log.netbib.de/">Netbib</A></LI>
+<LI><A href="http://www.finger.zeig.net" target="_blank">Finger.zeig.net</A></LI>
+<LI><A href="http://www.iblogging.de/" target="_blank">iBlogging</A></LI>
+<LI><A href="http://www.anitale.com/" target="_blank">Anitale</A></LI>
+<LI><A href="http://maikdaum.blogspot.com/" target="_blank">MaikDaum</A></LI>
+
+        </UL>
+</LI>
+
+        
+        
+
+
+        
+
+ <LI id="meta">---       <UL>                
+                
+                <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+                <LI><A href="http://wordpress.org/" title="Powered by WordPress; state-of-the-art semantic personal publishing platform.">WP</A></LI>
+        </UL>
+ </LI>
+
+</UL>
+
+</DIV>
+
+
+<DIV class="clearer">Â </DIV>
+<DIV id="footer"><P class="credit"> <CITE>Powered by <A href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><STRONG>WordPress</STRONG></A></CITE></P>
+
+</DIV>
+</DIV>
+</DIV>
+<P align="center"> <IMG src="http://www.webhits.de/cgi/Count.cgi?sh=0&df=1553.dat" vspace="0" hspace="0" border="0"> 
+</P><P align="center"> <A href="http://de.nedstat.net/viewstat.asp?name=Herby"><IMG src="http://de.nedstat.net/scripts/nedstat.dll?name=Herby" width="0" height="0" vspace="0" hspace="0" border="0"></A> 
+
+</P></BODY></HTML>_lhttp://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/        1  =  D  V  e  {  7 A H ?Ì @ @ @# BŒ BÔ BÛ hA h‹ h• hœ hÊ i- i4 r‹ rä rï rö   Q X °F °t °{ ·Ê ·ü ¸ ¸1 ¸h ¸o ¹ ¹E ¹N ¹l ¹rR8             1             R§

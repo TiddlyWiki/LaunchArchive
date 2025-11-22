@@ -1,0 +1,745 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOábody {
+    margin:0px 0px 10px 0px;
+    background:#fff;
+    font-family: verdana, arial, sans-serif;
+    }
+  A {
+    color: #993300; font-family: verdana, arial, sans-serif;
+    font-size:12px;
+    text-decoration: none;
+
+    }
+  A:link {
+    color: #993300; font-family: verdana, arial, sans-serif;
+    font-size:12px;
+    text-decoration: none;
+
+    }
+  A:visited {
+    color: #993300; font-family: verdana, arial, sans-serif;
+    font-size:12px;
+    text-decoration: none;
+    f
+    }
+  A:active {
+    color: #993300; font-family: verdana, arial, sans-serif;
+    font-size:12px;
+    text-decoration: none;
+
+    }
+img{
+    border:0px;
+}
+  A:hover {
+    color: #ff9900; font-family: verdana, arial, sans-serif;
+    font-size:12px;
+    text-decoration: underline;
+
+    }
+  #cet {
+  	background: url(http://goa.cet.middlebury.edu/maneblog/hdr_bg.gif);
+  	width:100%;
+  	height:70px;
+  }
+
+  #banner {
+    font-family:verdana, arial, sans-serif;
+    color:#FFF;
+    font-size:20px;
+    font-weight:normal;
+    border-bottom:1px dotted #000000;
+    border-top:3px solid #ffffff;
+    padding:15px;
+
+    }
+  .description {
+    font-family:palatino,  georgia, times new roman, serif;
+    color:#333;
+    font-size:small;
+    text-transform:none;	
+    font-family:verdana, arial, sans-serif;
+    }
+  #content {
+    width:500px;
+    height:100%;
+    border-right:1px dotted #999;
+    padding-bottom:20px;
+    float:left;
+    
+    }
+  #links {
+    width:175px;
+    margin-left:525px;
+    padding-right:15px;
+    padding-left:15px;
+    padding-top:15px;
+    }
+  .blog {
+    padding-left:15px;
+    padding-top:15px;
+    padding-right:15px;
+    }
+  .blogbody {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:12px;
+    font-weight:normal;
+    line-height:15px;
+    padding-left:20px;
+    padding-right:10px;
+    padding-top:10px;
+    }
+  .title  {
+    font-family: verdana, arial;
+    font-size: 15px;
+    color: #002E57;
+
+    }
+  .footer {
+    font-family:verdana, arial, sans-serif;
+    color:#333;
+    font-size:11px;
+    font-weight:normal;
+    line-height:11px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    border-top:1px dotted #999;
+    text-align:center;
+    }
+  #menu {
+    margin-bottom:15px;
+    }
+  .date  {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:10px;
+    font-weight:bold;
+    text-align:center;
+    background:#EEE;
+    line-height:14px;
+    padding:2px;
+    margin-top:10px;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+    }
+  .posted  {
+    font-family:verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #003366;
+    margin-bottom:15px;
+    }
+  .side {
+    font-family:verdana, arial, sans-serif;
+    color:#333;
+    font-size:11px;
+    font-weight:normal;
+    line-height:14px;
+    text-align:center;
+    padding:2px;
+    width:200px;
+    }
+  .sidetitle {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:10px;
+    font-weight:bold;
+    background:#EEE;
+    line-height:14px;
+    padding:2px;
+    margin-top:10px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+    width:200px;
+    
+    }
+  .dlHeader{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding:4px;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+    }
+  .dlCountReadsTitle, .dlSubjectTitle, .dlCountMessagesTitle, .dlPostedTitle, .dlMessageLinkTitle, .dlAuthorTitle
+    {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color:#333;
+    padding:4px;
+    }
+  .dlSubject, .dlCountMessages, .dlPosted, .dlCountReads, .dlAuthor, .dlMessageLink
+    {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding:4px;
+    }
+  .discussHeader {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:11px;
+    font-weight:normal;
+    line-height:11px;
+    }
+  .discussResponceList {
+    font-family:verdana, arial, sans-serif;
+    color:#333;
+    font-size:11px;
+    font-weight:normal;
+    line-height:11px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    margin-top:10px;
+    border-top:1px dotted #999;
+    }
+  .hCalendarMonthYearRow, .dCalendarMonthYearRow
+    {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:10px;
+    font-weight:bold;
+    line-height:14px;
+    padding:2px;
+    }
+  .hCalendarDayNameRow, .dCalendarDayNameRow
+    {
+    color:#666;
+    font-family:verdana, arial, sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    line-height:14px;
+    padding:2px;
+    }
+  .hCalendarDayRow, .dCalendarDayRow
+    {
+    color:#666;
+    font-family:verdana, arial, sans-serif;
+    font-size:10px;
+    font-weight:normal;
+    line-height:14px;
+    padding:2px;
+    }
+  .hCalendarDayLinked, .dCalendarDayLinked
+    {
+    color:#666;
+    background-color: #EEEEEE;
+    font-family:verdana, arial, sans-serif;
+    font-size:10px;
+    font-weight:normal;
+    line-height:14px;
+    padding:2px;
+    }
+  .hCalendarDayCurrent, .dCalendarDayCurrent
+    {
+    color: #FFFFFF;
+    background-color: #DCDCDC;
+    font-family:verdana, arial, sans-serif;
+    font-size:10px;
+    font-weight:normal;
+    line-height:14px;
+    padding:2px;   
+    }
+  td {
+    font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:13px;
+    font-weight:normal;
+    line-height:15px;
+    }
+
+
+
+
+
+	
+	
+	
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	
+
+	#container {
+		border:1px solid #FFF;		
+	}
+		
+		
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		line-height:140%;
+  		padding:2px;
+                text-align:left;
+		}
+	
+	.calendarhead {	
+		font-family:verdana, arial, sans-serif;
+    color:#000000;
+    font-size:10px;
+    font-weight:bold;
+    background:#EEE;
+    line-height:14px;
+    padding:2px;
+    margin-top:10px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+        }	
+	
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:xx-small;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:15px;
+  		background:#FFF;		
+		}	
+		
+	.powered {
+		font-family:palatino, georgia, times new roman, serif;
+		color:#666;
+		font-size:x-small;		
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:50px;
+		letter-spacing: .2em;					
+  		background:#FFF;		
+		}	
+		
+	
+	.comments-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+			
+	
+	.trackback-url {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding:5px;		
+ 		border:1px dotted #999; 					
+		}
+
+
+	.trackback-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+
+		
+	.comments-head	{ 
+		font-family:palatino, georgia, verdana, arial, sans-serif; 
+		font-size:small; 
+		color: #666; 
+		border-bottom:1px solid #999;
+		margin-top:20px;
+		font-weight:bold;
+  		background:#FFF;		
+		}		
+
+	#banner-commentspop {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color: #003366;
+		font-size:large;
+		font-weight:bold;
+		border-left:1px solid #FFF;	
+		border-right:1px solid #FFF;  		
+		border-top:1px solid #FFF;  		
+  		background:url(http://goa.cet.middlebury.edu/maneblog/hdr_bg.gif);
+  		padding-left:15px;
+  		padding-right:15px;
+  		padding-top:5px;
+  		padding-bottom:5px;  		  		  			       
+              
+		}_+http://blogs.nitle.org/mane/styles-site.cssXtext/cssÓOJGIF89aËF ÷ÿ ©¹Æèìğq‹¢ÕİãÔÜã¤¶ÂÍ×‚™­ĞØàë•JŠŸ²y‘§ôÃ™u¤'NqËÔİé‹9æëï ±À°¾ËÄÏØ	5]øÜÃşùõÊÔáç‚*›­½1ZúâÎ§·Åm‡Ÿ÷Ò³Eg„ÈÒÛğóõ„š®WuXv‘·ÄÑÚáçÆĞÙ]z”š¬¼õÉ¢ë“Gòº‰Bdƒ²ÀÌ9`ıõí)PrìšRæ}"`}–@búäÒHi†Zx“ñ³} .W¯½Ê£µúûü.TuºÆÒf‚šµÂÎGkûüü8\|üíáêïó>a€í£bBgøÙ¾ñôöï©l˜«»KkˆûéÙ7[{0Uw Hl+Qs÷×ºğ±y=cNnŠ0X$Loò¼}”©b~˜@eÿıûıöğúæÕ>dè†0QpŒíZó¿’õÍ©şûùüòèè„-ñ¸…çìòùßÈ¤·Íí ^ûìŞé‰6ûêÛÚâë®½Ğç€&”¨ÃìœV¥Àñµ‚æ{åêîòôö2WxŠ ¼Î×ßáæëıış5Yz÷øú#Kn¼ÈÓk†äéí–«ùúûRqüııßåêïòôešj…¿ËÕ­¼Éöøùàæë4\øùú8_Üâèôöø¤´Ã¥µÄîñôóõ÷o‰ õ÷øãèí¾ÊÔ¢´/X;b“¦¸<_€—«İãéÌÕİíğó¬»ÈDinˆŸd€™¹ÆÑFj3XyTsÑÙáÏØß;^~Ùàæt£=`{“¨«ºÈÓÛâŸ°Ài„œ×Şå4Yy•¨¹Şäé_|–Sr‹ ³—ªºMmŠUt½ÉÔ™«¼ÀËÕ>d"JmGh†ëïòêîñÍÖŞ”§¹ChLl‰¯¾v¥sŒ£Ei–©º¶ÃÏ9]}hƒœŒ¡³¸ÅĞ…›¯ˆ±âçì~•ª£´Âë—Oéíñÿşıæ|î¦h÷Õ·öÑ±ºÇØHf„¤¿ïòööĞ¯ŠŸ¼ÅÑßê@ï¬pışşñ´üñæÀÌÛÁÍÜ¯ÇÏÙäíñõÂĞßy¤¥¿ûè×³ÁÍÿÿÿ!ù  ÿ ,    ËF  ÿ ÿ	H° Áƒ*\È°¡Ã‡#JœH±¢Å‹3jÜÈ±£Ç CŠI²¤É“(Sª\É²¥Ë—0cÊœI³¦Í›8sêÜÉ³§ÏŸ@ƒ
+J´¨Ñ£H“*]Ê´©Ó§P£JJµªÕ«X³jİÊµ«×¯`ÃŠK¶¬Ù³hÓª]‹3„”KlãÊK·.LFZ,M²Ë·¯ß¿,'u*‘£°áÃ†…)b)‘ÁbÎal†Œz8jåmoÁE ”ÀEa ˆ‘¶!
+ğo…­"¡ÈQ"LjD°Ñ4m5~íÈ)„*Rüã¤áÀĞ£KçKk‡õëØ³[3ÕË‡ÀEEÿğ]€BNÚ`9°Í¥k7=‰VM€—ı›kÈíoTWÁÖñ24Ël… Hô‘É@@h‘"±dq…*…#…Ö%³,Öy×t$–hbX0d§¢uZLÃ‰@›@…‘ŞäL6Ö$3Ğ”ì ‰@L 1Å	1âË­üãC%ÏÀ ƒ6JcÀ‡`	ùpÂ–è"	DdÀ¤I¼ğO" 3Ê8€E(ÙôáØ‰|öégT)®xİ43*şípÅQsc‚%²ä¨!5°Ciõ¢ÌÓùÊ¾ÌRP,;p1PÊÀà™@|8ÿ …$…²C4§DˆZp#P#!ü)ì°Ä¨ £DBP7ÙE#AŸ,óèA/ì„AD<Á?T`CAD±ƒ ¤Å½ôË9´˜Œ¤É„%;P£+ˆş4´xÅ,ğÀ(«â*Œd«Š€0 $z‘°(
+u°Ãÿœ2 ‚P4b.%¹”É$¸/AÒìpJ H`!Et¡Ê¶ÿÑÇÅ˜á¢È³môÑŒİ$D‚FMqA"P!³B¬ìp3TP„*À¤%#´r	.[¯@‰È°ƒ0E8ÅˆPÏ@+$É/œÿ Ò€.8BJ[wEÓmâvÔRC:Ğ8SPòB9ì ‚é&4vÙöÚÿ s.°†Ş+$-&îúëHE-Ì¸ S4!;(—På¡0´¹Aô®ÚÂ°AØ
+¡¾ĞæÁ.ıôÅ}âÒŞ»ã¿ºí„BÁ°,<ÙÄï€¶ñ/ÿ*íÍÿœ:B{ØÀÊ&S€7ŸüSK0ÑÔ  ç¢4*Ğ ÓĞ^ãj´ƒo%¤ ;Ï4G	$©Ì|Ÿ#v‚…8/!(XÅ#ğà±pÁ'
+ ƒxƒ\ gx¥=¨ .Pàö2/P¤L'H.ÿ"‰=9`(ßùşqˆ+À `8UI€oITHÅd ¢øD"\@‹cĞğŒhDvŠĞºÔ_:TQîBì NpÜ1\ğ7ì@ŞĞÏ@PáäˆØ(ßVu ş#n[ÿb<áEDÄ”•Oü€Q‚€@.±g¤â
+J£*W‰ƒ‰² =ˆãŠæHFˆ‹T0…-l°
+bÀê	Ö‘B.má%lã/Å}\p	Ä(Á(q€P É;p 2vñˆnüã£¢¸€mü@
+Á:†7” µh¢LyÀ"0ë!x…$.±ÿJ±òŸ }Ê±¬1œ‚Ô@–*²ÁÂ‡H@”B+,(Là¢ØÁ–Á‹ÌA£€!‚ğÈ" +Ñ…güRØAĞ…,^¢ì¼cºq™d"!}DºÁ=A
+ÿ@Á2Hø4É(W@§JU£ËaBLuhuìC/È…)±P„`8Â‰K =­È"Ğ»d½è…'²‹(ü£JR/@P‹xA‘ªK$ÑÆ•$U¬U¯ª‚ £p*Ê‚ráŒœ<#Æ-L×o(B 
+ø)¨¸aÔk' ) 5˜‘ƒ²ÿ„¿à‚4°×“èâà(&(ÙâåX™#È´'…~	„sÈ‡MHA†%íàq"2	Ğ
+(•¨F,Ø)ˆ¢–ÆğÖš’iá;xvKßŸj¤Èn×
+»ú xğƒØp“¤h¾©D&)‘?H€70Æ¢`^“¨bZè-J–;„‚Ö÷Ã:	-IGÍñüÀb?¼ã&ğ‚3âŠILãza‚ÛWŒ«Â%Y.!4|@DĞÃ NrM%ŒƒDâÄ±G‹Y\†|!%{1GjbTÂ"uÜAIarŒ·DÈD6‰‘;¬ä6Ó$ÿP§5ˆ‰UÔİ­cÊ~À AÂqÌàÏfAş±… zwø H²|İ|ù!D0”A0‘_—ÂÌ	Á?‚f–¬Én5K˜|¬¨ˆ	ğì‡9¤cĞƒ¬g­\àâ µ¬ëpƒ0zÆ*i oréò&dÒ€FH:½’O‹úÙ£¶ò€Ì:W "p‹ñ€yüVĞõ¬iĞ†¤!âÖƒ¢=òë–h`©ÌI±¬bÙ;²§í~Ì:QÀ„A&1Šì€  ø˜² ° İ²n@n ñu'äğ 5€ĞX‚ÈB`.^PiE ÿàÁ4ğœèbáèF(=TìB °…+ŠêHtƒ(À'PÄ¢!Ác	Èæ ûÃ¹)’°EÈâ8€Ê”
+	4 ŞĞB€qãNpÁG™7B`[È"²€ì?|Ó	( °DŒDÆö
+¤ÓœĞ5ªq€„ıÕ †-|‚` 8ÔPw. `qv'° V°b †Ñ4êîWè‚ XÀd€è"ÈQ(ğ‡<şNr ¼ ìå;‰$ÈŠıÀw”éf@7Äïpœ¡â	i„"Vá\H+#v ƒ xã}p@ÿÑ› $À¢èÈ"ñƒ¢/Ã®qÂ2|Á…ix ÌÈo!J±A”"ET0”dìô
+O  ĞàR$<F"à`Ô@E‡HÂ	]ĞEW
+˜@
+^Ê³–‘
+¼°2`S S42jgŒ`øâ 8€†@sÇ@ÙĞÒ4
+È`Ø 2@Ó@¢ ¾óËå ƒ  «°#XÊö® ¼³0	Ì G8ğ"Á†0 W`9L%š7B ´À
+†S^poÁàŞ÷1
+JÖğ%à–°
+.P”· –à qÿ–{õu,ïS+Øñ$Ö3÷àn@`ÿp3 q²p0k }‘8°
+¾Óv„ÂÕ
+˜$Ö
+;~‘@W~4‘CX%×PÛ}§Ğ‚7ô¦†)!;°]ÜE´ğ* LZ@Q¤°?àZ
+²Ğ $iõ´`*á(ƒ˜vä8fA”p-
+÷‚;Ğ 4GR y 
+ÑP«p Ğ' MWP6Í`;ğ¯ ®Î øR…Æ‡ ³	1³
+Õ†ÿĞ`‡¡	E‡bAÀ
+™wD6  †ô» (É5	ÿäHh\Ç¢‹T³8;&ºcúP&hÀ u Šz å6o`Ša+×öŸ0*Ş$äŒà¢eÁ,>9€a=5/#PPÀvŠõ]°Wù °ÎX†QGbğ7	K	2åmÉ÷á
+qPğ1³°Tj1ööQà ’·; L–uF'@ÀT@ Ø§;şÑr¾—M“øäáE£ :!	¶Q™ÇoFµ*‰@Å). æø@°Jğ*>PÇTğ4·“<y^2ö5Á7LÀ‰ŠM`m ÁU°Kÿ`ñ0kG T@G{PÙd(@	Qeí&Zò•QmúÆS0ğ7Œ`A5YÊ¹¶0sY—ñx)¹”qaYàO‚m)?ÃIÿ00@QÿĞ˜? ‘iäh’ñdÁ3| 
+b€aà¡½Ğ:Ë5©`£ÿà `Óñ YB S(À†¸Y	‚Ò9‰€MhóYP
+ÕG”EÂ}ÍY	Ù •ÎI_ca ´P2*Ğ4 ”- 7ıpaPĞæyÜĞåÚ€ğÈ 1;ğ€QŸ%ÿ”‹ùvsÙA
+¤@\ÿù‚ ty*ÿC?j©pD)*˜·Ğœº¨©	³A(À"ú$:™>ŒÒ`}@¼ğ{ñ ¢à@
+±\Z †a1•EIÀ¤¡Q-B*8°b’pD¯¥y°.Ğqa+Ë œT«Zº²ŒI5Á¦’õ)Ø¦‘2 ßEmğpJIkK@ Šç9ÌB  Q`áPiÀôJ‹Ê•ŠŸø©ÿà(qÙL	8€/ú"	ê©º	¯ 
+ˆcÆ°)˜¥p‰«Ššñ À!!êÆ†%J‰à Tÿ0Ò0uÍ9/ÀÌ–¬>$Ğ¬ajÑº;;àO‘Ö¢¤löÛ°zÉ 
+®"˜^àwo²A÷4Ş°8ĞF] ”ìj\¦À&”@	°\`²	Ñ÷ªkc`qüzšr p
+n»ªÎDŸ
+{Ÿê°wùZ‘
+Ş  	oy±rÙ©ñ©&e	”p“ºÃH²nû3([?Oàˆ 1-+#Z1;˜0
+YàĞŞúˆª*ñ³¡¬1´›T´;­½€/iºä´µ}+½PìäKq	¢ ¶5	ìÄ)„{ek\‹ €
+Üjÿa·q;k[P-p·¡)ŠŠğÅ>	Ûhöé¨©úv—ë›šğ
+6pOYã¸¹Š –°[ê’ÿ ¹Á¹Ò =°V :«/+™&Š	0@	Ö‹ˆJ©Åê°a»BK´a´_TtJk)*¼qPÁ€µPW+Ì"ˆù"ğ”P®q—”Z ®y½×·ã«WI€¾;€aG»IŒúµK¿—á(.À_‹c°©¹Ü ŸÀNî[!»¡ÀÁÀ Ñ0k8Á.d§+ƒĞ‚eló¢}«\ ´ËŠ»Î*&ü€ÀN´sLÿ[YšÇv6`^Ûê K€9 +][ …éò:)ÄÎ	j0¾åkğ Ä¡10°„aæ¶1¿ÿ0/Eú#bù¸°ÁácH€yÿÀ‰Ê©
+:Ê1!.dÛ4kAjL?ó·ÿP@@rLº´jº; ‘KDmE×¹A»!ÂÌš»%¼»MdJ•@¡é´<cÓ„w±.=Û•? 
+=Ğ( dÿ€*ÃÊBœkJY+pFkPI©0*S[Eå2œ;€°Œù)PôÉ°´ ª¶²
+ô#RnûX¬™*)R—sùÂ | K£À9ÖÿL¶¨º¹;0ªP£@Z>²Wğ*—¾ŒÍ†+ S7\=u; 9z7ße¬—Y»; ·KÂQÈÿ`+Ê¦í“F6
+x×Òr¿Yà;Oóªq¤JàGMĞaºJ	ƒö@·amÚĞ¡ ÖÑ —(6ğ·À4
+£JÈ²]-ê&l˜RÀN‹Y“;@Ä5%ğ£¸‚”	20­SÀ<s)Z‹•ì2SÒ0¯ÿ€	T ›&˜°i"ZÉ’Y0“\¦
+–™f*\Qââ:‰Åğ"ÜÜê¡ƒĞ	ÒH ¢ ½Ç´ë‹mşÿÀ}Ä‘;P°=¾–·™œ@CQ“ËºAhç¶¡¸M×Î‰I,nĞi - r:vÊt>;0†àˆ ^p ­Óş!
+°À¼ğ° ¼SÓC]¼Ò  8PXà	à S5P.r)ĞˆÊô“Ô;ğZ 	’à6^0$@ Æ	Ó@ğ»PÖP »`(ÏpDEğ—ĞHÀ3•	~ÔÄ€8(€şá 	"pDÑd0
+˜"Øì²¹ ©Y€`x±`ÉÔQ¸.° 
+ RàÖNPt p ]ÿ`Ì 	Ô İ03)¿ "Ë€™0¿pD´ š p|  ¸X\ ¦2 ğ%Ğ—ğEP
+“#ª€¨R«¯zâ”À0	¨° ^°¬ÿÀ´” 8P]€ÀÿIImÌø]¶À 	 ğ :påùæ«”ıJGNÀˆ2¥°†1	]°
+kKŞà	ÎğJ0? »œàÊÀ&} 	WT”ğ8   Ù=ãs"Õ i½£0Í#©¢0
+-Ä	Ç`XPŠà(Í@¯ Ğ·@Å8À$`8ìsQ ÂÿeX¶80“‹° ”à©` °ò P
+À>’§¥ 	{ò	A0AR?
+àûMİ–Pšà.`,O=à Ù@%@‡è.`öX€%ĞY  öÌP
+‰œ
+ğ
+–@}P
+Äp‰Á@ó$ğEP–4¨RĞ]ÀÊÿ0%SÙA‹M  4ıììzh0§èpÊz aŞ¾>p
+²p	EíĞ©ß:^²®1 ›ñÈêñ² Ë.‡@ UıøıW²€©
+Q	µğ ¡7 ¡÷	©Í€ °Û½ ˜|pzÓ?ƒÿĞÏÀ—³ ¿ZÑÜ @P€G´n= P¼š/jFĞ|	g`Ğz åü#øï‚8=	.üPĞáCˆ%N¤XÑâEŒ5näØÑãGíÈÑSŠ$úƒ*äK˜1eÎ¤YÓæMœ9uvÔÁb8r„ŞX²åMœrõ,qcŒR¥wN¥ZÕêU™vT›xjÇ­@I!ƒÕìY´iÕ®e‹SGBêdÈ@ªBrÊ±{7¡Ô¶j‡ª‰‡*<qÈe‡Â‘%O¦\™ò[¿~3€q¸$ó_Ë¡E¾¨bG§‰v„+ÈcG1Ò±eÏ¦Móÿg¥ğ.8<ƒpmàÁÓF²ÃŸ‡Œ:eAT@Q „O§^İúÌÛ¸–ùâĞŒïëáÅÇœ%hG4­º´z"ã	‚Ìï¨1Şş}üÓ³k×“äağòp@ˆBF€l¡ƒOrE€_°a‚@
++´­ı´³â¿ /ôğCCqD2ÄmRã)…~#ñEc”qÆàLüL‡‡,ÀË#>`ˆF ƒrH"«²‚¿…’ Ç!rVhÂ½Â¸c!tŠ´òJ,³Ô² TH#$¢'¾bjK4ÓTsMÓ¸c.ºâ”sN6|ˆƒ< (N¹¬@ƒM@tPB5ôPDU'tQFuôQH#•tRJ+µôRL3ÕtSN;õôSPCuTRK5u£€  ;_3http://goa.cet.middlebury.edu/maneblog/hdr_logo.gifYimage/gifÔ_WebResourceTextEncodingNameUUTF-8O1ã<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>MANE IT Network: TiddlyWiki</TITLE>
+
+<LINK rel="shortcut icon" href="favicon.ico"><LINK rel="stylesheet" href="http://blogs.nitle.org/mane/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://blogs.nitle.org/mane/index.rdf">
+
+<LINK rel="start" href="http://blogs.nitle.org/mane/" title="Home"><LINK rel="prev" href="http://blogs.nitle.org/mane/2005/07/wiki_the_planet_with_open_streetmap.html" title="Wiki the planet with Open Streetmap">
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'blogs.nitle.org';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY><DIV id="cet">
+    <A href="http://cet.middlebury.edu">    <IMG src="http://goa.cet.middlebury.edu/maneblog/hdr_logo.gif" height="70" width="715" border="0" alt="banner: ">
+      </A>
+</DIV>
+
+
+<DIV id="banner"><H1>
+  <A href="http://blogs.nitle.org/mane/" accesskey="1" style="font-size:24px; font-weight:normal;">    MANE IT Network
+  </A>
+</H1>
+<SPAN class="description"></SPAN>
+</DIV>
+
+<DIV id="content">
+<DIV class="blog">        <DIV class="blogbody">        <H3 class="title">TiddlyWiki</H3>
+        <P><A href="http://careo.elearning.ubc.ca/weblogs/brian/">Brian Lamb</A> <A href="http://careo.elearning.ubc.ca/weblogs/brian/archives/012634.html">explores</A> a new Web technology, the curiously-named <A href="http://www.tiddlywiki.com/">TiddlyWiki</A>.  <A href="http://www.blogjones.com/TiddlyWikiTutorial.html">It's a web authoring tool</A> with wiki functionalities, but with several additions.  For one, it supports microcontent pieces, which can be created, viewed, and edited <EM>within</EM> a Web page.  For another, a page with multiple microcontent pieces (called, inevitably, "Tiddlers") lives as a single HTML page, without a database backend.  That lets users download a tiddlified page to take with them.  Interesting tech, with possibilities for Web authoring and collaboration.</P>
+        <A name="more"></A>
+        
+
+        <SPAN class="posted">Posted by Bryan Alexander 
+from the <B>General News Department</B>
+
+on July 04, 2005 at  1:05 PM
+        
+        <BR></SPAN>
+
+    </DIV>
+
+    
+    <DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+    
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="http://blogs.nitle.org/cgi-bin/mt-post.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="1582">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="submit" name="preview" value="Â PreviewÂ ">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="Â PostÂ "><BR><BR>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+</DIV>
+
+
+</DIV>
+</DIV>
+
+<DIV id="links">
+<DIV class="sidetitle">Site Navigation
+</DIV>
+
+<DIV class="side">  <A href="http://blogs.nitle.org/mane/">Home</A><BR>
+  <A href="http://blogs.nitle.org/mane/2004/01/about.html">About</A>
+</DIV>
+
+<DIV class="sidetitle">Recent Entries
+</DIV>
+
+<DIV class="side"><A href="http://blogs.nitle.org/mane/2005/07/tiddlywiki.html">TiddlyWiki</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/07/wiki_the_planet_with_open_streetmap.html">Wiki the planet with Open Streetmap</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/itunes_expands_to_support_podcasts.html">iTunes expands to support podcasts</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/simulating_the_end_of_the_anasazi.html">Simulating the end of the Anasazi</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/new_learning_spaces_a_call_for_research.html">New learning spaces: a call for research</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/mits_clark_studying_internet_rebuild.html">MIT's Clark studying Internet rebuild</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/learning_spaces_sample_cases_of_smart_classrooms.html">Learning spaces: sample cases of smart classrooms</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/internet_explorer_to_include_rss_support.html">Internet Explorer to include RSS support</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/nitle_director_for_emerging_technologies_bryan_alexander.html">NITLE Director for Emerging Technologies: Bryan Alexander</A><BR>
+<A href="http://blogs.nitle.org/mane/2005/06/digital_images_seminar_notes_from_may.html">Digital images seminar: notes from May</A><BR>
+
+</DIV>
+
+<DIV class="sidetitle">Departments
+</DIV>
+
+<DIV class="side">  <A href="http://blogs.nitle.org/mane/assessment.html">Assessment</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/best_practices.html">Best Practices</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/cms.html">CMS</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/communications.html">Communications</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/copyright.html">Copyright</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/facilities_planningmgmt.html">Facilities Planning/Mgmt</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/general_news.html">General News</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/gis.html">GIS</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/information_literacy.html">Information Literacy</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/infrastructure_support.html">Infrastructure Support</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/learning_objects.html">Learning Objects</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/libraries.html">Libraries</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/management.html">Management</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/mane_meetings.html">MANE Meetings</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/mane_workshops.html">MANE Workshops</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/media_services.html">Media Services</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/news_cet.html">News: CET</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/news_mane_campus.html">News: MANE Campus</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/pedagogy.html">Pedagogy</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/project_management.html">Project Management</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/tools.html">Tools</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/training.html">Training</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/useracademic_services.html">User/Academic Services</A>
+  <BR>
+  <A href="http://blogs.nitle.org/mane/weblogs.html">Weblogs</A>
+  <BR>
+
+</DIV>
+
+<DIV class="sidetitle">Archives
+</DIV>
+
+<DIV class="side"><A href="http://blogs.nitle.org/mane/weblog.Jul.2005.html">July 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jun.2005.html">June 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.May.2005.html">May 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Apr.2005.html">April 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Mar.2005.html">March 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Feb.2005.html">February 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jan.2005.html">January 2005</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Dec.2004.html">December 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Nov.2004.html">November 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Oct.2004.html">October 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Sep.2004.html">September 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Aug.2004.html">August 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jul.2004.html">July 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jun.2004.html">June 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.May.2004.html">May 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Apr.2004.html">April 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Mar.2004.html">March 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Feb.2004.html">February 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jan.2004.html">January 2004</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Dec.2003.html">December 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Nov.2003.html">November 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Oct.2003.html">October 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Sep.2003.html">September 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Aug.2003.html">August 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jul.2003.html">July 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jun.2003.html">June 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.May.2003.html">May 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Apr.2003.html">April 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Mar.2003.html">March 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Feb.2003.html">February 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Jan.2003.html">January 2003</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Dec.2002.html">December 2002</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Nov.2002.html">November 2002</A><BR>
+<A href="http://blogs.nitle.org/mane/weblog.Sep.2002.html">September 2002</A><BR>
+
+</DIV>
+
+
+
+<P>
+</P></DIV>
+
+
+
+
+</BODY></HTML>_3http://blogs.nitle.org/mane/2005/07/tiddlywiki.htmlYtext/html    1 4 ; M \ r W …  •:ã;;#;,;J;Pm7mm                           mw

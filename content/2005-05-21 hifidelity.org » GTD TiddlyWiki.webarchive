@@ -1,0 +1,427 @@
+bplist00“1_WebSubresources_WebMainResource¨ $'*.‘	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeZiso-8859-1O><!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /print.css was not found on this server.<P>
+<P>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.
+</BODY></HTML>
+_http://hifidelity.org/print.cssYtext/html‘	O^<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /wp-content/livecalendar/xmlhttprequest.js was not found on this server.<P>
+<P>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.
+</BODY></HTML>
+_?http://hifidelity.org/wp-content/livecalendar/xmlhttprequest.js‘	O`<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /wp-content/livecalendar/kcalendarscript.php was not found on this server.<P>
+<P>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.
+</BODY></HTML>
+_Ahttp://hifidelity.org/wp-content/livecalendar/kcalendarscript.php”O9/* These are standard sIFR styles... do not modify */
+
+.sIFR-flash {
+	visibility: visible !important;
+	margin: 0;
+}
+
+.sIFR-replaced {
+	visibility: visible !important;
+}
+
+span.sIFR-alternate {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+	letter-spacing: 0;
+}
+_=http://hifidelity.org/wp-content/plugins/sifr/sifr-screen.cssXtext/css”OÚ/* These "decoy" styles are used to hide the browser text before it is replaced... the negative-letter spacing in this case is used to make the browser text metrics match up with the sIFR text metrics since the sIFR text in this example is so much narrower... your own settings may vary... any weird sizing issues you may run into are usually fixed by tweaking these decoy styles */
+
+// You must also edit sifr-local.php to replace the hidden elements
+
+.sIFR-hasFlash div.post h2 {
+	visibility: hidden;
+}
+
+// (Styles from the original sIFR demo follow as an example...)
+
+//.sIFR-hasFlash h1 {
+//	visibility: hidden;
+//}
+
+//.sIFR-hasFlash h2 {
+//	visibility: hidden;
+//	letter-spacing: -9px;
+//	font-size: 55px;
+//}
+
+//.sIFR-hasFlash h3 {
+//	visibility: hidden;
+//	letter-spacing: -6px;
+//	font-size: 25px;
+//}
+
+//.sIFR-hasFlash h4 {
+//	visibility: hidden;
+//	letter-spacing: -5px;
+//	font-size: 21px;
+//}
+
+//.sIFR-hasFlash h5#pullquote {
+//	letter-spacing: -4px;
+//	visibility: hidden;
+//	font-size: 24px;
+//}
+_<http://hifidelity.org/wp-content/plugins/sifr/sifr-local.css”Oø/* This is the print stylesheet to hide the Flash headlines from the browser... regular browser text headlines will now print as normal */
+
+.sIFR-flash, .sIFR-flash object, .sIFR-flash embed {
+	display: none !important;
+	height: 0;
+	width: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+span.sIFR-alternate {
+	visibility: visible !important;
+	display: block !important;
+	position: static !important;
+	left: auto !important;
+	top: auto !important;
+}_<http://hifidelity.org/wp-content/plugins/sifr/sifr-print.css‘	OT<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /wp-content/plugins/sifr/sifr.js was not found on this server.<P>
+<P>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.
+</BODY></HTML>
+_5http://hifidelity.org/wp-content/plugins/sifr/sifr.js”!"#OI/*	sIFR 2.0 Official Add-ons 1.1
+	Copyright 2005 Mark Wubben
+
+	This software is licensed under the CC-GNU LGPL <http://creativecommons.org/licenses/LGPL/2.1/>
+*/
+
+if(typeof sIFR=="function")(function(){var j=document;var h=j.documentElement;sIFR.removeDecoyClasses=function(){function a(b){if(b&&b.className!=null)b.className=b.className.replace(/\bsIFR-hasFlash\b/,"")}return function(){a(h);a(j.getElementsByTagName("body")[0])}}();sIFR.preferenceManager={storage:{sCookieId:"sifr",set:function(a){var b=new Date();b.setFullYear(b.getFullYear()+3);j.cookie=[this.sCookieId,"=",a,";expires=",b.toGMTString(),";path=/"].join("")},get:function(){var a=j.cookie.match(new RegExp(";?"+this.sCookieId+"=([^;]+);?"));if(a!=null&&a[1]=="false")return false;else return true},reset:function(){var a=new Date();a.setFullYear(a.getFullYear()-1);j.cookie=[this.sCookieId,"=true;expires=",a.toGMTString(),";path=/"].join("")}},disable:function(){this.storage.set(false)},enable:function(){this.storage.set(true)},test:function(){return this.storage.get()}};if(sIFR.preferenceManager.test()==false){sIFR.bIsDisabled=true;sIFR.removeDecoyClasses()}sIFR.rollback=function(){function a(b){var c,d,e,f,g;var l=parseSelector(b);var i=l.length-1;var m=false;while(i>=0){c=l[i];l.length--;d=c.parentNode;if(c.getAttribute("sifr")=="true"){e=c.nextSibling;while(e!=null&&e.className!="sIFR-alternate")e=e.nextSibling;if(e!=null){f=e.firstChild;while(f!=null){g=f.nextSibling;d.appendChild(e.removeChild(f));f=g}d.removeChild(e)}d.removeChild(c);if(!sIFR.UA.bIsXML&&sIFR.UA.bUseInnerHTMLHack)d.innerHTML+="";d.className=d.className.replace(/\bsIFR\-replaced\b/,"")};m=true;i--}return m}return function(k){named.extract(arguments,{sSelector:function(a){k=a}});if(k==null)k="";else k+=">";sIFR.removeDecoyClasses();sIFR.bHideBrowserText=false;if(a(k+"embed")==false)a(k+"object")}}()})()_<http://hifidelity.org/wp-content/plugins/sifr/sifr-addons.js_application/x-javascript”%&#OY/*
+Care Of: 
+		Simon Willison
+		http://simon.incutio.com/archive/2004/05/26/addLoadEvent
+		Thnx Dude!
+
+2005-05-07:
+	Renamed to avoid collisions there are other addLoadEvent functions.
+
+******** USEAGE ********************************
+addLoadEvent(nameOfSomeFunctionToRunOnPageLoad);
+addLoadEvent(function() {
+  // more code to run on page load 
+});
+*/
+function tsaAddLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}_Vhttp://hifidelity.org/wp-content/plugins/teb-super-archive/includes/tsaAddLoadEvent.js”()#O/*
+// +----------------------------------------------------------------------+
+// | Orginial Code Care Of:                                               |
+// +----------------------------------------------------------------------+
+// | Copyright (c) 2004 Bitflux GmbH                                      |
+// +----------------------------------------------------------------------+
+// | Licensed under the Apache License, Version 2.0 (the "License");      |
+// | you may not use this file except in compliance with the License.     |
+// | You may obtain a copy of the License at                              |
+// | http://www.apache.org/licenses/LICENSE-2.0                           |
+// | Unless required by applicable law or agreed to in writing, software  |
+// | distributed under the License is distributed on an "AS IS" BASIS,    |
+// | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or      |
+// | implied. See the License for the specific language governing         |
+// | permissions and limitations under the License.                       |
+// +----------------------------------------------------------------------+
+// | Author: Bitflux GmbH <devel@bitflux.ch>                              |
+// |         http://blog.bitflux.ch/p1735.html                            |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | Heavily Modified by Jeff Minard (07/09/04)                           |
+// +----------------------------------------------------------------------+
+// | Same stuff as above, yo!                                             |
+// +----------------------------------------------------------------------+
+// | Author: Jeff Minard <jeff-js@creatimation.net>                       |
+// |         http://www.creatimation.net                                  |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | Heavily Modified by Jonas Rabbe (2005-05-08)                         |
+// +----------------------------------------------------------------------+
+// | Same stuff as above, yo!                                             |
+// +----------------------------------------------------------------------+
+// | Author: Jonas Rabbe <jonas@rabbe.com>                                |
+// |         http://www.jonas.rabbe.com                                   |
+// +----------------------------------------------------------------------+
+//
+//
+// +----------------------------------------------------------------------+
+// | What is this nonsense?? (2005-05-08)                                 |
+// +----------------------------------------------------------------------+
+// | This is a script that, by using XMLHttpRequest javascript objects    |
+// | you can quickly add some very click live interactive feed back to    |
+// | your pages that require server side interaction.                     |
+// |                                                                      |
+// | This javascript has been modified to make a 'digging archive' as     |
+// | outlined by Michael Heilemann in his dissection of Freya             |
+// |†[http://binarybonsai.com/archives/2004/11/21/freya-dissection/]      |
+// +----------------------------------------------------------------------+
+*/
+
+var tsaLiveReq = false;
+var tsaLiveReqLast = "-";
+var tsaYear = 0;
+var tsaMonth = 0;
+var tsaIsIE = false;
+
+// on !IE we only have to initialize it once
+if (window.XMLHttpRequest) {
+	tsaLiveReq = new XMLHttpRequest();
+}
+
+function tsaLiveReqDoReq(query) {
+	if (tsaLiveReqLast != query) {
+		if (tsaLiveReq && tsaLiveReq.readyState < 4) {
+			tsaLiveReq.abort();
+		}
+		
+		if (window.XMLHttpRequest) {
+		// branch for IE/Windows ActiveX version
+		} else if (window.ActiveXObject) {
+			tsaLiveReq = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		
+		tsaLiveReq.onreadystatechange = tsaLiveReqProcessReqChange;
+		tsaLiveReq.open("GET", tsaProcessURI + "?" + query);
+		tsaLiveReqLast = query;
+		tsaLiveReq.send(null);
+	}
+}
+
+function tsaLiveReqProcessReqChange() {
+	if (tsaLiveReq.readyState == 4) {
+		var tsaText = tsaLiveReq.responseText;
+		var resultID = tsaText.substring(0, tsaText.indexOf('|'));
+		tsaText = tsaText.substring(tsaText.indexOf('|') + 1, tsaText.length);
+		
+		var resultElement = document.getElementById(resultID)
+		
+		if( resultElement == null ) return;
+		
+		resultElement.innerHTML = tsaText; 
+		
+		var yearElement = document.getElementById(resultID+'-year')
+		if( yearElement == null ) return;
+		var year_list = yearElement.childNodes;
+		for( var i = 0; i < year_list.length; i++ ) {
+			if( year_list[i].nodeName == 'LI' ) {
+				year_list[i].style.cursor = 'pointer';
+				var tf = function(e) {
+ 					var tsaID = tsaEventElement(e).id;
+ 					tsaYear = tsaID.substring(tsaID.lastIndexOf('-') + 1, tsaID.length);
+ 					tsaSelectYear();
+				}
+				
+				if( tsaIsIE ) {
+					year_list[i].attachEvent('onclick',tf);
+				} else {
+					year_list[i].addEventListener('click', tf, false);
+				}
+			}
+		}
+
+		var monthElement = document.getElementById(resultID+'-month');
+		if( monthElement == null ) return;
+		var month_list = monthElement.childNodes;
+		for( var i = 0; i < month_list.length; i++ ) {
+			if( month_list[i].nodeName == 'LI' ) {
+				month_list[i].style.cursor = 'pointer';
+				var tf = function(e) {
+ 					var tsaID = tsaEventElement(e).id;
+ 					tsaMonth = tsaID.substring(tsaID.lastIndexOf('-') + 1, tsaID.length);
+ 					tsaSelectMonth();
+				}
+				
+				if( tsaIsIE ) {
+					month_list[i].attachEvent('onclick',tf);
+				} else {
+					month_list[i].addEventListener('click', tf, false);
+				}
+			}
+		}
+		
+		// Fade Anything.
+		if( typeof Fat != 'undefined' && /class="fade"/.test(tsaText)) {
+			Fat.fade_all();
+		}
+	}
+}
+
+function tsaLiveReqInit() {
+	if (navigator.userAgent.indexOf("Safari") > 0) {
+		// branch to get to internet explorer
+	} else if (navigator.product == "Gecko") {
+		// branch to get to internet explorer
+	} else {
+		tsaIsIE = true;
+	}
+
+	tsaLiveReqDoReq('');
+}
+
+function tsaSelectYear() {
+	tsaLiveReqDoReq('year=' + tsaYear);
+}
+
+function tsaSelectMonth() {
+	tsaLiveReqDoReq('year=' + tsaYear + '&month=' + tsaMonth);
+}
+
+/*
+	Courtesy of Chris Boulton [http://www.surfionline.com]
+*/
+function tsaEventElement(e) {
+	if( tsaIsIE ) {
+		return e.srcElement;
+	} else {
+		return e.currentTarget;
+	}
+}
+
+tsaAddLoadEvent(tsaLiveReqInit);_Thttp://hifidelity.org/wp-content/plugins/teb-super-archive/includes/super-archive.js”+,-O˛GIF89aP  ≥  Ïf¸˛¸d¨dfd Z  7   Ç           Ì +    !˘     ,    P  ´p»I´Ω8ÎÕg¯`(édiûh*@Îæp,Å`ﬂxÆÔ|/´ôpÿ™˘éH$p¿":a∆§tj[6ãÏïvÌ∫¢øN\ΩÅÃ—¥œ˙Öﬂ4,˜;.ˇÏF}O÷Áÿ_]YZM,Üthj|hfxw~cAnq/Öpî4uöyé|êfí\^ïp§ôçägåv{<ÄO≤†Tµ¢≤N¥∂º±πDªºµV)≈∆«»$ÀÃÕŒ ;_+http://pics3.inxhost.com/images/sticker.gifYimage/gif”/0-OùGIF89aX  Û  ⁄ˇˇôÃˇké≤é°≤ÃÊˇˇˇˇDDD  fff                     !˘   ,    X   ˛»I´Ω8ÎÕw¯`(édiûhZ
+¿7ºp,œt˝™x≤.·ˇ¿†pH,Ëé*^`@l:õF§t’Z>ØÿËÙcÿ*ôÿ∞œ@˛i∑›ÈW6¸‹ÑÛ4-]≥Ÿs7M¶˜A}|d\~É;U`wXpq!á~"{ÄÖîáï$vãOçéî\Å†ÉëÅìèt öõDùûÑØüï§í$®™´A•>zßêÖ¿°®¿à=πar[jâ»…À–∑â‘’÷◊ÿŸ⁄ —:J›‡·#ﬂ‚Â‡,ÈÍÎÏÌÓÔÒÚÛˆ˜¯˘˙˚¸˝˛ˇ "à¡=É˚"<† A{!>ÑHQ‚BÜ.åX∞"≈ãK˘@äY·Fè&¢$â±‡ƒå˝8 úòí·Àö6/‹©±'Àë1Y¬ÑYÛdKå:%˝®è„“¶!iJ›¯“f«£Fs»µ´◊Ø]#  ;_-http://feeds.feedburner.com/~fc/hifidelityorg‘234UUTF-8O,<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><TITLE>hifidelity.org ¬ª GTD TiddlyWiki</TITLE><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><META name="generator" content="WordPress 1.5"><META name="keywords" content="Blog,Wiki,GTD,Organization,AJAX,js,css,hipsterpda,geek"><STYLE type="text/css" media="screen"> @import url( http://hifidelity.org/wp-style/oldschool/style.css );
+</STYLE><LINK rel="alternate stylesheet" type="text/css" media="screen" title="Black" href="/wp-content/themes/oldschool/black.css"><LINK rel="stylesheet" type="text/css" media="print" href="http://hifidelity.org/print.css"><LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://hifidelity.org/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://hifidelity.org/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://hifidelity.org/feed/atom/"><LINK rel="pingback" href="http://hifidelity.org/xmlrpc.php">
+
+        <SCRIPT type="text/javascript" src="http://hifidelity.org/wp-content/livecalendar/xmlhttprequest.js"></SCRIPT><SCRIPT type="text/javascript" src="http://hifidelity.org/wp-content/livecalendar/kcalendarscript.php"></SCRIPT>
+
+<LINK rel="stylesheet" href="http://hifidelity.org/wp-content/plugins/sifr/sifr-screen.css" type="text/css" media="screen"><LINK rel="stylesheet" href="http://hifidelity.org/wp-content/plugins/sifr/sifr-local.css" type="text/css" media="screen"><LINK rel="stylesheet" href="http://hifidelity.org/wp-content/plugins/sifr/sifr-print.css" type="text/css" media="print"><SCRIPT src="http://hifidelity.org/wp-content/plugins/sifr/sifr.js" type="text/javascript"></SCRIPT><SCRIPT src="http://hifidelity.org/wp-content/plugins/sifr/sifr-addons.js" type="text/javascript"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="http://hifidelity.org/wp-content/plugins/teb-super-archive/includes/tsaAddLoadEvent.js"></SCRIPT><SCRIPT type="text/javascript" src="http://hifidelity.org/wp-content/plugins/teb-super-archive/includes/super-archive.js"></SCRIPT>
+        <SCRIPT type="text/javascript">
+		var tsaProcessURI = 'http://hifidelity.org/wp-content/plugins/teb-super-archive/includes/tsa.php';
+	</SCRIPT></HEAD><BODY>
+<A name="top"></A>
+<DIV id="rap"><DIV id="header">
+<A href="http://hifidelity.org">hifidelity.org</A>
+</DIV>
+<DIV id="content"><H2>May 19, 2005</H2><DIV class="post">
+<H3 class="storytitle" id="post-70"><A href="http://hifidelity.org/archives/2005/05/19/gtd-tiddlywiki/" rel="bookmark" title="Permanent Link: GTD TiddlyWiki">‚àû GTD TiddlyWiki</A></H3>
+<DIV class="meta">Filed under: <UL class="post-categories">      <LI><A href="http://hifidelity.org/categories/blog/" title="View all posts in Blog" rel="category tag">Blog</A></LI></UL> | Tagged as: <A href="http://hifidelity.org/tag/Wiki" rel="tag" title="Search site for Wiki">Wiki</A>, <A href="http://hifidelity.org/tag/GTD" rel="tag" title="Search site for GTD">GTD</A>, <A href="http://hifidelity.org/tag/Organization" rel="tag" title="Search site for Organization">Organization</A>, <A href="http://hifidelity.org/tag/AJAX" rel="tag" title="Search site for AJAX">AJAX</A>, <A href="http://hifidelity.org/tag/js" rel="tag" title="Search site for js">js</A>, <A href="http://hifidelity.org/tag/css" rel="tag" title="Search site for css">css</A>, <A href="http://hifidelity.org/tag/hipsterpda" rel="tag" title="Search site for hipsterpda">hipsterpda</A>, <A href="http://hifidelity.org/tag/geek" rel="tag" title="Search site for geek">geek</A>.</DIV>
+<DIV class="storycontent"><P><ACRONYM title="GettingThingsDone">GTD</ACRONYM><A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">TiddlyWiki</A> is a personal <A href="http://en.wikipedia.org/wiki/Wiki">Wi</A><A href="http://c2.com/cgi/wiki?WelcomeVisitors">Ki</A> system encapsulated in an html file. This is unbelievably cool. Lists, Notes, Goals, quick item creation and deletion. you can stick these on flash drives for easy on the go storage and retrieval for all kinds of odd ideas that pass through.</P><P>by Fidel @ 11:54 pm  <A href="index.php#top">^Top</A></P>
+</DIV>
+<DIV class="feedback"></DIV>
+<RDF:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">                <RDF:DESCRIPTION rdf:about="http://hifidelity.org/archives/2005/05/19/gtd-tiddlywiki/" dc:identifier="http://hifidelity.org/archives/2005/05/19/gtd-tiddlywiki/" dc:title="GTD TiddlyWiki" trackback:ping="http://hifidelity.org/archives/2005/05/19/gtd-tiddlywiki/trackback/"></RDF:DESCRIPTION></RDF:RDF></DIV>
+
+
+
+                                <P class="nocomments">Comments are closed.</P>
+                
+        
+
+</DIV>
+<DIV id="menu"><DIV id="calendar">
+<TABLE id="wp-calendar">    <CAPTION>May 2005</CAPTION>
+    <THEAD><TR><TH abbr="Monday" scope="col" title="Monday">M</TH><TH abbr="Tuesday" scope="col" title="Tuesday">T</TH><TH abbr="Wednesday" scope="col" title="Wednesday">W</TH><TH abbr="Thursday" scope="col" title="Thursday">T</TH><TH abbr="Friday" scope="col" title="Friday">F</TH><TH abbr="Saturday" scope="col" title="Saturday">S</TH><TH abbr="Sunday" scope="col" title="Sunday">S</TH></TR></THEAD>
+
+    <TFOOT><TR><TD abbr="April" colspan="3" id="prev"><A href="http://hifidelity.org/archives/2005/04/" title="View posts for April 2005">¬´ Apr</A></TD><TD class="pad">¬†</TD><TD colspan="3" id="next" class="pad">¬†</TD></TR></TFOOT>
+
+    <TBODY><TR><TD colspan="6" class="pad">¬†</TD><TD><A href="http://hifidelity.org/archives/2005/05/01/" title="Beyond Most Recognition">1</A></TD></TR><TR><TD><A href="http://hifidelity.org/archives/2005/05/02/" title="Felix‚Äôs Photography">2</A></TD><TD>3</TD><TD><A href="http://hifidelity.org/archives/2005/05/04/" title="CSS Cheat Sheet
+Motherfucking A.
+HD Lockpicking">4</A></TD><TD><A href="http://hifidelity.org/archives/2005/05/05/" title="Can I get my Google to go?
+Dr.Mario infected me.
+Junior‚Äôs got Skillz and Soul.">5</A></TD><TD>6</TD><TD>7</TD><TD>8</TD></TR><TR><TD>9</TD><TD><A href="http://hifidelity.org/archives/2005/05/10/" title="Last Heavy Rotation at JD and Friends">10</A></TD><TD>11</TD><TD><A href="http://hifidelity.org/archives/2005/05/12/" title="The History of Sampling">12</A></TD><TD><A href="http://hifidelity.org/archives/2005/05/13/" title="Yeah, right your 1337.">13</A></TD><TD>14</TD><TD>15</TD></TR><TR><TD>16</TD><TD><A href="http://hifidelity.org/archives/2005/05/17/" title="Save Kylie‚Äôs Boobies!!">17</A></TD><TD><A href="http://hifidelity.org/archives/2005/05/18/" title="Bust A Move
+Glory be to mod_rewrite.
+Filters of gauze">18</A></TD><TD><A href="http://hifidelity.org/archives/2005/05/19/" title="GTD TiddlyWiki">19</A></TD><TD><A href="http://hifidelity.org/archives/2005/05/20/" title="GTD Flowchart">20</A></TD><TD id="today">21</TD><TD>22</TD></TR><TR><TD>23</TD><TD>24</TD><TD>25</TD><TD>26</TD><TD>27</TD><TD>28</TD><TD>29</TD></TR><TR><TD>30</TD><TD>31</TD><TD class="pad" colspan="5">¬†</TD></TR></TBODY>
+        </TABLE></DIV>
+<BR>
+<H3>Menu</H3>
+<UL><LI><A href="/archives/">Archives</A></LI><LI><A href="/links/">Links</A></LI><LI><A href="/flickr/"><DEL>Photos</DEL></A></LI><LI><A href="/listening/">Charts</A></LI><LI><A href="/feed/">Main Feed</A></LI><LI><A href="/cosmos/">Cosmos</A></LI></UL>
+<BR>
+<H3>Top Ten Tags</H3>
+<UL><LI><A href="/tag/reference">reference</A></LI> <LI><A href="/tag/dj">dj</A></LI> <LI><A href="/tag/pwned">pwned</A></LI> <LI><A href="/tag/tables">tables</A></LI> <LI><A href="/tag/Linux">Linux</A></LI> <LI><A href="/tag/photography">photography</A></LI> <LI><A href="/tag/GTD">GTD</A></LI> <LI><A href="/tag/music">music</A></LI> <LI><A href="/tag/geek">geek</A></LI> <LI><A href="/tag/humor">humor</A></LI> </UL>
+<BR>
+<H3>Friends</H3>
+<UL><LI><A href="http://www.geekfury.com/blog/" rel="friend" title="Geekfury.com Blog | Jason Et al">Jason</A></LI>
+<LI><A href="http://www.to-evolve.com/" rel="friend muse crush" title="GroovinKim : A legend in my heart.">Kim</A></LI>
+<LI><A href="http://www.livejournal.com/users/persephonepoke/" rel="friend met co-resident muse crush" title="A darling girl. Sweetness, Light, and Compassion.">Liz</A></LI>
+<LI><A href="http://milov.nl" rel="friend" title="Milo Vermeulen's Photolog">Milo</A></LI>
+<LI><A href="http://www.dark-siders.org" title="My Homie.">Sentinel</A></LI>
+</UL>
+<BR>
+<H3>Rolled</H3>
+<UL><LI><A href="http://www.orbitalworks.com/">Orbitalworks</A></LI>
+<LI><A href="http://oddiophile.com/">oddiophile</A></LI>
+<LI><A href="http://www.electrolicious.com/">Ariel Meadow Stallings</A></LI>
+<LI><A href="http://www.enorgis.com/">The Red Ferret Journal</A></LI>
+<LI><A href="http://dangerous-angel.blogspot.com/">Dangerous Angel</A></LI>
+<LI><A href="http://www.bobblehead.org/main/">Samira :  Breakbeat Junkie</A></LI>
+<LI><A href="http://zoob.hektik.org/">Zoob's Dubilicious Groove</A></LI>
+<LI><A href="http://www.knobtweakers.net/" title="Free Mp3 Blog">Knobtweakers</A></LI>
+<LI><A href="http://www.svendtofte.com/">Svend Tofte</A></LI>
+<LI><A href="http://www.hebig.org/blog/">hebig.org</A></LI>
+<LI><A href="http://www.dooce.com/">Dooce</A></LI>
+<LI><A href="http://www.catb.org/~esr/" title="A repository of hacker lore.">Eric S. Raymond</A></LI>
+<LI><A href="http://www.lightcycle.org/">Lightcycle</A></LI>
+<LI><A href="http://www.maniacalrage.net/">Maniacal Rage</A></LI>
+<LI><A href="http://xiaxue.blogspot.com/">Xiaxue</A></LI>
+<LI><A href="http://notes.torrez.org/" title="He's funny when he wants to be and he has provided filepile. Praise be to Andre Torrez.">Torrez</A></LI>
+<LI><A href="http://kinkylibrarian.blogspot.com/" title="Nadia">Kinky Librarian</A></LI>
+<LI><A href="http://www.43folders.com/">43 Folders</A></LI>
+<LI><A href="http://kitta.net/">Kitta</A></LI>
+</UL>
+<BR>
+<UL><LI id="style">Style:<UL id="styleswitcher">
+        <LI><A href="http://hifidelity.org/?wpstyle=oldschool">Oldschool</A></LI>
+        <LI><A href="http://hifidelity.org/?wpstyle=spacechopper">Spacechopper</A></LI>
+</UL></LI></UL>
+<BR>
+<A href="http://english-34091048892.spampoison.com"><IMG class="buttons" src="http://pics3.inxhost.com/images/sticker.gif" border="0" width="80" height="15" alt=""></A><BR>
+<A href="http://feeds.feedburner.com/hifidelityorg"><IMG class="buttons" src="http://feeds.feedburner.com/~fc/hifidelityorg" height="26" width="88" alt=""></A>
+</DIV>
+
+ 
+
+</DIV>
+<DIV class="footer"><P>The more head downwards I am, the more I keep inventing new things. - Alice, "Through the Looking Glass" by Lewis Carroll
+<BR>Dropped 28 Querys. Made them hot in 0.136 seconds.<BR>When linking please use <A title="hifidelity.org" href="http://hifidelity.org">hifidelity.org</A> as the title of the link.
+</P>
+<SCRIPT type="text/javascript">
+<!--
+if (typeof sIFR == "function") {
+	sIFR();
+	// You must also edit sifr-local.css to hide the replaced elements
+	sIFR.replaceElement("div.post h2", named({sFlashSrc: src="http://hifidelity.org/wp-content/plugins/sifr/fonts/1942.swf", sColor: "#000", sCase: "upper"}));
+};
+// -->
+</SCRIPT>
+
+</DIV>
+
+</BODY></HTML>_9http://hifidelity.org/archives/2005/05/19/gtd-tiddlywiki/    1 > G e w Ü ú ßÈÄ¬À/sz∑˜ 
+˝<CEN¶ﬁÂ2qåìIP3j3¡3»4…4˜556©6Ÿ6‚6Ëb˚             5              c7

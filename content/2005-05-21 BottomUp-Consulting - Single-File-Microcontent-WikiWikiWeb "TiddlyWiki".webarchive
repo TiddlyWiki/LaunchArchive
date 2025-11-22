@@ -1,0 +1,742 @@
+bplist00Ò_WebSubresources_WebMainResource¥Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO—/*
+-----------------------------------------------
+Name:     Skin CSS Template: Classic
+Designer: Florian Wilken
+URL:      www.blog.de
+Date:     04.04.2005
+----------------------------------------------- */
+
+@import url(../../rsc/bd_topnavbar.css);	/* Import blogde topnavbar styles */
+@import url(../../rsc/bd_basic.css);	/* Import blogde basic styles */
+
+body {
+	background: #fff;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	color: #000;
+	font: 80% Arial, Helvetica, sans-serif;
+}
+
+/* Page Structure
+----------------------------------------------- */
+#wrap {
+	margin: 0 auto;
+	padding: 0;
+	width: 780px;
+	text-align: left;
+}
+#header {
+	margin: 0 10px 0 10px;
+	border-bottom: 1px solid #999999;
+}
+#content {
+	clear: both;
+	margin: auto;
+	padding: 0;
+	width: auto;
+}
+#left{
+	/* two columns, so leave this empty */
+}
+#right{
+	float: right;
+	width: 250px;
+	margin-right: 10px;
+	padding: 20px 0 0 0;
+}
+#middle{
+	margin-left: 0;
+	margin-right: 280px;
+	padding: 10px;
+}
+#footer {
+	margin: 0;
+	padding: 1em;
+}
+
+/* links
+----------------------------------------------- */
+a {
+	color: #669999;
+	text-decoration: none;
+}
+a:visited {
+	color: #669999;
+	text-decoration: none;
+}
+a:hover {
+	color: #7D7C7C;
+	text-decoration: underline;
+}
+a img {
+  border-width: 0;
+}
+
+/* headings
+----------------------------------------------- */
+h1 {
+	color: #999999;
+	font-size: 160%;
+}
+h2 {
+	color: #999999;
+	font-size: 140%;
+	margin: 0;
+}
+h3 {
+	color: #CC6600;
+	font-size: 120%;
+}
+h4 {
+	color: #7D7C7C;
+	font-size: 100%;
+}
+
+/* #header
+----------------------------------------------- */
+#header-image {
+}
+.header-image-link {
+}
+#header-text {
+}
+#blog-title h1 {
+	margin: 0;
+	padding: 10px;
+	color: #7D7C7C;
+	font-size: 200%;
+	font-weight: bold;
+}
+#blog-title a {
+	color: #7D7C7C;
+	text-decoration: none;
+}
+#blog-title a:visited {
+	color: #7D7C7C;
+	text-decoration: none;
+}
+#blog-title a:hover {
+	color: #7D7C7C;
+	text-decoration: none;
+}
+p.blog-description {
+	margin: 0;
+	padding: 0 10px 20px 10px;
+	color: #7D7C7C;
+}
+/* #content
+----------------------------------------------- */
+
+/* #left
+----------------------------------------------- */
+
+/* #right
+----------------------------------------------- */
+
+/* modules
+----------------------------------------------- */
+.module {
+	margin: 5px;
+	margin-bottom: 20px;
+	padding: 0;
+	border-bottom: 1px dotted #999999;
+}
+.module a {
+}
+.module a:visited {
+}
+.module a:hover {
+}
+.module h3 {
+	margin: 0;
+	padding: 3px;
+	color: #999999;
+}
+.module h4 {
+}
+.module p {
+	margin: 5px;
+}
+.module ul {
+	margin-left: 8px;
+	padding-left: 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	/*list-style-type: disc;*/
+}
+.module ul ul {
+	margin-left: 8px;
+	padding-left: 8px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.module li {
+	margin-left: 5px;
+	padding-left: 0;
+}
+/* module-author */
+#module-author {
+}
+#module-author a {
+}
+#module-author a:hover {
+}
+/* module-calendar */
+#module-calendar {
+}
+caption.bCalendarCaption {
+	width: 90%;
+	margin: auto;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	border-bottom: 0;
+}
+table.bCalendarTable {
+	width: 90%;
+	margin: auto;
+	margin-bottom: 5px;
+	border: solid 1px #ccc;
+	border-collapse: separate;
+}
+table.bCalendarTable tfoot td {
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+}
+table.bCalendarTable tfoot a {
+	text-decoration: none;
+}
+table.bCalendarTable tfoot a:hover {
+	background-color: #78a;
+	color: #fff;
+}
+th.bCalendarHeaderCell {
+	color: #abc;
+}
+#bCalendarToday {
+	background-color: #bce;
+}
+/* module-bloglists */
+#module-bloglists {
+}
+.module-bloglist{
+}
+/* more modules */
+#module-search {
+}
+#module-categories {
+}
+#module-lastcomments {
+}
+#module-rss {
+}
+#module-poweredby {
+}
+#module-friends {
+}
+#module-friends img {
+	border: 1px solid black;
+}
+#module-friends .friends {
+	margin:10px;
+}
+#module-friends .friend {
+	float: left;
+	margin: 5px;
+}
+#module-friends .img {
+}
+#module-friends .login {
+}
+#module-recent-referer {
+}
+#module-top-referer {
+}
+#module-recent-blogs {
+}
+#module-tags-posts {
+}
+
+/* #middle
+----------------------------------------------- */
+
+/* #posts
+----------------------------------------------- */
+#posts {
+}
+.post {
+	margin-bottom: 40px;
+	padding: 0px;
+	border-bottom: 1px dotted #999999;
+}
+.post-date-header {
+	margin-top: 0;
+	border-bottom: 1px solid #999999;
+}
+.post-friends {
+	padding: 5px;
+	border: 1px solid #CC6600;
+}
+.post-title {
+	margin-top: 10px;
+	padding: 0;
+	border: none;
+	color: #CC6600;
+}
+.post-body {
+	margin-top: 20px;
+	padding: 0;
+}
+.post-body p {
+}
+.post-footer {
+	margin-top: 30px;
+	padding: 0;
+	font-size: 90%;
+}
+.post-item-author {
+	font-size: 90%;
+	/*display: none;*/
+}
+.post-item-datetime {
+	font-size: 90%;
+	/*display: none;*/
+}
+.post-item-friends {
+	color: #000;
+	font-weight: bold;
+}
+.post-item-tags {
+
+}
+table.post-item-tags {
+	margin: 0;
+	padding: 0;
+	margin-top: 5px;
+	font-size: 100%;
+}
+table.post-item-tags td {
+	margin: 0;
+	padding: 0;
+	padding-right: 5px;
+	border: none;
+	vertical-align: top;
+}
+.post-item-permalink {
+}
+.post-item-comments {
+	font-size: 110%;
+	font-weight: bold;
+}
+.post-item-trackbacks {
+	/*display: none;*/
+}
+.post-item-trackback-rdf {
+}
+.post-item-emailpost {
+}
+.post-item-edit {
+}
+.post-navigation {
+	padding-top: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* #comments
+----------------------------------------------- */
+div.comment, /* Entire comment block */
+form.comment /* New comment form */
+{ 
+	margin: 1ex 2ex;
+	padding: 0 1ex;
+	border: 1px dotted #999;
+}
+.comment-title {
+	margin: 1ex 0;
+	font-weight: bold;
+}
+.comment-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.comment-text-small {
+	font-size: 80%;
+	margin: 1ex 0;
+}
+input.comment, 
+textarea.comment
+{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 97%;
+	padding: 2px;
+	margin: 0ex;
+}
+select.comment		/* Used by the profile form */
+{
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin: 0ex;
+}
+/* forms: comments and profile */
+form.comment fieldset
+{	/* one form line */
+	border: none;
+	margin: 2ex 0ex;
+	padding: 0ex;
+	/* border: 1px solid #00f; */
+}
+form.comment fieldset label {
+	font-weight: bold;
+}
+form.comment fieldset div.label
+{ /* label of form line */
+	/*float: left;
+	width: 28%;*/
+	text-align: left;
+	padding-top: .5ex;
+	font-weight: bold;
+	/* border: 1px solid #f00; */
+}
+form.comment fieldset div.input
+{ /* input zone of form line */
+	margin: 0 0 0 0;
+	/* border: 1px solid #f00; */
+}
+form.comment fieldset.input{
+	margin: 0;
+	/* border: 1px solid #0f0; */
+}
+form.comment fieldset div.info
+{ /* info zone of form line */
+	margin: 0 0 0 0;
+	padding-top: .5ex;
+	/* border: 1px solid #f00;*/
+}
+
+/* #footer
+----------------------------------------------- */
+#footer p {
+	margin: 0;
+	padding: 0;
+	
+}
+/* #disclaimer
+----------------------------------------------- */
+#disclaimer {
+	margin: 0;
+	padding: 20px 0 10px 0;
+	background: #fff;
+	text-align: center;
+	font-size: 80%;
+}
+
+/* #bloglists
+----------------------------------------------- */
+#bloglist {
+}
+.bloglist-table th {
+	text-align: right;
+	font-weight: bold;
+}
+
+/* #imprint
+----------------------------------------------- */
+#imprint {
+}
+
+/* forms
+----------------------------------------------- */
+input.search {
+	margin-bottom: 1ex;
+	padding: 0;
+	background-color: #fff;
+	border: 2px solid #ccc;
+}
+input.submit,
+input.reset {
+	margin: 4px 0;
+	padding: 1px;
+	background-color: #ddd;
+	color: #78a;
+	border: 1px solid #000;
+	font-weight: bold;
+}
+
+input.submit:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+.bPostfriends {
+	/* border: 1px solid #e1ddce; */
+	color: #f39;
+}
+
+.bPostfriendsBG {
+	/* border: 1px solid #e1ddce; */
+	background-color: #ff9;
+}
+
+_1http://www.blog.de/main/skins/Classic/custom2.cssXtext/cssÓOjGIF89a5  ³ YYWfed¿¿¾ÙÙØ³²±òòòMLJ¦¥¤€~™™˜æååŒŒ‹ÌÌËsrq@?=ÿÿÿ!ù   ,    5   ÿ°9×µkÖË»ÿ39(Q]†‚,+Nåwn—J·øõ’æÂÃöP¨(‹`@h:ŠS`T"L'‹èh[ ¶Aüä$È¤İ0[NŒšÁhpÊ³sÇ°É5;p‚u
+Ty6|6‡€„#ƒ…X$‰5T#3‚‹‘†ˆe™0œ“‘ o¢0˜š§h«²Zv¯¤±¦$G[µo¬¸®—½C·}½Ã¸Å¹»È+¥ª³–Î’”º–°Ê¿ÌØnÏqsWÒxÉ*Œé[]O_`cd Ğ0P3ÁÀ‰3à…«0È !Ä×Ï‡„NT¹â Á€ À‡ ¤É“Á8É2GÊ
+´ä ;_3http://www.blog.de/main/img/logos/blog.de_small.gifYimage/gifÓOùGIF89ax – Ä  ğğğ<<<---KKKááá$$$ùùù000HHHHGG   ÿÿÿ                                             !ù     ,    x –  ÿ`óŒdihª®lë¾/Ítmßx®ï|ïÿ=ÃC,È$OHT:ŸĞ(3J­Z—Ã«v[r¿`c .›sãæymN³ße7|¾•ÓïT;~¯ÔóÿE~€ƒ<‚„‡7†ˆ‹ŠŒ‡ƒ‘’”•{—˜wš›so ¡k£¤md§€¦ª`¬­\¯°Z²³Vµ¶y©¹Ÿ»9>À6Â`Ä7Æ¿O—È@ÌZÎ3Ğ·¾8Î×4ÄØÚØÑÆÀİÑâßÚåÇÙãæßç=ÌëÂôôéíÙöìŞûõü÷úúûçcÌ€xèø\HğÃ}÷ z['¢4»Öí!Ç	+Št¸‘G…ÿ>8ÈC^Ây!#z–²¢K‹îXî¸i Oš(ƒ>ü	'Œ-?Ö£ø1E™Nkˆ{jôdP‰=òê¥s«¨•^¹†…£uì™²¿š&«rñGÛ(h«³òV£+°-«uÜ‹lŞTváÀı%·-êÄº;âÆ$)\:¿GÖRa@$ŠK2½ÚW²Q¬‹zN’YjHÊ5Ã1Ş¬n¦e«T À»ó4gš®«şmÛ	m<Q7ü<”rîãO~¯-™O\ÃÄ›·ZµåfË`Ïf;w.Ş¿k	/Ş
+ùòTÎ£‡¢~½ï®î¯´d>}#öïÉ¯ßÿş<ü ˆCÚ€`ÿ‚4,È 2ø€ú&@…×]ˆa}nˆ_‡îbˆşHb€&H`Š*Èb‹
+¾cƒ2Îa3>€#Œ:Ú¸CñP‡!µÕ$!97`±mE$pÏõãO“¼<	u¢™ƒ˜*Vj”åcßurKr'&P·}ZXgj&Õ_]æ ;>!çVt†A¥-yú˜CŸ~Ş h 5ÊE][Bù†¡[ 
+E¢T0Šaäö˜`K)	Uuš!éFi6'ešCá$ÚŸšêj»	‡•jº-Šd«h’Y*`­İYFª›Rõe¬¾4Ü®³®Ú­Œ©+¼&+¤¥ÎN•é˜ÒÊzv¤F`F³Ghë"ÜÂ „
+Z@¹6 p.º4¨Ën»ë¾ëî»Ì+o¼ìÚ›/¾èêÛ/¿åú0À„
+\0Áœ0Â~*Ü0Ã>:1Ä6J\1Å3Zœ1ÆârÜ¢ÆÓÁ«H@É',2	ÀàòË0Ç,ó!  ;_0http://www.blog.de/main/img/standard_profile.jpgZimage/jpegÓO­GIF89a$  Õ  ÕXñÔÀá]ÿöğÿrà§‚÷éàå^ôdíÉ±ğcúôïßrÿ«s÷àĞĞr3ç½¡ÿãÑŸAÿæÕå„Cÿ…4ÿÚÁÎUÍg#ÿíáç³‘è«‚Ôağläw.İn$ğÁ¡ø×Áÿ|$æ{3óÂ¡ú–Sğ®‚!ù²‚ÿÑ²ÿDÿ´‚}3ÿšWÂP?ÿÈ¤ÿÿÿÿf                                        !ù     ,    $   ÊÀ	lH,È£§%k:ŸĞ¨4ÊbN¯XªµÙˆ2U,BXÅb•&ìY¦Uh(– db‹9AÎ1.b RqO"11.fŠ+g‚1„†[N%g.2ft$–ƒ…ZQb1Mf g¨˜ªP‡NŒ±1#t.·™«O)g¢Ã. ·++*O»2]Ÿ(®²N·€1&
+NŞ2ÕM..2ôçNõ2
+õşù2ŞeHEÂ‹ƒ*\Èpá‰  ;_#http://www.blog.de/main/img/xml.gifÓO+GIF89a  €  ÿÿÿÿÿÿ!ù
+  ,       L ;_%http://www.blog.de/main/img/blank.gifÔ_WebResourceTextEncodingNameUUTF-8OBê<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE"><HEAD><TITLE>BottomUp-Consulting - Single-File-Microcontent-WikiWikiWeb "TiddlyWiki"</TITLE>
+        
+        <BASE href="http://www.blog.de/main/skins/Classic/">
+        <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <META name="description" content="">
+        <META name="keywords" content="">
+        <LINK rel="alternate" type="text/xml" title="RDF" href="http://www.blog.de/main/xmlsrv/rdf.php?blog=1740">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.blog.de/main/xmlsrv/rss.php?blog=1740">
+        <LINK rel="alternate" type="text/xml" title="RSS 2.0" href="http://www.blog.de/main/xmlsrv/rss2.php?blog=1740">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://www.blog.de/main/xmlsrv/atom.php?blog=1740">
+        <LINK rel="pingback" href="http://www.blog.de/main/xmlsrv/xmlrpc.php">
+        <LINK rel="stylesheet" href="custom2.css" type="text/css"></HEAD><BODY>
+
+
+<DIV id="topnavbar">
+        
+        <DIV id="tnb_header">                
+                <TABLE cellpadding="5" cellspacing="0" border="0" width="100%">                <TBODY><TR><TD align="left" valign="middle" width="150"><A href="http://www.blog.de"><IMG src="http://www.blog.de/main/img/logos/blog.de_small.gif" alt="blog.de"></A></TD><TD align="center" valign="middle">                        <A href="http://www.blog.de/main/htsrv/register.php?redirect_to=%2Fmain%2Findex.php%2Fbottomup-consulting%2F2005%2F05%2F12%2Fsingle_file_microcontent_wikiwikiweb_tid%3Fblog%3D1740%26amp%3Bc%3D1%26amp%3Bmore%3D1%26amp%3Btitle%3Dsingle_file_microcontent_wikiwikiweb_tid%26amp%3Btb%3D1%26amp%3Bpb%3D1%26amp%3Bdisp%3Dsingle" title="Registriere dich, um einen Account zu erstellen...">Create your own blog for free</A>                   
+                        </TD><TD align="right" valign="middle" width="300">                        <A href="http://www.blog.de/main/htsrv/login.php?redirect_to=%2Fmain%2Findex.php%2Fbottomup-consulting%2F2005%2F05%2F12%2Fsingle_file_microcontent_wikiwikiweb_tid%3Fblog%3D1740%26amp%3Bc%3D1%26amp%3Bmore%3D1%26amp%3Btitle%3Dsingle_file_microcontent_wikiwikiweb_tid%26amp%3Btb%3D1%26amp%3Bpb%3D1%26amp%3Bdisp%3Dsingle" title="Melde dich an, wenn du einen Account hast...">Login</A>                        </TD></TR></TBODY></TABLE>
+        
+        </DIV>
+
+</DIV>
+
+<DIV class="clear"></DIV>
+
+<DIV id="wrap">
+        
+        
+
+<DIV id="header">
+        
+        <DIV id="header-text">                <DIV id="blog-title"><H1><A href="http://www.blog.de/main/index.php/bottomup-consulting">BottomUp-Consulting</A></H1></DIV>
+                <P class="blog-description">Gedanken, Erfahrungen, Ideen, Analysen und mehr...</P>
+        </DIV>
+        
+</DIV>
+
+
+                <DIV id="content">        
+                                <DIV id="left">                </DIV>
+                                
+                                <DIV id="right">                
+                        
+<DIV id="module-author" class="module">
+        
+        <H3><A href="http://www.blog.de/main/admin/bd_profile.php?uid=86" title="Ãœber mich">Ãœber mich</A></H3>
+
+        <P class="center"><A href="http://www.blog.de/main/admin/bd_profile.php?uid=86" title="Profil ansehen"><IMG src="http://www.blog.de/main/img/standard_profile.jpg" alt="ssch" title="ssch" class="middle"></A></P>
+        
+        <P class="center">        <A href="http://www.blog.de/main/admin/bd_profile.php?uid=86" title="Profil ansehen">ssch</A>        </P>
+
+</DIV>
+                        
+                        
+<DIV id="module-bloglists">
+        
+                
+</DIV>
+                                
+<DIV id="module-tags-posts" class="module">
+                
+        <H3>Tags</H3>
+        
+        <UL>        <LI><A href="http://www.blog.de/main/index.php/bottomup-consulting?tag=Wikiwikiwebs">Wikiwikiwebs</A> (1)</LI>       </UL>
+</DIV>
+                        
+<DIV id="module-search" class="module">
+        
+        <H3>Suche</H3>
+        
+        <FORM action="http://www.blog.de/main/index.php/bottomup-consulting" method="get" name="SearchForm" class="search">                <P><INPUT type="text" name="s" size="20" value="" class="search"><BR></P>
+                <P>                <INPUT type="radio" name="sentence" value="AND" id="sentAND" checked="checked"><LABEL for="sentAND">Alles</LABEL><BR>
+                <INPUT type="radio" name="sentence" value="OR" id="sentOR"><LABEL for="sentOR">ein Wort</LABEL><BR>
+                <INPUT type="radio" name="sentence" value="sentence" id="sentence"><LABEL for="sentence">ganzen Ausdruck</LABEL>
+                </P>
+                <P><INPUT type="submit" name="submit" class="submit" value="Suche"></P>
+        </FORM>
+        
+</DIV>
+
+                        
+<DIV id="module-archives" class="module">
+                
+        <H3>Archive</H3>
+        
+        <UL>        <LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2005/05/">Mai 2005</A> <SPAN class="dimmed">(3)</SPAN></LI>
+<LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2005/03/">MÃ¤rz 2005</A> <SPAN class="dimmed">(1)</SPAN></LI>
+<LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2004/11/">November 2004</A> <SPAN class="dimmed">(2)</SPAN></LI>
+<LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2004/10/">Oktober 2004</A> <SPAN class="dimmed">(1)</SPAN></LI>
+<LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2004/07/">Juli 2004</A> <SPAN class="dimmed">(6)</SPAN></LI>
+<LI><A href="http://www.blog.de/main/index.php/bottomup-consulting/2004/06/">Juni 2004</A> <SPAN class="dimmed">(5)</SPAN></LI>
+        <LI><A href="http://www.blog.de/main/index.php/bottomup-consulting?disp=arcdir">mehr...</A></LI>
+        </UL>
+
+</DIV>
+                        
+<DIV id="module-rss" class="module">
+                        
+        <H3>Syndiziere dieses Blog</H3>
+        <DIV class="right"><IMG src="http://www.blog.de/main/img/xml.gif" alt="XML" width="36" height="14"></DIV>
+        
+        <UL>                <LI class="small">                        RSS 0.92:
+                        <A href="http://www.blog.de/main/xmlsrv/rss.php?blog=1740">EintrÃ¤ge</A>,
+                        <A href="http://www.blog.de/main/xmlsrv/rss.comments.php?blog=1740">Kommentare</A>
+                </LI>
+                <LI class="small">                        RSS 1.0:
+                        <A href="http://www.blog.de/main/xmlsrv/rdf.php?blog=1740">EintrÃ¤ge</A>,
+                        <A href="http://www.blog.de/main/xmlsrv/rdf.comments.php?blog=1740">Kommentare</A>
+                </LI>
+                <LI class="small">                        RSS 2.0:
+                        <A href="http://www.blog.de/main/xmlsrv/rss2.php?blog=1740">EintrÃ¤ge</A>,
+                        <A href="http://www.blog.de/main/xmlsrv/rss2.comments.php?blog=1740">Kommentare</A>
+                </LI>
+                <LI class="small">                        Atom:
+                        <A href="http://www.blog.de/main/xmlsrv/atom.php?blog=1740">EintrÃ¤ge</A>,
+                        <A href="http://www.blog.de/main/xmlsrv/atom.comments.php?blog=1740">Kommentare</A>
+                </LI>
+        </UL>
+        
+        <P class="small right"><A href="#" onclick="newWindow = window.open('http://www.blog.de/main/htsrv/bd_help.php#11','window','width=574,height=380,left=50,top=50,toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');newWindow.focus();return false;" title="RSS">Was ist RSS?</A></P>
+
+</DIV>
+
+                        
+<DIV id="module-poweredby" class="module">        
+        <P>Powered by <A href="http://www.blog.de" title="www.blog.de">www.blog.de</A></P>
+</DIV>
+                                                                                                                                        
+                </DIV>
+                        
+                
+                                <DIV id="middle">
+                        
+<H3> Eintrag-Details: Single-File-Microcontent-WikiWikiWeb "TiddlyWiki"</H3>
+
+<DIV id="posts">
+
+        
+                
+                
+                
+                
+        <DIV class="post" lang="de-DE">                
+                                
+                <H2 class="post-title">Single-File-Microcontent-WikiWikiWeb "TiddlyWiki"</H2>
+                <SPAN class="post-item-author">von <A href="http://www.blog.de/main/index.php/bottomup-consulting?author=86" title="Zeige alle EintrÃ¤ge dieses Autors">ssch</A></SPAN>
+                <SPAN class="post-item-datetime"> @ 12.05.05 - 20:40:12</SPAN>
+                
+                <DIV class="post-body">                                <P>Seit einiger Zeit ist <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> in der Version 3 verÃ¶ffentlicht.<BR>
+TiddlyWiki besteht nur aus einer einzigen html-Datei (JavaScript). Die hat es allerdings in sich:<BR>
+Eine Suchmaschine ist ebenso enthalten, wie die Anzeige der zuletzt bearbeiteten Seiten. Alle vorhandenen Seiten kÃ¶nnen aufgelistet werden. HauptmenÃ¼, Wikiname u.s.w. kÃ¶nnen einfachs angepasst werden. Wer am Layout nichts drehen will, kommt problemlos ohne html/css-Kenntnisse aus.<BR>
+Beim Speichern wird die alte html-Datei mit Datum und Uhrzeit gesichert. So bleiben alle frÃ¼heren Versionen erhalten.<BR>
+Wunder darf man nicht erwarten aber schneller und einfacher kann man ein (plattformunabhÃ¤ngiges) WikiWikiWeb nicht aufsetzen.<BR>
+Leider gibt es keine zusammengefasste Hilfe, sondern einzelne Seiten zur Formatierung und TiddlyWiki liegt auch nur in englischer Sprache vor.<BR>
+Traurig fÃ¼r Opera-Fans: TiddlyWiki lÃ¤uft nur im <A href="http://www.mozilla.org/products/firefox/">Firefox</A> oder im MS Internet Explorer (ab V6?).<BR>
+Bei WindowsXP ServicePack2Problems beachten!</P>
+        <P>Unbedingt 'mal anschauen! Und wenn es auch nur als persÃ¶nliches Notizbuch eingesetzt wird. FireFox und TiddlyWiki kÃ¶nnen problemlos auf einem USB-Stick o.Ã„. untergebracht werden und sollten auch in der restriktivsten Firmen-IT-Umgebung eingesetzt werden kÃ¶nnen ;-)</P>
+        <P>TiddlyWiki ist auch fÃ¼r den kommerziellen Einsatz frei.
+</P>
+                                        </DIV>
+                
+                <DIV class="post-footer">                        
+                        <SPAN class="post-item-comments"><A href="http://www.blog.de/main/index.php/bottomup-consulting/2005/05/12/single_file_microcontent_wikiwikiweb_tid#comments" title="Zeige Kommentare / Hinterlasse Kommentar">Kommentar schreiben</A> | </SPAN>
+                        <SPAN class="post-item-emailpost"><A href="http://www.blog.de/main/htsrv/bd_emailpost.php?blogID=1740&postID=21047" onclick="javascript:window.open('http://www.blog.de/main/htsrv/bd_emailpost.php?blogID=1740&postID=21047','recommend','width=600,height=550,toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,copyhistory=yes,resizable=yes'); return false;">Eintrag versenden</A></SPAN>
+                        <SPAN class="post-item-trackbacks"> | <A href="http://www.blog.de/main/index.php/bottomup-consulting/2005/05/12/single_file_microcontent_wikiwikiweb_tid#trackbacks" title="Zeige Trackbacks / Trackback Adresse fÃ¼r diesen Eintrag">Trackback (0)</A></SPAN>
+                        <SPAN class="post-item-pingbacks"></SPAN>
+                        <SPAN class="post-item-trackback-rdf"></SPAN>
+                        <SPAN class="post-item-permalink right"> | <A href="http://www.blog.de/main/index.php/bottomup-consulting/2005/05/12/single_file_microcontent_wikiwikiweb_tid" title="Permanenter Link zum ganzen Eintrag">Permalink</A></SPAN>
+                        <SPAN class="post-item-edit"></SPAN>
+                        
+                        <TABLE class="post-item-tags">                        <TBODY><TR><TD width="120"></TD><TD>Tags:</TD><TD>Wikiwikiwebs(1) </TD></TR></TBODY></TABLE>
+                        
+                </DIV>
+                
+                        <A name="feedbacks"></A>
+                        <A name="comments"></A>
+                        <A name="trackbacks"></A>
+                
+                <H4>Trackback Adresse fÃ¼r diesen Eintrag:</H4>
+        <CODE>http://www.blog.de/main/htsrv/trackback.php/21047</CODE>
+                
+                
+                <H4>Kommentare, Trackbacks:</H4>
+        
+        <DIV class="comment"><P>Bisher keine Kommentare/Trackbacks fÃ¼r diesen Eintrag...</P></DIV>           <H4>Kommentar schreiben:</H4>
+                
+                                
+                                <FORM action="http://www.blog.de/main/htsrv/comment_post.php" method="post" class="comment">                
+                        <INPUT type="hidden" name="comment_post_ID" value="21047">
+                        <INPUT type="hidden" name="redirect_to" value="/main/index.php/bottomup-consulting/2005/05/12/single_file_microcontent_wikiwikiweb_tid?blog=1740&c=1&page=1&more=1&title=single_file_microcontent_wikiwikiweb_tid&tb=1&pb=1&disp=single">
+
+                        <FIELDSET>  <DIV class="label"><LABEL for="author">Name:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="author" id="author" size="40" maxlength="100" value="" class="comment">  <SPAN class="notes"></SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="email">EMail:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="email" id="email" size="40" maxlength="100" value="" class="comment">  <SPAN class="notes">Deine EMail-Adresse wird <STRONG>nicht</STRONG> angezeigt.</SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="url">Seite/URL:</LABEL></DIV>  <DIV class="input"><INPUT type="text" name="url" id="url" size="40" maxlength="100" value="" class="comment">  <SPAN class="notes">Deine URL wird angezeigt.</SPAN></DIV></FIELDSET>
+
+<FIELDSET>  <DIV class="label"><LABEL for="comment">Text:</LABEL></DIV>  <DIV class="input"><FIELDSET class="input"><IMG src="http://www.blog.de/main/img/blank.gif" width="1" height="1" alt=""><TEXTAREA name="comment" id="comment" rows="12" cols="40" class="comment"></TEXTAREA></FIELDSET>  <SPAN class="notes">Erlaubte XHTML Tags: &lt;p, ul, ol, li, dl, dt, dd, address, blockquote, ins, del, a, span, bdo, br, em, strong, dfn, code, samp, kdb, var, cite, abbr, acronym, q, sub, sup, tt, i, b, big, small&gt;<BR>URLs, EMail, AIM und ICQs werden automatisch konvertiert.</SPAN></DIV></FIELDSET>
+
+                                        
+                        <FIELDSET>                                <DIV class="label">Optionen:
+                                <BR>Â                                 </DIV>
+                                <DIV class="input">                                                                <INPUT type="checkbox" class="checkbox" name="comment_autobr" value="1" checked="checked" tabindex="6" id="comment_autobr"> <LABEL for="comment_autobr">Auto-BR</LABEL> <SPAN class="notes">(ZeilenumbrÃ¼che werden zu &lt;br /&gt;)</SPAN><BR>
+                                                                        <INPUT type="checkbox" class="checkbox" name="comment_cookies" value="1" checked="checked" tabindex="7" id="comment_cookies"> <LABEL for="comment_cookies">Erinner mich</LABEL> <SPAN class="notes">(Setze Cookies fÃ¼r Name, EMail &amp; URL)</SPAN>
+                                                                        </DIV>
+                        </FIELDSET>
+                
+                        <FIELDSET>                                <DIV class="input">                                        <INPUT type="submit" name="submit" class="submit" value="Kommentar senden" tabindex="8">
+                                </DIV>
+                        </FIELDSET>
+                
+                </FORM>
+                
+                
+        </DIV>
+                
+                
+        <DIV class="post-navigation">        
+                        </DIV>
+
+</DIV>
+
+
+
+
+
+                </DIV>
+                                
+                <DIV class="clear"></DIV>
+        
+        </DIV>
+        
+        
+<DIV id="footer">
+        </DIV>
+        
+</DIV>
+
+<DIV id="disclaimer">        <A href="http://www.blog.de/main/index.php?blog=1740&disp=imprint" title="Impressum">Impressum</A>
+         | 
+        Die auf diesen Webseiten sichtbaren Daten und Inhalte stammen von Privatpersonen. <A href="http://www.blog.de">www.blog.de</A> ist hierfÃ¼r nicht verantwortlich. Weitere Informationen hierzu finden sich <A href="http://www.blog.de/main/htsrv/bd_termsofservice.php" onclick="javascript:agb=window.open('http://www.blog.de/main/htsrv/bd_termsofservice.php','Allgemeine GeschÃ¤ftsbedingungen','toolbar=no,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=600,height=600');return false;">hier</A>.</DIV>
+
+
+
+</BODY></HTML>_ihttp://www.blog.de/main/index.php/bottomup-consulting/2005/05/12/single_file_microcontent_wikiwikiweb_tidYtext/html    1 7 > P _ u  D M T!Â!ø""	&&9&D&K'ü("()(W((ˆ(¦(¬kšl                           l

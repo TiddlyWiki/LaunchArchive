@@ -1,0 +1,1318 @@
+bplist00Ó?D_WebSubresources_WebMainResource_WebSubframeArchives¯ !"#$%&'()*+,-0369:;<Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO%)body
+{
+	margin: 20px 20px 20px 20px;
+	background: #fdf6e9;
+	font-family: georgia, verdana, arial, Sans-Serif;
+	color: #333;
+}
+
+A
+{
+	color: #993300;
+	font-family: verdana, arial, Sans-Serif;
+	text-decoration: none;
+}
+A:link
+{
+	color: #993300;
+	text-decoration: none;
+}
+A:visited
+{
+	color: #993355;
+	text-decoration: none;
+}
+A:active
+{
+	color: #FF0000;
+}
+A:hover
+{
+	color: #FF0000;
+}
+
+h1
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFCC66;
+	font-size: 1.8em;
+}
+
+h2
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAAA;
+	font-size: 1.5em;
+}
+
+h3
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAC0;
+	font-size: 1.0em;
+}
+
+h4
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAC0;
+	font-size: 0.9em;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+h5
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAC0;
+	font-size: 0.85em;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+select, input, textarea
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+
+td
+{
+	font-size: 0.9em;
+}
+
+#header
+{
+	font-family: georgia, verdana, arial, Sans-Serif;
+	color: #FF8000;
+	font-weight: bold;
+	border-left: 1px dotted #FFF;
+	border-right: 1px dotted #FFF;
+	border-top: 1px dotted #FFF;
+	background: #FF9933;
+	padding: 20px;
+	margin: 0;
+}
+
+#logoarea
+{
+	width: 100%;
+	height: 100px;
+	border: 2px dotted #993300;
+	padding: 2px;
+	position: relative;
+}
+#logoimage
+{
+	position: absolute;
+	right: 10px;
+	padding: 2px;
+}
+#title
+{
+	color: #fff;
+	font-size: 2em;
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#subtitle
+{
+	font-family: georgia, verdana, arial, Sans-Serif;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+	background: #993300;
+	text-align: center;
+	clear: left;
+	width: 330px;
+}
+
+#mainmenuarea
+{
+	border-top: 1px dotted #993300;
+	border-bottom: 1px dotted #993300;
+	background: #FFCC66;
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+.adminNavbarStyle
+{
+	margin: 0;
+	padding: 5px;
+	padding-left: 15px;
+	list-style-type: none;
+}
+
+.adminNavbarStyle LI
+{
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	border-color: #993300;
+	background-color: #FFEAC0;
+	font-size: 0.9em;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.adminNavbarStyle LI A
+{
+	color: #993300;
+	font-family: verdana, arial, Sans-Serif;
+	text-decoration: none;
+}
+.adminNavbarStyle LI A:link
+{
+	color: #993300;
+	text-decoration: none;
+}
+.adminNavbarStyle LI A:visited
+{
+	color: #993355;
+	text-decoration: none;
+}
+.adminNavbarStyle LI A:active
+{
+	color: #FF0000;
+}
+.adminNavbarStyle LI A:hover
+{
+	color: #FF0000;
+}
+
+.adminNavbarStyle a
+{
+	margin: 5px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.error
+{
+	color: #c00;
+}
+
+.submenu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 3px;
+}
+
+.submenu li
+{
+	margin: 1px;
+}
+
+.submenulink
+{
+	font-size: 0.85em;
+	color: #600;
+}
+
+#content
+{
+	margin: 0;
+	padding: 0;
+}
+
+#main
+{
+	float: left;
+	width: 75%;
+	padding: 15px 15px 15px 15px;
+	background: #FFFFFF;
+	border: 1px dotted #993300;
+}
+
+#side1
+{
+	align: center;
+	text-align: justify;
+	position: absolute;
+	right: 20px;
+	clear: right;
+	width: 20%;
+	background: #FFCC66;
+	border: 1px dotted #FFF;
+}
+
+.section
+{
+	margin-left: 10px;
+	padding: 1px;
+	border: 1px dotted #FFF;
+}
+
+.section h3
+{
+	padding: 2px;
+	margin-top: 1px;
+	margin-bottom: 4px;
+}
+
+.tbl
+{
+	border: 6px solid #FFFFFF;
+}
+
+.tblvalue
+{
+	font-weight: bold;
+}
+
+.articlelist
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.articlelist li
+{
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	padding-top: 13px;
+	background-image: url(../Images/bgitem.gif);
+	background-repeat: no-repeat;
+}
+
+.articlesub
+{
+	color: #666;
+	font-size: 0.8em;
+	border-top: dashed 1px #ccc;
+}
+
+.articlecontent
+{
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	padding-top: 13px;
+	background-image: url(../Images/bgitem.gif);
+	background-repeat: no-repeat;
+}
+
+.articlecomments
+{
+	margin: 0px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.articlecomments li
+{
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	border-bottom: solid 1px #eee;
+}
+
+.articleerror
+{
+	color: #c00;
+}
+
+.selected
+{
+	background: red;
+}
+
+.footer
+{
+	font-family: verdana, arial, Sans-Serif;
+	color: #666;
+	font-size: 10px;
+	font-weight: normal;
+	background: #fff;
+	line-height: 14px;
+	padding: 10px;
+	border-top: 1px dotted #6C6457;
+}
+
+.configControlStyle
+{
+	font-size: 11px;
+	font-family: Tahoma;
+}
+
+.configLabelColumnStyle
+{
+	vertical-align: top;
+}
+
+.configLabelStyle
+{
+	margin-right: 10px;
+	font-size: 11px;
+}
+
+.configSectionStyle
+{
+	border: 1px dashed #999;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	vertical-align: middle;
+}
+
+.configSectionTitleStyle
+{
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #999;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.statsTableColumnStyle
+{
+	border: solid 1px;
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.statsTableDateColumnStyle
+{
+	border: solid 1px;
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	width: 25%;
+	text-align: left;
+}
+
+.statsTableFooterColumnStyle
+{
+	border-left: solid 1px;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+	border-top: solid 2px;
+	padding: 3px;
+	font-weight: bold;
+}
+
+.statsTableFooterNumColumnStyle
+{
+	border-left: solid 1px;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+	border-top: solid 2px;
+	padding: 3px;
+	width: 15%;
+	font-weight: bold;
+	text-align: right;
+}
+
+.statsTableHeaderColumnStyle
+{
+	border-left: solid 1px;
+	border-right: solid 1px;
+	border-bottom: solid 2px;
+	border-top: solid 1px;
+	padding: 3px;
+	font-size: 105%;
+	font-weight: bold;
+}
+
+.statsTableNumColumnStyle
+{
+	border: solid 1px;
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	width: 15%;
+	text-align: right;
+}
+
+.statsTableStyle
+{
+	margin-bottom: 10px;
+	border: solid 1px;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.radioMenuLinkFont
+{
+	font-family: verdana, arial, Sans-Serif;
+	color: #993300;
+	font-size: 10px;
+	font-weight: bold;
+}
+.radioMenuLink
+{
+	font-family: verdana, arial, Sans-Serif;
+	color: #993300;
+	font-size: 10px;
+	font-weight: bold;
+}
+a:link.radioMenuLink
+{
+	color: #993300;
+	text-decoration: none;
+}
+a:visited.radioMenuLink
+{
+	color: #993300;
+	text-decoration: none;
+}
+a:hover.radioMenuLink
+{
+	color: #993300;
+	text-decoration: underline;
+}
+
+#content p:first-letter
+{
+	font-weight: bold;
+	color: #FF8000;
+	font-family: erdana, arial, Sans-Serif;
+}
+.categoryListCellStyle
+{
+	text-align: left;
+}
+
+
+.date
+{
+	font-family: verdana, arial, Sans-Serif;
+	font-size: 11px;
+	color: #666666;
+	font-weight: bold;
+	border-bottom: 1px solid #999;
+	margin-bottom: 10px;
+	background: #FFCC66;
+}
+
+.hCalendarStyle, .dCalendarStyle
+{
+	font-family: verdana, arial, Sans-Serif;
+	border: 2px dotted #FF9933;
+	background: #FFFFC8;
+}
+.hCalendarMonthYearRow, .dCalendarMonthYearRow
+{
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 14px;
+	padding: 2px;
+	text-align: center;
+	width: 100%;
+	background: #FF9933;
+}
+.hCalendarMonthYearRow td, .dCalendarMonthYearRow td
+{
+	color: #FFFFFF;
+}
+.hCalendarNextPrevStyle a, .dCalendarNextPrevStyle a
+{
+	color: #FFFFFF;
+}
+.hCalendarNextPrevStyle a:visited, .dCalendarNextPrevStyle a:visited
+{
+	color: #FFFFFF;
+}
+.hCalendarDayNameRow, .dCalendarDayNameRow
+{
+	color: #993300;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 14px;
+	padding: 2px;
+}
+.hCalendarDay a, .dCalendarDay a
+{
+	color: #FF0000;
+}
+.hCalendarDay a:visited, .dCalendarDay a:visited
+{
+	color: #993300;
+}
+.hCalendarDayLinked, .dCalendarDayLinked
+{
+	color: #666;
+	background-color: #D6802A;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 14px;
+	padding: 2px;
+}
+.hCalendarDayCurrent, .dCalendarDayCurrent
+{
+	color: #FFFFFF;
+	background-color: #993300;
+	font-weight: normal;
+	line-height: 14px;
+}
+.hCalendarDayCurrent a, .dCalendarDayCurrent a
+{
+	color: #FFFFFF;
+}
+.hCalendarDayCurrent a:visited, .dCalendarDayCurrent a:visited
+{
+	color: #000000;
+}
+td
+{
+	font-family: verdana, arial, Sans-Serif;
+	color: #666666;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 14px;
+}
+
+a.TitleLinkStyle
+{
+	white-space: nowrap;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAC0;
+}
+a:active.TitleLinkStyle
+{
+	color: #0000FF;
+}
+a:hover.TitleLinkStyle
+{
+	color: #0000FF;
+}
+
+.marker
+{
+	text-align: center;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-color: #FF8000;
+	background-color: #FFEAAA;
+}
+.section LI
+{
+	text-align: justify;
+	list-style-position:inside;
+	margin-left: 20px;
+}
+
+.blogStats
+{
+	font-variant: small-caps;
+	color: #333;
+	line-height: 14px;
+	padding: 2px;
+	width: 80%;
+	border: 1px dashed #FF8000;
+	background: #FFEAAA;
+	margin-left: auto; margin-right: auto;
+}_$http://www.ayende.com/Css/ayende.cssXtext/cssÓOQJÿØÿà JFIF   d d  ÿì Ducky     P  ÿî Adobe dÀ   ÿÛ „ 		
+
+					ÿÀ  \, ÿÄ µ           	                !1A"Qa2qB#‘R3$¡b	Á4%Ñá’r‚ƒ£&     !1AQaq"‘¡±Á2ğÑá#BRbr‚ñ²Ò3S$’âcÿÚ   ? õ²&ã‰é§¥M=!âÓJEAUs³¢İ¥ê	5è’íïÔÜ@ÙÎ¸¶Æ ë“ÔTs$û1[jÃ4¡ª¥ß
+~æN”EÙüi®äÔÖ'&Ø…‡ÉmM Ÿ"C·OÇM•’ô\åª»wFèú‡W=ô¿6ÎÛècÜ4&#rEeTêQ§Â£ÓÓÁ<['ÊŸ:~âŸS£ù‹r©¯İ!Hô%Â¸ğãºá—+ JœO†7-™ÌQJš[ èZ÷Uuß“Ó¸’Ä€í¹•Im$º„üY‘¨jğ¡ÃQÚ7V©±<	åTóîr|°`ŞB¬Èß-İbûnšÚP¥4ÊÖ©§´±SsfÙgÖ<-s5¡´¾-€ÔãŸe6?su— E\RÑ[	[M£%¯©Î§Ø1bÙe|¬‰¬:ˆÀÍ'Ñ`cä.ÀIÈUGÈœóÄÖkëZó½ Ú.ÉC}ø©K|•’RÒWLı¸spÚ¯n2'i‡«:…å½¸%ÒWøÃ’¸úİfzû7yÂµ²QU8·d€(+¨;g³İµ…Ú\ÈgQºÜ sÃTÌåQ6ß#í}øÛ©¸!İQ–”c· 0â©%Å¶”=Ç“fÜIk´!>ú3w+6«u]ÔÍtYlÏ9ó{”VeJ¢/ €U¦>´Û®á$¾2¤ğOÎ£uyo |zón‡¤|ÓÒ•ºê¥%K¾ÈURkøbj¼t%àI*".jCp¶l¸¹¤ ãŸ×}ÜÛÃ·—p»@·F” bt—ËI'Ú§
+zõÁåÙ¥èèdD¸åÙß
+-Í¦]N ö÷Pİ›ºv‹ˆP°îKFàyÆ§Dim¼”¯ UV¸^Çc»³öÉ$qçë£Şî°]^€e<'pÄµÛ§Íº¥L°ÜrâŞZ’–…35QP ‹m/ÇÂåNÏVt”ÒÀç7LEíü«Ÿl¼óÃ·ëë¶È\lŸ9å”Éa¢êÒÚPróiË¦GŒòış½OŒ£½Ú²~ílÖ#^<>ÚyÜÜÛÆeqY¹oë[m>‚ÛbJÖh¥ŠÒ’¢f,¤Ú¯µ±…Á8ä;ªº+ëbœí%xf{è¥ºóé3.-Í¶w[{×©.²µ gRJ÷b±Û&àĞ¥@#ÇßVİlÜKõ!C‡
+6æîÛS$Â·¢æÅX‘ıZZu
+Z[¥+¤záÙ,.XŞ›€Õ‰Ã/]$Ë¸Xí`”ÀvÖ	»Øwh]î­-R•Ûµ‡ÕU(¤@}08ö{—L]+I§&çbÀ)J[Ÿwqä+ûQ®»®Ñ·V„·lÆ™yTÌ’¾„-såë›‰µ62?)«}æ(bÒç‡8ú©Úê·]c@]¢T[„P×ó¡<‡JÍ1JˆÃßEzhˆà8¾œi1qlKP)<rôaA976–×µ³;tŞXÛ6¤¥(“>s”GÀ€š’}Àc›†×ys¦6Dá†9~u+Ëx	s¤®şTµ²¹›Š·®–]ùí§­êT­9Ö€1Û]’ò6—9®k½µ½Î84áì¨NsON¼E³FŞö·¯í”Ù¢÷ä:îuªÒÓk¡ö]ÆF‰4"vçßEfåfÅn¢AöwU‰oÜø	•t¹Ii”I{¸
+•ÛJPG‡p¦ƒñÇÖ»uänsßRx'ç\¹½¶{ZÖ< j3;’Ísƒ)v»Ú}÷ÜKˆaÔ­²ß…T’F"í®ñÑ»K\IÃ½uÖîÍ‘ºœÒĞ8ç[†àÙj‹2ÙlwîQ’=SIUBºœ&€Wİ‚?h{`Ò"*}œ×w0éµouMÛ±±EL%Şu‡\u •!Aëï©Û­İjp‰B¬¯îÀÄé Úh…³rEĞùy·^qMQ«øFiº1
+‚Jp÷Pnvç¨B Z¢yv½äÛ-ï©»ÔÒBÛQ†ªR5
+8Üy]»”Æîåº£]!§ãÚûë1çùÖ1h
+=¸fgºš¶ö—=¸»vã$Hº0’\¥.¶FZOR±ã‹/>ùZM¶A=°ı—fŞ'’d°Õw”wö^ÆbœşàÈñxíí§«•¶ïl‹Ù—§Ò-)ÉdC:„×¦xò»«k‹viË¨c^ƒmsïV|Èp¢ÜbÊLxÍ¡a¦¤¤<ò<âAÃ/ºd€4*b{)v[½„¸¢‘€í¯¾‘¿™¥Û¢Ö¨ª¢mïI4•¡ğÇİ!ÖÕ):¤»ñÊ¹Õ=$ˆx¿¨
+p·Ã¼Niøˆô™­T¿)R“ü>Ú‘„îmãº”9m7oq%¼e¯ÅÆ™»¯üŸ³òÿ Òôú»´=Êk¦¯ÇİGı2hÁ3ãu[¡½u×Šú2ªºÿ ¸¬·\nÙ{Œ˜Ğ’5¥­Åd¬ÀéìÅFãg%»ˆ„x[i<iëÂ	À2¸+½@p¨6-Ûa„Ãn*ìÚ&÷fª5¢•2Âû|2ÄĞH:—
+=õÜ¸€á¥1«Lî›òQ%Ûô%½­-&1?¨¢ºtQÈ~$ãXèd.ê9pãY–]Â†œøğ¯ÓîıÁ3å±$„9êv;ÎJˆÊƒM@>üW]½·RtÂ„àìW»¶¬­A·gS¼[Ãôª•å.$Hv#Ï4Û²P
+À
+FyõÁhbÔ\ JBöôHÆ•Ä“T‚‹d6©îª‡¶iCá_Ç(@2­ˆŒS¥÷x‰iBÚuPØ(4Š,„Fœ…q(Òg È~L½ğFLnÍÃİ•Z°åÇß›zótã­\á·Ún.­¢Õ.%H!ZIË#îÂÿ Nö=×@•oËÙVö÷¬•· cóv÷W‘ÿ pvëşÈäÖÛÑÑm›.
+eJœÊ5<â–ëƒZİsR‰Ê•®5[-ü“F[#Ëˆ?JßÙÄÂ¬j>5@¿vå®Vİl+<ø³¥[m^÷NâÜ’ÕËc¶4h©S\5	 šgB+K]Ë|´Ùí…Äú§1Œ¤‘çúX9û+/¹\²ÔCÀQÙ;¯™xûdJÜ{;›ì\³Åûiæ£n÷v$É¦X=BŠü?)1Ô¬‚Ó×?\#¶ù»¦Ú]ZÍk<€˜Ä i•3pÃXÒ}ô„–§†HÒÂrQF·İwÒ¤Å
+ç*lÙ >İØº§]!B¡AÅ’|z×V‘Â¯Hh9%0İy˜îí.İ?xİäÁZSİä—J2öŠà$°;S8ŠN»ÍŞ¸‘o'n!$¥ˆóßvClò%Å‘øbL¸kƒÓ]6ê<A+L;mòÖb½giËlÕ¦åCR™PÎ•Il¤àÏ”9 *“B…$Œ1_7-Ê„õ®ã¼¯ó­ªoL˜R®2iÄø…!NG¸Œ+1lGhcpÎ“vıË˜ãmNmÜûõgÛöµY®Û²Û)·S.à‹ä¯LÒ"©”é	ÖGíé‹[6ÜÅÔ{‰%i[§ˆß¤4aGi¹îR¢n)r' ‡£Ix•¸’ 
+I¨{°t„\9WÁ­9
+lºò.Ş«d½á|,éĞôUÍ|!iş”¨ûp«v‘VÄCu¢“vvåäôíÙ»ú/X8'œº;c³nËÚ¥;6÷61ıs$T)ÇmY-dP”KºïñÛ]ı6òİ\†‡¹‘é§-oq 9ÜgÒçr“§5›}ŞüİjŞ°¶ç o5Ş.ÎÚ™¾ì}éb¹>ı²ñk$Ë‚ñ)WÅ’ e(K;Víg¹ÛâÔİ.,‘dA›^=Ü)»¦İƒ¥¨á˜9Š&öÿ pUÂùwIÎ…-Ù“
+ŸyÚx•¸TOíÅ¬7
+ƒ!NÉhQBl·.RÚ»wy6ÏºÓhÛœ¥¹w6Ø´íûS’¢L†½º–”^uÔ:°ïy9àqgsfÎP’HJÇ'J
+ßº·%n+ÍŠÃrFêäíÃ;¾ı—lÁf]òrÛŒßu÷[ŠŠÒÒ¥2ô6É;ˆŒ¢gÂ—¥UÃ:dÛ\ƒ½·>ßı’ñ!v)-Q–ÛŠ(¡h)HN’•$¤hÁ4h{šìÅÍihpãSls÷Î™&ëc“&Ùqti~åe«W‚—ñß‰I# ñâE±k8­—[ï%î€—oWû¥ù´m3*SÏ!Ü…¨¤~ì=(­öQĞÒ„%·ò0YZnİeİW+T$ ;Êi	ö( ÀÜ[«:›cTŠ·øB&ğİ/nÙ2Û™¸å<ô_˜™ºæ ¾ñ%^aPJEkìÅNå¸xœpõS¶ÖB@âğ Á+Ôíó¦l&yq7¡åj¢;uÒ²¥ <dïŞ›[
+ëæ9*«hz…Ò&†<ÅW|ƒ»QéÍ¶¤‘l¶<‡'Í©ş¥æÕ•ôñÇ£ì~AnÛhùf¸XPtàqï÷V'tó{¯îÈÏ€8*a«»½õ[îtÉbıq•1JS³$Äpô)p˜¼ş<¸û<E¡PÌ¥O§:¬óœnç qPPÿ ¥0õeS£=2,˜·8‘MºÑ?E¡Ç¢ÜÛˆËd ´„ ñZÄA?EáÌUTvW^'qÛw=¶Ú†¤z!”¼ø–°´§âN^5Ècòæÿ fc¼}Šæ8¯/XÊ½ãg¸¶mŞ®0N~£	¹ß¶Í·ımÍ–¦Rí¸	ğªQS\(n3Ç‡pÚ„d²Œ…•§ÅˆÌÒ¢9g¾Üdß.î½¼šChZJ@’owg±¿PÅ€pQÛAw›¶ö¹İ!<H4V'í)j‰tÌ&
+Ößm¥¸£02"™×´òNï9’-i<Z®îÆsæ}º^ÉUÄoşéío[ë½{ß)ïúO¡uíiÕì§Åƒ²÷~®®ŸQ5—×Î‡şæÛºZuøÑUÍÿ 
+ç	ğ›%KpéÔu({AéŒäÖî•ÊjNØ‚
+ŞP¢ÈJ¢(¥I®¤œ Ê‡«‰9Ö„»%ãE;é¨…j$j®÷qL*e¬oÆ¶Æye,É[R Ò—[%²HèI®8Ö¶@‡>-NŒ¨À¹òîÅr/–ê[BXî8¢¥),€„€zä Äãqx½U	|$iÄĞÆi×–á$j?£¨{°(ãkœOªˆ÷–µ=tvã)§µÚ›î%Ğâå¨ùR^tŒ¨H g¸ÊCÂQöt[ ªb{ël»•¾RZ¶: ê2NŸ£M~`pW0–˜øPb“CÛ(ÁËT—İ•v­å¶åJa.I•`mÇsĞU!ìkÓ>Z³6±=ÇwÀUÆëv.\Ñ’mp½‡dß·ŞİûóÚ{YÈqï÷ÜlÍ½ùÒÚ€ÂX.L–•%õ!¥ÆÛP ¨×
+y¯rƒlİvIîŒm7D†´¼©kCN–©(\2
+3¯>Şf»‰ÎÈ/oQøË‡wÆÑ³}ÊnËlÛ6‹¼º­?+³_­×u=5	D–d­ˆn,§B ¡å4¡óa3y²ËsŸl†!x¿ÊøŸ5KKu<RF1İJß_E;âmà~5\İ¬nq}·òÛÜ·ÙW~fãíïrÜğn“=\em÷VÍ½P˜Zd  W5W¦C,{Uí³4„hRæªa™ Ö‚	%OìU÷eûg¹\÷GAµrVî±ñ½ÿ í¿ls<n5{»µ&z¥1,,õ¥É*e(i (€N²i6øA,~1çPmÄ	¥û^ÀÛ;²Õ¾îßoPùËgï>6²Ìİí.\i©ö}Ùh¶i\ÖØÃ˜—ÑS‰G˜,'J58äÛ|27N;@Jë.ÒªO}arÚÜ°&ñ=ƒwÿ 3ßy+’¶Şßİ;›ql{…º×aÚLî€†!¼ËHSAiïå)¡@ÕT	2ÎÀhhõc\tÒ;M¹ğıÓln®µóÏ(Ş ğ¯Úäø–»îéÚ1Ùguo	— •Ù-°ûÅL²ò™XSë%A&€Ö¥ÔípuÜ°ä=Aw nSßF¶í»ƒä}£}ôn~&¸ï«eéí½´­»ÏyØÓ®0Cw„;
+d[ŒT´—Ø}*Zt©ÛR3:TŒ=`o²—q$ã@Ş<7±¸LmM¥Î}ÂoÎW¹Z¡Ü÷hâ´3oí4Ìm.50‘ÔÍÊa
+Ë0ªàmµˆÒ=5#+‡x°_¸×wßø›vŞé¦×…¼xÃ~."­ò/[jêÑTY2£8u³!•Õ§R:T3¦¥PnvÍsr'Ô*~ÖáÎÀ­Vc›~ÚşØ™ÛûâÍµ·ÆÑÛû¢áÃyaÇ¢ÍµI¹)ä¥,¥KazR“«_›Ã5?œåß1î–Ë²BÒæÙ~â2NÆÖæG¨$JaI–½µù»‘8§‡øÇ’³ñ§Ûoßo™ÏCZT‹Tg‹ÔØq\¢ËIZ’Ó]
+É‚•éKÙ.Ã¯/wÄoº”?¤¡İ6°#ˆÃY7£,@²ÛÛ,n|®ğ—¹Îˆm»WòMÆfßûyÜ¼Ç·yU6Ë•ï£ò\¨[&øfÓs$ÁS1ÚáÊ~:ã4*FZI
+)V6ÒZ[ÌaË*Í³HÃ©hÍ–O9öOÂ«˜•¾äÈg’wÚ¶.ÑØ²bA›1sUËrLéM:–ZÒ]R”°>D2À×d¸—(§N:àøıŞ}¨Âã^hßÖ®+ûƒÙ—­É²wtyq¡ïk4Afœü«L‰…‰œĞüD$«´¡B š)!ÕF+hâq,¹¦U'Ìç€U*¥ã¾ ±ìß·¾9å>n“Ë[¯û ¹ïq·q:IAİ/·%1 j}×u4Šj#IóA¿¾š=EÄO:çQÈà*Å¶ğvîÜ;Ó‚v¾Åä=Ùkáo¸g¯to»jŞ{WéxÒ'Ş­³ZuåÇc\wÀÒ°j”'¿m…Ò¦\8E·/-öñ¥m±bàşHÛ|ÉxûuŞ¼Ã·7÷ì»$Åk‘n.¶}Õ·¬„O/GŠÛjòª VE^ÜÒGZ@ğZPê¼I>ši²Ü îM±`¾´ØLÁn‹0°‘ü±!¤» Ÿvªcyc‹\©W–Ï'ÄˆÜë¿şÎíí¢ÑÈÏEŠ™=¥Úû„€š‰^Ş¸ÍoÌs#k˜_eYØ<9ä<¥t¦ú(l™W;{«‡&*Ğ‰ˆEkÙY¢“¤t*á¿ãø —qI‡ˆ*/f0¤<á$±Ù½‘ü¥88×-ÉŠüòÓª:
+€Pü1úxp1ã^9Í€áÂŸ·Vàƒ¸áX£³j0îV†;r¨R]$e^µ8ÍùoË²í–àb'SG9­]o{Ì{ˆd¤"#¹'
+CK²œRPWéÊj
+Õæÿ iÃŞâŠ•FZÆ…E­ÍJqØâ²Üq×¶¢£~ Ëx\â\w4Ç×EtÒ´ $7’áê¬c©×KK^–#‚Û‹9êü0ÄeÎPü† jæq¨³é
+^¥Ç•’A#/vØÚç¯W=Íjqã[î&Jq´M@øxÄŞ¡à‚ Ä,Pq¢Ÿú?GŞı/Q«E?ÉÓV#Òıİ‚|j]OÛÖ˜­5JKĞ_u·ÛŠPâŠúH#/aÇærâÌJ9×©i$b1¨Ä*cO÷
+êYeáGÕ>0W²ˆş˜ğAqğó¡gõ”±úHÍ$xÔá	ıEs\©Ö5ºBd•&:»ëK¶µ«Hş}ÇŒë:r4)‘ª¶ÌeqÒÚÔ­a#²³Ä×™…€eF'‡’=´Q©i¶Ùdõ+UùzxaÆM¬†·:YÑhœª—$¾óĞŞÒÚŠ»‰ ä> øáy\÷¸±Øq£FÖ±¡íÇ…0læĞ7½W'Ğ¸m­i‘åB©šRHè	¦xù)UÃ®ST Z¨şñ$<şúÚ±ZµØPK,,d¾@'¦X»Ú$s¢,À\
+ğíÓ×kÄ„â+Ë@¼¹·şë6-Êİs~÷Í¨ãõl)1â8ìGÅ†X\Şô„ä\Y\í3Ün›]à-éÚıGQJİ`kqÇ:ÈßÛ>[¸ŞÁáí {è%…{kƒ¦ò¬ÙVÙÌX¹+„w.Ğ²J…o ß.4[Kå96‚„
+¬åï–W;ÛlÄDô3;QOÚ`*[Ì©Ê‰¼Ø9bĞ0>…_…Û<‡Á<¯À<UÅüÏÈşİ|/Öí¿¾¬6¹í—Í¿¸2$ÛŞe™*<´(©qTF1ÖUåô“¥áá+˜·*ë¾Kû‹µqO9ñ@ãû>ùÄ÷µÍ§³·ºË!˜›ÖÇi\™“-ã-*SBá;Œ8PIB’âÒr!C’LÈÓQE®²7? µÍ\¹Ï»ºFÛ“fáÏºß¸.O½İVênÑ·+?%´Çµ­§±cïH¼“äJPA>9c¸¡IÍ%R¹‹tÆåÏeŞ>Ïy“kÙ¼yÇ»~æÜˆ³!svê#5qK(jq-–”j£MpÁ#<Cº‹dµØr®Şßp[+’9+î>éÙ;Âÿ öÏÏw›5Ò=úÇÒî½w±Ûã·í•%.µ­
+mä/ª@)P5JÎë˜Ò\*7 Ue{İœ}mânBáo·É[Ç÷8É´XæmçlnÉ«U‰îü]ªŞÛ,)NÖZ•˜ÈV¿§Ï-ÃÔ+¡qÆ¯Ë÷_#x¦Õ{äxûƒànI·Û"ÁŞ[dÇEÖÁ|•„FõÖ'=TdÄ2»]ÇPî¤‡H'5GuÂ‡]qÑ=¹ƒTÕú÷·Ïùwn}İ¸%A“`Û“wtÏYqdõ.¿3®R“W
+Ö”š@+Œîë¸6Wˆ›#Ú³´¶,n³šRB7¾ó‹iûcµñ»m»ÉœkÜ	¾Œ'cÆõ2§‡ÛˆTº%äHj¨ZkJfxË-E%ÆêoÚ×[İº=(Ar5šK¿Âæ»÷Vz±ÓI+^0z' {)ßmrîÔÙ_p2¹#`ñ]îå¶ykh]ößÜo;pÕ=é¤&ïİ-I[nº„¾Ğ ª’S¥	X¼òtwû}¡´¿{d1J¦H¿£[skÚ09¨LI™Ú[ÏK$§#ÌvöÓ§r‡Û_Û–ò²r7ÊÜá¼öh}½ƒ±·mš-Ù‡-=™ÎÍË®*d¶â)m2HAW²ˆ¦¿\L* ÛMis†YPNfŞ|CÈP¸ÿ Œø%éëŞßûóvFs´»l
+İ¹£Ev4d•ùBY}2?*R|p;©Z#8Š”m:²¦î/û•ãî>åo°íËº-»š»íËcî-¹ÉÉù<‚ëîPnLGLvÍÉ+’Š¨tá–8<+JÊ¼%7‰>äîLp?ñ—!òŸ0ı¾Kã¦åFÙüÇ¬*ãi»Ú¥>d&%ŞŞ‡£¸‰QT²†V…€[Éi¨ñÒ5§I(k­‚ŒhnÉû‰Üö¯¸İÉ{×yg‘¸eÁÅ'z]yDË¾Ø¸[S'åÑ]u,¥ÙBñå€ÈKôêD0<J«xuÂá‹+\7¥ªìÌ~RûrŞ\m¶Üƒ	Ù$nÌ¶ŞˆÌ ú)-ÒªWOÙˆZLÉ i_À~U)˜ZÖ“Ëâjçâ>í§cm˜sPRôK\V_§˜6ÒR¤×¦Dc!s(eÔ‹Ìûêå‘—ÂÄå^šıŸJ¸&ÇÉ2à!¾×z×­Z¨´ %tOq›ó²ˆšøÀL{Æ\)ıº(Œº$%}•ĞÛÚêÔ{$ë¬‰W¸î4Ü´©N(§O™'á§S„¼©¶^n[Œs[»Jç }üÌÖÖ6OŠa«#´]ÕÌmYb:–ïéêR”ª~Ì~ f¦5¤¡Â¼ÈçQjeSRæ²ÿ ÂHKƒ%í>Š“Ã4é Òİ“ßpº­/*š[Gš¿™ïÔW>Êr&·HL«cNj=¥ÚŠ‚røs÷âLràp¨¹©ˆ©S#9²TàPmtíƒñ{ğYâ,åB†@ó–u9™ˆt0ÂG– cM2Ãœ93 >ÕqÊ´KvJß\7ÂMås­}øÎyqc“$M`n¶ğ£?+›ôŸ®õ
+ízş×sH­4t­:bƒ¯'Üz:Êt—³æ«”EÕÒ¨¹SìŠXİVg¼æ§4•E?6Z¡÷Ez¾âe%­ hR»'°Û¢†™ığÛ%Ñ f@Õs¢×¬È©sŠ…„±æ}'JGU$õ+Á¦cFçøÎ…ŞG‹/ÆU	÷eŠ¥*I–º€Há¨7İGcN’ï}m`-òÇ¨S#PiYšœ`‡ê8¥Aäé-nf0T§^JQ*@Ùá‰²,5“Aòc¤*/­bLÖÖ¦êæ‚—#Ê•“–×l’˜§¶‹Ñs#!pøTôLbÏsr¹²nèéQ‘%• N„ƒ†£pŠv¾A©£1Pb=…£U&ï>&Ş8Ò®vkÄIöØ~†ŒHm¸éJVµ§][uc5œÇîÆš›xØ]#j¦sƒòUÉ.+›¹d®÷+”…³o¡Ğ´XÛIZ’Õ~•#2}´Å…¾é‘)À×&¶|N@ü9Š¼xçcï[6Y‹İ¶ÖÚUkñÖÙuæHÈ¤-A:LvÁ°M`Ã*YísÎ%Mo¹î.MSvw®œÁ<­|²0ÌM¿ËÛƒk¿ê¸ÑZŠ»¾­Ãë-6”£R€Bµ ku˜­ŞÕ ‚8aù×Çn“LjVÅãI2÷NöåNzİ—]Õ½·»‰—p»FÑ<èF„6”vô„6€”6Ú@JR@¶ÿ v¸01Gm–Æ—êO}g¸vÈeómşß=õ‰¡Æ\ÓC˜#@ê2Â§r`Z ˆİ!UÆ®İ‘²8‰ësrÒÍı¦Ùk´â•% ã‹Hó{'â>ü—úğ
+i¶îÃÅÆ™šÚ\
+[oÀÜ¸èóê’Á
+ÿ õ`#xˆ.ŒÇ}6l&S^´›»6/6G±"Ï²]æU(º\_JÒÍGÅÚi_vxŸŞØÙh*Ûd{õªUUjàg¢]L½ÑÈ27#cù£´R	WR¥) ÃSîP3F²ƒ´Ï¹mXö:ã[öj÷-ö÷6ß%´z\2ˆÎ'©%MyÂïÜ!½%îÆŠË9'¨ôKxqşÁ¼Z¦§e½s…¸4ÖŞl”¾M~$6Û>cN™Œu»€k¼QeŠq¨›G§Ïi²pï±·íë»_o’÷3iÿ È^ú uc®„öª‘î®:/ƒ•ú*ƒ­äHq4¸xŸ¤î{]ÅÛŞá\H¡~ºÜK?ª¿ÉUöò÷aa¾µÇOOu1ö¹ZÕ×…YiãÎ·­¹3áß_‘BJãÉh
+ä3d`Òîf/™€ü¨0Ù¾EG'¢—·%—íÚ4–_“·w%Éç¯¨2£4?	%¬iü¿#®ás¡! ERîàÛJ(Ô£:£÷^İÛ[™-Zö<×ö-”¸K«š¿Vâ”r©	e)Hü+‹9öÙeŒÊòæäÜ©7ÆğÀAãM›C†m¶K,Ø÷İ*æûí¨"â m	Ô2,¤¶kLbeÜ£ÔOMyÖ ZHSÆ¤ò£Ví¡ÄsjÄ¶n©÷5ÚK9.crYi… |¤6¦‰˜¹òûİ®H@a«ŞA´ÒÉ<KJW=³´/—­½jÛ7k¦ÈÚ¬:tmÇÒóÒA9¥+K)Ky~8³¿ÚgkKô¶Byaÿ JËra:u&_}Û7VÍâÅNoeï+óQ.¥ƒ:n¥å)Qµ ”õšâˆlÓ\£_æpOFu`íÅ±ø„ŠáÀq«.×¿¦òçôÆShR4§2 ÷ŸAòÎÉoµÚtmÂsÌãÛX½ÿ sšúç«1^M4vV¥!ij\— ¥	Ê¾ìY0G¸Ò.%€T¿Ué%0Ó_¤‡HdGù¿nÕé<€?…¡tºŒ$â•>cQNÙî<([u¬•u®‘Œ±<Æt\ó^Ê)a˜ç@ZˆR»^>8ZW"7E&ª»ß[P…zâ¨íùĞÚó¨#h:Ôâ•¡RŒ.ËyÔ´µÚøhpFE©^â‡…òiF4-Crs/Êc¸İ\l”¸Ëìöà.¸kŞb(ÍÍaC…t/Ó’?´Ş§¸ŠÓÖú:øwiÓÿ §<yß×;ıÑó:t'¡S×[¥oØ~S«V¥ôçê­œÁeeÄ½ª½9+Œá%%ƒD
+Í¤çíÇ‘º6=…Ä€å#Õ[K¢æH µ®¨Ø­nºûæ®«&õ{XRİ¤¸¹ÙÔ'p 5¹QwaÆí;ıSC"“•:šŒ:æ5ÍÔˆR{ší$xM~†ÜUDunQsU „û ÇĞµ…„Ÿš¾™Ï |µùÕ>Ôg¤²¶Ö¤ Pf3¥>ysX\Ò2¯šç•¨KîÂdº°T)˜V`tÀª&ê?…£2¹|¶6o¼¤ë”ñ
+¡ş.˜å«t_Ôk·.ÔSúEu´Km,¼Ïg¿ä’¥Ò‡Û¦1cƒ‹#‹T‚©•U·í…f“(–P•¥ã¥Ê€xáK‰ßÓÀÓÖèà¯ŠÚÇí´öÒ¶Ğ–”)Ó3íğÃ‘İ€œ)iJ1­nñ®ŞnSlè!:’ªˆÛLA÷.kÃWÃSn,.OYm[^ÛoM½«K/-	aå ¤šéP¥j=ØìÒ’ÿ @G¶otY=ªà}”›}ÚL_.2ÚmCm*a–R„{½şÜE×3kÓÈ
+{\İG‰4´÷Y’ÔEFJÎo
+ûF ûÙğÃÃ:›#axã•u¾ÌâºÕŠÖËöBôc&Gl ,:¿2N£î9à±î/. 4–vfµ`Û@"i.éÇ•¸pÆÊ‘éO¡¨ÒuoM”§1Z¾üæPøËÜävCñÎ™·ÔÇ†´(Ìş9UAqÚ[7k±.õh-ê­‘j§Kf‚€û¼p·—-/w9ã€nn9ñ'€¦÷Ë»kšgšå­÷¹¯÷)±l»+bÌ~¸¡FÛg†ÉzB›ªB(Ú2ÜPHñ c^/m­¤1ÄĞç3æ{òÃŸ`Æ²pÏ%Şd†“ü{éÚ‡İ^ô(».ã³ö‹&‹EÚäâ¤(TĞA˜Ş¯şú{ğäm·!z…İÍORkGoi»€–qÇò œ‰ÁtûE§÷Ú±ovk<Gı×eK2äÆ#Ê—LWRˆëúmª cE¶ù›nºjJäu¼âÑë«ˆàÙİ/LÄöƒ‘PâOpm.ñ_Ür¬²vı’÷¶¥ò5œO}¼ Ò;§ãq-€îƒ]IY
+?Å•†ëä6ÜÄéìô]'äwı>Œ;8×7=®(–7ë‹˜@øş1¯Oö&ÀØ›‚ÇsÛÃW6ohÁu	ò‘R )P$E$Ğ‚4#	¹²‘ì¸i…§Œ8ˆ¥n„sÒ>Î¬£ÄÛbKl¢U¤D’òƒSq)íùºé¡Å§Ö½à·K'/ETôÂK\ b ÏÓ\ñÍü7¶­­À‘fqê¢É	I9‘®Ú.¥¶c—PQşœıõóLNu¼s¼&“ïªj?íÔ%¤©´%²(I“ãeŠ& Ê¼ÎIŞILéßgƒe[0mM´•¥‡ÅTMh•ŒÀ÷c/½ù:ÎúE,\IjûkóEÕ¬hÉ†<+vìÛ{vÿ rnDH-[à†‚ñ¥'Ç:
+“‹m§`ƒl§]X’}‚«·ê{çë"d¾”ãËb¤úrÂBm.$S®UÅŒ¸¿O “eÀÕÌ¥@‘°¬Î>Ì5GJ4Nš
+Ğæ3Âò3Sƒ¦¥­/Š°ì¶¸v”bE*‹J9¦€êğÏP£p[UÓìICE$FŒóN8éKkAí´“Ô¿–&=¤œB£i cÄÒü6–¹Kuã¨¤vãêéå9bºò]Ü)ùœ½æc¾ÉR]ş¥ªèÒiø×hkÚ«â·5È˜ÆŞˆ«m÷%(*BóB†B t¶k%ÿ 5vw<•eWÃ´¤lêNœÓOn;â. W<%Á¥Pš‚ôf½S€© w\IÌ^4À¨Û¬÷Ñ—#º¾Ù£™!E²ä©n4Øñ%TN_· í‰•ü>ª4tlmîõ×xúÿ ù'Êù‡¢ôzêíÒº~~û¼ŸWõ}3Õêjà™®]Õë¿ngÓı>±ÓĞ¹sï¤FÛ²g[_»EQ–ìe&RØ¡¥{‰OQP3ì…íŸ¨
+ƒ˜«Ç¶K~™[‘®mæ'¸–CñHÊ”ë‹&½³(†³c¢
+¸V«‹1˜z:Ø¦F• „œBåŒcnU;w½í!ÙÖÆV4TÚ›ÒµPdkìÄ˜áÔÃ$¨½§§kP¥µ!EæšÔ½HÊ”5©üp	šò b´hœĞ„à•šßnS²Å;*B^%^ÜIÒ	‰’-q¬,r®j•ñn³÷™ëJÏqWáJFyc{aqj`q¯ƒ+A^ÊÌ>.-”ÛUÔ•bBA;KF¢YÑ*q4ÒÆÔÜQ-Î~Ò§¢¾50îAÅ$Ğ‚×¦.[oágÆ™ú	gÙêãBQ:›qÇÚ,©@öÒ¬ˆ#ÜpäqFöê<rªù$‘ÓË:´–_C™-°R’s©§†Œ´4ƒ˜¦¤¸•MV·`µçJH —¼àå]ÇFÈpÂ 6úã<ì™,6êØóR¥>8]²Ü^áÂæ´5§1íí¾ÍşêìW#À}ÌóSmJH>Ò1ÉÀk^ôÄ%Ñ¦IÅÀ­tÌmÍ	¦ã"<2Á)JáF
+­(©ñ¥<qXİİ„‚„âiÔğ¹@Àš”ô)nLnìÃ†BİÇ¡éò¨œÊ€>üMğHéÍ*N$|*,™†' ~5ã/0ıÆo®AåKûÛ;l´ô\äØvÜYJYiÇÜ|GaÄ%"„ªx’sÇ­¶ÛÙ²!à.
+äÍHÇòZñmËuú½ÄÀÄÍ]ÕêvÄâ¿ÃÛjË4ƒ}İ3[C›ïu:ªÊ¹OQ«‹*>d²…)A–‡•Ë®¢|Ç|1‡±ÌùFAËñÄñã^³°Àb‰Ñ¢v¦umG}–ïD5¶Tu"BˆA'Ùí¦mÃtˆ‡²™‘0;ZªáÛB¯1§-SâÄş©¹É-!	ò ¢k¬ŸaÂwÑJKØÌC°åé¦¬äŒ¹øãÏÑ\÷iÃÛNE¹\Ádµ9`¿m×c1¿´¥³rj[ˆŒÄ…OÖCÊBJú©
+ó"qì_Å~ox¸ûtƒÂ[‚•Òà2î NYÑdöğ¹r±ê•]ırÅÆÛÈ<…Å7Hµ\ £smæî$¹ØËm‰‰E*}.¡t"…ª8·şaÛ!¶ö0j'CˆãsO¡çˆä+²Lénd·Õ€€ô€}â½?jæİù‡¡ÇQb+À½ê3*RÀ ÄWË¡xÒÆàÓŠöÖÖÆÑÁîÅÃì¡W,|’e–÷×E˜‚–gRŠmc4‘•j“‹“v—d’¢¡ù»8U'ºíñî±9€¢Œ»xäc:W#Ô7ÛĞµ¶šŠA åÕ6n†æÌ>Wà7"X$1ÚPĞHÅ”	pĞ …ëQ•0´……ME©iÖí½ V”8€S@OâNÑt"”ò¨yÈÏ.T–
+Ú-†‰­*Sã…Ä†7¼`‰G,41§Zµ6ïÜoé—>ãK<t²Óìæë¨VcHğxœa|Áç‹K2öB5Ê ãáæµ[?•®.C)Ñ'†>ª‡»6Ó6Í\ ­oÅu_öë¦´PĞ(”äEp)ÿ #Å»Ê-åD„+PàäÏÓFó’$Û£3Fıl†!j¿q§u½K_™Æi•}˜ôW1ÎpxÏ•bÚö´h>º™ÌZ#ú~ÛÊ:BFT?$l¤5ĞÌnŒjUÉˆÌÈøM@VxåÔlbúk¶Ï{Ô:¾!Ä"\rÁM4(9P(+šà$yWÅ¤°êçZf¶ö·’Éî¥ĞP2ÌøàsµÊCqZœ.jpJÇ¼—c;Qÿ R3c¼uxtÇ:Ì,L@Æ» µáË8SÏÀ`îÈjSø±Ò$«:i-ŠñÆ;Ï{»6­½ÀbéQ£ÕâöV—Ê{k·¶“€Ä~Úê¿ª ö=Gi^Ÿ¹«¿¨üt§L~{û¼Z5'…sí¯bû\š´®)•L)Ò£ÊK'ZŒÊW¥€çò¨êê*dr•,y¸Â“‘ñ`ÀK°'q•Ş»Mòt6İ5ŠéKKé­
+Î¹û®yÔÓøãU—06"Xáøá_L!Kt §4CZ{B}¸wKA'ŠqøRœBpìøĞÚ'´‚Ò‚\}Ê'?2kîÂÈ4øs&˜R¸äèéHQ/B‡—?85F9®¯…ı‰CC+r[Ş”U§)İJü´PSöá]Òé`0jÌPÙ¬JL¤4ænCª¤Šç\+<o çÆ™…ì,$eLL2¨~L:y!*iH¡)#¡ âÉ±h
+AÒk%EX’ù7qF€ÌI½»‰I*ikò¨
+ùR0¥õ³ô¡y#1é«;Èºó¤ËîfáRMÄ%GM#
+†ªj söã¶±Ç¡Î$¨·"Y5µ úX¬VBP„Ò©)UFGÄø`’ø[….ÂïÆ¾ÅiÇx!İ-i‚G;ÜPá•rW€£Êc‰“ÀòHP£m-" ”uÄ§p‘‡WpôW!icÆú³8êÇvr%Úò¶[1Zi,8T~%A§€­Ü!˜Â¼8ãê«İ™ñ	O³]Y[FÔìÅ­ùe	ì4®Â–ª ¦„õÅ.ÍhéN§¦åZ=ÚèF4³‰Ç¾¬‘§¸…W'Xn/ê6ØJtêéRO†4Å+‡í¼€Üj†Y#ÆÀIÂ¼‚hÛ;?“oü|»4øÛŸi_ºÂ¹Ë¾Ü¦›%C}³•BÓ§ğ5OPq¸Ü÷q·²xÎ(‡±Ã_Â¼vµ~×¾9‡‚àæœG¬{kÖd‹=Ö4[ì¦ZgE/4©m ù‚+Ô×"`å>Å«^nCÑÎ¿AErfˆD#ïåA‡gÒ*DeŞ—!(BkGT:éë–*Æ¦à\ïH«o½.ÈE66&ÛZh­Ã5ÉÀFZOSLòíê@Ğ§Qw†ªÓ™ÅÜk–¾èï¶‹n÷u-A¹Æa¹ÍH@œCê xæŠyÒyn}ÆöÙ¢].¡²½Â¹¸O¦ÌFÿ œŸ
+r\Oª¼ñû±_·Ÿ(ï^Slí›E½{zô!/L–ë/¼†ú…vm:óË¸œmÿ ›7á%½¾ßWjÔÊĞ[í.Ãü¦ªü©d>ª[—ü iæ$b{E{UØ›tH‡’ÃªlKd)IÏ©ò-Df’…0JºšäÌ÷j
+¬7n0a ?=ÉßÔiµ„‚\PÏ!ˆîbhc\¸…ç]ÛÌRÉáhj`{«weµø7û”YO)ÈÏ«Ô°¤ÑDw|ÄPtÏ,~‹ò5é¼ÚaÔO„iôŠñŸ5ÛmÆM#WĞiNB;!(JšT“^‡ó{1©”5Ü*†2ìMe§}ô¶î†¢‚˜'ÛÆÒçW$pkBŒk9kCÑŸmô‘¥=¦ÜH®iÄ¦p{wuFZğ[ßO–~BİÛZ"Éi™Ñã´j)Ym"¥Du	1ç;ÏñÄƒŒÍqŒŸ˜Aü«k¶yÖ[0"sCÀùW?:T^â½î5öç<–¢¶•v££ÊŠu “™ÃŞUò=†×'QÕ â¤sN–óšîïÙ¡Åskx÷ó­L´úª’¦Ğ0H•8ß1?+‘+÷4|Â‚­É>©KiÒhêJòÍ^#—?Zƒˆ§Y¡ÀÑ0Ó%iu@)â’HsÊiÒÕSŸm-©Èƒ.Ê{a§Akq)	¯˜•i…pÒ\8šg ò¢¨ÆmRËÊXí}ÿ †n¨Â’¼)S¥åj©Éª1SP´%2P¿.Cÿ |.æ“'ƒ–4v¸ü^Š»¶Ú¹Ú-Ñ&:3o¸“_0`dOx©Ççå]ÊkÅ–íÊ,;ÉÏÕ•{_ñõ”PÙ:gfÿ pËó«çéÆ¾œÓú:{]ÎŞ±¯­:{kŒÏÛôi†K5w÷õKi–Í™µÇŸ5è~±:W)-õJˆ>™ä„Èâİ\;8SbJuFĞí<{xÕYº­ß0f&âf5„K3ÂGTQı‡®Ù®ƒÈQáª¿0Y·SO‹áúR–ÚzjHÒ´…
+ğÁ$­k¤ì¬Œn-¢Ü£²Âšq–{OÔ
+e€İFÖZ­ÚG<â¢£ûgºµ(ª7ê$l©æâxcE!®ÀqÂ¶wô¬.Tö°{ÄçCíı˜ŸQ
+Ç:†…ü9VÄ°¢¦ˆP—"B	Rú¨
+Ğã¢<BxœEp¿> T9IXXK(C§ÀµÀfZ7€ÄÑ¢ µ]Äà*Ó{²TâŸZŠô„ŒˆüpÏ©Ã9QYpAL0TĞ€ãJò>:¯Üqe"t„à™áYF‡qˆq€±Ô© ÷ûñØ af!k’LàìOq
+t0t´ÒÊ’ñv
+	Ó4ÙB¬ÍHJÙl*,…¬%?ªØö©yœ´hróõĞÈqñ7»ÕWÊŸ=ËšTŸGmC^¤6µRj)N˜^fºdk–ãşª´ÛälZ‹F£‡¢¹#“~ı6¿oMÏ³DhS¾••&Öüvc¼•‡p¤Š®B¢ˆ÷co·yBÊæÖ)	xÔÁ€!1åá¬Îçç‹K—Ä©qCÃµ@ª”¹¼Š£B±Hì<ÙmäöÊUAŸ”ú0Û|hÖ–‰f „ù›ÿ E(ÿ =\8‡:İ˜Ëÿ ½.#ïsŒyíkum&ìW{{Åˆ;‡²­HŠ¥8¶İqJYĞ‚©©À.¼©³Û¤*2%¨¼òú{ê›}İ_½iêBİm88( rù±„Êë½¹Íüv½ÓÇĞ¶'"Ú÷÷ö®ç³”ÛÎ¦’ÜKkĞ)AiÄĞå¨
+yß¶Ş2SñRr«[]ŠåĞÀ‹Â»‡s[`ÃÊ‹Å˜·’¦Ã‰ )öxá½ÖÖ(‘ìn—/Ôm·H­s•©Âw®çcí-Ç½n2†6|¯N<A[M¥¤’ª¤N‘S@pM¢Õ÷7‘G!(\1¥bÍ0Bc^	s§Üœî`¼\Ú¼ïvçlFå@¶4ÈaÙ4V§RŸ5«A—·®?Nywk±°`=¤'™¥İio&Ydèˆ
+§éW¯¸VÇãM³fÙÛ[¡DµY#-˜±¡Eq¶ĞVJ– ^˜T¥-D©JQ*$ÔÔã/¹ÿ í·WœÜJ÷¹qqo¨$m8XÛŸ2Ol4FÆ†À{üUfY¿ÜÅtn/Ì-Ç)M­âÃŠFŠùIR$8kN¹S'ø¿or4€€™µäª×ùöê2A…¤¹ÿ k øî’o:ï]ám»Ø‰m6©QøyK”©Â¾ëŠMHHñ¯†0~òä·tr>C!-:ˆ(HÖãmj¼›¾K¼Ã£µ€€‚I\Ôœ0ì¦;Ì‚íÚú™*>¬Iq!ÏbB¨‘û±î^O†;}¢ ‡@?ü±5å^e‘ónR<â5êÂ¢#mÎfÜ&Ë³¾˜OQ0´ ŒúUGÄøbÎÎòÎáÎ‰k3 ‚p¤®­®¡G5ÍiâE+„­>ˆŞFP½IâËÃ ‡Ü–¾P@.Î¤!l ò”´¡Cº‘íRºàsG…ê™ĞË\|MEÊ²mR$heåzf3¢]Áà:Ò÷£Nß\pk1Ÿuf–Ğ†Tûˆ(ÚT†Ê:)Jéş8hÔF¸\K´ƒ‰¡M¾üvÓŞulS¥(­“ã…÷0x‰M9yÀ*V0K¡e?¤Ë‡¸ˆt®9Ãœ k³0€G)bY}öJt–ÀB¼2ğÅœá¯pLªºæ´®uç;M¥ÖÙí<T’‚¡AJç]ÄÆ…ÚW8¡** ï×¸µ(–ÿ Y4èğÀ<YÑ|9êiÚ¶—·òksKR”¸€*iÌŒ½§,Ry—}U›®#¤8ÍÇòÎ­6M¤ßÜˆ^t°bO ?<«¯ã@í·iSsæ8Ó1Æji)	HğÒ1ù­Áò¸Jó®G“ÚE{hsci£DmºˆzhÏ”j{×ö»z²¯{VªñÁzQ¯GhŸêÏİCê=:¸iUôÆ•w³­=2R#²]rJÛdtz~ÁŠ}ùít®
+N Õ®ÌÒØÚ\PH¬“¶”Ä±}–jk5‚	P:W ®	ŞèÏ;¨S^¶rõnXMQ;®m¹t‘´Šá/ÛßVj[5:F :åCïÆ—êb#«-œ±½(÷Öd×ÔFRuÎjB}µ8¢ºóoº»¤&œ¾·Èì­LJ©n¡?¦Mkã–	&—ÄT#Ô×ÀĞİoö#§²(·)Ö½za]N]-Â˜ÒÔÔìjT}0–¤´ê´(›WÀ{°hÒ"ƒ(R~èÇkrÏËß7Ü'¸<kì8˜szG™¨î¨ä(H†tÅ­#²Ûi'À½1_=i	OË/I‰™4v†CªC(Õ4ÈQ>Ñ‹««HÌ®M9W×¥µ$©¸ÏvsÏå¨J@ê8ùó6LPšã",ÅÁ@©÷¡4óiºÆS¨d¥n6…vû¨<èzãæ¡kğ)] ‡7¹Q½ÍtÛS©6»m(]
+ÄšššaWµåç¦ó¤…ìhÒåÆ˜ø¶Şô·®“æ¦,V†ÊU¦(Ôíak˜ºç,©í­ı7;@Î¬÷öÅºM·Èºì‹+ÅÅw.'mñWê*®¢¢ÙQ¯pVn“Kœ‰ÒO`åM>É‰#€iqìÄÚ^Ş›òaØO}½Ö‹lZ%^ğ–ù¸Ë¨ˆŞìBM7³XE¤µ¸pö/ìè0àŸ¥lõf²[U¶9Z@U·•qÈâº6¬®ñf	?uò[>G$MÃ$ò§ÄXøæÔXz&Õ²Û_l¥è³Ó:^BÚÎ­¸†Â’ªô#î15¨\€ñ%rüê®;å.êA‘!ç…Ñ•ö÷V!9çq¦üIR²¨÷b°È÷;ªß]'}XÚÖô…ãˆÀR.Ñíkt¸Q£&r.‘;oÛ$„¼ÛÉ_T(i û‘ì-X	ÔFû¹P"1Ã¬ˆuX/al¤ºˆøÿ o1Ø ½%v¸ŠXÌ7\°¡Ü¯„q½Á3*xúiñEºŞ…rRqÕ¦AJvŠbÔÒû|º!QYR‚ZÈ‡ ¾Ùè${Š5û1Â’\·´b8»hŒ-‰ÆâËp/l{ ¸ºªºƒm‹©*Óğÿ +ƒr—éßªGë9øŠ÷gKÍbÎ»QĞ2ÀRÎÚÙv5^İUÇn°Bd»3QõšËIM@®XÌÆÙ·+€çio2J&´>+–Nä Z¨&6æı¸J»1ë“wxFIÒuŠê#Óş_c¯v60<:=É<&¼xx¶İí>ıIß8îşaƒ¹m,ÖëX„õÀ V¥ş“HGùUì>§Úü”mo7]*Qè=†¬o¼Ì&¶1ô•pñcéQÛ É—©…CuÕ%²¤ÈliIHüÄÿ ëì—ööÃMÃƒJaŠèÌÖI–“Oâ…¤8eğ¡³¦Sª@y$Ô ¨xWÇ/@&ÀÒ<¡\j2rBuÉYKmùØ4"¾ü|^Ù
+épaFæjQx8˜8’–GquòT)z†ƒ—²„…ÄgQï6\WmÂ’RÙğàwîà(–M)hbŞë1Z!ÀşN õ•®³šÁu7Ü<á•T¨6’€Åfj´Åš6„¤DOqZ‚\qÕ‰-+¾Áúuy”âjrËê.:Æ#•HhÒp<êJ»/¥)„•)ùÒ†~"¢r iÄä{4«yT×êGs®ŠØv	›bŞÓÆ1o‚d\%(W¶ò´iŸ—ÇßÍ~uó,»•ïJ##Ìñ?îWØã²µêM‹ß˜ìà*Î€ÛvyhZ;’_ZT§æ*P¨-×áÏ®2öí²œWôåWs¸Ü°‚€pıyÖ=äú_UG>së;ªùõh¥+øcºÇO^=MJœr®è:ôáÓÒ™ÓxpŸ[m„”­	í—+®cŸ·1ÃÈ zùÒM#AñáÊ‡G~ÌôÙ°×)imBjJ¨’`Ç
+Ç%»¤sŠS2vÆ×†ãU®éµÛn1äÂ`WDA”¡¨)D|$Uÿ ®†î;iF#*=İƒîâàsı+Ÿµ½n³!Sj)u‚(AF.c”ÌVRH±LÛÕ2åİ+K“\=çÀÕÚo®¬òË7İ§Nf©º4ä9UÊï)†ÙzàBËÇú…Hj€ƒÓHI'F<DŒjRÚ`ÕQUá±HÛ79(’Lg{cNhZ‰
+ñÄ^ck‹˜U
+Kôä 1á(4)—£Ê}zj¢QT"šBO¿dŒ‘Çº„ö:6úß%1Ø­_§SDiÌ’:ôÁ%cáPŒ¹ÏLê4³²Ü„¬©YßN¸İ=!ÀÑ"×¨µ*?ªîÒÑJ>RtŠûp.®¤NN–•^4`H´\Â.l9Mª®NŠ54„€¦‰*tŸÙ¤v¤^§h^EÛw«ÔˆÑà0©QI\ZO‘ÄJ’i¦ ôÄâ›êpT…rKG[¡V¬Vºlí»n¿í1?0}Ôİhù[' ÅOˆİ²9#"G"«-½²Bá *âk7ßŞÿ ñİûrlİb]ÏkİeZf,¥ÊƒÂÙ5	"¦˜ØmşP†KF,§ÄÈV[tó˜¶ºp,Ä±ø
+GwıÄxÎt¼¸pÔ¶€mÂş¥Ÿ<¤V˜m¾Iµ	ãqNÁH?:BCX}Nü¨–Ùÿ p:Ü7‰¬¸åºÑgíU3&¼ê	Ò*JEÌÎ7”-¢RdzÅ¦!ó«¤poMì?•G½}ül¿-í˜Ln‰/…%²—–VF®8(=Ùb‘¾^·ÅÌ/=íã²´lŞäº ¬RlŸ÷ùSÂ:¶45!åò—qGm õ 6‚¢0Õ——¡õ½"´ZËp€ÿ ›ó¦_î³ll¹)0"±6o™*%çFºRè1uaäHK£•À$)«Íªñá½PÍ#ü@/¶£Eÿ qş<‹©ÊCnL–Wëš(q@QF€QıØzÛøÙ€—	É'<UWÎ™ŒÉšFHïÖ «ıÈ8ÁZ¸6Ãl¯XJ¢‘$ùF¢
+“à=ø!ş+…²uÄv+:ÍÜyªHc1¹€÷/Âœ¬¿îÆ÷É³ç\µÙíqÚW¦2x-yäBR“R|\0ÿ âøœífeìVPÿ ¿ú·Ó ÿ •Å}B­.û§ÛÜõ¹y6Åfµµ
+Ã±áÛŸ`»®cÓ”úVÚ€¢PÈûñó–­¶8CÉ.^BrÎ´Ş\Şçİ¥w Lùw½õur&Å±nhM_ Oô×†›Kn2¤”¡Ğœ†¯}ø'—¼íÓ küq.Y9½ß•wò¼›„Ä·ÂşyƒßùÕU&×fÙöør.Q>urZˆCtÓµ&†ŠèUZøãQiæ[Ï4LèldEj$,®^C‡Â¨î6;}†!%Û²? ¾ œÏQ¿në®àm¸²Ö˜Ğ™^¦áÄ@e”¤~P”R¿·k-‚ÒØ‡é/“‹Üu8úòôV^çw¹˜®–pcpoëé hqW
+Çkán™«Ã®4qŸÃLæˆqÌš–ëMD—EQ@•©\¼:à®ctã•	®:h¡ÂCQC±ª„Ó~šª)ìÂıFÆ¬>ºc¦dGU²Ù&^Õ›e½Ù®¬ tÌzN@~8×¶¶Ñ‡Êö´vš”vÓÌòØÚIìwín0ÛI,î™N;-Ô ìVŠƒLšæ
+ÇÄy&óü‘ªìÃht°a¨…$öp½mòIm°–àjqşS}ºlı¡‹•ºÛoeO”"ÌP+!Å)©­(q·óÍİµûd–g9€…9á•i¥ò¥¼önc#qs¾¹®Cí’9…2âG)§î> ãô5åÔbXÓÊ¼rîÊHc‘¥®êÑâÛmK;LmAÒÔÊÅQÜş3\¨ƒÓß8ó÷›†ŞÓioÿ qÿ 1şÖçİ[_)ypŞ‘q7ÈÌ¿ÄGáï® ‰öò+œ‡‘æ’²ğœôî8òhmÜßİ/RsÃÙ[ùgk¿l5 Ëƒv$§nßÔô0…9µÕ¯©ŞEo20âÔÃ¾k$’0Fñƒ—ê×õ·W¬Ô­:í;Fµöj§øãï¹Ãóû¥öéSGµhµÓåÔ=¾ÏÑµOŠ½<)ã‡/:<tt­·WŠ¦£Ê¢DùOÉSëôëÔuéøúø×Ã‡éşŸ÷3öÑeëuü¥!Où¨‘éµ|«¼ïbšuşZêÎ˜ÎÜtu+Ó\SŸ¦¯`êé¾tãúUepúOë$|ÓÖúIõ¯‡ËJyúS›b£Qt¯U˜İº]Gjù“çVlo¢şNŸ¥ô4÷ôÿ ŞWÃV¬¿é‰o:c¼åŸ£…dMGO «ñãO®ÿ ¯ó^ç ízŠRš|tc¶‹ÕeĞœJ-Ö™é&¥áúÒİÛé_™Íõ¾›ä½—î“®‚š?6¯f ÎÕ—Ê‡¹jsjúQÖÍGz~9UCsşÛë™òÿ _ßÒuhÓÚ¥Mtëü¾Ì[[¢_ÛÆ³—}4æá—¶İô^¹¾Å}5|ºı½ø—‡¨2JX®ƒšú*-ËåÔ]?›Q§ñ÷b].Ô­ºœU(R;Î¾ÿ ©Ö;štê§Ÿß„F|u-9‡újÂ±}®7Í¾aÚïçòë¦™WN}}˜²·M,Ö”—F¼JUÛbìi{é®ï¢íOØ§gF£Ó_š¾Úã>İ}i4j^ÄOÎ¶ét#Ôšx*­7LùWÓÍú½?4ÏM+İ­øáéşŸé¿ûßÊ•‡­õ'GÉìüë“¯¿èƒæSş¶şÉıi­ïª¾môçÍ½~³İõŞ§õ{Õøµy½¸¶³ûŸÒÇ£¯§Fuú;=XUmçÛş¡ıNŠêş­œñõ×é_ñééšìÿ §®÷¥MiôÅuøÖŸ›Û‹9~é ië®Ÿÿ Lÿ :¬‹íšÊôSWÿ Ÿá+Oü}ü°÷ÿ °~«¸¿å}1Ş¥r¥<0>åôÿ ½×U?ù/ÛºßµÑDØ”åşŠ=Jıösåú“^ÇÓß²š³§¶˜Î]ıÇ¨tõôök_n=éZ+?¢éû:¿ÓğöTX¿èOæIõ¿ØßMßM}WÒı½?Ÿ³û·T'Ôi_ñ¢{èÒôz^
+œWÑ…Üñùéé?°:µ¥ûÚ<4W*{+–.7»ôÏGê3ş¢ú){-zÇWù²üwT_üúøŸ0ÿ O‹Hîz¤¿‡óhÏ²ûÿ Uºş«OoSÚ”;ş‡IÉ§Wã%¯®ÇÔÑÿ §ßAÚsâú_³«O–5¯Lÿ }ú¯ÕèCÿ —MWÿ èı7îtu¨şÍTfÛÿ }åw°Z=*ëÜú[F¿:|}˜bÛïš¼_Uòœú¨½µ_sö½8tPËB§oeYÜcş>vÿ öGûsZGú—èŸ–jíùû>³åÙÒº´ëñ­<qK»}wV/¬êé\:šÓµ5ú*ÏnúN”ŸM£Rc£Jö|¾Å«wr}?¡êhõTOk®šøh§ıqGº}îáúU®İõ*?·ñW7”v$|çùİÄkïöéOòjÊ”öá»ê:ßúİN¿ø>dìNôıïG¥ûÚ:_âÉ{WBıìJù¯¦õ½ôÓN½ZiáÚòõöcØ¶_÷7@.¿›h©Úµæ;¯ØúÅ4å•OETï¢=lÏ§=~¿6Õ;]rşg›ı›ïİW}F„ür¬öçö›zZ—ñÎ„1ôç¤oæ^«^¥kÓ§_ìğÆ¦çê>˜¦§ê‚ÔÕ£Uríoí7¢‡NÇ¬ì¯¿êëÜÕá«¹äıØò=ÛıÇÓ]ZP¯M=©z.ßöN¡ééU?Ájê‰ô×Ëa|«Ğêô™ö=µüÚ<q‰¿Õ¡uÕ£J¾ÚÓZ&·ô“N¯éJßlùgÊdúı»‹®Ÿæi¯…rÅu¯C î§3ßNÜõzÃG!İH÷O—z‰ƒW¡¢=Wc¯ºº½ıqAwĞÖzk£OÖ®ízºGSæÅô¨ø>ú=wkĞ÷QOSÛíhËWÅæÅ¾Íõ}OıN®Cå]>Ê­İ>›GşÎH~lı´çtú{äëù¦ùwtúoIÓÿ Åá‹1.§õ—^¬UueÛñ¤6DFtÓJ`‰§Ù[-~¯ÕZıg{åŞ_ûŠi¦ŸÍ§öšõÇ­tv§ÂœºÑ¡ú_gëZåü£êıGEw«^Î­>?›®#7Ó}Xéü¼·ó©E×úc­upçùTè»Ÿ¹§üºzşú`ßµ§Šú(¸½•ÿÙ_%http://www.ayende.com/Images/logo.jpgZimage/jpegÓOõGIF89a$  ³  ÿÿÿÿÿÌÿÌÌÿÌ™ÿ™fÿf3ÿf Ì™fÌf3Ìf Ì3 ™3 f3 3        !ù     ,    $   ¢PŒI«½ø"bºÿ`(†7(i¦ìY Ï²`L C·`exu²Lèè»ŞO‰$H‘Hu„n! „kºp3¾ùàÅÕzqp+2\} l@]_
+p/14|3mALmY‰	W	
+¡¢¢£¤ ¦]Ÿ¦£¨®°¢ªD]­¡¯²¸¥¤ªÀÁÂÃÄÅÅ ;_/http://www.ayende.com/Blog/images/rssButton.gifYimage/gifÓOúGIF89a$  ³  ÿÿÿÿÿÌÿÌÌÿÌ™ÿ™™ÿ™fÿf Ì™™Ì™fÌf3Ìf Ì3 ™3 f3 3     !ù     ,    $   §PŒI«½ø¦bºÿ`(†7(i¦ìYv …0ËƒËgËÁ¬ğ
+h‰06A&€#EB  èh] ·£Æz‚oAQÜÉ^ "<V”òo^Î6
+	 r…‡s	6pr‚†ˆ/B zƒ•r3	?ŒoW]›ª«ª…®¬¬§
+°±«¯®¶ª³
+¬¸¿¸¶ÅÆÇÈÉÊÊ ;_0http://www.ayende.com/Blog/images/atomButton.gifÓOéGIF89a$  ³  ÿÿÿÿÌÌÿÌ™ÿ™fÿf Ìf3Ìf Ì3 ™3 f3 3                 !ù     ,    $   –0ˆI«½ø–Aºÿ`(†	7(i¦ìY~  s.t¹Ş½„ à‰í„& [m¿¤ìcğ †‚ŒÓ”°U ’ ._³[C³
+àšÀ ,
+88]f@ X@][x=i=~‚+d`”™š™T“•e˜›£X€€¡¢€›–	
+´µ¶·¸¹¹ ;_/http://www.ayende.com/Blog/images/cdfButton.gifÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓÓÓÓÓÓÓÓÓÓÓÓÓÓ./OyGIF89a  æ ¨™:‰{)`z°¹µ™ñãcùô¢F’êßlGGGG´‹†]vl'öí|«Œúô’Í»-'Fz}xJùò‰É´?md"üúÔëØTûö´Îş–ƒ%îŞgcZ”eİÇF´•À®=ÉÊ=öêqöívur=Šv	=§üúÆsm7íÛYÏ·; &r *€åîÿ~(éÓLäìö¬¾æÆÚÿ§›MäÑR,kçüúÛÄÂƒóíŸu“ÏûõŒÊÁ3üø´±tp4ôëxCmÁh‹ÑèÚ_©±yÉÆ9İÏUãÏ]àÙ¦.N¹Ğÿ¯Æôîàc¿ÒèÎÎP|u<áàÕİÑ]óïÇêÖQÑ¾EóñäNtÃöíƒôğùó„RÍ0hŞ¿«4ôénäÚÉ°4Ì³Ï½0ìëãûõ´÷ğü÷¿ûøºóóîÑÀ2ÔÂ?ßÃ;ùöÕ‰«½Ìµ!yhy¥÷?ŸıııS„çxs7Üèÿ}y?l›ò1íß€Ìº'VyÂüù£ÍÅÀ¾tp‘ÒüùÍ–µóÿÿÿ!ù   ,       Ö€‚ƒ„…†L  C:wk^
+… Pi}ca!=,I8H/pxK5&dq01mT@~n&;y«#xt4%~?Y+V>As|X	*++Ğ6{"(3srG	%b[ÙQM„BjW!.Z#„_79"O )Ğt¡a30P C‹ 6t†HJ&ğÀ£e‘bGƒ…x ±ƒAS>Iñ¡N€,O˜2HŒ‚R8¡` ˜7†’
+ ;_-http://www.ayende.com/Blog/images/dayLink.gifÓ12OYGIF89a  ÷  —¡øøğÈÍÀ¾Ä¶´»¬æèŞÒÖÊ¡ª˜4ZôwĞ­øwÿÿÿÿÿ¤ôw^¯ôwØØ   œÖ ±°ôw !üwR°ôw     ìı    C : \ D e v e l o p m e n t \ D a s B l o g \ n e w t e l l i g e n c e . D a s B l o g . W e b \ i m a g e s \ i t e m L i n k . g i f                                                                                             ´×   ¿ ò|ôw   Ä×   ¿ ò|ôw   ¿   ¿     œ× ä× ÜÙ 4ZôwH“”  rôw\rôwósôw          è’š  rôw\rôwósôw¨’<       ósôw          ĞÀ¿        €•øwğò|ôw³sôwósôw`“      ğ?@pœ½w    ÿ           xfò¿ p<                x¿          P“         Ğ‘    èÂ ágôwğ’ùgôw    åfôwXˆf   H          x¿ ®øw   ˆ Š x¿ x¿ ƒ³ôwøx¿ x¿ ˆ   h“    x¿ x x¿     x¿  fĞÀ¿ † fĞÀ¿     ê   Ù óç fĞÀ¿ ê   ¬ fĞÀ¿ ê   ò¿ !ù   ,       6 H° Áƒ*\X°@ ‡¨ĞÀ!&”HQá  ;&À C“&ª\É²¥Ë€ ;_.http://www.ayende.com/Blog/images/itemLink.gifÓ45OGIF89aX  Æ  ÿÿÿs”ÇG6d®T|ºßæòîîîLLL®®®¾¾¾±Ãà¡·Ù’«Ó,,,   }}}îòø!U¦ÁÏæM¢dˆÁD§ÒÎÎÎ]]]ĞÛì&Y¨ƒŸÍEp´<<<lz‘mmmÌÌÌÿÌfc¥Æ f™{­J”½çï÷JJJ½½Æ™™™µÖç„µÖ333„„„#Zœ½fffï¿_‰m6<0mW+ß²Y¯ŒFL<À™LÏ¥R[H$,#	œ|>1Œµ999ÃœNë¼^™  f3 ôÃa•  Ì™3¹”Já´ZŞ±X{sf(  f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™ f™!ş
+Valid CSS! !ù   ,    X   ş€$‚ƒ„…†‡ˆ‰Š‹Œ…$ “”•–—˜™%›œŸ ¡ GF+‘™©ª©¢­®¯%¤¦§’«¶¶°¹º±¥§µ·Á˜»Ä­²¾ÀÂÊ“ÅÍŸÇ´ËÒ ÎÕ›Ğµ”•äåä“ 	
+”ÖÕØ¨ ä“ç”æåİ<!xñšÍûE‰ƒIÈ-ğ&`
+ÛP Pá…&@˜ØB`ßÂMº  CÃ H`©Ò…“8D¨T²ØIJú.Lê@ÎÃ${$ øpoÒƒ
+”¼#iã«9tpÚÁã*œ|üğºC×1$Ù(0‘)¹ş 0p°ö¥X•°d`ßA´öÇ@°:‚ 6ü@H.RIH¦7i€€  ,³l Àƒ ÎßxØÀªM7 ûØkøG‰ÔAÊZuœúÁ;p8†uä†äß)1õñ27¢à‚0·1Äé<ä µc á6Jø°>ÇjX¾ÿN†œé€º¢+Q`	‚ãóÒ9õ¸áØÇ8Št/¡ãÆØ¿@À"„xÀ% K,Ùe9.U"WR8é%`õõ5aÓA÷ ¯=ÀÃ&9 öÊ€¢%&@FlY¢F«pw@dWw”åƒbÜeøÚnH`Z• % È	şpÉ‹"\"I¸á÷ÚY…Ã`mÒ_W9”µ	‰B(Á‰âESIqÎŠà9	ŒT	#@Ù™Hˆ‰'K sÉ7M"×CË@[íE  é<p3=mÂD‰Hì‰Ä,DVÒRù€O,™DÂ@¦ÙY’¥%6)ej©Q7G…æA   Òä¥êª”ŠçD/fZâ¦Z–H W0‘z2i°Jü42Í:K©˜ÒNËlµ<û›˜¼¼z¢¶¸pÛÉßr’-¹1š{îà^Cl¦ì>ç®(?± ï¾üöëï¿ÿ!ğÀlğÁâ’°ÂÃG,ñÄWlñÅgü0Qø !ù
+  ,  $   ş€ ‚ƒ„…†‡ˆ‰Š‹Œ‘’“”ˆƒ„ ¡ ‚ 	
+… ‚£ƒ¢¡™º† ‚ š— º	†›‚ƒ ÚØ‚‡±‚ ‚­ ®‚ƒ«†ŸŠİÕ L  ~ôÀ@£ €¨­ ,nà¡ îyÓ;AˆjÂÑÉ{r$DAg´i[7Bés%€eÅbi^; 'Z*ÂP?D$wÔÃ+ƒ T#ÄaD¢MÅ¦r …<7#ìPê/D´êÁğª€6Q<ˆBÈD°	Ë$o£‡´ L{ÀÁ¡¢¯ƒ0+X©³çÏ C‹ ;_.http://jigsaw.w3.org/css-validator/images/vcssÓ78OÎGIF87a$ $ ÷  ÿÿÿ 1Î   ããóãããuyŠÂººº†††u}Òº¾çûûûEUÎóóóEQÎÎÎïEEYEEEûûÿ]]u²¶çiqÒuuu†Û¢¦ã††¶]eÒÎÎÎ†ŠÎaaa¢¢¢®®®ëëë×Ûó–šßóóûëë÷†ŠÊaiÒu}××××}†Ò–––mmÆÆÆ®²ç}‚ª†Š¾ÆÆë²²çÛÛó÷÷û  Ê Ê 1Òqy×ººÊßßã 1×ÎÎãçç÷ Îóó÷  Æ  Ê¾¾Â=IÂ}}–y}× (ÎÊÊë -Î®®ã  ÎÛÛÛ ¶¦ªßßãçÒÒÒ}‚¾Ò×ã’–ß²²ã‚†Ûººç (ÊuyÛ  ÎÎÎ×ßßß $Î®²ãUa×quÛãã÷  ÂÂÂÛ¾¾çMUÒÆÆ×]a®ººÂ Î××Ûem×çëïããç¾¾×ëëï  ¶ÂÂÊÊÊï -ÒÿÿûïïëQ]×¦¦¾y‚ß²²º]]iïï÷ããï††¦ççß¶¶ºÂÂë¢ÛÊÊã]]Ò–šÛ²¶ë¢¢ã××óççë=IÆ××ßÆÊë¶¶Û}}¦’’® Æ9IÒŠŠº  ®ª®×¢¢¶ÎÎßÆŠßŠÛEM¾÷÷÷¾Âã ¾’ÒemÛim¦=EÎÊÊÊ(9Æªª¾Ûßë  ¾ÆÆç××ï 5Ò 1Æuy¶im×qq}ççûqu¦¶ÆÊßßß÷AMÒ¶¶ç}}ó÷ûçëóei®ããëšãqyÛº¾ëIUÊ†ŠÂ¾ÂÛiqÎª®º-AÒEM²ïïóuyÒ††Ûûû÷¶¶Ê¢ã‚‚¶ïó÷ëï÷ëëûY]¢  ºÊÊÒuy×9Òª®ã®®ç19¢’–ÒYa¶5ÊquÆ  ÒÛßï-AÂÎÎëßß×¾¾Î®²Â$9¶ÆÆÎ5Aª-Î²¶ÎŠŠ¢1Ê®®Î¢¢® ºem¾ -Â Æªª®EI¦²¶¾Y]– 5¾1EÒ=EÂãçó Ê¾¾¾=I¾y}–––¶$=Ò}†ßÛÛß5ÒQYºmu¾mq×ßã÷5¶!ù     ,    $ $ @ÿ IAH° Áƒ®³´®¡C>²àÕ † üD  š% R¢9áH‡Ñ  ¨Ä’^´bÆ„í[%&a*‰!ùK$€0a İÈ„‰¡
+ÁL¢Çté7z†râE„eJ%£]…ÀÑoBxi $Æ¦ôB5$Fƒ°J†„
+-ySÆu2 ¬‹f ‡†;~y²!İÂˆ+vx8Ú  xXfË–ÖË¹Î®¢YH0–V_ö„09Ì¬ ˜TJŒWKÑ2bˆm…·ë†^Ì›÷n‡AŠ\gÑ¢}=
+Gü;Ør‹2ˆ_ÉQyà‰$M&ÆÍ²dĞ,w.ÿş]qKÎœàc¯uy5B„šZ_2Œ†@&sW.F„—z³h¢A)´4WOë¤6€\aP‰)ğ’”zÕ&†	oU"WVBe“  x ~DÁ‹	8 ™l´å¢A,É…•%ñÍÅÔ7O’Km²áØ[†À¸ÕŒ½©Xs øĞĞG¤HÀ/AÂÑB `’yëø €D4J§%qZ
+¶\aX'ÃpY’\uƒwyRb¤—t&iÅ& 2ğÂÚ­ƒ¥V(çfC€îß XfÉ¢‹ÉXŸ'm”À7/ÑD“MàéÄ¤(%^0¸„•L3y—  ¿mÁÑ â^f?j«æc,íE—rx$@O0ÁÔjÁ ¸Ùl&$@«†3Ú™ë/r­”@.ÁL ZB¸XAU•ä†‚
+ÊåÜMH¨µæ"/´nÈ¬JL ­ˆ•PA„	ÒÊFmQñ2E%ôlH#ëàÁwô±/'îh/gµÌ[[q(Ô 0†QY
+("¬lš°/²sÑ8d%€¤EÏXe	ëãZbäR ¶sA@êÌ2ÏlóÍ6 ;_2http://www.ayende.com/Blog/images/xmlCoffeeMug.gifÓÓÓÓ=>OcGIF87a 
+ ÷     €   € €€   €€ € €€ÀÀÀÀÜÀ¦Êğ     *  U    ª  Ô *  ** *U * *ª *Ô U  U* UU U Uª UÔ   * U  ª Ô ª  ª* ªU ª ªª ªÔ Ô  Ô* ÔU Ô Ôª ÔÔ*  * ** U* * ª* Ô** *****U****ª**Ô*U *U**UU*U*Uª*UÔ* ***U**ª*Ô*ª *ª**ªU*ª*ªª*ªÔ*Ô *Ô**ÔU*Ô*Ôª*ÔÔU  U *U UU U ªU ÔU* U**U*UU*U*ªU*ÔUU UU*UUUUUUUªUUÔU U*UUUUªUÔUª Uª*UªUUªUªªUªÔUÔ UÔ*UÔUUÔUÔªUÔÔ   * U  ª Ô* ***U**ª*ÔU U*UUUUªUÔ *UªÔª ª*ªUªªªªÔÔ Ô*ÔUÔÔªÔÔª  ª *ª Uª ª ªª Ôª* ª**ª*Uª*ª*ªª*ÔªU ªU*ªUUªUªUªªUÔª ª*ªUªªªªÔªª ªª*ªªUªªªªªªªÔªÔ ªÔ*ªÔUªÔªÔªªÔÔÔ  Ô *Ô UÔ Ô ªÔ ÔÔ* Ô**Ô*UÔ*Ô*ªÔ*ÔÔU ÔU*ÔUUÔUÔUªÔUÔÔ Ô*ÔUÔÔªÔÔÔª Ôª*ÔªUÔªÔªªÔªÔÔÔ ÔÔ*ÔÔUÔÔÔÔªÔÔÔ   &&&333???LLLYYYfffrrrŒŒŒ™™™¥¥¥²²²¿¿¿ÌÌÌØØØåååòòòÿûğ  ¤€€€ÿ   ÿ ÿÿ   ÿÿ ÿ ÿÿÿÿÿ,     
+  H ½H° ¬*äÀË?DŞ"JŒˆHVÃŞ NÌèÍ¢CŠ5zÄØQcÅˆ#;RÙ±!=Y%ÊòÈm¦Í›3ØÉ³'Ï€ ;_,http://www.ayende.com/Blog/images/mailTo.gifÔ@ABCUUTF-8OWq<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD>                <TITLE>
+                        Ayende @ Blog - TiddlyWiki Tiny Improvement
+                </TITLE>
+                <LINK rel="stylesheet" type="text/css" href="/Css/ayende.css">
+                <LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRss">
+        <STYLE type="text/css">
+/* Class for expanded nested outlines */
+.categoryListExpanded 
+{
+        width:100%;
+        visibility: visible;
+        display: block;
+}
+/* Class for collapsed nested outlines */
+.categoryListCollapsed 
+{
+        width:100%;
+        visibility: hidden;
+        display: none;
+}
+</STYLE><STYLE type="text/css">.searchword {
+    background-color: yellow;
+}</STYLE><LINK ref="pingback" href="http://www.ayende.com/Blog/pingback.aspx"></HEAD><BODY><FORM name="mainForm" method="post" action="/Blog/PermaLink.aspx?guid=96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35" id="mainForm"><INPUT type="hidden" name="__VIEWSTATE" value="dDwyMzg1MDkwODQ7dDw7bDxpPDA+Oz47bDx0PDtsPGk8NT47PjtsPHQ8O2w8aTwxOT47PjtsPHQ8O2w8aTwxPjs+O2w8dDxwPGw8dmFsdWU7PjtsPFNlYXJjaDs+Pjs7Pjs+Pjs+Pjs+Pjs+Pjs+acPEq4whgekLl4MlZgN6ou68ShY=">
+        <SCRIPT type="text/javascript">
+var ct_img_expanded = 'images/outlinedown.gif';
+var ct_img_collapsed = 'images/outlinearrow.gif';
+(new Image(15,15)).src = ct_img_expanded; // caching
+(new Image(15,15)).src = ct_img_collapsed; // caching
+
+
+function ct_Expand(htmlNode,imgNode) {
+    
+    if (document.getElementById && document.getElementById(htmlNode) != null) {
+		document.getElementById(imgNode).src=ct_img_expanded;
+		document.getElementById(htmlNode).className='categoryListExpanded';
+	}
+}
+
+function ct_Collapse(htmlNode,imgNode) {
+	
+	if (document.getElementById && document.getElementById(htmlNode) !=  null) {
+		document.getElementById(imgNode).src=ct_img_collapsed;
+		document.getElementById(htmlNode).className='categoryListCollapsed';
+	}
+}
+
+function ct_toggleExpansionStatus(htmlNode,imgNode) {
+	if (document.getElementById && document.getElementById(htmlNode) !=  null) {
+		nodeState = document.getElementById(htmlNode).className;
+	}
+    if (nodeState == 'categoryListCollapsed') {
+        ct_Expand(htmlNode,imgNode);
+	}
+	else {
+		ct_Collapse(htmlNode,imgNode);
+	}
+}
+</SCRIPT>
+
+        
+
+        <SCRIPT type="text/javascript">
+/* http://www.kryogenix.org/code/browser/searchhi/ */
+/* Modified 20021006 to fix query string parsing and add case insensitivity */
+function highlightWord(node,word) {
+	// Iterate into this nodes childNodes
+	if (node.hasChildNodes) {
+		var hi_cn;
+		for (hi_cn=0;hi_cn<node.childNodes.length;hi_cn++) {
+			highlightWord(node.childNodes[hi_cn],word);
+		}
+	}
+	
+	// And do this node itself
+	if (node.nodeType == 3) { // text node
+		tempNodeVal = node.nodeValue.toLowerCase();
+		tempWordVal = word.toLowerCase();
+		if (tempNodeVal.indexOf(tempWordVal) != -1) {
+			pn = node.parentNode;
+			if (pn.className != "searchword") {
+				// word has not already been highlighted!
+				nv = node.nodeValue;
+				ni = tempNodeVal.indexOf(tempWordVal);
+				// Create a load of replacement nodes
+				before = document.createTextNode(nv.substr(0,ni));
+				docWordVal = nv.substr(ni,word.length);
+				after = document.createTextNode(nv.substr(ni+word.length));
+				hiwordtext = document.createTextNode(docWordVal);
+				hiword = document.createElement("span");
+				hiword.className = "searchword";
+				hiword.appendChild(hiwordtext);
+				pn.insertBefore(before,node);
+				pn.insertBefore(hiword,node);
+				pn.insertBefore(after,node);
+				pn.removeChild(node);
+			}
+		}
+	}
+}
+
+function googleSearchHighlight() {
+	if (!document.createElement) return;
+	ref = document.referrer;
+	if (ref.indexOf('?') == -1 || ref.indexOf('http://www.ayende.com/Blog/') != -1)
+	{
+		if (document.location.href.indexOf('PermaLink') != -1) {
+			if (ref.indexOf('SearchView.aspx') == -1) return;
+		}
+		else {
+		//Added by Scott Hanselman
+		ref = document.location.href;
+		if (ref.indexOf('?') == -1) return;
+		}
+	}
+	qs = ref.substr(ref.indexOf('?')+1);
+	qsa = qs.split('&');
+	for (i=0;i<qsa.length;i++) {
+		qsip = qsa[i].split('=');
+	        if (qsip.length == 1) continue;
+        	if (qsip[0] == 'q' || qsip[0] == 'p') { // q= for Google, p= for Yahoo
+			words = unescape(qsip[1].replace(/\+/g,' ')).split(/\s+/);
+	                for (w=0;w<words.length;w++) {
+				highlightWord(document.getElementsByTagName("body")[0],words[w]);
+                	}
+	        }
+	}
+}
+
+window.onload = googleSearchHighlight;
+</SCRIPT>
+
+        
+
+
+                <DIV id="container">                        <DIV id="header">                                <DIV id="logoarea">                                        <DIV id="logoimage">                                                <A href="http://www.ayende.com/Blog/">                                                        <IMG alt="Ayende's Logo" class="topLogo" src="/Images/logo.jpg">
+                                                </A>
+                                        </DIV>
+                                        <DIV id="title">Ayende @ Blog - TiddlyWiki Tiny Improvement</DIV>
+                                        <DIV id="subtitle">Ayende Rahein's Blog</DIV>
+                                </DIV>
+                        </DIV>
+                </DIV>
+                <DIV id="content">                        <DIV id="side1">                        <DIV class="section">                                        <H3>Archives:</H3>
+                                        <P align="center">                                        </P><DIV class="archiveLinksContainerStyle"><TABLE class="archiveLinksTableStyle" border="0">        <TBODY><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2005-05.aspx">May, 2005 (60)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2005-04.aspx">April, 2005 (42)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2005-03.aspx">March, 2005 (41)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2005-02.aspx">February, 2005 (84)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2005-01.aspx">January, 2005 (31)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2004-12.aspx">December, 2004 (49)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2004-11.aspx">November, 2004 (26)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2004-10.aspx">October, 2004 (26)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2004-09.aspx">September, 2004 (6)</A></TD></TR><TR><TD class="archiveLinksCellStyle"><A class="archiveLinksLinkStyle" href="http://www.ayende.com/Blog/default,month,2004-04.aspx">April, 2004 (10)</A></TD></TR></TBODY></TABLE></DIV> 
+                                        <A class="rssLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRss"><IMG title="RSS 2.0" class="rssLinkImageStyle" src="images/rssButton.gif" alt="RSS 2.0" border="0"></A> | <A class="atomLinkStyle" href="http://www.ayende.com/Blog/SyndicationServiceExperimental.asmx/GetAtom"><IMG title="Atom 0.2" class="rssLinkImageStyle" src="images/atomButton.gif" alt="Atom 0.2" border="0"></A> | <A class="cdfLinkStyle" href="http://www.ayende.com/Blog/cdf.ashx"><IMG title="CDF" class="cdfLinkImageStyle" src="images/cdfButton.gif" alt="CDF" border="0"></A><P></P>
+                                </DIV>
+                                <DIV class="section">                                        <H3>Google Ads:</H3>
+                                        <SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-6220776145538040";
+google_ad_width = 180;
+google_ad_height = 150;
+google_ad_format = "180x150_as";
+google_ad_channel ="";
+google_color_border = "FF4500";
+google_color_bg = "FFEBCD";
+google_color_link = "DE7008";
+google_color_url = "E0AD12";
+google_color_text = "8B4513";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="180" height="150" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6220776145538040&dt=1117582288763&format=180x150_as&output=html&url=http%3A%2F%2Fwww.ayende.com%2FBlog%2FPermaLink%2Cguid%2C96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspx&color_bg=FFEBCD&color_text=8B4513&color_link=DE7008&color_url=E0AD12&color_border=FF4500&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+                                </DIV>
+                                        
+                                        <DIV class="section">                                        <H3>Statistics:</H3>
+                                        <DIV class="blogStats">Total Posts: 364<BR>This Year: 248<BR>This Month: 57<BR>This Week: 18<BR>Comments: 91<BR></DIV>
+                                </DIV>
+                                <DIV class="section">                                        <H3>On this page.... </H3>
+                                        <TABLE class="titleListStyle" border="0">        <TBODY><TR><TD class="titleListCellStyle"><A class="titleListLinkStyle" href="#a96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35">TiddlyWiki Tiny Improvement</A></TD></TR></TBODY></TABLE>
+                                </DIV>                        
+                                <DIV class="section">                                        <H3>Search:</H3>
+                                        
+<SCRIPT language="javascript">
+<!--
+function escapeString(searchString)
+{
+	var newString = searchString.replace(/\+/g,"%2B");
+	return newString;
+}
+
+function doSearch(searchString)
+{
+	if (searchString != "")
+	{
+		location.href='SearchView.aspx?q=' + escapeString(searchString);
+	}
+	
+	return false;
+}
+-->
+</SCRIPT>
+<DIV class="searchContainerStyle"><INPUT id="searchString" onkeypress="if (event.keyCode == 13) {doSearch(searchString.value);return false;}" type="text" class="searchTextBoxStyle">
+<INPUT name="_ctl12:Button1" id="_ctl12_Button1" type="button" language="javascript" onclick="doSearch(searchString.value)" class="searchButtonStyle" value="Search">
+</DIV>
+
+                                </DIV>
+                                <DIV class="section">                                        <H3>Categories:</H3>
+                                        <DIV class="categoryListContainerStyle"><TABLE class="categoryListTableStyle" border="0">        <TBODY><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Ayende.Utilities"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Ayende.Utilities.aspx">Ayende.Utilities</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Blog"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Blog.aspx">Blog</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Books"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Books.aspx">Books</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=eXtreme%20Programming"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,eXtreme%20Programming.aspx">eXtreme Programming</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Humor"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Humor.aspx">Humor</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Miscellaneous"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Miscellaneous.aspx">Miscellaneous</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Movies"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Movies.aspx">Movies</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Music"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Music.aspx">Music</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=NHibernate%20Query%20Analyzer"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,NHibernate%20Query%20Analyzer.aspx">NHibernate Query Analyzer</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Programming"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Programming.aspx">Programming</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Website"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Website.aspx">Website</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Windows"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Windows.aspx">Windows</A></TD></TR><TR><TD class="categoryListCellStyle"><A class="categoryListXmlLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRssCategory?categoryName=Writings"><IMG src="images/rssButton.gif" alt="" border="0"></A>Â <A class="categoryListLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Writings.aspx">Writings</A></TD></TR></TBODY></TABLE></DIV>
+                                </DIV>
+                                <DIV class="section">                                        <H3>User Management:</H3>
+                                        <A href="Login.aspx">Sign In</A>
+                                </DIV>
+                                <DIV class="section">                                        <DIV id="mainmenuarea">                                                <H3>Maintenance:</H3>
+                                                
+                                        </DIV>
+                                </DIV>
+                        </DIV>
+        
+                        <DIV id="main">                                <DIV class="date"><A class="archiveLinkStyle" href="http://www.ayende.com/Blog/default,date,2005-05-24.aspx"><IMG class="archiveLinkImageStyle" src="http://www.ayende.com/Blog/images/dayLink.gif" alt="" border="0"></A>Â Tuesday, May 24, 2005</DIV>
+<DIV class="body"><A name="a96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35"></A><TABLE width="100%" cellpadding="1">
+  <TBODY><TR><TD valign="top">      <BR><B><A class="TitleLinkStyle" href="http://www.ayende.com/Blog/TiddlyWikiTinyImprovement.aspx">TiddlyWiki Tiny Improvement</A></B><BR><P>    The single bad thing that I've found in TiddlyWiki is that it doesn't warns you about unsaved changes when you leave the page, with a potential to lose those changes. </P><P>    Here is the fix* Change the:</P><OL>    <LI>        <FONT color="#0000ff" size="2">&lt;</FONT><FONT color="#b22222" size="2">body</FONT><FONT color="#0000ff">&gt; </FONT>tag to:<BR>        <FONT color="#0000ff" size="2">&lt;</FONT><FONT color="#b22222" size="2">body</FONT><FONT size="2"> </FONT><FONT color="#8a2be2" size="2">onload="</FONT><FONT color="#ff00ff" size="2">main()</FONT><FONT color="#8a2be2" size="2">" onunload="</FONT><FONT color="#ff00ff" size="2">askSaveChanges()</FONT><FONT color="#8a2be2" size="2">"</FONT><FONT color="#0000ff" size="2">&gt;</FONT>     </LI>    <LI>        Add the following function to the <FONT color="#0000ff">&lt;</FONT><FONT color="#b22222" size="2">script <FONT size="2"><FONT color="red">type</FONT><FONT color="blue">="text/javascript"</FONT></FONT></FONT><FONT color="blue">&gt;</FONT>         <BR>        <FONT face="Courier New" color="#0000ff" size="2">function</FONT><FONT face="Courier New" size="2"> askSaveChanges()         <BR>        </FONT><FONT face="Courier New (Hebrew)" size="2">{         <BR>        Â Â  </FONT><FONT face="Courier New" color="#0000ff" size="2">var</FONT><FONT face="Courier New" size="2"> save = confirm("Save wiki's changes?");         <BR>        Â Â  </FONT><FONT face="Courier New" color="#0000ff" size="2">if</FONT><FONT face="Courier New" size="2">(save)         <BR>        Â Â Â Â Â Â Â  saveChanges();         <BR>        </FONT><FONT face="Courier New (Hebrew)" size="2">} </FONT>    </LI></OL><P>    <FONT face="Courier New (Hebrew)">Now it will ask you at any unloading if you want to save. Pretty good solution in my book for this problem.</FONT></P><P></P><P>    * This will ask for <EM>any</EM> unloading, whatever there are changes or not, so it's not ideal.</P><BR><A class="categoryLinkStyle" href="http://www.ayende.com/Blog/CategoryView,category,Miscellaneous.aspx">Miscellaneous</A><BR>
+      <FONT class="small" size="-1" color="gray">5/24/2005 11:59:45 PM UTCÂ Â <A class="permalinkStyle" href="http://www.ayende.com/Blog/TiddlyWikiTinyImprovement.aspx"><IMG title="Use the link of this item to make permanent references to this entry." class="permalinkImageStyle" src="http://www.ayende.com/Blog/images/itemLink.gif" alt="#" border="0"></A>Â Â <A class="commentLinkStyle" href="http://www.ayende.com/Blog/CommentView,guid,96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspx">Comments [0]</A>Â <A title="Use the URL of this link to use track back on this entry. If you don't know what trackback is, don't worry about it." class="trackbackLinkStyle" href="http://www.ayende.com/Blog/Trackback,guid,96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspx">Trackback</A>Â <BR></FONT>
+      </TD><TD valign="top" align="right" nowrap="">      
+      </TD></TR></TBODY></TABLE>
+
+
+</DIV>
+                                <P></P><P>                                </P><DIV id="footer">                                        <P>Â© CopyrightÂ 2005Â Ayende Rahien with newtelligence dasBlog 1.7.5016.2;</P>
+                                        <P>                                                <A href="http://jigsaw.w3.org/css-validator/">                                                <IMG src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></A> | 
+                                                <A class="xmlCoffeeMugStyle" href="http://127.0.0.1:5335/system/pages/subscriptions?url=http://www.ayende.com/Blog/SyndicationService.asmx/GetRss"><IMG title="Subscribe to this weblog's RSS feed with SharpReader, Radio Userland, NewsGator or any other aggregator listening on port 5335 by clicking this button." class="xmlCoffeeMugImageStyle" src="images/xmlCoffeeMug.gif" alt="Subscribe to this weblog's RSS feed with SharpReader, Radio Userland, NewsGator or any other aggregator listening on port 5335 by clicking this button." border="0"></A> | <A class="rssLinkStyle" href="http://www.ayende.com/Blog/SyndicationService.asmx/GetRss"><IMG title="RSS 2.0" class="rssLinkImageStyle" src="images/rssButton.gif" alt="RSS 2.0" border="0"></A>|<A class="atomLinkStyle" href="http://www.ayende.com/Blog/SyndicationServiceExperimental.asmx/GetAtom"><IMG title="Atom 0.2" class="rssLinkImageStyle" src="images/atomButton.gif" alt="Atom 0.2" border="0"></A> | <A class="cdfLinkStyle" href="http://www.ayende.com/Blog/cdf.ashx"><IMG title="CDF" class="cdfLinkImageStyle" src="images/cdfButton.gif" alt="CDF" border="0"></A> | <A class="mailToStyle" href="javascript:var e1='&#97y%65%6e%64e%2ec%6f&#109',e2='mailto: ', e3='&#66l%6f%67';var e0=e2+e3+'%40'+e1+'?Subject=Comments on: Ayende @ Blog - TiddlyWiki Tiny Improvement';(window.location?window.location.replace(e0):document.write(e0)); "><IMG title="Send mail to the author(s)" class="mailToImageStyle" src="images/mailTo.gif" alt="Send mail to the author(s)" border="0"></A> | Page rendered at 6/1/2005 12:30:34 AM UTC
+                                        </P>
+                                </DIV>
+                        </DIV>        
+                </DIV>        
+        </FORM>
+</BODY></HTML>_Shttp://www.ayende.com/Blog/PermaLink,guid,96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspxYtext/html¡EÑFÕGCH@IJ_WebResourceFrameNameOÌ<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#de7008" alink="#de7008" vlink="#de7008" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="180" height="150" cellspacing="1" cellpadding="0" border="0" bgcolor="#ff4500"><TBODY><TR><TD width="178" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://www.ayende.com/Blog/PermaLink,guid,96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspx&hl=en&client=ca-pub-6220776145538040&adU=www.pen-planet-bmsh.com/&adT=PC+Translation+Software&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#ffffff">Ads by Google</FONT></A></TD></TR><TR><TD bgcolor="#ffebcd" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.pen-planet-bmsh.com/','aw0')" onmouseover="ss('go to www.pen-planet-bmsh.com/','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:176px; padding-left:2px"><FONT style="line-height:14px;font-size:12px" face="arial,sans-serif" color="#de7008"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=B1nlksvOcQrqDGsqYFvmCxZAIxebhCf3xi6kBwI23AaD-ChABGAEg3O-EA0CKFkiEOZgBxUqyAQ53d3cuYXllbmRlLmNvbboBCjE4MHgxNTBfYXPIAQHaAVNodHRwOi8vd3d3LmF5ZW5kZS5jb20vQmxvZy9QZXJtYUxpbmssZ3VpZCw5NmFkMGI5Yi03ZDgzLTRiMjMtOWNiZi0yZmFmZjNmMGNiMzUuYXNweOgBAQ&num=1&adurl=http://www.pen-planet-bmsh.com/view_category.asp%3Fcat%3D146&client=ca-pub-6220776145538040" onfocus="ss('go to www.pen-planet-bmsh.com/','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.pen-planet-bmsh.com/','aw0')" onmouseout="cs()"><B>PC Translation Software</B></A><BR></FONT><FONT style="line-height:14px;font-size:12px" face="arial,sans-serif" color="#8b4513">Buy language translation software or try online demonstration<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#e0ad12">www.pen-planet-bmsh.com/</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_ http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-6220776145538040&dt=1117582288763&format=180x150_as&output=html&url=http%3A%2F%2Fwww.ayende.com%2FBlog%2FPermaLink%2Cguid%2C96ad0b9b-7d83-4b23-9cbf-2faff3f0cb35.aspx&color_bg=FFEBCD&color_text=8B4513&color_link=DE7008&color_url=E0AD12&color_border=FF4500&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123      !  3  I  g  n  €    ¥ %Ò %ù & &	 wW w wŠ w‘ x‰ x» xÅ xÌ yÉ yü z zï {! {* {H {N ¢	 ¢C ¢U ¢\ ¢c ¢j ¢q ¢x ¢ ¢† ¢ ¢” ¢› ¢¢ ¢© ¢° ¢· ¥4 ¥d ¥k ¨È ¨ù ©  ¯ ¯@ ¯G µ µN µU µ\ µc µj ¸Ñ ¹  ¹	 ¹„ÚäæéôÛî             K             ’

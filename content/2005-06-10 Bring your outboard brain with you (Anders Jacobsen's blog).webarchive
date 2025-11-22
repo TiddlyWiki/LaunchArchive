@@ -1,0 +1,947 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives§”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOí	body {
+		margin:20px 20px 20px 20px;
+		background:#FFFFFF;
+		}
+	A 			{ color: #003366; font-family: verdana, arial, sans-serif; text-decoration: none; } 
+	A:link		{ color: #0000FF; text-decoration: underline; } 
+	A:visited	{ color: #000077; text-decoration: underline; } 
+	A:active	{ color: #000011; text-decoration: underline; } 
+	A:hover		{ color: #FFCC66;  } 
+
+	#banner {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#222222;
+		font-size:24px;
+		font-weight:bold;
+		border-left:0px none #000000;
+		border-right:0px none #000000;
+		border-top:0px none #000000;
+		padding:0px;
+		background-color: #FFFFFF;
+		border-bottom-style: none;
+		border-bottom-width: 0px;	 
+		}
+
+	.description {
+		font-family:verdana, arial, sans-serif;
+		color:#FFFFFF;
+		font-size:11px;
+		font-weight:bold;
+  		background:#FFFFFF;
+  		text-transform:none;	
+		}	
+	
+	
+	#content {
+		float:left;
+		postion:relative;
+		width:65%;
+		background:#FFF;
+		margin-right:3%;
+		margin-bottom:20px;
+		border:1px solid #000000;
+		left: 20%;
+		margin-left: 5%;
+		}
+			
+	#container {
+		background:#FFF;
+		border:1px solid #000000;		
+		}
+
+
+	#links {
+		float:right;
+		postion:relative;
+		background:#FFF;
+		padding:15px;
+		position: absolute;
+		height: auto;
+		width: 25%;
+		left: 65%;
+		top: 500px;
+		border: 2px dashed #000000;
+			}
+		
+	.blog {
+  		font-family:verdana, arial, sans-serif;
+		font-size:11px;
+		padding:15px 150px 15px 60px;
+		background:#FFF;  							
+		}	
+
+	
+	.blogbody {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#000000;
+		font-size:12px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:16px;			
+		}	
+
+	.title	{
+		font-family:verdana, helvetica, arial, sans-serif;
+		font-size: 12px;
+		color: #000000;
+		font-weight:bold;
+		text-transform:uppercase;
+		list-style-position: inside;
+		list-style-image: none;
+		list-style-type: none;
+	}			
+
+	#menu {
+  		margin-bottom:15px;
+		background:#FFF;
+		text-align:center;  							
+		}		
+
+	.date	{
+		font-family:verdana, helvetica, arial, sans-serif;
+		font-size: 11px;
+		color: #666;
+		border-bottom:1px solid #999;
+		margin-bottom:10px;
+		font-weight:lighter;
+		text-align: right;
+		}			
+		
+	.posted	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: 11px; 
+		color: #000000; 
+		margin-bottom:25px;
+		}
+
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#000000;
+		font-size:10px;
+		font-weight:normal;
+  		background:#ffffff;
+  		line-height:14px;
+  		padding:2px;
+  		text-align:center;
+			
+		}
+	
+	.calendarhead {	
+		font-family:verdana, arial, sans-serif;
+		color:#000;
+		font-size:11px;
+		font-weight:bold;
+  		background:#DDD;
+  		line-height:14px;
+  		padding:2px;					
+		}	
+		
+	
+	.side {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#000;
+		font-size:11px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:14px;
+  		padding:2px;				
+		}	
+		
+	.sidetitle {
+	font-family:verdana, helvetica, arial, sans-serif;
+	color:#000;
+	font-size:11px;
+	font-weight:normal;
+	line-height:14px;
+	padding:5px;
+	margin-top:25px;
+	letter-spacing: .1em;
+	border-bottom:1px dotted #999;
+	text-align:left;
+	background:#FFF;
+	margin-bottom: 10px;
+		}		
+		
+
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:9px;
+		font-weight:bold;		
+  		line-height:14px;
+  		padding:2px;
+  		margin-top:10px;
+  		text-align:center;
+  		background:#CCC;  		
+ 		}	
+
+	.powered {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:9px;
+		font-weight:normal;
+  		line-height:14px;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing: .2em;					
+  		background:#FFF;		
+		}	
+		
+	
+	
+	.comments-body {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:11px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:14px;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+  		padding-left:15px;		
+  		padding-right:15px;
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.comments-post {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:9px;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+			
+	
+	.trackback-url {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:11px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:14px;
+ 		padding:5px;		
+ 		border:1px dotted #999; 					
+		}
+
+
+	.trackback-body {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:11px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:14px;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.trackback-post {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#666;
+		font-size:9px;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+
+
+		
+	.comments-head	{ 
+	
+		font-family:verdana, helvetica, arial, sans-serif;
+		font-size: 11px;
+		color: #666;
+		border-bottom:1px solid #999;
+		margin-bottom:10px;
+		font-weight:lighter;
+		text-align: right;
+		margin-top:20px;
+  		background:#FFF;		
+		}		
+
+	#banner-commentspop {
+		font-family:verdana, helvetica, arial, sans-serif;
+		color:#FFF;
+		font-size:18px;
+		font-weight:bold;
+		border-left:1px solid #FFF;	
+		border-right:1px solid #FFF;  		
+		border-top:1px solid #FFF;  		
+  		background:#003366;
+  		padding-left:15px;
+  		padding-right:15px;
+  		padding-top:5px;
+  		padding-bottom:5px;  		  		  			 
+		}
+
+
+blockquote {
+	font-family:verdana, helvetiva, arial, sans-serif;
+	font-size:11px;
+	color:#000000;
+	line-height:15px;
+	background-color: #EEE;
+	padding: 4px;
+	margin-left: 35px;
+	margin-right: 35px;
+	}
+
+/* For BlogSnob ad */
+
+.adheading {
+	font-family:verdana, helvetiva, arial, sans-serif;
+	font-size:11px;
+	}
+
+.adtext {
+	font-family:verdana, helvetiva, arial, sans-serif;
+	font-size:11px;
+	}
+_3http://www.jacobsen.no/anders/blog//styles-site.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascript”O  
+function write_ref() {
+   document.write("<script language='Javascript' src='http://www.jacobsen.no/cgi-sys/cgiwrap/anders/referer/referrers.cgi?in=" + document.referrer + "&out=" + document.location + "'>");
+   document.write("</");
+   document.write("script>");
+}
+write_ref();
+_#http://www.jacobsen.no/referrers.js_application/x-javascript”Oêfunction referrals() {
+   document.write("Documents referring to this page:<p>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?all=1'>Bloglines | Log In</a> [5]<br>");
+   document.write("<a href='http:\/\/blog.ynnesdal.no\/'>ynnesdal:blog</a> [3]<br>");
+   document.write("<a href='http:\/\/bloglines.com\/myblogs_display?sub=140349'>Bloglines | Log In</a> [2]<br>");
+   document.write("<a href='http:\/\/del.icio.us\/tag\/gtd'>del.icio.us\/tag\/gtd</a> [2]<br>");
+   document.write("<a href='http:\/\/bloglines.com\/myblogs_display?sub=4785038'>Bloglines | Log In</a> [2]<br>");
+   document.write("<a href='http:\/\/blog.ynnesdal.no\/arkiv\/cat_web.html'>ynnesdal:blog: Web Archives</a> [1]<br>");
+   document.write("<a href='http:\/\/www.google.com\/search?client=safari'>Google</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=8910972'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.google.co.nz\/search?hl=en'>Google</a> [1]<br>");
+   document.write("<a href='http:\/\/kielland.typepad.com\/mortyblogg\/'>Mortyblogg</a> [1]<br>");
+   document.write("<a href='http:\/\/www.technorati.com\/cosmos\/search.html?rank='>Technorati: Using Technorati</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=1049855'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/kielland.typepad.com\/mortyblogg\/2005\/05\/gtd_tiddlywiki_.html'>Mortyblogg: GTD TiddlyWiki er genial</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=359832'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=3141407'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=5435736'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=2272145'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=405406'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=9395372'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=7434235'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=24201'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=10068164'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=7363220'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=6899862'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=7362926'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=352755'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=1039131'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=5558729'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=78239'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=5581929'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=8579170'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=9226255'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/gmail.google.com\/gmail?'>Welcome to Gmail</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=852745'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=4159800'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=6553841'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?folder=2898014'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=180326'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=7230663'>Bloglines | Log In</a> [1]<br>");
+   document.write("<a href='http:\/\/www.bloglines.com\/myblogs_display?sub=52441'>Bloglines | Log In</a> [1]<br>");
+}
+referrals();
+_™http://www.jacobsen.no/cgi-sys/cgiwrap/anders/referer/referrers.cgi?in=&out=http://www.jacobsen.no/anders/blog/archives/2005/05/11/bring_your_outboard_brain_with_you.html‘UUTF-8O:¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><TITLE>Bring your outboard brain with you (Anders Jacobsen's blog)</TITLE><META name="ROBOTS" content="index,follow">
+
+<META name="description" content="Sometimes things can be deceptively simple yet amazingly powerful. The captivating Tetris-game comes to mind, and today I had another life-changing revelation: the GTD TiddlyWiki is a Wiki, a GettingThingsDone (GTD) tool, and an open source, multiplatform, HTML-based 'The Brain' you can carry with you on a USB stick. "><META name="author" content="andersja (AKA 'andersja')">
+
+
+<LINK rel="stylesheet" href="http://www.jacobsen.no/anders/blog//styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.jacobsen.no/anders/blog/index.rdf">
+
+<LINK rel="start" href="http://www.jacobsen.no/anders/blog/" title="Home"><LINK rel="prev" href="http://www.jacobsen.no/anders/blog/archives/2005/04/29/lifehack_snippets.html" title="Lifehack snippets">
+
+<LINK rel="next" href="http://www.jacobsen.no/anders/blog/archives/2005/05/13/so_you_thought_bluetooth_was_dead_nokia_releases_sensor.html" title="So... you thought Bluetooth was dead? - Nokia releases Sensor">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'www.jacobsen.no';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+</HEAD><BODY>
+<DIV id="banner">Anders Jacobsen's blog<BR>
+<SPAN class="description">... because the Internet changes your life...</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://www.jacobsen.no/anders/blog/archives/2005/04/29/lifehack_snippets.html">¬´ Lifehack snippets</A> |
+
+<A href="http://www.jacobsen.no/anders/blog/">Main</A>
+| <A href="http://www.jacobsen.no/anders/blog/archives/2005/05/13/so_you_thought_bluetooth_was_dead_nokia_releases_sensor.html">So... you thought Bluetooth was dead? - Nokia releases Sensor ¬ª</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<DIV class="date">May 11, 2005</DIV>      
+
+<DIV class="blogbody">
+<SPAN class="title">Bring your outboard brain with you</SPAN>
+
+<P>Sometimes things can be deceptively simple yet amazingly powerful. The captivating Tetris-game comes to mind, and today I had another life-changing revelation: the <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD TiddlyWiki</A> is a Wiki, a GettingThingsDone (GTD) tool, and an open source, multiplatform, HTML-based 'The Brain' you can carry with you on a USB stick. </P>
+
+<P>I've always admired the flexibility and power of <A href="http://www.thebrain.com/">TheBrain</A> but have been turned off by having all my stuff wrapped up in a proprietary format; requiring installation and licenses and stuff. Secretly, I guess I was just waiting for something dead simple, easy to use, yet powerful.. I've been playing with setting up 'personal wikis' on my webserver, but have been frustrated by the need to access it while off line etc etc. </P>
+
+<P>Today it's here; look no further; check out the TiddlyWiki, save it to your hard drive and start playing! Thanks, <A href="http://snapgrid.com/">Nathan</A> and <A href="http://www.osmosoft.com/">Jeremy</A>! (via <A href="http://www.lifehacker.com/software/productivity/getting-things-done-tiddlywiki-102953.php">LifeHacker</A>)</P>
+
+<A name="more"></A>
+
+
+
+</DIV> 
+<DIV class="comments-head">Sponsored links</DIV> 
+<DIV class="blogbody"><CENTER>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-4787588550383870";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="6326621823";
+google_color_border = "CCCCCC";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4787588550383870&dt=1118387744641&alt_color=FFFFFF&format=728x90_as&output=html&channel=6326621823&url=http%3A%2F%2Fwww.jacobsen.no%2Fanders%2Fblog%2Farchives%2F2005%2F05%2F11%2Fbring_your_outboard_brain_with_you.html&color_bg=FFFFFF&color_text=333333&color_link=000000&color_url=666666&color_border=CCCCCC&cc=42&u_h=854&u_w=1280&u_ah=787&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</CENTER>
+</DIV>
+
+
+
+<DIV class="comments-head">Related Entries</DIV>       
+<DIV class="blogbody"><UL>
+         
+                <LI><A href="http://www.jacobsen.no/anders/blog/archives/2005/01/11/how_to_redirect_after_changing_your_domain_name.html">How to redirect after changing your domain name</A> -
+<I>Jan 11, 2005</I></LI>
+         
+                <LI><A href="http://www.jacobsen.no/anders/blog/archives/2004/09/01/10_rules_for_a_consultant_to_live_by.html">10 Rules for a Consultant to Live By</A> -
+<I>Sep 01, 2004</I></LI>
+         
+                <LI><A href="http://www.jacobsen.no/anders/blog/archives/2004/08/17/rotterdam_amsterdam.html">Rotterdam = Amsterdam?</A> -
+<I>Aug 17, 2004</I></LI>
+         
+                <LI><A href="http://www.jacobsen.no/anders/blog/archives/2004/08/13/what_is_open.html">What is ''open''?</A> -
+<I>Aug 13, 2004</I></LI>
+         
+                <LI><A href="http://www.jacobsen.no/anders/blog/archives/2004/07/27/us_internet_businesses_hitting_that_international_market.html">US Internet businesses hitting that international market...</A> -
+<I>Jul 27, 2004</I></LI>
+         
+
+<LI>See more related posts in: <A href="http://www.jacobsen.no/anders/blog/archives/categories/business/index.html">Business</A>
+, <A href="http://www.jacobsen.no/anders/blog/archives/categories/internet_culture/index.html">Internet Culture</A>
+, <A href="http://www.jacobsen.no/anders/blog/archives/categories/km_ia/index.html">KM / IA</A>
+, <A href="http://www.jacobsen.no/anders/blog/archives/categories/usability_accessibility/index.html">Usability / Accessibility</A>
+
+</LI></UL>
+</DIV>
+
+
+
+
+<DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+<DIV class="comments-body"><P>No pasadena neutral spread video texas hold'em poker bluff war button check! </P>
+<SPAN class="comments-post">Posted by: <A href="http://www.hold-em-room.com" rel="nofollow"> play texas hold'em poker</A> on June  6, 2005 11:38 AM</SPAN>
+</DIV>
+
+
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="http://www.jacobsen.no/cgi-sys/cgiwrap/anders/MT/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie.checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="1579">
+
+Name:<BR>
+<INPUT name="author"><BR><BR>
+
+Email: <BR>
+(Will not be displayed if you enter a website below. Otherwise, it will be displayed "spam protected")<BR>
+<INPUT name="email"><BR><BR>
+
+Website: <BR>
+(if you have one)<BR>
+<INPUT name="url"><BR><BR>
+
+What do you want to say? <BR>
+(please don't bother posting "spam" (pornography, viagra-sales etc - I will delete such comments anyway))<BR>
+<TEXTAREA name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="checkbox" name="bakecookie">Remember info?<BR><BR>
+<INPUT type="submit" name="preview" value="¬†PREVIEW¬†">
+<INPUT type="submit" name="post" value="¬†POST¬†"><BR><BR>
+
+<INPUT type="button" onclick="forgetMe(this.form)" value="FORGET PERSONAL INFORMATION">
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+//-->
+</SCRIPT>
+
+
+</DIV>
+
+
+
+
+<DIV class="date">Referrers to this page</DIV>     
+
+<DIV class="trackback-url"><A name="trackback"></A>TrackBack URL for this entry:<BR>http://www.jacobsen.no/cgi-sys/cgiwrap/anders/MT/mt-tb.cgi/1220 </DIV>
+
+
+<A></A>
+<A href="http://blog.ynnesdal.no/arkiv/000108.html" rel="nofollow">ynnesdal:blog</A>: Digital planlegger - med mer (May 12, 2005 11:32 AM)<BR>
+"Jeg har sjekket ut BackPack - og den er slettes ikke dum for √• holde orden p√• b√•de det ene og det andre. N√• tipset Anders Jacobsen om GTD TiddlyWiki, som lar deg ta med hele "huskelappen" p√• for eksempel..."<BR>
+
+
+
+
+
+<BR>
+
+
+<DIV class="blogbody"><SCRIPT language="Javascript" src="http://www.jacobsen.no/referrers.js"></SCRIPT><SCRIPT language="Javascript" src="http://www.jacobsen.no/cgi-sys/cgiwrap/anders/referer/referrers.cgi?in=&out=http://www.jacobsen.no/anders/blog/archives/2005/05/11/bring_your_outboard_brain_with_you.html"></SCRIPT>Documents referring to this page:<P><A href="http://www.bloglines.com/myblogs_display?all=1">Bloglines | Log In</A> [5]<BR><A href="http://blog.ynnesdal.no/">ynnesdal:blog</A> [3]<BR><A href="http://bloglines.com/myblogs_display?sub=140349">Bloglines | Log In</A> [2]<BR><A href="http://del.icio.us/tag/gtd">del.icio.us/tag/gtd</A> [2]<BR><A href="http://bloglines.com/myblogs_display?sub=4785038">Bloglines | Log In</A> [2]<BR><A href="http://blog.ynnesdal.no/arkiv/cat_web.html">ynnesdal:blog: Web Archives</A> [1]<BR><A href="http://www.google.com/search?client=safari">Google</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=8910972">Bloglines | Log In</A> [1]<BR><A href="http://www.google.co.nz/search?hl=en">Google</A> [1]<BR><A href="http://kielland.typepad.com/mortyblogg/">Mortyblogg</A> [1]<BR><A href="http://www.technorati.com/cosmos/search.html?rank=">Technorati: Using Technorati</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=1049855">Bloglines | Log In</A> [1]<BR><A href="http://kielland.typepad.com/mortyblogg/2005/05/gtd_tiddlywiki_.html">Mortyblogg: GTD TiddlyWiki er genial</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=359832">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=3141407">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=5435736">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=2272145">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=405406">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=9395372">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=7434235">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=24201">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=10068164">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=7363220">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=6899862">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=7362926">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=352755">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=1039131">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=5558729">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=78239">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=5581929">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=8579170">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=9226255">Bloglines | Log In</A> [1]<BR><A href="http://gmail.google.com/gmail?">Welcome to Gmail</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=852745">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=4159800">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=6553841">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?folder=2898014">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=180326">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=7230663">Bloglines | Log In</A> [1]<BR><A href="http://www.bloglines.com/myblogs_display?sub=52441">Bloglines | Log In</A> [1]<BR>
+</P></DIV>
+<DIV align="right" class="posted">397 visits (2 today, 41 this week)
+</DIV>
+</DIV>
+
+
+
+
+</DIV>
+
+
+
+
+
+<HR>
+<TABLE width="100%" border="0"><TBODY><TR><TD align="left"></TD><TD align="right"><FONT face="Verdana, Arial, Helvetica" size="-2">
+<A href="/copyright/">¬©</A> 
+<A href="/anders/">Anders Jacobsen</A> <BR>
+[<A href="/anders/blog/">weblog</A> / <A href="http://www.extrospection.com/">photography</A>]<BR>
+</FONT>
+</TD></TR></TBODY></TABLE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</BODY></HTML>_^http://www.jacobsen.no/anders/blog/archives/2005/05/11/bring_your_outboard_brain_with_you.htmlYtext/html°— ’!"#$_WebResourceFrameNameO˙<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #000000 }a.ad:visited { color: #000000 }a.ad:hover { color: #000000 }a.ad:active { color: #000000 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#cccccc"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to fotothing.com','aw0')" onmouseover="ss('go to fotothing.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.fotothing.com/%3Faw&sa=l&ai=BHmNR-D2pQs2gCL-uae7fiLcK44urCJHE7ZoBwI23AdCGAxABGAEgstL0ASgESIs5mAGtS6ABtq67_wOqAQo2MzI2NjIxODIzsgEPd3d3LmphY29ic2VuLm5vugEJNzI4eDkwX2FzyAEB2gFeaHR0cDovL3d3dy5qYWNvYnNlbi5uby9hbmRlcnMvYmxvZy9hcmNoaXZlcy8yMDA1LzA1LzExL2JyaW5nX3lvdXJfb3V0Ym9hcmRfYnJhaW5fd2l0aF95b3UuaHRtbOgBAQ&num=1&client=ca-pub-4787588550383870" onfocus="ss('go to fotothing.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to fotothing.com','aw0')" onmouseout="cs()"><B>Free Photo Blogs</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#333333">Completely free, fun and fast photo blogging. Share your world. </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.gemstream.com/blog','aw1')" onmouseover="ss('go to www.gemstream.com/blog','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=Bzibp-D2pQs2gCL-uae7fiLcKto2LCf6vgJ8BwI23AZCwChACGAIgstL0ASgESIk5mAGtS6oBCjYzMjY2MjE4MjOyAQ93d3cuamFjb2JzZW4ubm-6AQk3Mjh4OTBfYXPIAQHaAV5odHRwOi8vd3d3LmphY29ic2VuLm5vL2FuZGVycy9ibG9nL2FyY2hpdmVzLzIwMDUvMDUvMTEvYnJpbmdfeW91cl9vdXRib2FyZF9icmFpbl93aXRoX3lvdS5odG1s6AEB&num=2&adurl=http://www.gemstream.com/blog.html%3Fsource%3Dgoogle%26HowToforBlogging&client=ca-pub-4787588550383870" onfocus="ss('go to www.gemstream.com/blog','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.gemstream.com/blog','aw1')" onmouseout="cs()"><B>How -To for Blogging</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#333333">Learn about blogs, try a live demo and start your own blog today! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.Zoto.com','aw2')" onmouseover="ss('go to www.Zoto.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?adurl=http://www.Zoto.com&sa=l&ai=BnTcP-D2pQs2gCL-uae7fiLcKxqPRCuaezawBwI23AcCaDBADGAMgstL0ASgESIs5mAGtS6AB2tXA_gOqAQo2MzI2NjIxODIzsgEPd3d3LmphY29ic2VuLm5vugEJNzI4eDkwX2FzyAEB2gFeaHR0cDovL3d3dy5qYWNvYnNlbi5uby9hbmRlcnMvYmxvZy9hcmNoaXZlcy8yMDA1LzA1LzExL2JyaW5nX3lvdXJfb3V0Ym9hcmRfYnJhaW5fd2l0aF95b3UuaHRtbOgBAQ&num=3&client=ca-pub-4787588550383870" onfocus="ss('go to www.Zoto.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.Zoto.com','aw2')" onmouseout="cs()"><B>Blog Pictures with Zoto</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#333333">2GB free photo hosting for Blogger plus tagging and communities </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.squarespace.com/','aw3')" onmouseover="ss('go to www.squarespace.com/','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.squarespace.com/%3FpartnerTag%3Dgoogle%26planTag%3Dblgnetwork&sa=l&ai=BGMVR-D2pQs2gCL-uae7fiLcK0JvZCbTa_ZUBwI23AfCEDhAEGAQgstL0ASgESJY5mAGtS6ABn9f6_gOqAQo2MzI2NjIxODIzsgEPd3d3LmphY29ic2VuLm5vugEJNzI4eDkwX2FzyAEB2gFeaHR0cDovL3d3dy5qYWNvYnNlbi5uby9hbmRlcnMvYmxvZy9hcmNoaXZlcy8yMDA1LzA1LzExL2JyaW5nX3lvdXJfb3V0Ym9hcmRfYnJhaW5fd2l0aF95b3UuaHRtbOgBAQ&num=4&client=ca-pub-4787588550383870" onfocus="ss('go to www.squarespace.com/','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.squarespace.com/','aw3')" onmouseout="cs()"><B>Blogging Evolved</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#333333">Elegant. Powerful. Professional. The better way to put a blog online </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#cccccc"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.jacobsen.no/anders/blog/archives/2005/05/11/bring_your_outboard_brain_with_you.html&hl=en&client=ca-pub-4787588550383870&adU=fotothing.com&adT=Free+Photo+Blogs&adU=www.gemstream.com/blog&adT=How+-To+for+Blogging&adU=www.Zoto.com&adT=Blog+Pictures+with+Zoto&adU=www.squarespace.com/&adT=Blogging+Evolved&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_‘http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4787588550383870&dt=1118387744641&alt_color=FFFFFF&format=728x90_as&output=html&channel=6326621823&url=http%3A%2F%2Fwww.jacobsen.no%2Fanders%2Fblog%2Farchives%2F2005%2F05%2F11%2Fbring_your_outboard_brain_with_you.html&color_bg=FFFFFF&color_text=333333&color_link=000000&color_url=666666&color_border=CCCCCC&cc=42&u_h=854&u_w=1280&u_ah=787&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I N U g v å"Xajàé>I>É>ï>ú?∫?‡?˚@RñSCSLSRééwéÅéÉéÜéëé®≠¶≠π             %              Øë

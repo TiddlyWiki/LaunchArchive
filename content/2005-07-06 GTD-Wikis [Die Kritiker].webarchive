@@ -1,0 +1,1044 @@
+bplist00Ò2_WebSubresources_WebMainResource¬"%(,/Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO·š// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+Ads_Build='00000032-3';var bA,cA,dA,eA,fA,gA,hA,iA,jA,kA,lA,mA,nA,oA,pA;NUM_FARM=1;bA=['http://a.as-test.falkag.net' ,'http://a.as-eu.falkag.net' ,'','http://a.as-us.falkag.net' ,'','','','','',''];cA=['http://a.as-test.falkag.net' ,'https://s.as-eu.falkag.net' ,'','https://s.as-us.falkag.net' ,'','','','','',''];dA=['http://a.as-test.falkag.net' ,'http://a.as-eu.falkag.net' ,'','http://a.as-us.falkag.net' ,'','','','','',''];eA=['http://a.as-test.falkag.net' ,'https://s.as-eu.falkag.net' ,'','https://s.as-us.falkag.net' ,'','','','','',''];fA=['http://bw.as-test.falkag.net' ,'http://bw.as-eu.falkag.net' ,'','http://bw.as-us.falkag.net' ,'','','','','',''];gA=['http://bw.as-test.falkag.net' ,'https://s.as-eu.falkag.net' ,'','https://s.as-us.falkag.net' ,'','','','','',''];hA=['http://red.as-test.falkag.net' ,'http://red.as-eu.falkag.net' ,'','http://red.as-us.falkag.net' ,'','','','','',''];iA=['http://red.as-test.falkag.net' ,'https://red.as-eu.falkag.net' ,'','https://red.as-us.falkag.net' ,'','','','','',''];jA=['http://sel.as-test.falkag.net/server/asldata.js','http://data.as-eu.falkag.net/server/asldata.js','','http://sel.as-us.falkag.net/server/asldata.js' ,'','','','','',''];kA=['http://sel.as-test.falkag.net/server/asldata.js','https://as1.falkag.de/server/asldata.js' ,'','https://sel.as-us.falkag.net/server/asldata.js','','','','','',''];lA=['.as-test.falkag.net' ,'.as-eu.falkag.net' ,'','.as-us.falkag.net' ,'','','','','',''];mA=['Falk AdSolution' ,'AdSolution' ,'','Falk AdSolution' ,'','','','','',''];nA=['/dat/bgf/trpix.gif?' ,'/dat/bgf/trpix.gif?' ,'','/dat/bgf/trpix.gif?' ,'','','','','',''];oA=['/red?cmd=red&' ,'/red?cmd=red&' ,'','/red?cmd=red&' ,'','','','','',''];pA=['/red?cmd=url&' ,'/red?cmd=url&' ,'','/red?cmd=url&' ,'','','','','',''];// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+function aD(Qb)
+{document.write('<scr'+'ipt type="text/javascript" language="JavaScript" src="'+Qb+'"></scr'+'ipt>');}function bD(Rb)
+{var Sb=this.location.hostname.toLowerCase();var Tb='';var Ub=Sb;var Vb=[];intPos1=Sb.indexOf('.');if (Rb==1)
+{if (intPos1!=-1)
+{while (intPos1!=-1)
+{intPos1=Ub.indexOf('.');Vb[Vb.length]=(intPos1==-1)?Ub.substring(intPos1+1,Ub.length):Ub.substring(0,intPos1);Ub=Ub.substring(intPos1+1,Ub.length);}if (Vb[Vb.length-2]=='falkag')
+{for (var intI=1;intI<Vb.length;intI++)
+{l=Vb.length-intI;Tb=Vb[l]+((Tb=='')?'':'.'+Tb);}}else
+{Tb=(Vb[Vb.length-2].length<3)?Sb:Vb[Vb.length-2]+'.'+Vb[Vb.length-1];}}}else
+{if (intPos1==-1)
+{Tb='';}else
+{if((intPos1>=0)&&(intPos1<Sb.length))
+{intPos2=Sb.indexOf('.',intPos1+1);if(intPos2>intPos1)
+Tb=Sb.substring(intPos1+1,Sb.length);}if ((Tb.lastIndexOf('.')==Tb.indexOf('.'))&&Tb.lastIndexOf('.')<3)
+Tb=Sb;}}return Tb;}function cD()
+{var Tb=bD(0);if(Tb=='')
+return 'D'+this.location.hostname;else
+return 'D'+Tb;}function dD(Wb)
+{var Tb=bD(0);if(Wb==-1)
+{	 if(Tb!='')
+	 Tb=' domain='+Tb;	return ';path=/;'+Tb;}var Xb=new Date();if(Tb!='')
+Tb=';domain='+Tb;Xb.setTime(parseInt(Xb.getTime(),10)+1000*60*parseInt(Wb,10));return ';path=/;expires='+Xb.toGMTString()+Tb;}function eD(Wb)
+{var Tb=bD(1);if(Wb==-1)
+{	 if(Tb!='')
+	 Tb=' domain='+Tb;	return ';path=/;'+Tb;}var Xb=new Date();if(Tb!='')
+Tb=';domain='+Tb;Xb.setTime(parseInt(Xb.getTime(),10)+1000*60*parseInt(Wb,10));return ';path=/;expires='+Xb.toGMTString()+Tb;}function fD(c,d,y)
+{if(sA!=-1) var intBwdTyp=KAS[sA][4][27];if(typeof(intBwdTyp)=='undefined')
+intBwdTyp=0;var b='&dlv='+Ads_nid+','+Ads_wid+','+Ads_iid+','+c+','+d+'&kid='+c+'&chw='+qA+'&tcs='+rA+y+((xC( Ads_iid,c )&&(uB>0))?tB:'')+vA;var Yb='&sta=';b+='&dmn='+Ads_T[5];if(navigator.appVersion.substring(0,1)>'3')
+{b+='&scx='+screen.width+'&scy='+screen.height+'&scc='+screen.colorDepth;Yb+=',,,'+(navigator.javaEnabled()?'1':'0');if(navigator.javaEnabled())
+b+='&jav=1';}else
+Yb+=',,,';var Zb=new Date();Yb+=',,,,,,';if((Ads_wrd!='')&&(Ads_wrd.toLowerCase()!='[keyword]'))
+{b+='&wrd='+escape(Ads_wrd);Yb+='';}Yb+=','+vE[10]+','+Ads_T[13]+','+intBwdTyp+','+Ads_T[4]+','+Ads_T[10]+','+Ads_T[11]+','+Ads_T[3]+','+Ads_T[12];b+=Yb;if(gbolSUXX25067) b+='&trglog='+escape(gstrXarrTargetDaten);return (Ads_Timestamp+b);}function gD(c,d,y)
+{return '&rdm='+fD(c,d,y)+'&iid='+Ads_iid+'&bid='+d;}function hD()
+{if (typeof(gB[Ads_sec])=='undefined')
+tC();return gB[Ads_sec]+(yA?oA[NUM_FARM]+'flg='+wC()+'&dat='+fB[Ads_sec]+'/dat/bgf/trpix.gif&':nA[NUM_FARM]);}function iD()
+{return gB[Ads_sec]+nA[NUM_FARM]+'cmd=req&';}function jD(Ac,b)
+{if (Ac==0)
+{oD(1,'',hD()+b);return ((Ads_opt&512)>0)?'':(sD('Ads_Count'+Ads_iid)+'<img src="'+hD()+b+'" width="1" height="1">'+tD());}else if (Ac==1)
+{oD(1,'Request tracking URL',iD()+b);return sD('Ads_ReqCount'+Ads_iid)+'<img src="'+iD()+b+'" width="1" height="1">'+tD();}}function kD(t,b)
+{t.document.write(jD(0,b));}function lD()
+{return mD(Math.random()*100000000,8);}function mD(Bc,Cc)
+{var Dc='#'+(Bc+100000000);return Dc.substr(10-Cc,Cc);}function nD(Ec,Fc,Gc)
+{var l;while((l=Ec.indexOf(Fc))!=-1)
+Ec=Ec.substr(0,l)+Gc+Ec.substring(l+Fc.length,Ec.length);return Ec;}function oD(C,Ec,Hc)
+{var Ic=new Date();if(Ads_debug==1)
+{document.write(((C!=3)?'':'<br>')+'<font color=#0000ff>[DEBUG'+((Ic-wA)/1000)+']</font> ');if((C==0)||(C==3))
+document.write('<b><big>'+Ec+'</big></b><br>');else if(C==1)
+document.write(''+Ec+': &nbsp;<font color=#000080>'+Hc+'</font><br>');else
+document.write('<b>'+Ec+'</b><br>');}else if((Ads_debug==2)&&(C==3))
+document.write('<font color=#0000ff>[DEBUG'+((Ic-wA)/1000)+']</font> <b><big>'+Ec+'</big></b><br>');}function pD(Za)
+{var B='#'+(parseInt(Za,10)+100000000);return B.substr(2,2)+'/'+B.substr(4,2)+'/'+B.substr(6,2)+'/'+B.substr(8,2);}function qD(Bc)
+{var Jc='0123456789ABCDEF';var Kc='';while(Bc>0)
+{Kc=Jc.substr(Bc%16,1)+Kc;Bc=parseInt(Bc/16,10);}return (Kc=='')?'0':Kc;}function rD(Ja)
+{var Lc;var Mc=0;if(aB>-1)
+{Mc=aB;return Mc;}if((Ja==0)&&((Ads_opt&2048)>0))
+return -1;if((navigator.userAgent.indexOf("Opera")!=-1)||((navigator.appName=="Netscape")&&(navigator.userAgent.indexOf("Mozilla")!=-1)&&(parseFloat(navigator.appVersion)>=4)))
+{if(navigator.mimeTypes&&navigator.mimeTypes["application/x-shockwave-flash"]&&navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin)
+{Lc=navigator.plugins['Shockwave Flash'].description;Lc=Lc.substring(Lc.indexOf("."),-1);Mc=Lc.substr(-1);}}else if(navigator.userAgent&&navigator.userAgent.indexOf("MSIE")!=-1&&navigator.userAgent.indexOf("Mac")!=-1&&document.all)
+{if(navigator.mimeTypes&&navigator.mimeTypes["application/x-shockwave-flash"]&&navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin)
+{Lc=navigator.plugins['Shockwave Flash'].description;Lc=Lc.substring(Lc.indexOf("."),-1);Lc=Lc.substring(Lc.length-1,Lc.length);Mc=Lc.substr(-1);}}else if(navigator.userAgent&&navigator.userAgent.indexOf("MSIE")!=-1&&navigator.userAgent.indexOf("Windows")!=-1&&navigator.userAgent.indexOf("Windows 3")==-1&&document.all)
+{document.write('<scr'+'ipt language=VBScript>\n Ads_vbCV=10\nAds_vbMV=1\nDo\nOn Error Resume Next\n');document.write('Ads_vbBF=(IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash."&Ads_vbCV)))\n');document.write('If Ads_vbBF=true Then Exit Do\nAds_vbCV=Ads_vbCV-1\nLoop While Ads_vbCV>=Ads_vbMV\n </scr'+'ipt>');Mc=Ads_vbCV;}aB=Mc;return Mc;}function sD(Nc)
+{if(rB)
+return '<div id='+Nc+' style="position:absolute;left:-1000;top:-1000;">';else
+return '';}function tD()
+{if(rB)
+return '</div>';else
+return '';}function uD(Oc)
+{var Pc,Qc;if(window.innerHeight)
+{Pc=Oc.x;Qc=Oc.y;}else
+{if(Oc.offsetLeft)
+{Oc=Oc;Pc=Oc.offsetLeft;Pj=Oc.offsetParent;while(Pj!=null)
+{Pc+=Pj.offsetLeft;Pj=Pj.offsetParent;}Qc=Oc.offsetTop;Pj=Oc.offsetParent;while(Pj!=null)
+{Qc+=Pj.offsetTop;Pj=Pj.offsetParent;}}else
+return [-1000,-1000];}return [Pc,Qc];}function vD(Rc,z,f,g)
+{var Sc;var Oc=document.images[z];var Tc=uD(Oc);Oc.width=f;Oc.height=g;if(rB)
+Sc=document.getElementById(Rc).style;else if(document.layers)
+Sc=document.layers[Rc];else
+Sc=document.all[Rc].style;Sc.left=Tc[0];Sc.top=Tc[1];if (rB) Sc.display='block';else if(document.layers) Sc.visibility='show';else Sc.visibility='visible';}// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+if((typeof(Ads_debug)=='undefined')||(Ads_debug!=1))
+window.onerror=vC;gbolSUXX25067=false;var Ads_ModulMain=true;if(typeof(Ads_ModulEffects)=='undefined')
+Ads_ModulEffects=false;var qA,rA,sA,tA,uA,vA,wA,xA;var yA,zA,aB,bB,cB,dB;var eB=false;var fB=[];var gB=[];var hB=[];var iB=[];var jB=[];var kB=[];var lB=[];var mB=navigator.userAgent.toLowerCase();var nB=(mB.indexOf("msie")!=-1);var oB=((mB.indexOf("win")!=-1)||(mB.indexOf("16bit")!=-1));var pB=(mB.indexOf("mac")!=-1);var qB=(navigator.appName.indexOf('icrosoft')!=-1);var rB=(typeof(document.getElementsByTagName)!='undefined'&&typeof(document.createElement)!='undefined')?1:0;var sB=true;var tB='';var uB=0;var vB=[];var wB=0;var xB=0;var yB=[];var zB;var aC=[];var bC=[];var cC=[];var dC=[];var eC=[];var fC=[];var gC=[];var hC=[];var Ads_LinkUrl,Ads_CountUrl,Ads_CountUrl_ne,Ads_ClickUrl,Ads_T,Ads_T_OW,iid,bid,rdm;var Ads_Data=[];if(typeof(Ads_FXPL)=='undefined'){var Ads_FXPL=false;}Ads_T_OW=[];var iC,jC,Ads_gintCurVersion;var kC='toolbar=yes,directories=yes,status=yes,scrollbars=yes,resizable=yes,menubar=yes,location=yes';function gotoSite(){window.open(iC,'flashwin',kC);}function emosite(){window.open(iC,'flashwin',kC);}function FlashClick(){window.open(iC,'flashwin',kC);}function link1(){window.open(iC,'flashwin',kC);}function gotoURL(a){window.open(jC+escape(a),'flashwin',kC);}function lC()
+{Ads_kid=0;Ads_bid=0;Ads_cmd='';}function mC(a)
+{a=nD(a,'[par]',escape(Ads_par));a=nD(a,'[keyword]',escape(Ads_wrd));a=nD(a,'[timestamp]',Ads_Timestamp);a=nD(a,'[clickurl]',escape(Ads_CountUrl));a=nD(a,'[clickurl_plain]',Ads_CountUrl);a=nD(a,'[web_id]',Ads_wid);a=nD(a,'[web_external_id]',escape(Ads_xwid));a=nD(a,'[con_id]',Ads_iid);a=nD(a,'[con_external_id]',escape(Ads_xiid));a=nD(a,'[ban_id]',Ads_sbid);a=nD(a,'[cam_id]',tA);return a;}function nC(a,b)
+{return gB[Ads_sec]+pA[NUM_FARM]+'flg='+wC()+'&'+b+'&dat='+escape(a);}function oC(c,d,e,f,g)
+{var h;if(uB<2)
+{uB++;h=uB+1;tB+='&kid'+h+'='+c;tB+='&bid'+h+'='+d;tB+='&iid'+h+'='+Ads_iid;tB+='&dlv'+h+'='+Ads_nid+','+Ads_wid+','+Ads_iid+','+c+','+d;if(uA!=0)
+tB+='&sid'+h+'='+uA;arrIntern=zC(e);wB=arrIntern[1];xB=arrIntern[2];Ads_iid=arrIntern[1];Ads_kid=arrIntern[2];Ads_bid=(arrIntern.length<4)?0:arrIntern[3];Ads_par=(arrIntern.length<5)?Ads_par:unescape(arrIntern[4]);Ads_xp=(arrIntern.length<6||Ads_xp!='')?Ads_xp:arrIntern[5];Ads_yp=(arrIntern.length<7||Ads_yp!='')?Ads_yp:arrIntern[6];Ads_xp1=(arrIntern.length<8||Ads_xp1!='')?Ads_xp1:arrIntern[7];Ads_yp1=(arrIntern.length<9||Ads_yp1!='')?Ads_yp1:arrIntern[8];Ads_xl=0;Ads_yl=0;aD(fB[Ads_sec]+'/dat/cjf/'+pD(Ads_iid)+'.js');}else
+{tB='';uB=0;lC();}}function pC(i)
+{var j=[];var k=i.length;var l;var m='';var n='';for(l=0;l<k;l+=2)
+{m=i[l+1];if(Ads_cnturl!='')
+{n=nD(Ads_cnturl,'[url]',escape(m));m=nD(n,'[url_plain]',m);}j[l/2+1]=Ads_CountUrl+escape(m)+'&bidx='+i[l];}return j;}function SAS()
+{var o=false;tC();o=uC();if (o==true)
+{if((document.cookie.toLowerCase().indexOf('bndlvl')==-1)&&((IAS[13]&4)>0))
+uE();else
+qC();}else
+{sB=false;oD(1,'Waiting for asldata.','');}}function qC()
+{var p;if((typeof(Ads_debug)=='undefined')||(Ads_debug!=1))
+window.onerror=vC;if(((Ads_nid==631)||(Ads_nid==668))&&(NUM_FARM==1))
+{ fB[0]=['http://e.as-eu.falkag.net'];iB[0]=fB[0];}if((Ads_nid==80)&&(NUM_FARM==3))
+{ fB[0]=['http://e.as-us.falkag.net'];iB[0]=fB[0];}var q='undefined';for (intI=0;intI<Ads_T.length;intI++)
+{if (typeof(Ads_T_OW)!=q)
+{if (typeof(Ads_T_OW[intI])!=q)
+{oD(1,'Overwriting Targeting AdsT['+intI+'] ('+Ads_T[intI]+') with',Ads_T_OW[intI]);Ads_T[intI]=Ads_T_OW[intI];}}}if(typeof(Ads_cmd)==q) Ads_cmd='';if(typeof(Ads_kid)==q) Ads_kid=0;if(typeof(Ads_bid)==q) Ads_bid=0;if(typeof(Ads_xl)==q) Ads_xl=0;if(typeof(Ads_yl)==q) Ads_yl=0;if(typeof(Ads_xp)==q) Ads_xp='';if(typeof(Ads_yp)==q) Ads_yp='';if(typeof(Ads_xp1)==q) Ads_xp1='';if(typeof(Ads_yp1)==q) Ads_yp1='';if(typeof(Ads_opt)==q) Ads_opt=0;if(typeof(Ads_wrd)==q) Ads_wrd='';if(typeof(Ads_prf)==q) Ads_prf='';if(typeof(Ads_par)==q) Ads_par='';if(typeof(Ads_cnturl)==q) Ads_cnturl='';if(typeof(Ads_ref)==q) Ads_ref=0;if(typeof(Ads_anc)==q) Ads_anc='';if(typeof(Ads_cmb)==q) Ads_cmb=[];if(typeof(Ads_uid)==q) Ads_uid='';if(typeof(Ads_bgc)==q) Ads_bgc='';Ads_cmd=Ads_cmd.toLowerCase();if(Ads_ref==0)
+Ads_ref=IAS[12];if(Ads_bgc=='')
+{if(typeof(IAS[16])!=q)
+Ads_bgc=IAS[16];}p=fB[Ads_sec]+'/dat/dlv/aslframe.html?dat='+Ads_iid +'&kid='+Ads_kid+'&wrd='+escape(Ads_wrd) +'&bid='+Ads_bid+'&prf='+escape(Ads_prf) +'&xl='+Ads_xl+'&par='+escape(Ads_par) +'&yl='+Ads_yl+'&cnturl='+Ads_cnturl+'&debug='+Ads_debug +'&xp='+Ads_xp+'&sec='+Ads_sec+'&bgc='+Ads_bgc +'&yp='+Ads_yp+'&ref='+Ads_ref +'&xp1='+Ads_xp1+'&yp1='+Ads_yp1+'&opt=';var r='" width="'+Ads_xl+'" height="'+Ads_yl+'" noresize scrolling="no" hspace="0" vspace="0" frameborder="0" marginheight="0" marginwidth="0"></iframe>';if(Ads_ref>0)
+{document.write('<iframe src="'+p+Ads_opt+r);Ads_ref=0;return;}dF();if((Ads_bgc!='')&&(Ads_bgc!='-1'))
+document.body.style['backgroundColor']='#'+Ads_bgc;if(((IAS[13]&8)>0)&&(vE[10]==0))
+rE();qA='';rA='';tA=0;uA=0;vA='';sA=-1;if(NUM_FARM==3)
+KAS[KAS.length]=[-1,100,-1,100,[],0,0,0,0,100];if((Ads_kid==0)||(Ads_kid==''))
+sA=zD();else
+{k=KAS.length;sA=0;while((sA<k)&&(KAS[sA][0]!=Ads_kid))
+sA++;if(sA==k)
+sA=-1;}if((Ads_opt&256)!=0)
+{if(sA!=-1)
+Ads_skid=KAS[sA][0];else
+Ads_skid=0;}else
+{if(sA!=-1)
+{tA=KAS[sA][0];uA=KAS[sA][6];if(uA!=0)
+vA='&sid='+uA;if(tA>0)
+{aD(fB[Ads_sec]+'/dat/bjf/'+pD(tA)+'.js');}else
+DAS();}else
+{DAS();}}}function DAS()
+{var s,k,b,t,u,v,w,x;var y='';var z='';var A=['_blank','_self','_parent','_top'];var d=0;var B,f,g;if(IAS[9]==1)
+{B='adsolut.gif';f=234;g=60;}else
+{B='trpix.gif';f=1;g=1;}bB=mA[NUM_FARM];if(IAS[9]==4)
+bB='Werbung';bB='onmouseover="self.status=\''+bB+'\';return true;" ';if(IAS[9]==5)
+bB='';var C=1;var a='http://www.falkag.de';// Ziel-Url
+var D='Falk AdSolution';var E=0;var F='';var G='';var H='';var I='';var J='';var K=0;var L=0;var M=0;var N=0;var O=1;var P=2;var e='';var Q='';var i=[];var R=0;var S='';var T='';var U=false;var V=0;var W=false;var X,Y,Z,Aa,Ba,Ca,Da,Ea,Fa,Ga;if(tA!=0)
+{if((Ads_bid==0)||(Ads_bid==''))
+s=aE(sA,tA);else
+{k=BAS.length;s=0;while((BAS[s][0]!=Ads_bid)&&(s<k))
+s++;if(s==k)
+s=-1;}if(s!=-1)
+d=BAS[s][0];}if(d>0)
+{C=BAS[s][3];B=BAS[s][4];a=BAS[s][5];D=BAS[s][6];E=BAS[s][12];F=BAS[s][7];G=BAS[s][8];H=BAS[s][9];I=BAS[s][10];J=BAS[s][11];f=BAS[s][13];g=BAS[s][14];K=BAS[s][15];L=BAS[s][16];O=BAS[s][17];P=BAS[s][18];e=BAS[s][19];Q=BAS[s][20];i=BAS[s][22];R=BAS[s][23];S=BAS[s][24];T=BAS[s][25];V=BAS[s][27];if (!eB)
+eB=(BAS[s][26]==1);Ads_klist+=tA+'#';v=KAS[sA][4][25];if(v>0)
+{if(typeof(Ads_fcount[v])=='undefined')
+Ads_fcount[v]=1;else
+Ads_fcount[v] ++;}}if(tA>0)
+y=hF(tA,sA,d,s,((E&4096)>0));if(tA==-1)
+{tA=99999999;d=99999999;}Ads_skid=tA;Ads_sbid=d;G=(G=='')?a:G;X=(E&24);Y=A[E&3];Ba=((E&64)>0)&&((Ads_opt&64)==0);Z=(E&128)>0;Aa=(E&512)>0;U=(S=='_search')||(S=='_media');Ca=((E&1024)>0)&&Ads_ModulEffects;Da=((E&8192)>0);Wj=((Ads_opt&2)>0);Ea=(E&2048)>0;Fa=(Q.length>0);W=(V==0)?false:true;f=(Ads_xl>0)?Ads_xl:f;g=(Ads_yl>0)?Ads_yl:g;K=(Ads_xp!='')?Ads_xp:K;L=(Ads_yp!='')?Ads_yp:L;M=(Ads_xp1!='')?Ads_xp1:M;N=(Ads_yp1!='')?Ads_yp1:N;yA=(E&4096)>0;Ads_opt|=(E&16384)>0?64:0;Ads_opt|=IAS[3]*32;if (W&&Ads_cmd!='win')
+{var Ha='nid='+Ads_nid+'&iid='+Ads_iid+'&bid='+d+'&rdm='+lD();document.write(jD(1,Ha));}if(Ads_anc!='')
+{w=true;z=Ads_anc;Ads_anc='';}Ads_Timestamp=lD();a=mC(a);G=mC(G);if(Ads_cnturl!='')
+{Ga=nD(Ads_cnturl,'[url]',escape(a));a=nD(Ga,'[url_plain]',a);Ga=nD(Ads_cnturl,'[url]',escape(G));G=nD(Ga,'[url_plain]',G);}if(vB.length!=0)
+{qA+=vB[13];rA+=vB[14];}b=gD(tA,d,y);if((C==3)||(C==4)||(C==8))
+{Ads_LinkUrl=a;Ads_CountUrl=nC('',b);Ads_CountUrl_ne=Ads_CountUrl.substr(0,Ads_CountUrl.length-1)+'ne=';Ads_ClickUrl=Ads_CountUrl+escape(a);Ads_MultiUrl=pC(i);Ads_ViewCode=jD(0,b);Ads_ViewUrl=hD()+b;}if(C==1)
+H=iB[Ads_sec]+'/dat/bgf/'+B;if(vB.length!=0)
+{if(!Z)
+{Z=vB[0];Ba=vB[1];Aa=vB[2];P=vB[3];Ca=vB[4];Da=vB[5];}if(!Fa)
+{Fa=vB[6];Q=vB[7];}K=vB[8];L=vB[9];M=vB[16];N=vB[17];X=vB[10];IAS[2]=vB[11];IAS[11]=vB[12];z=vB[15];w=(z!='');vB=[];}if(C==5)
+{vB=[Z,Ba,Aa,P,Ca,Da,Fa,Q,K,L,X,IAS[2],IAS[11],qA,rA,z,M,N];Z=false;Fa=false;w=false;IAS[2]=0;}if((Ads_cmd=='lnk')&&(C!=5))
+{self.location.href=nC(a,b);Z=false;Fa=false;w=false;C=6;return;}if(Z&&!U)
+{if (!Wj)
+t=lI(f,g,K,L,X,Ba,Aa,P,Ca,Da,U,'');else
+t=window;if(Ba)
+{if(window.innerHeight)
+{f=t.innerWidth;g=t.innerHeight;}else
+{f=t.document.body.clientWidth;g=t.document.body.clientHeight;}}if (!Wj||(Wj&&Ads_cmd=='win'))
+if(Aa&&(P==0))
+t.blur();else if(Aa)
+t.setTimeout('window.blur();',P*1000);}else
+t=window;if(w)
+document.write(sD('Ads_place'+Ads_iid));else if(Ads_ModulEffects&&Fa)
+{if(X==16)
+X=1;else if(X==24)
+X=2;else
+X=0;sH(Ads_iid,f,g,K,L,X,Q,Z,t);tH(Ads_iid,Ads_sec);}oD(1,'Banner-Typ/PopUp',C+'/'+Z);nI(tA,d,f,g,K,L,X,Ba,Aa,P,Ca,Da,U,'',Wj);if (!Wj||(Wj&&(Ads_cmd =='win')))
+{if(C<2)
+fI(t,Z,b,H,a,Y,f,g,D,U,S,d,K,L);else if(C==2)
+gI(t,Z,b,B,a,Y,f,g,D,F,G,Ea,O,T);else if(C==3)
+hI(t,Z,b,tA,d,y,Fa,f,g,R,S,w,'/dat/brf/',0,U,Wj);else if(C==4)
+iI(t,Z,b,I,J,Fa,f,g,w);else if(C==5)
+oC(tA,d,e,f,g);else if(C==8)
+hI(t,Z,b,tA,d,y,Fa,f,g,R,S,w,'/dat/bfx/',parseInt(e,10),U,Wj);}oD(3,'Banner-display finished');sE();if(w)
+{document.write(tD());setInterval('vD("Ads_place'+Ads_iid+'","'+z+'",'+f+','+g+');',20);}if(Ads_ModulEffects&&Fa)
+uH(Ads_iid);if(C!=5)
+lC();Ads_idl+='#'+Ads_iid+'#';if((IAS[2]>0)&&(Ads_idl.indexOf('#'+IAS[2]+'#')==-1)&&(IAS[11]>(Math.random()*100)))
+{Ads_kid=0;Ads_bid=0;Ads_xl=0;Ads_yl=0;aD(fB[Ads_sec]+'/dat/cjf/'+pD(IAS[2])+'.js');}k=Ads_cmb.length;for(l=0;l<k;l++)
+{if(Ads_cmb[l]!='')
+{x=Ads_cmb[l];Ads_cmb[l]='';l=k;Ads_pth='';Ads_iid='';eval(x);if(Ads_pth!='')
+aD(fB[Ads_sec]+'/dat/njf/'+Ads_pth+'.js');else
+aD(fB[Ads_sec]+'/dat/cjf/'+pD(Ads_iid)+'.js');}}}function CAS()
+{rC(0);}function CASF()
+{var Ia=new Date();Ads_T=[0,0,'',0,0,'','','','',Ia,0,0,0,0];rC(1);}function rC(Ja)
+{if(typeof(Ads_debug)=='undefined') Ads_debug=0;var Ka=new Date(Ads_T[9]);var La=new Date();Ads_T[9]=Ka-La;var Ma=Ads_T[0]+'#'+Ads_T[1]+'#'+Ads_T[2]+'#'+Ads_T[3]+'#'+Ads_T[4]+'#'+Ads_T[5]+'#'+Ads_T[6]+'#'+escape(Ads_T[7])+'#'+escape(Ads_T[8])+'#'+Ads_T[9]+'#'+Ads_T[10]+'#'+Ads_T[11]+'#'+Ads_T[12]+'#'+Ads_T[13];document.cookie='ASLTRG'+NUM_FARM+'='+Ma+dD(0);document.cookie='ASLTRG'+NUM_FARM+'='+Ma+eD(60*((Ja==0)? 24:1));Ads_Data[NUM_FARM]=Ads_T;oD(1,'Load targeting-infos from server ('+((Ja==0)? 'Origin':'Failover')+')',Ma);if (sB==false)
+{sB=true;SAS();}}function LAS(Na)
+{Ads_iid=0;var b='pth='+Na+'&xl='+Ads_xl+'&yl='+Ads_yl;if(typeof(Ads_channels)!='undefined')
+b+='&chn='+escape(Ads_channels);yA=false;document.write(jD(0,b));}function sC()
+{wA=new Date();aB=-1;dB=0;document.cookie='BSUID=1'+dD(0);document.cookie='BSUID=1'+eD(60*24*30);zA=false;if(typeof(Ads_debug)=='undefined') Ads_debug=0;if(typeof(Ads_sec)=='undefined') Ads_sec=0;if(typeof(Ads_klist)!='string') Ads_klist='';if(typeof(Ads_fcount)!='object') Ads_fcount=[];if(typeof(Ads_idl)!='string') Ads_idl='';if(typeof(garrIFrames)=='undefined') garrIFrames=[];oD(3,'Global Init');oD(1,'VAS Build Version:',Ads_Build);}function tC()
+{if(typeof(NUM_FARM)=='undefined')
+NUM_FARM=1;if(typeof(Ads_farmid)!='undefined')
+NUM_FARM=Ads_farmid;oD(1,'Setting configuration for farm',NUM_FARM);fB=[bA[NUM_FARM],cA[NUM_FARM]];gB=[hA[NUM_FARM],iA[NUM_FARM]];hB=[jA[NUM_FARM],kA[NUM_FARM]];iB=[dA[NUM_FARM],eA[NUM_FARM]];jB=[fA[NUM_FARM],gA[NUM_FARM]];}function uC()
+{var Ma=document.cookie+';';var Oa=(Ma.indexOf('BSUID=')!=-1);var Pa=Ma.indexOf('ASLTRG'+NUM_FARM+'=');var Qa,Y;if (typeof(Ads_Data[NUM_FARM])!='undefined')
+{oD(1,'Load targeting-infos targeting array ['+NUM_FARM+']',Ads_Data[NUM_FARM]);Ads_T=Ads_Data[NUM_FARM];return true;}if(Pa!=-1)
+{Qa=Ma.indexOf(';',Pa);Y=Ma.substring(Pa+8,Qa);Ads_T=Y.split('#');Ads_T[7]=unescape(Ads_T[7]);Ads_T[8]=unescape(Ads_T[8]);Ads_Data[NUM_FARM]=Ads_T;oD(1,'Load targeting-infos from cookie',Y);return true;}else
+{oD(1,'#-#ASLDATA-load start','');aD(hB[Ads_sec]+ (Oa?('?rdm='+lD()):''));oD(1,'#-#ASLDATA-load ende','');return false;}}function vC(Ra,Sa,Ta)
+{return true;}function wC()
+{var Ua=(yA?1:0);Ua+=((eB)?2:0);oD(1,'FLG',Ua);return Ua;}function xC(Va,Wa)
+{if ((Va==wB)&&(Wa==xB))
+return true;else
+return false;}function yC(Xa,Ya)
+{var Za;var Ab;Ab=false;if(!isNaN(Xa))
+{Za=parseInt(Xa);Ab=Za>=0&&(Ya||Za>0);}return Ab;}function zC(Bb)
+{var Cb,Db;var Eb,Fb,Gb,Hb,Ib,Jb;var X,Kb,Lb,Mb,Nb;var Ob;var Pb;Cb=Bb.split('-');Pb=false;Db=[];Ob=true;if(Cb[0]!=null&&Cb[1]!=null)
+{Eb=Cb[0];Fb=Cb[1];Ob=Ob&&yC(Fb,false);if(Ob&&Cb[2]!=null)
+{Gb=Cb[2];Ob=yC(Gb,false);if(Ob&&Cb[3]!=null)
+{Hb=Cb[3];Ob=yC(Hb,true);if(Ob&&Cb[4]!=null)
+{Ib=Cb[4];if(Ob&&Cb.length>5)
+{X=5;while(Ob&&X<Cb.length)
+{if(Cb[X]==''&&Cb[X+1]!=null)
+{Jb=Cb[X+1];Ob=yC(Jb,true);Db[Db.length]='-'+Jb;X=X+2;}else
+{Jb=Cb[X];Ob=yC(Jb,true);Db[Db.length]=Jb;X=X+1;}}Ob=Ob&&(Db.length==0||Db.length==2||Db.length==4);}}}}if(Ob)
+{Pb=[Eb,Fb,Gb,Hb,Ib];for (var intI=0;intI<Db.length;intI++)
+{Pb[Pb.length]=Db[intI];}}}return Pb;}sC();// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+function eI(Ah,Qj)
+{return (Ah==0)?'':' '+Qj+'="'+Ah+'"';}function fI(t,Z,b,H,a,Y,f,g,D,U,S,d,K,L)
+{H=mC(H);if(Z&&U&&!Wj)
+{p=fB[Ads_sec]+'/dat/dlv/aslframe.html?dat='+Ads_iid +'&kid='+tA+'&wrd='+escape(Ads_wrd) +'&bid='+d+'&prf='+escape(Ads_prf) +'&xl='+f+'&par='+escape(Ads_par) +'&yl='+g+'&cnturl='+Ads_cnturl+'&debug=0' +'&xp='+K+'&sec='+Ads_sec+'&bgc='+Ads_bgc +'&yp='+L+'&ref='+Ads_ref+'&opt=' +2 +'&cmd=win';oD(1,'Sidebar',p);tSide=window.open(p,S);}else
+{if(Z)
+jI(t,D);t.document.write('<a href="'+nC(a,b) +'" target="'+Y+'" '+bB+'onmouseout="self.status=\'\';return true;">');t.document.write('<img src="'+H+'"'+eI(f,'width')+eI(g,'height')+' border="0" id="Ads_img'+Ads_iid+'" name="Ads_img'+Ads_iid+'" alt="'+D+'"></a>');kD(t,b);if(Z)
+kI(t);}if (xC(Ads_iid,tA))
+{tB='';uB=0;}}function gI(t,Z,b,B,a,Y,f,g,D,F,G,Ea,O,T)
+{var Tj=nD(b,'&rdm='+Ads_Timestamp,'');if(Z)
+jI(t,D);a=nC(a,Tj);G=nC(G,Tj);B=iB[Ads_sec]+'/dat/bgf/'+B;F=iB[Ads_sec]+'/dat/bgf/'+F;iC=a;jC=nC('',Tj);var Uj=B;if(typeof(T)=='undefined') T='';if(T=='')
+Uj+='?clickTag='+escape(a)+'&url='+escape(a);else if(T!='0')
+Uj+='?'+T+'='+escape(a);var Lc;if(O<=rD(1))
+{t.document.write('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http'+((Ads_sec==1)?'s':'')+'://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=3,0,0,0" id=banner'+eI(f,'width')+eI(g,'height')+'">');t.document.write('<PARAM NAME=movie VALUE="'+Uj+'"><PARAM NAME=play VALUE=true><PARAM NAME=autoplay VALUE=true><PARAM NAME=wmode VALUE=opaque><PARAM NAME=quality VALUE=autohigh><PARAM name=scale value=exactfit>');t.document.write('<EMBED src="'+Uj+'" quality=autohigh autoplay=true play=true wmode=opaque scale=exactfit swLiveConnect=TRUE'+eI(f,'width')+eI(g,'height')+' TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>');}else
+{t.document.write('<a href="'+G+'" target="'+Y+'" '+bB+' onmouseout="self.status=\'\';return true;"><img src="'+F+'"'+eI(f,'width')+eI(g,'height')+' border="0" alt="'+D+'"></a>');}kD(t,b);if(Z)
+kI(t);if (xC(Ads_iid,tA))
+{tB='';uB=0;}}function hI(t,Z,b,c,d,y,Fa,f,g,R,S,w,Na,Vj,U,Wj)
+{var B=fB[Ads_sec]+Na+pD((Vj>0)?Vj:((R==0)?d:R));var Xj,Xf;iid=Ads_iid;bid=d;rdm=fD(c,d,y);if(Z||((Fa||w)&&(qB||rB)))
+{var Yj='*';for(Xf=1;Xf<Ads_MultiUrl.length;Xf++)
+{a=Ads_MultiUrl[Xf];Yj+=a.substring(Ads_CountUrl.length,a.length)+'*';}Xj=Ads_wid+'#'+Ads_iid+'#'+c+'#'+d+'#'+Ads_xwid+'#'+Ads_xiid+'#'+Ads_wrd+'#'+Ads_prf+'#'+Ads_par+'#'+Ads_Timestamp+'#'+rdm+'#'+(gB[Ads_sec]+pA[NUM_FARM]+'flg='+wC()+'&')+'#'+Ads_LinkUrl+'#'+Yj+'#'+hD();}if(Z&&U&&!Wj)
+{window.open(B+'.html?'+escape(Xj),S);}else if(Z)
+{t.location.href=B+'.html?'+escape(Xj);}else if((Fa||w)&&(qB||rB))
+{document.write('<iframe src="'+B+'.html?'+escape(Xj)+'" width="'+f+'" height="'+g+'" noresize scrolling="no" hspace="0" vspace="0" frameborder="0" marginheight="0" marginwidth="0"></iframe>');}else
+{if(Vj>0)
+{Ads_xl=f;Ads_yl=g;kD(t,b);if ((typeof(Ads_FXPL)=='undefined')||(Ads_FXPL==false))
+{aD(fB[Ads_sec]+'/dat/dlv/afxplay.js');Ads_FXPL=true;}}aD(B+'.js');}if (xC(Ads_iid,tA))
+{tB='';uB=0;}}function iI(t,Z,b,I,J,Fa,f,g,w)
+{J=mC(unescape(J));I=mC(unescape(I));if(Z)
+t.location.href=I;else
+{if(((Fa||w)&&qB)||(J==''))
+document.write('<iframe src="'+I+'" width="'+f+'" height="'+g+'" noresize scrolling="no" hspace="0" vspace="0" frameborder="0" marginheight="0" marginwidth="0"></iframe>');else
+aD(J);}kD(window,b);if (xC(Ads_iid,tA))
+{tB='';uB=0;}}function jI(t,D)
+{t.document.open();t.document.write('<html><head><title>'+D+'</title></head><body topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0"><table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td valign="middle"><center>');}function kI(t)
+{t.document.write('</center></td></tr></table></body></html>');t.document.close();}function lI(f,g,K,L,X,Ba,Aa,P,Ca,Da,U,S)
+{var u='locationbar=no,directories=no,statusbar=no,toolbar=no,location=no,menubar=no,personalbar=no';var Zj='Ads_Popup'+Ads_iid;var Ak,Bk;var Ck=0;var Dk=0;if (!U&&S!='')
+Zj=S;u=mI(f,g,K,L,X,Ba,Aa,P,Ca,Da,U,S,Wj);if((Ads_opt&32)>0)
+Zj+=''+Math.round(Math.random()*100000);t=open('',Zj,u);if(Ba&&(!nB))
+t.moveTo(0,0);if(Ca)
+bI(t,f,g);return t;}function mI(f,g,K,L,X,Ba,Aa,P,Ca,Da,U,S,Wj)
+{var u='locationbar=no,directories=no,statusbar=no,toolbar=no,location=no,menubar=no,personalbar=no';var Zj='Ads_Popup'+Ads_iid;var Ak,Bk;var Ck=0;var Dk=0;if (!U&&S!='')
+Zj=S;if(Ba)
+{if (oB)
+{Ck=10;Dk=30;}else if (pB)
+{Ck=20;Dk=35;}u+=',scrollbars=no,resizable=no,width='+(screen.availWidth-Ck)+',height='+(screen.availHeight-Dk)+',screenX=0,screenY=0';if(nB)
+u='fullscreen=yes';}else
+{if(Ca)
+u+=',resizable=yes,width=90,height=70,innerWidth=90,innerHeight=70';else
+u+=',resizable=no,width='+f+',height='+g;if(Da)
+u+=',scrollbars=yes';else
+u+=',scrollbars=no';if((Ads_opt&64)>0)
+u='locationbar=yes,scrollbars=yes,directories=yes,statusbar=yes,toolbar=yes,location=yes,menubar=yes,personalbar=yes,resizable=yes,width='+f+',height='+g;if(X==16)
+{K=(screen.width-f-25)*K/100;L=(screen.height-g-50)*L/100;}else if(X==24)
+{K=(screen.width-f-25)*Math.random();L=(screen.height-g-50)*Math.random();}if (!qB)
+u+=",screenX="+K+",screenY="+L;else
+u+=",left="+K+",top="+L;}return u;}function nI(tA,d,f,g,K,L,X,Ba,Aa,P,Ca,Da,U,S,Wj)
+{var Ek='';Ek='<scr'+'ipt language="JavaScript">'+'function Ads_PopUp() {';if (Ads_cmd!='win'&&Wj&&(d>0))
+{oD(1,'POP ON EXIT','');var Zj='Ads_Popup'+Ads_iid;if (!U&&S!='')
+Zj=S;if((Ads_opt&32)>0)
+Zj+=''+Math.round(Math.random()*100000);u=mI(f,g,K,L,X,Ba,Aa,P,Ca,Da,U,'',true);p=fB[Ads_sec]+'/dat/dlv/aslframe.html?dat='+Ads_iid +'&kid='+tA+'&wrd='+escape(Ads_wrd) +'&bid='+d+'&prf='+escape(Ads_prf) +'&xl='+f+'&par='+escape(Ads_par) +'&yl='+g+'&cnturl='+Ads_cnturl+'&debug=0' +'&xp='+K+'&sec='+Ads_sec+'&bgc='+Ads_bgc +'&yp='+L+'&ref='+Ads_ref+'&opt=' +2 +'&cmd=win';kB[kB.length]='t=open(\''+p+'\',\''+Zj+'\',\''+u+'\');';}for (var intI=0 ;intI<kB.length ;intI++)
+{Ek+=kB[intI];}Ek+='}'+'</scr'+'ipt>';document.writeln(Ek);}// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+var vE=[];var wE;function xE(Ng,Og,Pg)
+{if(typeof(Ng)=='undefined')
+return [];var l,k;var Qg=[];var Rg=Ng.split('x');var Sg=Rg[0];var Tg=Og-Sg;var k=Rg.length;for(l=1;l<k;l++)
+{Yh=Rg[l].split(':');if(Pg&&(Yh[2]==-1))
+Qg[Yh[0]]=[Yh[1],-1];Yh[2]-=Tg;if(Yh[2]>0)
+Qg[Yh[0]]=[Yh[1],Yh[2]];}return Qg;}function yE(Qg,Og)
+{var Nc;var Ng=Og;for(Nc in Qg)
+Ng+='x'+Nc+':'+Qg[Nc][0]+':'+Qg[Nc][1];return Ng;}function zE(Ug,Vg)
+{while(Ug.length>800)
+Ug=Ug.substr(0,Ug.lastIndexOf('#',Ug.length-2)+1);vE[Vg]=Ug;}function aF(Vg,Za)
+{var Wg='111';var Xg='@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`';var k=0;var Xa='#'+Za+':';var Ug=vE[Vg];var Yg='';var X=Ug.indexOf(Xa);var Zg=new Date();var Ah,Bh,Ch,Dh,Ce;var Eh,Fh,Gh,Hh;if(Ug=='')
+Ug='#';if(X>-1)
+{Bh=Ug.substr(X+Xa.length,3+Vg);if(X>0)
+Yg=Ug.substr(0,X);Ah=Ug.length-X-Xa.length-3-Vg;if(Ah>0)
+Yg+=Ug.substr(X+Xa.length+3+Vg,Ah);Ug=Yg;Ch=new Date(Xg.indexOf(Bh.charAt(0))+2000,Xg.indexOf(Bh.charAt(1))-1,Xg.indexOf(Bh.charAt(2)));Zg.setHours(0);Zg.setMinutes(0);Zg.setSeconds(0);Dh=(Zg.getTime()-Ch.getTime())/1000/60/60/24;intAltWTag=(Ch.getDay()==0?7:Ch.getDay());intNeuWTag=(Zg.getDay()==0?7:Zg.getDay());intAltMTag=Ch.getDate();intNeuMTag=Zg.getDate();Wg=((Dh>0.1)?'1':'0')+(((Dh>6)||(intAltWTag>intNeuWTag))?'1':'0')+((((Dh>29)||(intAltMTag>intNeuMTag))&&(Vg!=1&&Vg!=14))?'1':'0');if(Vg==1||Vg==14)
+k=Xg.indexOf(Bh.charAt(3));}Bh='#'+Za+':';Ce=Zg.getYear();if(Ce<1900)
+Ce+=1900;Bh+=Xg.charAt(Ce-2000);Bh+=Xg.charAt(Zg.getMonth()+1);Bh+=Xg.charAt(Zg.getDate());if(Vg==1||Vg==14)
+{k++;if(k>21)
+k=21;Bh+=Xg.charAt(k);Wg+=Xg.charAt(k);}Ug=Bh+Ug;zE(Ug,Vg);return Wg;}function bF(Xa,Vg,Ih)
+{var Pa,Qa,Ah,Jh,Kh;var Ug=vE[Vg];var Yg='';var Lh='';var Mh=-1;if(Ug=='')
+Ug='#';Xa='#'+Xa+'-';Pa=Ug.indexOf(Xa);if(Pa!=-1)
+Qa=Ug.indexOf('#',Pa+1);if((Pa!=-1)&&(Qa!=1))
+{Jh=Ug.substring(Pa+Xa.length,Qa);if(Pa>0)
+Yg=Ug.substr(0,Pa);Ah=Ug.length-Qa;if(Ah>0)
+Yg+=Ug.substr(Qa,Ah);Ug=Yg;if(Vg==6)
+{Kh=Jh.split('-');Lh=Kh[0];Jh=Kh[1];}Mh=Ih-parseInt(Jh,10);if(Mh>1200)
+Mh=-1;}vE[Vg]=Ug;return [Mh,Lh];}function cF(c)
+{var Nh=new Date();var Mh=Nh.getHours()*60*60+Nh.getMinutes()*60+Nh.getSeconds();var Oh,Ph;Oh=bF(Ads_wid,6,Mh);Ph=bF(c,5,Mh);var Qh=(Oh[0]==-1);var Rh=(Ph[0]==-1);var Sh=(Qh?'1':'0')+(Rh?'1':'0');if(!Qh)
+Sh+=mD(Oh[0],4)+Oh[1];zE('#'+Ads_wid+'-'+Ads_iid+'-'+Mh+vE[6],6);zE('#'+c+'-'+Mh+vE[5],5);return Sh;}function dF()
+{var Tb=cD();var l,Th,Nc,Uh,Vh,Wh,Xh,Yh,Vg;var Zh,Ai;var Ma=document.cookie;var Pg=(Ma.toLowerCase().indexOf('sestest')>-1);document.cookie=Tb+'SESTEST=1'+dD(0);document.cookie='SESTEST=1'+eD(-1);var Bi=Ma.split(';');var k=Bi.length;var Ic=new Date();wE=Math.round(Ic.getTime()/1000/60);vE=['','',[],'','','','',[],[],[],dB,'',[],'',''];Zh=eF(Tb,Bi,k,Pg);Ai=eF('',Bi,k,Pg);vE=fF(Zh,Ai);if(Ads_uid!='')
+{Bi=Ads_userdata.split(';');k=Bi.length;vE[2]=[];for(l=1;l<(k-1);l++)
+{Wh=Bi[l].split(',');vE[2][Wh[0]]=[Wh[1],1];}}if(vE[3]=='1')
+zA=true;}function eF(Tb,Bi,k,Pg)
+{var l;var vE;var Nc;vE=['','',[],'','','','',[],[],[],dB,'',[],'',''];for(l=0;l<k;l++)
+{Vg=-1;Wh=Bi[l].split('=');Nc=Wh[0];Vh=Wh[1];if(Nc.charAt(0)==' ')
+Nc=Nc.substr(1,Nc.length-1);if(Nc.substr(0,Tb.length)==Tb)
+Uh=Nc.substring(Tb.length,Nc.length);else
+Uh='';if(Uh=='KIDYMD')
+vE[1]=Vh;else if(Uh=='WIDYMD')
+vE[0]=Vh;else if(Nc=='BSUID')
+vE[3]=Vh;else if(Nc=='BNDLVL')
+vE[10]=Vh;else if(Uh=='VISKAM')
+vE[5]=Vh;else if(Uh=='VISWEB')
+vE[6]=Vh;else if(Uh=='FRQSTR')
+{Wh=Vh.split(',');vE[2]=xE(Wh[0],wE,Pg);vE[7]=xE(Wh[1],wE,Pg);vE[8]=xE(Wh[2],wE,Pg);vE[9]=xE(Wh[3],wE,Pg);vE[12]=xE(Wh[4],wE,Pg);}if(Uh=='KIDCYMD')
+vE[14]=Vh;else if(Uh=='WIDCYMD')
+vE[13]=Vh;}return vE;}function fF(Ci,Di)
+{var Ei=true;var Fi,Nc;var Gi,Hi;Gi=Di;for (var intI=0;intI<Ci.length;intI++)
+{if (typeof(Ci[intI])=='object')
+{Nc='';for(Nc in Ci[intI])
+{if (typeof(Di[intI][Nc])=='undefined'&&typeof(Ci[intI][Nc])!='undefined')
+{Gi[intI][Nc]=Ci[intI][Nc];}}}else
+{if (Ci[intI]!=Di[intI])
+{if (intI==0||intI==1||intI==13||intI==14)
+{Hi=Ci[intI].split('#');for (var intJ=1;intJ<Hi.length-1;intJ++)
+{Fi='#'+Hi[intJ].substring(0,Hi[intJ].indexOf(":"))+':';if (Di[intI].indexOf(Fi)==-1)
+{Gi[intI]+=(Gi[intI]=='')?'#'+Hi[intJ]+'#':Hi[intJ]+'#';}}}else if (intI==5||intI==6)
+{Hi=Ci[intI].split('#');for (var intJ=1;intJ<Hi.length-1;intJ++)
+{arrSubData=Hi[intJ].split('-');Fi=(intI==5)?'#'+arrSubData[0]+'-':'#'+arrSubData[0]+'-'+arrSubData[1]+'-';if (Di[intI].indexOf(Fi)==-1)
+{Gi[intI]+=(Gi[intI]=='')?'#'+Hi[intJ]+'#':Hi[intJ]+'#';}}}else if (intI==10)
+{if (Ci[intI]!=''&&Ci[intI]>0)
+{Gi[intI]=Ci[intI];}}}}}return Gi;}function gF(c,Id)
+{var Ii,Ji,Xd,Ki;var Li='';var Tb=cD();var Mi=KAS[Id][4][5];if(KAS[Id][4][4]>0)
+Li=dD(Mi);else if((KAS[Id][5]&1)>0)
+{Li=dD(20);Mi=20;}if(Li!='')
+{Xd=parseInt(iF(c,2)+1,10);if(Ads_uid!='')
+{Ii=Ads_userdata.split(';'+c+',');if(Ii.length==2)
+{Ji=Ads_userdata.split(','+c+';');Ads_userdata=Ii[0]+';'+Ji[1];}Ads_userdata+=c+','+Xd+','+Mi+','+c+';';Ki=new Image();Ki.src='http://uboot.as-eu.falkag.net/usr?cmd=write&id='+Ads_uid+'&data='+Ads_userdata+'&rdm='+Math.random();}else
+jF(c,2,Xd,Mi);}}function hF(c,Id,d,s,Ni)
+{var Tb=cD();var y,Ma;gF(c,Id);if(d>0)
+{if(BAS[s][2][4]>0)
+jF(d,9,iF(d,9)+1,BAS[s][2][5]);}if(((KAS[Id][4][22]&1)>0)&&(IAS[4]>0))
+jF(Ads_wid,7,iF(Ads_wid,7)+1,IAS[5]);if(((KAS[Id][4][22]&2)>0)&&(IAS[6]>0))
+jF(Ads_nid,8,iF(Ads_nid,8)+1,IAS[7]);if ((typeof(IAS[17])!='undefined')&&(typeof(aC[Ads_wid])!='undefined')&&(typeof(KAS[Id][13])!='undefined'))
+{if(((KAS[Id][4][22]&4)>0)&&(KAS[Id][13]>0)&&(aC[Ads_wid].length>0)&&(typeof(aC[Ads_wid][KAS[Id][13]])!='undefined'))
+{arrFamily=aC[Ads_wid][KAS[Id][13]];jF(arrFamily[0],12,iF(arrFamily[0],12)+1,arrFamily[2]);}}Ma=yE(vE[2],wE)+',' +yE(vE[7],wE)+',' +yE(vE[8],wE)+',' +yE(vE[9],wE)+',' +yE(vE[12],wE);y=aF(1,c);y='&bls3='+y.substr(0,3)+aF(0,Ads_wid)+y.substr(3,1);y+='&bls4='+cF(c);strClickAuswertung=aF(14,c);y+='&ucl='+strClickAuswertung.substr(0,3)+aF(13,Ads_wid)+strClickAuswertung.substr(3,1);if(zA)
+y+='&uid=1';document.cookie=Tb+'FRQSTR='+Ma+dD(0);oD(1,'DELETING OLD DOMAIN',Ma);document.cookie=Tb+'WIDYMD='+vE[0]+dD(0);document.cookie=Tb+'KIDYMD='+vE[1]+dD(0);document.cookie=Tb+'VISKAM='+vE[5]+dD(0);document.cookie=Tb+'VISWEB='+vE[6]+dD(0);/*
+document.cookie=Tb+'FRQSTR='+Ma+dD(60*24*365);oD(1,'SETTING OLD DOMAIN',Ma);document.cookie=Tb+'WIDYMD='+vE[0]+dD(60*24*30);document.cookie=Tb+'KIDYMD='+vE[1]+dD(60*24*30);document.cookie=Tb+'VISKAM='+vE[5]+dD(20);document.cookie=Tb+'VISWEB='+vE[6]+dD(20);*/
+/*document.cookie='mycookie=1'+dD(1);document.cookie='mycookie=1'+dD(0);*/
+document.cookie='FRQSTR='+Ma+eD(60*24*365);oD(1,'SETTING TOP-LEVEL DOMAIN',Ma);document.cookie='WIDYMD='+vE[0]+eD(60*24*30);document.cookie='KIDYMD='+vE[1]+eD(60*24*30);document.cookie='VISKAM='+vE[5]+eD(20);document.cookie='VISWEB='+vE[6]+eD(20);return y;}function iF(Za,Ke)
+{if(typeof(vE[Ke][''+Za+''])!='undefined')
+return parseInt(vE[Ke][''+Za+''],10);else
+return 0;}function jF(Za,Ke,Xd,Mi)
+{if(typeof(vE[Ke][''+Za+''])!='undefined')
+vE[Ke][''+Za+''][0]=Xd;else
+vE[Ke][''+Za+'']=[Xd,Mi];}// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+function wD(Uc,Vc)
+{var l=0;var k=Uc.length;if(k==0)
+return -1;while((l<k-1)&&(Vc>Uc[l][1]))
+{Vc-=Uc[l][1];l++;}return Uc[l][0];}function xD(Wc,Xc,Yc)
+{var l,Zc,Ad,Bd;if(Wc>Yc)
+{Zc=Yc/Wc;for(l=Xc;l<lB.length;l++)
+lB[l][1]*=Zc;Wc=Yc;}Yc-=Wc;return Yc;}function yD()
+{var Ab,Cd,Dd,Ed,Fd;var Gd=-2;var Hd=KAS.length;var Yc=100;var Id,c,Bd,Jd,Kd,Ld,Md,Nd,Od;var Wc=0;var Xc;lB=[];for (Id=0;Id<Hd;Id++)
+{Fd=((KAS[Id][5]&2)>0);if(KAS[Id][2]!=Gd)
+{if(Gd!=-2)
+Yc=xD(Wc,Xc,Yc);Gd=KAS[Id][2];Wc=0;Xc=lB.length;}Jd=KAS[Id][8];Kd=KAS[Id][10];Ld=IAS[10];if((Ld-Kd)>0)
+Jd=Jd*Ld/(Ld-Kd);Bd=KAS[Id][1];if(Jd<=0)
+Jd=Bd;Md=(Bd/Jd-1)*2+1;var Pd=Md;var Qd=false;if (Md>10||Md<0.1)
+Qd=true;if(Md>10)
+Md=10;else if (Md<0.1)
+Md=0.1;if (Qd)
+oD(1,'Factor (before:after)',Pd+':'+Md);Nd=KAS[Id][3];Bd=Bd*Md*100/((Nd==0)?100:Nd);if(isNaN(Bd))
+Bd=0;Ed=KAS[Id][4];Ab=qE(Ed,0,KAS[Id][0],((KAS[Id][5]&4)>0),Id);Dd=false;if(Ed.length>0)
+{Dd=((Ed[0]==0)&&!((Ed[2]==0)&&(Ed[3]==1439)));Cd=(!Dd||oE(Ed[2],Ed[3]));if(Dd)
+Bd=Bd*100/KAS[Id][9];if(Ab&&!Cd&&!Fd)
+{qA+='9'+KAS[Id][0]+'-';}Ab=(Ab&&Cd);}if((KAS[Id][5]&8)>0)
+Bd=KAS[Id][1];if(Fd&&Ab)
+{c=KAS[Id][0];rA+=c+'-';gF(c,Id);}else if(Ab)
+{lB[lB.length]=[Id,Bd,Dd,Bd];Wc+=Bd;}else
+{}}Yc=xD(Wc,Xc,Yc);}function zD()
+{yD();var Rd,Id,l,Bd;var Hd=lB.length;var Sd=0;for (Id=0;Id<Hd;Id++)
+{l=lB[Id][0];Bd=lB[Id][1];Rd=Math.round(Bd/lB[Id][3]*10)-1;if(Rd>9)
+Rd=9;if((Rd>=0)&&(KAS[l][0]>0))
+qA+=Rd+''+KAS[l][0]+'-';Sd+=Bd;}return wD(lB,Sd*Math.random());}function aE(Id,c)
+{var Td=[];var Ud=BAS.length;var Vd=((KAS[Id][5]&1)>0);var Sd=0;var s,Bd,Wd,Xd,Yd,Zd;var Ae=true;for (s=0;s<Ud;s++)
+{strInhalt=BAS[s][21];Zd=((strInhalt.length<3)||(strInhalt.indexOf('#'+Ads_iid+'#')>-1));if(((Ads_xl>1)||(Ads_yl>1))&&((BAS[s][13]>1)||(BAS[s][14]>1)))
+{Ae=((Ads_xl==BAS[s][13])&&(Ads_yl==BAS[s][14]));}if(Ae&&Zd&&qE(BAS[s][2],1,BAS[s][0],true,s))
+{Bd=BAS[s][1];Td[Td.length]=[s,Bd];Sd+=Bd;}else
+{}}Ud=Td.length;if(Vd)
+{Xd=iF(c,2);if(Ud>0)
+s=Td[Xd%Ud][0];else
+s=-1;}else
+s=wD(Td,Sd*Math.random());return s;}// Falk AdSolution - Copyright (c) 2004 by Falk eSolutions AG - All rights reserved (Build: 00000032-3)
+var bE=false;var cE;var dE;var eE =(typeof(eE)=='undefined')? 0:eE;function fE(Be)
+{return mD(Be.getHours(),2)+':'+mD(Be.getMinutes(),2)+':'+mD(Be.getSeconds(),2);}function gE(Be)
+{var Ce=Be.getYear();if(Ce<1900)
+Ce+=1900;return mD(Ce,4)+'-'+mD(Be.getMonth()+1,2)+'-'+mD(Be.getDate(),2);}function hE()
+{if(bE)
+return;var De,Ee,Fe,l,Ge;var He=new Date();var Ie=new Date();Ie.setTime(He-0+parseInt(Ads_T[9],10));De=vE[1].split('#');Ee=De.length-1;Fe=',';for(l=1;l<Ee;l++)
+{Ge=De[l].split(':');Fe+=Ge[0]+',';}bE=true;cE=';keyword='+escape(Ads_wrd) +';user-domain='+Ads_T[5] +';user-ip='+Ads_T[6] +';url='+escape(window.location.href) +';referrer='+escape(document.referrer) +';accept-language='+escape(Ads_T[7]) +';accept-charset='+escape(Ads_T[8]) +';user-agent='+escape(navigator.userAgent) +';browser-name='+escape(navigator.appName) +';browser-version='+escape(navigator.appVersion) +';flash-version='+rD(0) +';user-day='+(He.getDay()==0?7:He.getDay()) +';user-time='+fE(He) +';user-date='+gE(He) +';server-day='+(Ie.getDay()==0?7:Ie.getDay()) +';server-time='+fE(Ie) +';server-date='+gE(Ie) +';campaigns='+Fe +';';if(navigator.appVersion.substring(0,1)>'3')
+cE+='java='+(navigator.javaEnabled()?'1':'0') +';screen-width='+screen.width +';screen-height='+screen.height +';window-width='+(window.innerWidth?window.innerWidth:document.body.clientWidth) +';window-height='+(window.innerWidth?window.innerHeight:document.body.clientHeight) +';color-depth='+screen.colorDepth +';';}function iE(Je,k,Za,Ke,Le,Me,Ne)
+{var Oe;if((k>0)&&(Je>0))
+{Oe=((iF(Za,Ke)<k)&&(zA||Ne));if((Oe?1:0)==Le)
+return Le;dE[Me]=Oe;}return 2;}function jE(Pe,Qe,Re,Le,Me)
+{var Oe;if(Pe.length>1)
+{Oe=(Pe.indexOf('#'+Qe+'#')!=-1);Oe=Re>0?!Oe:Oe;if((Oe?1:0)==Le)
+return Le;dE[Me]=Oe;}return 2;}function kE(Je,Se,Za,Ke,Le,Me,Ne)
+{var Oe=true;if (typeof(Se)=='undefined')
+Se=[];if (typeof(aC[Ads_wid])=='undefined')
+aC[Ads_wid]=[];if(Je>0&&Za>0)
+{if ((Se.length>0)&&(aC[Ads_wid].length==0))
+{for (intI=0 ;intI<Se.length ;intI++)
+{aC[Ads_wid][Se[intI][0]]=[Se[intI][1],Se[intI][2],Se[intI][3]];if (Se[intI][0]==Za)
+{vIndex=intI;}}if (typeof(vIndex)=='undefined')
+return 2;intReturn=iE(Je,Se[vIndex][2],Se[vIndex][1],Ke,Le,Me,Ne);return intReturn;}else if (aC[Ads_wid].length>0)
+{if (typeof(aC[Ads_wid][Za])=='undefined')
+return 2;intReturn=iE(Je,aC[Ads_wid][Za][1],aC[Ads_wid][Za][0],Ke,Le,Me,Ne);return intReturn;}}return 2;}function lE(Pe,Re,Le,Te,Me)
+{if(Pe=='')
+return 2;var l,Ec,Ue,Ve,We,Xe,Ye,Ze,Af;var Bf='!"%&\'()*+,-./:;<=>?@[\\]^{|}~§ ';var Oe=false;Pe=Pe.substr(1,Pe.length-2);var Ed=Pe.split('#');var k=Ed.length;if(k>0)
+{if(Te)
+{Ec='';Xe=Ads_wrd.length;for(l=0;l<Xe;l++)
+{We=Ads_wrd.charAt(l);if(Bf.indexOf(We)!=-1)
+We='#';Ec+=We;}Ec='#'+Ec.toLowerCase()+'#';Ue=Ec;}else
+{Ec='#'+Ads_T[5]+'#';Ue='#'+Ads_T[6]+'#';}for(l=0;(l<k)&&(Oe==false);l++)
+{Ze=Ed[l].toLowerCase();Ye=false;if(Ze.substring(0,1)=='$')
+{Ze=Ze.substring(1,Ze.length);Ye=true;}Ve=false;Af=Ec;if(Ze.substring(0,1)=='!')
+{Ze=Ze.substring(1,Ze.length);Af=Ue;Ve=true;}if(Te)
+Ze='#'+Ze;if(!Ve)
+Ze+='#';Oe=(Af.indexOf(Ze)!=-1);if(Ye)
+{Oe=!Oe;l=k;}}Oe=Re>0?!Oe:Oe;if((Oe?1:0)==Le)
+return Le;dE[Me]=Oe;}return 2;}function mE(Cf,Df)
+{var Ef=[];var Ff=0;var l,Gf;var k=Cf.length;for(l=0;l<k;l++)
+{Gf=Cf[l];if(Gf>=0)
+{Ef[Ff]=Df[Gf];Ff++;}else if(Gf==-2)
+{Ff--;Ef[Ff-1]=(Ef[Ff-1]&&Ef[Ff]);}else if(Gf==-4)
+{Ff--;Ef[Ff-1]=(Ef[Ff-1]||Ef[Ff]);}else if(Gf==-3)
+{Ef[Ff-1]=(!Ef[Ff-1]);}}return Ef[Ff-1];}function nE(Ed,Hf,Re,If,Jf,Le,Me)
+{var Oe,Nc,Kf,Lf,Mf,Nf,C,Of;var Pf,Qf;var l=0;var k=Ed.length;var Df=[];var Rf=Hf.toLowerCase();for(l=0;l<k;l++)
+{Nc=Ed[l][0];Kf=Ed[l][1];C=Ed[l][2];Of=Ed[l][3];Pf=Rf.indexOf(';'+Nc+'=');if(Pf>-1)
+{Qf=Hf.indexOf(';',Pf+1);if(Qf>Pf)
+Nf=unescape(Hf.substring(Pf+2+Nc.length,Qf));else
+Nf='';if(C==5)
+C=1;if(C==1)
+Lf=0;else
+Lf='';if((Of==9)||(Of==10))
+{Mf=Kf.split(';');if(Mf.length==2)
+{Kf=Mf[0];Lf=Mf[1];}else
+Of=0;}if(C==1)
+{Nf=parseFloat(Nf);Kf=parseFloat(Kf);Lf=parseFloat(Lf);}if((Of>5)&&(Of<9))
+{if (typeof(Nf)!='string')
+Nf=Nf+'';if (typeof(Kf)!='string')
+Kf=Kf+'';Nf=Nf.toLowerCase();Kf=Kf.toLowerCase();}if(Of==0)
+Oe=(Nf==Kf);else if(Of==1)
+Oe=(Nf!=Kf);else if(Of==2)
+Oe=(Nf<Kf);else if(Of==3)
+Oe=(Nf<=Kf);else if(Of==4)
+Oe=(Nf>Kf);else if(Of==5)
+Oe=(Nf>=Kf);else if(Of==6)
+Oe=(Nf.indexOf(Kf)>-1);else if(Of==7)
+Oe=(Nf.indexOf(Kf)<0);else if(Of==8)
+{Oe=Nf.substr(0,Kf.length)==Kf;}else if(Of==9)
+Oe=((Nf>=Kf)&&(Nf<=Lf));else if(Of==10)
+Oe=((Nf<Kf)||(Nf>Lf));}else
+{Oe=false;}if(If==2)
+Df[l]=Oe;else
+{if((Oe&&(If==1))||(!Oe&&(If==0)))
+l=k;}}if(If==2)
+Oe=mE(Jf,Df);Oe=Re>0?!Oe:Oe;if((Oe?1:0)==Le)
+return Le;dE[Me]=Oe;return 2;}function oE(Sf,Tf)
+{var He=new Date();var Ie=new Date();Ie.setTime(He-0+parseInt(Ads_T[9],10));var Uf=Ie.getHours()*60+Ie.getMinutes();if(Sf<Tf)
+Oe=((Uf>=Sf)&&(Uf<=Tf));else
+Oe=((Uf>=Sf)||(Uf<=Tf));return Oe;}function pE(Vf,Wf)
+{var k=Vf.length;var Xf;try
+{if(typeof(Vf.Ads_klist)=='string')
+Wf+=Vf.Ads_klist+'#';}catch(objError) {}for(Xf=0;Xf<k;Xf++)
+{try
+{Wf=pE(Vf.frames[Xf],Wf);}catch(objError) {}}return Wf;}function qE(Ed,C,Za,Ne,Yf)
+{var Le=Ed[0];var Re=Ed[1];var Oe,Zf,Ag,Bg,Cg,Fe,De,Ee,l,Dg,Eg,Fg,Gg;dE=[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];if(Ed.length==0)
+return true;if(((Le>0)||(C==1))&&!((Le==1)&&(Ed[2]==0)&&(Ed[3]==1439)))
+{Oe=oE(Ed[2],Ed[3]);if((Oe?1:0)==Le)
+return Oe;dE[0]=Oe;}Zf=iE(1,Ed[4],Za,(C==0)?2:9,Le,1,Ne);if(Zf<2)
+return Zf==1;if(C==0)
+{Zf=iE(Ed[22]&1,IAS[4],Ads_wid,7,Le,12,Ne);if(Zf<2)
+return Zf==1;Zf=iE(Ed[22]&2,IAS[6],Ads_nid,8,Le,13,Ne);if(Zf<2)
+return Zf==1;Zf=kE(Ed[22]&4,IAS[17],KAS[Yf][13],12,Le,17,Ne);if(Zf<2)
+return Zf==1;}Zf=jE(Ed[6],Ads_T[0],Re&1,Le,2);if(Zf<2)
+return Zf==1;Zf=jE(Ed[7],Ads_T[1],Re&2,Le,3);if(Zf<2)
+return Zf==1;Zf=jE(Ed[8],Ads_T[2],Re&4,Le,4);if(Zf<2)
+return Zf==1;Zf=jE(Ed[9],Ads_T[3],Re&8,Le,5);if(Zf<2)
+return Zf==1;Zf=jE(Ed[26],Ads_T[12],Re&1024,Le,16);if(Zf<2)
+return Zf==1;if(Ed[10].length>1)
+{Oe=((Ed[10].indexOf('#'+Ads_T[4]+'#')!=-1)||(Ed[10].indexOf('#%'+Ads_T[10]+'#')!=-1)||(Ed[10].indexOf('#$'+Ads_T[11]+'#')!=-1));if((Ads_nid==7)&&(Ads_T[4]<1)&&(Ed[10].indexOf('#$14658#')!=-1)) Oe=true;Oe=(Re&16)>0?!Oe:Oe;if((Oe?1:0)==Le)
+return Le;dE[6]=Oe;}Zf=lE(Ed[11],Re&32,Le,false,7);if(Zf<2)
+return Zf==1;Zf=lE(Ed[12],Re&64,Le,true,8);if(Zf<2)
+return Zf==1;if(Ed[13].length>0)
+{Zf=nE(Ed[13],';'+Ads_prf+';',Re&128,Ed[15],Ed[17],Le,9);if(Zf<2)
+return Zf==1;}if(Ed[14].length>0)
+{hE();Zf=nE(Ed[14],cE,Re&256,Ed[16],Ed[18],Le,10);if(Zf<2)
+return Zf==1;}intBwdLevel=0;intBwdTyp=Ed[27];intBwdUser=vE[10];intBwdIP=Ads_T[13];if (intBwdTyp==1){rE();intBwdLevel=intBwdUser;}if (intBwdTyp==2){intBwdLevel=intBwdIP;}if (intBwdTyp==3){rE();intBwdLevel=((intBwdIP>intBwdUser)&&(intBwdUser!=0))?intBwdUser:(intBwdIP!=0)?intBwdIP:intBwdUser;}if (intBwdTyp==4){rE();intBwdLevel=(intBwdIP>intBwdUser)?intBwdIP:intBwdUser;}if((intBwdTyp==5)&&(intBwdUser==intBwdIP))
+{ rE();intBwdLevel=intBwdIP;}Zf=jE(Ed[28],intBwdLevel,Re&512,Le,11);if(Zf<2)
+return Zf==1;Gg=Ed[23];if((C==0)&&(Gg>0))
+{Fe=Ed[24];if(Fe.length>2)
+Fe=Fe.substring(1,Fe.length-1);De=Fe.split('#');Ee=De.length;Dg=-1;strKList='#'+pE(top,'');for(l=0;(l<Ee)&&(Dg<0);l++)
+{Eg=(strKList.indexOf('#'+De[l]+'#')>-1);if((Eg?1:4)==Gg)
+Dg=0;if((Eg?3:2)==Gg)
+Dg=1;}if(Dg<0)
+Dg=((Gg==1)||(Gg==4))?1:0;if(Dg==Le)
+return (Dg==1);dE[14]=(Dg==1);}l=Ed[25];if(l>0)
+{Eg=IAS[8].indexOf('#'+l+':');if(Eg!=-1)
+{Eg=IAS[8].indexOf(':',Eg);Fg=IAS[8].indexOf('#',Eg);Eg=IAS[8].substring(Eg+1,Fg);Fg=Ads_fcount[l];if(typeOf(Fg)=='undefined')
+Fg=0;Oe=Eg>Fg;if((Oe?1:0)==Le)
+return Oe;dE[15]=Oe;}}if(Le!=2)
+return (Le==0);else
+{return mE(Ed[19],dE);}}function rE()
+{if((eE==0)&&zA&&(document.cookie.toLowerCase().indexOf('bndlvl')==-1))
+eE=1;}function sE()
+{if(eE!=1)
+return;if((rD(1)<6)||pB)
+{if (!pB||(pB&&navigator.appName!='Microsoft Internet Explorer'))
+{oD(1,'Start BW-Test','Java');document.write('<applet codebase="'+jB[Ads_sec]+'/" code="bandwidth.class" id="bandwidth" name="bandwidth" width="0" height="0" mayscript="MAYSCRIPT"><param name="cbfunc" value="tE"></applet>');}else
+oD(1,'BW-Test Canceled','Mac IE Combination');}else
+{var Tb=window.location.hostname;document.write('<scr'+'ipt for="Ads_BWD" event="FSCommand(Ig,Jg)" language="VBScript"> \n on error resume next \n call Ads_BWD_DoFSCommand(Ig,Jg) \n </scr'+'ipt\>');document.write('<object id="Ads_BWD" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="1" height="1">');document.write('<param name=movie value="'+jB[Ads_sec]+'/dat/dlv/bwdetect.swf?domain='+Tb+'&path='+jB[Ads_sec]+'"><param name=play value=true><param name=autoplay value=true>');document.write('<embed name="Ads_BWD" id="Ads_BWD" src="'+jB[Ads_sec]+'/dat/dlv/bwdetect.swf?domain='+Tb+'&path='+jB[Ads_sec]+'" play=true autoplay=true swLiveConnect=true width="1" height="1" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">');document.write('</embed></object>');}eE=2;}function tE(Hg)
+{dB=0;Hg*=8;if(Hg==0)
+dB=0;else if(Hg<9)
+dB=1;else if(Hg<33)
+dB=2;else if(Hg<65)
+dB=3;else if(Hg<129)
+dB=4;else if(Hg<385)
+dB=5;else if(Hg<769)
+dB=6;else if(Hg<1501)
+dB=7;else if(Hg<3001)
+dB=8;else
+dB=9;document.cookie='BNDLVL='+dB+dD(60*24*7);}function Ads_BWD_DoFSCommand(Ig,Jg)
+{tE(Jg/8);}function uE()
+{var Kg=new Date();document.writeln('<scr'+'ipt language="Javascript"><!--');document.writeln('cB=new Date();');document.writeln('/'+'/--></scr'+'ipt>');aD(jB[Ads_sec]+'/dat/dlv/aslprebwd.js?'+Kg.getTime()+'0');}function Ads_PreBandwidth()
+{var Lg=new Date();var Mg=Math.round((8026/((Lg.getTime()-cB.getTime()+1)/1000))/1024);tE(Mg);qC();}
+_,http://a.as-eu.falkag.net/dat/dlv/aslmain.js_application/x-javascriptÓ
+J// Empty
+_/http://a.as-eu.falkag.net/dat/dlv/aslsubs111.jsÓOş#orange_ad_top {
+	width:100%;
+	border-bottom:1px solid #000;
+	background:#ff922e;
+	color:#00008b;
+	text-align:left;
+	margin:0px 0px 5px 0px;
+	padding:2px;
+	font-size:11px;
+}
+
+#orange_ad_top form {margin:0px;padding:0px 5px 0px 0px;font-size:10px;}
+
+.footer_ad_text a, #orange_ad_top a,
+.footer_ad_text a:link, #orange_ad_top a:link,
+.footer_ad_text a:visited, #orange_ad_top a:visited,
+.footer_ad_text a:active, #orange_ad_top a:active {
+	color: #00008b;
+	text-decoration:none;
+}
+#orange_ad_top a:hover {
+	color: white;
+	text-decoration: none;
+}
+.footer_ad_text a:hover {
+	color: red;
+}
+
+.ad_top_table {width:100%;border:none;}
+.ad_top_td {vertical-align:middle;text-align:left;padding:0px 3px 0px 3px;font-size:11px;white-space:nowrap;}
+.ad_top_center{vertical-align:middle;text-align:center;padding:0px 3px 0px 3px;font-size:11px;width:38%;white-space:nowrap;}
+
+.ad_top_td_right {text-align:right;white-space:nowrap;}
+
+.ad_top_banner {
+	width: 100%;
+	background: transparent;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+}
+.ad_banner_inside {
+	width:468px;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	text-align:center;
+}
+
+.topbanner_table {width:468px;border:none;}
+
+.footer_ad_text {
+	text-align:center;
+	font-size:10px;
+	color:#666;
+	margin-bottom:2px;
+}_http://blogg.de/css/ad.cssXtext/cssÓO
+3rflow/* CSS für blogg.de
+*  Version 3.0
+*  Standarddesign von Nico Brünjes
+*  Anpassung und Änderungen ausdrücklich erbeten
+*/
+
+h1, h2, h3, h4, p, div {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+	background-color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#container {
+	width: 80%;
+	margin: 10px auto 10px auto;
+	background: white url('container_bg_graydots_right.gif') repeat-y right;
+}
+#header {
+	padding:10px 10px 10px 0px;
+	background: white url('graydots_horizontically.gif') repeat-x bottom;
+}
+#header h1 {
+	font-size: 250%;
+	padding: 0px;
+}
+#content {
+	padding: 10px;
+	margin-right: 230px;
+	font-size: 100%;
+}
+#sidebar-a {
+	width: 200px;
+	\width: 220px;
+	w\idth: 200px;
+	float: right;
+	margin:0px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: transparent;
+	font-size: 90%;
+}
+
+#footer {
+	clear: both;
+	padding: 10px;
+	background: white url('graydots_horizontically.gif') repeat-x top;
+	font-size: 85%;
+	border-top: 3px solid white;
+}
+.sidetitle {
+	font-size: 130%;
+	padding: 2px;
+	background: white url('graydots_horizontically.gif') repeat-x bottom;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.side {
+	padding: 2px;
+	margin-bottom: 20px;
+}
+
+#content a, #content a:link, #content a:visited, #content a:active,
+#sidebar-a a, #sidebar-a a:link, #sidebar-a a:visited, s#idebar-a a:active {
+	color: #000080;
+	text-decoration: none;
+}
+#content a:hover, #sidebar-a a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+/* Dies hier sind Standardeinstellungen, die nach belieben angepasst und verändert werden können und sollten. */
+#content h2.datum {
+	background: white url('graydots_horizontically.gif') repeat-x bottom;
+	font-size: 130%;
+	text-align: right;
+	margin-bottom: 5px;
+	padding:2px;
+}
+#content h3.titel {
+	font-size: 120%;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.fliesstext {
+	margin: 0px 0px 3px 0px;
+	padding: 0px;
+	/*overflow: hidden;*/
+}
+.postinfo {
+	font-size: 85%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+div#nav {
+	margin: 0px 0px 0px 0px;
+	padding: 5px 5px 5px 5px;
+	background: white url('graydots_horizontically.gif') repeat-x bottom;
+	font-size: 120%;
+}
+#nav ul {
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+#nav ul li {
+	display: inline;
+	list-style-type: none;
+}
+#nav a {
+	padding: 0px 10px 0px 0px;
+}
+
+#nav a:link, #nav a:visited, #nav a:active {
+	color: #666666;
+	text-decoration:none;
+}
+#nav a:hover {
+	color: red;
+	text-decoration:none;
+}
+.cal {
+	padding-left: 15px;
+	font-size: 110%;
+}
+blockquote {
+	color: #999999;
+	font-style: italic;
+}_-http://data.blogg.de/6357/templates/style.cssÓOGIF89a  ÷   ºÓzC—Vd  °ÌÌï¨aY  ­ó’.xEs„KmôôüLLÇÿ”,¬¬åÿš&ÿ–+³³çıışÖÖòÿ˜)©İ€>——ŞZ3…]]Ë  ¶f:|)J*÷0uuÓò‹43™ÿ¤ãƒ;ø–*Ø~@ÿœ%ÄqK$¡ş¡!áŠ4ÏÏğ¹jQB%‘ÿŸ#,,¼ÿ’.;!”¿¿ë¾mO‚‚Ø  ÁÜÜô´ééøÕ‚<ÿ“-îŠ5¬ùùı¤^\ÊsI°eVËyDää÷ÿ‘/é2ø“-  ªPhddÎï’-­66½[_  ²!!¶kkĞïïúRRÈ¥EEÄ²b7€ºqLÁoL·İˆ7%%¸û˜)Q.‡ç‰6û•,®ÃuGÿª´iRé‡9ú#í‡7ĞwFMMÇ­î3²ÿ­÷š'p@x  ¥¹­³³ììù¨ü‘/  áï0ü™'¯ô—)OOÈ¯ÆxE??Àı”,ÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                !ù   ,       ğ ÿ8‰ÁL8 €i¦P8±áœ		ØÂ&€&†ô  @Âªä©" †cpPÑ€ „CkÂLÙ’ÀÍ‰Cøƒ ä…1h$èaƒÂ Œ€I  L*n’Laâ6!Œd&Œ‡i@€HÃ Ø%W˜àHq"Hà A%Ä+T¹B2
+‡(W’DAâK’(zœ ±…
+#?¾ ±ƒ‚…j`‚$.8¾ü0Â†ƒ<U
+,a}Æ
+SÜì59€Âİ^½>D˜‘+ñŒ
+ş9Ã¼¹—3ÏÏü ;_)http://blogg.de/images/blogg16x16icon.gifYimage/gifÓOÜGIF89a  ÷ÿ Z•¾ÿ—5Ë…Kı½+qªe¹Cös,b¢ûÑş–B0Èšl÷—óz*óUò(õM"> 54u­ı»Zö’0ò:ş=*•<ö–?TL¨&i¦8x°şFş-|Sø³ı™Eı—:ÿ”2ú’3óf!ò4ó*òr$ócÿ“2ÿ’0ò@òGò-ò2úÃó]ı’/ù’5ò6_—Àò4ò3 g¥B€³òCò1óXş’/ş°g÷zGú'ı„* y‡Hy¥æœAê“8¨¾fõq:û³ÿ’,óRı°b-pz¨ş­Fÿ“5!7çšS¨¸v¶YûÏ1t^ñ§k–µÃüÅôCôš6õŸR`›ºá¯}÷‚'÷è®w.H‹%Wÿ›@Gb’SLò/	ù˜9ûƒDX®8`•ÃiÄòbò+Ç”eù°*O©A-ûĞ
+€RAH¦ò•>÷d3óPô2òsRŒºòj%ûÇza$•7G…µù{GHƒµş‹1ş6ş”=B™W‡3—››üÀ"~šFüÖ*á²…õ¨)_ƒ¡ÿº9õS&ñ0[¬ñ5	­[¤™R½˜Oÿ¿aÿ¸hü’U<Ÿ<¹Ì× PŠ¹Öç¾rö]3a¦§3¡=õK.Xs’moœx…æªZü]e˜~‹—Ëµ…´¯K^¡/o¤ş£Fÿ¢Lò7ÿ¨H|ÁI<K’ıÄUè“L— RıœA‡‹jr÷£ø¥ù­Üµn¸LõCüAD¦?æ?ÿ™?Áº­eŸÂş³_Duœî•Cøš/u©Ìÿ+üÊ1óMò,mQFC±ø–=`£H¤Åi.}“[¯Eˆ6}:û”-ÿØ…AdAA©JD¯éŸ\ñ;ö”;÷i>òEùš2û•7k[’ÍŸF:z°ô•2ü‘0Š:Q‰ºV¼òi óo#?~±ÿÆî®sñ©Vxlş-ù³D´r»JùwBóYòvøi/
+„/ó„++Ğ‰JL‡·ÿ’.!ù  ÿ ,      @ÿ ÿ	H°àÀ@ääÅ?åXÅdÔ.ØÁ 7C‡fuœüÇ!Z„¿
+Œ‘tÁöÈ
+ğÏ›!F¶ÚĞ	Â€®l”(ñà[0‚ï2!ÛOºPÎDu `â
+®°I´%4ı „7Ï¸rá#Òl\”ú'Ã	Tİ8E`ŠxÖí *´D†€†ºtô‚Üš“íX¸;UIì¨ğèÒÈ]ªQS@L†~Hè¹—ÄK¢WjkA3íÍ§T|ø kBµcÄÉƒğ‘)|åÃêŒŒ ÀH·Cm<°'X±4˜¹Z `«^kÚÂ‘ Šü@Ä«JÈUÄá#á G	C1ÓÉ }áX€´³a!@2Y˜³Ï	0ä C¨0V£FÒğáA,ĞfV9°	ÄÅ&x€Íh3ÖT…Â2+¸ÑÄH" ò„>…ğCÅ6”€Ì‡2¨Å	,õğR !“¸sÅ/pˆ%ÇÁ#E˜ôA,’K%³Èpœ@C B‹#Ğt ;_/http://blogg.de/img/messenger_topbar_orange.gifÔ !_WebResourceTextEncodingNameUutf-8Ooinf=''; if (navigator.appVersion.substring(0,1) > '3') { 
+inf='&scx='+screen.width+'&scy='+screen.height+'&scc='+screen.colorDepth;
+if (navigator.javaEnabled()) inf=inf+'&jav=1'; }
+rdm=Math.random()*10000+inf; iid='119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com'; bid=664407;
+Ads_CountUrl='http://red.as1.falkag.de/server/link.asp?rdm='+rdm+'&cmd=url&auc=1&iid='+iid+'&bid='+bid+'&dat=';
+Ads_CountUrl_ne='http://red.as1.falkag.de/server/link.asp?rdm='+rdm+'&cmd=url&auc=1&iid='+iid+'&bid='+bid+'&datne=';
+Ads_LinkUrl='http://www.ebay.de';
+Ads_ClickUrl=Ads_CountUrl+escape(Ads_LinkUrl);
+Ads_wid=14640;
+Ads_iid=119503;
+Ads_xwid='';
+Ads_xiid='';
+Ads_xp=0;
+Ads_yp=0;
+Ads_xp1=0;
+Ads_yp1=0;
+Ads_xl=468;
+Ads_yl=60;
+Ads_dur=-1;
+Ads_bw=0;
+Ads_sec=0;
+Ads_ViewCode='<img src="http://red.as1.falkag.de/dat/bgf/trpix.gif?rdm=8860&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407" width="1" height="1">';
+if(typeof(document.getElementsByTagName) != 'undefined' && typeof(document.createElement) != 'undefined')
+  Ads_ViewCode = '<div id=Ads_Banner' + iid + ' style="position:absolute;left:0;top:0;display:none;">' + Ads_ViewCode + '</div>';
+else if(document.layers)
+  Ads_ViewCode = '<layer id=Ads_Banner' + Ads_iid + ' left="0" top="0" visibility="hide">' + Ads_ViewCode + '</layer>';
+else
+  Ads_ViewCode = '<div id=Ads_Banner' + Ads_iid + ' style="position:absolute;left:0;top:0;visibility:hidden;">' + Ads_ViewCode + '</div>';
+Ads_wrd='';
+Ads_prf='';
+Ads_par='';
+Ads_Timestamp="#" + (Math.random() * 100000000 + 100000000);
+Ads_Timestamp=Ads_Timestamp.substr(2,8);
+document.write('<img src="http://a.as-eu.falkag.net/dat/bgf/200506/16/allgemein_allgemein_mein-ebay-2_st_468x60.gif" usemap="#eBay_allgemein_728x90" border="0" width="468" height="60">\n');
+document.write('<map name="eBay_allgemein_728x90">\n');
+document.write('<area shape="rect" coords="0,0,362,33" #textid#="mein-eBay-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm='+rdm+'&cmd=url&iid='+iid+'&bid='+bid+'&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://my.ebay.de/ws/eBayISAPI.dll?MyeBay" alt="Mein eBay" title="Mein eBay" target="_blank">\n');
+document.write('<area shape="rect" coords="364,0,467,59" #textid#="Logo" href="http://red.as-eu.falkag.net/server/link.asp?rdm='+rdm+'&cmd=url&iid='+iid+'&bid='+bid+'&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://www.ebay.de" alt="3...2...1... meins! eBay" title="3...2...1... meins! eBay" target="_blank">\n');
+document.write('<area shape="rect" coords="0,34,173,59" #textid#="kaufen-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm='+rdm+'&cmd=url&iid='+iid+'&bid='+bid+'&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://hub.ebay.de/buy?ssPageName=h:h:cat:DE" alt="Kaufen" title="Kaufen" target="_blank">\n');
+document.write('<area shape="rect" coords="175,34,361,59" #textid#="verkaufen-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm='+rdm+'&cmd=url&iid='+iid+'&bid='+bid+'&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://sell.ebay.de/sell?ssPageName=h:h:syi:DE" alt="Verkaufen" title="Verkaufen" target="_blank">\n');
+document.write('</map>' + Ads_ViewCode + '');
+
+_>http://as1.falkag.de/sel?cmd=jsc&dat=119503&xl=468&yl=60&opt=0Ytext/htmlÓ#$O§GIF89aÔ< æ  ÿÒÒBB³‡±ÿÌ ÿUUÕkÿ87ÿ¶µPkI¨¨Üˆ Gº )ÿããwwÉÿÔ0ôúåo•*õ¹”ÉªÕ8ôôû›ŸÕÕîYZ¼şşşååõ#$§´ÚMÜİòššÖÿåxÿùŞ22¬ÿé‘µµâÔç•ÿ‡‡ÏÿÙKÌÌë»»ä­Tùùıÿííøäñ¼ghÂm VÇäwD o9M`Úí¦Ó ıüï5  –™ ÿ’’ÿõÍÂÂç™ÌÿÑ>>²ÿÍÿşùÆ ï÷ÕÒ¹Áÿí£bb¾”ÊèèöÿßhÇÇéÿğ·ÿõ­2 y °¥ ¡p(Z# „U dÈ èôÇ˜ÌJ;–àğ³zË*6²MMµ¾ ûÿÿÀßh)6pz£\z=…)zî 
+şììnE˜>C¾Û» P^ÇÿâLsyÓŞ ¥â¾Z-6¯£Ñ#ÿİ‹B2ÂÊş½ĞĞìûşöÿ÷÷ÿ||ÿÿÿ™Ì ÿ    ™!ù     ,    Ô<  ÿ€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃ!KÉÊËÉI/„?ÈÌÕ-<ÄÙÚÛÜ½Qàáâà„&|êëììK‚DíôëİÃü„úñ* ÀùÊª@Å#B|ˆaP4°ËÀ±c:u-*ş	Ña£ÇêxDQ¬»„\®ƒÉH&MNêñ1Á²§ª
+)t®[ïO	4 Ìã"‹Ó§.òğÉ0¢B.ë<İú@İŠ#>}ÉT×‡—lzÊ©³hØ·¡ÿ*$@Y¯´	êåá áŠ_¿=hç‚º 1ªôõ+dÂ”+áê« h½H‘‚g'¶|‹B²éNrÕe¸ÀcÉC<+ø„Ü€§]¸iôP,¡·R)˜xñÑÊ!½%TBBê
+‘§oÉÄÌ'À uÔo²mıÏYuÑÃ_’›îë·(K&á’wİ#”ÈWRä„>øûôÈ2ÕÙáÄùõÑXW|Œ`™x´Èô]Ql}§İûøóÈ>ÿ,a…‚p'ÈX…ôƒà‡‰¤ÆÇ
+^à`"”DA±ñ„ ãŒkäÃùU]|1AùI€éPàˆ	ªÓ@ÿ|$°¡’êÜBP3ô‡ZWFiÂ:2åKVjøÇ–|”%™ ¹µ`< !	×\#b€Ã $Ù&3æ9 6
+€_s<¶N$ô–ßo&p ›¯ÈÔ@Pf~ÇÖM%ñB¥4aI;‹Ré¥Qf¸u0Ú“Q®Í„Êª:N2ÌEQÀ±A¸âºÁèÁùÜœàP';;Ä8£J|p‚5ÚˆcÄÀB9¤:t'k£JÊf)L*Hmn°<š®ƒë¨^–{î µãeTòDf¬¬s¦’ÛòRÁ>/˜àÁ)ğ€ÂÁóBtPœ‚[é:"è)Bÿ:Åîi#øI0€Ä}ø!ªÎ¼ırZ«Õı¡	âfÉMì¦;³ ì‚%»ñ®“€¶/4 šÌ7µguV¦l‹^˜Àƒ¥Ó¯{˜y±Ã:X7›C~H ÎTûçµ²i«ô*š[/Ä<?5»º³:j2·† yĞ€¦ºÅªĞTŞäh¾²­mK h$µÔTkµ‹LÌ§„6p-#Ÿ_wÌAæ4Œœãç'wªø)şÁd2… ·NÖÙL3Ş‡lÊsÎ2µ0®©™A%Ë±KL¼  ÀÌ7€ò ¡K^Rt QëØ ÂàŸ0 ÿ³6ÙƒA”ã~ê$ñƒğlóéwğÚM–Ğøÿ#;Î´ë|?şø‡˜4Ô`ÀAz™:V¿V\%jë@Ãt@ À ,È`	2˜Á`Ïƒ~ĞÄí^h€òĞe9à…ÀÓæ:×±¸`7‡
+ƒTø@„r4©›ÎÍ^w3ÿñn-3âƒDÕ?­£"XÚ;0ôCU`€wh  üÀÅ.zñ‹\,¤0…ˆı€!8Ñœ°:è)Oä#~æ0+äh.P‡’VÅR¤e/«ß]U·A1g…@"©r†&‚R;ñ2SSêğ (¹È‚bpÿ“~ø‚œœH[¨CÆ7# ÈpFP0[‚¤£šÀ‡“$EêÜ¶@AÒ„eºã¥şìwÈş˜¾S‡ ×á·ï$Îe´kÏƒxç\¢¢/€  Êà ' t` 0~á7(c°¼ğ‚•T@
+(@dä 0	â£‘ô'<ªã|´f(R§:uùr¦•!3EHc"¡˜bb=ŠB% éAíá:ŠŒà#: ¥ ½`‹^\ :a`•Œ´`^©Œçà &pX;Ö€ÄÏ?éP\À%GAAP*ñ‰R2Êˆ†ªÙ%Ñ“[jÏd“†ÀTÿf!^°*G¨Ê¹I@'ÜL):oàŒ@jĞ‚
+â¹ÊÜ§y:ÈzÚ@YAxèWeáº ˜…=,#ø¡¶Hr° 0© €R0š5y˜@8ÓÚE•¢S´ÁÖäJ×|à#È©ŒNğ€õ´
+1¸i„
+ÙÚÊ¤Kµõ„ x MnrƒìdYàÛÎ* TC¥(àÒÆÓ´7µ±èiì³¯I‰Ws;X*A‡»œØ­:z+Òò~ñœ7øºP©4w®ÏmÔa„WÒÔC˜ƒ{³#>P`£àì»^Ş÷‹bô¤‚|ÁÀ@
+ÿr½â¨ò¹>PD0]ê¶–§ĞŠ–:– XWâ (N±ŠWÌâ»øÅ+ö‚f,8˜øâ½ä½hV4„óÇáDƒ‡Œ'XEb^áÂà‰áà	1<>$óÛ½ñ$Çå.{ùË`³’µL	.$A”¥Yë¡‡å9/Sˆó†µ%ÇT>˜ÑêÛÊ)»¶cVÆ2™MhFxÁ0|k7uÀ£K–³.gÙÊŞ$ÏiğŒ@ğ†Ø•-­+g¹Ğ¨4Ğ"ì¸‹  J2 ‡=ì½7xÂM ëX A˜ îÈFvFÿâR:ÕĞFµL…Î‚Ñ ÏçlFÏ’K É€5BDKÙ½qö©£ÍnîZÀ¨˜|u;i y‡r”ñh@n/8.+¸À?‚î@¯»İl —hrBÚ¼^®±
+¡+P¹5
+¤`Æ ÷À™ùĞZä$¶Ú¥D˜WÎò–»üå0¹ÌgNóšÛüæ8$^ÀğDoÛ‚Áå Ğ=B4°¡ØäÂÈ½…ï,Á«XB:Z‹„X	HP·Ê!Îõ®{ıë`»ØÇNvˆó¯hO»Ú×Îö¶»ıíp»ÜçŞö£FàQ’çfç= %åõ~mÿ
+œÒŒ•Zê ¢®ê’àñÿ«©·^öÊ[şò˜Ï¼æıpvº{şó ½èGOw»G"ƒàÊI¤F/pÁ”jÜ@{(ğ]AD!Ü\~¶$ø°ùŞûş÷À/{çIOüâÿøÈÏé%ñƒŒàIP½P®á/8Â\<à[aÀ¨	ˆ!¢`n©¡ààŠà}ğ×ÏşöøÉ¿üçOÿ -Qø@„Œ`"¡0#à\€¨%p+ğàx zğ>†	pxPxxp	`c[æ~•· ¶ \‚ÇUv$X˜‚œWp‡ .˜à‚dwdğ‚£ƒ ÿ,H|÷g	Vñ¶²+p€åQ_vGrÿ’+LØ„!°´õê§‚a§ ‚  \¤N"8vV([H…ì;¨vb ~Ò weø£—†j8†£×ƒ¢ğQx‡ô 	 ¬0…`èu]ˆ… 2Pv÷7p†rÈv :Øø‘øvm8z3 †gØˆŸG‡Jã‡‹qè2à…eGˆ¡Èˆœ˜vd‡}‰ğ,–(£w‰«z˜2 ˜Š"ˆƒøSğE0Œ^‡Š)µ (¸IÈÈ‹_'†·ƒ‚0øQ†e   ‹r~b‹=u°‰kçÿø1ØˆvæøŒö÷C»ÈŒ`ˆ¥ø7ĞE¹6ˆ8‚Wè]‚… ‚õ(S€‚¿HêDîÈuÎ¨}°`øøqmèŠmøˆkx‰p¸†}0‘ Ï"b€†j‡ƒ°†cPƒ°3Ø‚`mXÚ¸Š¹Ø/íx]Ô…T ^TFˆHJO ˆ¿ˆ…ûxñø2Pg TpJé¿ø
+@qŒ6	J	©°ØàŠ“H°8II‹™¸8ÒŠ0“¨‘ )’€ c Ù‘3hP€’[ğjh—o©3‰.5‹0˜ŒpEµg	- 8ŠĞÿ„‰5Y•]¨NÁØE2 0 ¦”šù[hŒLé™¤øOà”‚™ûX•"u•Ï8‰Ø‰ø’!™‘a™–ÏÒ†[ù—}@b `Ù–,Ù‘n©‘¶˜›k8‰¿ÙÃ	˜’°@<‡àœĞ)†€±Á˜¦à˜‰™6Ù…0 •óxŒ0°™ù˜š~`Œ©¦ùBiŠª¹I¬y‹pXƒ´È—³‡m(‹)ÚÀÙ–´Y›øA›®œù©›Ï˜‡ªó˜ˆà Ü™?`.Ú™H0{¨¡z3#P!ğğÚ¡	P!zŞyX™\ôƒ ‚œ‰êyÿíù¢Ÿ`4Ÿ«xjX†!É—…0–n˜mÈCÚYC* yŸ$I:¥
+z‹Š?pŒp*é7Ğ©@„	Dğ|‚°˜ªC¦à$eº$°¦ÖI+êXƒ ˆIIšfîÙ™Ÿù…Ø™a‚xğÉ£^ä£«h—b`—œeà‚.¨ƒäØ†û‰“8pø¤Â9 ¶ø©–Š ~b¥“Š¥“ğVª…~.s¡vº¦øP¢°’´ª:µJ˜#  »
+™ŒêE£HJZ£€ª£ƒZ¨©y–£‚Z¬ª|U–‚°’ª•—J Hš­Qzÿ¤ªáZ q.xªäz¥2I	?@…	¦‹ ¯¹«%ÚùV»Ê¦%º°Ê¦ÄJ­‰…¡Œœé¢4š
+ËE7*šì©¬;J°Ê‰“h†ù¡¤Ë™©´ÈI @*œÛ*ª÷9qx ¨Êœ°E‘¢‡° ëôª¢öJ˜-pø³¯½:¬†«¼Ú[°~pR‰Œ‚àédŠzJšá	ŸÆ¸´KIq)±_H­Ûˆ&‹J‹ğ•Ş:´ˆœ¯¨†“8¤(ù–gKœ÷Ù(‰—v¹—#ëŠ	.ñ>1;¢¬ò>x{s:xû·|x*,!E@.S³À·¢ÿ;?Ë¯„¹pÊ¸x;°Ô:Š~à¢™é¢O€¬[¨¹6J¨7I2 ”Š:±Vk­|5Kª•~ù*	¶G
+»Z	‘c0—šŠhùh©¶±sy—`·ìÊ‰YZÿJğÜ¹¼„ÉºÃ¼zøàY‚3ø`wË*°-à³lš½s1@kÚª…p§A[ ˆ`¤¾]wÃH•A[^W‹ºåxtw¼üt1™vØÈ¿öÛSÅ›H²Ê
+,›˜‡Ğ||8¯óûÀ6Y¿<ÁÌO"èÁ¼~\Á<Àü!¼Á$Ü{üÁ(¬!Œ 9×Â.üÂ0Ã2<Ã4,Ã? ;_Yhttp://a.as-eu.falkag.net/dat/bgf/200506/16/allgemein_allgemein_mein-ebay-2_st_468x60.gifÓ&'O+GIF89a  €ÿ ÀÀÀ   !ù    ,       „Q ;_ãhttp://red.as1.falkag.de/dat/bgf/trpix.gif?rdm=8860&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407Ô)*+!Ziso-8859-1O	M//
+// +---------------------------------------------------------------------+
+// | phpOpenTracker - The Website Traffic and Visitor Analysis Solution  |
+// +---------------------------------------------------------------------+
+// | Copyright (c) 2000-2003 Sebastian Bergmann. All rights reserved.    |
+// +---------------------------------------------------------------------+
+// | This source file is subject to the phpOpenTracker Software License, |
+// | Version 1.0, that is bundled with this package in the file LICENSE. |
+// | If you did not receive a copy of this file, you may read it online  |
+// | at http://www.phpopentracker.de/license.html.                       |
+// +---------------------------------------------------------------------+
+//
+// $Id: webbug.js,v 1.9 2003/09/19 07:17:28 bergmann Exp $
+//
+
+var client_id = 6357;
+
+// Taken from http://www.jan-winkler.de/hw/artikel/art_j02.htm
+
+function base64_encode(decStr) {
+  var base64s = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  var bits;
+  var dual;
+  var i = 0;
+  var encOut = '';
+
+  while(decStr.length >= i + 3) {
+    bits = (decStr.charCodeAt(i++) & 0xff) <<16 |
+           (decStr.charCodeAt(i++) & 0xff) <<8 |
+            decStr.charCodeAt(i++) & 0xff;
+
+    encOut += base64s.charAt((bits & 0x00fc0000) >>18) +
+              base64s.charAt((bits & 0x0003f000) >>12) +
+              base64s.charAt((bits & 0x00000fc0) >> 6) +
+              base64s.charAt((bits & 0x0000003f));
+  }
+
+  if(decStr.length -i > 0 && decStr.length -i < 3) {
+    dual = Boolean(decStr.length -i -1);
+
+    bits = ((decStr.charCodeAt(i++) & 0xff) <<16) |
+           (dual ? (decStr.charCodeAt(i) & 0xff) <<8 : 0);
+
+    encOut += base64s.charAt((bits & 0x00fc0000) >>18) +
+              base64s.charAt((bits & 0x0003f000) >>12) +
+              (dual ? base64s.charAt((bits & 0x00000fc0) >>6) : '=') +
+              '=';
+  }
+
+  return(encOut);
+}
+
+var resolution = window.screen.width + 'x' +
+                 window.screen.height + 'x' +
+                 window.screen.colorDepth + 'bit';
+
+document.write(
+  '<img src="http://tracker.blogg.de/tracker/image.php?' +
+  'client_id='+client_id+'&'+
+    'document_url='+base64_encode('GTD-Wikis [ ]')+'&'+
+    'referer='                + base64_encode(document.referrer) + '&' +
+  'add_data[]=resolution::' + resolution +
+  '" alt="" width="1" height="1" />'
+);
+_Vhttp://tracker.blogg.de/tracker/track.js.php?client_id=6357&document=GTD-Wikis+%5B+%5DÓ-.O*GIF89a  €ÿ ÀÀÀ   !ù    ,       D _‰http://tracker.blogg.de/tracker/image.php?client_id=6357&document_url=R1RELVdpa2lzIFsgXQ==&referer=&add_data[]=resolution::1280x854x32bitÓ01OGIF89aP  ÷    ‹ÿÿÿ   ÿ’.ÔÖİÕÖŞSb›,x‚’Œ•»IY˜‘­ç…‘½˜ÍK[”éêíÛÜèèèëL\˜ØÛéĞÕéııÿ{ƒ ºÈç—š§´ºÊš¥ÀÁÄĞŒ³yƒ¦l´ûıÿ!4€@Tš(gõöùÚÛçñõüÒØèöüÿju¬‡”Á:K†“ÂÎÎİ^o©ğğôãëú›¤¼‹Œcw³y›Ÿ©ÇÄÓí¥¶ßx‰·O^‘˜¥ÎCN‡)0_cm¢‡ŸÚhr‚šÎ­½âíòõ™¶ƒŒ¬şÿÿ}¢áŞìşÙáñùıÿu€ªÆÌß¦è~…š™¶Rcíï÷¸ÀÒ,vøüÿ‡”º¨Äò`e~˜É4Dy­¸Ô¥Å½Ææjx±ÖÛë´ºÉSi©/?ƒšŸº4H×ÚääîÿXa|œ¦Ì\q¯“š¶PZ…üÿÿµ¾Ú¡¬Ñœ¬Ñt²ÒØå—´ĞÖèÜâï€ªô˜¶ir‘˜›¯„•bk•Î×é…—Ååæíy}’„¹MZ1C„åíûİçúeo™-:£ÎÑ×ê»Êğäçğ·ÀÖáãìv~§“¯æ—¤Ê—›¥B[¡ÆÎäÂÅÔ¥©´}Šº<Ds]e…DQ€¬±Â                                                                                                                                                                                                                                                                                                                              !ù     ,    P  @ÿ H° Áƒ*\Èp`  S,hI hK@W(ÍÀ #Š
+4‚ÔÙ0ÀC &Q¦<™åC–,QIÀL›*UŞ4)ğe€Ÿ@¥LxñÇ (]>¤ú2§Ó§P£Jª2@OªXcbİÊUªUZ»VK¶,O°&¡ÓàÆBv @E g~,ñQ£eË“0Çjİ©³æÍÃP¿>Œ Òü0PC(Î“5fòÀ	0'Æ~ÍŠúµ¡éÓ¨SdÊºµë×°cËİú*í×¡Gëvª8íÏJ4(šd…Ê2p„Å’¦.º¬*=úO™²ÛÔ¾}föÃß«^{}p¡‡$	‘Êêğ&ƒ‹,
+œĞ L9~Yç½;wğÿaKWÙP€!}|‚)ğ´†Iè!L0’S¾Y˜tßí„N$†˜SoM” 	|„Ğˆl8b‹x± R0ä¶ÛŠİ&äD
+)@@ ;_3http://blogstats.de/images/blogstats_mini_80x15.gifÔ345!UUTF-8ODÆ<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><HEAD><TITLE>GTD-Wikis [Die Kritiker]</TITLE><SCRIPT type="text/javascript" language="javascript" src="http://a.as-eu.falkag.net/dat/dlv/aslmain.js"></SCRIPT><SCRIPT type="text/javascript" language="javascript" src="http://a.as-eu.falkag.net/dat/dlv/aslsubs111.js"></SCRIPT><LINK rel="SHORTCUT ICON" href="http://blogg.de/bloggfavicon.ico"><LINK rel="stylesheet" type="text/css" href="http://blogg.de/css/ad.css" media="screen"><LINK rel="stylesheet" type="text/css" href="http://data.blogg.de/6357/templates/style.css" media="screen"><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><LINK rel="alternate" type="application/rss+xml" title="RSS2.0" href="rss.xml"><META name="ROBOTS" content="index, follow"></HEAD><BODY class="section-1">
+<DIV id="orange_ad_top"><TABLE cellpadding="1" cellspacing="0" class="ad_top_table"><TBODY><TR><TD><IMG src="http://blogg.de/images/blogg16x16icon.gif" width="16" height="16" alt="logo"></TD><TD class="ad_top_td" style="width:50px;"><A href="http://blogg.de/" title="blogg.de">blogg.de</A>Â â€¢Â <A href="http://newkidsontheblog.de/" title="NewKidsontheBlog.de">NewÂ KidsÂ OnÂ theÂ Blog</A>Â â€¢Â <A href="http://weg.de/">weg.de</A>Â â€¢Â <A href="http://motorblogg.de/">Motorblogg.de</A>Â â€¢Â <A href="http://blogstats.de/">BlogStats</A></TD><TD class="ad_top_ad">Â Â Â Â </TD><TD class="ad_top_ad"><A href="http://sel.as-eu.falkag.net/sel?cmd=lnk&kid=174716&bid=652773&dat=368705&opt=0&rdm=[timestamp]" target="_blank"><IMG src="http://blogg.de/img/messenger_topbar_orange.gif" border="0" align="middle" alt="MSN" title="MSN Messenger kostenlos runterladen"></A></TD><TD class="ad_top_ad"><A href="http://sel.as-eu.falkag.net/sel?cmd=lnk&kid=174716&bid=652773&dat=368705&opt=0&rdm=[timestamp]" target="_blank" title="MSN Messenger kostenlos runterladen">MSN Messenger kostenlos</A></TD><TD class="ad_top_ad"><A href="http://blogg.de/benutzer/blogg-registrieren.php" title="blogg.de - Weblog Anlegen und sofort Losbloggen"><B>Du willst auch Bloggen?</B></A></TD><TD class="ad_top_td_right"><FORM action="http://blogg.de/search.php" method="get" name="suche"><INPUT style="font-size:10px;" name="search" id="search" type="text" value="blogg.de durchsuchen" onfocus="this.value=''">Â <INPUT type="submit" value="los"></FORM></TD></TR></TBODY></TABLE></DIV><DIV class="ad_top_banner">
+<DIV class="ad_banner_inside"><TABLE cellpadding="0" cellspacing="0" class="topbanner_table">
+<TBODY><TR><TD><SCRIPT type="text/javascript" language="JavaScript" src="http://as1.falkag.de/sel?cmd=jsc&dat=119503&xl=468&yl=60&opt=0"></SCRIPT><IMG src="http://a.as-eu.falkag.net/dat/bgf/200506/16/allgemein_allgemein_mein-ebay-2_st_468x60.gif" usemap="#eBay_allgemein_728x90" border="0" width="468" height="60">
+<MAP name="eBay_allgemein_728x90"><AREA shape="rect" coords="0,0,362,33" #textid#="mein-eBay-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm=7942.779123756466&scx=1280&scy=854&scc=32&jav=1&cmd=url&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://my.ebay.de/ws/eBayISAPI.dll?MyeBay" alt="Mein eBay" title="Mein eBay" target="_blank">
+<AREA shape="rect" coords="364,0,467,59" #textid#="Logo" href="http://red.as-eu.falkag.net/server/link.asp?rdm=7942.779123756466&scx=1280&scy=854&scc=32&jav=1&cmd=url&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://www.ebay.de" alt="3...2...1... meins! eBay" title="3...2...1... meins! eBay" target="_blank">
+<AREA shape="rect" coords="0,34,173,59" #textid#="kaufen-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm=7942.779123756466&scx=1280&scy=854&scc=32&jav=1&cmd=url&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://hub.ebay.de/buy?ssPageName=h:h:cat:DE" alt="Kaufen" title="Kaufen" target="_blank">
+<AREA shape="rect" coords="175,34,361,59" #textid#="verkaufen-link" href="http://red.as-eu.falkag.net/server/link.asp?rdm=7942.779123756466&scx=1280&scy=854&scc=32&jav=1&cmd=url&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407&dat=http://64.158.223.128/ad/ck/707-1170-6179-3?mpre=http://sell.ebay.de/sell?ssPageName=h:h:syi:DE" alt="Verkaufen" title="Verkaufen" target="_blank">
+</MAP><DIV id="Ads_Banner119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com" style="position:absolute;left:0;top:0;display:none;"><IMG src="http://red.as1.falkag.de/dat/bgf/trpix.gif?rdm=8860&iid=119503&&kid=178312&sta=,,,,,,,,,,0,0,0,7140,7134,6429,591,0&dlv=107,14640,119503,178312,664407&bls3=111111A&dmn=host86-135-122-206.range86-135.btcentralplus.com&bid=664407" width="1" height="1"></DIV>
+
+</TD></TR></TBODY></TABLE>
+</DIV>
+</DIV>
+<DIV class="tracker_core_blogg" style="font-size:0px;line-height:0px;"><SCRIPT type="text/javascript" src="http://tracker.blogg.de/tracker/track.js.php?client_id=6357&document=GTD-Wikis+%5B+%5D"></SCRIPT><IMG src="http://tracker.blogg.de/tracker/image.php?client_id=6357&document_url=R1RELVdpa2lzIFsgXQ==&referer=&add_data[]=resolution::1280x854x32bit" alt="" width="1" height="1"></DIV><DIV id="container">
+
+        <DIV id="header">
+                <H1>Die Kritiker</H1>
+
+        </DIV>
+
+        <DIV id="nav">
+                <UL>
+                        <LI><A href="http://uferlog.blogg.de/" title="homepage">home</A></LI>
+
+                        <LI><A href="http://uferlog.blogg.de/archiv.htm" title="archiv ansehen">archiv</A></LI>
+
+                        <LI><A href="http://uferlog.blogg.de/suche.htm" title="im blog suchen">suche</A></LI>
+
+                        <LI><A href="http://uferlog.blogg.de/rss.xml" title="RSS 2.0 Feed">rss</A></LI>
+
+                </UL>
+
+        </DIV>
+
+
+<DIV id="sidebar-a">
+
+                                
+                
+                
+                
+                        <DIV class="sidetitle">Letzte EintrÃ¤ge</DIV>
+<DIV class="side"><P><A href="eintrag.php?id=175" title="Wed,  6 Jul 2005 22:53:43 +0200">GTD-Wikis</A> </P><P><A href="eintrag.php?id=174" title="Mon,  4 Jul 2005 21:34:28 +0200">Die Frau des LeuchtturmwÃ¤rters</A> </P><P><A href="eintrag.php?id=173" title="Sun,  3 Jul 2005 21:40:58 +0200">Follow Your Passion</A> </P><P><A href="eintrag.php?id=172" title="Sun,  3 Jul 2005 00:33:03 +0200">Fliegen bei KPMG</A> </P><P><A href="eintrag.php?id=171" title="Fri,  1 Jul 2005 20:05:29 +0200">Zazie</A> </P></DIV>
+
+                
+                
+                                
+                
+                
+                        <DIV class="sidetitle">Letzte Kommentare</DIV>
+<DIV class="side"> <P>Tja, die Bedeutung des Bloomsday scheint etwas abzunehmen (nach dem JubilÃ¤um zwangslÃ¤ufig). Dadurch... [<A href="eintrag.php?id=148#k122462" title="Mon, 27 Jun 2005 15:55:35 +0200">Samstag</A>]</P><P>Interessant. Wirklich wahr. Man sollte alle JahrestagszÃ¤hlweisen auf den PrÃ¼fstand stellen. Aber... [<A href="eintrag.php?id=148#k122430" title="Mon, 27 Jun 2005 14:58:48 +0200">Dirk JÃ¼rgensen</A>]</P><P>why did you turn to the dark side [<A href="eintrag.php?id=142#k115447" title="Mon, 13 Jun 2005 19:14:37 +0200">cheree</A>]</P><P>Danke, leider find ich's nicht bei denen im Wiki.
+... [<A href="eintrag.php?id=125#k110722" title="Thu,  2 Jun 2005 15:04:07 +0200">Samstag</A>]</P></DIV>
+
+                
+                
+                
+                                
+                    <DIV class="sidetitle">Kalender</DIV>
+<DIV class="side"><TABLE border="0" cellspacing="0" cellpadding="10"><TBODY><TR><TD><TABLE class="cal" border="0" cellspacing="4" cellpadding="1">
+<TBODY><TR><TD class="caltd" colspan="7" align="center">
+<B>Juli 2005</B>
+</TD></TR><TR><TD class="caltd"><B>Mo</B></TD><TD class="caltd"><B>Di</B></TD><TD class="caltd"><B>Mi</B></TD><TD class="caltd"><B>Do</B></TD><TD class="caltd"><B>Fr</B></TD><TD class="caltd"><B>Sa</B></TD><TD class="caltd"><B>So</B></TD></TR><TR><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="calrest" align="center"><A class="callink" href="index.php?tag=01&monat=7&jahr=2005" title="Zeige EintrÃ¤ge vom 01">01</A></TD><TD class="calrest" align="center">02</TD><TD class="calrest" align="center"><A class="callink" href="index.php?tag=03&monat=7&jahr=2005" title="Zeige EintrÃ¤ge vom 03">03</A></TD></TR><TR><TD class="calrest" align="center">
+<A class="callink" href="index.php?tag=04&monat=7&jahr=2005" title="Zeige EintrÃ¤ge vom 04">04</A></TD><TD class="calrest" align="center">05</TD><TD class="caltoday" align="center"><A class="callink" href="index.php?tag=06&monat=7&jahr=2005" title="Zeige EintrÃ¤ge vom 06"><B>06</B></A></TD><TD class="calrest" align="center">07</TD><TD class="calrest" align="center">08</TD><TD class="calrest" align="center">09</TD><TD class="calrest" align="center">10</TD></TR><TR><TD class="calrest" align="center">11</TD><TD class="calrest" align="center">12</TD><TD class="calrest" align="center">13</TD><TD class="calrest" align="center">14</TD><TD class="calrest" align="center">15</TD><TD class="calrest" align="center">16</TD><TD class="calrest" align="center">17</TD></TR><TR><TD class="calrest" align="center">18</TD><TD class="calrest" align="center">19</TD><TD class="calrest" align="center">20</TD><TD class="calrest" align="center">21</TD><TD class="calrest" align="center">22</TD><TD class="calrest" align="center">23</TD><TD class="calrest" align="center">24</TD></TR><TR><TD class="calrest" align="center">25</TD><TD class="calrest" align="center">26</TD><TD class="calrest" align="center">27</TD><TD class="calrest" align="center">28</TD><TD class="calrest" align="center">29</TD><TD class="calrest" align="center">30</TD><TD class="calrest" align="center">31</TD></TR><TR><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD><TD class="caltd">Â </TD></TR><TR><TD colspan="7"><TABLE border="0" cellspacing="0" cellpadding="0" width="100%"><TBODY><TR><TD class="caltd" align="left"><A class="callink" href="index.php?monat=6&jahr=2005" title="Juni">Â« ZurÃ¼ck</A></TD><TD class="caltd" align="right"><A class="callink" href="index.php?monat=8&jahr=2005" title="August">Vor Â»</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+
+                
+                
+                
+                
+                
+                                
+                
+                    <DIV class="sidetitle">Kategorien</DIV>
+<DIV class="side"><A href="index.php?cat=Buch">Buch</A><BR><A href="index.php?cat=Film">Film</A><BR><A href="index.php?cat=Getting+Things+Done">Getting Things Done</A><BR><A href="index.php?cat=Notizen">Notizen</A><BR><A href="index.php?cat=Ton">Ton</A><BR><A href="index.php?cat=unterwegs">unterwegs</A><BR></DIV>
+
+                
+                
+                
+                
+                                
+                
+                
+                
+                
+                        <DIV class="sidetitle">Trackbacks</DIV>
+<DIV class="side"></DIV>
+
+                        <DIV class="sidetitle"></DIV>
+<DIV class="side"></DIV>
+
+<DIV style="margin-top:8px;text-align:center;"><A href="http://blogstats.de/index.php?url=http://uferlog.blogg.de/" title="Meine LinksphÃ¤re"><IMG src="http://blogstats.de/images/blogstats_mini_80x15.gif" width="80" height="15" style="border:none;"></A>
+</DIV>
+
+                </DIV>
+
+
+
+<DIV id="content"><H2 class="datum">Mittwoch, 06.07.2005</H2>
+<DIV class="article">    <H3 class="title">GTD-Wikis</H3>
+    <DIV class="fliesstext">        <DIV><BR>Das <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> ist mir schon vor langer Zeit begegnet. Ich wusste nur nicht, wie das funktioniert. Als vor einigen Monaten <A href="http://www.spreeblick.com/2005/05/14/die-nahe-zukunft-von-blogs/">Johnny</A> darauf aufmerksam machte, schaute ich's mir nochmals an und begriff (aber nur, weil es endlich erklÃ¤rt wurde).<BR>
+<BR>
+Das TiddlyWiki ist ein Wiki auf einer (und wirklich nur einer) .html-Seite, die man sich herunterladen und dann selbst gestalten kann â€“ funktioniert Plattform unabhÃ¤ngig, weil .html, jedoch nicht mit Safari, aber es gibt ja Firefox.<BR>
+<BR>
+Doch das TittlyWiki wurde schnell auch von der Getting Things Done Riege vereinnahmt. Auf <A href="http://www.43folders.com/2005/05/how_are_you_usi.html">43folders</A> gab es den Hinweis auf ein speziell fÃ¼r die BedÃ¼rfnisse von GTD-Nerds zugeschnittenes <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTDTiddlyWiki</A>.<BR>
+<BR>
+Wie ich Ã¼ber den <A href="http://maennerseiten.de/blog/index.php/2005/06/06/tiddlywiki-ein-wiki-winzling-bricht-alle-download-rekorde/">MÃ¤nnerblog</A> gestolpert bin, vor zwei Tagen, weiss ich schon nicht mehr, aber da gab es einen Hinweis auf neue Varianten des GTDTiddlyWiki, das <A href="http://informationality.com/gtdtagglywiki/gtd_tagglywiki.html">TagglyWiki</A> und das TiddlyWiki von <A href="http://homes.jcu.edu.au/~ccscb/">simon.baird</A>, das zur Zeit im GTDTiddlyWiki-Bereich <I>state of the art</I> sein soll.<BR>
+<BR>
+Da gibt's nur eins: Testenâ€”Testenâ€”Testen<BR>
+<BR>
+
+
+</DIV>
+                <DIV class="postinfo">                        <A href="mailto:dany@pobox.com" class="eintragsautor">Samstag</A> um <A href="eintrag.php?id=175">22:53</A> | <A class="kategorielink" href="index.php?cat=Getting%20Things%20Done">Getting Things Done</A>  | <A href="eintrag.php?id=175#trackback">TrackBack (0)</A> | <A href="eintrag.php?id=175#kommentare">Kommentieren</A> | <A href="eintrag.php?id=175#mailformular">Artikel versenden</A>
+                </DIV>
+
+    </DIV>
+</DIV>
+
+<H2 class="datum"><A name="kommentare"></A>Kommentare</H2>
+<DIV class="article">        <DIV class="fliesstext">                                <P>Es wurden bisher keine Kommentare abgegeben.</P>
+                        <DIV class="postinfo"><A href=""></A> | </DIV>
+                 </DIV>
+
+<H2 class="datum"><A name="kommentarformular"></A>Dein Kommentar</H2>
+<DIV class="article">    <DIV class="fliesstext">        <DIV class="article">            <FORM method="post" action="eintrag.php">                                <P><B>Name:</B><BR>
+                                <INPUT type="text" name="comment_name" value=""><BR>
+                                <B>E-Mail:</B><BR>
+                                <INPUT type="text" name="comment_email" value=""><BR>
+                                <B>Homepage:</B><BR>
+                                <INPUT type="text" name="comment_homepage" value=""><BR>
+                                <B>Kommentar:</B><BR>
+                                <TEXTAREA name="comment_text" cols="35" rows="7"></TEXTAREA><BR>
+                <INPUT type="hidden" name="id" value="175">
+                                <INPUT type="submit" name="kommentar_eintragen" value="Kommentar eintragen!"><BR>
+                                <B>Einstellungen merken:</B> <INPUT type="checkbox" name="remember" value="true"> <BR>
+                </P>
+                        </FORM>
+        </DIV>
+    </DIV>
+</DIV>
+
+<H2 class="datum"><A name="trackback"></A>Trackbacks</H2>
+<DIV class="article">                Trackback-URL dieses Artikels: <A href="http://uferlog.blogg.de/trackback.php?id=175">http://uferlog.blogg.de/trackback.php?id=175</A>
+        </DIV>
+        <DIV class="article">                        </DIV>
+
+
+<H2 class="datum"><A name="mailformular"></A>Eintrag verschicken</H2>
+<DIV class="article">    <DIV class="fliesstext">        <FORM method="post" action="mail2.php">                    <DIV><INPUT type="hidden" name="artikel_id" value="175">
+                        Sende diesen Artikel an<BR>
+                        <INPUT type="text" name="to"><BR>
+                        Mitteilung an den EmpfÃ¤nger<BR>
+                        <TEXTAREA name="text" rows="4" cols="30"></TEXTAREA><BR>
+                        Deine E-Mailadresse<BR>
+                        <INPUT type="text" name="from"><BR>
+                        <INPUT type="submit" name="email_senden" value="Email versenden">
+                        <BR>
+                        <BR>Â </DIV>
+                </FORM>
+
+    </DIV>
+</DIV></DIV>
+        <DIV id="footer"><A href="http://blogg.de/">blogg.de</A></DIV>
+</DIV><DIV class="footer_ad_text">Die auf diesen Webseiten sichtbaren Daten und Inhalte stammen von Privatpersonen. <A href="http://blogg.de">blogg.de</A> ist hierfÃ¼r nicht verantwortlich. Weitere Informationen hierzu finden sich <A href="http://blogg.de/agb/index.html" onclick="javascript:agb=window.open('http://blogg.de/agb/index.html','AGB','toolbar=no,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=400,height=600');return false;">hier</A>.</DIV>
+
+</DIV></BODY></HTML>_*http://uferlog.blogg.de/eintrag.php?id=175        1  >  E  W  f  | ¸ ¸I ¸d ¸k ¸v ¸¨ ¸¯ ½± ½Î ½× ½Ş È ÈE ÈL Ìc Ì Ì™ Ì  Ñ€ Ñ² Ñ» ÑÙ Ñß ßR ß“ ß ß¤ ñO ñ« ñ² ñà òÆ òÏ òÚ ü+ ü„ ü‹ ü¸ ıD ıKí#,2Fü             6             G)

@@ -1,0 +1,694 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO6#sideBar {
+  width: 270px;
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#contentArea {
+  margin-right: 285px;
+}
+
+body, p {
+    margin: 0;
+    font-family: Georgia, arial, sans-serif;
+    font-size: 10pt;
+}
+
+h3 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+    margin: 0;
+}
+
+h4 { margin-bottom: 0; }
+
+blockquote
+{
+	border-left: none;
+	border-right: dashed thin;
+	border-bottom: dashed thin;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+pre {
+    border: solid thin black;
+    color: black;
+    background-color: silver;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+    padding: 1em;
+    overflow: auto;
+    width: auto;
+}
+
+.code, code
+{
+    font-size: 8pt;
+    font-family: Courier;
+    color: black;
+}
+
+dt
+{
+    font-weight: bold;
+}
+
+a, a:link,  
+div#category a, div#category a:link { 
+    color: #0000AA; 
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a:visited, div#category a:visited {
+    color: purple;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+a:active, a:hover, 
+a.oneLiner:active, a.oneLiner:hover,
+div#category a:active, div#category a:hover
+{ 
+    color: red;
+    text-decoration: none;
+}
+
+/* a:hover, div#category a:hover { text-decoration: underline; } */
+
+div#category a {
+    font-family: verdana, arial, sans-serif;
+	font-size: 8pt;
+    font-weight: normal;
+}
+
+#banner { 		
+    background-color: #003366;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+    color: white;
+}
+
+h1 {
+    font-family: georgia, verdana, arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+#blogDescription {
+    font-size: x-small;
+    font-weight: bold;
+    text-transform: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+#blogTitleQuote {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: x-small; 
+    font-style: italic;
+}
+
+#entryDateStamp {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: large;
+    font-family: verdana, arial, sans-serif;
+}
+
+.date {
+	text-align: right;
+	color: black;
+	font-family: verdana, arial, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+.entry {
+    margin-bottom: 1em;
+    margin-left: 25px;
+    margin-right: 0;
+	padding-bottom: 1em;
+	border-bottom: black solid thin; 
+}
+
+div.entry p { padding: 1em; }
+
+.extended { text-align: right; margin-bottom: 1em;}
+.posted {
+	font-size: 8pt;
+}
+
+.sidetitle {
+    font-family: verdana, arial, sans-serif;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    background: #003366;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: solid black thin;
+}
+
+.side {
+    border: solid black thin;
+    padding: 1em;
+    display: none;
+}
+
+.calendar {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#navigation {
+    border: solid black thin;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+#category {
+    border: solid black thin;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 3em;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+a.oneLiner
+{
+    color: #003366;
+    font-weight: bold;
+}
+
+a.oneLiner:visited
+{
+    color: purple;
+    font-weight: normal;
+}
+
+li.oneLinerItem p
+{
+    display: inline;
+    font-family: verdana, arial, sans-serif;
+    font-size: 8pt;
+}
+
+#oneLiners {
+    border: solid black thin;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#oneLiners ul {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#oneLiners ul li {
+    padding-top: 3px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    list-style-type: none;
+    font-family: verdana, arial, sans-serif;
+    font-size: 8pt;
+}
+
+#oneLiners ul li blockquote {
+        border-left: solid thin #003366;
+	border-right: solid thin #003366;
+	border-bottom: none;
+	border-top: none;
+	padding-right: 6px;
+	padding-left: 5px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 0px;
+        margin-right: 16px;
+        font-family: verdana, arial, sans-serif;
+        font-size: 8pt;
+}
+
+#deliciousLinks {
+    border: solid thin black;
+    margin-bottom: 2em;
+}
+
+#deliciousLinks ul li {
+    list-style-type: none;
+    font-family: verdana, arial, sans-serif;
+    font-size: 8pt;
+}
+
+dt {
+    padding-top: 10px;
+}
+
+div.sidetitle a { color: white; font-weight: bold; }
+div.sidetitle a:hover { color: red; cursor: pointer;}
+
+
+.trackbackSection {
+    margin-right: 26em;
+    margin-left: 20px;
+    padding-left: 1em;
+    margin-bottom: 10px;
+    border: 1px black solid;
+}
+
+.trackbackItem {
+    border: 1px blue solid;
+    padding: 10px;
+    margin: 30px;
+}
+
+.commentsSection {
+    margin-right: 26em;
+    margin-left: 20px;
+    padding-left: 1em;
+    border: 1px black solid;
+    margin-bottom: 30px;
+}
+
+.comment {
+    border: 1px blue solid;
+    padding: 10px;
+    margin: 30px;
+}
+
+.commentsPosted {
+    font-size: x-small;
+}
+
+div.commentsSection p { padding: 1em; }
+
+.commentsForm {
+    margin-right: 26em;
+    margin-left: 20px;
+    padding-left: 1em;
+    border: 1px black solid;
+    margin-bottom: 30px;
+}
+
+.blogrollfolder { display: none; }
+
+a img, a:link img {
+	text-decoration: none;
+        color: white;
+	background-color: white;
+        /* margin: 15px 0px 15px 0px; */
+}
+
+a:hover img {
+	text-decoration: none;
+        color: white;
+	background-color: white;
+}
+
+a:visited img {
+	text-decoration: none;
+        color: white;
+	background-color: white;
+}_ http://alpha-geek.com/styles.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O[Ž<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META name="ICBM" content="41.48265,-81.79714"><META name="DC.title" content="Dichotomy's Purgatory"><TITLE>Playing with Interesting Interpretations of the Wiki Philosophy (Alpha-Geek.com)</TITLE>
+
+<LINK rel="stylesheet" href="http://alpha-geek.com/styles.css" type="text/css" title="default">
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'alpha-geek.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+function reverseShowAndHide(idHTML)
+{
+	document.getElementById(idHTML).style.display == 'none' ?
+		document.getElementById(idHTML).style.display = 'block' :
+		document.getElementById(idHTML).style.display = 'none';
+}
+
+//-->
+</SCRIPT>
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><A title="Playing with Interesting Interpretations of the Wiki Philosophy (Alpha-Geek.com), Jeremy Smith" href=""><H1 id="blogtitle">Playing with Interesting Interpretations of the Wiki Philosophy</H1></A>
+
+<SPAN id="entryDateStamp">2005-05-25  2:47PM</SPAN>
+<SPAN id="blogDescription">More things I need to play with:TiddlyWikiGTDTagglyWikiTiddlyTagWiki What can I say, I am a sucker for animated...</SPAN>
+
+</DIV>
+
+<DIV id="sideBar">
+<DIV class="sidetitle">Navigation
+</DIV>
+<DIV id="navigation"><A title="Seaside" href="http://alpha-geek.com/2005/05/25/seaside">Â«Prev Entry</A> |
+ <A href="http://alpha-geek.com/">Main</A> 
+</DIV>
+
+<DIV class="sidetitle">One-liners
+</DIV>
+
+<DIV id="oneLiners">
+<UL><LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Seaside" class="oneLiner" href="http://alpha-geek.com/2005/05/25/seaside">#</A>]Â <P><A title="Seaside: Seaside" href="http://www.seaside.st/">Seaside</A></P><BLOCKQUOTE> Seaside is a framework for developing sophisticated web applications in Smalltalk</BLOCKQUOTE><P></P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Tater Tot Casserole" class="oneLiner" href="http://alpha-geek.com/2005/05/25/sounds_so_bad_tastes_so_good">#</A>]Â <P><STRONG>Holy shit!</STRONG> <A title="How to cook tator tot hotdish (kottke.org)" href="http://www.kottke.org/03/11/tator-tot-hotdish">This</A> is <EM>Tater Tot Casserole</EM>.  I was under the impression that I was the only one who knew of these things (and my friend's family, the King's).  Well, it seems that it is a common dish as <A title="kottke.org :: home of fine hypertext products" href="http://www.kottke.org/">Kottke</A> claims that this is:</P><BLOCKQUOTE>a delicacy enjoyed by the inhabitants of the upper midwestern United States. For those of you who haven't spent a lot of time in the flyover states, hotdish is a dish typically baked in one pan and contains a meat, a starch, and a vegetable with optional cheese or onion crisps. It's what the rest of the US would call a casserole. Hotdish is the food of my people.</BLOCKQUOTE><P></P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Hyper Operators in Pugs" class="oneLiner" href="http://alpha-geek.com/2005/05/23/hyper_operators_in_pugs">#</A>]Â <P><A title="Pugs - pugscode" href="http://www.pugscode.org/">Pugs</A> now has <A title="Journal of autrijus :: Day 111: Hyper operators and named blocks." href="http://use.perl.org/~autrijus/journal/24822?from=rss">hyper operators</A>.  I <EM>really</EM> need to get playing with that.</P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Tracing the Music Baton Meme" class="oneLiner" href="http://alpha-geek.com/2005/05/23/tracing_the_music_baton_meme">#</A>]Â <P>The Musical Baton Meme seems to have <A title="Google Search: musical baton" href="http://www.google.com/search?q=musical baton&btnG=Search">gotten out of hand</A>.  Several people have been trying to track down the start of it all.  The chain always ends at this person, <A title="The Stargazer's Star Charts" href="http://www.livejournal.com/users/skywise/">Stargazer</A>, who broke the chain by not linking back to the person who passed the baton to them.  The world may never know where it all started.</P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: LDAP Auth in Ruby" class="oneLiner" href="http://alpha-geek.com/2005/05/23/ldap_auth_in_ruby">#</A>]Â <P><A title="LDAP authentication in Rails" href="http://www.pearware.org/articles/2005/05/23/ldap-authentication-in-rails">LDAP authentication in Rails</A></P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Net::Backpack" class="oneLiner" href="http://alpha-geek.com/2005/05/18/netbackpack">#</A>]Â <P><STRONG>May 17<SUP><U>th</U></SUP></STRONG>: <A title="Backpack: Backpack becomes a web service" href="http://backpackit.com/weblog/archives/announcements/backpack_becomes_a_web_service.php">Backpack becomes a web service</A><BR>
+<STRONG>May 18<SUP><U>th</U></SUP></STRONG>: <A title="Net-Backpack" href="http://dave.org.uk/code/Net-Backpack/">Net::Backup</A> Perl module released.<BR>
+(via <A title="Journal of davorg (18)" href="http://use.perl.org/~davorg/journal/24760?from=rss">davorg</A>)</P></LI>
+<LI class="oneLinerItem">[<A title="[Permalink] Alpha-Geek.com: Building a Spec Miata Pics" class="oneLiner" href="http://alpha-geek.com/2005/05/18/building_spec_miata">#</A>]Â <P><A title="Miata's Everywhere!" href="http://solo2.org/blogs/Speed%20Raycer/archive/2005/05/17/1857.aspx">Miata's Everywhere!</A><BR>
+Pictures of building a Spec Miata.  Mmmm... spec Miata.</P></LI>
+
+</UL>
+<DIV><A href="http://alpha-geek.com/oneliner">More One-liners</A> (<A href="http://alpha-geek.com/oneliner/rss20.xml">RSS</A>)
+</DIV>
+
+</DIV>
+
+<DIV class="sidetitle"><A title="del.icio.us social bookmark manager: links for jms18" href="http://del.icio.us/jms18">del.icio.us/jms18</A>
+</DIV>
+<DIV id="deliciousLinks">
+ 
+<UL>     
+      <LI>Â» <A href="http://mygmaps.com/mygmaps.cgi/">Home : myGmaps</A> 
+          
+      </LI> 
+     
+      <LI>Â» <A href="http://stuff.rancidbacon.com/google-maps-embed-how-to/">Unofficial Google Maps Embedding How To</A> 
+          
+      </LI> 
+     
+      <LI>Â» <A href="http://www.bu.edu/dbin/law/chess/index.php">A Field Guide to Chess Tactics: Ward Farnsworth's Predator at the Chessboard</A> 
+          
+      </LI> 
+     
+      <LI>Â» <A href="http://www.blogmaverick.com/entry/1234000270043583/">Yahoo forces RIAA staff cutbacksâ€¦ - Blog Maverick - www.blogmaverick.com _</A> 
+          
+      </LI> 
+     
+      <LI>Â» <A href="http://www.ahding.com/cheapgas/">Cheap Gas</A> 
+          
+      </LI> 
+    
+</UL>
+
+
+</DIV>
+
+<DIV class="sidetitle" id="aboutTitle"><A title="About the Author and This Site" onclick="reverseShowAndHide('about');">About</A>
+</DIV>
+
+<DIV id="about" class="side"><A title="About Jeremy Smith" href="http://www.alpha-geek.com/about_jeremy_smith">About Jeremy Smith</A><BR>
+<A title="Resume of Jeremy Smith" href="http://www.alpha-geek.com/resume">Jeremy Smith's Resume</A><BR>
+</DIV>
+
+<DIV class="sidetitle" id="calendarTitle"><A title="Show/Hide Blog Calendar" onclick="reverseShowAndHide('calendarDisplay');">Calendar</A>
+</DIV>
+
+<DIV align="center" class="side" id="calendarDisplay">
+<TABLE cellspacing="4" cellpadding="0" summary="Monthly calendar with links to each day's posts" style="border: solid black 2px"><CAPTION class="calendarhead">May 2005</CAPTION>
+
+<TBODY><TR><TH abbr="Sunday" align="center"><SPAN class="calendar">Sun</SPAN></TH><TH abbr="Monday" align="center"><SPAN class="calendar">Mon</SPAN></TH><TH abbr="Tuesday" align="center"><SPAN class="calendar">Tue</SPAN></TH><TH abbr="Wednesday" align="center"><SPAN class="calendar">Wed</SPAN></TH><TH abbr="Thursday" align="center"><SPAN class="calendar">Thu</SPAN></TH><TH abbr="Friday" align="center"><SPAN class="calendar">Fri</SPAN></TH><TH abbr="Saturday" align="center"><SPAN class="calendar">Sat</SPAN></TH></TR><TR><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/01/top_sports_cars">1</A></SPAN></TD><TD align="center"><SPAN class="calendar">2</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/03/mazdas_april_sales_figures">3</A></SPAN></TD><TD align="center"><SPAN class="calendar">4</SPAN></TD><TD align="center"><SPAN class="calendar">5</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/06/misuses_of_get">6</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/07/php_lib_parse_html">7</A></SPAN></TD></TR><TR><TD align="center"><SPAN class="calendar">8</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/09/deus_ex_machina">9</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/10/read_write_web">10</A></SPAN></TD><TD align="center"><SPAN class="calendar">11</SPAN></TD><TD align="center"><SPAN class="calendar">12</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/13/bloglines_killer">13</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/14/first_autocross_2005">14</A></SPAN></TD></TR><TR><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/15/first_autocross_2005">15</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/16/the_ariel_atom">16</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/17/yadis">17</A></SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/18/netbackpack">18</A></SPAN></TD><TD align="center"><SPAN class="calendar">19</SPAN></TD><TD align="center"><SPAN class="calendar">20</SPAN></TD><TD align="center"><SPAN class="calendar">21</SPAN></TD></TR><TR><TD align="center"><SPAN class="calendar">22</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/23/hyper_operators_in_pugs">23</A></SPAN></TD><TD align="center"><SPAN class="calendar">24</SPAN></TD><TD align="center"><SPAN class="calendar"><A href="http://alpha-geek.com/2005/05/25/seaside">25</A></SPAN></TD><TD align="center"><SPAN class="calendar">26</SPAN></TD><TD align="center"><SPAN class="calendar">27</SPAN></TD><TD align="center"><SPAN class="calendar">28</SPAN></TD></TR><TR><TD align="center"><SPAN class="calendar">29</SPAN></TD><TD align="center"><SPAN class="calendar">30</SPAN></TD><TD align="center"><SPAN class="calendar">31</SPAN></TD><TD align="center"><SPAN class="calendar">Â </SPAN></TD><TD align="center"><SPAN class="calendar">Â </SPAN></TD><TD align="center"><SPAN class="calendar">Â </SPAN></TD><TD align="center"><SPAN class="calendar">Â </SPAN></TD></TR></TBODY></TABLE>
+
+</DIV>
+
+<DIV class="sidetitle" id="archiveTitle"><A title="Show/Hide Archive List" onclick="reverseShowAndHide('archiveList');">Archives</A>
+</DIV>
+
+<DIV id="archiveList" class="side"><A href="http://alpha-geek.com/2005/05/index">May 2005</A><BR>
+<A href="http://alpha-geek.com/2005/04/index">April 2005</A><BR>
+<A href="http://alpha-geek.com/2005/03/index">March 2005</A><BR>
+<A href="http://alpha-geek.com/2005/02/index">February 2005</A><BR>
+<A href="http://alpha-geek.com/2005/01/index">January 2005</A><BR>
+<A href="http://alpha-geek.com/2004/12/index">December 2004</A><BR>
+<A href="http://alpha-geek.com/2004/11/index">November 2004</A><BR>
+<A href="http://alpha-geek.com/2004/10/index">October 2004</A><BR>
+<A href="http://alpha-geek.com/2004/09/index">September 2004</A><BR>
+<A href="http://alpha-geek.com/2004/08/index">August 2004</A><BR>
+<A href="http://alpha-geek.com/2004/07/index">July 2004</A><BR>
+<A href="http://alpha-geek.com/2004/06/index">June 2004</A><BR>
+<A href="http://alpha-geek.com/2004/05/index">May 2004</A><BR>
+<A href="http://alpha-geek.com/2004/04/index">April 2004</A><BR>
+<A href="http://alpha-geek.com/2004/03/index">March 2004</A><BR>
+<A href="http://alpha-geek.com/2004/02/index">February 2004</A><BR>
+<A href="http://alpha-geek.com/2004/01/index">January 2004</A><BR>
+<A href="http://alpha-geek.com/2003/12/index">December 2003</A><BR>
+<A href="http://alpha-geek.com/2003/11/index">November 2003</A><BR>
+<A href="http://alpha-geek.com/2003/10/index">October 2003</A><BR>
+<A href="http://alpha-geek.com/2003/09/index">September 2003</A><BR>
+<A href="http://alpha-geek.com/2003/08/index">August 2003</A><BR>
+<A href="http://alpha-geek.com/2003/07/index">July 2003</A><BR>
+<A href="http://alpha-geek.com/2003/06/index">June 2003</A><BR>
+<A href="http://alpha-geek.com/2003/05/index">May 2003</A><BR>
+<A href="http://alpha-geek.com/2003/04/index">April 2003</A><BR>
+<A href="http://alpha-geek.com/2003/03/index">March 2003</A><BR>
+<A href="http://alpha-geek.com/2003/02/index">February 2003</A><BR>
+
+</DIV>
+
+<DIV id="categoryTitle" class="sidetitle"><A title="Show/Hide Category List" onclick="reverseShowAndHide('categoryList');">Categories</A>
+</DIV>
+
+<DIV class="side" id="categoryList"><A href="http://alpha-geek.com/cars_and_driving/index">cars and driving</A> <SPAN class="feed">(<A href="http://alpha-geek.com/cars_and_driving/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/distributing_knowledge/index">distributing knowledge</A> <SPAN class="feed">(<A href="http://alpha-geek.com/distributing_knowledge/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/drunk/index">drunk</A> <SPAN class="feed">(<A href="http://alpha-geek.com/drunk/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/identity/index">identity</A> <SPAN class="feed">(<A href="http://alpha-geek.com/identity/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/ldap/index">ldap</A> <SPAN class="feed">(<A href="http://alpha-geek.com/ldap/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/left/index">left</A> <SPAN class="feed">(<A href="http://alpha-geek.com/left/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/literature/index">literature</A> <SPAN class="feed">(<A href="http://alpha-geek.com/literature/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/mostactiveentries/index">MostActiveEntries</A> <SPAN class="feed">(<A href="http://alpha-geek.com/mostactiveentries/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/movable_type_plugins/index">Movable Type Plugins</A> <SPAN class="feed">(<A href="http://alpha-geek.com/movable_type_plugins/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/ocd/index">ocd</A> <SPAN class="feed">(<A href="http://alpha-geek.com/ocd/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/oneliner/index">one-liner</A> <SPAN class="feed">(<A href="http://alpha-geek.com/oneliner/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/perl/index">perl</A> <SPAN class="feed">(<A href="http://alpha-geek.com/perl/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/philosophy/index">philosophy</A> <SPAN class="feed">(<A href="http://alpha-geek.com/philosophy/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/poker/index">poker</A> <SPAN class="feed">(<A href="http://alpha-geek.com/poker/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/programming/index">programming</A> <SPAN class="feed">(<A href="http://alpha-geek.com/programming/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+<A href="http://alpha-geek.com/right/index">right</A> <SPAN class="feed">(<A href="http://alpha-geek.com/right/rss20.xml">RSS 2.0</A>)</SPAN><BR>
+
+</DIV>
+
+<DIV id="recentCommentList" class="sidetitle"><A title="Show/Hide Recent Comments" onclick="reverseShowAndHide('recentComments');">Recent Comments</A>
+</DIV>
+
+<DIV class="side" id="recentComments">
+<B>Who:</B> <A target="_blank" title="http://blog.unitedheroes.net" href="http://mt.hiveserver.com/cmmnts.pl?__mode=red;id=15803">jr</A> <BR>
+<B>When:</B> 05/25 12:36PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/05/25/seaside">Seaside</A>
+ <BR><BR>
+<B>Who:</B> <A target="_blank" title="http://christopherprall.com" href="http://mt.hiveserver.com/cmmnts.pl?__mode=red;id=15801">cwp</A> <BR>
+<B>When:</B> 05/25 08:18AM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/05/25/sounds_so_bad_tastes_so_good">Tater Tot Casserole</A>
+ <BR><BR>
+<B>Who:</B> gryhrt <BR>
+<B>When:</B> 05/25 04:23AM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/05/25/sounds_so_bad_tastes_so_good">Tater Tot Casserole</A>
+ <BR><BR>
+<B>Who:</B> <A target="_blank" title="http://none" href="http://mt.hiveserver.com/cmmnts.pl?__mode=red;id=15799">Steve</A> <BR>
+<B>When:</B> 05/25 01:46AM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/05/25/sounds_so_bad_tastes_so_good">Tater Tot Casserole</A>
+ <BR><BR>
+<B>Who:</B> kyle <BR>
+<B>When:</B> 05/25 01:46AM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2004/05/08/file_sharing_between_winxp_pro_and_win98">File Sharing Between WinXP Pro and Win98</A>
+ <BR><BR>
+<B>Who:</B> <A target="_blank" title="http://sadad" href="http://mt.hiveserver.com/cmmnts.pl?__mode=red;id=15797">sd</A> <BR>
+<B>When:</B> 05/25 01:38AM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2003/06/02/automatic_generation_of_form_validation_javascript">Automatic Generation of Form Validation Javascript</A>
+ <BR><BR>
+<B>Who:</B> <A href="mailto:jehagemann@aol.com">J Hagemann</A> <BR>
+<B>When:</B> 05/24 03:00PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/03/30/1969_ford_mustang_mach_1">1969 Ford Mustang Mach 1</A>
+ <BR><BR>
+<B>Who:</B>  <BR>
+<B>When:</B> 05/23 01:43PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/03/30/1969_ford_mustang_mach_1">1969 Ford Mustang Mach 1</A>
+ <BR><BR>
+<B>Who:</B>  <BR>
+<B>When:</B> 05/23 01:43PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/03/30/1969_ford_mustang_mach_1">1969 Ford Mustang Mach 1</A>
+ <BR><BR>
+<B>Who:</B>  <BR>
+<B>When:</B> 05/23 01:42PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/03/30/1969_ford_mustang_mach_1">1969 Ford Mustang Mach 1</A>
+ <BR><BR>
+<B>Who:</B>  <BR>
+<B>When:</B> 05/23 01:42PM <BR>
+<B>Where:</B> <A href="http://alpha-geek.com/2005/03/30/1969_ford_mustang_mach_1">1969 Ford Mustang Mach 1</A>
+ <BR><BR>
+
+
+</DIV>
+
+<DIV class="sidetitle" id="search"><A title="Show/Hide Search Form" onclick="reverseShowAndHide('searchForm');">Search</A>
+</DIV>
+ 
+<DIV class="side" id="searchForm"><FORM method="get" action="http://mt.hiveserver.com/mt-search.cgi">
+<INPUT type="hidden" name="IncludeBlogs" value="7">
+<LABEL for="search" accesskey="4">Search this site:</LABEL><BR>
+<INPUT id="search" name="search" size="20"><BR>
+<INPUT type="submit" value="Search">
+</FORM>
+</DIV>
+
+<DIV class="sidetitle" id="blogroll"><A href="http://alpha-geek.com/blogroll" title="Jeremy's Blogroll">BlogRoll</A>
+</DIV>
+
+<DIV class="sidetitle" id="blogFeedDefault"><A href="http://apha-geek.com/rss20.xml" title="Dichotomy's Purgatory RSS 2.0 Feed">RSS 2.0</A>
+</DIV>
+
+<DIV class="sidetitle" id="blogSoftwareTag"><A href="http://www.movabletype.org" title="Movable Type: Homepage">Movable Type</A>
+</DIV>
+</DIV> 
+
+
+
+<DIV id="contentArea">
+<DIV class="entry">
+
+<P>More things I need to play with:</P><UL><LI><A title="TiddlyWiki - a reusable non-linear personal web notebook" href="http://tiddlywiki.com/">TiddlyWiki</A></LI><LI><A title="GTDTagglyWiki - all your tagged tasks are belong to you" href="http://informationality.com/gtdtagglywiki/gtd_tagglywiki.html">GTDTagglyWiki</A></LI><LI><A title="TiddlyTagWiki - Micro-content with the power of tags ..." href="http://www.digitaldimsum.co.uk/">TiddlyTagWiki</A></LI></UL><P></P>
+
+<P>What can I say, I am a sucker for animated little post-it thingies.  Plus, I'll finally have a use for that damn USB drive.</P>
+
+<A name="more"></A>
+
+
+</DIV> </DIV> 
+
+
+
+
+
+<DIV class="trackbackSection"><H4>Trackbacks</H4>
+Trackback URL for this entry is: <B>http://alpha-geek.com/mt-tb.cgi/1699</B>
+
+
+
+</DIV> 
+
+
+<DIV class="commentsSection"><H4>Comments</H4>
+
+
+
+</DIV> 
+<DIV class="commentsForm"><TABLE>
+<TBODY><TR><TD><H4>Post a comment</H4>
+
+
+<FORM method="post" action="http://mt.hiveserver.com/cmmnts.pl" name="comments_form" onsubmit="if (this.bakecookie.checked) rememberMe(this)"><INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="3702">
+
+
+<LABEL for="author">Name:</LABEL><BR>
+<INPUT id="author" name="author"><BR><BR>
+
+<LABEL for="email">Email Address:</LABEL><BR>
+<INPUT id="email" name="email"><BR><BR>
+
+<LABEL for="url">URL:</LABEL><BR>
+<INPUT id="url" name="url"><BR><BR>
+</FORM></TD><TD valign="top" style="padding-left: 25px;padding-right: 10px;"><H4>Comment Policy</H4><P>I will delete comments that I want to delete.  Deal with it.  Most HTML is allowed â€” &lt;b&gt; &lt;i&gt; &lt;a href="..."&gt; &lt;blockquote&gt; etc.  Use the Preview button to see if your HTML went through.</P><BR><BR><P></P></TD></TR></TBODY></TABLE>
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="checkbox" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Remember info?</LABEL><BR><BR>
+
+<INPUT type="submit" name="preview" value="Â PREVIEWÂ ">
+<INPUT type="submit" name="post" value="Â POSTÂ "><BR><BR>
+
+<INPUT type="button" onclick="forgetMe(this.form)" value="FORGET PERSONAL INFORMATION">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+//-->
+</SCRIPT>
+</DIV> 
+
+
+
+</BODY></HTML>_.http://alpha-geek.com/2005/05/25/wiki_take_twoYtext/html    1 3 : L [ q«Î×àþr–rÇ                           rÑ

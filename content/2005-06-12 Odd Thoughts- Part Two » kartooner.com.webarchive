@@ -1,0 +1,933 @@
+bplist00Ò_WebSubresources_WebMainResource¤Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO!0/*  
+Theme Name: kartooner.com two
+Theme URI: http://www.kartooner.com
+Description: Oodles and oodles of CSS gooeyness.
+Version: 2.0
+Author: Erik Sagen
+Author URI: http://www.kartooner.com
+
+Licensed under the Creative Commons License
+(http://creativecommons.org/licenses/by/2.0/)
+
+*/
+
+
+/* Preliminary Styling
+----------------------------------------------- */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+margin: 0;
+padding: 0;
+height: 100%;
+font: normal 13px "Lucida Sans", Verdana, sans-serif;
+line-height: 1.3em;
+color: #333;
+background-color: #fff;
+text-align: center;
+}
+
+a, a:link {
+color: #333;
+}
+
+a:active {
+color: #999;
+}
+
+a:hover {
+color: #E95226;
+}
+
+h1, h2, h3 {
+margin: .5em 0;
+}
+
+blockquote {
+background: url(http://www.kartooner.com/blog/images/quotebullet.gif) no-repeat;
+color: #666;
+padding-left: 32px;
+margin: .5em 0;
+}
+
+h1 a, h3 a {
+text-decoration: none;
+}
+
+h3.post-title {
+display: inline;
+font: bold 22px Arial;
+letter-spacing: -1px;
+}
+
+p {
+margin: .7em 0;
+}
+
+ol, ul {
+margin: 1em 2em;
+}
+
+ol li, ul li {
+margin: .2em 0;
+}
+
+.extlink {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/extlink.png) no-repeat 0 0.4em;
+padding-left: 8px;
+}
+
+/* Header
+----------------------------------------------- */
+
+#infobar {
+margin: 0;
+padding: .3em;
+background: #DEDECD;
+border-bottom: 1px solid #F8F8EA;
+color: #666;
+height: 20px;
+}
+
+#infobar p {
+margin: 0;
+padding: 0;
+font-size: 13px;
+}
+
+#infobar #searchform {
+margin: 0;
+padding: 0;
+position: absolute;
+top: .5%;
+right: 1%;
+}
+
+#branding {
+height: 140px;
+margin-bottom: 1em;
+background: #EEEEDD url(http://www.kartooner.com/wp-content/themes/kartooner/images/kartoonerdotcom-head.png) no-repeat 50%;
+border-bottom: 2px solid #D6D6C5;
+}
+
+#branding h1 {
+margin: 0;
+}
+
+#branding h1 a {
+display: none;
+}
+
+/* Layout
+----------------------------------------------- */
+
+#container {
+margin: 20px;
+width: 800px;
+height: 100%;
+margin: 0 auto;
+text-align: left;
+}
+
+#main-content {
+width:400px;
+max-width: 400px;
+margin-right: 15px;
+margin-bottom: 30px;
+display:inline;
+float:right;
+}
+
+#main-content textarea {
+font: 1em Arial, Verdana, sans-serif;
+color: #333;
+width: 100%;
+padding: .2em;
+}
+
+#main-content input {
+padding: .2em;
+}
+
+.next-page {
+border-top: 1px solid #eee;
+border-bottom: 1px solid #eee;
+margin: .8em 0;
+padding: .1em;
+font-size: .9em;
+}
+
+#footer {
+clear: both;
+font-size: 11px;
+border-top: 1px solid #eee;
+}
+
+/* Date and Comments
+----------------------------------------------- */
+
+.date {
+margin-right: .9em;
+font: normal .9em "Lucida Sans Unicode";
+display: block;
+float: left;
+color: #666;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background: #f7f7f7;
+padding: .2em .3em .2em .2em;
+text-align: right;
+}
+
+#addcomment {
+display: block;
+width: 95%;
+color: #fff;
+text-decoration: none;
+border-bottom: 3px solid #ddd;
+}
+
+a#addcomment {
+padding-left: 18px;
+background: #87AAD9 url(http://www.kartooner.com/blog/images/arrow_down.gif) 0 0.2em no-repeat;
+}
+
+#addcomment:hover {
+background: #9AB8DF url(http://www.kartooner.com/blog/images/arrow_down.gif) 0 0.2em no-repeat;
+}
+
+ol#commentlist {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+ol#commentlist li {
+margin: 1em 0;
+list-style: none;
+}
+
+.comment-text {
+margin-right: 0px;
+margin-left: 80px;
+}
+
+div.comment p {
+margin: .5em 0;
+}
+
+.comment-text p {
+margin: 0;
+}
+
+.comment-text p span.author a {
+font-weight: bold;
+text-decoration: none;
+
+}
+
+.comment-author-gravatar {
+float: left;
+width: 80px;
+}
+
+#commentlist .comment-text { 
+margin-bottom: 25px; 
+}
+
+.comment-area {
+background: transparent;
+}
+
+p.commentmetadata {
+font-size: 10px;
+margin-bottom: 5px;
+background: #f7f7f7 url(http://www.kartooner.com/blog/images/comment.gif) .1em no-repeat;
+padding-left: 20px;
+}
+
+.commentmetadata a {
+color: #777;
+text-decoration: none;
+}
+
+.commentmetadata a:hover {
+color: #555;
+}
+
+.align-right {
+float: right;
+}
+
+/* Posts
+----------------------------------------------- */
+
+.post-content {
+margin: 1.5em 0;
+}
+
+.post-content p {
+font-size: 12px;
+}
+
+.entry h3 {
+font-size: 13px;
+}
+
+.post-teaser {
+margin: 5px 0;
+font-weight: bold;
+text-decoration: none;
+}
+
+.entry {
+margin-bottom: 15px;
+}
+
+#postinfo {
+margin-bottom: 15px;
+padding-top: 2px;
+}
+
+#postinfo p, #postinfo p a:link {
+color: #777;
+font-size: 11px;
+line-height: 1.3em;
+}
+
+#postinfo p a:hover {
+color: #222;
+}
+
+#postinfo img {
+float: left;
+margin-top: 2px;
+margin-right: 5px;
+}
+
+#main-content #featured-article {
+margin: 0;
+padding: 5px 0 0 0;
+}
+
+#main-content #featured-article #title-wrap {
+height: 35px;
+padding: 0px;
+}
+
+#main-content #featured-article .date {
+border: none;
+background: transparent;
+float: right;
+margin: 0;
+}
+
+#main-content #featured-article .post-content {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+#main-content h3#archives {
+background: #EAD695;
+border: 1px solid #C1A441;
+border-bottom: none;
+color: #706443;
+margin: 10px 0 0px 0;
+padding-left: 5px;
+font-size: 13px;
+}
+
+ol#archived {
+margin: 0;
+padding: 0;
+border: 1px solid #C1A441;
+list-style-type: none;
+}
+
+ol#archived li.archive-link {
+margin: 0;
+padding: 3px 0 0 4px;
+display: block;
+background: #EEDEAA;
+}
+
+ol#archived li.archive-link.alt {
+background: #F2E6BF;
+}
+
+ol#archived li.archive-link a {
+text-decoration: none;
+color: #60563A;
+padding-left: 2px;
+}
+
+ol#archived li.archive-link a:hover {
+color: #E95226;
+}
+
+#main-content .postspermonth {
+margin: 10px 0 10px 0;
+list-style: none;
+padding-left: 25px;
+}
+
+#main-content .postspermonth a {
+text-decoration: none;
+}
+
+/* Sidebar
+----------------------------------------------- */
+
+#sidebar {
+width: 160px;
+max-width: 160px;
+float: right;
+margin-right: 1em;
+margin-bottom: 30px;
+}
+
+#sidebar img {
+margin: 5px 0;
+}
+
+#sidebar h2 {
+font: bold 15px Arial;
+text-align: left;
+}
+
+#sidebar p {
+font-size: 10px;
+padding-left: 8px;
+width: 160px;
+max-width: 160px;
+line-height: 11px;
+}
+
+#sidebar ul {
+margin: 0;
+padding: 0;
+}
+
+#sidebar ul li {
+font-size: 11px;
+display: block;
+margin: 0;
+text-decoration: none;
+padding-left: .5em;
+text-align: left;
+}
+
+#sidebar ul li a {
+text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+background: #f7f7f7;
+}
+
+h2#navigate {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/red-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+h2#friends {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/purple-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+h2#links {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/blue-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+h2#meta {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/green-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+/* Right Column
+----------------------------------------------- */
+
+#right-col {
+width: 170px;
+max-width: 170px;
+float: right;
+margin-left: 1em;
+}
+
+#right-col h2 {
+color: #333;
+font: 15px Arial;
+font-weight: bold;
+}
+
+#right-col p {
+font-size: 11px;
+margin-left: 5px;
+line-height: 1.4em;
+}
+
+#right-col ul {
+margin: 0 1em 0 0;
+padding: 0;
+list-style: none;
+}
+
+#right-col ul li {
+font-size: 11px;
+padding-left: .5em;
+}
+
+#right-col ul li a {
+text-decoration: none;
+}
+
+h2#recentarticles {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/yellow-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+h2#categories {
+background: url(http://www.kartooner.com/wp-content/themes/kartooner/images/orange-bullet.png) no-repeat 0.4em;
+padding-left: .9em;
+}
+
+.left-image {
+float: left;
+background: #fff;
+margin: 0 .5em .5em 0;
+border: 1px solid #eee;
+padding: .3em;
+}
+
+ul.children a:link {
+color: #666;
+}
+
+ul.children a:hover {
+color: #E95226;
+}
+
+.right-image {
+float: right;
+background: #fff;
+margin: 0 0 .8em .5em;
+border: 1px solid #eee;
+padding: .3em;
+}
+
+/* Delicious
+----------------------------------------------- */
+
+ul#delicious {
+margin-bottom: 10px;
+}
+
+ul#delicious li {
+border-bottom: 1px solid #eee;
+}
+
+ul#delicious li a {
+display: block;
+}
+
+ul#delicious li a:hover {
+background: #f7f7f7;
+}
+_Ahttp://www.kartooner.com/wp-content/themes/kartoonertwo/style.cssXtext/cssÓOLGIF89a‰ Q ÷  ÿÚ›â‘à kÁ ¨âx· ä÷ÿœ ˜¹cc¼ ÿÿ ´ãÇâ‹à!Œ¢ Êï”Ëé§”¤ ışóÿùïÀÔ {Æ,êñßØóàêĞ]¹ ™¤ …œ £Øÿtışúlœ$ÃîM¥ØiØâßw¤1Xÿè ÿ” Ôìµ×áÜô¹ÿ¢ ‹Şñú¥åIûúÔß¨æWõøïŸä=ÿÅ ÿS g“k¿ ‡ÀAˆ€‡Ë5ñûä¹ërVŒFÖáäêWb•ÿ[ Şç8tÃŠŞ"ÿÿuëñŒ»Ó—ÿı³Èb ¶Í‘ÔŞ Áæ”V‰İávÉ[”ÿÿ›d©ÿ¸ ÿÿ÷üóÜál¿ Ş Öáÿi ÜâˆŞÜğÃÿÿHØâÎF±İ|şşéïùâgÀi¾ÕãÀ<z f‰úûÜêï{şÿû|×¡Àrÿÿ”h´ æõÛÍñ­Üuj¾v¬d´öüíL‘‹±RS’^›˜â/ÿù å÷Ë”à êùÔ’à ÿÿÿĞë®÷ıŞêÌšÓVà!QŒÿ` ÿÿ‡İ#¤¹ÿX f¼
+åóÑR‰òö³•ĞNÿÿ‡ÿ„ i¾ íøİÿÿöùÉÿü ’à"_“â"v™ˆŞ#Ùãà"oÁÿ¢ÿ²ˆÿÔÿæ¿‚ªBÿÓ»ÿ‡D¬Çÿ»NÿìÏÿ¨ÿ½™ÿŞÌÿóßÿÚŸÿÍ~ËÜ¯ÿéİÿfÿq"ÿÇnÿÈªÿ’Uÿôîÿµ>ÿ®.ÿÁ^ÿ¨wÿfÿà¯şÿşÿ|3•á'ÿÿıışÔÿşş—ä#ÿš&N‡§s¾ì…¯ ëæí^RŠ‡Ë
+ÿÿ;ÿÑ¦ÚµoéïÜŞâ×ó­úı÷ûı¤õ\Ùí¾x„äbÚ ßèCÇğÿíEôúŞ‹Î?öı	Øğ ÿäyÿ¿¨ µÎŒlÀh»W‹İ_ Ïä#Úã ôø¼şÿÂÿÿQŠóúêôüëğóœÿã·®Lf½ ‘´_ÿÈH^
+¸à†¿ĞõøÃÁŞb!ù     ,    ‰ Q  ÿ 	H° A`/¼1¢Æ Ã‡#JœH±¢Å‹_a"‚		CŠI²äDÁ¤`²f˜É—0cÊN¡07µ¤ˆ4³§ÏŸïÄà ¢šˆ›`6Ê´éK<º4  ÆèÍkØ8İÊµ"›,F€š
+†ËQ•`0u]Ë¶ Š0KÕlN ZÛêİji¹rMaÌïö*z-êÀ,àRX`‹3Ë´2àC XñI­æÓ$w¸èârƒ?¬¦Xƒº6F``ã¶şà0Z†Œ±M|â¬wË$@òïŸxŸî0·&åË``VËêàŞÿY};`OZú[åÍ8tˆ{ğí§‹*ßóàîø“_qd÷sò1p…ÒX›
+šè6_EbdW¤PÏDÀxpÍ5Vì@ÆşÖcX(ÇE4€`k‡ü‘B
+ß9tÍ<@ÀO†„¡ƒDˆáA‰3AÕs,²1„ÈqÈ"¼Y <Qã@Ä1H@:‚O`‚™A×)=1)€'´ À›°ˆ”€e±€•YB„‰>•Ü è•Œ9¤™0‘áWŠ‹|óæ£àÉn‡ Å†Æ"I:$èX:h¡s  |üUD›B@­eÿÑ[qBGø€*ê®XÊ©0ù!‡x²L«­^ @@;ÿT€ë®Ô
+ŠÅ—M û’°0dˆÈ¶ºL…q24ê$pÃ ”1@µƒb‘€#hk·èî£-P‚œdEî–E‡
+¯¼¡xa/IÀ Ê‚’ÄìûèYh÷‡Àø”*3ÌD Á9Xx\-T`ÉÃ$õÅBZü&!,Â‰ WR@Èô<²Âğf I™,‡Œ1´áÉ2¿IÌ7Ep>Xğ¬AX_]€É¼*FÑÁcÄ$R`0İ´ÓFœ#2Ö"û\À»ÔÊkÆ ˜ÿ=Ñ0F(Ï%UŒcÀn®=N Ä}µÏWGà€[Ã›@dø]Qàk[ÜB1uÔ}õØ`ú&›LĞ£iŒæMÒ¹Åä0¹”^Âî=ôîÄìR‹(ÀN‘³‡K\İÉ&ˆô¾;ïë Ï:¨„qÇëÆG”DÅoš   &˜Ğ‡Ìä0ƒ»ÑOï~% ·µøĞÛıIU¼™	'pÀ
+T 	2®~8`ĞsŸá‡ë¡,VèÛı2†h<Š
+ıóß	úG<Š-`¡ÀnóUBQ¼	F„œS ÿüç¿à+ Àùğ$°„î[Çÿ°0¿^e`‡r!D’d ¼á7x ¼©ì¢<AJ™SbDÆğ…7€†+è@#±…Pâ  # ?-în%@!Ğ2@‡‰1"ÃÂ%`‚àp[¨A#j ÈDœ uH†§ç„=te¡Ä'BF'bpil„F¹ÈFtc$œdÖa‡¬n ¸·ÉˆÀC
+8ãÿ(!ÊQ²Jè&Y‚J1T|Ôd-W…>|’Bè%)•b:!
+êp%>²çÇeN„o¨B!ı·i6"9¨¦¯‰ÂBÑAaôfE¤ ]B³—pÆ6Ô	ÿÄuDe˜W¼ AyV_ €; Èhr#üœ^œĞƒ=Ø¡¡Ä ’hĞ‹æ8 CÉ4è¡wˆ€D2’=Lâ(UGM"$”CÈP#;6qRH "
+{ BĞmÌt&cx=¤1}$ãH@‚,¼ğˆ°.9jLŒÁ½8| n¨ÈÜÖŒ5&©0…™®‘4| ëÎ°„PÀ¬%@«Z‰dYÈÃnàèCÆz” %@@Îà† !¬¦P+a)„˜"¯1E>P7\V­à¬)0
+|Ö%ø€RñXV2¸ìd1VÔÿGy@ƒ<ĞqZ:d¬HEJ0VœAÄ%ld1VY‚°mf? Ôb ¹Î]‚ ò`
+Ä^·KÁaS`à±šÄ‚€\Ö6À(ÄW}°„¬¶¦5…,A\A Ö°i•ìaû{ÖÌªõ¿cE¬ûÜßñî5²
+ü/uÎğU7p"„%H)PXÀ®¦  ËáT‚ÃY.ƒ9|Wº2¸°ã¥®>€ bµÈ10€jH$Ãé¯ HğÖÊ ±¦%.jMQÙ8¯„%ïeeñbş¦‚µD.¯s™ì†S}ˆÎ ‚y æE3Æ\f¼WÿÍ7.,›ã\fÈùÌgğğšÏ,ˆ1[ ÏoÖªg1ŠQÜB$­Å)4R”(­ğ¥‚‘Œ B£hË*T¡ŠŸ¨B¤øÉ)F‰‹^ĞB¨°4¦ÛR
+QˆÂÓ ş‰/P-Qa³8…+rÑŠVäÚ9Å)*}éL$Ñ£˜A\Qh_ä¥XÅ‹‚”‚¤X…@^A
+WG»¥˜€@VQŠWŒ;ÚÛÆ6,Ä-pO`¤xÅ§C-r?&ÅÈ(o1ŠIÕıNµ@F¹è|»¢’n…@fíKZš İÖ….\-
+[dŸ¦¸Å»MqUì"Ö‚pu,òñPÇ‚â¢ÿ`EµC^qoÏ[°H¹¶a‚ZÂÖ…%-z‘h›‚à‚È7Â}qŠ~ßÚ£Tv/„P‹‚pÜÑ¶pµ¹£®‹Rü‚¢€·½½Š¨óB­….ñ
+©Çœ>¹(ÌİñxÏûì3‡‰­q1ŠScÚèÊDÀõ-„‚cúLHÍ=Ê^[ØNÅ..îí	H] İîtØòW‚ã¢˜¶Ø1qzâÓ#wµÅòé‰‹"î1i…İQQì½Äõ?ï{Ğï.i_¦šá¤6ÄEÑix;ì(·üä‚õR¨í¢ø/bííDå÷ş<Ê=/“\è:öE÷9ìŞz¦úû
+ÿ³k.Zäò¼Èï]íö‡zø‚ˆúÉy±
+QÄëÚn>ú;­é³"ê¬`n11
+¨`lıÖt°w€t²WlHG•&üv
+­€
+½ €'{Î—~¾'
+V|ãF
+Õ•Ç~‚À
+X·x‚°|£'%}ñr×{r7J¾°tBph°—t‡p¸j—V£Àp³À€ŠVs¸{4Ø|İÆ
+±pYv®¦#çx®¦mËgí&z¤ği¬ nı÷raG}&¡z:~°'ä'‘öƒ™–—6Jµğpf(‡·Kè¡v)çyj×{ËÇ
+s§7¿ğq®¦
+3† ˆ¨)÷ˆ'®0lñk!lº‡ n0An(h Š¢8Š¤XŠ¦xŠ§ ;_,http://9rules.com/images/ads/proudmember.gifYimage/gifÓOª‰PNG
+
+   IHDR   (   (   Œş¸m  qIDATxœÍ˜}pTÕ‡Ÿ{ï–%!$&&‘`Òğ1‘€ 6ƒV‚•ÒA%:S˜±R”1ÅN[füb ¢Õ‰£"S¦ qĞHê”A–TÅ˜Xš¾b0Éº!›d³›İì’ÜsûÇÅİ½ÙİdÒàû×÷üŞ÷>÷|¼÷œ•4MÓø›)°áñöÑbíÄÛ×Ï˜Ñ1d¤'aRäkÅ 66_ä·›Ëimëòunyn9·NÍº\>óÏ¶]Ÿà ?;â@Íhi·uî­<ÉÅÇˆ4`zrBP§£§—·ìáZî#`aşM!qæ$I1 æœ“S²Ò‚ß¡
+1¢P&ÖÁ¯š)~nBè®â‡™÷tÒSÆª
+.v:øªá[Ô5ÖÁ9ÈŸ1‘ªç ¨¬i !.–ùwOÇ3, =n/ÍÖ,mv¬¶nl]Nl]=Ø.ìÎ^zÜÚ:¨ª>k†tº<<²fí]NCÒ´äŠ.dnA.&“rE`İ.*ü›ŠOÑíì8Î øå‰s¬Ş´3¬xrf*kÏ-S3#~€ÇÛÇû«yoÏ—8]ˆãB^hµ±ôé·†š}{%Ëça=Š±q±Èrğ.o±vòÏê¯Ù{øÍÖÎ¨ÁBjšÆºÍå|~üÌqæúUÁO¦ı˜¹¹Lºñz&e¦¢ª‚í}Î»»¿À{©ÿŠÁBØºœüæÙwh‰ò­âby¡d	åûk|›l0caJf*’$awº±;Ü8zzéW%- ÍÖÍ“/”]ÕÔfwÎœÈú•?'91ŞçëëW±u9évöÒåpÑÚÖ…å¢=4 @‡½‡µ/}À×ç-Ã¦(2/½‡e‹g¡È‘ãÂ¸=—Øøö^UÕ]5Üuãâx±d	·åfE7( èç/»>å¯ûŒ+=3ÌÌ¹‘« %)~hq´€ßÛÁ#§Ø¸uo_äÉ%(Zp+ÒÕçÖ}ã'"K~@€SgZøİ+ÒaïR;zÏ<¶€…÷Ì ÿùGĞêk PVnFı`Ä€¦Íå wˆCj|"Ó§d°cÓ
+6lÙCÍÃ&ÍHKäOk—2935bˆÅşíˆŠÒbiÒL’­ ô¿äUu¼·§Š†o¾3hæÍÊå™?#~Ìè«†	8˜içN¢¾¶
+¹hs—¬âŞ;§r¦ÉJS«W¯—	iIÜ~sö°€EcFÎ_€ÖŞ‚Öp„
+€ØUŠ|×/¯Ï ';œìôa…
+´Á«åØD”'^Æôìû(ëËü~¡"}òƒ
+´ˆoårn>$÷;\Îğâa´¨Ö`8Ó"ªö¡Y/€¢ M˜‚\°)kjH½8ù)¢æc°^ĞµsŠÂj#uÕ`kõµ¥²Ñ<.ÔÒ§Ğj+Àµ•ˆİ[‘—¢üzƒ¡Oİı6Xü%J«¯A,C~ğ)”‡VG	èr î*Ek>V{ØïOJCÊ›‡úÒchÿ­
+ÿR•Â¨wKèú)*^×G3¡Á?øt;¥h5 ï’î‹1c*)E;uÄ 'İRˆiãßQ/GÊæğÁ2}êZ´Séa”Ç7AŒÙçWw¾„Õ_WRÁı˜^¯DÊÉCÔğw¤fbZ·iâÍÈ9y(¿ßæ€ƒA§ÕÿÀû–¡,Y…”–…|oÊ›ıº¶hMõQ &¥AÆd_SkªóX½ÑzŞŸ$(şÕ"MBš>+dJyN‘±7Ï0ŠZ@Ş¡Å¸È-ˆò?ë¿/mÀ8ZßÛÂÜ£•×VÅdôæsòîZìß¿qö„>º—Í° í’íÔ!ó‰ãF­¨«w@M½Áø©Œh*Ëşà%¡¢¾µÎ0…Úéã¨eu0—õ§¡ÛæO0Ââ£7Gõ¯Ö|uÛz¿.>y@=Œ¨JãR*A¼syº-`9¯¿íå²!ömCìÛ;ã§ĞçõñºQ_)FR‚¼¸Ø°–!Š]¬Ü·Ü°aÄ¡(‹‹!e|Ø){ÊªWÎøÄĞÚ;æ£,|4Ø?ğD-êªıo;&eá¯|}ZS=âè!pZ&RŞ\ÄwÑBën×ı©™È‹g? Š	ñ¯
+´vı+$ßZˆ¨=¬—))!yN‘O;$àÍşE™–Y7š]ë    IEND®B`‚_`http://www.gravatar.com/avatar.php?gravatar_id=8a9cda1122e6e6e9390db4bff3de037c&rating=R&size=40Yimage/pngÓOO‰PNG
+
+   IHDR   (   (   œ/:  IDATxœUXYsÇuşÎéın¸ÀÅÅÆ"AE‘äD¥ĞQl«üÛqU*yÉÍKì8©ŠË–)É¶,’ÁE H€ öåw›;3İçäaH;93]SS½œíû¾&ç„˜<„D"BdÙ+Œ*©Dob*J  ) j{û€
+´ş¤ª†XÆ*,RCYAD¥óJÌàÊ;)q=ƒ‰ğ ”  "ÊL¤$DÿoUÑ7‹3 ª À¥H†ª€…*T¿yp¿*gYM'S…£‹Ag®ÃÆ¨BëI 1)
+TUcTªøwğ#€ †YTÄÌ7nŞl·ç X"Ùtb*¿ûâÅb1k5ÊÉxëèğÖÆ†¨€ˆ¨>.üÛ™Uµv©ªˆˆ™A¤ÎÓ[c€TE…ˆb˜U=ˆlíº(Š¦ÄÖ`t9¸œ7[-†ÎŠÂ•3ªf+Pf†*UUeƒ€˜†ˆ@¼Ähı4 ç½a–ÿ³]±‚AñŞUnoww©·øŞw›Yzvr||x Ş1³ªx©¢¾bˆL¬’„CÔ•$
+'â¼!6u@ªê!Ì,P"¸6ÀT'&¬µ£Ñ¨˜Íæ:ı×¯×VW÷÷÷wvvVÖVë#ªªsÎ@Ši>EÄ“çù`xÕhµ—“$³Ö²Â‰gæúb8'lÌ›4×±·`ª+‚¶··766²,;8:ÈóÎ;¿ü¯ÿtÕ÷Ã$¨]rt°¿õèáp0˜N&Yšª"ŒÃÊ¹JÔQ´°Ğûàƒ——‚0¬MUl¬Q%'`ó—Š³¬J*Fôâä,MSch\Lú«ı©úùîÜõ¥¥ÑÙéÂÚêd<Ùz¼988¸:<òŞ[”Iîs–d…à`{ëxïÕ÷>¾ûŞß|h¢@`” b‰@*y1PõŞíîì^»v£×ï?}öì›Ç›0Vˆ66îœŸ”Óbg·†§gA#-I*õ6
+Ádã0É²(MÓ4]ì/NF£Ïïıîéã'ê½avÎyˆ¨zï¡ÂÄ€@D– ªzu5JYÒÈ2n¾û^Ty×hµÅù•µë»»{ç§g› Ûn_U³|6mg$ˆÄÎ|¥hÎu‰iV”—ÃÑÑéù—¿û|±ßï/õÙ/B
+%®]ï™¢¶®
+cíÍ[ï¨Â©&Y#VU'"r2¸htZ­V'‚˜58<;Ã¸­Î·Ã„Øt;óœ$‚¹ù¹İ×{·ßİ889¾º8ÛüúAÿ§?3†¹Ê_]^­ßŞ€["R Ùi3Cªªf³|<uZmW•I­ß¾“¤ÉÒj2ìN-sFe>››ïÚ$ê­­5<¶òòàáƒÁéÅË­ï®¾·5?&ˆ:WİÿúáêÍ*¢¨Z¼A¨÷[O,ÌwÏ&ã4KDìòÊZ–6šYÒˆM#ç³¶«ªÊ—Q#Ó´½° ÌÓ¼ ™›ŸŸŸ•åÒbxz1N›]•* =z´Ùn7’(RUU%f«Äï}åªÊÊ"±aÚº»„–ÕÁÑIQ'Io´À4s¥¬µá4Ï‡§ƒñp‰IYXè>©*xŸœÜÔ¿2 ı½×ƒócL»»À–PˆUÕºŠ™QÅàâ|a¾‚!¼s±³ÑèøÕ«fV¸7¿X‰÷*Åh4›æ“Ñ¨æ—ƒKŸ6›Ë=I’Xb€®./	pEõàëûq~úãGFİ‹¼ª…Ñj2Î4BQµ 26£r–O'ùğ´V¥nÅ&°aŠy‘¢"ñR£<ae–Œ1•sP}ùäÙğòêÓù×¸ÙôJË lšeYƒÈ˜‚¬µ†@Ä¤ĞÒIYùb¦>k6²$Š‚865Ä(nÆéÕùÅùé¼›\^¥Ä“ñªDh7®*777×ßYoµ[ãñÆªÔ=­Æö§º!×Ş0aGqÀv<¸DéÊ¼˜ŒÆÆZ©ül4v³^Æ£q½Qñ^ªÊª\Ÿ¾Ü~ÎÌÆ˜ÕÕ•Ãı}Ãtë[UYÙÀFQdŒ©i}C˜1Dd­eff¢˜ÉXe7ã‰:	£h:™í¿Úï-.â¼(ÎÎÏÊ|GQGMC±&“ÉÑëı²ªV¯ß¸u{ı·_ÜëÎÏ¥YÊ&„TÔZÃ;@hö­EQäEDÔÓíÎÏwÂ0šëÎs·Û…¨w®Èó$ŒÚív’$sss¡:­–—EåÄw{çƒ‹î\WUÃĞZko¸~ƒÎŠ?s†8“$É²,ˆBµfæ«ÅÕååµU"Óh4Â(pR•å,°Ì¤,‰ãPÕÇY:ßëm¿x™e˜fI«±µµuk}=â8Eä-|V DA`ƒ ˆ,×8Z…‚ ŠmzõƒÉH-Wâã(Ê²x4‘–U’$F£,ËÊUéë££g[[AÁØJôîÇw}UXËu(½¨óÕŸIˆ%@E‰È–Şò&"rÎ+*‡IRæ£8ËPñN¨Ê²æuÎ9cLFÇÛ^GÉ\÷£O~p÷“O@È²¦1Æ;kNNÎÓFó-Å3
+bVE’fâ+_‘‰ÄÆ°(U~\–¤5ŒÛqPJîrGJq`‰h4©j&lÂ{_=ønë…2_ï¯üğÓO9´†AâûËKê]™ÏŒøÀZQ€X…zõ“É^ZY#	£ÀZkÉ¨ª™ùÎ£Ç¿üJ'UdS"\\XX”n|9‚¨I¢Be:z%ZZ[a%U/.ö÷Æ£ád:!"…`eÄ'ùdÆÌAÅiê‰*©_ílŞû¢Ø??~¾OŞ6Z8ÎÊ²tNi–¤Y^”ßnnvÚf£§É­Ûë€'xU-
+wpx8›Í¢82ÆZcD„@ ª
+…*3Q`c;*òËÉäÉw/ÿç7_Vjo^[o˜°AüòñÖö³—ù´èö{Q§öæ‹½‹Ëáoşû×ûÛ»ï¬İxÿ½÷«R~ù‹_ÕépxzrjIÓÔ°I’8~KËkJŞ»YQäEîœ°°ÿÙg_}óh{ÿè²9¿¼¼v-/òb–?üÓı§Gc“¦.
+NÇ£o77O^½N*bå;ï~Ø_==şÇ¿ÿbÿåÌf1Û(Š¢(²ÖA"ÕÊ„ëD rn–çùÕğboÿãwÿùŸ~Ùğ»g/L”v¯¯MÕ±áÉùàêèìhgïÅî‹çÛ[O¿È Pmœf3OÃa<7_şî‹½—;Ih¢0Ã˜œ«TäÂSX€
+â ´¶ğ£ƒ£í›×Ãæú­ëï­¯íŸ.Û«Ë>ÈS¦Áëï^ú¼\£|BÓüøøàŠ\g¥ÿğÅ©›¬ÒNÒ«ËñçŸßËš…¥E13Sœ7®ÖZl2°qúêÑ³F¡Ï¿øcè¦ûŞ­Vb~{¿³ÔZÊy”Şzmï~ûÛ/_üá›İ‡ÏFg—“²l,-.¬];J2…Ç­w?ùû(‹Ù¿úƒz	‚€ØUé¼¯‹–=„µ,«ÑÕ0ßyiaÉxôì³¯ßÿÁ÷—ş­ç->şÑÿğ«_Wy±6Öª‚ª/>‰º7®{5ç§Ç1û4’n_ë6ìÃÎÂáñÅÕéy§×V~T–s‘TTÕ
+)îÿñO?ıèï†Û¯xV¢¨v··n~p'ìfi;›H¾pkõîÏübóéàõqQT`aCÍêúõ•õ°ÓœMßûëw¼7½4¾¶Øşöşï¥œtZÙŞÉ‘6›ƒÙlçõa’ÿ ªPbµÎÀˆ´âô§ÿø“[½EOŸÿşkÌJªä`wo}ñ{Ó¢¢Ğ$Qÿö•›×ÏööOÆ“Išd½•¥ùå¾öXúù§w«BÊÁå£/î=İ|XVïº«×ìî>zşüòjüé¤†„ˆT­’°¶¼b¼+H×?úpp>8xúd®®Æ–Cã]>œ5i9«Š2[^ó|f§IIÄÆXÃ¾˜è¬òãâOŸİ¼&o€á{ß>ßš”åB¯×étÔ)@l‚‰Ø˜ÒW•5"òÎ>qI"Š¹k+˜‰÷6H=E¹›……‡±Q°Ğdk
+ïÕù$ŒU!ånzYm·»27'¢”&S¦¨ßïßXŸU…a³Òë[2†
+y'P¿÷òE%˜TÕ(Q!x&G Ãê¼%öŞ³1$€âíU‹ÔÇ ŠYUÄ(Œ° bŒ'¨âmñÂ(õ{½V»éUH*Q†Wojm£
+"0 +œ
+±a½¹W‘ZrzõDì•™Iá	uk2%yQ(³QRe"­T,Ô(X””ÄPEµ¦JJ¤€ÖíUje_¯­$ ¨*Ya  <ˆë²©¡W­‘A’zàb“ã]>‹+~    IEND®B`‚_`http://www.gravatar.com/avatar.php?gravatar_id=c875baccdf1f7a56f69b21dd7abffbfb&rating=R&size=40Ô_WebResourceTextEncodingNameUUTF-8OP‘<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11">
+
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"><TITLE>Odd Thoughts: Part Two Â» kartooner.com</TITLE><META name="generator" content="WordPress 1.5.1.2">
+
+<LINK rel="stylesheet" type="text/css" media="screen, projection" href="http://www.kartooner.com/wp-content/themes/kartoonertwo/style.css">
+
+<LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.kartooner.com/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.kartooner.com/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.kartooner.com/feed/atom/"><LINK rel="pingback" href="http://www.kartooner.com/xmlrpc.php">
+        <LINK rel="archives" title="June 2005" href="http://www.kartooner.com/archives/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://www.kartooner.com/archives/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.kartooner.com/archives/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.kartooner.com/archives/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.kartooner.com/archives/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.kartooner.com/archives/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.kartooner.com/archives/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.kartooner.com/archives/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://www.kartooner.com/archives/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://www.kartooner.com/archives/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://www.kartooner.com/archives/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://www.kartooner.com/archives/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://www.kartooner.com/archives/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://www.kartooner.com/archives/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://www.kartooner.com/archives/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://www.kartooner.com/archives/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://www.kartooner.com/archives/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://www.kartooner.com/archives/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://www.kartooner.com/archives/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://www.kartooner.com/archives/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://www.kartooner.com/archives/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://www.kartooner.com/archives/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://www.kartooner.com/archives/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://www.kartooner.com/archives/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://www.kartooner.com/archives/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://www.kartooner.com/archives/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://www.kartooner.com/archives/2003/04/">
+        <LINK rel="archives" title="March 2003" href="http://www.kartooner.com/archives/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://www.kartooner.com/archives/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://www.kartooner.com/archives/2003/01/"><STYLE type="text/css" media="screen">
+
+                /* Begin Contact Form CSS */
+
+                .contactform {
+                        width: 100%; 
+                        position: relative;
+                        }
+                
+                .contactleft {
+                        width: 25%; 
+                        text-align: right;
+                        clear: both; 
+                        float: left; 
+                        display: inline; 
+                        padding: 4px; 
+                        margin: 5px 0; 
+                        }
+                
+                .contactright {
+                        width: 70%;  
+                        float: right; 
+                        display: inline; 
+                        padding: 4px; 
+                        margin: 5px 0; 
+                        }
+
+        .contacterror {
+            border: 1px solid #ff0000;
+                }
+                /* End Contact Form CSS */
+
+        </STYLE>
+
+</HEAD><BODY id="kartooner-dot-com">
+<DIV id="infobar">
+<P>My online resume is now available at <A href="http://eriksagen.com">eriksagen.com</A>.</P> 
+
+<FORM method="get" id="searchform" action="/index.php"><DIV><INPUT type="text" value="" name="s" id="s" onblur="setTimeout('closeResults()',2000); if (this.value == '') {this.value = 'search archives';}" onfocus="if (this.value == 'search archives') {this.value = '';}">
+<INPUT type="submit" id="searchsubmit" value="Search">
+
+</DIV>
+
+</FORM></DIV>
+<DIV id="branding" onclick="location.href='http://kartooner.com';" style="cursor: pointer;"><H1><A href="http://www.kartooner.com">kartooner.com</A></H1></DIV>
+
+<DIV id="container">
+
+<DIV id="right-col"><H2 id="categories">Categories</H2>
+
+<UL>        <LI><A href="http://www.kartooner.com/archives/category/books/" title="View all posts filed under Books">Books</A> (9)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/entertainment/" title="View all posts filed under Entertainment">Entertainment</A> (63)
+                <UL class="children">        <LI><A href="http://www.kartooner.com/archives/category/entertainment/movies/" title="View all posts filed under Movies">Movies</A> (1)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/entertainment/special-effects/" title="View all posts filed under Special Effects">Special Effects</A> (4)
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/food/" title="View all posts filed under Food">Food</A> (7)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/graphic-design/" title="View all posts filed under Graphic Design">Graphic Design</A> (28)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/life/" title="View all posts filed under Life">Life</A> (93)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/resources/" title="View all posts filed under Resources">Resources</A> (42)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/software/" title="View all posts filed under Software">Software</A> (28)
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/web-design/" title="View all posts filed under Web Design">Web Design</A> (31)
+                <UL class="children">        <LI><A href="http://www.kartooner.com/archives/category/web-design/site-updates/" title="View all posts filed under Site Updates">Site Updates</A> (5)
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://www.kartooner.com/archives/category/weird/" title="View all posts filed under Weird">Weird</A> (3)
+</LI>
+
+</UL>
+
+<H2 id="categories">Above and Beyond</H2>
+
+<UL id="delicious">    <LI><A href="http://www.orderedlist.com/articles/wordpress-administration-design-tiger/">WordPress Administration Design: Tiger</A></LI>
+<LI><A href="http://played.todeath.com/05/june/html/page_01.html">played.todeath.com</A></LI>
+<LI><A href="http://www.xombified.com/main.html">Xombie: The Animated Series</A></LI>
+<LI><A href="http://textpattern.org/">Textpattern Resources</A></LI>
+<LI><A href="http://www.widgetgallery.com/view.php?widget=36520">Digg News Widget</A></LI>
+<LI><A href="http://www.related-pages.com/oldtimeradio/">Old Time Radio</A></LI>
+<LI><A href="http://www.paulsadowski.com/birthday.asp">Birthday Calculator</A></LI>
+<LI><A href="http://www.gdusa.com/issue_2005/04_apr/feature/feat_01.php">2005 Logo Trends</A></LI>
+</UL>
+
+<A href="http://9rules.com/" title="9Rules Network member"><IMG src="http://9rules.com/images/ads/proudmember.gif" alt="Proud Member of the 9Rules Network" border="0"></A></DIV>
+
+<DIV id="main-content">
+<DIV class="date">June 11th, 2005</DIV><H3 class="post-title"><A href="http://www.kartooner.com/archives/2005/06/11/odd-thoughts-part-two/" rel="bookmark">Odd Thoughts: Part Two</A></H3>
+
+<DIV id="postinfo"><P><STRONG>Odd Thoughts: Part Two</STRONG> was published
+3 hours, 50 minutes ago 
+on Saturday, June 11th, 2005 at 12:08 pm 
+ and is filed under <A href="http://www.kartooner.com/archives/category/entertainment/" title="View all posts in Entertainment" rel="category tag">Entertainment</A>,  <A href="http://www.kartooner.com/archives/category/resources/" title="View all posts in Resources" rel="category tag">Resources</A>,  <A href="http://www.kartooner.com/archives/category/weird/" title="View all posts in Weird" rel="category tag">Weird</A>.</P>
+
+<P>You can follow any responses to this entry through the <A href="http://www.kartooner.com/archives/2005/06/11/odd-thoughts-part-two/feed/">RSS 2.0</A> feed.</P>
+</DIV>
+
+<DIV class="entry">        <P></P><P>There are some posts throughout a bloggerâ€™s timeline that beg for revitalization or perhaps, as in this case, a chance to revisit and expand upon. Around two months ago, <A href="http://www.kartooner.com/archives/2005/03/31/odd-thoughts/" title="Odd Thoughts">Odd Thoughts</A> was posted for one simple and yet obvious reason; for me, to share with you, a few thoughts that ramble and bounce along in my mind. </P><P></P>
+
+        <P></P><P>Some are quirky, others just downright silly and implausible, yet as a whole they are a collection of random spurts that to some might seem incoherent or useless in some capacity but to others are the key towards happiness and contentment, a break from the perils of reality. To me, these thoughts, while not necessarily life changing by any means, are still important to keep a sense of sanity in a world where seriousness is abound.</P><P></P>
+
+        <P></P><P>Everyday we are faced with that person who we come across, whom at first glance, seems pouty or sour in some way. You know who Iâ€™m talking about because these individuals always seem down-and-out, restless or grumpy. Our first gut reaction to this might be to either ignore the person in question or attempt to make them smile, to fill their mind with lyrical and hopefully humorous nonsense that actually serves a purpose; to enlighten their hidden but whimsical self. </P><P></P>
+
+        <P></P><P>Life is too serious to not take a step back, breath in and laugh at yourself and laugh with others, itâ€™s important to not only your own sense of mind but to others. Laughter and humor is in fact contagious and for each person that smiles and shrugs off any feeling of despairity, solemness or begrudgeful thoughts, will emerge from their shell and realize that life is much too short to forget about what makes us feel good inside.</P><P></P>
+
+        <P></P><P>On that note, Iâ€™d like to share with you some additional â€œOdd Thoughtsâ€ and if youâ€™d like, please share some of your own or you could even answer a few.</P><P></P>
+
+        <P></P><BLOCKQUOTE>If George Jetson and Homer Simpson were in a boxing match, who would win?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>If you woke up tomorrow and everything was made of clay, would you be afraid to shave?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>Why isnâ€™t there a jump rope made of licorice?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>Why is childrenâ€™s music (like the <EM>Itsy, Bitsy Spider</EM>) typically used as creepy background music in horror movies?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>Why do some people take care of grass as a plant when thereâ€™s plenty of it outside?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>If paper can cut as easily as it does, why hasnâ€™t someone come out with non-paper-cutting paper?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>What would Orco (from He-Man) look like without his cape?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>What did Tashi Station look like? Luke never got the chance to pick up some power converters.</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>If you could choose any movie to be magically transported into, what would you choose?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>If Niggles are Noogles and Pastries are Grobbles, what is a TiddlyWiki?</BLOCKQUOTE><P></P>
+
+        <P></P><BLOCKQUOTE>If tomorrow they rename Firefox to Firecow, would people still use it?</BLOCKQUOTE><P></P>
+
+ </DIV>
+        
+        <DIV class="postmetadata">                </DIV>
+        
+        
+
+
+<A name="comments"></A>
+
+        <A href="#author" title="Leave a comment" id="addcomment">Join the discussion on <STRONG>Odd Thoughts: Part Two</STRONG>.</A>
+
+
+<OL id="commentlist">
+
+<LI class="comment-area" id="comment-11034">                       <DIV class="comment-author-gravatar">                               <IMG src="http://www.gravatar.com/avatar.php?gravatar_id=8a9cda1122e6e6e9390db4bff3de037c&rating=R&size=40" alt="Gravatar" class="gravatar-img">
+                       </DIV>
+
+                       <DIV class="comment-text">                               <P><SPAN class="author"><A href="http://zooibaai.nl/" rel="external">Rob Mientjes</A></SPAN> says:</P>
+<P class="commentmetadata"><A href="#comment-11034" title="Permalink for this comment.">June 11th, 2005 at 1:10 pm</A> </P>
+
+                               <DIV class="comment"> <P></P><P>If I put on a hat upside down, will my hair grow into my skull?</P><P></P>
+        <P></P><P>What ever happened to man-eating potatoes?</P><P></P>
+        <P></P><P>If I were to lunch at an expensive restaurant, would they also give me a free KitKat for a short break later on the day?</P><P></P>
+        <P></P><P>Yellow stands to daggers as ox stands to what?</P><P></P>
+</DIV>
+                             
+                       </DIV>
+
+               </LI>
+
+
+<LI class="comment-area" id="comment-11035">                       <DIV class="comment-author-gravatar">                               <IMG src="http://www.gravatar.com/avatar.php?gravatar_id=c875baccdf1f7a56f69b21dd7abffbfb&rating=R&size=40" alt="Gravatar" class="gravatar-img">
+                       </DIV>
+
+                       <DIV class="comment-text">                               <P><SPAN class="author"><A href="http://theubergeeks.net/" rel="external">Colin D. Devroe</A></SPAN> says:</P>
+<P class="commentmetadata"><A href="#comment-11035" title="Permalink for this comment.">June 11th, 2005 at 1:16 pm</A> </P>
+
+                               <DIV class="comment"> <P></P><P>Toshistation looked like <A href="http://toshistation.com/">this</A>.</P><P></P>
+        <P></P><P>And George Jetson would lose pitifully.</P><P></P>
+</DIV>
+                             
+                       </DIV>
+
+               </LI>
+
+
+</OL>
+
+
+<P><A href="http://www.kartooner.com/archives/2005/06/11/odd-thoughts-part-two/feed/"><ABBR title="Really Simple Syndication">RSS</ABBR> feed for comments on this post.</A> 
+        <A href="http://www.kartooner.com/archives/2005/06/11/odd-thoughts-part-two/trackback/" rel="trackback">TrackBack <ABBR title="Uniform Resource Identifier">URI</ABBR></A>
+</P>
+
+<P>Comment avatars powered by <A href="http://www.gravatar.com" title="Get a Gravatar">Gravatar</A>.</P>
+
+<H2 id="postcomment">Leave a comment</H2>
+
+
+<SCRIPT type="text/javascript">
+<!--
+function ReloadTextDiv()
+{
+var NewText = document.getElementById("comment").value;
+splitText = NewText.split(/\n/).join("<br />");
+var DivElement = document.getElementById("TextDisplay");
+DivElement.innerHTML = splitText;
+}
+//-->
+</SCRIPT>
+
+<FORM action="http://www.kartooner.com/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<SMALL class="align-right">Textarea: <A href="javascript:void(null)" onclick="document.getElementById('comment').rows += 5;">Larger</A> | <A href="javascript:void(null)" onclick="document.getElementById('comment').rows -= 5;">Smaller </A></SMALL>
+
+<P><TEXTAREA name="comment" id="comment" cols="40%" rows="10" tabindex="4" onkeyup="ReloadTextDiv();"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="450">
+</P>
+
+<H3>preview</H3><P id="TextDisplay"></P>
+</FORM>
+
+
+
+
+</DIV>
+
+
+
+<DIV id="sidebar">
+<DIV class="sidebar-item"><H2 id="navigate">Navigate</H2>
+<UL>
+
+
+
+<LI class="page_item"><A href="http://www.kartooner.com/about/" title="About">About</A></LI>
+<LI class="page_item"><A href="http://www.kartooner.com/contact/" title="Contact">Contact</A></LI>
+<LI class="page_item"><A href="http://www.kartooner.com/portfolio/" title="Portfolio">Portfolio</A></LI>
+<LI class="page_item"><A href="http://www.kartooner.com/the-archives/" title="The Archives">The Archives</A></LI>
+</UL>
+</DIV>
+
+<DIV class="sidebar-item"><H2 id="friends">Inspiration</H2>
+
+<UL><LI><A href="http://www.axentric.com" title="Axentric">Adam Michela</A></LI>
+<LI><A href="http://www.urbandude.com" title="Urbandude">Bryan Peters</A></LI>
+<LI><A href="http://www.theubergeeks.net" title="Ubergeeks">Colin Devroe</A></LI>
+<LI><A href="http://www.donniejeter.com" title="Donnie Jeter">Donnie Jeter</A></LI>
+<LI><A href="http://www.secondnegative.com" title="Second Negative">Greg Hanover</A></LI>
+<LI><A href="http://www.jinabolton.com" title="Jina Bolton">Jina Bolton</A></LI>
+<LI><A href="http://www.hicksdesign.co.uk" title="Hicksdesign">Jon Hicks</A></LI>
+<LI><A href="http://joshuaink.com/" title="Joshuaink">John Oxton</A></LI>
+<LI><A href="http://www.kriskrug.com" title="Kris Krug">Kris Krug</A></LI>
+<LI><A href="http://www.goodblimey.com" title="GoodBlimey">Matt Burris</A></LI>
+<LI><A href="http://www.binarybonsai.com" title="Binary Bonsai">Michael Heilemann</A>
+</LI><LI><A href="http://phark.typepad.com" title="Phark">Mike Rundle</A></LI>
+<LI><A href="http://www.molly.com" title="Molly">Molly E. Holzschlag</A></LI>
+<LI><A href="http://www.twothirty.com" title="Two Thirty">Paul Jarvis</A></LI>
+<LI><A href="http://www.jessey.net" title="Jessey.net">Simon Jessey</A></LI>
+</UL>
+
+</DIV>
+
+<DIV class="sidebar-item"><H2 id="links">Links</H2>
+<UL> <LI><A href="http://www.geekfury.com" title="Geek Fury">GeekFury</A></LI>
+ <LI><A href="http://www.kartooner.com/family/zoe/" title="My daughter's website">Life with Zoe</A></LI>
+  <LI><A href="http://www.wikipes.com" title="Wikipes">Wikipes</A></LI>
+  <LI><A href="http://www.insert25.com" title="Insert25">Insert25</A></LI>
+</UL>
+</DIV>
+ 
+<DIV class="sidebar-item"><H2 id="meta">Meta</H2>
+        <UL>                <LI><A href="http://www.kartooner.com/feed" title="Subscribe to the RSS feed">Subscribe (RSS)</A></LI>
+                <LI><A href="feed:http://www.kartooner.com/comments/feed/" title="The latest comments to all posts in RSS">Comments (RSS)</A></LI>
+                <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+                <LI><A href="http://gmpg.org/xfn/"><ABBR title="XHTML Friends Network">XFN</ABBR></A></LI>
+                <LI><A href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform."><ABBR title="WordPress">WP</ABBR></A></LI>
+                        </UL>
+</DIV>
+
+</DIV> </DIV>
+
+<DIV id="footer"><P>Copyright Â© 2001â€“2005 kartooner.com. All Rights Reserved. Images, unless noted otherwise, are copyright to their respective authors.</P> <P>Site hosting provided by <A href="http://www.dreamhost.com/rewards.cgi?kartoo35" title="Dreamhost">Dreamhost</A>.</P>
+</DIV>
+
+
+</BODY></HTML>_Chttp://www.kartooner.com/archives/2005/06/11/odd-thoughts-part-two/Ytext/html    1 6 = O ^ t!¨!ì!õ!ü/L/{/…/Œ6:66§6®DDdDmD‹D‘•&•l                           •v

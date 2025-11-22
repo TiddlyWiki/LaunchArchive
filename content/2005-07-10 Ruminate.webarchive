@@ -1,0 +1,433 @@
+bplist00“_WebSubresources_WebMainResource°”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO"È//\//////////////////////////////////////////////////////////////////////////////////
+//\  quickSub 0.3.3
+//\  Copyright Jason Brome 2003,2004. All rights reserved.
+//\
+//\  By Jason Brome (jason@methodize.org).  Last modified 2004-01-31
+//\  http://www.methodize.org/quicksub/
+//\
+//\  Inspired by the overLIB script by Erik Bosrup (erik@bosrup.com)
+//\  http://www.bosrup.com/web/overlib/
+//\
+//\  This program is free software; you can redistribute it and/or
+//\  modify it under the terms of the GNU General Public License
+//\  as published by the Free Software Foundation; either version 2
+//\  of the License, or (at your option) any later version.
+//\
+//\  This program is distributed in the hope that it will be useful,
+//\  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//\  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//\  GNU General Public License for more details.
+//\
+//\  You should have received a copy of the GNU General Public License
+//\  along with this program; if not, write to the Free Software
+//\  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+//\
+//\  Revision History
+//\  0.3.3 Added NewsGator Online Services, RSS Bandit, Python Desktop Server, and others
+
+var ESCAPED = 1;
+var UNESCAPED = 2;
+
+var aggregators = new Array( 
+	"AmphetaDesk", "http://127.0.0.1:8888/index.html?add_url=", ESCAPED,
+	"Awasu", "http://127.0.0.1:2604/subscribe?url=", ESCAPED,
+	"Bloglines", "http://www.bloglines.com/sub/", UNESCAPED,
+	"Bot A Blog", "http://www.botablog.com/botthisblog.php?blog=", ESCAPED,
+	"BottomFeeder", "http://127.0.0.1:8666/btf?rss=", ESCAPED,
+	"Fyuze", "http://fyuze.com/customize/clickthru.php?url=", ESCAPED,
+	"Headline Viewer", "http://127.0.0.1:8900/add_provider?url=", ESCAPED,
+	"mobilerss", "http://www.mobilerss.net/fastfeed.php?url=", ESCAPED,
+	"NetNewsWire", "feed:", UNESCAPED,
+	"NewsGator Online Services", "http://services.newsgator.com/subscriber/subext.aspx?url=", ESCAPED,
+	"NewsIsFree", "http://www.newsisfree.com/sources/info/?url=", ESCAPED,
+	"NewsMonster", "newsmonster-subscription:", UNESCAPED,
+	"nntp//rss", "http://127.0.0.1:7810/?action=addform&URL=", ESCAPED,
+	"Python Desktop Server", "http://127.0.0.1:4334/aggregator/add_redir?url=", ESCAPED,
+	"Radio UserLand", "http://127.0.0.1:5335/system/pages/subscriptions?url=", ESCAPED,
+	"RSS Bandit", "feed:", UNESCAPED,
+	"SharpReader", "http://127.0.0.1:5335/system/pages/subscriptions?url=", ESCAPED,
+	"Shrook", "feed:", UNESCAPED,
+	"Syndirella", "http://127.0.0.1:5335/system/pages/subscriptions?url=", ESCAPED,
+	"Vox Lite", "feed:", UNESCAPED,
+	"Wildgrape", "http://127.0.0.1:8888/NewsDesk.html?add_url=", ESCAPED,
+	"WINKsite", "http://winksite.com/site/quick_add_logon_form.cfm?partner_name=&feed_url=", ESCAPED,
+	"WinRSS", "rss://addrss/", ESCAPED,
+	"Others...", "http://www.methodize.org/quicksub/subscribe.php?url=", ESCAPED
+);
+
+var txtSubscribe = 'Subscribe to this feed:';
+var txtContentHeader = 'Newsreader/Aggregator:';
+var txtWhatIsThis = 'What is this?';
+var txtVersion = "0.3.3";
+
+// Color and font settings for Netscape 4 (CSS Style Sheet used for modern browsers)
+var q_hdrfont = 'Verdana';
+var q_hdrsize = '1';
+var q_hdrcolor = '#FFFFFF';
+var q_bgcolor = '#006699';
+var q_contentfont = 'Verdana';
+var q_contentsize = '1';
+var q_contentbgcolor = '#EEEEEE';
+
+// Internal vars
+var q_frame = self;
+var over = null;
+var oTimer;
+
+// Determine browser type
+var ns4 = (navigator.appName == 'Netscape' && parseInt(navigator.appVersion) == 4);
+var ns6 = (document.getElementById)? true:false;
+var ie4 = (document.all)? true:false;
+if (ie4) {
+	var docRoot = 'document.body';
+}
+
+if (ns4) {
+	var oW = window.innerWidth;
+	var oH = window.innerHeight;
+	window.onresize = function () {if (oW!=window.innerWidth||oH!=window.innerHeight) location.reload();}
+}
+
+if (ie4) {
+	if ((navigator.userAgent.indexOf('MSIE 5') > 0) || (navigator.userAgent.indexOf('MSIE 6') > 0)) {
+		if(document.compatMode && document.compatMode == 'CSS1Compat') {
+			docRoot = 'document.documentElement';
+		}
+	}
+	if (ns6) {
+		ns6 = false;
+	}
+}
+
+// quicksub(url)
+// Loads parameters into global runtime variables.
+function quicksub(oLink, originalUrl) {
+
+	var url = escape(originalUrl);
+
+	var text = '<b>' + txtContentHeader + '</b><br>';
+	for(var iCount = 0; iCount < aggregators.length; iCount +=3) {
+		text += ('<a href=\''
+			+ aggregators[iCount + 1] 
+			+ (aggregators[iCount + 2] == ESCAPED ? url : originalUrl)
+			+ '\'>'
+			+ aggregators[iCount]
+			+ '</a><br>');
+	}
+
+	if ( (ns4) || (ie4) || (ns6) ) {
+		q_frame = self;
+		if (ns4) over = q_frame.document.quickSub
+		if (ie4) over = q_frame.quickSub.style
+		if (ns6) over = q_frame.document.getElementById("quickSub");
+	}
+	
+	if(!ns4) {
+		var layerhtml = '<div class=\'qsheader\'>' + txtSubscribe + '&nbsp;&nbsp;<A HREF=\"javascript:return closeqs();\" onMouseOver=\"return closeqs();\">[<b>x</b>]</A></div>'
+			+ '<div class=\'qscontent\'>' + text + '</div>'
+			+ '<div class=\'qsfooterWhat\'><a class=\'quicksub\' target=\'quickSub\' href=\'http://www.methodize.org/quicksub/whatisthis.html\' onclick=\'return closeqs();\'>[' + txtWhatIsThis + ']</a></div>'
+			+ '<div class=\'qsfooter\'><a class="quicksub" target="quickSub" href=\'http://www.methodize.org/quicksub/\' onclick=\'return closeqs();\'>quickSub ' + txtVersion + '</a></div>';
+	} else {
+		var closing = "<TD ALIGN=RIGHT><A HREF=\"javascript:return closeqs();\" onMouseOver=\"return closeqs();\"><FONT COLOR=\""+q_hdrcolor+"\" FACE=\""+q_hdrfont+"\" SIZE=\""+q_hdrsize+"\">[<b>x</b>]</FONT></A></TD>";
+		var layerhtml = "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 BGCOLOR=\'"+q_bgcolor+"\'><TR><TD>"
+			+"<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0><TR><TD>"
+			+"<B><FONT COLOR=\""+q_hdrcolor+"\" FACE=\""+q_hdrfont+"\" SIZE=\""+q_hdrsize+"\">" + txtSubscribe + "</FONT></B></TD>"+closing+"</TR></TABLE>"
+			+"<TABLE WIDTH=100% BORDER=0 CELLPADDING=2 CELLSPACING=0 BGCOLOR=\'"+ q_contentbgcolor + "\'\">"
+			+"<TR><TD VALIGN=TOP><FONT FACE=\""+q_contentfont+"\" SIZE=\""+q_contentsize+"\">"+text+"</FONT></TD></TR>"
+			+"<TR><TD VALIGN=TOP ALIGN=RIGHT><FONT FACE=\""+q_contentfont+"\" SIZE=\""+q_contentsize+"\"><a target=\'quickSub\' href=\'http://www.methodize.org/quicksub/whatisthis.html\' onclick=\'return closeqs();\'>[" + txtWhatIsThis + "]</a></FONT></TD></TR>"
+			+"</TABLE>"
+			+"<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0><TR><TD ALIGN=RIGHT>"
+			+"<B><a target='quickSub' href=\'http://www.methodize.org/quicksub/\' onclick=\'return closeqs();\'><FONT COLOR=\""+q_hdrcolor+"\" FACE=\""+q_hdrfont+"\" SIZE=\""+q_hdrsize+"\">quickSub " + txtVersion + "</FONT></a></TD></TR></TABLE>"
+			+"</TD></TR></TABLE>";
+	}
+	layerWrite(layerhtml);
+	placeLayer(oLink);
+	showObject(over);
+	
+	return true;
+}
+
+function closeqs() {
+	if (over != null) hideObject(over);
+	return true;
+}
+
+function placeLayer(oLink) {
+	var placeX, placeY, iOffset, aPosition;
+	
+	aPosition = findPosition(oLink);
+	placeX = eval(aPosition[0]);
+	placeY = eval(aPosition[1]) + 16;
+
+	if ( (ns4) || (ie4) ) {
+		over.left = (ie4 ? placeX + 'px' : placeX);
+		over.top = (ie4 ? placeY + 'px' : placeY);
+	} else if (ns6) {
+		over.style.left = placeX + "px";
+		over.style.top = placeY + "px";
+	}
+}
+
+function layerWrite(txt) {
+	if (ns4) {
+		var lyr = q_frame.document.quickSub.document
+		lyr.write(txt)
+		lyr.close()
+	} else if (ie4) {
+		q_frame.document.all["quickSub"].innerHTML = txt
+	} else if (ns6) {
+		range = q_frame.document.createRange();
+		range.setStartBefore(over);
+		domfrag = range.createContextualFragment(txt);
+		while (over.hasChildNodes()) {
+			over.removeChild(over.lastChild);
+		}
+		over.appendChild(domfrag);
+	}
+}
+
+function showObject(obj) {
+	if (ns4) obj.visibility = "show";
+	else if (ie4) obj.visibility = "visible";
+	else if (ns6) obj.style.visibility = "visible";
+}
+
+function hideObject(obj) {
+	if (ns4) obj.visibility = "hide";
+	else if (ie4) obj.visibility = "hidden";
+	else if (ns6) obj.style.visibility = "hidden";
+}
+
+function findPosition (oLink) {
+	if (oLink.offsetParent) {
+		for (var iPosX = 0, iPosY = 0; oLink.offsetParent; oLink = oLink.offsetParent) {
+			iPosX += oLink.offsetLeft;
+			iPosY += oLink.offsetTop;
+		}
+		return [iPosX, iPosY];
+	} else {
+		return [oLink.x, oLink.y];
+	}
+}
+
+function timeqs () {
+	if(!ns4) {
+		var iDelay = 500;
+
+		if (oTimer) {
+			clearTimeout(oTimer);
+		}
+
+		if ((ns4 && over.visibility != 'hide') ||
+			(ie4 && over.visibility != 'hidden') ||
+			(ns6 && over.style.visibility != 'hidden')) {
+			oTimer = setTimeout(hideqs, iDelay);
+		}
+	}
+}
+
+function hideqs () {
+	if (oTimer) {
+		clearTimeout(oTimer);
+	}
+
+	closeqs();
+}
+
+function delayqs () {
+	if (oTimer) {
+		clearTimeout(oTimer);
+	}
+}_$http://www.chrislott.org/quicksub.js_application/x-javascript‘_WebResourceTextEncodingNameUUTF-8O8Õ<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><META http-equiv="Content-type" content="text/html; charset=iso-8859-1"><TITLE>Ruminate</TITLE><STYLE type="text/css">
+    @import "/css0404.css";
+</STYLE> 
+ <STYLE type="text/css">
+    @import "/quicksub.css";
+</STYLE>
+
+<LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.chrislott.org/?rss=1"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://www.chrislott.org/?atom=1">
+
+<LINK rel="start" href="/" title="Home"><LINK rel="author" href="http://www.chrislott.org/about/"><LINK rel="search" href="http://www.chrislott.org/#search"><LINK rel="help" href="http://www.chrislott.org/about/#help"><LINK rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/1.0/"><LINK rel="bookmark" type="text/html" title="Those Wacky Wikis (and TiddlyWiki)" href="http://www.chrislott.org/article/1094/"><LINK rel="bookmark" type="text/html" title="Wikipedia, News, and the 7/7 Bombings" href="http://www.chrislott.org/article/1093/"><LINK rel="bookmark" type="text/html" title="07.08.05 (LinkLog)" href="http://www.chrislott.org/linklog/1092/"><LINK rel="bookmark" type="text/html" title="07.02.05 (LinkLog)" href="http://www.chrislott.org/linklog/1091/"><LINK rel="bookmark" type="text/html" title="06.21.05 (LinkLog)" href="http://www.chrislott.org/linklog/1090/"><LINK rel="bookmark" type="text/html" title="Travelling Silence" href="http://www.chrislott.org/article/1089/"><LINK rel="bookmark" type="text/html" title="06.07.05 (LinkLog)" href="http://www.chrislott.org/linklog/1088/"><LINK rel="bookmark" type="text/html" title="06.01.05 (LinkLog)" href="http://www.chrislott.org/linklog/1087/"><LINK rel="bookmark" type="text/html" title="05.27.05 (LinkLog)" href="http://www.chrislott.org/linklog/1086/"><LINK rel="bookmark" type="text/html" title="05.26.05 (LinkLog)" href="http://www.chrislott.org/linklog/1085/"><LINK rel="prev" href="http://www.chrislott.org/article/1093/wikipedia-news-and-the-77-bombings" title="Previous article">
+
+
+<LINK rel="shortcut icon" href="/favicon.ico">
+
+<META name="ICBM" content="64.83708, -147.64904"><META name="DC.title" content="Ruminate"><META name="dc.language" content="en">
+
+<META name="generator" content="TextPattern">
+
+<META http-equiv="Expires" content="-1"><META http-equiv="Pragma" content="no-cache"><META http-equiv="cache-control" content="no-cache">
+
+<META name="robots" content="all">
+
+<META http-equiv="imagetoolbar" content="no"><META name="MSSmartTagsPreventParsing" content="TRUE">
+
+</HEAD><BODY>
+
+<DIV id="quickSub" style="position:absolute; visibility:hidden; z-index:1000;" onmouseout="return timeqs();" onmousemove="return delayqs();"></DIV>
+<SCRIPT type="text/javascript" src="/quicksub.js"><!-- quickSub (c) Jason Brome --></SCRIPT>
+
+<DIV id="titlebar"><H1><SPAN>RUMINATE</SPAN></H1>
+<P>"Him you do not teach to fly, teach to fall faster."</P></DIV>
+
+<DIV id="topnav"><UL>
+        <LI>:: <A href="/" title="Home (Blog)">Home</A> ::</LI>
+        <LI>:: <A href="/linklog/" title="Daily LinkLog">LinkLog</A> ::</LI>
+        <LI>:: <A href="/about/" title="About Me and This Site">About</A> ::</LI>
+        <LI>:: <A href="/linkage/" title="Recommended Sites">Links</A> ::</LI>
+</UL>
+</DIV>
+
+<DIV id="container">
+
+<DIV id="inbox">
+
+<DIV id="content">
+
+<P align="center">&lt;&lt;<A href="http://www.chrislott.org/article/1093/wikipedia-news-and-the-77-bombings">Wikipedia, News, and the 7/7 Bombings</A> |
+<A href="http://www.chrislott.org/" class="noline">top</A> |
+&gt;&gt;</P>
+
+<H3><A href="http://www.chrislott.org/article/1094/those-wacky-wikis-and-tiddlywiki" title="Permanent link to this article">Those Wacky Wikis (and TiddlyWiki)</A>  </H3>
+        <P><A href="http://www.tiddlywiki.com/">TiddlyWiki</A> is a fascinating little application: a completely self-contained wiki engine (with tags) written entirely in Javascript. </P>
+
+        <P>The upshot? Just save a TiddlyWiki anywhere you want (flash drive, hard drive, disk), open it with a modern browser, and it just works.</P>
+
+        <P>And TiddlyWiki is rather addicting to play with. I‚Äôm already seeing it in action around the web for a variety of purposes:</P>
+
+        <UL>        <LI><A href="http://parmenides.objectis.net/ZiddlyWiki/">Informal Reasoning</A></LI>
+                <LI><A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD TiddlyWiki</A></LI>
+                <LI><A href="http://espringer.web.wesleyan.edu/">Elise Springer</A></LI>
+        </UL>
+
+        <P>The beauty of TiddlyWiki wasn‚Äôt apparent to me until I realized the portability, and what a slick little tool it could be for notetaking, personal portfolio building, and other kinds of process documentation.</P>
+
+        <P>I am going to play with it some more‚Äîcould it fill the gap between the server-based wiki engines (which are perfect for me in most ways, but not portable and not available offline) and dedicated, proprietary products like OneNote and EverNote? My concern is that the single file and Javascript construction will become taxed rather quickly with a lot of content‚Ä¶ but maybe that‚Äôs where linked TiddlyWikis come in. After all, it is a ‚Äúmicro-content publisher.‚Äù</P>
+
+        <P>[<A href="http://technorati.com/tag/ruminate/" rel="tag">ruminate</A> <A href="http://technorati.com/tag/wiki/" rel="tag">wiki</A> <A href="http://technorati.com/tag/TiddlyWiki/" rel="tag">TiddlyWiki</A> <A href="http://technorati.com/tag/notetaking/" rel="tag">notetaking</A>]</P>
+
+
+ 
+<P class="loginfo">posted Jul  9, 11:39 pm in <A href="http://www.chrislott.org/category/wiki">Wiki</A>   ¬∑ <BR>
+</P> 
+<H3 style="margin-top:2em" id="comment">Comment</H3>
+<FORM method="post" action="" style="margin-top:2em">  <TABLE cellpadding="4" cellspacing="0" border="0">      <TBODY><TR><TD align="right" valign="top">              name
+          </TD><TD valign="top">             <INPUT type="text" name="name" value="" size="25" tabindex="1">
+
+          </TD><TD valign="top" align="left">              <INPUT type="checkbox" name="remember" value="1" checked="checked">Remember
+          </TD></TR><TR><TD align="right" valign="top">              email
+          </TD><TD valign="top" colspan="2">              <INPUT type="text" name="email" value="" size="25" tabindex="2">
+
+          </TD></TR><TR><TD align="right" valign="top">              http://
+          </TD><TD valign="top" colspan="2">              <INPUT type="text" name="web" value="" size="25" tabindex="3">
+
+          </TD></TR><TR><TD valign="top" align="right">              Message
+          </TD><TD valign="top" colspan="2">              <TEXTAREA name="message" cols="30" rows="12" style="width:300px;height:250px" tabindex="4"></TEXTAREA>          </TD></TR><TR><TD align="right" valign="top">¬†</TD><TD valign="top" align="left">                              &lt;<A target="_blank" href="http://www.textpattern.com/help/?item=textile_comments" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;" style="color:blue;text-decoration:none">?</A>&gt;
+          </TD><TD align="right" valign="top">              <INPUT type="submit" name="preview" value="preview" class="button">
+
+                
+          </TD></TR></TBODY></TABLE><P><INPUT type="hidden" name="parentid" value="1094"></P><P><INPUT type="hidden" name="backpage" value="/article/1094/those-wacky-wikis-and-tiddlywiki"></P></FORM>
+
+</DIV>
+
+<DIV id="side">
+
+<H2>Search</H2>
+
+<FORM action="http://www.chrislott.org/" method="get"><P>Search<BR><INPUT type="text" name="q" value="" size="20"><INPUT type="submit" value="Find"></P></FORM>
+
+<H2>Recent Entries</H2>
+<UL><LI><A href="http://www.chrislott.org/article/1094/those-wacky-wikis-and-tiddlywiki">Those Wacky Wikis (and TiddlyWiki)</A></LI>
+<LI><A href="http://www.chrislott.org/article/1093/wikipedia-news-and-the-77-bombings">Wikipedia, News, and the 7/7 Bombings</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1092/070805-linklog">07.08.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1091/070205-linklog">07.02.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1090/062105-linklog">06.21.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/article/1089/travelling-silence">Travelling Silence</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1088/060705-linklog">06.07.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1087/060105-linklog">06.01.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1086/052705-linklog">05.27.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1085/052605-linklog">05.26.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1084/052505-linklog">05.25.05 (LinkLog)</A></LI>
+<LI><A href="http://www.chrislott.org/linklog/1083/052405-linklog">05.24.05 (LinkLog)</A></LI></UL>
+
+<H2>Archives</H2>
+<FORM action="http://www.chrislott.org/" method="get"><SELECT name="c" onchange="submit(this.form)"><OPTION value=""></OPTION><OPTION value="Art+and+Literature">Art and Literature</OPTION><OPTION value="At+Random">At Random</OPTION><OPTION value="Audio">Audio</OPTION><OPTION value="Blogs+and+Blogging">Blogs and Blogging</OPTION><OPTION value="Books+and+Reading">Books and Reading</OPTION><OPTION value="Education">Education</OPTION><OPTION value="Educational+Technology">Educational Technology</OPTION><OPTION value="Geek">Geek</OPTION><OPTION value="GTD">GTD</OPTION><OPTION value="History+and+the+World">History and the World</OPTION><OPTION value="Humor">Humor</OPTION><OPTION value="Links+and+Sites">Links and Sites</OPTION><OPTION value="Me+and+My+Family">Me and My Family</OPTION><OPTION value="Movies+and+Television">Movies and Television</OPTION><OPTION value="Music+and+Digital+Audio">Music and Digital Audio</OPTION><OPTION value="News+and+Politics">News and Politics</OPTION><OPTION value="Philosophy+and+Religion">Philosophy and Religion</OPTION><OPTION value="Podcasting">Podcasting</OPTION><OPTION value="RSS%2FSearch%2FKnowledge">RSS/Search/Knowledge</OPTION><OPTION value="Science">Science</OPTION><OPTION value="Search+Technology">Search Technology</OPTION><OPTION value="Site+News">Site News</OPTION><OPTION value="Social+Software">Social Software</OPTION><OPTION value="Sports">Sports</OPTION><OPTION value="Typography+and+Print+Design">Typography and Print Design</OPTION><OPTION value="Weird">Weird</OPTION><OPTION value="Wiki">Wiki</OPTION><OPTION value="Words+and+Language">Words and Language</OPTION><OPTION value="Work">Work</OPTION></SELECT></FORM>
+
+<H2>Elsewhere</H2>
+
+<UL><LI><A href="http://www.bloglines.com/public/chrislott">Blogroll (Bloglines)</A></LI>
+<LI><A href="http://del.icio.us/fncll">Bookmarks (del.icio.us)</A></LI>
+<LI><A href="http://flickr.com/photos/fncll">flickr</A></LI>
+</UL>
+
+<H2>Contact</H2>
+
+<UL><LI><A href="mailto:chris@chrislott.org">Email Chris</A></LI>
+<LI><A href="/geek/pgp/key/">PGP Key</A></LI>
+<LI><A href="/about/#contact">IM, Postal Mail, etc.</A></LI>
+</UL>
+
+<H2>Remember</H2>
+
+<UL><LI><A href="javascript:void(rollpop=window.open('http://www.blogrolling.com/add_links_pop.phtml?u=http://www.chrislott.org/','rollit','scrollbars=no,width=475,height=350,left=75,top=175,status=yes,resizable=yes'));rollpop.focus();">Add to Blogrolling</A></LI>
+<LI><A href="#" onclick="q=location.href;p=document.title;delicious=window.open('http://del.icio.us/invaliduser?noui=yes&jump=close&url='+escape(q)+'&title='+escape(p),'delicious','toolbar=yes,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=400,left=100,top=50');
+return false;">Add to del.icio.us</A></LI>
+<LI><A href="javascript:d=document;void(furlit=window.open('http://www.furl.net/storeIt.jsp?t='+escape(d.title)+'&u='+escape(d.location.href),'furlit','scrollbars=no,width=475,height=575,left=75,top=20,status=no,resizable=yes'));furlit.focus();">Furl Me</A></LI>
+<LI><A href="http://blo.gs/sub.php?id=3998&sub=0">Add to blo.gs</A></LI>
+<LI><SCRIPT type="text/javascript">
+<!--
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) 
+{
+var url="http://86.135.71.79/index.php";
+var title=(document.title);
+document.write('<a href="javascript:window.external.AddFavorite(url,title);" '); document.write('>Add to Browser Bookmarks</a>');
+}
+else
+{ document.write('Press CTRL-D to Bookmark') }
+//-->
+</SCRIPT>Press CTRL-D to Bookmark</LI>
+<LI><A href="/chris-vcf.php">vCard</A></LI>
+<LI><A href="/?rss=1" onmouseout="return timeqs();" onmouseover="return quicksub(this, 'http://www.chrislott.org/?rss=1');">Subscribe to Site (RSS)</A></LI>
+
+
+</UL>
+
+<H2>Blogosphere</H2>
+
+<UL><LI><A href="http://geourl.org/near/?p=http://www.chrislott.org/">GeoURL</A></LI>
+<LI><A href="http://www.technorati.com/cosmos/search.html?url=http%3A%2F%2Fwww.chrislott.org">Technorati</A></LI>
+<LI><A href="http://www.blogstreet.com/bin/profile.cgi?url=http://www.chrislott.org/">BlogStreet</A></LI>
+<LI><A href="http://www.blogwise.com/bloginfo.php?uid=19414">BlogWise</A></LI>
+<LI><A href="http://www.blogarama.com/">Blogarama</A></LI>
+</UL>
+
+</DIV>
+
+</DIV>
+
+</DIV>
+
+<DIV id="footer"><P>
+Navigate: <A href="/">Home</A> - <A href="/linklog/" title="Daily LinkLog">LinkLog</A> - 
+<A href="/about/" title="About Me and This Site">About</A> - 
+<A href="/linkage/">Links</A><BR>
+Validate: <A href="http://validator.w3.org/check/referer">XHTML</A>, 
+<A href="http://jigsaw.w3.org/css-validator/check/referer">CSS</A>, 
+<A href="http://feeds.archive.org/validator/check.cgi?url=http://www.chrislott.org/?rss=1">RSS</A>, 
+<A href="http://bobby.watchfire.com/bobby/bobbyServlet?URL=http://www.chrislott.org/index.php&output=Submit&gl=sec508">508</A><BR>
+Syndicate: <A href="http://www.chrislott.org/?rss=1">RSS</A>, <A href="http://www.chrislott.org/?atom=1">Atom</A><BR>
+Copyright: 
+<A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/1.0/">Creative Commons Attribution-NonCommercial-ShareAlike 1.0</A> 
+<BR>
+Contact: <A title="Send me mail now, fool." href="mailto:chris@chrislott.org">chris@chrislott.org</A><BR>
+Powered By: <A title="TextPattern, the little CMS that could..." href="http://www.textpattern.com/">TextPattern</A>, 
+<A href="http://www.php.net/" title="PHP, Strong enough for a programmer, made for a poet.">PHP</A>,
+<A title="TextDrive, Innovation and Performance" href="http://www.textdrive.com/">TextDrive</A>
+</P>
+
+</DIV>
+
+
+
+</BODY></HTML>_Fhttp://www.chrislott.org/article/1094/those-wacky-wikis-and-tiddlywikiYtext/html    1 3 : L [ q#^#Ö#†#©#«#Õ\û\Á                           \Ò

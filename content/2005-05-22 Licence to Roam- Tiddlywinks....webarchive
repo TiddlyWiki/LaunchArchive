@@ -1,0 +1,496 @@
+bplist00“_WebSubresources_WebMainResource¢”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOEbody {
+	margin: 0px 0px 20px 0px;
+		background-color: #C8BFD8;
+	
+        	text-align: center;
+        
+	}
+
+a {
+	text-decoration: underline;
+	
+	
+	}
+
+a:link {
+	color: #8FABBE;
+	}
+
+a:visited {
+	color: #8FABBE;
+	}
+
+a:active {
+	color: #8FABBE;
+	}
+
+a:hover {
+	color: #006699;
+	}
+
+h1, h2, h3 {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	}
+
+#container {
+	line-height: 140%;
+		margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	padding: 0px;
+	width: 900px;
+	
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	}
+
+#banner {
+	font-family: Verdana, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: #483D8B;
+	text-align: left;
+	padding: 15px;
+	border-bottom: 1px solid #FFFFFF;
+	height: 39px;
+	}
+
+#banner-img {
+	display: none;
+	}
+
+
+#banner a {
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+#banner h1 {
+	font-size: xx-large;
+	
+	
+	
+	}
+
+#banner h2 {
+	font-size: small;
+	}
+
+#center {
+		float: left;
+	width: 650px;
+	
+	
+	overflow: hidden;
+	}
+
+.content {
+	padding: 15px 15px 5px 15px;
+	background-color: #FFFFFF;
+	
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	}
+
+#right {
+		float: left;
+	
+	
+	width: 250px;
+	background-color: #FFFFFF;
+	
+	overflow: hidden;
+	}
+
+.content p {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	line-height: 150%;
+	text-align: left;
+	margin-bottom: 10px;
+	}
+
+.content blockquote {
+	line-height: 150%;
+	}
+
+.content li {
+	line-height: 150%;
+	}
+
+.content h2 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: left;
+	font-weight: bold;
+	
+	
+	margin-bottom: 10px;
+	
+	}
+
+.content h3 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	
+	text-align: left;
+	font-weight: bold;
+	
+	
+	margin-bottom: 10px;
+	
+	}
+
+.content p.posted {
+	color: #999999;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	border-top: 1px solid #999999;
+	text-align: left;
+	
+	
+	
+	margin-bottom: 25px;
+	line-height: normal;
+	padding: 3px;
+	}
+
+.sidebar {
+	padding: 15px;
+	}
+
+
+
+#calendar {
+  	line-height: 140%;
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	
+	
+  	padding: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	}
+
+#calendar table {
+	padding: 2px;
+	border-collapse: collapse;
+	border: 0px;
+	width: 100%;
+	}
+
+#calendar caption {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: center;
+	font-weight: bold;
+	
+	text-transform: uppercase;
+	
+	letter-spacing: .3em;
+	}
+
+#calendar th {
+	text-align: center;
+	font-weight: normal;
+	}
+
+#calendar td {
+	text-align: center;
+	}
+
+.sidebar h2 {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	
+	text-align: center;
+	font-weight: bold;
+	
+	text-transform: uppercase;
+  	
+	letter-spacing: .3em;
+	}
+
+.sidebar ul {
+	padding-left: 0px;
+	margin: 0px;
+	margin-bottom: 30px;
+	}
+
+.sidebar ul ul {
+	margin-bottom: 0px;
+	}
+
+.sidebar #categories ul {
+	padding-left: 15px;
+	}
+
+.sidebar li {
+	color: #666666;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	text-align: left;
+	line-height: 150%;
+	
+	
+	
+	margin-top: 10px;
+	list-style-type: none;
+	}
+
+.sidebar #categories li {
+	list-style-type: circle;
+	}
+
+.sidebar img {
+	border: 3px solid #FFFFFF;
+	}
+
+.photo {
+	text-align: left;
+	margin-bottom: 20px;
+	}
+
+.link-note {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	line-height: 150%;
+	text-align: left;
+	padding: 2px;
+	margin-bottom: 15px;
+	}
+
+#powered {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	line-height: 150%;
+	text-align: left;
+	color: #666666;
+	margin-top: 50px;
+	}
+
+#comment-data {
+	float: left;
+	width: 180px;
+	padding-right: 15px;
+	margin-right: 15px;
+	text-align: left;
+	border-right: 1px dotted #BBB;
+	}
+
+textarea[id="comment-text"] {
+	width: 80%;
+	}
+
+.commenter-profile img {
+	vertical-align: middle;
+	border-width: 0;
+	}
+_&http://blog.bibrik.com/styles-site.cssXtext/css‘_WebResourceTextEncodingNameUutf-8Ovar commenter_name = '';
+_Hhttp://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi?__mode=cmtr_name_jsYtext/html‘UUTF-8O®<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META name="generator" content="http://www.movabletype.org/">
+
+<TITLE>Licence to Roam: Tiddlywinks...</TITLE>
+
+<LINK rel="stylesheet" href="http://blog.bibrik.com/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://blog.bibrik.com/index.rdf"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://blog.bibrik.com/atom.xml">
+
+<LINK rel="start" href="http://blog.bibrik.com/" title="Home"><LINK rel="prev" href="http://blog.bibrik.com/archives/2005/05/bittiness.html" title="Bittiness">
+
+<LINK rel="next" href="http://blog.bibrik.com/archives/2005/05/i_say_portal_yo.html" title="I say portal, you say what?">
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'blog.bibrik.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="container">
+<DIV id="banner"><H1><A href="http://blog.bibrik.com/" accesskey="1">Licence to Roam</A></H1>
+<H2></H2>
+</DIV>
+
+<DIV class="content">
+<P align="right"><A href="http://blog.bibrik.com/archives/2005/05/bittiness.html">¬´ Bittiness</A> |
+
+<A href="http://blog.bibrik.com/">Main</A>
+| <A href="http://blog.bibrik.com/archives/2005/05/i_say_portal_yo.html">I say portal, you say what? ¬ª</A>
+
+</P>
+
+<H2>May 22, 2005</H2>
+
+<H3>Tiddlywinks...</H3>
+
+<P>aka as <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD Tiddlywiki</A>, I just want to call it Tiddlywinks.   A nice, all in one HTML file that is wiki-sh in nature but can be run from the desktop, for To do lists and any other kind of lists you want. It prints to small sizes, to allow easy to carry notes. For fans of GTD and Life hacks; my favourite source being <A href="http://www.43folders.com/">43 Folders</A>, where tips are given to improve your life in small ways.   </P>
+
+<DIV id="a000171more"><DIV id="more">
+</DIV></DIV>
+
+<P class="posted">Posted by Rachel at May 22, 2005 03:42 PM</P>
+
+<H2 id="trackbacks">Trackback Pings</H2>
+<P class="techstuff">TrackBack URL for this entry:<BR>
+http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-tb.cgi/171</P>
+
+
+
+
+
+<H2 id="comments">Comments</H2>
+
+
+
+
+
+<H2>Post a comment</H2>
+
+ 
+
+<SCRIPT type="text/javascript" src="http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi?__mode=cmtr_name_js"></SCRIPT><SCRIPT language="javascript" type="text/javascript">
+<!--
+if (commenter_name) {
+    document.write('Thanks for signing in, ', commenter_name, '. Now you can comment. (<a href="http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi?__mode=handle_sign_in&static=1&entry_id=171&logout=1">sign out</a>)');
+} else {
+    document.write('If you have a TypeKey identity, you can <a href="https://www.typekey.com/t/typekey/login?&t=EqFGqZ9BD2K3zwbWK8zX&v=1.1&_return=http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi%3f__mode=handle_sign_in%26static=1%26entry_id=171"> sign in</a> to use it here.');
+}
+// -->
+</SCRIPT>If you have a TypeKey identity, you can <A href="https://www.typekey.com/t/typekey/login?&t=EqFGqZ9BD2K3zwbWK8zX&v=1.1&_return=http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi%3f__mode=handle_sign_in%26static=1%26entry_id=171"> sign in</A> to use it here.
+
+
+<FORM method="post" action="http://WWW.BIBRIK.COM/cgi-bin/rachel/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)"><INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="171">
+
+<DIV id="name_email"><P><LABEL for="author">Name:</LABEL><BR>
+<INPUT tabindex="1" id="author" name="author"></P>
+
+<P><LABEL for="email">Email Address:</LABEL><BR>
+<INPUT tabindex="2" id="email" name="email"></P>
+</DIV>
+
+<SCRIPT language="javascript" type="text/javascript">
+<!--
+if (commenter_name) {
+    document.getElementById('name_email').style.display = 'none';
+}
+// -->
+</SCRIPT>
+
+
+<P><LABEL for="url">URL:</LABEL><BR>
+<INPUT tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<INPUT type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><LABEL for="remember">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+</P>
+
+<P><LABEL for="text">Comments:</LABEL> (you may use HTML tags for style)<BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA></P>
+
+<DIV align="center"><INPUT type="submit" name="preview" tabindex="5" value="¬†Preview¬†">
+<INPUT style="font-weight: bold;" type="submit" name="post" tabindex="6" value="¬†Post¬†">
+</DIV>
+</FORM>
+
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+
+
+
+
+</DIV>
+</DIV>
+
+
+</BODY></HTML>_8http://blog.bibrik.com/archives/2005/05/tiddlywinks.html    1 4 ; M \ rª‰Ìˆ6Åãîö-F                           -Å

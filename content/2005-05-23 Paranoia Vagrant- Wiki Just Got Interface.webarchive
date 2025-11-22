@@ -1,0 +1,1060 @@
+bplist00Ó_WebSubresources_WebMainResource_WebSubframeArchives¤Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO#Æ@charset "utf-8";
+
+/* -åŸºæœ¬è¨­å®š- */
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#eee;
+	_font-family:"ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", Osaka, "ãƒ’ãƒ©ã‚®ãƒè§’ã‚´ Pro W3";
+	color:#333;
+}
+h1, h2, h3, form, p {
+	margin:0px;
+	padding:0px;
+}
+.Entry-Body p, .Entry-BodyEx p {
+	margin-top:0px;
+	margin-bottom:1em;
+}
+hr.hide {
+	display:none;
+}
+.Clear-Both {
+	clear:both;
+}
+a:link {
+	color:#036;
+}
+a:visited {
+	color:#033;
+}
+a:active {
+	color:#036;
+}
+a:hover {
+	color:#f30;
+}
+
+
+/* -åŸºæœ¬ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ- */
+#MainArea-top {
+	background-color:#fff;
+	margin-left:191px;
+	margin-right:191px;
+	background-image:url(img/bLotus-MainBg-L.gif);
+	background-repeat:repeat-y;
+}
+#MainArea {
+	background-color:#fff;
+	margin-left:10px;
+	margin-right:195px;
+	background-image:url(img/bLotus-MainBg-L.gif);
+	background-repeat:repeat-y;
+}
+#Main {
+	padding:0px 26px;
+	background-image:url(img/bLotus-MainBg-R.gif);
+	background-repeat:repeat-y;
+	background-position:right;
+}
+#Side1Area {
+	position:absolute;
+	top:0px;
+	left:15px;
+	width:176px;
+}
+#Side1 {
+	width:176px;
+}
+#Side2Area {
+	position:absolute;
+	top:0px;
+	right:15px;
+	width:176px;
+}
+#Side2 {
+	width:176px;
+}
+
+/* ------------ãƒ˜ãƒƒãƒ€ãƒ¼ã®è¨­å®š------------ */
+#HeaderArea {
+	height:100px;
+	background-color:#7EC4EE;
+	background-image:url(img/bLotus-HeadBg.jpg);
+	background-repeat:repeat-x;
+}
+#Header {
+	background-image:url(img/bLotus-HeadImg.jpg);
+	background-repeat:no-repeat;
+	height:100px;
+}
+/* ãƒ–ãƒ­ã‚°ã®ã‚¿ã‚¤ãƒˆãƒ« */
+#Header h1 {
+	padding:15px 0px 5px 60px;
+	text-shadow: #1993DF 2px 2px 3px;
+	font-size:28px;
+	font-family: "Century Gothic",Verdana,Helvetica,Airal,sans-serif;
+}
+#Header h1 a {
+	text-decoration:none;
+}
+#Header h1 a:link,
+#Header h1 a:visited,
+#Header h1 a:active,
+#Header h1 a:hover {
+	color:#fff;
+}
+/* ãƒ–ãƒ­ã‚°ã®èª¬æ˜æ–‡ */
+#Header .description {
+	padding:0px 10px 0px 90px;
+	font-size: 9pt;
+	color:#fff;
+	text-shadow: #1993DF 2px 2px 3px;
+}
+
+/* ------------ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®è¨­å®š------------ */
+#BodyArea-out {
+	background-image:url(img/bLotus-BodyBg-T.gif);
+	background-repeat:repeat-x;
+}
+#BodyArea-mid {
+	background-image:url(img/bLotus-BodyBg-L.gif);
+	background-repeat:no-repeat;
+}
+#BodyArea-in {
+	background-image:url(img/bLotus-BodyBg-R.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+	padding:15px 20px 0px 0px;
+}
+
+/* ãƒšãƒ¼ã‚¸é·ç§»ãƒªãƒ³ã‚¯ */
+.Navi {
+	font-size: 9pt;
+	margin:5px 0px 0px 12px;
+	line-height:140%;
+}
+
+/* ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã®åç§°è¡¨ç¤º */
+.ArchiveName {
+	font-size: 9pt;
+	font-weight:bold;
+	margin:5px 0px 0px 12px;
+}
+
+/* ã‚¨ãƒ³ãƒˆãƒªãƒ¼ */
+.OneEntry {
+	padding-bottom:25px;
+}
+/* ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®æ—¥ä»˜ */
+.OneEntry .Entry-Date {
+	margin:10px 0px;
+	padding-left:15px;
+	font-size: 10pt;
+	color:#80AFCC;
+}
+/* ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®ã‚¿ã‚¤ãƒˆãƒ« */
+.OneEntry .Entry-Title {
+	margin-left: 5px;
+	padding:0px 0px 2px 30px;
+	background-image:url(img/flower-Lblt.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	font-weight:bold;
+	font-size: 16pt;
+	font-family: 'HiraKakuStd-W8', 'Lucida Grande';
+	text-shadow:#bbb 2px 2px 3px;
+}
+
+.OneEntry .Entry-Title-Anchor {
+	color:#333;
+	font-weight:bold;
+	font-size: 16pt;
+	font-family: 'HiraKakuStd-W8', 'Lucida Grande';
+	text-decoration:none;
+	text-shadow:#bbb 2px 2px 3px;
+}
+
+.OneEntry .Entry-Title-Cateory {
+	font-size: 12pt;
+	font-family: 'HiraKakuStd-W8', 'Lucida Grande';
+	text-shadow:#bbb 2px 2px 3px;
+	text-decoration:none;
+}
+
+.OneEntry .Entry-Title-Cateory a {
+	text-decoration:none;
+}
+
+/* ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®æœ¬æ–‡ */
+.OneEntry .EntryBodyArea {
+	background-image:url(img/bLotus-EntryBodyBg.gif);
+	background-repeat:no-repeat;
+	padding:15px 0px 0px 15px;
+}
+.OneEntry .Entry-Body {
+	font-size: 12pt;
+	line-height:150%;
+}
+.OneEntry .Entry-BodyEx {
+	font-size: 12pt;
+	line-height:150%;
+}
+.OneEntry .Entry-Body h4 {
+	color:#336;
+	font-size: 110%;
+	line-height:150%;
+	border-bottom: 1px solid #333;
+	width: 60%;
+	padding-left: 1em;
+}
+.OneEntry .Entry-BodyEx h4 {
+	color:#336;
+	font-size: 110%;
+	line-height:150%;
+	border-bottom: 1px solid #333;
+	width: 60%;
+	padding-left: 1em;
+}
+
+.OneEntry .fn-a {
+	color: #FF6666;
+}
+
+.OneEntry .Entry-Foot {
+	font-size: 8pt;
+	line-height:145%;
+	margin:10px 0px;
+	padding:5px 0px 0px 0px;
+}
+
+.OneEntry blockquote {
+	margin:2em 7% ;
+	background:url("img/blockquote.gif") 50% 50% repeat scroll #eee ;
+	color:#333 ;
+	border:solid 1px #679 ;
+}
+
+.OneEntry blockquote p {
+	margin:0.5em ;
+}
+
+.OneEntry blockquote ul {
+	margin:1em 0.5em 1em 2em ;
+}
+
+.OneEntry blockquote ol {
+	margin:1em 0.5em 1em 3em ;
+}
+
+.OneEntry blockquote p ol {
+}
+
+
+/* ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯ãƒ»ã‚³ãƒ¡ãƒ³ãƒˆ */
+.OneEntry .Entry-Trackback,
+.OneEntry .Entry-Comments {
+	margin:20px 0px;
+}
+.OneEntry .Entry-Trackback h2,
+.OneEntry .Entry-Comments h2 {
+	padding:0px 0px 2px 12px;
+	font-weight:bold;
+	font-size: 10pt;
+	font-family: 'HiraKakuStd-W8', 'Lucida Grande';
+	text-shadow:#bbb 2px 2px 3px;
+}
+.OneEntry .TrackbackBodyArea,
+.OneEntry .CommentsBodyArea {
+	background-image:url(img/bLotus-TbCmBodyBg.gif);
+	background-repeat:no-repeat;
+	padding:12px 0px 20px 22px;
+}
+.OneEntry .Entry-Trackback p,
+.OneEntry .Entry-Comments p {
+	font-size: 9pt;
+	line-height:150%;
+	margin:0px 0px 10px 0px;
+}
+.OneEntry .Entry-Trackback p.ListHead {
+	font-size: 9pt;
+	margin-top:2em;
+	margin-bottom:1em;
+	font-weight:bold;
+}
+.OneEntry .Entry-Trackback .trackbacksList {
+	padding-left:20px;
+}
+.OneEntry .Entry-Trackback p.posted,
+.OneEntry .Entry-Comments p.posted {
+	font-size: 9pt;
+	color:#444;
+	padding-bottom:1em;
+	padding-left:20px;
+	margin-bottom:1em;
+	border-bottom:1px solid #dedede;
+}
+
+
+
+/* ------------ã‚µã‚¤ãƒ‰ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®è¨­å®š------------ */
+/* ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ */
+#calendarBox {
+	margin:10px 0px;
+}
+.calendarhead {
+	border:1px solid #cccccc;
+	font-size:small;
+	font-weight:bold;
+	line-height:140%;
+	padding:1px;
+}
+.calendar {
+	color:#666;
+	font-size:x-small;
+	font-weight:normal;
+	line-height:140%;
+	text-align:center;
+}
+table.calendar{
+	border-collapse: separate;
+	empty-cells:hide;
+}
+td.calendarDay{
+	padding:0px 2px;
+}
+
+.SideModule-out {
+	background-image:url(img/bLotus-SideBg.gif);
+	background-repeat:repeat-y;
+	margin:10px 0px;
+}
+.SideModule-in {
+	background-image:url(img/bLotus-SideFootBg.gif);
+	background-repeat:no-repeat;
+	background-position:left bottom;
+	padding-bottom:14px;
+}
+.Side-Title {
+	background-image:url(img/bLotus-SideTitleBg.gif);
+	background-repeat:no-repeat;
+	padding:8px 12px 2px 12px;
+	font-weight:bold;
+	color:#333;
+	font-size: 12pt;
+	font-family: "Century Gothic",Verdana,Helvetica,Airal,sans-serif;
+}
+.Side-Body {
+	background-image:url(img/bLotus-SideBodyBg.gif);
+	background-repeat:no-repeat;
+	padding:6px 12px 0px 15px;
+}
+.Side-Body ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+.Side-Body ul li {
+	margin:0px;
+	padding:2px 0px;
+	font-size: 10pt;
+}
+.Side-Body p {
+	font-size: 10pt;
+}
+.Side-Body ul li a {
+	padding:0px 0px 0px 14px;
+	background-image:url(img/bLotus-arrow.gif);
+	background-repeat:no-repeat;
+	background-position:0px center;
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+}
+.Side-Body ul li a.sub {
+	padding:0px 0px 0px 18px;
+	background-image:none;
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+}
+.Side-Body ul li a:hover {
+	background-image:url(img/bLotus-arrow-over.gif);
+	background-repeat:no-repeat;
+}
+.Side-Body ul li a.sub:hover {
+	background-image:none;
+}
+
+.Side-Body input#search {
+	width:144px;
+}
+
+.SideBottom {
+	margin:10px 0px 0px 0px;
+	padding:10px;
+	font-size: 10pt;
+}
+.SideBottom p {
+	margin-bottom:1em;
+}
+
+.Side-TitleEx {
+	background-image:url(img/bLotus-SideTitleBg.gif);
+	background-repeat:no-repeat;
+	padding:8px 12px 2px 12px;
+	font-weight:bold;
+	color:#C66;
+	font-size: 12pt;
+	font-family: "Century Gothic",Verdana,Helvetica,Airal,sans-serif;
+}
+.Side-BodyEx {
+	background-image:url(img/bLotus-SideBodyBg.gif);
+	background-repeat:no-repeat;
+	padding:6px 12px 0px 15px;
+}
+.Side-BodyEx ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+.Side-BodyEx ul li {
+	margin:0px;
+	padding:2px 0px;
+	font-size: 12pt;
+}
+.Side-BodyEx p {
+	font-size: 10pt;
+}
+.Side-BodyEx ul li a {
+	padding:0px 0px 0px 18px;
+	background-image:url(img/flower-Sblt.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+}
+.Side-BodyEx ul li a:hover {
+	background-image:url(img/flower-Sblt-over.gif);
+	background-repeat:no-repeat;
+}
+
+
+/* ------------ã‚³ãƒ¡ãƒ³ãƒˆç¢ºèªãƒ»ã‚¨ãƒ©ãƒ¼ãƒ»ä¿ç•™------------ */
+#banner {
+	display:none;
+}
+#container {
+	background-color:#fff;
+	margin-right:191px;
+	padding-left: 26px;
+	background-image:url(img/bLotus-MainBg-L.gif);
+	background-repeat:repeat-y;
+}
+.content {
+	padding:15px 41px 15px 15px;
+	background-image:url(img/bLotus-MainBg-R.gif);
+	background-repeat:repeat-y;
+	background-position:right;
+}
+.content h2 {
+	padding:2px 5px;
+	border:1px dotted #ccc;
+	margin:15px 0px;
+	font-weight:bold;
+	font-size: 10pt;
+	font-family: 'HiraKakuStd-W8', 'Lucida Grande';
+	text-shadow:#bbb 2px 2px 3px;
+}
+.content p {
+	font-size: 9pt;
+	line-height:150%;
+	margin-bottom:1em;
+}
+.content p.posted {
+	font-size: 9pt;
+	color:#444;
+	padding-bottom:1em;
+	padding-left:20px;
+	margin-bottom:1em;
+	border-bottom:1px solid #dedede;
+}
+_6http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓOnGIF89a€  æ  uuuhhhTTTYYYFFF°°°^^^¡¡¡³³³®®®ˆˆˆìììppp¶¶¶ŒŒŒÜÜÜ———’’’ÏÏÏ¨¨¨fffJJJ¦¦¦BBB@@@RRRªªªDDDNNN~~~lllLLLjjjzzzbbb†††€€€```<<<£££dddPPP„„„|||nnnÅÅÅæææîîîœœœ÷÷÷µµµ”””ÍÍÍ‹‹‹½½½¬¬¬[[[WWWÖÖÖ]]]ååå\\\àààHHHÛÛÛZZZâââäääIIIçççêêê˜˜˜ÕÕÕğğğáááØØØòòò¹¹¹ÁÁÁéééÂÂÂ‚‚‚şşş•••VVVôôô›››ããã×××¥¥¥šššÓÓÓÈÈÈ»»»óóóÄÄÄöööŸŸŸÊÊÊëëëııı­­­èèèúúúÀÀÀ¸¸¸ûûû¾¾¾¿¿¿ÉÉÉïïïÑÑÑ´´´ßßßÚÚÚÔÔÔÒÒÒºººøøøùùù¤¤¤ŞŞŞƒƒƒ™™™ÌÌÌÿÿÿ!ù     ,    €   ÿ€~‚ƒ„…†‡ˆ‰Š‹Œ‰’“”•–—˜™š›œŸ–‚’~[””m++"²!¶FFA» ¾¿ÀÀ¢KBU0G0M#R@MJBZF!.]4!´·¹¼¼Áàáâ“¢n8#r	?\\[?[cIzVŞÿ2Ì ªAIû œ¤ğÏÁ…•:|˜ĞRÅ…=‹b€+ø0ğAÆ‹ X|  EK–(fĞ@s&Mš¾$f<HÑ!D†>f¤Ô°hĞO¢˜ì9F'Ê‹/”p¸ÄdˆA²î²KkN†:RÔñáQ³DÑí$J
+IlÿÀìñcFœ6`.Í`Qa
+†;jîÜ`EÀ†+¾şô)vñN g1]¬ÑÏ/y(!âC„0˜Ø`y’†Ò›?ìØaEñD£¾*-Bµ¿DÕIc†Š$~„ÙÃÆJT’‹ÃãOxğè! ‰:Æiß^ù!DŠìqÃäƒo^ä¸’FÌ'ğg©¡äJ$KšXÃˆ?p'à€•ˆ2…2Œa@bÀáÄq,`BNáCEÀ°D7ÌY ÁA` ƒ% Ç¢‡ Ø ‡”À Çq8èñ(¢€@ 4ĞDEø°Ä-p!AÿÈøpŒP€@ÀĞÅ^À jpÂ&|ìÉ0‚Â ¼ÀÇ”ìÁŒz„é‹($ÔùC	B(¡„ p,àÀ]Äñ…Ì‘F` TFÁÁ=hâ&lÆ@ƒ/Ìğ™˜´Çbşa{ä0£$g’Iƒ§6¼ƒ©²†ªªkş1Ã¦qÂÉª6§é‹4ìX eĞC D2ÈğÁhğÀE	<PÃQ†“DœñÁ> ‘EU`&—²YC<È@Ã§zÄpƒ»Â8Ã6Ä°¦üşqf5ğ‘ÃqŠ™°½|ÈP0›¸Ö€«¯gƒÿ›z\Ã%¢,ÛC²'Tğc=œA‡MÑ €€`¨QÅ~”‘!O4ğC¥šÈé¦§< ùB´øşáf Ï0´$9
+Œ¦¿h&Œp˜j¬æ0ğQÃOmÃï¡ô¦grl™hÿ€öÚ:±€_à@†_$! ÛnÅ$a€;¬›‰Ïh-t«“È+Ãq Òë4«QË™ğÕŸ®Ùu×R'ŒƒÖj&~ì”nú¨1€	C´Æ4@E n¬!ápĞÅI€)¬œ/l<´š4šz³&ğ¼gîACÃS?¾ü6h½Gœ²ÉÃç¾*&Ë÷Ù‹N‰(;¨–şj«©¦CH0EÉbÀI PA
+9$ @ O¼ğl"cÆkØšªé%ïó’„n@°YUŒ7xKĞÎt½àªblš^ÅÂ75ì]Ğ|ä°+VÈÂ°¢#Ác8*Bn` 
+¨@	 @ä  N,EóÔb°£#ú«T’€÷@E±MâbL´¢Ñö€Å(rñˆRôTCõE(Ï2Jã$h 5rpŒ#$p 9Úñ  ;_+http://www.tokyobuddha.com/img/tmplbyTB.gifYimage/gifÓO+GIF89a  €     ÿÿÿ!ù   ,       ŒS ;_œhttp://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/ds/dsw.cgi?xx=58&&cnt=&&p=n&&md=j&&pg=Entry20050522_Mambo&&pf=MacPPC&&lng=en&&swh=1280x854&&cd=32&&pd=32&&rf=ÔUUTF-8O<Í<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META name="generator" content="http://www.movabletype.org/">
+
+<TITLE>Paranoia Vagrant: Wiki Just Got Interface</TITLE>
+
+<LINK rel="stylesheet" href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/index.rdf"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/atom.xml">
+
+<LINK rel="start" href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/" title="Home"><LINK rel="prev" href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/archives/2005/05/imgcon_memo.php" title="ImgCon Memo">
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'mambo.kuhp.kyoto-u.ac.jp';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires.toGMTString() : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY>
+
+
+
+<DIV id="MainArea">        <DIV id="Main">        
+                                <DIV id="HeaderArea">                        <DIV id="Header">                                <H1><A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/" accesskey="1">Paranoia Vagrant</A></H1>
+                                <P class="description">jotting down vague thoughts, racing through my mind</P>
+                        </DIV>
+                </DIV>
+                                
+                <DIV id="BodyArea-out"><DIV id="BodyArea-mid"><DIV id="BodyArea-in">                
+                        <P class="Navi">                                                <A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/archives/2005/05/imgcon_memo.php">Â« ImgCon Memo</A> |
+                        
+                        <A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/">ãƒ¡ã‚¤ãƒ³</A>
+                        
+                        </P>
+                
+                                                <DIV align="center"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-2904534716416418";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="2518843339";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-2904534716416418&dt=1116831598533&format=468x60_as&output=html&channel=2518843339&url=http%3A%2F%2Fmambo.kuhp.kyoto-u.ac.jp%2F~kacyo%2Farchives%2F2005%2F05%2Fwiki_just_got_i.php&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=008000&color_border=FFFFFF&cc=17&u_h=854&u_w=1280&u_ah=789&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+                        <DIV class="OneEntry">                                <H2 class="Entry-Date">2005å¹´05æœˆ22æ—¥</H2>
+                                <H3 class="Entry-Title" id="a000023">Wiki Just Got InterfaceÂ Â <SPAN class="Entry-Title-Cateory">[<A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/archives/tech/index.php">Tech</A>]</SPAN></H3>
+                                <DIV class="EntryBodyArea">                                        <DIV class="Entry-Body">                                                <P><A href="http://www.tiddlywiki.com/" target="_blank">TiddlyWiki</A>ãŒãŠã‚‚ã—ã‚ã„ã€‚ã—ã°ã‚‰ãå‰ã‹ã‚‰çŸ¥ã£ã¦ã¯ã„ãŸã®ã ã‘ã©ã€æœ€è¿‘ã‚ˆã†ã‚„ãè©¦ã™ã“ã¨ãŒã§ããŸã€‚ã‹ãªã‚Šã®éƒ¨åˆ†ã‚’JavaScriptã«ä»»ã›ã¦ã—ã¾ã†ã“ã¨ã§ã€ç”»é¢é·ç§»ãŒå…¨ç„¶ãªãã€ã‚¹ãƒˆãƒ¬ã‚¹ãªãä½¿ã†ã“ã¨ãŒã§ãã‚‹ã€‚ã„ã‚„ã€ã‚¹ãƒˆãƒ¬ã‚¹ãŒãªã„ã©ã“ã‚ã‹ã€ã‚€ã—ã‚æ¥½ã—ã„ã€‚ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ã‚¿ãƒ«ãªæ¤œç´¢ã‚‚ã€ãªã‹ãªã‹æ¥½ã—ã„ã€‚</P>
+
+<P>Wikiã¯å¤§å¤‰ä¾¿åˆ©ãªã‚“ã ã‘ã©ã€ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ãŒã‚ã¾ã‚Šã«ã„ã‘ã¦ãªã„ã®ã§ã€ä½¿ã„ã¥ã‚‰ã„é¢ã‚‚ã‚ã‚‹ã€‚<A href="http://wiki.org/" target="_blank">ã‚ªãƒªã‚¸ãƒŠãƒ«ã®Wiki</A>ã‹ã‚‰ã€ã»ã¼æœ€é«˜å³°ã¨ã„ãˆã‚‹<A href="http://wikipedia.sourceforge.net/" target="_blank">MediaWiki</A>ã¾ã§ã€ä¸–ç•Œä¸­ã«ã¯æ˜Ÿã®æ•°ã»ã©ã®WikiãŒå­˜åœ¨ã™ã‚‹ã‘ã©ã€ãã®é•ã„ã¯ã‚ãšã‹ãªã‚‚ã®ã ã€‚ã§ã‚‚ã“ã®<A href="http://www.tiddlywiki.com/" target="_blank">TiddlyWiki</A>ã¯ã‚ªãƒªã‚¸ãƒŠãƒ«ãŒç™»å ´ã—ãŸã¨ãã«åŒ¹æ•µã™ã‚‹ã€ç¬¬äºŒã®ãƒ–ãƒ¬ã‚¤ã‚¯ã‚¹ãƒ«ãƒ¼ã ã¨æ€ã†ã€‚ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã‚’å·¥å¤«ã™ã‚‹ã ã‘ã§ã€ã“ã‚“ãªã«å°è±¡ãŒå¤‰ã‚ã£ã¦ã—ã¾ã†ã¨ã¯æ€ã‚ãªã‹ã£ãŸã€‚</P>
+
+<P>æŠ€è¡“ãŒã‚ã£ã¦é¡”ãŒã‚ã‚‹ã€‚ã©ã¡ã‚‰ã‚‚å¤§åˆ‡ã§ã€ä¸€æ–¹ãŒæ¬ ã‘ã‚‹ã ã‘ã§å…¨ç„¶é•ã†ã€‚</P>
+
+<P>Googleã®<A href="http://gmail.google.com/" target="_blank">GMail</A>ãŒç™»å ´ã—ã¦ããŸã‚ãŸã‚Šã‹ã‚‰ã€JavaScriptã‚’ç©æ¥µçš„ã«ä½¿ã†äººãŒå¤šããªã£ãŸã€‚JavaScriptã¯ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆå´ã®ãƒã‚·ãƒ³ã§å‹•ä½œã™ã‚‹ã®ã§ã€ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿æ€§èƒ½ã®ã‚¤ãƒ³ãƒ•ãƒ©ãŒã ã„ã¶æ•´ã£ã¦ããŸã¨ã„ã†è¦å› ã‚‚ã‚ã‚‹ã®ã ã‚ã†ã€‚å€‹äººçš„ã«ã¯ã€ŒJavaScriptã‚’ã“ã‚“ãªã«ã‚‚ä½¿ã£ã¦ã‚‚ã„ã„ã‚“ã ã€ã¨ã„ã†å°è±¡ã ã€‚ãªã«ã‹ã¨å•é¡Œã«ãªã‚‹ã“ã¨ãŒå¤šã‹ã£ãŸJavaScriptã ã‘ã©ã€ã‚ˆã†ã‚„ãæœ¬æ¥ã®å§¿ã‚’å–ã‚Šæˆ»ãã†ã¨ã—ã¦ã„ã‚‹ã€‚<A href="http://gmail.google.com/" target="_blank">Google Maps</A>ã‚‚ã¾ãŸã™ã”ã„ã‚¦ã‚§ãƒ–ãƒ»ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã ã€‚æŠ€è¡“ãŒç™»å ´ã—ã¦ã€ãã‚ŒãŒæœ‰åŠ¹åˆ©ç”¨ã•ã‚Œå‡ºã™ã«ã¯ã€ã™ããªãã¨ã‚‚ï¼•å¹´ã¯ã‹ã‹ã‚‹ã€‚ã“ã‚Œã‹ã‚‰ã‚‚ãƒ¯ã‚¯ãƒ¯ã‚¯ã™ã‚‹ã‚ˆã†ãªã‚‚ã®ãŒç™»å ´ã—ã¦ãã‚‹ã ã‚ã†ã€‚</P>
+
+<P><A href="http://www.tiddlywiki.com/" target="_blank">TiddlyWiki</A>ã‚’æ”¹è‰¯ã—ãŸï¼ˆã»ã¨ã‚“ã©å¤‰ã‚ã‚‰ãªã„ã‘ã©ï¼‰<A href="http://rakusai.org/kamiwiki/" target="_blank">KamiWiki</A>ã‚‚ä»Šå¾Œã©ã†ãªã‚‹ã‹æ¥½ã—ã¿ã ã€‚ã“ã®æ´›è¥¿ã•ã‚“ã¯<A href="http://www.kamilabo.jp/" target="_blank">ç´™</A>ã®é–‹ç™ºè€…ã§ã€ã»ã‹ã«ã‚‚é¢ç™½ãã†ãªã‚‚ã®ã‚’ä½œã£ã¦ã‚‹ã€‚å°Šæ•¬ã§ãã‚‹ã‚ˆã­ã€‚</P>
+                                        </DIV>
+                                        
+                                        
+                                        
+                                        
+                                        <DIV class="Entry-Foot">                                                æŠ•ç¨¿è€…ï¼štakayuki 
+                                                 2005å¹´05æœˆ22æ—¥ 01:08
+                                        </DIV>
+                                </DIV>
+                                        
+                                
+                                                                <DIV class="Entry-Trackback">                                        <H2 id="trackbacks">ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯</H2>
+                                        <DIV class="TrackbackBodyArea">                                        <P>ã“ã®ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯URL:<BR>
+                                        http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/mt/mt-tb.cgi/23</P>
+                                        
+                                        
+                                        </DIV>
+                                </DIV>
+                                
+                                
+                                                                <DIV class="Entry-Comments">                                        <H2 id="comments">ã‚³ãƒ¡ãƒ³ãƒˆ: Wiki Just Got Interface</H2>
+                                        <DIV class="CommentsBodyArea">                                        
+                                        </DIV>
+                                                                                                                        <H2>ã‚³ãƒ¡ãƒ³ãƒˆã—ã¦ãã ã•ã„</H2>
+                                        <DIV class="CommentsBodyArea">                                        <FORM method="post" action="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)"><INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="23">
+
+<DIV id="name_email"><P><LABEL for="author">åå‰:</LABEL><BR>
+<INPUT tabindex="1" name="author" id="author" value=""></P>
+
+<P><LABEL for="email">ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹</LABEL><BR>
+<INPUT tabindex="2" name="email" id="email" value=""></P>
+</DIV>
+<P><LABEL for="url">URL:</LABEL><BR>
+<INPUT tabindex="3" type="text" name="url" id="url" value="">
+
+æƒ…å ±ã‚’ç™»éŒ²ã™ã‚‹?
+<INPUT type="radio" id="remember" name="bakecookie" onclick="rememberMe(this.form)"><LABEL for="remember">ã¯ã„</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">ã„ã„ãˆ</LABEL><BR style="clear: both;"></P>
+
+<P><LABEL for="text">ã‚³ãƒ¡ãƒ³ãƒˆ:</LABEL> <BR>
+<TEXTAREA tabindex="4" name="text" rows="10" cols="50" id="text"></TEXTAREA></P>
+
+<DIV align="center"><INPUT type="submit" name="preview" value="Â ç¢ºèªÂ ">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="Â æŠ•ç¨¿Â ">
+</DIV>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined && !document.comments_form.email.value)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined && !document.comments_form.author.value)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined && !document.comments_form.url.value)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+
+                                        </DIV>
+                                        
+                                        
+                                </DIV>
+                                
+                        </DIV>
+                                                
+                </DIV></DIV></DIV>
+
+
+
+        </DIV>
+</DIV>
+
+<DIV id="Side2Area">        <DIV id="Side2">        
+                                <DIV class="SideModule-out"><DIV class="SideModule-in">                        <DIV class="Side-Title">                        Search
+                        </DIV>
+                        <DIV class="Side-Body">                                <FORM method="get" action="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/mt/mt-search.cgi">                                <INPUT type="hidden" name="IncludeBlogs" value="2">
+                                <P><LABEL for="search" accesskey="4">ã‚µã‚¤ãƒˆå†…ã®æ¤œç´¢</LABEL></P>
+                                <INPUT type="text" id="search" name="search" size="18"><BR>
+                                <INPUT type="submit" value="æ¤œç´¢">
+                                </FORM>
+                        </DIV>
+                </DIV></DIV>
+                                
+                                <DIV class="SideModule-out"><DIV class="SideModule-in"><DIV class="Side-TitleEx">
+Other Contents
+</DIV>
+<DIV class="Side-BodyEx"><UL>
+<LI><A href="http://d.hatena.ne.jp/cine-paranoia/" target="_blank">é›‘æ„Ÿ</A></LI>
+<LI><A href="http://b.hatena.ne.jp/cine-paranoia/" target="_blank">ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯</A></LI></UL>
+</DIV>
+</DIV></DIV>
+
+                                
+                <DIV class="SideBottom">                        <P><A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/">TOPãƒšãƒ¼ã‚¸ã¸</A></P>
+                        <P><A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/archives.html">å…¨ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®ä¸€è¦§ã¸</A></P>
+                        <P><A href="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/index.rdf">Syndicate this site (XML)</A></P>
+                        
+                        <P>Powered by<BR><A href="http://www.movabletype.org">Movable Type 3.151-ja</A></P>
+                        <P><A href="http://www.tokyobuddha.com/"><IMG src="http://www.tokyobuddha.com/img/tmplbyTB.gif" alt="template by tokyobuddha" width="128" height="22" border="0"></A></P>
+                </DIV>
+
+<A href="http://tech.bayashi.net/"><SCRIPT type="text/javascript" language="JavaScript">
+<!--
+
+//----- ãƒ­ã‚°å–å¾—CGIã¸ã®ãƒ‘ã‚¹(ç›¸å¯¾ãƒ‘ã‚¹ã‚‚ã—ãã¯URL)
+var pa = "http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/ds/dsw.cgi";
+//----- ãƒšãƒ¼ã‚¸å(åŠè§’è‹±æ•°æ–‡å­—ã®ã¿)
+var pg = "Entry20050522_Mambo";
+//----- å‡ºåŠ›ã‚¿ã‚¤ãƒ—(g=ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚«ã‚¦ãƒ³ã‚¿, m=gifãƒ­ã‚´, n=å‡ºåŠ›ãƒŠã‚·)
+var p = "n";
+//----- ã‚«ã‚¦ãƒ³ãƒˆã‚¢ãƒƒãƒ—ã—ãªã„ãªã‚‰ "no"
+var cnt = "";
+
+var a="&&"; var pf=navigator.platform; var lng=navigator.language; var swh=screen.width+"x"+screen.height; var cd=screen.colorDepth; var pd=screen.pixelDepth; var rf=document.referrer; document.write("<img src='"+pa+"?xx=",new Date().getSeconds(),a+"cnt="+cnt+a+"p="+p+a+"md=j"+a+"pg="+pg+a+"pf="+pf+a+"lng="+lng+a+"swh="+swh+a+"cd="+cd+a+"pd="+pd+a+"rf="+rf+"' alt='ã‚¢ã‚¯ã‚»ã‚¹è§£æCGI' border='0' />");
+// -->
+</SCRIPT><IMG src="http://mambo.kuhp.kyoto-u.ac.jp/~kacyo/cgi-bin/ds/dsw.cgi?xx=58&&cnt=&&p=n&&md=j&&pg=Entry20050522_Mambo&&pf=MacPPC&&lng=en&&swh=1280x854&&cd=32&&pd=32&&rf=" alt="ã‚¢ã‚¯ã‚»ã‚¹è§£æCGI" border="0">
+
+
+</A>
+
+        </DIV>
+</DIV>
+
+
+
+</BODY></HTML>_Khttp://mambo.kuhp.kyoto-u.ac.jp/~kacyo/archives/2005/05/wiki_just_got_i.phpYtext/html¡Ñ Õ!"#$_WebResourceFrameNameO	İ<HTML><HEAD><STYLE type="text/css"><!--
+.ch{cursor:pointer; cursor:hand;}.textcolor{color: #000000 }//--></STYLE><SCRIPT type="text/javascript"><!--
+function ss(w,id) {window.status = w;return true;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href}}function cs(){window.status='';}//--></SCRIPT></HEAD><BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE height="60" width="468" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD><TABLE height="58" width="466" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw0" class="ch" onfocus="ss('www.jmdp.or.jpã¸','aw0')" onmouseover="return ss('www.jmdp.or.jpã¸','aw0')" onmouseout="cs()" onclick="ga(this,event)" align="center" valign="middle"><DIV style="overflow:hidden; word-wrap: break-word; width:464;"><FONT style="font-size:20px" face="impact, poster bodoni, geneva"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BcYhpWX-RQtaMHbmoaMTlnYkCkb2RAbyTWsDKsAIAEAEYASAAKAIwADgAQLj3vgGCARdjYS1wdWItMjkwNDUzNDcxNjQxNjQxOIgBAZABv-gFqgEKMjUxODg0MzMzObIBGG1hbWJvLmt1aHAua3lvdG8tdS5hYy5qcLoBCTQ2OHg2MF9hc8ABAtoBS2h0dHA6Ly9tYW1iby5rdWhwLmt5b3RvLXUuYWMuanAvfmthY3lvL2FyY2hpdmVzLzIwMDUvMDUvd2lraV9qdXN0X2dvdF9pLnBocA&num=1&adurl=http://www.jmdp.or.jp/%3Fas_grant&client=ca-pub-2904534716416418" onfocus="ss('www.jmdp.or.jpã¸','aw0')" onclick="ha('aw0')" onmouseover="return ss('www.jmdp.or.jpã¸','aw0')" onmouseout="cs()" class="textcolor" style="text-decoration:none">æ—¥æœ¬éª¨é«„ãƒãƒ³ã‚¯ã€€</A></FONT><BR><FONT style="font-size:14px" class="textcolor" face="arial,sans-serif">ã‚ãªãŸã®æ€ã„ã‚„ã‚ŠãŒã€å‘½ã‚’æ•‘ã†ã€‚ ã¾ãšã¯ã€è‰¯ãçŸ¥ã‚‹ã“ã¨ãŒç¬¬ä¸€æ­©ã§ã™ã€‚</FONT><BR><FONT style="font-size:16px" class="textcolor" face="arial,sans-serif"><SCRIPT type="text/javascript"><!--
+if(0) {document.write("www.jmdp.or.jp");}//--></SCRIPT></FONT></DIV></TD></TR><TR><TD height="1" bgcolor="#ffffff" align="right"><FONT style="font-size:10px" class="textcolor" face="arial,sans-serif">Â å…¬å…±ã‚µãƒ¼ãƒ“ã‚¹åºƒå‘Š by GoogleÂ </FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_¬http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-2904534716416418&dt=1116831598533&format=468x60_as&output=html&channel=2518843339&url=http%3A%2F%2Fmambo.kuhp.kyoto-u.ac.jp%2F~kacyo%2Farchives%2F2005%2F05%2Fwiki_just_got_i.php&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=008000&color_border=FFFFFF&cc=17&u_h=854&u_w=1280&u_ah=789&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I N U g v Œ$V$$˜$¡$¿$ÅK€KºKÌKÓRERsR}R„R²SQSZS`1‰‹™°š‘š¤             %              œT

@@ -1,0 +1,1943 @@
+bplist00”àç_WebSubresources_WebMainResource_WebSubframeArchivesØ@ !"#$%&'()*+,-./0123456789:;<=>?@ABEHKNQTWZ]`cfilortwz}ÄÅÑ”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOvar HOST = '';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '/', 'markcarey.com', '');
+    setCookie('mtcmtmail', f.email.value, now, '/', 'markcarey.com', '');
+    setCookie('mtcmthome', f.url.value, now, '/', 'markcarey.com', '');
+}
+
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', 'markcarey.com');
+    deleteCookie('mtcmthome', '/', 'markcarey.com');
+    deleteCookie('mtcmtauth', '/', 'markcarey.com');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+function formatStr (v) {
+    if (!document.selection) return;
+    var str = document.selection.createRange().text;
+    if (!str) return;
+    document.selection.createRange().text = '<' + v + '>' + str + '</' + v + '>';
+}
+
+function insertLink () {
+    if (!document.selection) return;
+    var str = document.selection.createRange().text;
+    if (!str) return;
+    var my_link = prompt('Enter URL:', 'http://');
+    if (my_link != null)
+        document.selection.createRange().text = '<a href="' + my_link + '">' + str + '</a>';
+}
+
+function mtShortCuts () {
+    if (event.ctrlKey != true) return;
+    if (event.keyCode == 1) insertLink();
+    if (event.keyCode == 2) formatStr('b');
+    if (event.keyCode == 9) formatStr('i');
+    if (event.keyCode == 21) formatStr('u');
+}
+
+function emoticon(smiley) {
+	var txtarea = document.comments_form.text;
+	smiley = ' ' + smiley + ' ';
+	if (txtarea.createTextRange && txtarea.caretPos) {
+		var caretPos = txtarea.caretPos;
+		caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? smiley + ' ' : smiley;
+		txtarea.focus();
+	} else {
+		txtarea.value  += smiley;
+		txtarea.focus();
+	}
+}
+_'http://www.bradfallon.com/discussion.js_application/x-javascript”O			body{margin:0px;padding:0px;background:#ffffff;color:#000000;font-size: 12px; font-family:"Verdana", Verdana, Sans-Serif;}
+			a{color:#003366;}
+			a:hover{color:#E0AD12;}
+			#logo{padding:0px;margin:0px;}
+			div#mainClm{float:right;width:78%;padding:30px 7% 10px 3%;border-left:dotted 1px #E0AD12;}
+img { border: none }
+.buttons {text-align: right}
+
+img.smiley {margin-bottom : 5px;
+	margin-left : 5px;
+	margin-top : 5px;
+	margin-right :5px;}
+
+			div#sideBar{margin:20px 0px 0px 1em;  padding:0px;text-align:left;color: #003366}
+			#header{padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;border-top:1px solid #eeeeee;border-bottom:dotted 1px #E0AD12;background:#F5E39E;color:white;}
+			h1,h2,h3,h4,h5,h6{padding:0px;margin:0px;}
+			h1{padding:25px 0px 10px 5%;border-top:double 0px #BF5C00;border-bottom:solid 1px #E89E47;color:white;background:#003366;font:bold 300% Verdana,Sans-Serif;letter-spacing:-2px;}
+
+h1 a {text-decoration: none; color: white}
+h1 a:link {text-decoration: none}
+h1 a:hover {text-decoration: none; color: white}
+h1 a:visited {text-decoration: none}
+
+			h2{color:#9E5205;font-weight:bold;font-family:Verdana,Sans-Serif; letter-spacing:-1px;}
+			h3{margin:10px 0px 0px 0px;color:#999999;font-size:80%;}
+			h4{color:#aa0033;}
+h5{color: #003366}
+			h6{color:#B8A80D;font-size:140%;}
+			#sideBar ul{margin:0px 0px 33px 0px;padding:0px 0px 0px 0px;list-style-type:none;font-size:90%;}
+			#sideBar li{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type:none;font-size:90%;}
+			#description{padding:0px;margin:7px 12% 7px 5%;color:#9E5205;background:transparent;font:bold 100% Verdana,Sans-Serif;}
+			.blogPost{margin:0px 0px 30px 0px size:8px}
+			.blogPost strong{color:#000000;font-weight:bold;}
+			#sideBar ul a{padding:2px;margin:1px;width:100%;border:none;color:#999999;text-decoration:none;}
+			#sideBar ul a:link{color:#999999;}
+			#sideBar ul a:visited{color:#999999;}
+			#sideBar ul a:active{color:#ff0000;}
+			#sideBar ul a:hover{color:#DE7008;text-decoration:none;}
+			pre,code{color:#999999;}
+			strike{color:#999999;}
+			.bug{padding:5px;border:0px;}
+			.byline{padding:0px;margin:0px;color:#444444;font-size:80%;}
+			.byline a{border:none;color:#968A0A;text-decoration:none;}
+			.byline a:hover{text-decoration:underline;}
+
+.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size: 8pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+                text-align:left;
+		}
+.calendar  th {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size: 8pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+                text-align:left;
+		}
+.calendar td {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size: 8pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+                text-align:left;
+		}
+	
+	.calendarhead {	
+		font-family:palatino, georgia, times new roman, serif;
+		color:#666600;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+		letter-spacing: .3em;
+  		background:#FFF;
+  		text-transform:uppercase;
+		text-align:left;			
+		}
+
+.forumline	{ background-color: #FFFFFF; border: 2px white solid; }
+
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #96CDCD; }
+td.row2	{ background-color: white; }
+td.row3	{ background-color:  #9FB6CD; }
+
+
+
+
+th	{
+	color: white; font-size: 8pt; font-weight : normal;
+	background-color: #191970; height: 18px;
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-color:#D1D7DC; border: black; border-style: solid; height: 18px;
+}
+
+
+td.cat,td.catHead,td.catBottom {
+	height: 18px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 18px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #B0E0E6; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 8pt; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+
+.topictitle	{ font-weight: bold; font-size: 8pt; color : black; }
+a.topictitle { font-weight: bold; font-size: 8pt; color : black; text-decoration: none}
+a.topictitle:hover { font-weight: bold; font-size: 8pt; color : red; text-decoration: none}
+a.topictitle:visited { font-weight: normal; font-size: 8pt; color : black; text-decoration: none;}
+
+
+.postdetails		{ font-size : 8pt; color : black; }
+
+
+.postbody { font-size : 8pt; line-height: 18px}
+a.postlink:link	{ text-decoration: none; color : #444D7D }
+a.postlink:visited { text-decoration: none; color : #626EB2; }
+a.postlink:hover { text-decoration: underline; color : #507340}
+
+.name			{ font-size : 11px; color : #000000;}
+_$http://www.bradfallon.com/styles.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascript”OùGIF89aR  Ê LLJŸÁÓÒÒÒÏ‹Ã ]å‹‹‹ııı˙î/¸£L§§§∏∏∑Íπà eóÕﬂË2}£¯√èôôò1uó‡‡‡“““ËËË<á¨ÍÍÍÂÂÂˆÿª™«’¸¸¸àáÜ‚zÏÏÏ÷sï®≤•º«√√√˘˘˘||zk°º∏ŒŸ665ÕÃ∫∆—÷¯¯¯Á∆¶œœŒŸŸŸˇâÊ‡ŸÙÂ◊âµÀí•ÆOsw©¡„„„ÓÓÓrïßﬁ≠~Iã¨kkfdúπ^ûælòı—≠Wä£‚·À¨¨£Í“∫kî©˘Õ°Ö¶∑ﬁ⁄…ÇÇ}˘∏yû√’∫√»ÔÄUÇô≥œ›˘Ö˘¨`˜úD˘„Õ«… bã‚ ≤òæ–≈Õ–ÚÎÂÄØ∆ˆ˘˙æ’·Â±˛˛˝\\Z”~*sûì∫Œ˙ÛÏ‡ÏÒÊÂ‡€†e˝¥lQî∂ˇˇˇ˛˛˛˝˝˝˙¸˝sõØ¯˙˚fê•¸é"uuqŸóUÊÏÔÔÔÎ‹ã:˘˚¸‘’÷ÿ‹ﬁÈÛÙÙÙÒˆ˘üüûˇˇ˝ëêêŸﬁ·ÓÁ‡Ë•cˇˇˇ!˘   ,    R   ˇÄÇÉL$^äãåçéèêëíéWÑôÇT8_af¢£§•¶ß®©™¶YW^$òögá´∑∏π´gºgfghk_RTô¥$§{
+,∫Œœ¢Ωºh‘‘◊<HÑ3»§#y#\&\F!–È£“”’ÿÔ"ÚYsÇLX§&f◊»I•Óªj÷‡]ì«PDäá:Æ™ê•‘û<fDÇ\K±ÊNa<Pë˜∞e
+¯H”¿AQwL‘–hÜr& †)»+ÃïkMûlòCã-aJΩsáé0fîÇ∞'≈Üe˛	  `≈Õ]—dap'Ö¬Üˇ]>t∫`*’ª:—ÅÉ	©úX∏%œ3[Çr!™4Hv@St‘ñÅa'Àj@!f»J0<HÒÇÃãNz¿§ÂHé<∞ÇªD°FÂŸc¬W4Ü÷0AÉKî°;x8‡QÅALL˜' R@pí¡¬ÅË@iÉæ≈'Ì”ﬂq™eHã'^¥PR£ç*RH°è( @√‹!Å∆ô±bpB
+gx'C‡‡É e¯@·e¿ 
+bX  2@¡Mp‡AG¥¿J»·o®pÄ/–'¿é/ƒxCπÇ"Î(0Çˇ{$†¿
+4‡fnàaÇ`ÒT∞ƒ5d ÖÄ@A¯`¡\—¡â–`¡x–ú˜µÑ Op0@nJ,@_1qÄûX`Ë
+‚A  ò{|Â§_a¬`V&w¿¿^Ò¶jP–¡÷±â¬õpÄ|81@ –BÄ*°}Ä^cjDAÄa £‰/ ’∞	òë
+p•<P>l\∞ÉX1êD	$H‡¿¨Âa≠Æ
+@m8—ƒ¨∂∆€—ÇÜ Î¡ƒ+A<ÙEM‰ ‡ÜË1ä úêáPˇHA¿uP@É2HaÉ$"E4t‡ÄXÑ˝ı·áå1@(·b*X7´B]L,T	’PÄ	n‰ Ä	9@B&¸`ƒQ¬TÅTq‡ö†0Å´@ò*Am)wØA€™ ∞º Ë˜
+Bê-’ê@?¸Pƒ	@ë\ %U®A±k
+@$ÊERpÅ©ÖznA°¬ñNl´zã†mpÄ∂ﬂDAË@E[¸d F‰qB‚?¸@òﬁ!¿◊)„÷ë0Ozë•öz¿/´Ó∑ﬂ(1∆ıLÅÇh”Ä˙≈U± ƒRó≥ñ≤¿%n%†pAÛ˛Õ}Ù√No4ÇAL¡=˜*(¬ı
+ÇC0p ÷dÄtò@0é›πØ~ƒ›‹ß?Ω˝ÔÉ ÙŸ@ÇLÃ pùÁ¯¿Jê†ª˛Ú◊AœÖÜ î¿`»ÇWêÇí0∞Mh·V@á–‡â4@¢ßàƒXÒäXÃ¢∑®EÆ 
+
+àAt@;M¸!3 ÄÑ†"|‡çoåÅ·H«:¬QéxÃ£˜»«>∆¿B"3fB%ò_¿»F:Úëêå§$'IIGñ!"?$D   ;_*http://www.bradfallon.com/images/reply.gifYimage/gif”OzGIF89a 	 ≥	    ˇˇˇ∏∏∏˜˜˜˝˝˝ÈÈÈ‹‹‹ÛÛÛˇˇˇ                  !˘  	 ,     	  '0%@©ºÑmÒ‹CÂDY„†äH!∑ca‹Ç{á‡Á£äH ;_2http://www.bradfallon.com/images/icon_minipost.gif”O+GIF89a  Ä        !˘    ,       D ;_+http://www.bradfallon.com/images/spacer.gif”””””””””””””””””””””””””””””””””””CDO¨GIF89a  ≥ EEEˇÍ    ˇˇˇˇŒ ˇ… ˇ¥ ˛ù ˇ˛ìˇ˝ˇˇ«ˇˇÎˇÂ          !˘   ,       Y∞I	jù∏’•"pIúƒL@gûp∫jà)¿w j õπÇ
+Ä¯¡pÜJQ¿l:ì €`J
+P∞JΩ™4Z˜∫NÚóB ﬁoY¶b®Üñe6â  ;_1http://www.bradfallon.com/images/icon_biggrin.gif”FGOÆGIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˇ¥ ˛ù ˇ˛ìˇ˝ˇˇˇˇˇ«333ˇˇÎˇÂ       !˘   ,       [–IjùÿU¶ŒpúÉLA''¶´vòqj
+ü?Ç*p∆ÇÖ !«í”¢	X<+ŸkªÆYAb<vö¡†¡5”XjÇ\˛
+¯¬0√≤‘& ;_/http://www.bradfallon.com/images/icon_smile.gif”IJO´GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇÂ ˇˇÎ            !˘   ,       XêIjùò’ïŒpúCLA'ú∞êÆ⁄Ò¬1®%&p˚'Ç*pË˝nCÂÄkíïû3®¶'Öpe=	æﬂßN3¸ 
+ôäU&∏›≥L≈@73,m ;_-http://www.bradfallon.com/images/icon_sad.gif”LMOÆGIF89a  ≥ ˇÍ EEE   ˇˇˇˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇÂ ˇˇÎ         !˘   ,       [∞Ijù∏U¶"pIúÑLA''¶´Üòqj
+üøÇ*p∆Çá
+"«íúÏı:=+‡`ª,Ñ´@V¿ÌvaA6”XÍı¨ T¯√0√≤‘& ;_3http://www.bradfallon.com/images/icon_surprised.gif”OPO™GIF89a  ≥ ˇˇˇ   ˇÍ EEEˇŒ ˇ… ˇ¥ ˛ù ˇÂ ˇ˝ˇ˛ìˇˇÎˇˇ«         !˘   ,       W∞I9jù∏’≈î"åI"úc0@úÎ6rºµ+Ô±´€Æ00®ΩP6‚ ëÇ°FÜ
+¡IEÕÙy,Ä(¬i%`'ÉpaΩ6g1É‹Ä}g4ª$ ;_-http://www.bradfallon.com/images/icon_eek.gif”RSO´GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇÂ ˇˇÎ            !˘   ,       XêIjùò’ïŒpúCLA''¶´vòqj	ü?Ç*p∆ÇÜ !«í\ÛÙ¨¶'Öp∏˛d/¬N3(^0-çU&∏›kQ¿@73,Km ;_2http://www.bradfallon.com/images/icon_confused.gif”UVO¨GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇˇˇˇÂ ˇˇÎ         !˘   ,       Y∞Ijù∏UñŒpúCLAgûp∫j««k+Ï;¿Ô™¿Åß¯vECÂp4ûxe¿vÉE+ÉÍmAPi≤NòÄ ¢ãﬂX∆:ﬁo∂(`®Çñe6â  ;_.http://www.bradfallon.com/images/icon_cool.gif”XYOPGIF89a  ≥ EEEˇÍ    ˇˇˇˇŒ ˇ… ˇ¥ ˛ù ˇ˝ˇ˛ìˇˇ«ˇˇÎˇÂ          !ˇNETSCAPE2.0   !˘  ,       Z∞I	jù∏’•R",ÇÄAy †òhúÆTr
+1ÄörÎ)\a∞…éC%<¶î DiJ-A	©Åv;Y ¨Ä€-4£j¶Q“Öxú‡nx1c∑d" !˘  ,     ∞I$[®8ÎÕ´Ëüa¢4ŸŸD !˘
+  ,     PH9jç !˘
+  ,     0H)jç !˘
+  ,     PH9jç !˘  ,     0H)jç ;_-http://www.bradfallon.com/images/icon_lol.gif”[\OÆGIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˇ¥ ˛ù ˇ˛ìˇ˝ˇˇˇˇˇ«ˇˇÎˇÂ          !˘   ,       [∞Ijù∏’•ŒpúÉLA'ú∞êÆ⁄aæ'jä	ˇ Ç*`p∆°P9ƒûAf¿Ñ-+ÉÿÒ`WÅ¨ A&;Õ`∞mœXkÇ\˛
+¯¬0√≤–& ;_-http://www.bradfallon.com/images/icon_mad.gif”^_O∞GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ  ˇ… ˇ¥ ˛ù ˇ˝ˇ˛ìˇˇ«ˇˇÎ333ˇÂ       !˘   ,       ]–Ijùÿ’•Rpú√LA''¶´ñòqj
+üøÇ*p∆ÇÜJ"«í£	`<+ŸkªÆYa<vö¡† Œ*ñ∫–~”2Éﬁ0Ã∞,5 ;_.http://www.bradfallon.com/images/icon_razz.gif”abOäGIF89a  ƒ ˙≥ ˝  ‡l ˜é[ˇ˜Õ˚hh˛∂u˜ú ˇ“á¸§iˇ∑∑˛òòÁsJEEEˇ‰‰ˇ˙ıˇÃÃˇÍ ¯ÄÄˇ¸È˙◊ ˛„ ˘¶¶ˇ¸˛ÀÉˇ˛ì„__ŸH6   ˇÂô˙¡{   !ˇNETSCAPE2.0   !˘  ,       f‡'äMYéËWNDñ'⁄∞◊›¡—åMÀ›@Nnß ¸ÄAòä`ãù8]#c„<≠ë †î©P*»àW[∫  dÂ|.ùç8ÿw@ mÂx·DqjÉ:<Éââá2ylR)<&D#! !˘
+  ,     Q‡'~œD∆8ñ]áº∆0öﬂk±H‘ˆùN.O\¢[Õê xò‚ôH ´ÕÉTõAœ f»èPÑIxEhó¡„¯∫JT≠⁄E! !˘2  ,     H‡'äNπå®AJªc˘µÙ˜í3]üjõ+πWOTõ-$ãE◊RÕBgâJÆöèÑö-¿ÆÀë‚%-¶Ã3Ã|n´Q¢Îu-
+ !˘
+  ,     P‡'äAc:u‚√X~n˝¡"A◊6∫∫;ƒFhâl4CÇ‡1`xàf"Å0®5èu0e|<Éó<B&¡ú<Ã;Ê~€Á)—tJÖ  !˘
+  ,     Q‡'~ëe¡8ñ◊Ω¡1öﬂk±ò’ˆùÆO;d\¢[- »Pï^‰…åÄÂz  ÇC/ >» äPTADhØó¡„¯∫J‰ı⁄E! ;_1http://www.bradfallon.com/images/icon_redface.gif”deOÚGIF89a  ƒ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇˇˇˇ«ˇˇÎˇÂ  åÿÅª÷^^^                                                !ˇNETSCAPE2.0   !˘  ,       \ $äAYé(T. q'∞‹CåA+‹@Anß:¸ÄAòJaC"	∫¿¡&8™ Ç°tp:µ•¶˜∆7tgæUﬂY•j0x è!èNË˜ı2ÉQ)<&D#! !˘  ,      $@‰Hûd“úMÇæ0lûB !˘
+  ,     `‚@§ìÑ !˘
+  ,     
+  é@íå¶â&! !˘
+  ,       @§HûdÇBI !˘
+  ,     `“ dìêh™B€! !˘
+  ,     `‚@§ìÑ !˘
+  ,     
+  é@íå¶â&! !˘
+  ,      @‰Hûh
+ò"ã&i ;_-http://www.bradfallon.com/images/icon_cry.gif”ghOÏGIF89a  ƒ EEEˇÍ    ˇŒ ˇ… ˛ù ˇ˝ˇ¥ ˇ  ˇ˛ìˇˇ«˛* ˛mñññˇÂ ˇˇÎ                                                !˘   ,       i  @§híêπòèí$É*2Ö°F†C¡à5@NGÙ @¬  Íö±‰- h>õÑÇh)@T©]·∞•"ƒ≥ò,ºøc—¿IwdG∆k+Ò¨:G(FààÑ() èZ#åÖ&ì(! ;_.http://www.bradfallon.com/images/icon_evil.gif”jkOÓGIF89a  ƒ EEEˇÍ    ˇŒ ˛ù ˇ˝ˇ¥ ˇ  ˇˇˇˇ˛ìˇ… ˇˇ«˛* ñññ333˛mˇˇÎ                                             !˘   ,       k  D§híë…ò–í$É*>D±E†Òà5@NGÙ @¢  Íö±‰- h>õ
+Çh)8T©]Å¬∞•ƒ≥ò,ºøc— ‡pŸë± Ô«J<ÉÉG(F1|FZ(% ëZ#éà&ï(! ;_1http://www.bradfallon.com/images/icon_twisted.gif”mnOÂGIF89a  ≥ EEEˇÍ    ˇŒ ˇ… ˇˇˇ˛ù ˇ¥ ˇ˛ìˇˇ«ˇ˝ˇÂ ˇˇÎ         !ˇNETSCAPE2.0   !˘
+  ,       ^∞I	jù∏UñpäúÉL@'g¶´ÜE„:®%º\Pß‹t∏dÚPA»^;(Å	0=cØ¿¥2àyOÇJ”˝û>Ú`Ä–c `@®◊iô a(fX5 !˘
+  ,     
+∞àY‰ºVÿ†g !˘
+  ,     ∞âFÂ¨≥‘¶˘. !˘2  ,     
+P¥Ÿ$-¥·Ç'è !˘  ,	 
+    ∞	—" !˘
+  ,     ∞îFe¥Å+0ËZÜE !˘   ,     ∞I!≠2T]U¯Õ*B)¶@LM—ZXY…r !˘   ,     ∞I%[®8W°∑Aä '&1^° !˘   ,     ∞I!≠8K•[òBhÖîPHÖâñ‰(F ;_2http://www.bradfallon.com/images/icon_rolleyes.gif”pqO™GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇÂ ˇˇÎ            !˘   ,       WêIjùò’ïŒpúCLA'ú0êÆ⁄Ò∆0®%&p˚/Ç*pË˝`CÂÄ√%+ΩfP4OÖpUı≈Ç:Õ`†ò≥ÑkLh∑’¢ÄanfX⁄$ ;_.http://www.bradfallon.com/images/icon_wink.gif”s_5http://www.bradfallon.com/mt-static/images/spacer.gif”uvO∑GIF89ax $ ˜  ˇˇˇˇˇÃˇˇôˇˇfˇˇ3ˇˇ ˇÃˇˇÃÃˇÃôˇÃfˇÃ3ˇÃ ˇôˇˇôÃˇôôˇôfˇô3ˇô ˇfˇˇfÃˇfôˇffˇf3ˇf ˇ3ˇˇ3Ãˇ3ôˇ3fˇ33ˇ3 ˇ ˇˇ Ãˇ ôˇ fˇ 3ˇ  ÃˇˇÃˇÃÃˇôÃˇfÃˇ3Ãˇ ÃÃˇÃÃÃÃÃôÃÃfÃÃ3ÃÃ ÃôˇÃôÃÃôôÃôfÃô3Ãô ÃfˇÃfÃÃfôÃffÃf3Ãf Ã3ˇÃ3ÃÃ3ôÃ3fÃ33Ã3 Ã ˇÃ ÃÃ ôÃ fÃ 3Ã  ôˇˇôˇÃôˇôôˇfôˇ3ôˇ ôÃˇôÃÃôÃôôÃfôÃ3ôÃ ôôˇôôÃôôôôôfôô3ôô ôfˇôfÃôfôôffôf3ôf ô3ˇô3Ãô3ôô3fô33ô3 ô ˇô Ãô ôô fô 3ô  fˇˇfˇÃfˇôfˇffˇ3fˇ fÃˇfÃÃfÃôfÃffÃ3fÃ fôˇfôÃfôôfôffô3fô ffˇffÃffôfffff3ff f3ˇf3Ãf3ôf3ff33f3 f ˇf Ãf ôf ff 3f  3ˇˇ3ˇÃ3ˇô3ˇf3ˇ33ˇ 3Ãˇ3ÃÃ3Ãô3Ãf3Ã33Ã 3ôˇ3ôÃ3ôô3ôf3ô33ô 3fˇ3fÃ3fô3ff3f33f 33ˇ33Ã33ô33f33333 3 ˇ3 Ã3 ô3 f3 33   ˇˇ ˇÃ ˇô ˇf ˇ3 ˇ  Ãˇ ÃÃ Ãô Ãf Ã3 Ã  ôˇ ôÃ ôô ôf ô3 ô  fˇ fÃ fô ff f3 f  3ˇ 3Ã 3ô 3f 33 3   ˇ  Ã  ô  f  3   bâıÛÙ˜kïˇ7OÑ|Åå⁄ﬁÁAv·]ë˙AeØcóˇYá„S}”dó¸aíÙ^çÏgöˇMsøhõˇwûÍ}ã¶≤∑¡fôˆn†˛fç◊Å´˚ÜûÀü∑·õ£±ÊÍÒ—‘ÿ]üÊä¡˛≥ÀÁU¶÷Nß¬C¥©3¿ÇÁ&xtnˇˇˇ!˘  ˇ ,    x $  ˇ H∞`6z›)\»∞°√á#JúH±·äzÙ≤‹»±£¿Éıú‹I≤§…ì(S™\…≤ÂIyÚ.fÙHsc∂ê$·π€π3œü@É
+J¥®—£;·…c∑¢õ∆ö5È·yœûpW√πÉÁD^;sﬂ‡¡k^πo·“™›⁄Æú⁄∑i≥¬ùãïÓVwÂÓñ#G.ü[Á±√’£Të¥·Y|= Ÿ4∆˜›ªnÙﬁç„˜> ìø·9«8-<|ÂÃΩ%]:‹isn„Üs@:y ™åSÕö±Ô“Á∂Va˙¥0A©#≠˙vùqﬁ6nï#oªè‘f±Ì»}{º\;w‰ßˇ•ç›∏≠fø•#=@˘qbÒ~S`ù™œÄHôÉ.¸Ôˇãœ<+<fú@áUıü6¥ÕÕ6€ƒ√Œ< ∞≥ eUlÛé’Ûé9≠R=ÚåSŒU¯<ñ Òd$’áÏ• Ú–c£<‚®∞‚6› ∞ :›îx"ÄˇùÛ›Äı’M"πÉ’rÓÿ∏Õ*&zC
+Ö‹¨Ç€<‡ÙXÖ¯ƒìÕ
+Æ@
+:'jsèFVX@7ÎÄ	NöNh47›∞≥Ní-ÆP
+8Ù‘Ca7Ä†cëD¶”Œ:É)IS7M>π<7≠2g:‰‰¿6§8»:>Û# >Vœ*€lvï86≤¬›3€dˇ”M™ÁÑ√*=÷\9`7›XëçÖb>Fœîh"J‰9ÔX¡éÅ5eÉœ=¸®’M›i%ñF´ê"Î*Ò ê%:£ÄÛ A9ÏQ N¨›∞BJ9 úäNcÇ;ÏƒÀM}œ‡Y6Ÿilë·¨c≈
+ér)<ÈÎ>Ÿ¨égÓΩπ
+:o>SÖ∑€§¯ŒcÅP8ÁêˆmVƒ
+0:üÕÛÃ8xPº®ÎÇZœæY~ÊŒÁåË8‹∞”#MŒV%ÈÌ®fR8∑ <ùBN·≥é¨– ¿
+€ò”|‰í*´S+†*NÃÙu3OFÀ˛∫,ßN°*Î6‚ÙÊ≥oﬂ rp¬«=ˇ€0¢·òœEı¨Û#;ÄDàO‚ñ·k8çÎtáèsu_•ŒR2™'Ñ&¶é=K> Ïp3O‰,;G
+æ¥ﬁ˝_8ËÕ˜@AFkl9„ê2%ß‡Äcù8Ω£	<Ñ‡†ÉNÒ‚é9¨ôÉNw„åÒ&.ñéÛ§Ù>ΩÓ‹õ'=8‚|_πÎÀ≈>œ–’c¥œÅá/N9√ˇ^1õ9©ôÉø˝˛-ñˇ^ˆá˛z£lËCÄÊ@†˝Ï?˝˝è|ˇÒÜ?¨Pö‘C'‰;G:÷S2jê5%aGÛAﬂhp=$‹†o¥°èLÙu€‡E¯¡¢ÇåI«(ÙVAè®è|q¡°ˇÑâ~‰"•ò◊qxo‚`Ñá›à§'¿CA|ùxƒs4µ‹Mˆ»ƒs°*ıoâ>#ç7∂EﬁÉ}P=ÚÄ¶ùú„å÷x‘ÒÙè ásÒãhXÍPã—Üb¶Am¥√x8#9úÿ∆Ù¡√g⁄:Xf#||à1Áà£R$è8í»DNêc=‘!@.¶˚d1†a©V2&˚ÿ6\y∑|∏p7¨I«7FÒƒDÒo«rLºˆÜ/Yä4ÓH[€Í¡çê7d‚âîè1.É”ˆqD_¸ëxPd…V®HdjÉúH\^áYL Éóå)n¸°ˇµß=√òÖ“cF Òå$‚Ÿ∆å QAââì1¸ §2‹•*Pf¬†∞6„»}–/ù⁄»&ˆ°øt⁄√àe|&cƒA
+>™
+ !9¢I“†´}˛ƒJïcZPÎr1Öö˘)á›¬!∆_–|G)?|Å™q‰Éô¿j.ÃìN_±‡Kßâë≠Òù„kÙ«˘hBv®„høqÕMJëØƒ©#Dﬁ¡<¢ˆån=ÕØ
+]Åª™Ä:•2ÜcEï°˛£#˙"Uç%‰ëƒw:6≈H’;s·pn¶7‚ ¶Ïà∂u‡”5êôBdÙ≠ø–f˝ AÒ≥Ñˇ«9k.àa
+b|¬ÊPL"O YVÄcc%∆ãq±à"ëø ß8K’TıÔ¨k,ÊÏh«t»Ú(‹6Ö‘C‚·a+H\xK—±z∞Û†f‰‰πƒNvåúıƒ;¬”#FWËàË/VQå#>»πƒÄÓ{ﬂÈ	Œ	Ïéﬁ≈6¸!4®–cÒëpßª‚=èx∂ÃîÔ∆º„ñx7π£^xŸ‘_@˜¯ı:∞!∆\–˙8bç∏ål…í≤”¡Ü=Ï1Û<ÿV÷naÚÙéo0“‚ 9H‚è‚°QÜMñ±,¿+ªoH⁄∞/1pä™R@˜àƒÿÜs]ú	‰≤ˇ∑˝¿)841∆2~|±ÃƒbAi++"hËkñ†∆·dD≠”Ü7–gxB&∫.ƒÈtH\d3√∏É¸Ö/í8HŒ≤ÿËÙ2à°gx|˛¡Th¡±
+µ&È@û«nFÉFÇ1FµÉt®‚∏ôH∞)≤5O¯Ç∑ñöÒ;?Q_`‘:∆Œ®<KÜVoÄ£ÆﬁnGbC'?π÷T,ÚûAIGÓex ‡;¶˜ÎÍ·!yÍ·}‹v‘J&≈!‘Z†áLÄÜ8æÅÆoÉ˚∞+¯oNÿ0m00<wƒˇDòlDYªƒÉƒı˜sx#¬€øôÂÔ…îÀ7VŒr∏¸Â0èπÃgÓÚ∑–Ê[ådZ˙˜Ú´l1ﬂ8K«Ò=äQê¢nT…rvXÅ‡(˙«ßNı™[˝ÍXœ∫÷∑æı¢áKw"?ÿ´ónì;ùÄ»èÔ¥«ˆ∂ª˝Ìpèª‹Á˛ˆÏ˘.‰;SVÅ¥Ωtê8ΩM‹á‡O¯¬˛àOº‚è¯+¥I0·;A ;_ghttp://server.iad.liveperson.net/hc/62317343/?cmd=repstate&site=62317343&category=en;liveperson;2&ver=1”xyOGIF89aj # ëˇ ˛ˇ˛hcö ¿¿¿!˘   ,    j # @ÿúè©ÀÌ£ú¥⁄ãM–cÎÄ›!éâé•! Ì–∆á◊¨˝⁄ıõg˛
+áƒ¢ÒàL*ó3ç…Ã‘™ıäÕj∑ ®˜ã«‰≤π‚ë•ÍE/¬ bjv¥‚òÙ˚¥ ∏£s”òC’w∂»ÿË¯)9IYiyâô©π…â“6dÁ–ÛÊÜdµ„wW‚˜y¬˙B2+:¯s™X≈¬É»ÎTÍ9€wg¸Y+˚ Á∫w{ìÀ|•ÛõH∏–∂¸ß‹˜äLk€kçù˙f>ûé	⁄È˛/?O_èY  ;Ò	 ;_Hhttp://server.iad.liveperson.net/hc/62317343/?cmd=hccredit&site=62317343”{|O≠GIF89a$  ’  ’XÒ‘¿·]ˇˆˇr‡ßÇ˜È‡Â^ÙdÌ…±c˙ÙÔﬂûrˇ´s˜‡––r3ÁΩ°ˇ„—üAˇÊ’ÂÑCˇÖ4ˇ⁄¡ŒUÕg#ˇÌ·Á≥ëË´Ç‘al‰w.›n$¡°¯◊¡ˇ|$Ê{3Û¬°˙ñSÆÇ!˘≤Çˇ—≤ˇèDˇ¥Ç}3ˇöW¬P?ˇ»§ˇˇˇˇf                                        !˘     ,    $    ¿	lH,è»£ß%k:ü–®4 bNØX™µŸà2U,BX≈bï&ÏéY¶Uh(ñ dbèã9AŒ1.b RqO"11.fä+gÇ1ÑÜ[N%g.2ft$ñÉÖZQb1Mf g®ò™PáNå±1#t.∑ô´O)çg¢√. ∑++*Oª2]ü(Æ≤N∑Ä1&
+Nﬁ2’M..2ÙÁNı2
+ı˛˘2ﬁeHE¬ãÉ*\»p·â  ;_!http://www.bradfallon.com/xml.gif”~O>GIF89an  ƒ ´´´OOO”””}}}ÓÓÓıııdddæææÛÛÛÕÕÕ‚‚‚äää˛˛˛°°°ÁÁÁ˚˚˚ïïïŸŸŸ•••õõõ;;;∆∆∆ÑÑÑûûû˘˘˘‹‹‹ﬂﬂﬂÎÎÎ   ˇˇˇˇˇˇ!˘   ,    n   ˇ‡'édiûh™ÆlÎ¢I-ÀeﬂxÆÔ|Ôˇ¿‡m00(•$°ÿhû–®tJ≠ZØÿ¨V`&Ü—f!òœË¥zÕnªﬂ¯[“9à0π~œÔ˚—"áàâ{"eäñógå êígîiïk°àîßó•™röú"	¢™¨hµ}•∑~∫zØ±≥°®´∆π£ß£†∆f¥ ŒÀÃÀœ’–…Œæ¿ù¬≤∂«ïµ≈‚—÷§‘È«ÁÎÌÕÏÌ…Ò£€¡√‡´Ï”·È’Õ“Í‰Õ≥ÜL›@Åı∫›5Î @t†t®œ†<ÑøÏ}ch´‹9rﬂπH“\IëÕªyHk„≥Ü¸<ŒÁ/fGâ3±ç,»ŒóçòÇ
+›√ tDL04¥©”4 † Èá	<0xê°´◊Ø`√äK∂¨Ÿ≥h¡òÍ@√ÖGT(ÄÄ áªxÛÍ›À∑ØﬂøÄﬁÎ@AA"tÄPxÉ„«ê#KûLπ≤ÂÀò3G÷–%¡Ä:#t0–†Ü”®S´^Õ∫µÎ◊∞cÀVMÅÇË0$Lò∆ª∑Ôﬂ¿ÉN|⁄Ñ/í+_Œº9ä ;_4https://www.paypal.com/en_US/i/btn/x-click-but21.gif‘”ÇÉO\(var SCRIPT_VERSION = "1.0";
+
+if (typeof(lpNumber) == "undefined")
+    lpNumber = '62317343';
+
+if (typeof(lpCustomInvitationTitle) == "undefined")
+    lpCustomInvitationTitle = "invitation popup window for live chat with an online representative";
+if (typeof(lpCustomInvitationCloseTitle) == "undefined")
+    lpCustomInvitationCloseTitle = "Close Chat Invitation";
+
+if (typeof(lpCustomInvitationLinkTitle) == "undefined")
+    lpCustomInvitationLinkTitle = "invitation popup window for live chat with an online representative";
+
+var hcUseRejectStatusCookie = ((typeof(lpSaveRejectStatus) != "undefined") && lpSaveRejectStatus);
+
+var hcUpdateState = 0;
+
+var pageLocation = document.location.toString();
+
+var lpfcLocation = document.location.toString();
+var lpfcProtocol = "http";
+if ((lpfcLocation != null) && (lpfcLocation.indexOf("https:") == 0))
+	lpfcProtocol = "https";
+
+var hcBase = lpfcProtocol + '://server.iad.liveperson.net/hc/'+lpNumber+'/';
+var hcImageURL = lpFixProtocol("http://server.iad.liveperson.net/hcp/woman/1/en/");
+if (typeof(lpCustomImageURL) != "undefined")
+    hcImageURL = lpFixProtocol(lpCustomImageURL);
+var hcStaticImageURL = hcImageURL;
+
+var hcControlImage;
+var hcIsImage = false;
+var hcCounter = 0;
+var hcCmd = "knockPage";
+var scriptType = "SERVERBASED";
+var hcTimeout = 5;
+var hcSendCounter = 0;
+
+if (typeof(hcPageID) == "undefined")
+    hcPageID = null;
+
+var hcLeft = -1;
+var hcTop = -1;
+
+var hcNS = (document.layers) ? true : false;
+var hcIE = (document.all) ? true : false;
+var hcDOM = (document.getElementById) ? true : false;
+if (hcIE)
+	hcDOM = false;
+var hcMAC = (navigator.platform) && (navigator.platform.toUpperCase().indexOf("MAC") >= 0);
+if (hcNS)
+	hcMAC = false;
+var hcShowImage = false;
+
+var hcPos = - 30;
+var HumanStep = 3;
+var hcDir = HumanStep;
+var hcBorder = 100;
+var hcAnimate = false;
+
+var hcNeedImage;
+var hcCloseImage;
+var hcImageFetched = false;
+
+var hcimage = hcGetImage("hcIcon");
+if (hcimage)
+	hcicon = hcimage.src;
+
+var hcParam = null;
+var hcOpenVars = null;
+
+var hcLoadingImage = false;
+
+var hcLayerWidth = 400;
+var hcLayerHeight = 300;
+
+var hcClickURL;
+
+var HCinit = true;
+
+var lpForcePopup = ("{forcePopup}" == "true");
+
+var	visitorStatus = "INSITE_STATUS";
+var	lpActivePlugin = "none";
+var lpTopFrame = null;
+
+var	hcRejected = false;
+
+var hcFocusFlag = false;
+
+if ("{newChannel}" == "true") {
+	var lpPosY = 100;
+	var lpPosX = 100;
+	var lpOperatorViewable= 'true';
+	var lpOperatorPageType= 'CoBrowse';
+}
+
+if (hcDOM)
+{
+	hcControlImage = document.createElement('IMG');
+	hcControlImage.style.visibility = "hidden";
+	document.body.appendChild(hcControlImage);
+} else
+if (hcMAC)
+{
+	document.writeln("<div style='visibility:hidden'><img src='" + lpfcProtocol + "://server.iad.liveperson.net/hcp/window/common/spacer.gif' id='hcControlImage' name='hcControlImage'></div>");
+	hcControlImage = document.hcControlImage;
+}
+
+function lpFixProtocol(str) {
+    if ((str != null) && (str.indexOf("http:") == 0) && (lpfcProtocol == "https"))
+        return lpfcProtocol + str.substring(4);
+	return str;
+}
+
+function hcGetObj(id)
+{
+	if (document.getElementById)
+		return document.getElementById(id);
+	else
+	if (document.all)
+		return document.all(id);
+}
+
+function hcObjShow(obj)
+{
+	if (hcNS)
+		obj.visibility="show";
+	else
+		obj.style.visibility="visible";
+}
+
+function hcDate()
+{
+	var d = new Date();
+
+	return d.getTime();
+}
+
+function hcSendRequest()
+{
+	hcSendCounter++;
+	if (hcSendCounter == 5)
+		hcIsImage = false;
+
+	if (! hcIsImage) {
+		if (hcDOM) {
+			document.body.removeChild(hcControlImage);
+			hcControlImage = document.createElement('IMG');
+			hcControlImage.style.visibility = "hidden";
+			document.body.appendChild(hcControlImage);
+		} else
+		if (! hcMAC)
+			hcControlImage= new Image;
+		
+		if (hcPageID==null) hcPageID=Math.round(Math.random()*9999999999);
+		var windowname = lpTopFrame.name;
+		if (windowname.length > 256)
+			windowname = windowname.substring(0, 255);
+		var u = hcBase + '?site=' + lpNumber +
+					'&cmd=' + hcCmd +
+					'&page=' + escape(pageLocation) +
+					'&title=' + escape(document.title) +
+					'&visitorStatus=' + escape(visitorStatus) +
+					'&activePlugin=' + escape(lpTopFrame.lpActivePlugin) +
+					'&pageWindowName=' + escape(windowname) +
+					'&id=' + hcPageID +
+					'&scriptVersion=' + SCRIPT_VERSION +
+					'&d=' + hcDate();
+        if (hcCmd == "knockPage")
+			hcCmd = "startPage";
+        else {
+			if ((typeof(tagVars) != "undefined") && (tagVars != "")) {
+				u = u + "&" + tagVars;
+				tagVars = "";
+			}
+			if ((typeof(customCommands) != "undefined") && (customCommands != "")) {
+				u = u + "&" + customCommands;
+				customCommands = "";
+			}
+			if ((typeof(customStaticCommands) != "undefined") && (customStaticCommands != "")) {
+				u = u + "&" + customStaticCommands;
+			}
+			var activateCobrowse = false;
+			if ( false ) {
+				u = u + "&cobrowse=true";
+				activateCobrowse = true;
+			}
+
+	        if ( (typeof(lpOperatorViewable) != "undefined") && (lpOperatorViewable == "true") ) {
+				if (! activateCobrowse) {
+					u = u + "&cobrowse=true";
+					activateCobrowse = true;
+				}
+	            if (typeof(lpOperatorPageType) != "undefined") {
+	                u = u  + "&cobrowsetitle=" + escape(lpOperatorPageType);
+	            }
+	            if (typeof(lpOperatorPageUrl) != "undefined") {
+	                u = u  + "&cobrowseurl=" + escape(lpOperatorPageUrl);
+	            }
+	        }
+			if (scriptType != null) {
+				u = u + "&scriptType=" + scriptType;
+				scriptType = null;
+			}
+			hcCmd = "inPage";
+			if (activateCobrowse) {
+				var cookies = document.cookie;
+				if ((typeof(cookies) == "undefined") || (cookies == null))
+					cookies = "";
+				if (u.length <= 1990)
+					while (escape(cookies).length + u.length > 1990) {
+						var idx = cookies.lastIndexOf(";");
+						if (idx >= 0)
+							cookies = cookies.substring(0, idx);
+						else
+							cookies = "";
+					}
+				u = u + "&cookie=" + escape(cookies);
+			}
+		}
+		u = u + '&referrer=';
+		var ref = escape(document.referrer);
+		if (u.length + ref.length < 1990)
+			u = u + ref;
+		hcControlImage.src = u;
+		hcIsImage = true;
+		hcSendCounter = 0;
+	}
+}
+function hcPlaceLayersIE()
+{
+}
+function hcPlaceLayersNS()
+{
+}
+function hcHandlePopup(w, h)
+{
+}
+
+
+
+var hcImg30Sequence = 0;
+var hclastW = -1;
+var hclastH = -1;
+function hcHandleWidthHeight(w,h)
+{
+	if (hcMAC && (hclastH == h) && (hclastW == w))
+		return;
+	hclastH = h;
+	hclastW = w;
+    if (h==1) {
+        var wCode = w-w%2;
+        var more = w%2;
+        if (wCode == 30) {
+			hcImg30Sequence++;
+			if (hcImg30Sequence == 2)
+				hcTimeout = -1;
+        } else if (wCode == 40) {
+		hcTimeout = 10;
+        } else if (wCode == 50) {
+		hcTimeout = 30;
+        } else if (wCode == 60) {
+            openChat(null, null, true);
+        } else if (wCode == 70) {
+            openEngageChat("engage", null);
+        } else if (wCode == 72) {
+            openCustomEngageChat("engage", null);
+        } else if (wCode == 80) {
+			hcReloadIcon();
+		} else if (wCode == 90) {
+            hcCounter=0;
+            hcTimeout = 1;
+		} else if (wCode == 100) {
+			lpTopFrame.lpActivePlugin = "none";
+			lpTopFrame.cb_bInjecting = false;
+		} else if (wCode == 110) {
+			lpTopFrame.lpActivePlugin = "PCB";
+			setTimeout('activateCobrowsePlugin()', Math.round(Math.random()*100));
+		} else if (wCode == 130) {
+			handleRedirectCommand();
+        } else if (wCode == 140) {
+            openChat(null, "Pushed=true", true);
+        } else if (wCode == 150) {
+            visitorStatus = "INSITE_STATUS";
+			hcHideTheImage();
+        } else if (wCode == 152) {
+            visitorStatus = "CHAT_STATUS";
+			hcHideTheImage();
+        } else if (wCode == 154) {
+            visitorStatus = "REJECT_STATUS";
+            saveLPReject();
+            hcHideTheImage();
+        } else if (wCode == 156) {
+            visitorStatus = "ENGAGE_STATUS";
+		}
+		if (wCode != 30)
+		    hcImg30Sequence = 0;
+        if (more==1) {
+            hcCounter=0;
+            hcTimeout=1;
+        }
+    } else {
+	    var modLength=1000;
+	    var wLength=w%modLength;
+	    var hLength=h%modLength;
+	    var wCode=(w-wLength)/modLength;
+	    var hCode=(h-hLength)/modLength;
+		if (wCode == 4) {
+			if (visitorStatus == "ENGAGE_STATUS")
+				setTimeout('hcInvitationTimeout()', 1000 * wLength + 10);
+		} else
+			hcHandlePopup(w, h);
+	}
+}
+
+function lpClearRejectState() {
+    LPsetCookie("REJECT", "");
+}
+
+function saveLPReject() {
+    if (! hcUseRejectStatusCookie) return;
+    if (typeof(lpRejectStateTimeout) != "undefined")
+        LPsetCookie("REJECT", new String(new Date().getTime() + (lpRejectStateTimeout * 1000)));
+    else
+        LPsetCookie("REJECT", "TRUE");
+}
+
+function getLPReject() {
+    if (! hcUseRejectStatusCookie) return "";
+    return LPgetCookie("REJECT");
+}
+
+function lpIsNumber(a) {
+    return typeof a == 'number' && isFinite(a);
+}
+
+function hasValidLPRejectedCookie() {
+    if (! hcUseRejectStatusCookie) return false;
+    var cook = getLPReject();
+    if (cook == "TRUE") return true;
+    if (cook == null || cook == "") return false;
+    var timeout = parseInt(cook);
+    if (lpIsNumber(timeout)) {
+        return new Date().getTime() < timeout;
+    } else return false;
+}
+
+function LPgetCookie(lpCookieSuffixName)
+{
+	var search = "BEGIN" + lpCookieSuffixName + "=";
+	if (document.cookie.length > 0)
+	{
+		offset = document.cookie.indexOf(search);
+		if (offset != -1)
+		{
+			offset += search.length
+			var endstr = "END" + lpCookieSuffixName;
+			end = document.cookie.indexOf(endstr, offset);
+			var retval = document.cookie.substring(offset, end);
+			return retval;
+		}
+	}
+	return "";
+}
+function LPsetCookie(lpCookieSuffixName, value)
+{
+	var search = "BEGIN" + lpCookieSuffixName + "=";
+	var endstr = "END" + lpCookieSuffixName;
+	var newval = search+value+endstr;
+	document.cookie = newval;
+}
+
+
+function handleRedirectCommand() {
+	var s = hcBase + '?site='+lpNumber +
+					'&cmd=visitorRedirect' +
+					'&defaultURL=' + escape(document.location) +
+					'&d=' + hcDate();
+	document.location = s;
+}
+
+function activateCobrowsePlugin() {
+    with (lpTopFrame) {
+        if (typeof(cb_bInjecting)!="undefined" && cb_bInjecting) return;
+        cb_bInjecting = true;
+        if ((typeof(document["CBAgent"])=="undefined") || (document["CBAgent"] == null)) {
+            var scrtag1 = '<script language="JavaScript" src="' + lpfcProtocol + '://server.iad.liveperson.net/hcp/html/lpcbtop.js" defer></script>';
+            var scrtag2 = '<script language="JavaScript" src="' + lpfcProtocol + '://server.iad.liveperson.net/hcp/html/lpcb.js" defer></script>';
+            var screlem1=document.createElement(scrtag1);
+            var screlem2=document.createElement(scrtag2);
+            var tag = '<applet code="CBAgent.class" codeBase="' + lpfcProtocol + '://server.iad.liveperson.net/applets/v7.0" archive="cbagent.jar" name="CBAgent" width=0 height=0 style="LEFT: 0px; TOP: 0px; POSITION: absolute" mayscript></applet>';
+            var elem = document.createElement(tag);
+            elem["site"] =     lpNumber;
+            elem["charSet"] =  "ISO-8859-1";
+            elem["encoding"] = "{encoding}";
+            elem["connectionType"]=lpfcProtocol;
+            elem["loglevel"]="{cbDebug}";
+            elem["cabbase"]="cbagent.cab";
+            if (name == "") {
+                name = "LPCB" + (new Date().getTime());
+            }
+            var appletInstanceID = new String(name);
+            elem["appletInstanceID"] = new String(escape(appletInstanceID));
+            document.body.appendChild(screlem1);
+            document.body.appendChild(screlem2);
+            document.body.appendChild(elem);
+        } else {
+            cb_bInjecting = false;
+            var o = document["CBAgent"];
+            if (typeof(o.connect)!="undefined")
+                o.connect()
+            else
+                if (typeof(o.length) != "undefined" &&  o.length>0)
+                    o.item(0).connect();
+        }
+	}
+}
+
+
+function lpGetTopFrame() {
+    if (hcIE && document.getElementById) {
+        var w = null;
+        eval("try {if (top && typeof(top.document)!='undefined') {var n=''+top.name; w=top;}} catch (e) {w=null;};");
+        if (w != null)
+            return w;
+    }
+    return window;
+}
+
+function hcCheckImages()
+{
+	if (hcIsImage) {
+		if (((hcDOM) || (hcMAC)) && (! hcControlImage.complete))
+		{
+			hcLoadingImage = true;
+			return;
+		}
+		var w = hcControlImage.width;
+		var h = hcControlImage.height;
+		hcLoadingImage = false;
+
+		if (w == 0)
+			return;
+		hcIsImage = false;
+		hcHandleWidthHeight(w,h);
+	}
+}
+
+var hcLoadTimer = 0;
+
+function hcloop()
+{
+	if (hcTimeout < 0)
+		return;
+
+	if (hcCounter == 0)
+	{
+		if (! hcLoadingImage)
+		{
+			hcSendRequest();
+			hcLoadTimer = 0;
+		}
+		else
+		{
+			hcLoadTimer++;
+			if (hcLoadTimer == 5)
+			{
+				hcIsImage = false;
+				hcSendRequest();
+				hcLoadTimer = 0;
+			}
+		}
+	}
+	hcCounter = (hcCounter + 1) % hcTimeout;
+	hcCheckImages();
+
+	setTimeout('hcloop()', 1000);
+}
+
+function hcReloadIcon()
+{
+	if (hcimage)
+		hcimage.src = hcicon + "&monitor=1&d=" + hcDate();
+}
+
+function openChat(param, openVars, isAuto)
+{
+    if (typeof(isAuto) == "undefined")
+        isAuto = false;
+
+	visitorStatus = "CHAT_STATUS";
+	var s = document.location;
+	if (param != null)
+		s = "(" + param + ") " + s;
+	s = escape(s);
+
+    var oparms = "";
+    if (openVars != null)
+        oparms = oparms + "&" + openVars;
+
+    var url = hcBase + '?cmd=file&file=visitorWantsToChat' + oparms + '&site='+lpNumber+'&d=' + hcDate()+'&referrer='+s;
+    var name = 'chat'+lpNumber;
+    var params = 'width=472,height=320,menubar=no,scrollbars=0';
+
+    if (typeof(lpOpenChat) == "function") {
+        lpOpenChat(url, name, params);
+    } else {
+        var ow = window.open(url, name, params);
+        if ((ow == null) && isAuto)
+            openEngageChat("engage", null);
+    }
+}
+
+function openCredit()
+{
+	document.location = lpFixProtocol("http://www.liveperson.com/ref/lppb.asp");
+}
+
+function openEngageChat(param, openVars) {
+	if (hcRejected || hasValidLPRejectedCookie()) {
+		hcRejectCall();
+		return;
+	}
+	hcParam = param;
+	hcOpenVars = openVars;
+	if ((! lpForcePopup) && (hcIE || hcNS || hcDOM)) {
+		hcShowTheImage();
+	} else {
+		window.open(hcBase+'?cmd=file&file=wantsToChat&site='+lpNumber+'&d=' + hcDate(), 'wanttochat'+lpNumber, 'width=273,height=138,menubar=no,scrollbars=no');
+	}
+}
+
+function openCustomEngageChat(param, openVars) {
+	hcImageURL = hcBase+"?cmd=ruleRedirect&site="+lpNumber+"&rulecmd=ShowCustomInvite&inviteDir=" + escape(hcStaticImageURL) + "&d=" + hcDate() + "&inviteImage=";
+	openEngageChat(param, openVars);
+}
+
+function openWantsToChat()
+{
+	openEngageChat(null, null);
+}
+
+function hcPreload()
+{
+	hcNeedImage = new Image();
+	hcNeedImage.src = hcImageURL + "need_help_on.gif";
+
+	hcCloseImage = new Image();
+	hcCloseImage.src = hcImageURL + "close_on.gif";
+}
+
+function hcSetImageGo(name, image, go)
+{
+	hcAnimate = go;
+	hcSetImage(name, image);
+}
+function hcSetImage(name, image)
+{
+	hcGetImage(name).src = hcImageURL + image;
+}
+
+
+function hcWriteDoc(str)
+{
+	document.writeln(str);
+}
+
+if (hcIE || hcDOM) {
+	hcWriteDoc('<div name="mylayer" id="mylayer" style="z-index:90;position:absolute;visibility:hidden;left:10px;top:10px">');
+	hcWriteDoc('<table border="0" cellspacing="0" cellpadding="0">');
+	hcWriteDoc('<tr><td><a name="needRef" id="needRef" href="#" title="' + lpCustomInvitationLinkTitle + '" onClick="return hcAcceptCall()" target="_self" onmouseover=hcSetImageGo("need_help","need_help_on.gif",false) onmouseout=hcSetImageGo("need_help","need_help_off.gif",true)><img name="need_help" id="need_help" onload="hcFloatIconLoaded()" alt="' + lpCustomInvitationTitle + '" border="0"></a></td></tr>');
+	hcWriteDoc('<tr><td><a href="#" onClick="return hcRejectCall()" target="_self" onmouseover=hcSetImageGo("need_close","close_on.gif",false) onmouseout=hcSetImageGo("need_close","close_off.gif",true)><img name="need_close" border="0" alt="' + lpCustomInvitationCloseTitle + '"></a></td></tr>');
+	hcWriteDoc('</table></div>');
+	hcPlaceLayersIE();
+} else if (hcNS) {
+	hcWriteDoc('<layer name="mylayer" id="mylayer" z-index="90" left="10px" top="10px" visibility="hidden">');
+	hcWriteDoc('<table border="0" cellspacing="0" cellpadding="0">');
+	hcWriteDoc('<tr><td><a href="#" name="needRef" id="needRef" title="' + lpCustomInvitationLinkTitle + '" onClick="return hcAcceptCall()" target="_self" onmouseover=hcSetImageGo("need_help","need_help_on.gif",false) onmouseout=hcSetImageGo("need_help","need_help_off.gif",true)><img name="need_help" id="need_help" src="' + hcImageURL + 'need_help_off.gif" onload="hcFloatIconLoaded()" alt="' + lpCustomInvitationTitle + '" border="0"></a></td></tr>');
+	hcWriteDoc('<tr><td><a href="#" onClick="return hcRejectCall()" target="_self" onmouseover=hcSetImageGo("need_close","close_on.gif",false) onmouseout=hcSetImageGo("need_close","close_off.gif",true)><img name="need_close" src="' + hcImageURL + 'close_off.gif" border="0" alt="' + lpCustomInvitationCloseTitle + '"></a></td></tr>');
+	hcWriteDoc('</table></layer>');
+	hcPlaceLayersNS();
+}
+function hcFloatIconLoaded()
+{
+	hcImageFetched = true;
+}
+
+function hcImageTimer()
+{
+	if (hcShowImage && hcImageFetched) {
+		var top;
+		var left;
+
+		if (hcIE) {
+		    scrollPosY = 0;
+		    scrollPosX = 0;
+            eval('try {' +
+                'if (typeof(document.documentElement) != "undefined") {' +
+                    'scrollPosY = document.documentElement.scrollTop;' +
+                    'scrollPosX = document.documentElement.scrollLeft;' +
+                '}' +
+            '} catch (e) {}');
+            scrollPosY = Math.max(document.body.scrollTop, scrollPosY);
+            scrollPosX = Math.max(document.body.scrollLeft, scrollPosX);
+            top = scrollPosY;
+            left = scrollPosX;
+			if ((hcTop < 0) || ((hcTop == top) && (hcLeft == left))) {
+				document.all.mylayer.style.visibility = "visible";
+				if(!hcFocusFlag){ 
+					document.all.needRef.focus();
+					hcFocusFlag = true;
+				}
+			} else {
+				document.all.mylayer.style.visibility = "hidden";
+			}
+
+		} else if (hcNS) {
+
+			top = pageYOffset;
+			left = pageXOffset;
+
+			if ((hcTop < 0) || ((hcTop == top) && (hcLeft == left))) {
+				document.layers.mylayer.visibility = "visible";
+			} else {
+				document.layers.mylayer.visibility = "hidden";
+			}
+		} else if (hcDOM){
+			top = pageYOffset;
+			left = pageXOffset;
+			if ((hcTop < 0) || ((hcTop == top) && (hcLeft == left))) {
+				hcGetObj("mylayer").style.visibility = "visible";
+				if(!hcFocusFlag){ 
+					hcGetObj("needRef").focus();
+					hcFocusFlag = true;
+				}
+			} else {
+				hcGetObj("mylayer").style.visibility = "hidden";
+			}
+		}
+
+		hcPlaceImage();
+
+		hcTop = top;
+		hcLeft = left;
+	}
+
+	setTimeout('hcImageTimer()', 250);
+}
+
+function hcAcceptCall()
+{
+
+	openChat(hcParam, hcOpenVars);
+	hcHideTheImage();
+
+	return false;
+}
+
+function hcRejectCall()
+{
+	hcRejected = true;
+	saveLPReject();
+	hcHideTheImage();
+	visitorStatus = "REJECT_STATUS";
+	hcCmd = "rejectChat";
+	hcCounter = 0;
+
+	return false;
+}
+
+function hcInvitationTimeout()
+{
+	if (visitorStatus != "ENGAGE_STATUS")
+		return;
+
+	visitorStatus = "TIMEOUT_STATUS";
+	hcHideTheImage();
+	hcCounter = 0;
+
+	return false;
+}
+
+function hcHideTheImage()
+{
+	hcShowImage = false;
+
+	if (hcIE) {
+		document.all.mylayer.style.visibility = "hidden";
+	} else if (hcNS) {
+		document.layers.mylayer.visibility = "hidden";
+	} else if (hcDOM) {
+		hcGetObj("mylayer").style.visibility = "hidden";
+	}
+}
+
+function inviteShown() {
+	hcCmd = "inviteShown" +((typeof(lpInviteTimeout) != "undefined") && (lpInviteTimeout != "") && (lpInviteTimeout > 0) ? ("&scripttimeout=" + lpInviteTimeout) : "");
+	hcCounter = 0;
+}
+
+
+function hcShowTheImage()
+{
+	visitorStatus = "ENGAGE_STATUS";
+	setTimeout("inviteShown()", 5000);
+
+	hcShowImage = true;
+
+	hcSetImage("need_help","need_help_off.gif");
+	hcSetImage("need_close","close_off.gif");
+
+	hcAnimate = true;
+
+	hcPreload();
+
+	hcAnimateStart();
+}
+
+function hcAnimateStart()
+{
+	if (hcIE) {
+		hcBorder = document.body.clientWidth;
+	} else if (hcNS) {
+		hcBorder = window.innerWidth;
+	} else if (hcDOM) {
+		hcBorder = window.innerWidth;
+	}
+
+	hcAnimateImage();
+}
+
+function getImageWidth(name)
+{
+	if (hcDOM)
+		return (document.getElementsByTagName("IMG")[name]).width;
+	else
+	if (hcIE)
+		return (document.all(name)).width;
+	else
+	if (hcNS)
+		return (document[name]).width;
+	else
+		return null;
+}
+
+function hcAnimateImage()
+{
+	if (hcImageFetched && hcAnimate)
+		hcPos = hcPos + hcDir;
+
+	if (hcPos > hcBorder - 160)
+		hcDir = - HumanStep;
+
+	hcPlaceImage();
+
+	if ((hcPos > 30) || (hcDir > 0))
+		setTimeout("hcAnimateImage()", 20);
+}
+
+function hcPlaceImage()
+{
+	var y = 40;
+	var x = hcPos;
+	if (typeof(lpPosX) != "undefined")
+		x = lpPosX;
+	if (typeof(lpPosY) != "undefined")
+		y = lpPosY;
+	var obj = null;
+	if (hcIE) {
+		obj = document.all.mylayer.style;
+	} else if (hcNS) {
+		obj = document.layers.mylayer;
+	} else if (hcDOM) {
+		obj = hcGetObj("mylayer").style;
+	}
+    if (typeof(lpPlacementFunctionHook) == "function") {
+		lpPlacementFunctionHook(obj);
+ 	} else {
+		if (hcIE) {
+		    scrollPosY = 0;
+		    scrollPosX = 0;
+            eval('try {' +
+                'if (typeof(document.documentElement) != "undefined") {' +
+                    'scrollPosY = document.documentElement.scrollTop;' +
+                    'scrollPosX = document.documentElement.scrollLeft;' +
+                '}' +
+            '} catch (e) {}');
+            scrollPosY = Math.max(document.body.scrollTop, scrollPosY);
+            scrollPosX = Math.max(document.body.scrollLeft, scrollPosX);
+			obj.left = scrollPosX + x + "px";
+			obj.top = scrollPosY + y + "px";
+		} else if (hcNS) {
+			obj.left = pageXOffset + x;
+			obj.top = pageYOffset + y;
+		} else if (hcDOM) {
+			obj.left = pageXOffset + x + "px";
+			obj.top = pageYOffset + y + "px";
+		}
+	}
+}
+
+function hcGetImage(name)
+{
+	return hcFindImage(document, name);
+}
+
+function hcFindImage(doc, name)
+{
+	if (hcDOM)
+		return doc.getElementsByTagName("IMG")[name];
+	var lays = doc.layers;
+
+	if (! lays)
+		return doc[name];
+
+	for (var i = 0; i < doc.images.length; i++) {
+		if (doc.images[i].name == name)
+			return doc.images[i];
+	}
+
+	for (var l = 0; l < lays.length; l++) {
+		img = hcFindImage(lays[l].document, name);
+		if (img != null)
+			return img;
+	}
+
+	return null;
+}
+
+
+function hcgo()
+{
+    var startAfter=1;
+    var x = new String(document.location).indexOf("lpAutoChat=1");
+    if (x >= 0)
+        startAfter = 10000;
+
+	if (typeof(lpCobrowsedPage) != "undefined")
+		return;
+	lpTopFrame = lpGetTopFrame();
+    if (typeof(lpTopFrame.lpActivePlugin)=="undefined")
+        lpTopFrame.lpActivePlugin = "none";
+
+	setTimeout('hcloop()', startAfter);
+	setTimeout('hcImageTimer()', 250);
+}
+function hcLegalPage() {
+	return true;
+}
+
+if (true) {
+	if (hcLegalPage()) hcgo();
+}
+
+_mhttp://server.iad.liveperson.net/hc/62317343/x.js?cmd=file&file=chatScript3&site=62317343&category=en;woman;1”ÖÜáO"GIF89a  Ä     ˇˇˇ,       L ;_!http://server.iad.liveperson.net/hc/62317343/?site=62317343&cmd=inPage&page=http%3A//www.bradfallon.com/2005/05/discuss-tiddlywiki.html&title=TiddlyWiki%20-%20Discussion&visitorStatus=INSITE_STATUS&activePlugin=none&pageWindowName=&id=7466791470&scriptVersion=1.0&d=1116889860622&referrer=_application/octet-stream‘âäãåUUTF-8O¢j<HTML><HEAD>
+                <TITLE>TiddlyWiki - Discussion</TITLE>
+
+
+<LINK rel="start" href="http://www.bradfallon.com/" title="Home"><LINK rel="prev" href="http://www.bradfallon.com/2005/05/discuss-labor-shortage-in-china.html" title="Labor Shortage in China">
+
+<LINK rel="next" href="http://www.bradfallon.com/2005/05/discuss-quit-your-job-sooner.html" title="Quit Your Job Sooner">
+
+
+<SCRIPT language="JavaScript" type="text/JavaScript" src="http://www.bradfallon.com/discussion.js"></SCRIPT>
+
+
+
+
+
+
+                <LINK rel="stylesheet" href="http://www.bradfallon.com/styles.css" type="text/css">
+                
+                                <LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.bradfallon.com/atom.xml">
+                
+                        
+                                <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <META name="MSSmartTagsPreventParsing" content="true">
+                
+        <STYLE type="text/css">
+p {font-size: 8pt;
+     color: black}
+</STYLE></HEAD><BODY>
+
+
+<DIV id="header">        <A href="http://www.bradfallon.com/"><H1>Brad Fallon</H1></A>
+        <P id="description">Google Crushing and other Thermopylaen* Endeavors . . . </P>
+</DIV>
+
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-8628294787314290";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "000000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8628294787314290&dt=1116889808878&lmt=1116874716&format=728x90_as&output=html&url=http%3A%2F%2Fwww.bradfallon.com%2F2005%2F05%2Fdiscuss-tiddlywiki.html&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=000000&color_border=FFFFFF&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+<DIV id="mainClm">
+
+
+        
+
+<DIV id="content">
+<DIV class="blog">
+<H2>TiddlyWiki</H2>
+
+<DIV class="buttons"><A href="#reply"><IMG src="/images/reply.gif"></A></DIV>
+
+<DIV align="center"><B>
+
+</B>
+</DIV>
+
+
+
+
+
+<A name="006890"></A><A name="006909"></A><A name="006910"></A><A name="006912"></A><A name="006913"></A><A name="006915"></A><A name="006916"></A><A name="006920"></A><A name="006924"></A><A name="006952"></A><A name="006957"></A><A name="006984"></A><A name="006988"></A><A name="007020"></A><A name="007030"></A><A name="007039"></A><A name="007052"></A><TABLE class="forumline" cellspacing="1" cellpadding="3" border="0">
+        
+        <TBODY><TR><TH class="thLeft" width="150" height="26" nowrap="nowrap">Author</TH><TH class="thRight" nowrap="nowrap">Message</TH></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><B><A href="http://www.bradfallon.com">Brad</A>
+
+
+</B></SPAN><BR><SPAN class="postdetails"><BR><BR><BR><BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="http://www.bradfallon.com/2005/05/discuss-tiddlywiki.html"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 09:56 AM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P></P><DIV class="blogpost"><P>Wiki's are cool for lots of reasons. </P>
+
+<P>But check out <A href="http://www.tiddlywiki.com">TiddlyWiki</A>. Think of it as nifty blogging software, with an emphasis on reading by links, not just sequentially.</P>
+
+<P>Plus, you can carry your whole blog around on a USB drive (nerdstick). That's a <A href="http://www.tiddlywiki.com/#WikiOnAStick">WikiOnAStick</A>.</P>
+
+</DIV>
+<P></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.myspytech.com">Jim</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 1<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006890"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 01:28 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>WoW that is some very neat technology, we'll see if it catches on...</P>
+
+<P>Jim,<BR>
+<A href="http://www.myspytech.com">Spy Surveillance Remote DVR</A> - Providing professional grade Embedded Electronic Surveillance Systems and Spy Equipment.</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.1st-pocket-bikes.com/links/ThemeIndex.html">Ivan</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 2<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006909"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 03:42 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>I have a website about pocket bikes, they are fun toys.  I just got my theme site links page index up.  Its nice.</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="mailto:bluedogent@yahoo.com">Chris</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 3<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006910"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 03:52 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Will each comment be viewed as seperate page?</P>
+
+<P>Pretty cool if so.</P>
+
+<P><A href="http://nascar.thebluedogsportstore.com/sitemap.htm">NASCAR</A></P>
+
+<P>BTW, Brad, on a different post you were stating about working on Saturday nights.  Well, I am vacationing in Orlando and my family is at the magic kingdom right now.  Me, I'm on my lap top listening to the stomper, again, and link building.  </P>
+
+<P>Hope all is well.</P>
+
+<P>Chris</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.divineweddingfavors.com">Allison</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 4<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006912"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 05:00 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Brad, are you thinking you using the software for your site?</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.divineweddingfavors.com">Allison</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 5<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006913"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 05:02 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Brad, are you thinking you using the software for your site?</P>
+
+<P><BR>
+Allison<BR>
+<A href="http://www.divineweddingfavors.com">Divine Wedding Favors</A><BR>
+</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.sensoryedge.com">Ed</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 6<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006915"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 06:45 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>It took me a minute to understand the value of <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> and then I saw the value of keeping the reader on the same page without getting redirected or having to scroll. Can this technology be incorporated into a static html page on a Yahoo Store?</P>
+
+<P>Ed</P>
+
+<P><A href="http://www.sensoryedge.com/pretendplay.html">SensoryEdge</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.the-gps-place.com">Ross</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 7<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006916"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 08:09 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Wow using a thumb drive as a main drive.  Hmmm. Then you would have to back up the thumb drive.  Still sounds cool.</P>
+
+<P><A href="http://www.the-gps-place.com">Garmin GPS</A></P>
+
+<P><A href="http://www.mysilkplants.com">Silk Plants</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.revcoday.com">Book Buyers</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 8<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006920"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 14, 2005 11:14 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>I like the idea of backing up to a thumb drive too!</P>
+
+<P><A href="http://www.revcoday.com/?Book-Buyers">Book Buyers of Texas</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="mailto:bluedogent@yahoo.com">Chris</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 9<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006924"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 15, 2005 12:19 AM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Not having to scroll or being redirected is ok, but it would be super if each comment is actually another page.  I think movable type mixed with an rss feed tops this.  Could be wrong, though.</P>
+
+<P><A href="http://www.thebluedogsportstore.com/sitemap.htm">Sporting Goods</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.50freeweddinginvitations.com/Themes/Unique.htm">Unique Wedding Invitations</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 10<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006952"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 16, 2005 04:50 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>I think being redirected is ok and movable type is the way go. Some setting can stop the reader to read the type. </P>
+
+<P><B><A href="http://www.50freeweddinginvitations.com/Themes/Unique.htm">Unique Wedding Invitations</A></B></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="mailto:jenniferakre@edenvaleshoppes.com">Teak Furniture</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 11<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006957"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 16, 2005 11:30 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Very interesting.  I wonder if it will really take off?</P>
+
+<P><A href="http://www.morethanteak.com">Teak Furniture</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.ferrari-heaven.com">Ferrari</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 12<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006984"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 18, 2005 12:03 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Wikis are a godsend.</P>
+
+<P><A href="http://www.ferrari-heaven.com">Ferrari</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.esteswildwoodinn.com/Partner%20Links.htm">Wildwood Inn</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: no<BR><BR>Reply: 13<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#006988"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 18, 2005 02:36 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>I'm not sure if it'll ever take off..I'm gonna give it a shot, why not..you know?</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.myhoodia411.com">Hoodia</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 14<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#007020"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 20, 2005 12:00 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Brad, are you considering moving to wikis?</P>
+
+<P>Nel<BR>
+<A href="http://www.myhoodia411.com/succulent-hoodia.html">Hoodia Succulent</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.yardsignhotline.com">Real Estate Hotline Guy</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 15<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#007030"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 20, 2005 09:14 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>I'd suggest moving to wikis.</P>
+
+<P><BR>
+<A href="http://www.yardsignhotline.com">Real Estate Hotline</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.mydivewatch.com">John</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: xxx<BR><BR>Reply: 16<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#007039"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 21, 2005 08:48 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>Really like the wikionastick idea - of course I pretty much like anything that improves portability.</P>
+
+<P><A href="http://www.mydivewatch.com">My Dive Watch</A></P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR><TR><TD width="150" align="left" valign="top" class="row3right"><SPAN class="name"><A name="8188"></A><B><A href="http://www.mwrant.com">starr</A></B></SPAN><BR><SPAN class="postdetails">
+
+<BR>
+<BR>Posts: no<BR><BR>Reply: 17<BR><BR><BR></SPAN><BR></TD><TD class="row2" width="100%" height="28" valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">                        <TBODY><TR><TD width="100%" class="row2"><A href="#007052"><IMG src="/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0"></A><SPAN class="postdetails">Posted: May 22, 2005 08:55 PM<SPAN class="gen">¬†</SPAN></SPAN></TD><TD valign="top" nowrap="nowrap" class="row2">   </TD></TR><TR><TD colspan="2" class="row2"><HR></TD></TR><TR><TD colspan="2" class="row2"><SPAN class="blogpost"><P>as a deliverable system, this would have my QA guys pulling their hair out.  As a quick n dirty tool it's addictive.</P></SPAN><SPAN class="gensmall"></SPAN></TD></TR></TBODY></TABLE></TD></TR><TR><TD class="row3" colspan="2" height="1"><IMG src="/images/spacer.gif" alt="" width="1" height="1"></TD></TR></TBODY></TABLE>
+<DIV align="center"><B>
+
+</B>
+</DIV>
+
+
+
+<BR>
+<BR>
+<DIV class="blogdate"><A name="reply"></A>Join the conversation:</DIV>
+<DIV class="comments-body"><FORM method="post" action="http://www.bradfallon.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="678">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL>
+<BR>
+
+<A href="javascript:emoticon(':D')"><IMG src="/images/icon_biggrin.gif" alt="Very Happy" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':-)')"><IMG src="/images/icon_smile.gif" alt="Smile" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':-(')"><IMG src="/images/icon_sad.gif" alt="Sad" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':o')"><IMG src="/images/icon_surprised.gif" alt="Surprised" width="15" height="15" border="0" class="smiley"></A>
+
+<BR>
+
+<A href="javascript:emoticon(':shock:')"><IMG src="/images/icon_eek.gif" alt="Shocked" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':confused:')"><IMG src="/images/icon_confused.gif" alt="Confused" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon('8)')"><IMG src="/images/icon_cool.gif" alt="Cool" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':lol:')"><IMG src="/images/icon_lol.gif" alt="Laughing" width="15" height="15" border="0" class="smiley"></A>
+
+<BR>
+
+<A href="javascript:emoticon(':x')"><IMG src="/images/icon_mad.gif" alt="Mad" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':P')"><IMG src="/images/icon_razz.gif" alt="Razz" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':blush:')"><IMG src="/images/icon_redface.gif" alt="Embarassed" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':cry:')"><IMG src="/images/icon_cry.gif" alt="Crying or Very Sad" width="15" height="15" border="0" class="smiley"></A>
+
+<BR>
+
+<A href="javascript:emoticon(':evil:')"><IMG src="/images/icon_evil.gif" alt="Evil or Very Mad" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':twisted:')"><IMG src="/images/icon_twisted.gif" alt="Twisted Evil" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':roll:')"><IMG src="/images/icon_rolleyes.gif" alt="Rolling Eyes" width="15" height="15" border="0" class="smiley"></A>
+
+<A href="javascript:emoticon(':wink:')"><IMG src="/images/icon_wink.gif" alt="Wink" width="15" height="15" border="0" class="smiley"></A><BR>
+<SPAN class="poweredsmileys">Powered by <A href="http://mt-hacks.com/mt-smileys.html">MTSmileys</A></SPAN>
+
+<BR clear="all">
+<LABEL for="text">Comments:</LABEL>
+
+<IMG src="/mt-static/images/spacer.gif" width="30" height="18" border="0">
+<DIV style="position:absolute; width:270px; text-align:right">
+<SCRIPT language="javascript">
+if (document.selection) {
+    document.write('<table border="0" cellspacing="0" cellpadding="0" width="107">');
+    document.write('<tr>');
+    document.write('<td width="24"><a href="javascript:formatStr(\'b\')"><img src="/mt-static/images/bold-button.gif" alt="bold" width="24" height="18" border="0"></a></td>');
+    document.write('<td width="24"><a href="javascript:formatStr(\'i\')"><img src="/mt-static/images/italic-button.gif" alt="italic" width="24" height="18" border="0"></a></td>');
+    document.write('<td width="24"><a href="javascript:formatStr(\'u\')"><img src="/mt-static/images/underline-button.gif" alt="underline" width="24" height="18" border="0"></a></td>');
+    document.write('<td width="26"><a href="javascript:insertLink()"><img src="/mt-static/images/url-button.gif" alt="link" width="26" height="18" border="0"></a></td>');
+    document.write('</tr>');
+    document.write('</table>');
+} else {
+    document.write('&nbsp;');
+}
+</SCRIPT>¬†
+
+</DIV>
+
+
+<BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="45"></TEXTAREA><BR><BR>
+
+Check to Subscribe to this Comment: <INPUT type="checkbox" name="subscribe"><BR>
+
+(email field must be filled in) <BR><BR>
+
+<INPUT style="font-weight: bold;" type="submit" name="post" value="¬†Post¬†"><BR><BR>
+
+</FORM>
+
+<SCRIPT language="Javascript">document.comments_form.action = 'http://www.bradfallon.com/cgi-bin/mt/mt-commen' + 'ts.cgi'; </SCRIPT>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+
+<A name="emailsubscribe"></A><FORM method="get" action="/cgi-bin/mt/mt-notifier.cgi">
+          <INPUT type="hidden" name="__mode" value="sub">
+          <INPUT type="hidden" name="entry_id" value="678">
+          Subscribe Without Commenting<BR><BR>
+          <INPUT name="email">
+          <INPUT type="submit" class="button" value="Go">
+        </FORM>
+
+</DIV>
+
+<BR>
+<BR>
+
+
+
+
+
+</DIV>
+
+                        </DIV>
+        
+
+
+
+</DIV>
+
+<DIV id="sideBar">
+                <FONT color="#DE7008" font-family:verdana,sans-serif="">Want to Learn Search Engine Optimization?<BR><B><A href="http://www.instantseoexpert.com">Get Stomping the Search Engines!</A></B><BR><BR>
+<TABLE border="0" cellspacing="0" cellpadding="0"><TBODY><TR><TD align="center"><A href="http://server.iad.liveperson.net/hc/62317343/?cmd=file&file=visitorWantsToChat&site=62317343&byhref=1" target="chat62317343" onclick="javascript:window.open('http://server.iad.liveperson.net/hc/62317343/?cmd=file&file=visitorWantsToChat&site=62317343&referrer='+document.location,'chat62317343','width=472,height=320');return false;"><IMG src="http://server.iad.liveperson.net/hc/62317343/?cmd=repstate&site=62317343&category=en;liveperson;2&ver=1" name="hcIcon" width="120" height="36" border="0"></A></TD></TR><TR><TD align="center"><A href="http://server.iad.liveperson.net/hc/62317343/?cmd=PoweredByPage&site=62317343" target="_top"><IMG src="http://server.iad.liveperson.net/hc/62317343/?cmd=hccredit&site=62317343" width="106" height="35" border="0"></A></TD></TR></TBODY></TABLE>
+
+<H5>Subscribe</H5>
+<UL><LI>Enter your email address below to join the Google Stomping Newsletter. Sporadic schedule.</LI></UL><FORM action="http://www.mysmartsuite.com/cgi-bin/smartmail" method="post">
+        <INPUT type="hidden" name="mailTo" value="brad@googlecrusher.com">
+<INPUT type="hidden" name="subject" value="Blog Signup">
+<INPUT type="hidden" name="redirect" value="http://www.bradfallon.com">
+   <INPUT name="name" type="text" value="Name"><BR>                    
+        <INPUT name="email" type="text" value="E-mail">
+  
+        <INPUT type="submit" name="Submit" value="Join!">
+      </FORM>
+
+
+
+<H5>E-mail Googlecrusher</H5>
+                        <UL><LI><A href="mailto:brad@googlecrusher.com">brad@googlecrusher.com</A></LI></UL>
+<H5><A href="http://www.bradfallon.com/atom.xml" title="Atom" feed"=""><IMG src="http://www.bradfallon.com/xml.gif" border="0"></A> Site Feed</H5>
+                <UL><LI><A href="http://www.bradfallon.com/atom.xml" title="Atom feed">Atom Format XML Feed</A></LI></UL>
+
+<H5>Recommended Resources</H5>
+                <UL><LI><A href="http://www.instantseoexpert.com">Search Engine Stomper (Learn to be an SEO Expert)</A></LI>
+                        <LI><A href="http://www.bradfallon.com/opti">OptiLink (Best Link Analyzer Software)</A></LI>
+<LI><A href="http://www.bradfallon.com/adwords">How to Maximixe Google AdWords</A></LI>
+<LI><A href="http://www.bradfallon.com/yahoo">How to Build a Yahoo Store</A></LI></UL>
+
+<H5>Search Engine Radio</H5>
+                <UL>                        <LI><A href="http://www.seoradio.com">Tune into SEORadio.com Tuesdays at Noon EDT</A></LI></UL>
+
+<H5>Brad's Book</H5>
+                <UL>                        <LI><A href="http://www.bradfallon.com/book.html">Creating Customers Out of Thin Air:  Secrets of Online Marketing for Offline Businesses</A></LI></UL>
+
+<H5>Brad's Seminars</H5>
+                <UL>                        <LI><A href="http://www.anniejenningspr.com/bradfallon.htm">Advanced Link Building Strategies</A></LI></UL>
+
+<H5>Articles</H5>
+                <UL><LI><A href="http://www.bradfallon.com/articles/whywebsites.html">Why Most B2B Web Sites Don't Work</A></LI>
+                        <LI><A href="http://www.bradfallon.com/articles/embed.html">Embedded Marketers</A></LI>
+<LI><A href="http://www.bradfallon.com/reagan.html">The New Founding Father</A></LI>
+</UL>
+<H5>Speaking Engagements</H5>
+                <UL><LI><A href="http://www.kelseygroup.com/ddilm2004/index.htm" target="_blank">Drilling Down on Local Search: Drivers &amp; Barriers to SME Adoption<BR>March 30-31, 2004</A></LI>
+</UL>
+
+
+<H5>Press Releases</H5>
+                <UL>                        <LI><A href="http://www.seoresearch.com/austin.html">Is Google Dancing - or Shooting Itself in the Foot?</A></LI></UL>
+
+<H5>Search Engine Links</H5>
+                <UL><LI><A href="http://www.searchengineblog.com">SearchEngineBlog.com</A></LI>
+                <LI><A href="http://www.seoresearch.com">SEO Research.com</A></LI>       
+<LI><A href="http://www.google-watch.org">Google Watch</A></LI>
+                        <LI><A href="http://www.google-watch-watch.org">Google Watch Watch</A></LI>
+                </UL>
+<H5>Business Links</H5>
+                <UL><LI><A href="http://www.1Web-WebHosting.com/free-web-hosting.htm">1Web-Resource Guide</A></LI>
+                        <LI><A href="http://www.mysmartsuite.com">Interactive Marketing</A></LI>
+<LI><A href="http://www.theparkcatalog.com">The Park Catalog</A></LI>
+<LI><A href="http://www.bradfallon.com/mission">Brad's Links</A></LI>
+                        <LI><A href="http://www.myweddingfavors.com">Wedding Favors</A></LI>
+<LI><A href="http://www.bradfallon.com/weddingfavors.html">Wedding Favor Directory</A></LI>
+<LI><A href="http://www.myweddingreceptions.com/new.html">Wedding Reception Guide</A></LI>
+<LI><A href="http://www.myweddingspeeches.com/new.html">Wedding Speech Guide</A></LI>
+<LI><A href="http://www.myweddingtoasts.com/new.html">Guide to Wedding Toasts</A></LI>
+<LI><A href="http://www.best-eulogy.com/write.html">Eulogy Examples</A></LI>
+<LI><A href="http://www.misysemr.com">Electronic Medical Records EMR</A></LI>
+<LI><A href="http://www.top10top10.com">Get Top 10 Google Listings</A></LI>
+<LI><A href="http://www.skyblazeaviation.com">Atlanta Flight Instructor</A></LI>
+<LI><A href="http://www.homebusinessfirst.com">Home Business Opportunities</A></LI>
+<LI><A href="http://www.newjerseydwilaw.com/about.html">New Jersey DWI Lawyer</A></LI>
+<LI><A href="http://www.atlanta-georgia-dui.com/legal.html">Atlanta, Georgia DUI Lawyers</A></LI>
+<LI><A href="http://www.marnyheitdui.com/legal.html">Atlanta DUI Attorney</A></LI>
+<LI><A href="http://www.robertchestney.com/legal.html">Georgia DUI Lawyer</A></LI>
+<LI><A href="http://www.michaelhawkinsdui.com/legal.html">Georgia Dui Attorney</A></LI>
+<LI><A href="http://www.mekawardduilawyer.com/legal.html">Atlanta DUI Lawyer</A></LI>
+<LI><A href="http://www.georgia-dui-attorneys.com">Georgia DUI Lawyers</A></LI>
+<LI><A href="http://www.junkfaxes.org">Stop Junk Faxes. Make $</A></LI>
+<LI><A href="http://www.anniejenningspr.com/pages/book-publicity-programs.htm">Book Promotion</A></LI>
+<LI><A href="http://www.atlantahotproperties.com">Atlanta Foreclosures</A></LI>
+<LI><A href="http://www.mybestonlinegaming.com">Virtual Casino</A></LI>
+<LI><A href="http://www.greatcaribbeanvillas.com">Caribbean Villas</A></LI>
+<LI><A href="http://www.waldospeaks.com">Inspirational Speaker</A></LI>
+</UL>
+
+<H5>Blogs</H5>
+                <UL><LI><A href="http://www.thewebmama.blogspot.com">The Web Mama</A></LI>
+<LI><A href="http://www.bradandjennifer.com">BradandJennifer.com</A></LI>
+<LI><A href="http://www.liamharris.com">My nephew, Liam</A></LI>                      
+<LI><A href="http://www.opinionjournal.com">Opinion Journal by James Taranto</A></LI>
+                        <LI><A href="http://www.brain-terminal.com">Brain Terminal by Evan Maloney</A></LI>
+<LI><A href="http://eureksterblog.blogspot.com/">Eureksterblog</A></LI>
+<LI><A href="http://www.zarry.com/weblog">Zarry</A></LI>
+<LI><A href="http://iraqthemodel.blogspot.com/">Iraq the Model</A></LI>
+                        
+                </UL>
+
+
+<H5>*Thermopylae</H5>
+<UL><LI><A href="http://www.amazon.com/exec/obidos/tg/detail/-/0553580531/qid=1073640353//ref=sr_8_xs_ap_i0_xgl14/103-7387586-8706259?v=glance&s=books&n=507846"><EM>Gates of Fire:</EM> One of the best underdog stories of all time.</A></LI>
+<LI>"Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie."</LI>
+<UL>
+
+<FORM action="https://www.paypal.com/cgi-bin/webscr" method="post"><INPUT type="hidden" name="cmd" value="_xclick">
+<INPUT type="hidden" name="business" value="fallon@mail.com">
+<INPUT type="hidden" name="item_name" value="Brad Fallon">
+<INPUT type="hidden" name="no_shipping" value="1">
+<INPUT type="hidden" name="cn" value="Comments">
+<INPUT type="hidden" name="currency_code" value="USD">
+<INPUT type="hidden" name="tax" value="0">
+<INPUT type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</FORM>                
+
+
+
+<DIV align="center"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-8628294787314290";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="120" height="600" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8628294787314290&dt=1116889809013&lmt=1116874716&prev_fmts=728x90_as&format=120x600_as&output=html&url=http%3A%2F%2Fwww.bradfallon.com%2F2005%2F05%2Fdiscuss-tiddlywiki.html&cc=100&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME></DIV>
+
+
+         
+</UL></UL></FONT></DIV><FONT color="#DE7008" font-family:verdana,sans-serif="">
+<SCRIPT language="javascript" src="http://server.iad.liveperson.net/hc/62317343/x.js?cmd=file&file=chatScript3&site=62317343&category=en;woman;1"> </SCRIPT><DIV name="mylayer" id="mylayer" style="z-index:90;position:absolute;visibility:hidden;left:10px;top:10px"><TABLE border="0" cellspacing="0" cellpadding="0">
+<TBODY><TR><TD><A name="needRef" id="needRef" href="#" title="invitation popup window for live chat with an online representative" onclick="return hcAcceptCall()" target="_self" onmouseover="hcSetImageGo("need_help","need_help_on.gif",false)" onmouseout="hcSetImageGo("need_help","need_help_off.gif",true)"><IMG name="need_help" id="need_help" onload="hcFloatIconLoaded()" alt="invitation popup window for live chat with an online representative" border="0"></A></TD></TR><TR><TD><A href="#" onclick="return hcRejectCall()" target="_self" onmouseover="hcSetImageGo("need_close","close_on.gif",false)" onmouseout="hcSetImageGo("need_close","close_off.gif",true)"><IMG name="need_close" border="0" alt="Close Chat Invitation"></A></TD></TR></TBODY></TABLE></DIV>
+
+
+
+
+
+
+</FONT><IMG style="visibility: hidden; " src="http://server.iad.liveperson.net/hc/62317343/?site=62317343&cmd=inPage&page=http%3A//www.bradfallon.com/2005/05/discuss-tiddlywiki.html&title=TiddlyWiki%20-%20Discussion&visitorStatus=INSITE_STATUS&activePlugin=none&pageWindowName=&id=7466791470&scriptVersion=1.0&d=1116889860622&referrer="></BODY></HTML>_9http://www.bradfallon.com/2005/05/discuss-tiddlywiki.htmlYtext/html¢éî—è’êåëâíì_WebResourceFrameNameO¿<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #0000ff }a.ad:visited { color: #0000ff }a.ad:hover { color: #0000ff }a.ad:active { color: #0000ff }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.eyetek.co.uk','aw0')" onmouseover="ss('go to www.eyetek.co.uk','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=Blfn_uWKSQujALM-WSP7T_LkG7vPxB8XLqQTAjbcB8P05EAEYASCXm_sBKARAihZIkTmyARJ3d3cuYnJhZGZhbGxvbi5jb226AQk3Mjh4OTBfYXPIAQHaATlodHRwOi8vd3d3LmJyYWRmYWxsb24uY29tLzIwMDUvMDUvZGlzY3Vzcy10aWRkbHl3aWtpLmh0bWzoAQE&num=1&adurl=http://www.eyetek.co.uk&client=ca-pub-8628294787314290" onfocus="ss('go to www.eyetek.co.uk','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.eyetek.co.uk','aw0')" onmouseout="cs()"><B>Surveillance equipment</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">UK manufacturer /sales of spy gear UPS express world wide shipping </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.IViewCameras.co.uk','aw1')" onmouseover="ss('go to www.IViewCameras.co.uk','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.iviewcameras.co.uk&sa=l&ai=BGfrCuWKSQujALM-WSP7T_LkGrZrvCZ2typYBwI23AZD8RBACGAIgl5v7ASgEQIoWSJU5oAGt_OH-A7IBEnd3dy5icmFkZmFsbG9uLmNvbboBCTcyOHg5MF9hc8gBAdoBOWh0dHA6Ly93d3cuYnJhZGZhbGxvbi5jb20vMjAwNS8wNS9kaXNjdXNzLXRpZGRseXdpa2kuaHRtbOgBAQ&num=2&client=ca-pub-8628294787314290" onfocus="ss('go to www.IViewCameras.co.uk','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.IViewCameras.co.uk','aw1')" onmouseout="cs()"><B>Low Cost CCTV (UK only)</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Install in minutes, easy wireless Wide range &amp; Free next day delivery </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.active-spy-shop.co.uk','aw2')" onmouseover="ss('go to www.active-spy-shop.co.uk','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?adurl=http://www.active-spy-shop.co.uk&sa=l&ai=Bm5kpuWKSQujALM-WSP7T_LkGwaTECJ_j65EBwI23AbDMCxADGAMgl5v7ASgEQIoWSIk5oAGbuJP_A7IBEnd3dy5icmFkZmFsbG9uLmNvbboBCTcyOHg5MF9hc8gBAdoBOWh0dHA6Ly93d3cuYnJhZGZhbGxvbi5jb20vMjAwNS8wNS9kaXNjdXNzLXRpZGRseXdpa2kuaHRtbOgBAQ&num=3&client=ca-pub-8628294787314290" onfocus="ss('go to www.active-spy-shop.co.uk','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.active-spy-shop.co.uk','aw2')" onmouseout="cs()"><B>Active Spy Shop</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Spy Cameras, Bugs, Bug Detectors Spy Products to suit all budgets </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.spyphones.biz','aw3')" onmouseover="ss('go to www.spyphones.biz','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.spyphones.biz&sa=l&ai=BfwTluWKSQujALM-WSP7T_LkGjbWkBtOCpJEBwI23AfCEDhAEGAQgl5v7ASgEQIoWSJI5oAHm7K3_A7IBEnd3dy5icmFkZmFsbG9uLmNvbboBCTcyOHg5MF9hc8gBAdoBOWh0dHA6Ly93d3cuYnJhZGZhbGxvbi5jb20vMjAwNS8wNS9kaXNjdXNzLXRpZGRseXdpa2kuaHRtbOgBAQ&num=4&client=ca-pub-8628294787314290" onfocus="ss('go to www.spyphones.biz','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.spyphones.biz','aw3')" onmouseout="cs()"><B>SpyPhone</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">You can monitor the person with the SpyPhone at any time, worldwide. </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#ffffff"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.bradfallon.com/2005/05/discuss-tiddlywiki.html&hl=en&client=ca-pub-8628294787314290&adU=www.eyetek.co.uk&adT=Surveillance+equipment&adU=www.IViewCameras.co.uk&adT=Low+Cost+CCTV+(UK+only)&adU=www.active-spy-shop.co.uk&adT=Active+Spy+Shop&adU=www.spyphones.biz&adT=SpyPhone&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_íhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8628294787314290&dt=1116889808878&lmt=1116874716&format=728x90_as&output=html&url=http%3A%2F%2Fwww.bradfallon.com%2F2005%2F05%2Fdiscuss-tiddlywiki.html&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=000000&color_border=FFFFFF&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123—ï’êåñâóòOñ<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#0000ff" alink="#0000ff" vlink="#0000ff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#336699"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://www.bradfallon.com/2005/05/discuss-tiddlywiki.html&hl=en&client=ca-pub-8628294787314290&adU=www.2005deals.com&adT=UK+Spy+Cameras+2005&adU=www.ezcctv.com&adT=CCTV+Security+Products&adU=www.EZWatchStore.com&adT=Video+Security+Systems&adU=www.ExpertShopper.com&adT=Spy+equipment&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#ffffff">Ads by Goooooogle</FONT></A></TD></TR><TR><TD width="118" height="" align="" valign="top"><TABLE width="118" height="" cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw0" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.2005deals.com','aw0')" onmouseover="ss('go to www.2005deals.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#0000ff"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BRhTMuWKSQp-XOrXGScjt1P8EmPzRBaj65KIBwI23AYDTDhABGAUgl5v7ASgEQIoWSJI5mAGcSrIBEnd3dy5icmFkZmFsbG9uLmNvbboBCjEyMHg2MDBfYXPIAQHaATlodHRwOi8vd3d3LmJyYWRmYWxsb24uY29tLzIwMDUvMDUvZGlzY3Vzcy10aWRkbHl3aWtpLmh0bWzgAQLoAQE&num=5&adurl=http://www.2004deals.com/directory.php%3Fcat%3Dshopping%26sub%3Dspy%2Bcameras&client=ca-pub-8628294787314290" onfocus="ss('go to www.2005deals.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.2005deals.com','aw0')" onmouseout="cs()"><B>UK Spy Cameras 2005</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Great Range of Spy Camera Brands Get Spying From Just ¬£50.<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#009900">www.2005deals.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw1" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.ezcctv.com','aw1')" onmouseover="ss('go to www.ezcctv.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#0000ff"><A id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.ezcctv.com/%3Freferrer%3DGoogle&sa=l&ai=Bcq8iuWKSQp-XOrXGScjt1P8EzoGbCtCQ0I8BwI23AbDUMhACGAYgl5v7ASgEQIoWSIc5mAGcSqABj8WU_wOyARJ3d3cuYnJhZGZhbGxvbi5jb226AQoxMjB4NjAwX2FzyAEB2gE5aHR0cDovL3d3dy5icmFkZmFsbG9uLmNvbS8yMDA1LzA1L2Rpc2N1c3MtdGlkZGx5d2lraS5odG1s4AEC6AEB&num=6&client=ca-pub-8628294787314290" onfocus="ss('go to www.ezcctv.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.ezcctv.com','aw1')" onmouseout="cs()"><B>CCTV Security Products</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Geovision surveillance equipment and security systems<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#009900">www.ezcctv.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw2" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.EZWatchStore.com','aw2')" onmouseover="ss('go to www.EZWatchStore.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#0000ff"><A id="aw2" target="_top" href="/pagead/iclk?adurl=http://www.ezwatchstore.com&sa=l&ai=B9DKIuWKSQp-XOrXGScjt1P8EgtuuCaSHqskBwI23AZD0HRADGAcgl5v7ASgEQIoWSIU5mAGcSqABoNjn_gOyARJ3d3cuYnJhZGZhbGxvbi5jb226AQoxMjB4NjAwX2FzyAEB2gE5aHR0cDovL3d3dy5icmFkZmFsbG9uLmNvbS8yMDA1LzA1L2Rpc2N1c3MtdGlkZGx5d2lraS5odG1s4AEC6AEB&num=7&client=ca-pub-8628294787314290" onfocus="ss('go to www.EZWatchStore.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.EZWatchStore.com','aw2')" onmouseout="cs()"><B>Video Security Systems</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Over 400 video surveillance cameras recorders, parts &amp; kits in stock.<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#009900">www.EZWatchStore.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw3" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.ExpertShopper.com','aw3')" onmouseover="ss('go to www.ExpertShopper.com','aw3')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#0000ff"><A id="aw3" target="_top" href="/pagead/iclk?sa=l&ai=BtndEuWKSQp-XOrXGScjt1P8Ei_noCd_fjKUBwI23AcCpBxAEGAggl5v7ASgEQIoWSJI5mAGcSrIBEnd3dy5icmFkZmFsbG9uLmNvbboBCjEyMHg2MDBfYXPIAQHaATlodHRwOi8vd3d3LmJyYWRmYWxsb24uY29tLzIwMDUvMDUvZGlzY3Vzcy10aWRkbHl3aWtpLmh0bWzgAQLoAQE&num=8&adurl=http://www.expertshopper.com/redirect.asp%3Fc%3Dgoogle_spy%26t%3Dresults.asp%3Ftxtfind%3Dspy&client=ca-pub-8628294787314290" onfocus="ss('go to www.ExpertShopper.com','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.ExpertShopper.com','aw3')" onmouseout="cs()"><B>Spy equipment</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Find the Perfect Spy Gadgets Great Range and Fast Delivery<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#009900">www.ExpertShopper.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame1-->-->_Ohttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8628294787314290&dt=1116889809013&lmt=1116874716&prev_fmts=728x90_as&format=120x600_as&output=html&url=http%3A%2F%2Fwww.bradfallon.com%2F2005%2F05%2Fdiscuss-tiddlywiki.html&cc=100&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123      !  3  I  å  ì  •  ¥    ﬂ 	 $ + !; !b !k !t !í !ò HS Hç Hü H¶ OG Ot O~ OÖ P P7 P> Pl Pö P° P® PØ P∂ PΩ Pƒ PÀ P“ PŸ P‡ PÁ PÓ Pı P¸ Q Q
+ Q Q Q Q& Q- Q4 Q; QB QI QP QW Q^ Qe Ql Qs Qz QÅ Qà Qè R> Rr Ry S* S\ Sc T TA TH T˘ U/ U6 U„ V V V» V˝ W W≥ W‰ WÎ Y? Yo Yv Z' ZW Z^ [ [B [I ]◊ ^ ^ ` `8 `? a. a_ af bW bã bí d{ d∞ d∑ ed eï eú e‘ e€ qñ r  r s sc sj u u? uF wà wø w» wœ ”˚ ‘k ‘r ‘ó ’º ’◊ ’‡ ’ÊxTxêxöxùx†x´x¬ñÜñôò/ò2ò=∑◊∑˙             ô             πM

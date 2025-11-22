@@ -1,0 +1,1960 @@
+bplist00Ó=B_WebSubresources_WebMainResource_WebSubframeArchives¯"&,0378;<Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO;a.glossary-indicator {
+	vertical-align: super;
+	cursor: help;
+	font-size: xx-small;
+	padding-left: 2px;
+	font-weight: bold
+}
+
+a.glossary-term {
+	text-decoration: none;
+	border-bottom: 1px dotted #080;
+	color: #080;
+	cursor: help;
+}
+
+dl.glossary-list > dt {
+	font-weight: bold;
+}
+
+dl.glossary-list > dd {
+	font-weight: normal;
+	font-size: x-small;
+	margin-left: 15px;
+}
+
+a.glossary-edit-term {
+	font-size: x-small;
+	font-weight: normal;
+	padding-left: 6px;
+}
+
+.glossary-related {
+	font-style: italic;
+}
+
+.glossary-links {
+	text-align: center;
+	letter-spacing: -0.05em;
+}
+
+_8http://svartling.hopto.org/modules/glossary/glossary.cssXtext/cssÓO–div.nicetitle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    font-size: 13px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    width: 25em;
+    background-color: #333;
+    border: 1px solid #000;
+    -moz-opacity: 95%;
+    z-index: 9;
+}
+div.nicetitle p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3em;
+}
+div.nicetitle p.text {
+    padding: 0.25em 0.5em;
+    margin: 0em;
+}
+div.nicetitle p.destination {
+    font-size: 9px;
+    text-align: left;
+    color: #aaa;
+    margin: 0.25em 0.5em;
+    padding: 0.25em 0em;
+    border-top: 1px dashed #888;
+}
+div.niceglossary {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #000;
+    font-size: 13px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    width: 25em;
+    background-color: #ccc;
+    border: 1px solid #000;
+    -moz-opacity: 95%;
+    z-index: 9;
+}
+div.niceglossary p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3em;
+}
+div.niceglossary p.defn {
+    padding: 0.25em;
+    margin: 0.25em;
+    background-color: #fff;
+    border: 1px solid #888;
+}
+div.niceglossary p.title {
+    color: #080;
+    padding: 0.1em 0.5em;
+    font-weight: bold;
+}
+_:http://svartling.hopto.org/modules/nicelinks/nicelinks.cssÓO// $Id: nicelinks.js,v 1.6 2004/01/04 19:54:58 goba Exp $
+
+addEvent(window, "load", makeNiceTitles);
+
+var browser = new Browser();
+var lnk;
+var d;
+var domain;
+var timeleft;
+
+function makeNiceTitles() {
+  if (!document.links || !document.createElement) return;
+
+  var i, a, main;
+
+  for (var ti=0;ti<document.links.length;ti++) {
+    var lnk = document.links[ti];
+    if (lnk.title) {
+      lnk.setAttribute("nicetitle",lnk.title);
+      lnk.removeAttribute("title");
+      addEvent(lnk,"mouseover",showNiceTitle);
+      addEvent(lnk,"mouseout",hideNiceTitle);
+//      addEvent(lnk,"focus",showNiceTitle);
+      addEvent(lnk,"blur",hideNiceTitle);
+      addEvent(lnk,"mousemove", moveNiceTitle);
+    }
+  }
+
+  var first_split = location.href.split("//");
+  var without_resource = first_split[1];
+  var second_split = without_resource.split("/");
+  domain = first_split[0] + "//" + second_split[0];
+}
+
+function showNiceTitle(e) {
+
+    if (!document.getElementsByTagName) return;
+    if (d) {
+        document.getElementsByTagName("body")[0].removeChild(d);
+        d = null;
+    }
+
+    if (window.event && window.event.srcElement) {
+        lnk = window.event.srcElement
+    } else if (e && e.target) {
+        lnk = e.target
+    }
+    if (!lnk) return;
+    if (lnk.nodeType == 3) {
+        // lnk is a textnode -- ascend parents until we hit a link
+        lnk = getParent(lnk,"A");
+    }
+    if (!lnk) return;
+    nicetitle = lnk.getAttribute("nicetitle");
+
+    d = document.createElement("div");
+
+    if (lnk.getAttribute("class") == "glossary_indicator" || lnk.getAttribute("class") == "glossary_term") {
+      d.className = "niceglossary";
+      var term = nicetitle.substr(0, nicetitle.indexOf(':'));
+      var desc = nicetitle.substr(nicetitle.indexOf(':') + 1);
+      tnu = document.createTextNode(term + ":");
+      pau = document.createElement("p");
+      pau.className = "title";
+      pau.appendChild(tnu);
+      d.appendChild(pau);
+      tnt = document.createTextNode(desc);
+      pat = document.createElement("p");
+      pat.className = "defn";
+      pat.appendChild(tnt);
+      d.appendChild(pat);
+    } else {
+      d.className = "nicetitle";
+      tnt = document.createTextNode(nicetitle);
+      pat = document.createElement("p");
+      pat.className = "text";
+      pat.appendChild(tnt);
+      d.appendChild(pat);
+    }
+
+    if (lnk.href.indexOf(domain) == -1) {
+      tnd = document.createTextNode(lnk.href);
+      pad = document.createElement("p");
+      pad.className = "destination";
+      pad.appendChild(tnd);
+      d.appendChild(pad);
+      h_pixels = lnk.href.length*6;
+    } else {
+      h_pixels = 0;
+    }
+    
+    STD_WIDTH = 300;
+    t_pixels = nicetitle.length*10;
+    
+    if (h_pixels > STD_WIDTH) {
+        w = h_pixels;
+    } else if ((STD_WIDTH>t_pixels) && (t_pixels>h_pixels)) {
+        w = t_pixels;
+    } else if ((STD_WIDTH>t_pixels) && (h_pixels>t_pixels)) {
+        w = h_pixels;
+    } else {
+        w = STD_WIDTH;
+    }
+
+    d.style.width = w + 'px';
+    tipfocus(e);
+}
+
+function tipfocus(e) {
+  var mx;
+  var my;
+  var xy;
+
+  xy = getMousePosition(e);
+  mx = xy[0] + 20; my = xy[1] + 20;
+
+//  mx = lnk.offsetLeft;
+//  my = lnk.offsetTop;
+  
+  d.style.left = (mx) + 'px';
+  d.style.top = (my) + 'px';
+
+  if (document.body && document.body.offsetWidth && ((mx+w) > document.body.offsetWidth)) {
+    d.style.left = (document.body.offsetWidth - w - 20) + "px";
+  }   
+  document.getElementsByTagName("body")[0].appendChild(d);
+  timeleft = 80;
+  countdown();
+}
+
+function countdown() {
+  timeleft--;
+  if (timeleft > 0)
+    setTimeout("countdown()", 100);
+  else
+    hideNiceTitle(d);
+}
+
+function moveNiceTitle(e) {
+  if (d) {
+    timeleft = 80;
+    xy = getMousePosition(e);
+    mx = xy[0] + 20; my = xy[1] + 20;
+   
+    d.style.left = (mx) + 'px';
+    d.style.top = (my) + 'px';
+
+    if (document.body && document.body.offsetWidth && ((mx+w+20) > document.body.offsetWidth)) {
+      d.style.left = (document.body.offsetWidth - w - 20) + "px";
+    }   
+
+    if (document.body && document.body.offsetHeight && ((my+75) > document.body.offsetHeight)) {
+      d.style.top = (document.body.offsetHeight - 75) + "px";
+    }   
+
+  }
+}
+
+function hideNiceTitle(e) {
+    if (!document.getElementsByTagName) return;
+    if (d) {
+        document.getElementsByTagName("body")[0].removeChild(d);
+        d = null;
+    }
+}
+
+// Add an eventListener to browsers that can do it somehow.
+// Originally by the amazing Scott Andrew.
+function addEvent(obj, evType, fn){
+  if (obj.addEventListener){
+    obj.addEventListener(evType, fn, true);
+    return true;
+  } else if (obj.attachEvent){
+	var r = obj.attachEvent("on"+evType, fn);
+    return r;
+  } else {
+	return false;
+  }
+}
+
+function getParent(el, pTagName) {
+	if (el == null) return null;
+	else if (el.nodeType == 1 && el.tagName.toLowerCase() == pTagName.toLowerCase())	// Gecko bug, supposed to be uppercase
+		return el;
+	else
+		return getParent(el.parentNode, pTagName);
+}
+
+function getMousePosition(event) {
+  if (browser.isIE) {
+    x = window.event.clientX + document.documentElement.scrollLeft
+      + document.body.scrollLeft;
+    y = window.event.clientY + document.documentElement.scrollTop
+      + document.body.scrollTop;
+  }
+  if (browser.isNS) {
+    x = event.clientX + window.scrollX;
+    y = event.clientY + window.scrollY;
+  }
+  return [x,y];
+}
+
+// Determine browser and version.
+
+function Browser() {
+// blah, browser detect, but mouse-position stuff doesn't work any other way
+  var ua, s, i;
+
+  this.isIE    = false;
+  this.isNS    = false;
+  this.version = null;
+
+  ua = navigator.userAgent;
+
+  s = "MSIE";
+  if ((i = ua.indexOf(s)) >= 0) {
+    this.isIE = true;
+    this.version = parseFloat(ua.substr(i + s.length));
+    return;
+  }
+
+  s = "Netscape6/";
+  if ((i = ua.indexOf(s)) >= 0) {
+    this.isNS = true;
+    this.version = parseFloat(ua.substr(i + s.length));
+    return;
+  }
+
+  // Treat any other "Gecko" browser as NS 6.1.
+
+  s = "Gecko";
+  if ((i = ua.indexOf(s)) >= 0) {
+    this.isNS = true;
+    this.version = 6.1;
+    return;
+  }
+}
+
+_9http://svartling.hopto.org/modules/nicelinks/nicelinks.js_application/x-javascriptÓO .dhtml_node {
+  font-style: italic
+}
+.menuList {
+  PADDING-RIGHT: 0px; PADDING-LEFT: 15px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 10px
+}
+LI.menubar {
+  LIST-STYLE-POSITION: outside; FONT-SIZE: 12px; BACKGROUND: url(plus.gif) no-repeat 0em 0.3em; LINE-HEIGHT: 1.5em; LIST-STYLE-TYPE: none
+}
+.submenu {
+  PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 15px; PADDING-TOP: 0px
+}
+.menuList LI, .submenu LI {
+  LIST-STYLE-POSITION: outside; BACKGROUND: url(square.gif) no-repeat 0em 0.3em; LIST-STYLE-TYPE: none
+}
+A.actuator {
+  PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+A.actuator:hover {
+  TEXT-DECORATION: underline
+}
+.menuList LI A, .submenu LI A {
+  PADDING-LEFT: 15px; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+submenu LI A:hover, SPAN.key {
+  TEXT-DECORATION: underline
+}
+
+.voc {
+  float: left;
+  padding: 15px;
+}
+_Ehttp://svartling.hopto.org/modules/taxonomy_dhtml/menuExpandable3.cssÓO£/*
+ * menuExpandable2.js - implements an expandable menu based on a HTML list
+ * Author: Dave Lindquist (dave@gazingus.org)
+ */
+
+if (!document.getElementById)
+    document.getElementById = function() { return null; }
+
+function initializeMenu(menuId, actuatorId) {
+    var menu = document.getElementById(menuId);
+    var actuator = document.getElementById(actuatorId);
+
+    if (menu == null || actuator == null) return;
+
+    // if (window.opera) return; // Opera 7 works well, so commenting this
+
+    actuator.parentNode.style.backgroundImage = "url(modules/taxonomy_dhtml/plus.gif)";
+    actuator.onclick = function() {
+        var display = menu.style.display;
+        this.parentNode.style.backgroundImage =
+            (display == "block") ? "url(modules/taxonomy_dhtml/plus.gif)" : "url(modules/taxonomy_dhtml/minus.gif)";
+        menu.style.display = (display == "block") ? "none" : "block";
+
+        return false;
+    }
+}
+
+
+
+_Dhttp://svartling.hopto.org/modules/taxonomy_dhtml/menuExpandable3.jsÓOe/***
+	$Id: layout.css,v 1.4 2003/11/30 01:27:35 codemonkeyx Exp $
+	Layout specific CSS styles. 
+***/
+
+body {
+	padding: 0;
+	margin: 0;
+	}
+
+#pageFrame {margin:0; width:100%; border: solid 1px #48d;}
+
+#header {
+	padding: 0;
+	margin:  0;
+	height: 75px;
+	}
+
+#main-nav {
+	position: relative;
+	margin: 0;
+	padding: 0 10px;
+	height: 20px;
+	}
+
+#sidebar-left {
+	position: absolute;
+	top: 107px;
+	right: auto;
+	left: 5px;
+	margin: 0;
+	padding: 0;
+	width: 190px;
+	}
+
+#sidebar-right {
+	position: absolute;
+	top: 107px;
+	right: 0;
+	left: auto;
+	margin: 0;
+	padding: 0;
+	width: 190px;
+	}
+
+.main-content {
+	position: relative;
+	margin: 10px;
+	padding: 10px 0;
+}
+
+#content-left {
+	margin-left: 200px;
+	}
+
+#content-right {
+	margin-right: 200px;
+	}
+
+#content-both{
+	margin: 10px 200px;
+	}
+
+#footer {
+	margin: 10px 235px 0 10px;
+	clear: both;
+	padding-top: 4px;
+	padding-bottom: 10px;
+	}
+
+_6http://svartling.hopto.org/themes/marvin_2k/layout.cssÓO¦/***
+	$Id: style.css,v 1.9 2004/03/04 18:07:54 tdobes Exp $
+	General CSS style.
+***/
+body {
+	color: #333;
+	background: #fff url(images/content_bg.png) no-repeat top right;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 76%;
+	}
+  
+h1 { font-size: 1.2em; }
+h2 { font-size: 1.1em; }
+h3 { font-size: 1em; font-weight: bold;}
+h4, h5, h6 { font-size: 0.9em; font-weight: bold;}
+h3 { padding-bottom: 0.2em; margin-bottom: 0; }
+
+p {
+	padding: 5px 0;
+	margin: 0;
+	}
+
+pre {
+	background-color: #eee;
+	padding: 0.75em 1.5em;
+	font-size: 12px;
+	border: 1px solid #ddd;
+	}
+
+a {
+	color: #44c;
+	}
+
+a:visited {
+	color: #009;
+	}
+
+form {
+	padding: 0;
+	margin: 0;
+	}
+
+img { border: 0; }
+
+blockquote {
+	border: 0 #ccc solid;
+	border-width: 1px 0;
+	margin: 0.5em 1em;
+	padding: 0.3em;
+	font-style: italic;
+	}
+
+code {
+	font-size: 1em;
+	font-family: 'lucida console', 'Courier New', monospace;
+	}
+
+.form-submit {
+	margin: 0;
+	}
+
+.form-item {
+  margin: 3px 0;
+  padding: 0;
+  }
+  
+.main-content .box .content .form-item textarea {
+	width: auto;
+	}
+  
+input.form-text {
+	border: solid 1px #999;
+	margin: 0;
+	padding: 0 5px;
+	font-size: 12px;
+	}
+
+button.form-submit {
+	border: solid 1px #999;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	}
+
+.xml-icon {
+	text-align: right;
+	}
+	
+
+/*** ITEM-LIST ***/
+.item-list {
+	margin: 0.5em 0;
+	font-size: 0.9em;
+	}
+
+.item-list .icon {
+	color: #555;
+	padding-left: 0.25em;
+	}
+
+.item-list .icon img {
+	border: 0;
+	}
+
+.item-list .icon a {
+	color: #000;
+	text-decoration: none;
+	}
+
+.item-list .icon a:hover {
+	color: #000;
+	text-decoration: none;
+	}
+
+.item-list .title {
+	font-weight: bold;
+	}
+
+.item-list ul {
+	list-style: none;
+	margin: 0.3em 0 0.5em 0;
+	padding: 0
+	}
+
+.item-list ul.sub-list {
+	list-style: none;
+	margin: 0 0 0.75em 25px;
+	padding: 0
+	}
+
+.item-list ul li {
+	margin: 0 0 0.25em 1em;
+	padding: 0 0 4px 15px;
+	line-height: 1.3em;
+	background: url(images/bullet.png) no-repeat 0 4px;
+	list-style: none;
+	}
+
+.sidebar .item-list ul li {
+	margin: 0 0 0.25em 2px;
+	list-style: none;
+	}
+
+.item-list .title {
+	border: 0;
+	font-size: 1em;
+	}
+
+/*** HEADER ***/
+#header {
+	background: #47c url(images/header_bg.png) no-repeat top right;
+	border-bottom: solid 1px #48d;
+	}
+
+#header img {
+  float: left;
+  padding: 0;
+  margin: 0;
+  }
+  
+#header #search {
+  float: right;
+  margin: 24px 10px 0;
+  padding: 3px;
+  border: solid 3px #48d;
+  white-space: nowrap;
+  }
+  
+#header #search .form-text {
+  margin-right: 3px;
+  padding: 3px;
+  }
+  
+#header #search .form-submit {
+  padding: 2px;
+  }
+  
+/*** MAIN-NAV ***/
+#main-nav {
+	border-bottom: solid 1px #999;
+	background: #49d url(images/nav_bg.png) no-repeat top right;
+	}
+
+#main-nav li {
+  float: left;
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+	}
+
+#main-nav a {
+	display: block;
+	font-size: 10px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0px 10px 0 10px;
+	}
+
+#main-nav a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	background-color: #49d;
+	border-right: solid 1px #48d;
+	}
+
+#main-nav #current a {
+	background: #fff none;
+	padding-bottom: 1px;
+	margin-bottom: -1px;
+	}
+
+#main-nav a:link, 
+#main-nav a:visited {
+	text-decoration: none;
+	}
+
+#main-nav a:hover {
+	color: #ccc743;
+	background: #fff none;
+	}
+
+/** SIDEBAR **/
+.sidebar .block {
+	margin-bottom: 10px;
+	margin-right: 5px;
+	}
+
+.sidebar .block h2 {
+	padding: 5px;
+	margin: 0;
+	font-size: 1em;
+	background-color: #fafafa;
+	border: solid 1px #999;
+	border-bottom: none;
+	}
+
+.sidebar .block .content {
+	padding: 5px;
+	margin: 0;
+	font-size: 0.9em;
+	border: solid 1px #999;
+	}
+
+.sidebar .block .content .xml-icon {
+	text-align: center;
+	}
+
+.sidebar .block-search input.form-text {
+	width: 100px;
+	padding: 1px;
+	margin-right: 5px;
+	}
+
+.sidebar .block-search button.form-submit { 
+	width: 60px;
+	font-size: 12px;
+	}
+
+.sidebar .block-archive h2 {
+	background: #fafafa url(images/block_archive.png) no-repeat top right;
+	}
+
+.sidebar .block-blog h2 {
+	background: #fafafa url(images/block_blog.png) no-repeat top right;
+	}
+
+.sidebar .block-book h2 {
+	background: #fafafa url(images/block_book.png) no-repeat top right;
+	}
+
+.sidebar .block-cloud h2,
+.sidebar .block-import h2,
+.sidebar .block-node h2 {
+	background: #fafafa url(images/block_import.png) no-repeat top right;
+	}
+
+.sidebar .block-user h2 {
+	background: #fafafa url(images/block_user.png) no-repeat top right;
+	}
+
+.sidebar .block-forum h2 {
+	background: #fafafa url(images/block_forum.png) no-repeat top right;
+	}
+
+.sidebar .block-search h2 {
+	background: #fafafa url(images/block_search.png) no-repeat top right;
+	}
+
+.sidebar .block-throttle h2 {
+	background: #fafafa url(images/block_error.png) no-repeat top right;
+	}
+
+/** MAIN CONTENT **/
+.main-content #mission {
+	color: #333;
+	border: solid 1px #999;
+	padding: 5px;
+	margin-bottom: 10px;
+	background: #fafafa none;
+	}
+
+.main-content .node .content, 
+.comment .content {
+	line-height: 1.5em;
+	}
+
+.main-content .node {
+	margin-bottom: 10px;
+	}
+
+.main-content .node h2 {
+	padding: 5px;
+	margin: 0;
+	font-size: 1em;
+	background-color: #fafafa;
+	border: solid 1px #999;
+	}
+  
+.main-content .static h2 {
+	background-color: #ffa;
+	}
+  
+.main-content .node .info {
+	padding: 5px;
+	margin: 0 10px;
+	font-size: 0.9em;
+	}
+
+.main-content .node .links {
+	padding: 5px 10px;
+	margin: 0 10px;
+	font-size: 0.9em;
+	font-weight: bold;
+	}
+	
+.main-content .links .read-more {
+	font-style: italic;
+	background: #E1E0D2;
+	}
+
+.main-content .node .content {
+	padding: 5px 10px;
+	margin: 0 10px;
+	}
+
+.main-content .box {
+	margin-bottom: 10px;
+	border: solid 1px #999;
+	}
+
+.main-content #content-title {
+	padding: 5px;
+  margin: 0;
+	margin-bottom: 10px;
+	border: solid 1px #999;
+	font-size: 1em;
+	background-color: #fafafa;
+	}
+  
+.main-content .breadcrumb {
+	padding: 0px;
+	/*padding-bottom: 10px;*/
+	margin-bottom: 10px;
+	font-size: 1em;
+  font-weight: bold; 
+	}
+  
+.main-content .breadcrumb a:firstletter {
+  text-transform: uppercase;
+	}
+  
+.main-content .box .content {
+	padding: 10px;
+	}
+
+.main-content .box h2 {
+	padding: 5px;
+	margin: 0;
+	font-size: 1em;
+	background-color: #fafafa;
+	border-bottom: solid 1px #999;
+	text-align: center;
+	}
+
+.main-content #footer {
+	margin: 10px 0;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #aaa;
+	}
+
+/*** COMMENT ***/
+.comment {
+	border: 1px solid #999;
+	padding: 1em;
+	margin: 0.5em 0 0.5em 0;
+	}
+  
+.comment-folded {
+	border: 1px solid #abc;
+	padding: 0.5em;
+	margin: 0.5em 0 0.5em 0;
+	}
+
+.comment-folded .new {
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+	float: right;
+	color: red;
+	}
+  
+.comment-new {
+	border: 1px solid #fc0;
+	}
+
+.comment .title {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #777;
+	}
+
+.comment .new {
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+	float: right;
+	color: red;
+	}
+
+.comment .author {
+	color: #999;
+	font-size: 0.8em;
+	padding-bottom: 1em;
+	}
+
+.comment .content {
+	padding-top: 0.5em;
+	margin-left: 1em;
+	}
+
+.comment .links {
+	padding-top: 0.5em;
+	margin-left: 1em;
+	color: #999;
+}
+
+/*** MISC ***/
+input, textarea {
+	background-color: #eeeeee;
+	color: inherit;
+	border: 1px solid silver;
+	}
+
+select {
+	background-color: #eeeeee;
+	color: inherit;
+  margin: 0 5px;
+	}
+
+input:focus, textarea:focus {
+	background: #fff none;
+  border: 1px solid #48d;
+	}
+
+.container-inline div {
+	display: inline;
+	}
+
+h3.form-title {
+	text-align: left;
+	}
+
+.form-item {
+	padding: 0.3em 0;
+	}
+
+.form-item textarea {
+	width: auto;
+	}
+
+form .form-item .title  {
+	border: 0;
+	margin-bottom: 0.5em;
+	padding: 0.3em 0;
+	background: none;
+	border-bottom: #bbb solid 1px;
+	text-align: left;
+	color: #777;
+	}
+	
+.form-radio, .form-checkbox {
+  background-color: transparent;
+  border: 0;
+ }
+
+.path a, .path a:visited { color: #777; }
+
+.main-content li {
+	padding-bottom: 0.25em;
+	}
+
+.marker {
+	color: #f00;
+	}
+
+.error {
+	color: #f00;
+	}
+
+.ok {
+	color: #080;
+	}
+
+#pager {
+	text-align: center;
+	}
+
+#pager div {
+	padding: 0.5em;
+	}
+	
+#help {
+  font-size: x-small;
+ }
+
+#message {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1em 2em 1em 2em;
+  border: solid 1px #999;
+  background-color: #fafafa;
+}
+
+/*** MENU ***/
+
+li.leaf {
+	list-style-type: square;
+	}
+_5http://svartling.hopto.org/themes/marvin_2k/style.cssÓ !O7/***
+	$Id: modules.css,v 1.5 2003/12/09 15:04:47 weitzman Exp $
+	Module Specific Style
+***/
+
+/*** TRACKER ***/
+#tracker table {
+	border-collapse: collapse;
+	}
+
+#tracker td {
+	vertical-align: top;
+	padding: 1em;
+	}
+
+#tracker td ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+#tracker td ul a {
+	font-weight: normal;
+	}
+
+#tracker th {
+	text-align: left;
+	padding: 0.25em 1em 0.25em 0em;
+	}
+
+#tracker table { width: 99%; }
+#tracker th { text-align: left; border-bottom: 1px solid #ddd; }
+#tracker tr.light, #tracker tr.dark { background-color: transparent; }
+#tracker td { vertical-align: top; padding: 1em 1em 1em 0; border-bottom: 1px solid #ddd; }
+
+
+/*** CALENDER ***/
+.calendar .row-week td a {
+	display: block;
+	}
+
+.calendar a { text-decoration: none; }
+.calendar td { padding: 0; border-color: #888; }
+.calendar td div { padding: 0.4em 0; }
+.calendar .row-week td a { padding: 0.4em 0; }
+.calendar .day-today { background-color: #69c; }
+.calendar .day-normal { background-color: #ddd; }
+.calendar .day-future { background-color: #eee; }
+.calendar .day-today { background-color: #7ad; }
+.calendar .day-today a { color: #fff; }
+.calendar .day-selected { background-color: #7ad; color: #fff; }
+.calendar .header-month { background-color: #eee; }
+.calendar .header-week { }
+.calendar .day-blank { background: none; }
+.calendar .row-week td a:hover { background-color: #7ad; color: #000; }
+
+/*** POLL ***/
+#content .poll {
+	margin: 0.5em;
+	padding: 0.5em;
+	border: #ccc solid 1px;
+	}
+
+#sidebar .poll { }
+
+.poll-title {
+	font-weight: bold;
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em;
+	border-bottom: #ccc solid 1px;
+	}
+
+.poll .text {
+	margin-bottom: 0.3em;
+	font-size: 0.8em;
+	font-weight: bold;
+	}
+
+.poll .percent {
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em;
+	border-bottom: #ccc dashed 1px;
+	font-size: 0.8em;
+	}
+
+.poll .total { font-size: 0.8em; }
+.poll .bar { }
+
+.poll .bar .foreground {
+	height: 5px;
+	background-color: #aaa;
+	border: #ccc solid 1px;
+	}
+
+.poll .bar .background { }
+.poll .vote-form { font-size: 0.8em; }
+
+/*** BOOK STYLE ***/
+.book .title {
+	font-weight: bold;
+	font-size: 1em;
+	margin-bottom:1em;
+	}
+
+/*** FORUM STYLE ***/
+div#forum table {
+	width: 100%;
+	margin-bottom: 1em;
+	}
+
+#forum td {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	line-height: 1.2em;
+	}
+
+#forum td.statistics, #forum td.settings, #forum td.pager {
+	height: 1.5em;
+	border: 1px solid #bbb;
+	}
+
+#forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
+	white-space: nowrap;
+	}
+
+#forum td.posts, #forum td.topics, #forum td.replies, #forum td.pager {
+	text-align: center;
+	}
+
+div#forum table .topics,
+div#forum table .posts,
+div#forum table .last-reply {
+	font-size: 0.8em;
+	width: 5%;
+	}
+
+div#forum table .name,
+div#forum table .description,
+div#forum table .navigation {
+	margin: 0;
+	}
+
+div#forum table th {
+	white-space: nowrap;
+	}
+
+div#forum table .name {
+	font-size: 1.2em; margin: 0.5em;
+	font-weight: bold;
+	margin: 0;
+	}
+
+#forum .description, #forum .navigation {
+	font-size: 0.9em;
+	margin: 0.5em;
+	}
+
+div#forum table .description {
+	margin: 0;
+	}
+
+div#forum table .navigation {
+	font-weight: bold;
+	}
+
+div#forum table .topic {
+	width: 80%;
+	}
+
+div#forum table .icon {
+	width: 20px;
+	text-align: center;
+	}
+
+div#forum a {
+	font-weight: bold;
+	}
+
+div#forum table .created,
+div#forum table .replies {
+	font-size: 0.8em;
+	width: 5%;
+	}
+_7http://svartling.hopto.org/themes/marvin_2k/modules.cssÓ#$%O‰PNG
+
+   IHDR  M   K   Ã %_   PLTE&Csf–´Alº.Q‹x½5[f¶ç%?7YzÃ[¦Ô_ŠÓËäóışşEyÑ 9c¥Íåv¦Åu»*J<c,M…‹ÂäY†CuÉªĞèÂİì Ctôùü½ÛîO]r8‚¯ M|“Äã2X— Qƒ\•ğ÷û#h“
+Ñæóíõú m¶ƒºİ]”¶ q¹•¾Ö8c«áî÷l°Ût»)ˆÅF|Ö4\=ed«Öt³Û JxDxÎ>h´ArÅóøü>–Êy»}¹Ş*I~CvÌo ½E‚¨ŞíöÃÚœËçy½d¢Õèõ=k¸;g²çòøp³úış k¬³ÕìH|ÕH~ØÚêõ1Aj&b‰`š=l¹KĞ7b¨‚ÂEvÌHs Kz9y¡ˆ¿àBfêóùv¼Åàñ;b§F}Øãğ÷FzÓM|*D3U sºBqÂTˆ9[?o¾">k6XQ£Ô ODrÄ&K|
+v½|ÀS/Q9^I€ÛZ‡Ñ2P0Èh¦·Øìv½€À >p YCoÀ;d«/Ms¸ Fv HzOÎ-2W–0U’6_¤w¼F{Óh©T—ÇåN}<g° Vƒy®Íöûı´ÏŞ   ÿÿÿCvË                                                                                                                                                                                                                                                                                                ue`   	pHYs  Ä  Ä•+   tIMEÔ6k”‚   tEXtAuthor ©®ÌH   tEXtDescription 	!#   
+tEXtCopyright ¬Ì:   tEXtCreation time 5÷	   	tEXtSoftware ]pÿ:   tEXtDisclaimer ·À´   tEXtWarning Àæ‡   tEXtSource õÿƒë   tEXtComment öÌ–¿   tEXtTitle ¨îÒ'   IDATxœíœ‰[RÛÀO"¡>å¤p”RQÁyà‚	b	j9§™¢9ei&†÷ú5Sx¹×«WÿÕ·÷™'&ƒ¾WUÀ9{X{kÏ‘?Ó’<A.Ó’<IÓL¦¤i&SÒ4“)qĞ´Éå©·ã×Ø4Í6‹Êfû¦ü“¦M¾0ÚÌ?Â–Ÿ_bÒ4X4ÿşn9Vıc~z‰EóØf¼ıøÙÆHšf<ƒ¦yÙx»S»š‘¦—D§i64ŞÎ¿ş·R3œn8ã‘h4m+rÖyë^ÍzKÆ°<İ­Ç–È4ÍÇ—Fk×·ëx•¿ŸmØäiÿŒ%‘hšå#rûÚİúLïàÌ*Æ»LÓ   IDATb´«å—éö3šˆÑT]š§-S˜ëvgCá›ÌµL }ëÊMI›Êp¬JóŒ,Bš*Õğ²Å¾t»ó[SIwOë¯Ğôz¿ö]Rí¬¤†çä_¨Ìï—¡MQ“‰ç?KjD@S%ß™4ş™_Õ‡çot|ĞCšŞlï@ßékä`x'%Õ]ãáâG©MâyãÏ’Ğ<^BnçU–áG¹e9oõ™8M ÙÙk}¦×ØÖ9i8¯BCa\ ò[šx–Ôø3¦mÅ°^»Õ——`ö÷Ü}ªÿ
+`~Åi.x³³õ{J$c'i½;ãU2MOÜZè¼²«”|³”»ñ   IDAT#	—¦íØ‚İ~ĞNØvQÕ“ótÍKÃ„xoŒ$'ãUşïğM:¯ÿ*%_ÁìHÂ¥	a~‡qÏ¬^,Ëùa~ıºPPÀâùefsi˜3–'j^mD;N­¢n0A0ÃuEB'ŸìÌdSM™o‚I±T"ÉS²ÀBşƒ‰N>(ß6MÕ°€	³{hîÍggR8M›gÇ6V‘2† &ìLXñ2P(UÅH‰LÓÃMB&/'nYMı¼¼È$Ç*‘RC2¦<…"ÆWáÇD-aÑTÉv?ÏoõtÜ{»ÛL>MĞ}™ÙŞ8¦+;,%L™¦6›ÂênÕ„Pi   IDATˆW˜¹åf…81 ïB_sª©_rr2J©låbR0£®µ„í›;A¤g9¿ØÓñæ·Ì0wŒ#ªªPc˜]ˆĞ—&e¾6òCÆ¡ÉèÒh¸¥2¯8©n)šŠ¸%MÕˆ¥¥k4ï¢ò9`™óÛı5|h$Fxgß{	µ[Ä)4
+ú6Qšì¼ü¿(Màn2n©2 I$µ!Ù¤ĞKØ*x†³-ahÚv$ÏÎKKo–á,×2#Óôfˆ¦å*%ÄıÆÅÚMñŒ	ÑÔEúYAL/­FÄKx*bÑT-g¬j;
+k;šŸ –õKØ¥‹àgôÀ^   IDAT,Ø{‰¨ˆíŞ@‘×0ñ?¯@3Ú—fÄ67jŒŸ‚r¼$‚á¢–Ğ4mò€ràÃ›'–ŞL¶ˆøæÀDÖáÁ²MäQ®HÓHJiúeü¢1'Bs%£¥"ÛÛÛë¥ÚËè4÷Lï­Ó¸sşô4¾ÉWzšÇSY³3½Ş¯|–¢4Ë×³6÷GØßa˜z‘wÜâş¿hš-Øú!Hñ~hAßç._5®˜9½P­óÄOyJšlŸ§)·o×Œ“&¨ènµ;™6¨8}_ˆ7œ„:?Ûc9£CÿÒı„4¡áÑiÚäYƒñÒôü]®Vƒª¾µ¬ŒŞu<š0¯Šóš   IDATÜºIözÅOD.,‘MÓ¼p@r"-§€æ—=µZ]®Ü<X½:kfIÔÍPCØ,ùåÿ”4ıb%²hÚä“HÅÚ¼Y\ø¦· Ïhºg^K¦aÃ‰/h‘ï:,BCú+Ó\9Ûşèe÷3‘iz½°šn%²%Çªü¬†‘GÓqüKÓ|=èå@‹H3{`Ï	iªË³Ğ-³ˆÍÓOÑ”…xÅş?ĞtğiïÔ×)à7½Ùú	5Esû•!E¤éOMZB:|Í6f‰Ğä+1\&°„K3‹Gs­¦^ŸÙÛÛ?YkïÙŞ¾r Ó‰ÓÜ„4eQiÊâ¤™K2Ï°¾÷.   IDATâŒ¿®D“µ$KÑä)1Mˆ¦¾¾¦÷CNGaYí›ß
+jê™6S`:}Åàî›Ãi’whriò‚ûÕ]‘f¤´Ñhj–D£Y¯ÿ0—û°ıÑ£’¦ÒÖ§55zæ—¾rÓ‘ïô±VûÎY®ÄiòWä¸ã%¿Npi2±ñĞÔQÕ/âƒGà.üÂ!VÉ¼´º/W4|J`Iä^H_ÿöîâ¥§}èÉ5k8Ì‰r“Ï©­k(«­+r+[¶†…«Åkatùu‚KMˆ&\¶ŒÒåq¹s
+Y-HS&N“Y-†¾)°$2ÍúŞæçy%•í•%yø–[wíÓ5=€9Xá6½ë}Í`   IDATz°X:ÔSxo]ÙòêX0BØ÷![ğÄpá‹ù*êÊcÒ”ñ·!x^¶·
+v2øÃn0n8"ú44Í¶í>šæZı“Ñ’‡ó•ííyp78/üèÓ½Ì5ıàÓgÒæ—æ~ºñÏ\aÎÄ8²u|ÉÛeC&ÙU?„â{Uâ´à¢ì$Â„Çf'â`h¢ü-2ÁFÊÌµ#ì†t¢Á¸áˆÀÖ.›MTè)œ5oÿ©~Ş4_]Ù^rñ(n¯‡óªšïWÇÌÍıtĞìÈÑc*ù%oxò’½S
+÷Ey»¶¼sFü=]V¼È¯õ…P¿x^ûV¸IL—iÚ‰ï CÃşxe   IDATù½¹ıAÍÓ-™l²×ßË­î~;'à	|³P/›}q2{~«?·tèfOYmÇ]í¸ÑLl³N'0wœ{Ö6>ïçØ '^ä‚×†<JæA="º9Gèjª£0LF=?_‹NÀÓ,áœN0Oe’4kşhínmzœx' yQR°V~ûv«¿»j‘ Ùz]ûÚnøÁ‡9Ù,!ÖÖwlIöAqKèõÍ¶Mªá¬ù\Ö4:Úİôp~§	^xT9úğÑÃªÜ[¥C7ş)ìh}£u½úÑ4Ù
+çXFLIö!.qKhßÜ²šÈª^ó¹§»ªÖuà g¯¼GY/   IDATİêf¯}ëî_,ı\s®õú½“Àôÿ&ÕŒ$zT0ùÅ,aö…–V?f/¾ÙŸq6óóÕÕÕ€eW‘¯¸øñùb.tÍ¹æë³ÏìÃÉ²ìWfÏrY×ãÎYÓÛœ›‹ãî	¤òâá·º¢]ånñînQgi)îšÍoÿ®úÑı^˜³ÃÆ×³½øpó^iÿ"³©éáÅEnşãâİ£¢¢“SßnQşĞÍ2èšw-'xŠÓbƒö{c£İ3)/‘  ®¨xmºjn¾0g=[®}¶HıÛÜşªªşşÑ¦ùÊêÑ†Ù»¾Ùü7êŞœ=µĞ5Ëÿ‡   IDATq‚eÙRËØp¹ö˜Iy‰Œl%’àF‚¶Ğ™.4¦9ñ
+ûT×Ò¡º¾@§éŸ›‡ûAEïî¿ÕĞuR¼ûîÚ§Ò›7J?]{ç+Ö÷Ì5ßm9HÔ5/ƒR0œ°À»'4ƒP WÿĞh€ƒ@'sØívGccÀKƒ”ç€LÀ“‡ò)‡hu@%ÄIÆWoˆ:3\a¼¤¤Ó\¶¾4MLô©˜˜í¬mxğ ¶n°ş¸ØĞõø_míÍY§É§ÍiÎ¹óL2½E­¨hÆÂá1«¾+<
+)*õx¤(Ö¸ÑˆI
+)Öè¸P
+ê’ÂD‹#€ AtE   IDATH 1ˆ¡c0 ĞˆÁLhÀNÆ8 »F×Ø˜+”x Å¬:à ò%R…LŠ%%æ¥jg}9Sî¢ö¿øÈ‰iw÷HíÓ6äŸìîî*µç]§jµ¯èéç—e%á^ áN¼ÂcÄkĞ
+ïÀôZ3F&“4Z BA°…)¬Ä…ÔHÆX!;#p[™„P¼~ƒ¨U{0"¯”È À¿¦Ğ4ïœyŞ;Õ&“Éé4ˆÏ	Úß=~±kr»MÎ¢"ˆz½Ï´i7$şCœf @¡‰*àÃÁ"#cHšŞ…†»äFÅXí¤Ë#8.pE…DVíai•Y‚ã®p   IDAT])¢	x<ÌR»ÕÄ–$î¤§§jÀw×‡ïù:‹@PÅ {“:¼[XC3L>:şB©‡5FÓÄá‘(ñ© FÚHª…4aÎ7S5¥Å½7%4Îãá{¾ÁKˆSÛ¥uúœ@L>Ÿ©H«-Ÿt®.â.`#hE¬D—&Íú	ùfA¤å§¤c<AŠ¦‹Tër°hŠ©–±µH£RATv¹Ñó~f½œØ•TvõÔÎ¼xñâ¼N´çwúúf¶—âöLØ# Ã‰!«¦³_ô#0ú‘,áNÇ ”o‚VOÇx+Ç7Yª¥l­)¥	ÕÖòRé^wã<¢u]   IDAT&íùÂóÎºººkùµµ­Oîïe¹ì	Àú¦†O¡· FA¸LXcÀ¬T²ÑC¨vÓJÅ ²İÄ¬¼ºÏm7Yª9Z5©¥yiŞÇ_«×ñúîtuÎÍÕÖv´Ş}r¿Â÷ÛO¨â·›˜QJv¨äCITÇkÇûbX¥V)Şs#xŒLAvå™-@ÆĞ=¸TG¨„² 0»Og©¦´âe-XJi^šò%ôe–rÆ½FKNßi‘vö”û{¾U×ÒôzsBˆñ&œI4˜E¥.«ÌpÔ ĞÆ‰RD‚HÑ@ŸúXˆ«ÄJ3ƒQAA‡œ&9ÌrÛ†   IDATØãMÂıÙãM–jJ+>ö´oX	MˆüÚßv<üÊØr˜¥T›Üååê£#ø>ãt¯ºŒûÃ	Úi!æB8­Ş f+jn‚OXˆ÷ıFOeÈÔv‡„ö?:5OgÏ…`A2Œ=b©¦‰²íÖÔÌ…Xb3ïH¶Ñq%ññâqåê¶ä`xù;~MMÌÓ¯:£¾ÄÛ`8ÉÁı/zAq,*S4Oçˆyyd:ãLƒlo®®nn»~×´©v¾ï·¿ß½^Ãö¿èéâ^UJÑ’@ä#;æWö¶¶³³¶¶¶Œıé‘‘ôŸ:Œ%Ñş’Ê¶b0–PVÒ¾'Iÿ5ÓdJ[KoÕ   IDATšf2%M3™’¦™LIÓL¦ ÿIKòä¿ÎiĞ3‡    IEND®B`‚_;http://svartling.hopto.org/themes/marvin_2k/images/logo.pngYimage/pngÔ'()*+_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓ-./O
+GIF89aX  ÷  Úÿÿ™Ìÿk²  fffy•²­Öÿ÷ÿÿ€™²¸Ûÿÿÿÿ‡œ²Âàÿ¡²ÌæÿDDD}ŸÁar„                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          !ÿNETSCAPE2.0   !ù  ,    X   ó H° Áƒ*\Èpa€‡#JœH±¢Å‹3V @£Ç Cbä(²¤É“;¢\É$É–0cR|)³fLš6s¢Ä©³gH>ƒf*´èL•F“UÊT"Ñ¦EŸB*ujÏªVsbÍZ“£€¯`ÃŠK¶¬Ù³hÓšÀ¶­Û·pãÊK·®İ»òº%Ğ–oÜ¼~ î«—í`Ã…+FXp_Âï]¬¸ñ[Ë˜//ö™2gÂ5;Ş›øñ\É¨\z5ëÆ|cC-:óiÑ¦M¯î<Ú1lÄ¹+Ã•|øeÕÈ#—f=¹7ï×ºïJŸN½úô€ !ù  ,  (   a H° Áƒ	XÈ°¡Ã‡#.XÀ€Å‹3jÜÈñ E C‚ô ¢È“'IšDÉr£Ê–03¾ŒIs&M˜6o²Ì©3åÇ;õYr(J•’*]Ê´©Ó§$J*5  !ù  ,  (   a H° Áƒ	"XÈ°¡Ã‡#.ˆ Å‹3jÜÈQE C‚ô ¢È“'IšDÉr£Ê–03¾ŒIs&M˜6o²Ì©3åÇ;õYr(J•
+’*]Ê´©Ó§$J*5  !ù  ,  (   a H° Áƒ	.XÈ°¡Ã‡#.¸€Å‹3jÜÈQE C‚ô ¢È“'IšDÉr£Ê–03¾ŒIs&M˜6o²Ì©3åÇ;õYr(J•
+’*]Ê´©Ó§$J*5  !ùd  ,  (   a H° Áƒ	6XÈ°¡Ã‡#.ØÀÅ‹3jÜÈQE C‚ô ¢È“'IšDÉr£Ê–03¾ŒIs&M˜6o²Ì©3åÇ;õYr(J•
+’*]Ê´©Ó§$J*5  !ù  ,,  ,   p H° Áƒ
+HÈPàƒ†BDøp¢B‹+b$¸ğaÅ ‚Ô8òcÈ EØñ£È‚)¢|¹RcÁ*G:ÔIeÉ™W²JT¦Ì6‹¾äXô§Ï“NÚÔys£ÕˆW³”¨µ+×®Y !ù  ,      # (PÁƒL¨!B
+BŒèPbD1NlH°c@ !ùú  ,       H° A‚&<øÀ`C‡#"<HÑ`@ !ù  ,,  ,   r H° Áƒ
+HÈ0 B¸PbÃ‰b¬˜‘ Æ7:I2äC'¦¸ÒäIŠ#c~,I#D›1s.TY³eÏ•)Oâ„épèĞš“Ò¬ø2gP(_>-Ú”#È«	­bİJP+W®^¿b !ù  ,,  ,   r H° Áƒ
+HÈ0@„B¸PbÃ‰b¬˜‘ Æ7:I2äC'¦¸ÒäIŠ#c~,I#D›1s.TY³eÏ•)Oâ„épèĞš“Ò¬ø2gP(_>-Ú”#È«	­bİJP+W®^¿b !ù ,,  ,   r H° Áƒ
+HÈ0ÀƒB¸PbÃ‰b¬˜‘ Æ7:I2äC'¦¸ÒäIŠ#c~,I#D›1s.TY³eÏ•)Oâ„épèĞš“Ò¬ø2gP(_>-Ú”#È«	­bİJP+W®^¿b !ù  ,,  ,   p H° Áƒ
+HÈP „†BDøp¢B‹+b$¸ğaE ‚Ô8òcÈ EØñ£È‚)¢|¹RcÁ*G:ÔIeÉ™W²JT¦Ì6‹¾äXô§Ï“NÚÔys£ÕˆW³”¨µ+×®Y !ù  ,,  ,   p H° Áƒ
+HÈP`„†BDøp¢B‹+b$¸ğaÅ ‚Ô8òcÈ EØñ£È‚)¢|¹RcÁ*G:ÔIeÉ™W²JT¦Ì6‹¾äXô§Ï“NÚÔys£ÕˆW³”¨µ+×®Y !ù ,,  ,   p H° Áƒ
+HÈPàƒ†BDøp¢B‹+b$¸ğaÅ ‚Ô8òcÈ EØñ£È‚)¢|¹RcÁ*G:ÔIeÉ™W²JT¦Ì6‹¾äXô§Ï“NÚÔys£ÕˆW³”¨µ+×®Y ;_Fhttp://feeds.feedburner.com/%7Efc/svartling?bg=99CCFF&fg=444444&anim=fYimage/gifÓ12/OGGIF89aK   ÷Ø   „ l ¹ › 	r £ Ç ¶ © x 'Ä -Ï (¹ —"s,;qt{• 1× .Ç (©9¸2‹:£@N{`jŠ«³Í(Fš3JHYŒv‡µ‡•¼‚‹£²¸Ê8¾E±(R·@aµYs±dÁTiŸhz¨o{š¢­È“š¬ÎØğ­²¿
+JÔu‘ÏªâáäëXæ1bÉJwÎk“çd‡ÑkØ¿ÅÑâèô¶¸¼ùûÿàáãy›Ø‡¤Û‚›È›²Û²½ÑÆÎÜZ‰Öt£ñ’­Ú«½ÜµÈæÉÕé×Üä½ÎåİáåòõøüışİŞßëñõúıÿåèêéíïöøùÔÛİòööüÿÿÏÑÑùşûª´¬¦°¨ f  ` mH?‡?6^6ÆÃœÓœe~e‘¨‘ÁÜÁ‰˜‰Ÿ©ŸéöéØäØ÷ù÷ñòñîïî`¼_€ÈˆÉ…’Ëäæáÿÿùşşûúú÷ÿÿÿööôÛÛÙúúùôòèòÖdÚÊ‰ç¶
+ğÄ(ğÜö¿	ğ»ã²ßÜÒä¦ ŒmË¨@Ê³p ‘eØÎ±¿¹¨³¯£ú² Î• »Š†h¾º°øöñ¢ptPìêæŞÜØ[ îìééäİ¯¥™ù÷õ×ÕÓÇÆÅæÓÉöóòâ«›ÚĞÍäÜÚÜ´¬â{iÙÉÆÛO;éYEĞoaè”‡æ±©ÔÖ)ËZKÅ‰‚èÀ»É­ª¯ ÂÉ6'¸6)¶QH²\U¯nhÒ”ğÏÌÔ ˆ72B<‡JF×¢Ö»¹Ç „l~LJŒ`^Ñ¬«²—–½¥¤×  Ô ¼ ²  §  “ u  X  ŒhxÆ··ÙÓÓıùùêééììì                                                                                                                        !ù  Ø ,    K    ÿ ±	H° Áƒ*\È°¡Ã‡#JœH±¢Å‹3jÜˆÊ”&®1#ç5§¡A‚Äˆ7Ü	iK1nÈ`T"E’™z‚XXĞ@Mƒcºœ¹xdˆƒ´9Z0éÒŠIB|@ˆCÕ‚rº ±8$‡›T¥J5j“Á=€â*òZğ	*N¨aMÎ–±_­}%P‡a<t\ââÂÃR´\ır%‹,‚})R„È Eíô0ÑÁ…r`‹³E‹ÀO­n»¥‹ÖlŠ4ƒÃP±BtLÙ4}íH¨P¡NØî9!Ğ	ƒN²vm%ö@\Ì†áÿ¯˜ ¾V1µ« «dÒ°Íñ£© ¢F°)	qeàa®½ÂŒeÒŠ0Æ,Ôƒ4Ê*Ä$Š.ÎÄ ˆ#‘DH#—´ADĞ	´„ÇY`C
+4×¼‚Š-Ç1D	ìaĞH$±wŒxİÁJ4Óğñ#AÈ%œÔ  ¡!à€-ÒÌ1¾ˆò °A9ÜP.h€*Éc)ÑPÃ‡#‰ô%•!@l$D Ùa-¶²L}™`@–6?@å(È@CEA³<ƒMø4%u@G(1…Ñ6¸ Ì£}ÿbÁÄ`PP‰M-ËôB&Ğ4È„#K”É$‹dMh©]-²¡Œ2¶4ÓBQ$P€FÔC éU4¸D‹¯)2É$™tÇ#uäCôWÓÌ2³x‚M.¸TÓ0À6ø Ãp€ju½8c‹+µÜ‚A‹2	"™!b>  	S`£Ç^€QÆÅÆDã4Íğ’D˜´ğ
+¨ ÄµµñË/’ ”‰"ô9PEP‚8`€utÇYAM)^~%Ch`«@ÖX0À
+ZÓÄy$Eé•½4ZPd»½‘	p°[gÙ$­‘ 0Á@ a	×ø)ppBA(.ùä”Wnùå4 ;_*http://www.google.com/logos/Logo_25wht.gifÓ456OFÿØÿà JFIF   d d  ÿì Ducky     <  ÿî Adobe dÀ   ÿÛ „ 		
+
+
+
+ÿÀ  d d ÿÄ ˜                           	     !1A"”Ñ2ÒUVQaqBRğ‘¡áñb#Sc$%        !Qğ1A¡Ñ"aq‘á2#ÿÚ   ? ï˜üªû³âšôÖ}Zğ™Õğ·ró^£ó•_vbüS^šukÂcánåæ½Gæ?*¾ìÅø¦½4ê×„ÇÂİËÍzÌ~U}Ù‹ñMziÕ¯	…»—šõ˜üªû³âšôÓ«^w/5ê?1ùU÷f/Å5é§V¼&>î^kÔ~cò«îÌ_ŠkÓN­xL|-Ü¼×¨üÇåWİ˜¿×¦Zğ˜ø[¹y¯QùÊ¯»1~)¯M:µá1ğ·ró^£ó•_vbüS^šukÂcánåæ½Gæ?*¾ìÅø¦½4ê×„ÇÂİËÍzÌ~U}Ù‹ñMziÕ¯	…»—šõ˜üªû³âšôÓ«^w/5êX>›éß•Cğí{5¬³BÈ}7Ó¿*‡áÚöi,hY¦úwåPü;^Í%!ôßNüª‡kÙ¤±¡d>›éß•Cğí{4–4,‡Ó};ò¨~¯f’Æ…úo§~UÃµìÒXĞ²MôïÊ¡øv½šKCé¾ùT?×³IcBÈ}7Ó¿*‡áÚöi,hY¦úwåPü;^Í%!ôßNüª‡kÙ¤±¡d>šéß•Cğí{4–4,‰‚Â€P
+@(¡ŸÍÃÁá¥åæ%ÅÅ„Ùuä°‚ë…#ûPTj†à”Ou.?=ÉòÙHP}¥4{è
+ı•U¦â´Ç€j	Z¹€P
+@(Á<İ73Ö°ÒY/Áƒ<´ÚDW”v?r¬ãn&ú6®k¹m?S,½;˜ê.36Ôa 4Òˆ"º_1ÑvÄ©k=ûê©­œ,ˆ“¦ã²O†Ì¦n”¼Úå.ÁÄ§pH'j¿jİ9_uc¸in#n«'-™
+‚êYç´ÛŒ *î¤)&Çv€qªŞĞs€é‘ÌHÍæXæM2‘Öš’Àñs7'~ÓsXÒ¸É3\ÁÄ\hê½¶/ilw®»‰­¨š™ ’«@(  €ádtä˜>aÀÌ!Äär‰q’˜»”L—SŠu ëÚsÙE6ÉJ™o{;q)Ş Ê»HiUobgÉÂ>ä¨Í©L(¥sc2Ë|ÇRÜ{¥ •›Õ«x …Ê?–ê|¤ƒ
+\V}8æ^Š€¦~0%
+RÆ¤Ô;j,‹dJb%-nPl%-~Œ¤h7šÖ¨­‰¶°Üg½¥µ.Êoş‰
+B
+H(6p_ÖãT{3âtW¸i$f:nPĞ]+ŞãŠguÏğ+Ò£¡õ%÷6$"a¡ÇR]ÛºO+”ã·U”4¿t’È­+´–>%m¿k(|¦M¶ZC-!¦Å›m!(&ÀM](PefÛ–gR@ €¥yÑ²3ğbÎŠàğbL¸Ñ„vä8û……%-¶\RBO­g¹I1k(æ>?# t˜ÃiLÄ¼!6¶Ô˜%G˜’­-ş4¯;{q×ïøÈÓkiİÂ#WÖÓ–ŞEìt%ËJ—È0¨
+i¤;·ÈHV¶¹µeïpÛ‰ğ…‘è¾Æ•¬ÚÉ['&çGuæ#'‘r(mŸx}Ğ”«JY0·ƒ¯ò­-¹m¸Ôœ?`Rı•]5RÊĞ±„Î–şEq"s£G/<ÛjRÑ`*á¤è5®·»4Š¼ZúlCÄ#Ìœ³d´®™”C[ÓÍ/2¹HJ·[şkÚ¯]Ö–(˜¹rdßw™Œ^9­î$Èyæ¶ Ú·hxmW[²â	,q2f¥ÅCÜ„´²Û…¥¥a+”¤ØëÂ´VO‘Ş¤
+@(~§ê¼/NB2R™ã¡Á§–ç:ÛeÎZTA±!5[ZÌ&yø™ÍHƒ
+-öÃMNk$ÁSeøªy.¥%¾)¶Ÿ¯ÉîáÈ”ŠTæ¡¯ãÓ¦6eÏeÂì—‚¥©_ÕJ%ã¨¯:ÕwÜMcé‘èö”„íÊ#ÉOéŞ¢Èµ?ÒØ–Ó”wªšD6R‰xæÉÙQI†ì½Å{lHÕ×»µ_få…·‹å‘÷İ­dıú¹<pÄ„9x×rq°ì`ò^_2¦òÍ°î?™>B ¥½ÒB ihR4
+âk‹¹´İSVº÷¥áìQà¼gğ_·¾šÙÿ ]15Çİ÷:ß•™Åõ\	OI¥…s£ÉÑØ»Š‘ÙWìö],êíªxdtÿ ­Ú­ªlİ(êÓW&²ıó.nâåÀRnçx¥­AHá^–ƒÇ¢cšŒ÷05u+˜RĞ)Ñ7ì«:¤ˆl–éÜ[xøÏ†Òd¼©	Bo½)×¹Ç‡m)X$•«@(
+Ÿ™TïOa­÷J4qâÁA-aHPJ»À¦©v×"T+® êîLÜ–ZP„¡è¡9$HEÜŠâÚ—%:êSY¢a6 Äe°à{’†‡¼8ó×¶"ÅÔC<jeß0!Ì“£ÒChº™¬4ìm‡¬Ïñ¬6Ş‹»>_ÁÛ³em»WÅ¨_Rœü˜(,dr9)¹²§ğëg Ñ[Šoµ`–Êw$Hã¥tí÷ŞÕZÅ£ŸçîqÛmÑ­XÙÌ¸ˆ=2¹=E‘T^¿†ü¼«‹š‚·Ù¹	fïjï?½a}Ü-eZêÙş¼x=®ÃİÜ®Õqê8ãù;ÿ –½?Ó¨“k²£<Ìgœ}ÂÙĞEJAî!¸×…aÙ9vÜ³Œeã1(Óı-ëÙ×jÊ:)Óôøä['<Û¦3|ÔÛNğ8€SÄv×©3Èó–ğÈ/4ûÎ-V
+æGVÕ6JÅˆ:knÊ˜"	   `4 T’(  0u†/6—8¤(j-Û@@Èè|SÓ]–—äÇæ”CBO-¾X@F‚Æç÷ªºƒãøÿ tÿ ïNîÛNrm¢Ùúh"
+&{šÃfİiÄ¡x¹ÏCuÉ-ÒÓq
+TJRÙJUº¹;©ü“Wt¯-ñÙEsÈNİ$+ci”v7Ì‹´†Â™;FµÁm­Ú´©¿¡íìÿ ¶ë¶¶í·¶ÒIN‰|ó’Õ ±é87¤È’òpâ¡Çƒ©RLt¶y‰SZèËVı¿gdİ¬Ü¼ZÕ+‘Ïÿ ©jÖõ­iÿ O>êÃŸkœ‚,rÂ”†Êmµ7   =•éÕ(ƒÌÆeš‹u0gµ)çV˜­óV µ]; @Ò1‰§ãhqèX
+Iá¡`e@(  €P›:ô…õtô9»–Ô«3a+‹¯«Üÿ *æ²÷0Y±Ñb+ÄªéBUÅîÖmÀÖ‰}òyù‚ˆHRˆx8ÖT•¼Ü‹lr4wÔ´ÛYqÒ1ò	İ	RbÙO8ç-¶ÂS¼ÿ uKÀº©r8õ]ÜÃ€è€x(’gûî!ä;¶Ì¯–ŞĞ¡İHwq5(Õ P
+@(  )¾a%ÕÉÃ¡,­Ä-r‹Kn-(®+Sdl¹¬·6zv4”);Ym-].#rKvî’u© -BP„¡:% %#ƒJĞ“Ú,ôÖ(<ûèh‡ßZZ‹‹±ZôQµíUÒˆUHÛƒ1C€ZÎ/v„À;jÄ›4€P-hBJ– ”*&ÀP{Ì}Ûy‰İ®—Ó$™‘‘ÆÜGÿ 
+‰ ÍˆT^FĞlNá¡ı$9OceÈÒl¶êKn¶VÂÅˆâ¢¡3ØÖn;!-2€–Ğ}¨Btâ{ ¢hAô"@yr7Øq¤ƒÏ~…ÿ }§¬;)(‰‘Ày€J†á oúR@"òHP<i &l5ZÏ ƒÃ¼;i Í©;~S‰]€'i¾‡…H3 0{“Ë<í¼¿êßm¼{o@k«á—ïr¯¯:Œ’~µVåmş¯Vİ¼i€<¶œ›\_Õõ»/ûÿ `øG1\ŞG6ıíÛ7^ı·¦ É²¶r}SºÛ}]Ó0ƒá›tåZúÛoŞ˜ Ÿ…ë·‘Ã½mœ?z`Â·r7[½êŞß½0 |'böòvi¾Ûmüé€ü¯ü6Öş­­ÛLõî{ÕÈÙºİí–½®JíRÿÙ_>http://svartling.hopto.org/files/images/Collection_3_small.jpgZimage/jpegÔ'()*+Ó9:%Oº‰PNG
+
+   IHDR         ex   +tEXtCreation Time do 20 dec 2001 17:38:37 +0100·l‚ï   tIMEÑ9+±#Ÿi   	pHYs  
+ğ  
+ğB¬4˜   gAMA  ±üa   oPLTEÿ ÿ   ßÛšØ–
+ô³&í¬è§æ¥ä£ŞİœØ—
+Ö•ü».û¹-ø·*ÿÉTÿÀ9ó²%å¤ÿàœÿÙ†ÿÅGÿ¾2ÿëÀÿÜ’ÿÑoÿÏgöµ(ê©ÿóÛÿç³ÿÃ@ÿıùÿÿÿÿøé„ ù   tRNS @æØf   ŠIDATxÚUéƒ „YAñªˆWÕXñıŸ±	Jgº3ùñåØ$B°ÀQ€ßİ2Æ¼?Ü¶N¶Á…ÔLU˜)sFÆ>øyè»ûq.‰İÆ³
+]0/ëãiçWÿÖC©ˆÇ	÷Ù¤™P)6´Ú>`ö5¦~U};¢Ş¼(#òı‰”Jı}ÿû,×Ë€@    IEND®B`‚_1http://svartling.hopto.org/misc/smileys/smile.pngÔ'()*+Ô'()*+Ô'>?@AUUTF-8O”´<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><HEAD>
+  <TITLE>TiddlyWiki - You Personal Information Wiki</TITLE>
+  <META http-equiv="content-type" content="text/html;charset=utf-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8"><BASE href="http://svartling.hopto.org/"><STYLE type="text/css" media="all">@import "misc/drupal.css";</STYLE><LINK rel="alternate" type="application/atom+xml" title="Atom" href="index.php?q=atom/feed"><LINK type="text/css" rel="stylesheet" href="modules/glossary/glossary.css"><LINK rel="stylesheet" type="text/css" media="screen" href="modules/nicelinks/nicelinks.css"><SCRIPT type="text/javascript" src="modules/nicelinks/nicelinks.js"></SCRIPT><LINK rel="stylesheet" type="text/css" media="screen" href="http://svartling.hopto.org/modules/taxonomy_dhtml/menuExpandable3.css"><SCRIPT type="text/javascript" src="http://svartling.hopto.org/modules/taxonomy_dhtml/menuExpandable3.js"></SCRIPT>
+  <LINK rel="stylesheet" href="themes/marvin_2k/layout.css" type="text/css">
+  <LINK rel="stylesheet" href="themes/marvin_2k/style.css" type="text/css">
+  <LINK rel="stylesheet" href="themes/marvin_2k/modules.css" type="text/css">
+  </HEAD><BODY><DIV class="pageFrame" id="nodeFrame">
+  <DIV id="header">    <A href="" nicetitle="Index Page"><IMG src="themes/marvin_2k/images/logo.png" alt="TiddlyWiki - You Personal Information Wiki"></A>
+    <FORM action="index.php?q=search" method="post">      <DIV id="search">        <INPUT class="form-text" type="text" size="15" value="" name="keys"><INPUT class="form-submit" type="submit" value="Search">
+      </DIV>
+    </FORM>
+  </DIV>
+  
+  <UL id="main-nav">      <LI><A href="index.php?q=">home</A></LI>
+           <LI><A href="index.php?q=aggregator">aggregated news</A></LI>
+           <LI><A href="index.php?q=forum">forum</A></LI>
+           <LI><A href="index.php?q=book">knowledge books</A></LI>
+           <LI><A href="index.php?q=categories">categories</A></LI>
+           <LI><A href="index.php?q=archive">archives</A></LI>
+           <LI><A href="index.php?q=statistics">statistics</A></LI>
+           <LI> <A href="index.php?q=rules">rules</A></LI>
+           <LI><A href="index.php?q=about">about</A></LI>
+           <LI><A href="index.php?q=contact">contact</A></LI>
+           <LI><A href="http://svartling.hopto.org/openwiki/">wiki</A></LI>
+           <LI> </LI>
+         </UL>
+ 
+
+  <DIV class="sidebar" id="sidebar-left">    <DIV class="block block-block"> <H2></H2>
+ <DIV class="content"> <SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3261906407144956";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel ="0521247725";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "3366CC";
+google_color_text = "0000FF";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="160" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=160x90_0ads_al_s&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=FFFFFF&color_text=0000FF&color_link=0000FF&color_url=3366CC&color_border=FFFFFF&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME> </DIV>
+</DIV>
+
+<DIV class="block block-archive"> <H2>Browse archives</H2>
+ <DIV class="content">
+<DIV class="calendar"><TABLE summary="A calendar to browse the archives."> <CAPTION><A href="index.php?q=archive/2005/05/02" nicetitle="Previous month">Â«</A> June 2005 Â </CAPTION>
+ <TBODY><TR class="header-week"><TH abbr="Monday">Mo</TH><TH abbr="Tuesday">Tu</TH><TH abbr="Wednesday">We</TH><TH abbr="Thursday">Th</TH><TH abbr="Friday">Fr</TH><TH abbr="Saturday">Sa</TH><TH abbr="Sunday">Su</TH></TR><TR class="row-week"><TD class="day-blank" colspan="2">Â </TD><TD class="day-link"><A href="index.php?q=archive/2005/6/1">1</A></TD><TD class="day-today"><A href="index.php?q=archive/2005/6/2">2</A></TD><TD class="day-future">3</TD><TD class="day-future">4</TD><TD class="day-future">5</TD></TR><TR class="row-week"><TD class="day-future">6</TD><TD class="day-future">7</TD><TD class="day-future">8</TD><TD class="day-future">9</TD><TD class="day-future">10</TD><TD class="day-future">11</TD><TD class="day-future">12</TD></TR><TR class="row-week"><TD class="day-future">13</TD><TD class="day-future">14</TD><TD class="day-future">15</TD><TD class="day-future">16</TD><TD class="day-future">17</TD><TD class="day-future">18</TD><TD class="day-future">19</TD></TR><TR class="row-week"><TD class="day-future">20</TD><TD class="day-future">21</TD><TD class="day-future">22</TD><TD class="day-future">23</TD><TD class="day-future">24</TD><TD class="day-future">25</TD><TD class="day-future">26</TD></TR><TR class="row-week"><TD class="day-future">27</TD><TD class="day-future">28</TD><TD class="day-future">29</TD><TD class="day-future">30</TD><TD class="day-blank" colspan="3">Â </TD></TR></TBODY></TABLE></DIV>
+
+</DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>RSS Feed</H2>
+ <DIV class="content"> <P><A href="http://feeds.feedburner.com/svartling"><IMG style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" height="26" alt="" src="http://feeds.feedburner.com/%7Efc/svartling?bg=99CCFF&fg=444444&anim=f" width="88"></A></P>
+<P><STRONG><FONT size="1"><A href="http://svartling.hopto.org/directory/index.php?q=rss">All my RSS Feeds</A></FONT></STRONG></P>
+ </DIV>
+</DIV>
+
+<DIV class="block block-book"> <H2>Web Tech</H2>
+ <DIV class="content"><UL><LI class="leaf"><A href="index.php?q=node/406">ADSL Prestanda</A></LI><LI class="leaf"><A href="index.php?q=B2evolution">B2evolution</A></LI><LI class="collapsed"><A href="index.php?q=Bloglines">Bloglines</A></LI><LI class="leaf"><A href="index.php?q=node/940">BlogPulse - Search and analyze blogs</A></LI><LI class="leaf"><A href="index.php?q=delicious">del.icio.us</A></LI><LI class="collapsed"><A href="index.php?q=Drupal">Drupal</A></LI><LI class="leaf"><A href="index.php?q=findory">Findory - change the way you read news</A></LI><LI class="leaf"><A href="index.php?q=Furl">Furl</A></LI><LI class="collapsed"><A href="index.php?q=GMail">GMail</A></LI><LI class="leaf"><A href="index.php?q=node/806">Google My Search History</A></LI><LI class="leaf"><A href="index.php?q=node/872">Google Web Accelerator</A></LI><LI class="collapsed"><A href="index.php?q=Instiki">Instiki</A></LI><LI class="collapsed"><A href="index.php?q=Markdown">Markdown</A></LI><LI class="leaf"><A href="index.php?q=Rojo">Rojo - Web based RSS aggregator</A></LI><LI class="collapsed"><A href="index.php?q=RSS">RSS</A></LI><LI class="leaf"><A href="index.php?q=node/583">SIP - Framtidens standard fÃ¶r kommunikation Ã¶ver internet</A></LI><LI class="leaf"><A href="index.php?q=Spurl">Spurl</A></LI><LI class="collapsed"><A href="index.php?q=Textile">Textile</A></LI><LI class="leaf"><A href="index.php?q=Textpattern">Textpattern</A></LI><LI class="leaf"><A href="index.php?q=TiddlyWiki" class="active">TiddlyWiki - You Personal Information Wiki</A></LI><LI class="leaf"><A href="index.php?q=TikiWiki">TikiWiki</A></LI><LI class="leaf"><A href="index.php?q=Wiki">Wiki</A></LI><LI class="leaf"><A href="index.php?q=WikiServer">WikiServer</A></LI><LI class="leaf"><A href="index.php?q=Wilbur">Wilbur</A></LI></UL></DIV>
+</DIV>
+
+<DIV class="block block-aggregator"> <H2>svartling.blogspot.com</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://feeds.feedburner.com/blogspot/svartling?m=120">Virtuellt folkmusik instrument och andra program</A>
+</LI><LI><A href="http://feeds.feedburner.com/blogspot/svartling?m=119">QuickTime och Real Media</A>
+</LI><LI><A href="http://feeds.feedburner.com/blogspot/svartling?m=116">Ingen Internet Explorer 7 fÃ¶r Windows 2000</A>
+</LI><LI><A href="http://feeds.feedburner.com/blogspot/svartling?m=117">Nya kameror och MP3 spelare infÃ¶r sommaren</A>
+</LI><LI><A href="http://feeds.feedburner.com/blogspot/svartling?m=118">Spelkonsoller och spel</A>
+</LI></UL></DIV><DIV class="more-link"><A href="index.php?q=aggregator/sources/14" nicetitle="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-aggregator"> <H2>Making Music</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://feeds.feedburner.com/MakingMusic?m=120">BIAS Peak v4.1.4</A>
+</LI><LI><A href="http://feeds.feedburner.com/MakingMusic?m=121">Ableton Live v4.1.4 (bug fix)</A>
+</LI><LI><A href="http://feeds.feedburner.com/MakingMusic?m=118">Linplug CronoX 3 - Sample Synth</A>
+</LI><LI><A href="http://feeds.feedburner.com/MakingMusic?m=119">Volko Baglama v1.0</A>
+</LI><LI><A href="http://feeds.feedburner.com/MakingMusic?m=116">Alphakanal Automat v0.2</A>
+</LI></UL></DIV><DIV class="more-link"><A href="index.php?q=aggregator/sources/15" nicetitle="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-aggregator"> <H2>svartlinks</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://feeds.feedburner.com/Svartlinks?m=106">Brillian Debuts New 65-inch HDTV Monitor</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartlinks?m=105">New firmware version 2.17 for the Olympus MR-100</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartlinks?m=104">NIKON INTRODUCES THE AFFORDABLE NEW D50â„¢ â€“ THE SMALLEST, LIGHTEST AND EASIEST-TO-USE NIKON DIGITAL SLR CAMERA TO DATE</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartlinks?m=103">Hitachi - New Plasma HDTVs</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartlinks?m=102">Access Hidden Files on Your iPod</A>
+</LI></UL></DIV><DIV class="more-link"><A href="index.php?q=aggregator/sources/13" nicetitle="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-aggregator"> <H2>PRYLAR</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://svartling.hopto.org/prylar/index.php?title=sony_cybershot_dsc_m1_prylar_digitalkame&more=1&c=1&tb=1&pb=1">Sony Cybershot DSC-M1 - Prylar/DigitalKamera</A>
+</LI><LI><A href="http://svartling.hopto.org/prylar/index.php?title=trekstor_i_beat_vision_prylar_mp3_och_vi&more=1&c=1&tb=1&pb=1">Trekstor i.Beat Vision - Prylar/MP3 och Video Spelare</A>
+</LI><LI><A href="http://svartling.hopto.org/prylar/index.php?title=kenwood_m1ga3_prylar_mp3_spelare&more=1&c=1&tb=1&pb=1">Kenwood M1GA3 - Prylar/MP3 spelare</A>
+</LI><LI><A href="http://svartling.hopto.org/prylar/index.php?title=siemens_c75_mobiltelefon&more=1&c=1&tb=1&pb=1">Siemens C75 - Mobiltelefon</A>
+</LI><LI><A href="http://svartling.hopto.org/prylar/index.php?title=sony_ericsson_zoe_och_ellen_mobiltelefon&more=1&c=1&tb=1&pb=1">Sony Ericsson - "Zoe och Ellen" Mobiltelefon prototyper</A>
+</LI></UL></DIV><DIV class="more-link"><A href="index.php?q=aggregator/sources/18" nicetitle="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-aggregator"> <H2>Information Gravity</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://feeds.feedburner.com/Svartling-informationGravity?m=165">Nintendo Revolution late 2006, maybe 2007...</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartling-informationGravity?m=164">PlayStation 3 to launch without bundled hard disk?</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartling-informationGravity?m=163">Nero Presents SIPPS Business, the New VoIP Software for Corporations</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartling-informationGravity?m=161">Japanese Gamers Back Nintendo Revolution</A>
+</LI><LI><A href="http://feeds.feedburner.com/Svartling-informationGravity?m=162">Square Enix's Final Fantasy set for PS3 and Xbox 360</A>
+</LI></UL></DIV><DIV class="more-link"><A href="index.php?q=aggregator/sources/12" nicetitle="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>the Directory</H2>
+ <DIV class="content"> <P><A href="http://svartling.hopto.org/directory/index.php?q=WikiPages" nicetitle="Embedded Recently Changed Wiki Pages"><SPAN class="lw1"><SPAN class="lw2">Wiki Pages</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=musicmaking" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Music Making</SPAN></SPAN></A></P>
+<P><A class="active" href="http://svartling.hopto.org/directory/index.php?q=software" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Software</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=gadgets" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Gadgets</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=security" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Security</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=webtech" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Web Tech</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=storage" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Storage</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=hardware" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Hardware</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=burning" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Burning</SPAN></SPAN></A></P>
+<P><A href="http://svartling.hopto.org/directory/index.php?q=video" nicetitle="Content filtered by Keywords"><SPAN class="lw1"><SPAN class="lw2">Video</SPAN></SPAN></A></P>
+<P><SPAN class="lw1"><SPAN class="lw2"><A href="http://svartling.hopto.org/directory/index.php?q=audio">Audio</A></SPAN></SPAN></P>
+ </DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>New wiki pages</H2>
+ <DIV class="content"> <P><A href="http://svartling.hopto.org/openwiki/ow.asp?Bitsetting" class="bb-url">Bitsetting</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?BitTorrent" class="bb-url">BitTorrent</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?Resor" class="bb-url">Resor</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?CheckSum" class="bb-url">Checksum</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?Podcasting" class="bb-url">Podcasting</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?plasma-tv" class="bb-url">plasma-tv</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?Skype" class="bb-url">Skype</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?HDTV" class="bb-url">HDTV</A><BR>
+<A href="http://svartling.hopto.org/openwiki/ow.asp?WavPack" class="bb-url">WavPack</A><BR>
+<A href="http://www.svartling.hopto.org/openwiki/ow.asp?HDMI" class="bb-url">HDMI</A><BR>
+<STRONG><A href="http://svartling.hopto.org/openwiki/ow.asp?FrontPage" class="bb-url">Visit or create pages here</A></STRONG><BR>
+<STRONG><A href="http://svartling.hopto.org/openwiki/ow.asp?RecentChanges" class="bb-url">See recent changes here</A></STRONG></P>
+ </DIV>
+</DIV>
+
+<DIV class="block block-user"> <H2>Navigation</H2>
+ <DIV class="content"><DIV class="menu"><UL>
+<LI class="expanded"><A href="index.php?q=taxonomy_menu/2">news</A>
+<UL><LI class="collapsed"><A href="index.php?q=taxonomy_menu/2/11">Audio</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/15">Blogging</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/45">CD/DVD Burning</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/81">DVD</A></LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/2/49">Hardware</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/9">Info</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/16">Misc</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/43">Movie</A></LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/2/42">Music</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/13">Security</A></LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/2/12">Software</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_menu/2/14">Tech</A></LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/2/10">Video</A></LI>
+
+</UL>
+</LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/1">blogging</A></LI>
+<LI class="collapsed"><A href="index.php?q=taxonomy_menu/3">forums</A></LI>
+<LI class="collapsed"><A href="index.php?q=artists">artists</A></LI>
+<LI class="leaf"><A href="index.php?q=blog" title="">all blogs</A></LI>
+<LI class="collapsed"><A href="index.php?q=aggregator/categories" title="">categories</A></LI>
+<LI class="leaf"><A href="index.php?q=book" title="">knowledge books</A></LI>
+<LI class="leaf"><A href="index.php?q=tracker">recent posts</A></LI>
+<LI class="leaf"><A href="index.php?q=taxonomy_dhtml">categories</A></LI>
+<LI class="collapsed"><A href="index.php?q=aggregator">news aggregator</A></LI>
+<LI class="leaf"><A href="index.php?q=syndication">syndication</A></LI>
+
+</UL>
+</DIV></DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>web search</H2>
+ <DIV class="content"> <FORM target="_top" action="http://www.google.se/custom" method="get">
+<TABLE border="0" bgcolor="#ffffff"><TBODY><TR><TD valign="top" nowrap="nowrap" height="32" align="left">
+<A href="http://www.google.com/"><IMG border="0" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></A>
+<BR>
+<INPUT type="hidden" value="svartling.hopto.org" name="domains">
+<INPUT type="text" value="" maxlength="255" size="18" name="q">
+</TD></TR><TR><TD nowrap="nowrap">
+<TABLE><TBODY><TR><TD><INPUT type="radio" checked="checked" value="" name="sitesearch">
+<FONT size="-1" color="#000000">Web</FONT>
+</TD><TD><INPUT type="radio" value="svartling.hopto.org" name="sitesearch">
+<FONT size="-1" color="#000000">hopto.org</FONT>
+</TD></TR></TBODY></TABLE>
+<INPUT type="submit" value="Search" name="sa">
+<INPUT type="hidden" value="pub-3261906407144956" name="client">
+<INPUT type="hidden" value="1" name="forid">
+<INPUT type="hidden" value="ISO-8859-1" name="ie">
+<INPUT type="hidden" value="ISO-8859-1" name="oe">
+<INPUT type="hidden" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;" name="cof">
+<INPUT type="hidden" value="en" name="hl">
+
+</TD></TR></TBODY></TABLE>
+</FORM>
+ </DIV>
+</DIV>
+
+
+  </DIV>
+   
+   
+  <DIV class="sidebar" id="sidebar-right">    <DIV class="block block-statistics"> <H2>Popular content</H2>
+ <DIV class="content"><DIV class="item-list"><H3>Today's:</H3><UL><LI><A href="index.php?q=node/979">Adsense Test Reklam frÃ¥n Google</A></LI><LI><A href="index.php?q=TiddlyWiki" class="active">TiddlyWiki - You Personal Information Wiki</A></LI><LI><A href="index.php?q=node/975">Exact Audio Copy (EAC) v0.95 beta 2 released</A></LI><LI><A href="index.php?q=node/158" nicetitle="2 comments">Download: Ahead Nero 6.6.0.0 Reloaded</A></LI><LI><A href="index.php?q=node/747">Windows desktop search tools</A></LI></UL></DIV><BR><DIV class="item-list"><H3>All time:</H3><UL><LI><A href="index.php?q=node/158" nicetitle="2 comments">Download: Ahead Nero 6.6.0.0 Reloaded</A></LI><LI><A href="index.php?q=2004/12/04/ahead-software-releases-nero-6-6-0-3-nero-recode-2-2-includes-mpeg-4-avc-h-264" nicetitle="4 comments">Ahead software releases Nero 6.6 .0.3/ Nero Recode 2.2 (includes MPEG-4 AVC/H.264)</A></LI><LI><A href="index.php?q=node/402" nicetitle="2 comments">Nero Mega Plugin Pack 1.0</A></LI><LI><A href="index.php?q=BlindWrite">Blind Write</A></LI><LI><A href="index.php?q=node/36" nicetitle="6 comments">Sage - RSS Plugin for Mozilla / Firefox</A></LI><LI><A href="index.php?q=AheadNero" nicetitle="3 comments">Ahead Nero</A></LI><LI><A href="index.php?q=node/49" nicetitle="2 comments">Pinnacle Studio Plus and Pinnacle Studio MediaSuite</A></LI><LI><A href="index.php?q=node/221">Nero 6 Reloaded 6.6.0.1 has been released earlier</A></LI><LI><A href="index.php?q=node/390">Encode H.264 MPEG4 with freeware</A></LI><LI><A href="index.php?q=node/295" nicetitle="2 comments">FL Studio 5 released</A></LI></UL></DIV><BR><DIV class="item-list"><H3>Last viewed:</H3><UL><LI><A href="index.php?q=2005/03/31/kiss-dp-600-dvd-player">KiSS DP-600 DVD Player</A></LI><LI><A href="index.php?q=TiddlyWiki" class="active">TiddlyWiki - You Personal Information Wiki</A></LI><LI><A href="index.php?q=node/980">AutoHotkey 1.0.35.00</A></LI><LI><A href="index.php?q=node/976">Samsung to Bundle NeroLINUX with DVD/CD Recorders</A></LI><LI><A href="index.php?q=node/977">CyberLink DVD Solution 4 Turns Up the Heat in DVD Burning and Creativity</A></LI></UL></DIV></DIV>
+</DIV>
+
+<DIV class="block block-blog"> <H2>Recent blog posts</H2>
+ <DIV class="content"><DIV class="item-list"><UL><LI><A href="index.php?q=node/979">Adsense Test Reklam frÃ¥n Google</A></LI><LI><A href="index.php?q=node/938">I have missed the activity in the forums!</A></LI><LI><A href="index.php?q=ElectricCity">Electric City - One more track for the album "Afraid of silence"</A></LI><LI><A href="index.php?q=node/884">Mitt musik skapande / My music making</A></LI><LI><A href="index.php?q=node/858">FLAC och WavPack tvÃ¥ lossless ljud format</A></LI><LI><A href="index.php?q=node/851" nicetitle="4 comments">H.264 i nya Quicktime</A></LI><LI><A href="index.php?q=node/850">More problems</A></LI><LI><A href="index.php?q=node/836">I'm only claiming my feed at Feedster :)</A></LI><LI><A href="index.php?q=node/833">Fortsatta stÃ¶rningar pÃ¥ Telia Bredband...</A></LI><LI><A href="index.php?q=node/823">Server down</A></LI></UL></DIV><DIV class="more-link"><A href="index.php?q=blog" nicetitle="Read the latest blog entries.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-forum"> <H2>Forum topics</H2>
+ <DIV class="content"><DIV class="item-list"><H3>Active forum topics:</H3><UL><LI><A href="index.php?q=node/480" nicetitle="2 comments">FFdshow New version</A></LI><LI><A href="index.php?q=node/814" nicetitle="2 comments">How is it possible to get MPEG4/XVID movies to work in Ericsson P910i?</A></LI><LI><A href="index.php?q=node/927" nicetitle="1 comment">Solasynth SE by the Giana-Brotherz</A></LI><LI><A href="index.php?q=node/574" nicetitle="1 comment">Dvd Patch</A></LI><LI><A href="index.php?q=node/313" nicetitle="5 comments">Gmailgifbilden?</A></LI></UL></DIV><DIV class="item-list"><H3>New forum topics:</H3><UL><LI><A href="index.php?q=node/927" nicetitle="1 comment">Solasynth SE by the Giana-Brotherz</A></LI><LI><A href="index.php?q=node/814" nicetitle="2 comments">How is it possible to get MPEG4/XVID movies to work in Ericsson P910i?</A></LI><LI><A href="index.php?q=node/574" nicetitle="1 comment">Dvd Patch</A></LI><LI><A href="index.php?q=node/480" nicetitle="2 comments">FFdshow New version</A></LI><LI><A href="index.php?q=node/313" nicetitle="5 comments">Gmailgifbilden?</A></LI></UL></DIV><DIV class="more-link"><A href="index.php?q=forum" nicetitle="Read the latest forum topics.">more</A></DIV></DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>My other websites</H2>
+ <DIV class="content"> 
+
+<P><A href="http://svartling.hopto.org/openwiki/">DigitalNews</A></P>
+<P><A href="http://svartling.hopto.org/directory/">the Directory</A></P>
+<P><A href="http://svartling.hopto.org/blogg/">Information Gravity</A></P>
+<P><A href="http://svartling.blogspot.com/">Svartling</A></P>
+<P><A href="http://making-music.blogspot.com/">Making Music</A></P>
+<P><A href="http://svartlinks.blogspot.com/">SVARTLINKS</A></P>
+<P><A href="http://svartling.hopto.org/prylar/">PRYLAR</A></P>
+
+
+
+ </DIV>
+</DIV>
+
+<DIV class="block block-block"> <H2>my CD releases</H2>
+ <DIV class="content"> <DIV align="center"><B>On <A href="http://www.databloem.com">Databloem Records</A>:<BR><A href="http://www.databloem.com/0_collection.htm#3"><IMG src="/files/images/Collection_3_small.jpg" alt=""></A></B><BR></DIV><DIV style="text-align: center;"><A href="http://www.databloem.com/0_collection.htm#3"><B><FONT size="2">Collection 3  - blending</FONT></B></A><BR>(1 track appearance)<BR></DIV>
+ </DIV>
+</DIV>
+
+<DIV class="block block-user"> <H2>User login</H2>
+ <DIV class="content"><FORM action="index.php?q=user/login" method="post"><DIV class="user-login-block">
+<INPUT type="hidden" name="edit[destination]" value="node/978">
+<DIV class="form-item"> <LABEL for="edit-name">Username:</LABEL><BR>
+ <INPUT type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-pass">Password:</LABEL><BR>
+ <INPUT type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="">
+</DIV>
+<INPUT type="submit" class="form-submit" name="op" value="Log in">
+</DIV>
+
+</FORM>
+<DIV class="item-list"><UL><LI><A href="index.php?q=user/register" nicetitle="Create a new user account.">Create new account</A></LI><LI><A href="index.php?q=user/password" nicetitle="Request new password via e-mail.">Request new password</A></LI></UL></DIV></DIV>
+</DIV>
+
+<DIV class="block block-user"> <H2>Who's online</H2>
+ <DIV class="content">There are currently 0 users and 70 guests online.</DIV>
+</DIV>
+
+  </DIV>
+  
+  <DIV class="main-content" id="content-both">
+  <DIV class="breadcrumb"><A href="index.php?q=">Home</A> Â» <A href="index.php?q=taxonomy_menu">Taxonomy</A> Â» <A href="index.php?q=taxonomy_menu/2">news</A> Â» <A href="index.php?q=taxonomy_menu/2/14">Tech</A> Â» TiddlyWiki - You Personal Information Wiki</DIV>  <UL class="tabs primary"><LI class="active"><A href="index.php?q=TiddlyWiki" class="active">view</A></LI>
+<LI><A href="index.php?q=node/978/trackback">trackbacks</A></LI>
+</UL>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3261906407144956";
+google_alternate_ad_url = "http://svartling.hopto.org/replacementads.html";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_channel ="6840001288";
+google_color_border = "Ffffff";
+google_color_bg = "Ffffff";
+google_color_link = "0000FF";
+google_color_url = "0000FF";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="336" height="280" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732834202&alternate_ad_url=http%3A%2F%2Fsvartling.hopto.org%2Freplacementads.html&prev_fmts=160x90_0ads_al_s&format=336x280_as&output=html&channel=6840001288&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=Ffffff&color_text=000000&color_link=0000FF&color_url=0000FF&color_border=Ffffff&cc=6&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+  <DIV class="node">        <DIV class="info">Posted by <A href="index.php?q=user/1" nicetitle="View user profile.">svartling</A> on 2 June, 2005 - 17:36<SPAN class="taxonomy"> :: <A href="index.php?q=taxonomy/term/14">Tech</A></SPAN>
+</DIV>
+       
+        <DIV class="content">        
+               <P>A TiddlyWiki is like a blog because itâ€™s divided up into neat little chunks, but it encourages you to read it by hyperlinking rather than sequentially: if you like, a non-linear blog analogue that binds the individual microcontent items into a cohesive whole. I think that TiddlyWiki represents a novel medium for writing, and will promote itâ€™s own distinctive WritingStyle. There are several TiddlyWikiAdaptations by other developers based on earlier versions.</P>
+<P>â€œTiddlersâ€ are the building blocks of TiddlyWiki. Each â€œentryâ€ or â€œpostâ€ is a Tiddler. There are also SpecialTiddlers that control the MainMenu, SiteTitle, SiteSubtitle, and list of DefaultTiddlers that display on start up.</P>
+<P>Within the main story column you can click on bold links to read a linked tiddler. Click on italic links to create a new tiddler. When you hover the mouse over a tiddler several ToolbarButtons appear. You can edit the text of any tiddler by double-clicking on it (or selecting â€˜editâ€™ from the toolbar), but your changes wonâ€™t get saved permanently until you make your own copy of TiddlyWiki.</P>
+<P>Because TiddlyWiki is a single HTML file, youâ€™ve actually already downloaded the entire software just by viewing the site. If you want to be able to SaveChanges, you can save your own TiddlyWiki to your local drive by right clicking on a special link and selecting â€˜Save link asâ€¦â€™ or â€˜Save target asâ€¦â€™. You can choose where to save the file, and what to call it (but keep the .HTML extension).</P>
+<P>This is an amazing wiki application. Itâ€™s meant to be a personal wiki (PIM) for your own use, so when go to the site - read through some tiddlys and find the link to save your own html file to the harddrive before you start to use it.<BR>
+All the tiddlys (pages) you create is stored in the same html file, so you can carry around you whole wiki where ever you want <IMG src="misc/smileys/smile.png" title="Smiling" alt="Smiling"></P>
+<P>Personally I use a TiddlyWiki adaptation called TiddlyTagWiki, because with that version you can even Tag your Tiddlys! Itâ€™s even easier to find and organize your tiddlys with that version.</P>
+<P>Homepage<BR>
+<A href="http://www.tiddlywiki.com/">http://www.tiddlywiki.com/</A></P>
+<P>TiddlyTagWiki:<BR>
+<A href="http://www.digitaldimsum.co.uk/">http://www.digitaldimsum.co.uk/</A></P>
+ <DIV class="book"><DIV class="nav"> <DIV class="links"><DIV class="prev"><A href="index.php?q=Textpattern" nicetitle="View the previous page.">previous</A></DIV><DIV class="next"><A href="index.php?q=TikiWiki" nicetitle="View the next page.">next</A></DIV><DIV class="up"><A href="index.php?q=WebTech" nicetitle="View this page's parent section.">up</A></DIV></DIV> <DIV class="titles"><DIV class="prev">Textpattern</DIV><DIV class="next">TikiWiki</DIV></DIV></DIV></DIV>
+              
+    </DIV>    
+  </DIV>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3261906407144956";
+google_alternate_ad_url = "http://svartling.hopto.org/replacementads.html";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="3399823495";
+google_color_border = "Ffffff";
+google_color_bg = "Ffffff";
+google_color_link = "4444CC";
+google_color_url = "4444CC";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732834274&alternate_ad_url=http%3A%2F%2Fsvartling.hopto.org%2Freplacementads.html&prev_fmts=160x90_0ads_al_s%2C336x280_as&format=468x60_as&output=html&channel=3399823495&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=Ffffff&color_text=000000&color_link=4444CC&color_url=4444CC&color_border=Ffffff&cc=34&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3261906407144956";
+google_alternate_ad_url = "http://svartling.hopto.org/replacementads.html";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="3399823495";
+google_color_border = "Ffffff";
+google_color_bg = "Ffffff";
+google_color_link = "4444CC";
+google_color_url = "4444CC";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732834313&alternate_ad_url=http%3A%2F%2Fsvartling.hopto.org%2Freplacementads.html&prev_fmts=160x90_0ads_al_s%2C336x280_as%2C468x60_as&format=468x60_as&output=html&channel=3399823495&pv_ch=3399823495%2B&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=Ffffff&color_text=000000&color_link=4444CC&color_url=4444CC&color_border=Ffffff&cc=36&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+<BR>
+<A id="comment"></A>
+<FORM method="post" action="index.php?q=comment"><DIV><INPUT type="hidden" name="edit[nid]" value="978">
+</DIV></FORM>  <DIV class="box">    <H2>Post new comment</H2>
+    <DIV class="content"><FORM action="index.php?q=comment/reply/978" method="post"><A id="comment-form"></A>
+<DIV class="form-item"> <LABEL for="edit-subject">Subject:</LABEL><BR>
+ <INPUT type="text" maxlength="64" class="form-text" name="edit[subject]" id="edit-subject" size="50" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-comment">Comment:</LABEL><SPAN class="marker">*</SPAN><BR>
+ <TEXTAREA wrap="virtual" cols="70" rows="10" name="edit[comment]" id="edit-comment" class="textarea required"></TEXTAREA></DIV>
+<DIV class="form-item"> <LABEL>Input format:</LABEL><BR>
+ <DIV><LABEL class="option"><INPUT type="radio" class="form-radio" name="edit[format]" value="1" checked="checked"> Filtered HTML</LABEL><UL class="tips"><LI>Easily link to terms in various wikis or other websites by typing [[prefix:term]]. Use the "|" character to create a "piped link," e.g., "[[w:public transport|public transportation]]" displays as "<A href="http://en.wikipedia.org/wiki/public_transport">public transportation</A>." For a full list of available prefixes and the websites to which they point, see <A href="index.php?q=interwiki/1">interwiki</A>.</LI><LI>You can use <A href="index.php?q=filter/tips">Markdown syntax</A> to format and style the text.</LI><LI>You can use <A href="index.php?q=filter/tips/1#filter-bbcode">BBCode tags</A> in the text, URLs will be automatically converted to links</LI><LI>Lines and paragraphs break automatically.</LI><LI>Link to content on this site using <EM>[title|text]</EM>.</LI><LI>Web and e-mail addresses are automatically converted into links.</LI><LI>Glossary terms will be automatically marked with links to their descriptions</LI><LI>Textual smileys will be replaced with graphical ones.</LI></UL></DIV><DIV><LABEL class="option"><INPUT type="radio" class="form-radio" name="edit[format]" value="5"> Markdown</LABEL><UL class="tips"><LI>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</LI><LI>You can use <A href="index.php?q=filter/tips">Markdown syntax</A> to format and style the text.</LI><LI>Link to content on this site using <EM>[title|text]</EM>.</LI><LI>Web and e-mail addresses are automatically converted into links.</LI><LI>Textual smileys will be replaced with graphical ones.</LI><LI>Glossary terms will be automatically marked with links to their descriptions</LI></UL></DIV><DIV><LABEL class="option"><INPUT type="radio" class="form-radio" name="edit[format]" value="6"> BBcode</LABEL><UL class="tips"><LI>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</LI><LI>Easily link to terms in various wikis or other websites by typing [[prefix:term]]. Use the "|" character to create a "piped link," e.g., "[[w:public transport|public transportation]]" displays as "<A href="http://en.wikipedia.org/wiki/public_transport">public transportation</A>." For a full list of available prefixes and the websites to which they point, see <A href="index.php?q=interwiki/6">interwiki</A>.</LI><LI>You can use <A href="index.php?q=filter/tips/6#filter-bbcode">BBCode tags</A> in the text, URLs will be automatically converted to links</LI><LI>Link to content on this site using <EM>[title|text]</EM>.</LI><LI>Lines and paragraphs break automatically.</LI><LI>Web and e-mail addresses are automatically converted into links.</LI><LI>Textual smileys will be replaced with graphical ones.</LI><LI>Glossary terms will be automatically marked with links to their descriptions</LI></UL></DIV>
+ <DIV class="description"><A href="index.php?q=filter/tips">More information about formatting options</A></DIV>
+</DIV>
+<INPUT type="hidden" name="edit[cid]" value="">
+<INPUT type="hidden" name="edit[pid]" value="">
+<INPUT type="hidden" name="edit[nid]" value="978">
+<INPUT type="submit" class="form-submit" name="op" value="Preview comment">
+<INPUT type="submit" class="form-submit" name="op" value="Post comment">
+
+</FORM>
+</DIV>
+  </DIV>
+
+    <DIV id="footer">      <P>svartling.hopto.org - A Content Management System 2004.<BR>
+
+
+</P><P><FONT size="1"><STRONG>Network:</STRONG> <A href="http://svartling.hopto.org/directory/">the Directory</A> | <A href="http://svartling.hopto.org/">svartling.hopto.org</A> | <A href="http://svartling.hopto.org/openwiki/">DigitalNews</A> | <A href="http://svartling.hopto.org/blogg/">Information 
+Gravity</A> | <A href="http://svartling.blogspot.com/">Svartling</A> |
+<A href="http://making-music.blogspot.com/">Making Music</A> |
+<A href="http://svartlinks.blogspot.com/">svartlinks</A> |
+<A href="http://svartling.hopto.org/prylar/">Prylar</A></FONT></P>
+
+
+
+<P></P>
+    </DIV>
+  </DIV>
+</DIV>
+
+</BODY></HTML>_1http://svartling.hopto.org/index.php?q=TiddlyWikiYtext/html¤CINSÑDÕ'EAF>GH_WebResourceFrameNameOV<HTML><HEAD><STYLE><!--
+#abg{font-family:arial,sans-serif;font-size:12px;color:#000000;padding:0px 1px;white-space:nowrap;font-weight:bold;}.sep{height:2px;width:100%;}.bb{overflow:hidden;width:160px;}.al{font-family:arial,sans-serif;font-size:11px;width:160px;overflow:hidden;line-height:13px;}.al .alt, .al a{color:#0000ff;font-weight:normal;text-decoration:underline;white-space:nowrap;}//--></STYLE><SCRIPT><!--
+c=0;aa=new Object();na=new Array();qs=location.search.substring(1);pa=qs.split('&');for(i=0;i<pa.length;++i){pn=pa[i].indexOf('=');if(pn==-1)continue;an=pa[i].substring(0,pn);v=pa[i].substring(pn+1);aa[an]=v;na[na.length]=an;}if(!aa['kw_type'])na[na.length]='kw_type';if(!aa['prev_fmts'])na[na.length]='prev_fmts';aa['prev_fmts']=aa['format'];aa['format']='fp_al_lp';aa['random']=(new Date()).getTime();aa['kw_type']='broad';aa['color_bg']=aa['color_link']=aa['color_url']=aa['color_text']=aa['color_border']=aa['alternate_ad_url']='';function gurl(rl,kw){if(!aa['kw'])na[na.length]='kw';if(!aa['rt'])na[na.length]='rt';if(!aa['hl']){na[na.length]='hl';aa['hl']='en';}aa['kw']=kw;aa['rt']=rl;qs='?';for(i=0;i<na.length;++i)if(aa[na[i]]!='')qs+=na[i]+'='+aa[na[i]]+'&';qs=qs.slice(0,-1);return location.pathname+qs;}function ss(wi){window.status=sl[wi];return true;}function cs(){window.status='';}var sl=new Array();//--></SCRIPT></HEAD><BODY bgcolor="#ffffff" text="#0000ff" marginwidth="0" marginheight="0"><TABLE bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><TBODY><TR><TD height="15" bgcolor="#ffffff" valign="middle"><DIV class="bb"><SCRIPT><!--
+i=0;adu='';adt=new Array();adt[i++]="RSS+Feed";adt[i++]="Marketing+Blog";adt[i++]="Blogspot";adt[i++]="Blog+This+Toolbar";adt[i++]="Blog+FAQ";document.write('<a href="http://services.google.com/feedback/abg?url=http://svartling.hopto.org/index.php%3Fq%3DTiddlyWiki&hl=en&client=ca-pub-3261906407144956&done=1');for(i=0;i<adt.length;++i)document.write('&adU='+(adu+='+')+'&adT='+adt[i]);document.write('" target=_blank id=abg>Ads by Google</a>');//--></SCRIPT><A href="http://services.google.com/feedback/abg?url=http://svartling.hopto.org/index.php%3Fq%3DTiddlyWiki&hl=en&client=ca-pub-3261906407144956&done=1&adU=+&adT=RSS+Feed&adU=++&adT=Marketing+Blog&adU=+++&adT=Blogspot&adU=++++&adT=Blog+This+Toolbar&adU=+++++&adT=Blog+FAQ" target="_blank" id="abg">Ads by Google</A></DIV></TD></TR><TR><TD valign="top"><DIV class="al" style="padding:0px 0px"><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCnz_BAAaf8AoSZCdf_BI5EghSU1MgRmVlZBoILqOW-_xBXt4','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about RSS Feed';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=fp_al_lp&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCnz_BAAaf8AoSZCdf_BI5EghSU1MgRmVlZBoILqOW-_xBXt4&hl=en" onmouseover="return ss(0)" onmouseout="cs()" class="alt" target="_top">RSS Feed</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCnz_BAAagIQoSZCdf_BI5Eg5NYXJrZXRpbmcgQmxvZxoIsTaUcSeDspE','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Marketing Blog';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=fp_al_lp&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCnz_BAAagIQoSZCdf_BI5Eg5NYXJrZXRpbmcgQmxvZxoIsTaUcSeDspE&hl=en" onmouseover="return ss(1)" onmouseout="cs()" class="alt" target="_top">Marketing Blog</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCnz_BAAagXQoSZCdf_BI5EghCbG9nc3BvdBoIntsiP4w2HUM','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blogspot';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=fp_al_lp&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCnz_BAAagXQoSZCdf_BI5EghCbG9nc3BvdBoIntsiP4w2HUM&hl=en" onmouseover="return ss(2)" onmouseout="cs()" class="alt" target="_top">Blogspot</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCnz_BAAaghwoSZCdf_BI5EhFCbG9nIFRoaXMgVG9vbGJhchoI2uVuEwsXRLY','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blog This Toolbar';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=fp_al_lp&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCnz_BAAaghwoSZCdf_BI5EhFCbG9nIFRoaXMgVG9vbGJhchoI2uVuEwsXRLY&hl=en" onmouseover="return ss(3)" onmouseout="cs()" class="alt" target="_top">Blog This Toolbar</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCnz_BAAagvwoSZCdf_BI5EghCbG9nIEZBURoI3f5h-6_1lkQ','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blog FAQ';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=fp_al_lp&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCnz_BAAagvwoSZCdf_BI5EghCbG9nIEZBURoI3f5h-6_1lkQ&hl=en" onmouseover="return ss(4)" onmouseout="cs()" class="alt" target="_top">Blog FAQ</A></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_•http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732833913&format=160x90_0ads_al_s&output=html&channel=0521247725&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=FFFFFF&color_text=0000FF&color_link=0000FF&color_url=3366CC&color_border=FFFFFF&cc=14&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123ÑJÕ'EAK>LMOµ<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#0000ff" alink="#0000ff" vlink="#0000ff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="336" height="280" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="334" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://svartling.hopto.org/index.php%3Fq%3DTiddlyWiki&hl=en&client=ca-pub-3261906407144956&adU=Best-DVD-Burning-Software-Reviews&adT=DVD+Copy+Software&adU=www.shopgenie.co.uk&adT=Mpeg4&adU=dllfix.net&adT=Nero+Help+%26amp%3B+Updates&adU=www.ebay.com&adT=Nero+Burning+Software&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Google</FONT></A></TD></TR><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to Best-DVD-Burning-Software-Reviews','aw0')" onmouseover="ss('go to Best-DVD-Burning-Software-Reviews','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:332px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#0000ff"><A id="aw0" target="_top" href="/pagead/iclk?adurl=http://top-dvd-copy-software.top3-reviews.com/&sa=l&ai=BKRb-wD-fQuSdK52ywQHN0IDID4aY_wiS4bS-AcCNtwGQsAoQARgBIP6E_wIoBECKFkiFOaABipm-_wOqAQo2ODQwMDAxMjg4sgETc3ZhcnRsaW5nLmhvcHRvLm9yZ7oBCjMzNngyODBfYXPIAQHaATFodHRwOi8vc3ZhcnRsaW5nLmhvcHRvLm9yZy9pbmRleC5waHA_cT1UaWRkbHlXaWtp4AEC6AEB&num=1&client=ca-pub-3261906407144956" onfocus="ss('go to Best-DVD-Burning-Software-Reviews','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to Best-DVD-Burning-Software-Reviews','aw0')" onmouseout="cs()"><B>DVD Copy Software</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Expert Reviews on DVD Copy Software Compare Prices, Features, Formats!<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#0000ff">Best-DVD-Burning-Software-Reviews</FONT></DIV></TD></TR><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.shopgenie.co.uk','aw1')" onmouseover="ss('go to www.shopgenie.co.uk','aw1')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:332px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#0000ff"><A id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BpSCBwD-fQuSdK52ywQHN0IDID_PQ1gmn0pGTAcCNtwHwogQQAhgCIP6E_wIoBECKFkiZOaoBCjY4NDAwMDEyODiyARNzdmFydGxpbmcuaG9wdG8ub3JnugEKMzM2eDI4MF9hc8gBAdoBMWh0dHA6Ly9zdmFydGxpbmcuaG9wdG8ub3JnL2luZGV4LnBocD9xPVRpZGRseVdpa2ngAQLoAQE&num=2&adurl=http://www.shopgenie.co.uk/search/quicksearch.html%3Fq%3Dmpeg4%26kpartnerid%3D8909725&client=ca-pub-3261906407144956" onfocus="ss('go to www.shopgenie.co.uk','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.shopgenie.co.uk','aw1')" onmouseout="cs()"><B>Mpeg4</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Find Low Prices on Digital Cameras. Compare Offers from UK Retailers!<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#0000ff">www.shopgenie.co.uk</FONT></DIV></TD></TR><TR><TD bgcolor="#ffffff" id="taw2" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to dllfix.net','aw2')" onmouseover="ss('go to dllfix.net','aw2')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:332px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#0000ff"><A id="aw2" target="_top" href="/pagead/iclk?adurl=http://dllfix.net&sa=l&ai=BTSkkwD-fQuSdK52ywQHN0IDID6n9ywejrazjAcCNtwHQhgMQAxgDIP6E_wIoBECKFkiGOaABhdT1_gOqAQo2ODQwMDAxMjg4sgETc3ZhcnRsaW5nLmhvcHRvLm9yZ7oBCjMzNngyODBfYXPIAQHaATFodHRwOi8vc3ZhcnRsaW5nLmhvcHRvLm9yZy9pbmRleC5waHA_cT1UaWRkbHlXaWtp4AEC6AEB&num=3&client=ca-pub-3261906407144956" onfocus="ss('go to dllfix.net','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to dllfix.net','aw2')" onmouseout="cs()"><B>Nero Help &amp; Updates</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Fix Nero Errors, Free Download Free Nero Support Today!<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#0000ff">dllfix.net</FONT></DIV></TD></TR><TR><TD bgcolor="#ffffff" id="taw3" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.ebay.com','aw3')" onmouseover="ss('go to www.ebay.com','aw3')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:332px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#0000ff"><A id="aw3" target="_top" href="/pagead/iclk?sa=l&ai=B_7riwD-fQuSdK52ywQHN0IDID4vl2gehlZ2ZAcCNtwGA8QQQBBgEIP6E_wIoBECKFkiROaoBCjY4NDAwMDEyODiyARNzdmFydGxpbmcuaG9wdG8ub3JnugEKMzM2eDI4MF9hc8gBAdoBMWh0dHA6Ly9zdmFydGxpbmcuaG9wdG8ub3JnL2luZGV4LnBocD9xPVRpZGRseVdpa2ngAQLoAQE&num=4&adurl=http://service.netmeans.com/bfast/click/%3Floc%3Dhttp%253A//search.ebay.com/nero-burning-software_W0QQsokeywordredirectZ1QQfromZR8%26bfinfo%3Da9540916i131440976&client=ca-pub-3261906407144956" onfocus="ss('go to www.ebay.com','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.ebay.com','aw3')" onmouseout="cs()"><B>Nero Burning Software</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Discount Nero Burning Software Check out the deals now! aff<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#0000ff">www.ebay.com</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame1-->-->_ñhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3261906407144956&dt=1117732834202&alternate_ad_url=http%3A%2F%2Fsvartling.hopto.org%2Freplacementads.html&prev_fmts=160x90_0ads_al_s&format=336x280_as&output=html&channel=6840001288&url=http%3A%2F%2Fsvartling.hopto.org%2Findex.php%3Fq%3DTiddlyWiki&color_bg=Ffffff&color_text=000000&color_link=0000FF&color_url=0000FF&color_border=Ffffff&cc=6&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123ÑOÕ'EAP>QRO<HTML><HEAD><BASE target="_blank">
+
+</HEAD><BODY marginwidth="0" marginheight="0">
+<P><FONT size="2"><B>My</B></FONT><B><FONT size="2"> Websites:</FONT></B><BR><B><A href="http://svartling.hopto.org/openwiki/" target="_blank"><FONT size="2">DigitalNews</FONT></A></B><BR><A href="http://svartling.hopto.org/openwiki/"><FONT size="1">- An Open Wiki</FONT></A><BR><FONT size="2"><A href="http://svartling.hopto.org/directory/"><STRONG>the Directory <BR></STRONG><FONT size="1">- Knowledge in one place</FONT></A><FONT size="1"><BR></FONT><B><FONT size="2"><A href="http://svartling.hopto.org/" target="_blank">svartling.hopto.org</A></FONT></B><BR><FONT size="1"><A href="http://svartling.hopto.org/">- About CD/DVD, Burning,<BR>Audio, Video &amp; Web Tech</A></FONT><BR><B><FONT size="2"><A href="http://making-music.blogspot.com/" target="_blank">Making Music</A></FONT></B><BR><FONT size="1"><A href="http://making-music.blogspot.com/">- About Making Music!</A></FONT><BR><B><FONT size="2"><A href="http://svartling.hopto.org/blogg/" target="_blank">Information Gravity</A></FONT></B><BR><FONT size="1"><A href="http://svartling.hopto.org/blogg/">- Information is knowledge</A></FONT><FONT size="2"><BR><B><A href="http://svartling.blogspot.com/" target="_blank">Svartling</A></B></FONT><BR><FONT size="1"><A href="http://svartling.blogspot.com/">- Baksidan av en CMS</A></FONT><FONT size="2"><BR><B><A href="http://svartlinks.blogspot.com/" target="_blank">SVARTLINKS</A></B></FONT><BR><FONT size="1"><A href="http://svartlinks.blogspot.com/">- Hardware &amp; IT</A></FONT><BR><B><FONT size="2"><A href="http://svartling.hopto.org/prylar/">PRYLAR</A></FONT></B><BR><FONT size="1"><A href="http://svartling.hopto.org/prylar/">- En sajt om prylar</A></FONT></FONT></P><FONT size="2"></FONT>
+
+
+</BODY></HTML>_ <!--framePath //<!--frame2-->-->_.http://svartling.hopto.org/replacementads.htmlÑTÕ'EAP>UR_ <!--framePath //<!--frame3-->-->      !  3  I  ]  d  v  …  › Ú   % ¿ ü  ¥ á ü   #§ #ï #ö ' 'ä 'ë +T + +” K> Kv K} X¸ Xò Xù m mJ mT m] m{ m ”< ”v ”ˆ ” ¤ í ÷ ş ¥I ¥v ¥} ²Ç ³ ³ ³ ³# ´á µ µ µ' µ0 µ6IîJ"J,J1J4J?JVc°cÃe\e_ej#Fƒ;ƒ>ƒIŠ\ŠŠ°Š³Š¾             V             Šá

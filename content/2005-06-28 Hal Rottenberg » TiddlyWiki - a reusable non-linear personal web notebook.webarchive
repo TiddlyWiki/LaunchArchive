@@ -1,0 +1,638 @@
+bplist00“_WebSubresources_WebMainResource¢”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeObody {
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+	color: #C5886B;
+	font: 80%/1.5 Arial, Helvetica, sans-serif;
+}
+
+a:link {
+	color: #FB9950;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #C06E3D;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #D5713F;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+div#rap {
+	position: relative;
+	border: 1px solid #613725;
+	margin: 0 auto;
+	padding-bottom: 280px;
+	width: 780px;
+	background: Black url(images/header.jpg) no-repeat top center;
+}
+
+div#rap h1#header {
+	position: absolute;
+	margin: 0 auto;
+	width: 780px;
+	top: 206px;
+	height: 43px;
+	overflow: hidden;
+	letter-spacing: 2px;
+	left: 20px;
+}
+
+div#rap h1#header a:hover, div#rap h1#header a:focus {
+	text-decoration: none;
+}
+
+h1#header a {
+	display: block;
+	background-color: transparent;
+}
+
+div#content {
+	position: relative;
+	border-top: 1px solid #613725;
+	border-bottom: 1px solid #613725;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 780px;
+	top: 250px;
+	background-color: #21120B;
+	background-image: url(images/bg-body.jpg);
+}
+
+div#content h2 {
+	background: #000 url(images/date.jpg) no-repeat left center;
+	color: #94532D;
+	padding: 2px 15px 2px 85px;
+	border: 1px solid #613725;
+	margin-left: 40px;
+	margin-right: 220px;
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-size: 95%;
+	font-weight: normal;
+}
+
+div.post {
+	margin-left: 40px;
+	margin-right: 220px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	background-color: #2A170D;
+	border: 1px solid #542E21;
+	position: relative;
+}
+
+div.post h3.storytitle {
+	background: #000 url(images/topic.jpg) no-repeat left center;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 100%;
+}
+
+div.post h3.storytitle a:link, div.post h3.storytitle a:visited, div.post div.feedback a:link, div.post div.feedback a:visited {
+	background-color: transparent;
+	display: block;
+	padding: 3px 15px 3px 85px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+div.post h3.storytitle a:hover, div.post h.storytitle a:focus, div.post div.feedback a:hover, div.post div.feedback a:focus {
+	text-decoration: none;
+}
+
+div.post div.meta {
+	position: relative;
+	float: right;
+	background: #512D1E url(images/tabbed-meta.gif) no-repeat left bottom;
+	margin: 0;
+	padding: 2px 15px 2px 60px;
+	font-size: 90%;
+}
+
+div.post ol, div.post ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.post li {
+	margin: 5px 15px;
+	padding: 0 20px;
+	background: transparent url(images/list-post.gif) no-repeat 0 4px;
+}
+
+div.meta ul {
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+div.meta ul li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	background-image: none;
+}
+
+div.storycontent {
+	/* unfortunately a clear:right is breaking the layout in IE, so I went away with padding */
+	padding: 20px 20px 10px;
+}
+
+
+div.post div.feedback {
+	background: #000 url(images/comments.jpg) no-repeat left center;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 100%;
+}
+
+div#menu {
+	position: absolute;
+	width: 180px;
+	right: 0;
+	top: 251px;
+	background-color: #1A0F0A;
+	margin: 0;
+	padding-top: 10px;
+	border-left: 1px solid #613725;
+}
+
+div#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #1A0F0A;
+}
+
+div#menu ul li ul {
+	background-color: #512D1E;
+	padding: 10px 0;
+	border: 1px solid #905437;
+}
+
+div#menu ul li {
+	background-color: #321C10;
+	display: block;
+	margin: 10px 0;
+	padding-left: 5px;
+}
+
+li#wordpress {
+	background: #321C10 url(images/list-wordpress.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#categories {
+	background: #321C10 url(images/list-category.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#search {
+	background: #321C10 url(images/list-search.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#archives {
+	background: #321C10 url(images/list-archives.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#calendar {
+	background: #321C10 url(images/list-calendar.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#other {
+	background: #321C10 url(images/list-other.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#meta {
+	background: #321C10 url(images/list-meta.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+li#style {
+	background: #321C10 url(images/list-styles.gif) no-repeat 95% 1px;
+	padding: 2px 0;
+	border-top: 1px solid #48291C;
+}
+
+div#menu ul li ul li {
+	margin: 0 10px;
+	padding: 0 15px;
+	background: transparent url(images/list-post.gif) no-repeat 0 4px; 
+}
+
+div#menu table {
+	margin: 0;
+	padding: 0;
+	background-color: #512D1E;
+	width: 100%;
+	border: 1px solid #905437;
+}
+
+div#menu table caption {
+	text-align: left;
+}
+
+div#menu table th {
+	background-color: #432418;
+}
+
+div#menu table td {
+	text-align: center;
+}
+
+div#menu table td#today {
+	background-image: url(images/today.gif);
+}
+
+div#menu td a {
+	display: block;
+	background-color: #432418;
+	border: 1px solid;
+}
+
+div#menu tfoot {
+	background-color: #432418;
+}
+
+div#menu tfoot a {
+	border: none;
+	display: inline;
+	background-color: transparent;
+}
+
+/* Comment Styles */
+
+div#content h2#comments {
+	background: #000 url(images/comments.jpg) no-repeat left center;
+	color: #94532D;
+	padding: 2px 15px 2px 85px;
+	border: 1px solid #613725;
+	margin-left: 40px;
+	margin-right: 220px;
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-size: 95%;
+	font-weight: normal;
+}
+
+div#content p {
+	margin-left: 50px;
+	margin-right: 220px;
+}
+
+div#content div.post p, div#content ol#commentlist p, div#content form p {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ol#commentlist {
+	background-color: #2A170D;
+	margin: 0 220px 30px 40px;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #613725;
+}
+
+ol#commentlist li {
+	margin: 10px;
+	padding: 4px 20px 0;
+	background-color:  #512D1E;
+	border: 1px solid #905437;
+}
+
+code {
+	color: #B46233;
+	font: 100% "Courier New", Courier, monospace;
+}
+
+form {
+	margin: 0 220px 30px 40px;
+	padding: 5px 20px;
+	background-color: #2A170D;
+	border: 1px solid #542E21;
+}
+
+
+textarea {
+	width: 80%;
+}
+
+label {
+	display: block;
+}
+
+input, textarea {
+	background-color: #C5886B;
+	border: 1px solid #905437;
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+input:focus, textarea:focus {
+	background-color: #DDB9A8; 
+}
+
+input[type=submit] {
+	background-color: #1A0F0A;
+	color: #C5886B;
+	cursor: pointer;
+}
+
+div#menu input {
+	margin-bottom: 5px;
+}
+
+div#menu li#search form {
+	margin: 0;
+	padding: 0;
+	background-color: #512D1E;
+	border: 1px solid #905437;
+}
+
+div#menu li#search div {
+	padding: 10px 15px;
+	margin-bottom: 0;
+}
+
+p.credit {
+	font-size: 70%;
+	text-align: center;
+}
+_-http://halr9000.com/css/mars-spirit/style.cssXtext/css”
+Oú/* This is the stylesheet modern browser will use to print your pages. */
+
+a {
+	color: #000;
+}
+
+body {
+	font-family: serif;
+	font-size: 12pt;
+}
+
+#content {
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+#header, h3, h4, .storytitle {
+	border: none;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+#main {
+	float: none;
+	margin: 0px 10%;
+	padding: 0px;
+	width: auto;
+}
+
+#menu {
+	display: none;
+}
+_http://halr9000.com/print.css‘_WebResourceTextEncodingNameUUTF-8O3)<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1"><TITLE>Hal Rottenberg ¬ª TiddlyWiki - a reusable non-linear personal web notebook</TITLE>
+        
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META name="generator" content="WordPress 1.2">
+
+
+  <LINK rel="alternate stylesheet" type="text/css" media="screen" href="http://halr9000.com/wp-layout.css" title="Default">
+  <LINK rel="stylesheet" type="text/css" media="screen" href="http://halr9000.com/css/mars-spirit/style.css" title="Mars-Spirit">
+        <LINK rel="stylesheet" type="text/css" media="print" href="http://halr9000.com/print.css">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://halr9000.com/feed/rss2/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://halr9000.com/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://halr9000.com/feed/atom/">
+        
+        <LINK rel="pingback" href="http://halr9000.com/xmlrpc.php">
+        <LINK rel="archives" title="June 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="May 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="April 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="March 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="February 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="January 2005" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="December 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="November 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="October 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="September 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="July 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="June 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="May 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="April 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="March 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="February 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="January 2004" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="December 2003" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="November 2003" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="October 2003" href="http://halr9000.com/article/%">
+        <LINK rel="archives" title="September 2003" href="http://halr9000.com/article/%">
+                <META name="ICBM" content="0, 0"><META name="DC.title" content="Hal Rottenberg"><META name="geo.position" content="0;0">
+
+<STYLE type="text/css">
+.hilite {
+        color: #fff;
+        background-color: #f93;
+}
+</STYLE></HEAD><BODY><DIV id="rap">
+<H1 id="header"><A href="http://halr9000.com">Hal Rottenberg</A></H1>
+
+<DIV id="content">
+<H2>6/27/2005</H2>        
+<DIV class="post">         <H3 class="storytitle" id="post-175"><A href="http://halr9000.com/article/175" rel="bookmark" title="Permanent Link: TiddlyWiki - a reusable non-linear personal web notebook">TiddlyWiki - a reusable non-linear personal web notebook</A></H3>
+        <DIV class="meta">Filed under: <UL class="post-categories">      <LI><A href="http://halr9000.com/article/category/internet/" title="View all posts in Internet">Internet</A></LI>
+        <LI><A href="http://halr9000.com/article/category/software/" title="View all posts in Software">Software</A></LI>
+        <LI><A href="http://halr9000.com/article/category/design/" title="View all posts in Design">Design</A></LI></UL> ‚Äî halr9000 @ Jun 27, 05 | 6:43 am </DIV>
+        
+        <DIV class="storycontent">                <P>This is <STRONG>extremely cool</STRONG>.  I‚Äôm kinda busy so will just paste the header from the author‚Äôs site:</P>
+
+<BLOCKQUOTE><EM><A href="http://www.tiddlywiki.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>
+TiddlyWiki, an experimental MicroContent WikiWikiWeb built by JeremyRuston. It‚Äôs written in HTML, CSS and JavaScript to run on any modern browser without needing any ServerSide logic. It allows anyone to create personal SelfContained hypertext documents that can be posted to any web server, sent by email or kept on a USB thumb drive to make a WikiOnAStick. </EM></BLOCKQUOTE>
+        </DIV>
+        
+        <DIV class="feedback">                                </DIV>
+        
+        
+
+
+<H2 id="comments">Comments 
+<A href="#postcomment" title="Leave a comment">¬ª</A>
+</H2>
+<P>The <ACRONYM title="Uniform Resource Identifier">URI</ACRONYM> to TrackBack this entry is: <EM>http://halr9000.com/article/175/trackback/</EM></P>
+
+
+        <P>No comments yet.</P>
+<P><A href="http://halr9000.com/article/175/feed/"><ABBR title="Really Simple Syndication">RSS</ABBR> feed for comments on this post.</A></P>
+<H2 id="postcomment">Leave a comment</H2>
+<P>Line and paragraph breaks automatic, e-mail address never displayed, <ACRONYM title="Hypertext Markup Language">HTML</ACRONYM> allowed: <CODE>&lt;a href="" title="" rel=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </CODE></P>
+
+<FORM action="http://halr9000.com/wp-comments-post.php" method="post" id="commentform">        <P>          <INPUT type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1">
+           <LABEL for="author">Name</LABEL> (required)    <INPUT type="hidden" name="comment_post_ID" value="175">
+        <INPUT type="hidden" name="redirect_to" value="/article/175">
+        </P>
+
+        <P>          <INPUT type="text" name="email" id="email" value="" size="28" tabindex="2">
+           <LABEL for="email">E-mail</LABEL> (required)    </P>
+
+        <P>          <INPUT type="text" name="url" id="url" value="" size="28" tabindex="3">
+           <LABEL for="url"><ACRONYM title="Uniform Resource Identifier">URI</ACRONYM></LABEL>
+        </P>
+
+        <P>          <LABEL for="comment">Your Comment</LABEL>
+        <BR>
+          <TEXTAREA name="comment" id="comment" cols="70" rows="4" tabindex="4"></TEXTAREA>        </P>
+
+        <P>          <INPUT name="submit" type="submit" tabindex="5" value="Say It!">
+        </P>
+</FORM>
+
+</DIV>
+
+</DIV>
+
+
+
+<DIV id="menu">
+<UL>                <LI id="design">Design
+        <UL><LI><A href="http://www.alistapart.com/">A List Apart</A></LI>
+<LI><A href="http://cssvault.com/">CSS Vault</A></LI>
+<LI><A href="http://www.mezzoblue.com/">mezzoblue</A></LI>
+
+        </UL>
+</LI>
+        <LI id="devices">Devices
+        <UL><LI><A href="http://engadget.com/">Engadget</A></LI>
+<LI><A href="http://www.ipodlounge.com/">iPodlounge</A></LI>
+
+        </UL>
+</LI>
+        <LI id="friends">Friends
+        <UL><LI><A href="http://jayntguru.com" rel="friend met" title="homepage of Jay Stewart">Jay Stewart</A></LI>
+<LI><A href="http://www.kismith.co.uk/">Kev Smith</A></LI>
+<LI><A href="http://mircea.bardac.net">Mircea Bardac</A></LI>
+<LI><A href="http://fritzyandfriends.com" rel="friend">Nathan Fritz</A></LI>
+<LI><A href="http://www.saint-andre.com/blog/" rel="acquaintance colleague">Peter Saint-Andre</A></LI>
+<LI><A href="http://www.cs.kuleuven.ac.be/~remko/">Remko Troncon</A></LI>
+<LI><A href="http://www.seanw.com/" rel="friend met">Sean Williams</A></LI>
+<LI><A href="http://tony.rocks.cc" rel="friend" title="homepage of Tony Collins">Tony Collins</A></LI>
+
+        </UL>
+</LI>
+        <LI id="jabber">Jabber
+        <UL><LI><A href="http://www.jabber.org/journal/">Jabber Journal</A></LI>
+<LI><A href="http://www.jabber.org/news/">Jabber News</A></LI>
+<LI><A href="http://www.jabberstudio.org" title="A Sourceforge for Jabber projects">JabberStudio</A></LI>
+<LI><A href="http://www.jabber.org/jeps/jeplist.php" title="Jabber Enhancement Proposals">JEPs</A></LI>
+<LI><A href="http://planet.jabber.org/">Planet Jabber</A></LI>
+
+        </UL>
+</LI>
+        <LI id="links">Links
+        <UL><LI><A href="http://www.randsinrepose.com/archives/2003/07/10/nadd.html" title="Nerd Attention Deficit Disorder">N.A.D.D.</A>
+Nerd Attention Deficit Disorder
+</LI>
+
+        </UL>
+</LI>
+        <LI id="news">News
+        <UL><LI><A href="http://www.bloglines.com">Bloglines</A></LI>
+<LI><A href="http://slashdot.org/">Slashdot</A></LI>
+
+        </UL>
+</LI>
+        <LI id="photos">Photos
+        <UL><LI><A href="http://gallery.halr9000.com">Hal's Photo Gallery</A></LI>
+<LI><A href="http://gallery.nx2k.com">Jay's Picture Gallery</A></LI>
+
+        </UL>
+</LI>
+        <LI id="projects">Projects
+        <UL><LI><A href="http://brindysgiftables.com/" title="Scrapbook stuff.  My wife's business.">Brindy's Giftables</A></LI>
+<LI><A href="http://edgar.netflint.net/" title="Edgar is a Jabber bot!">Edgar</A></LI>
+<LI><A href="http://flyspray.rocks.cc" title="Flyspray is a bug tracking system used by the Psi project and others.">Flyspray</A></LI>
+<LI><A href="http://psi.affinix.com" title="Psi, one of the most popular Jabber clients">Psi</A></LI>
+<LI><A href="http://newsboard.unclassified.de/" rel="acquaintance">Unclassified Newsboard</A></LI>
+
+        </UL>
+</LI>
+ <LI id="categories">Categories:       <UL>                <LI><A href="http://halr9000.com/article/category/jabber/" title="View all posts filed under Jabber">Jabber</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/fun/" title="View all posts filed under Fun">Fun</A>
+                <UL class="children">        <LI><A href="http://halr9000.com/article/category/fun/lpod/" title="Lego Picture of the Day">LPoD</A>
+</LI>
+                </UL>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/internet/" title="View all posts filed under Internet">Internet</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/diary/" title="View all posts filed under Diary">Diary</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/projects/" title="View all posts filed under Projects">Projects</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/software/" title="View all posts filed under Software">Software</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/music/" title="View all posts filed under Music">Music</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/design/" title="View all posts filed under Design">Design</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/movies/" title="View all posts filed under Movies">Movies</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/programming/" title="View all posts filed under Programming">Programming</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/politics/" title="View all posts filed under Politics">Politics</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/general/" title="View all posts filed under General">General</A>
+</LI>
+        <LI><A href="http://halr9000.com/article/category/devices/" title="If you see it on Enagadget, it fits in the Devices category.">Devices</A>
+</LI>
+        </UL>
+ </LI>
+ <LI id="search">   <LABEL for="s">Search:</LABEL>    
+   <FORM id="searchform" method="get" action="/index.php">     <DIV>                <INPUT type="text" name="s" id="s" size="15"><BR>
+                <INPUT type="submit" name="submit" value="Search">
+        </DIV>
+        </FORM>
+ </LI>
+
+ <LI id="other">Other:       <UL>                <LI><A href="http://halr9000.com/wp-login.php">Login</A></LI>
+                <LI><A href="http://halr9000.com/wp-register.php">Register</A></LI>
+        </UL>
+ </LI>
+ <LI id="meta">Meta:       <UL>                <LI><A href="http://halr9000.com/feed/rss2/" title="Syndicate this site using RSS"><ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A></LI>
+                <LI><A href="http://halr9000.com/comments/feed/rss2/" title="The latest comments to all posts in RSS">Comments <ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A></LI>
+                <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+                <LI><A href="http://wordpress.org/" title="Powered by WordPress; state-of-the-art semantic personal publishing platform.">WP</A></LI>
+        </UL>
+ </LI>
+
+</UL>
+
+</DIV>
+
+</DIV>
+
+<P class="credit"> <CITE>Powered by <A href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><STRONG>WordPress</STRONG></A></CITE></P>
+
+
+</BODY></HTML>_http://halr9000.com/article/175Ytext/html    1 4 ; M \ rê¿…–pêô∑ΩOÍP                           P

@@ -1,0 +1,235 @@
+bplist00—_WebMainResource‘	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUUTF-8O^^<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl"><HEAD>
+        
+        <TITLE>&lt;TeRanEX/&gt; Weblog : TiddlyWiki - a reusable non-linear personal web notebook</TITLE>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META http-equiv="Content-Style-Type" content="text/css">
+        <META http-equiv="content-script-type" content="text/javascript">
+        <META http-equiv="Pragma" content="no-cache">
+        <META http-equiv="Cache-Control" content="no-cache, must-revalidate">
+        <META http-equiv="Expires" content="-1">
+        <META http-equiv="pics-label" content="(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://budts.be/weblog" r (nz 1 vz 1 lz 1 oz 1 cz 1))">
+
+        <META name="generator" content="Nucleus CMS v3.2">
+        <META name="robots" content="all">
+
+        <META name="description" content="Het persoonlijke weblog van Jeroen Budts (aka TeRanEX) over allerlei dingen die me interesseren, gaande van Java en software ontwikkeling, Internet, Mozilla, Firefox, tot weblogs, webdesign en internet/www in het algemeen, Open Source/Free Software en Nucleus CMS, maar ook meer alledaagse zaken zoals reizen en humor ontbreken niet!">
+        <META name="description" lang="en" xml:lang="en" content="The personal weblog of Jeroen Budts (aka TeRanEX) about stuff that interests me, like Java and Software development, Internet, Mozilla, Firefox, Thunderbird, and weblogs, webdesign and internet/www in general, Open Source/Free Software and Nucleus CMS, but also sometimes about daily stuff like travel and humor!">
+        <META name="keywords" content="Computer, Humor, Internet, Jabber, Java, Software ontwikkeling, software Development, Eclipse, Mozilla, Firefox, Thunderbird, Open Source, Free Software, GPL, PGP, php, Programmeren, Programming, Software, Webdesign, Weblog, WWW, Nucleus, NUDN, Budts, Jeroen, TeRanEX, trex, belgie, belgium, antwerp, ekeren">
+        <META name="blogchalk" content="Belgium, Antwerp, Dutch, English, Jeroen, Male, 21-25, Internet, Programming">
+        <META name="ICBM" content="51.2779 , 4.418">
+        <META name="author" content="Jeroen Budts">
+        <META name="geo.country" content="BE">
+
+        <LINK href="http://purl.org/dc" rel="schema.DC">
+        <META name="DC.Title" content="<TeRanEX /> Weblog">
+        <META name="DC.Description" content="Het persoonlijke weblog van TeRanEX">
+        <META name="DC.Creator" content="Jeroen Budts">
+        <META name="DC.Publisher" content="Jeroen Budts (Lightyear Webdesign)">
+        <META name="DC.Rights" content="2003 - 2005, Lightyear Webdesign">
+        <META name="DC.Language" content="nl-BE" scheme="RFC1766">
+
+        
+        <LINK rel="archives" title="Archieven" href="/weblog/archives/1">
+        <LINK rel="about" title="Over dit weblog" href="/weblog/about">
+        <LINK rel="top" title="Today" href="/weblog/">
+        <LINK rel="author" title="Auteur" href="/jeroen/">
+        <LINK rel="copyright" title="Creative Commons License" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+        <LINK rel="alternate" title="RSS 2.0" type="application/rss+xml" href="/weblog/xml-rss2.php">
+        <LINK rel="alternate" title="RSS 2.0 (full posts)" type="application/rss+xml" href="/weblog/xml-rss2.php?full=yes">
+        <LINK rel="alternate" title="Atom" type="application/atom+xml" href="/weblog/atom.php">
+        <LINK rel="alternate" title="RSS 2.0 (dumplog)" type="application/rss+xml" href="/weblog/xml-rss2.php?blogid=2">
+        <LINK rel="alternate" title="Atom (dumplog)" type="application/atom+xml" href="/weblog/atom.php?blogid=2">
+
+        <LINK rel="meta" type="application/rdf+xml" title="FOAF" href="/jeroen/foaf.rdf">
+        <LINK rel="meta" type="text/html" title="FOAF (leesbaar)" href="http://xml.mfd-consult.dk/foaf/?foaf=http%3A%2F%2Fbudts.be%2Fjeroen%2Ffoaf.rdf">
+
+        <LINK rel="Shortcut Icon" type="image/png" href="http://www.budts.be/weblog/media/teranex-weblog-icon.png">
+
+        <STYLE type="text/css"><!--
+                @import "/weblog/skins/redesign2005/skidoo_lean.css";
+        --></STYLE>
+
+</HEAD><BODY>        <DIV id="pageWrapper">                <DIV id="masthead" class="inside">                                                <H1>&lt;TeRanEX/&gt; weblog <SPAN style="font-size: smaller; font-style: italic; font-weight: normal;">v2</SPAN></H1>
+                        
+                        <DIV id="menu">                                <UL>                                        <LI><A href="/weblog/" title="De homepagina van deze website" accesskey="h">Home</A></LI>
+                                        <LI><A href="http://fotos.budts.be" title="Fotos" accesskey="c">Foto's</A></LI>
+                                        <LI><A href="/jeroen/" title="Curriculum Vitae" accesskey="p">C.V.</A></LI>
+                                        <LI><A href="http://dev.budts.be" title="My Devblog" accesskey="p">Dev</A></LI>
+                                        <LI><A href="http://wiki.budts.be" title="My wiki" accesskey="p">Wiki</A></LI>
+                                        <LI><A href="/weblog/about" title="About this blog" accesskey="p" class="last">About</A></LI>
+                                </UL>
+                        </DIV>
+                </DIV>
+
+                <DIV id="outerColumnContainer">                        <DIV id="innerColumnContainer">                                <DIV id="leftColumn">                                        <DIV class="inside">                                                
+                                                <DIV class="item"><H2><A href="http://budts.be/weblog/item/513" title="Read entry: TiddlyWiki - a reusable non-linear personal web notebook">TiddlyWiki - a reusable non-linear personal web notebook</A></H2>
+<DIV class="contentbody"><P><A href="http://www.tiddlywiki.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>. Wow this is a really cool application written entirely in javascript. It is kind of a wiki, but it exists only out of one single html-file, which also contains the data. One of the nicest javascript applications i have ever seen!</P>
+<A name="more"></A>
+
+</DIV>
+<DIV class="iteminfo">        2005-06-29 23:36 - 
+        Category: <A href="/weblog/category/21" title="Category: General">General</A> - Views:  57 keer bekeken
+</DIV>
+</DIV>
+
+                                                <DIV class="comments">                                                <H2 id="comments">Comments</H2>
+                                                <DIV class="nocomments">No comments yet. Be the first to comment!</DIV>
+                                                <H2>Add a comment</H2>
+                                                <DIV class="contentbody"><A id="nucleus_cf"></A>
+<FORM method="post" action="#nucleus_cf">  <DIV class="commentform">
+        
+
+        <INPUT type="hidden" name="action" value="addcomment">
+        <INPUT type="hidden" name="url" value="http://budts.be/weblog/item/513">
+        <INPUT type="hidden" name="itemid" value="513">
+        <LABEL for="nucleus_cf_body">Your comment</LABEL>:
+        <BR>
+        <TEXTAREA name="body" class="formfield" style="float: left;" cols="40" rows="10" id="nucleus_cf_body"></TEXTAREA>        <DIV style="margin-left: 350px;color: #999;">                You can use BB-code in your comments. Some examples:
+                <UL>                        <LI>[b]...[/b] or ¬∞...¬∞ for bold</LI>
+                        <LI>[quote=name]...[/quote] to quote</LI>
+                        <LI>[code=php]...[/code] to include code</LI>
+                        <LI>[url]...[/url] for links (also autodetected)</LI>
+                </UL>
+        </DIV>
+        <DIV style="clear: both"></DIV>
+        <LABEL for="nucleus_cf_name" class="textlabel">Name:</LABEL> <INPUT name="user" size="40" maxlength="40" value="" class="formfield labelledfield" id="nucleus_cf_name">
+        <BR>
+        <LABEL for="nucleus_cf_mail" class="textlabel">E-mail/HTTP:</LABEL> <INPUT name="userid" size="40" maxlength="60" value="" class="formfield labelledfield" id="nucleus_cf_mail">
+
+        
+
+        <BR>
+        <INPUT type="checkbox" value="1" name="remember" id="nucleus_cf_remember"><LABEL for="nucleus_cf_remember">Remember Me</LABEL>
+        <BR>
+        <INPUT type="submit" value="Add Comment" class="formbutton">
+  </DIV>
+</FORM></DIV>
+                                                <H2>Trackbacks</H2>
+                                                <DIV class="iteminfo">Use this <A href="http://budts.be/weblog/action.php?action=plugin&name=TrackBack&tb_id=513">TrackBack url</A> to ping this item. If your blog does not support Trackbacks you can manually add your trackback by using <A href="http://budts.be/weblog/action.php?action=plugin&name=TrackBack&type=form&tb_id=513" onclick="window.open(this.href, "trackback", "scrollbars=yes,width=600,height=340,left=10,top=10,status=yes,resizable=yes"); return false;">this form</A>.</DIV>
+<DIV class="iteminfo">                There are currently no trackbacks for this item.
+</DIV>
+
+                                                </DIV>
+                                                                                        </DIV>
+                                </DIV>
+                                <DIV id="rightColumn">                                        <DIV class="inside">                                                
+                                                <DIV class="dump item">        <H2><A href="http://budts.be/weblog/item/513" title="Read entry: TiddlyWiki - a reusable non-linear personal web notebook">TiddlyWiki - a reusable non-linear personal web notebook</A></H2>
+        <DIV class="contentbody">        <P><A href="http://www.tiddlywiki.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>. Wow this is a really cool application written entirely in javascript. It is kind of a wiki, but it exists only out of one single html-file, which also contains the data. One of the nicest javascript applications i have ever seen!</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-29 23:36 - <A href="http://budts.be/weblog/item/513#c" rel="bookmark" title="Add comment on 'TiddlyWiki - a reusable non-linear personal web notebook'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/512" title="Read entry: Slashdot | Trolltech Releases Qt 4.0">Slashdot | Trolltech Releases Qt 4.0</A></H2>
+        <DIV class="contentbody">        <P><A href="http://developers.slashdot.org/article.pl?sid=05/06/29/0125225&from=rss">Slashdot | Trolltech Releases Qt 4.0</A>. Cool song with music video :) Really nice way to announce your product :)</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-29 17:19 - <A href="http://budts.be/weblog/item/512#c" rel="bookmark" title="Add comment on 'Slashdot | Trolltech Releases Qt 4.0'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/511" title="Read entry: eclipsedarcs">eclipsedarcs</A></H2>
+        <DIV class="contentbody">        <P><A href="http://eclipsedarcs.org/doku.php">eclipsedarcs</A>. <A href="http://darcs.net">Darcs</A> plugin for <A href="http://eclipse.org">Eclipse</A>.</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-27 10:54 - <A href="http://budts.be/weblog/item/511#c" rel="bookmark" title="Add comment on 'eclipsedarcs'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/510" title="Read entry: Java Plugin Framework (JPF)">Java Plugin Framework (JPF)</A></H2>
+        <DIV class="contentbody">        <P><A href="http://jpf.sourceforge.net/">Java Plugin Framework (JPF)</A>. Seems interesting</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-27 10:51 - <A href="http://budts.be/weblog/item/510#c" rel="bookmark" title="Add comment on 'Java Plugin Framework (JPF)'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/509" title="Read entry: Sysinternals Freeware">Sysinternals Freeware</A></H2>
+        <DIV class="contentbody">        <P><A href="http://www.sysinternals.com/">Sysinternals Freeware</A>. Really cool tools for Windows. Certainly the Process Explorer is something you can't live whithout as an advanced windows user</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-26 20:55 - <A href="http://budts.be/weblog/item/509#c" rel="bookmark" title="Add comment on 'Sysinternals Freeware'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/507" title="Read entry: ZDNet.be - 7-Zip 4.2">ZDNet.be - 7-Zip 4.2</A></H2>
+        <DIV class="contentbody">        <P><A href="http://www.zdnet.be/downloads.cfm?id=46746&mxp=27">ZDNet.be</A>. 7-zip is inderdaad een enorm krachtige compressie. Het programma op zich doet wat het moet doen, dat kan ik na een jaartje ondertussen wel zeggen :).</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-24 20:15 - <A href="http://budts.be/weblog/item/507#c" rel="bookmark" title="Add comment on 'ZDNet.be - 7-Zip 4.2'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/505" title="Read entry: JSCalc: the JavaScript calculator bookmarklet">JSCalc: the JavaScript calculator bookmarklet</A></H2>
+        <DIV class="contentbody">        <P><A href="http://www.themaninblue.com/writing/perspective/2005/06/21/">The Man in Blue : JSCalc : the JavaScript calculator bookmarklet</A></P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-23 14:17 - <A href="http://budts.be/weblog/item/505#c" rel="bookmark" title="Add comment on 'JSCalc: the JavaScript calculator bookmarklet'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/503" title="Read entry: Outfoxed | Personalize your internet.">Outfoxed | Personalize your internet.</A></H2>
+        <DIV class="contentbody">        <P><A href="http://getoutfoxed.com/">Outfoxed | Personalize your internet.</A> Nice firefox extension to introduce a social aspect on the web</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-20 22:40 - <A href="http://budts.be/weblog/item/503#c" rel="bookmark" title="Add comment on 'Outfoxed | Personalize your internet.'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/501" title="Read entry: Using Assertions in Java Technology">Using Assertions in Java Technology</A></H2>
+        <DIV class="contentbody">        <P><A href="http://java.sun.com/developer/technicalArticles/JavaLP/assertions/?feed=JSC">Using Assertions in Java Technology</A>. Nice introduction on the <CODE>assert</CODE>-keyword in Java 1.4 and up</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-16 23:19 - <A href="http://budts.be/weblog/item/501#c" rel="bookmark" title="Add comment on 'Using Assertions in Java Technology'">Add comment</A>
+        </DIV>
+</DIV><DIV class="dump item">
+        <H2><A href="http://budts.be/weblog/item/500" title="Read entry: Scripting Java: The BeanShell JSR">Scripting Java: The BeanShell JSR</A></H2>
+        <DIV class="contentbody">        <P><A href="http://www.artima.com/lejava/articles/beanshell.html">Scripting Java: The BeanShell JSR</A>. Interesting Article introducing BeanShell</P>
+        
+        </DIV>
+        <DIV class="iteminfo">        2005-06-16 13:58 - <A href="http://budts.be/weblog/item/500#c" rel="bookmark" title="Add comment on 'Scripting Java: The BeanShell JSR'">Add comment</A>
+        </DIV>
+</DIV>
+                                                                                        </DIV>
+                                </DIV>
+                                <DIV id="contentColumn">                                        <DIV class="inside" style="font-size: 90%;">                                                                                                <DIV id="searchform"><FORM method="get" action="/weblog">  <DIV class="searchform">      <INPUT name="query" class="formfield" size="10" maxlength="60" accesskey="4" value="">
+        <INPUT type="hidden" name="amount" value="0">
+        <INPUT type="hidden" name="blogid" value="2">
+        <INPUT type="submit" value="Search" class="formbutton">
+  </DIV>
+</FORM>
+</DIV>
+                                                <H2>Categories</H2>
+                                                <UL>  <LI style="margin-bottom: 5px;"><A href="/weblog/" title="All categories">All</A> <SPAN style="color: #937c4a;">|</SPAN> <A href="/weblog/archives/1" title="Archives">Archives</A></LI>  <LI><A href="/weblog/category/15/blogid/1" title="Category: Actualiteit">Actualiteit</A></LI>  <LI><A href="/weblog/category/4/blogid/1" title="Category: Computer">Computer</A></LI>  <LI><A href="/weblog/category/16/blogid/1" title="Category: Eten">Eten</A></LI>  <LI><A href="/weblog/category/1/blogid/1" title="Category: General">General</A></LI>  <LI><A href="/weblog/category/5/blogid/1" title="Category: Humor">Humor</A></LI>  <LI><A href="/weblog/category/19/blogid/1" title="Category: Internet">Internet</A></LI>  <LI><A href="/weblog/category/20/blogid/1" title="Category: Jabber">Jabber</A></LI>  <LI><A href="/weblog/category/8/blogid/1" title="Category: Mozilla">Mozilla</A></LI>  <LI><A href="/weblog/category/2/blogid/1" title="Category: Noodles">Noodles</A></LI>  <LI><A href="/weblog/category/10/blogid/1" title="Category: Open Source">Open Source</A></LI>  <LI><A href="/weblog/category/23/blogid/1" title="Category: PHP">PHP</A></LI>  <LI><A href="/weblog/category/12/blogid/1" title="Category: Programmeren">Programmeren</A></LI>  <LI><A href="/weblog/category/7/blogid/1" title="Category: Reizen">Reizen</A></LI>  <LI><A href="/weblog/category/3/blogid/1" title="Category: School">School</A></LI>  <LI><A href="/weblog/category/13/blogid/1" title="Category: Software">Software</A></LI>  <LI><A href="/weblog/category/9/blogid/1" title="Category: Spellekes">Spellekes</A></LI>  <LI><A href="/weblog/category/18/blogid/1" title="Category: Vrije tijd">Vrije tijd</A></LI>  <LI><A href="/weblog/category/14/blogid/1" title="Category: Webdesign">Webdesign</A></LI>  <LI><A href="/weblog/category/6/blogid/1" title="Category: Weblog">Weblog</A></LI>  <LI><A href="/weblog/category/17/blogid/1" title="Category: World Wide Web">World Wide Web</A></LI></UL>
+
+                                                <H2>Latest Comments</H2>
+                                                <A href="http://budts.be/weblog/item/180#comment1216">sleen</A>: roken is doodelijk ooit 1 min achter een vragtwagen gestaan ...<BR><BR style="line-height: 5px;"><A href="http://budts.be/weblog/item/508#comment1215">Roel</A>: He Jeroen, 
+
+Van harte, he! Op naar de volgende stap!  :-)...<BR><BR style="line-height: 5px;"><A href="http://budts.be/weblog/item/508#comment1214">TeRanEX</A>: @duimdog: :oops: nou ja ;) thx!...<BR><BR style="line-height: 5px;"><A href="http://budts.be/weblog/item/508#comment1213">duimdog</A>: 'See Dutch isn't difficult'?
+moet 'eindigd' hier niet met e...<BR><BR style="line-height: 5px;"><A href="http://budts.be/weblog/item/258#comment1212">TeRanEX</A>: @Marjon: uitnodiging is verstuurd :)...<BR><BR style="line-height: 5px;">
+
+                                                <H2>Stuff</H2>
+                                                <UL>                                                
+                                                        <LI><A href="/weblog/members">Login or Register</A></LI>
+                                                
+                                                        <LI><A href="/weblog/feeds">Feeds &amp; Newsletter</A></LI>
+                                                        <LI><A href="/weblog/stats">Stats</A></LI>
+                                                </UL>
+
+                                                <H2>Links</H2>
+                                                <UL><LI><A href="http://www.7seconden.be/" title="7 seconden">7 seconden</A></LI><LI><A href="http://annevankesteren.nl/" title="Anne Vankesteren">Anne Vankesteren</A></LI><LI><A href="http://branders.name/" title="Branders.name">Branders.name</A></LI><LI><A href="http://beust.com/weblog/" title="Cedric Beust">Cedric Beust</A></LI><LI><A href="http://weblog.dederdebelg.be/" title="dederdebelg">dederdebelg</A></LI><LI><A href="http://blog.ezdev.nl/" title="EZblog">EZblog</A></LI><LI><A href="http://frish.nl/" title="Frish.nl">Frish.nl</A></LI><LI><A href="http://www.fuckhedz.com/" title="Fuckhedz">Fuckhedz</A></LI><LI><A href="http://home.hccnet.nl/e.vd.beek/blog/" title="Inside GP">Inside GP</A></LI><LI><A href="http://jorisvandael.be/weblog/" title="J-Blog">J-Blog</A></LI><LI><A href="http://demuynck.org/item/7" title="Karma Universe">Karma Universe</A></LI><LI><A href="http://blog.kevinsmet.be/" title="Kevin Smet">Kevin Smet</A></LI><LI><A href="http://kristofrennen.be/weblog/" title="Kristof Rennen">Kristof Rennen</A></LI><LI><A href="http://weblog.kweem.be/" title="Martin's Weblog">Martin's Weblog</A></LI><LI><A href="http://milov.nl/" title="milov">milov</A></LI><LI><A href="http://percept.be/" title="Percept">Percept</A></LI><LI><A href="http://www.rakaz.nl/nucleus/" title="rakaz">rakaz</A></LI><LI><A href="http://roelg.nl/index.php?itemid=142" title="RoelG">RoelG</A></LI><LI><A href="http://www.struikgewas.be/" title="Struikgewas">Struikgewas</A></LI><LI><A href="http://www.marcelvaneeden.nl/tekenlog.html" title="Tekenlog">Tekenlog</A></LI><LI><A href="http://www.vickyke.tk/" title="vickyke.tk">vickyke.tk</A></LI><LI><A href="http://www.weps.be/blog/index.php?blogid=1" title="Weps">Weps</A></LI><LI><A href="http://xiffy.nl/weblog/" title="Xiffy">Xiffy</A></LI><LI><A href="http://www.xoltar.org/" title="Xoltar">Xoltar</A></LI><LI><A href="http://www.zertox.be/" title="Zertox">Zertox</A></LI></UL>
+                                                <UL>                                                        <LI><A href="http://bloglines.com/public/teranex">My Bloglines</A></LI>
+                                                        <LI><A href="http://del.icio.us/teranex">del.icio.us</A></LI>
+                                                        <LI><A href="http://www.technorati.com/cosmos/search.html?url=http%3A%2F%2Fbudts.be%2Fweblog">Technorati</A>        </LI>
+                                                        <LI><A href="http://geourl.org/near/?p=http://www.budts.be/weblog">GeoURL</A></LI>
+                                                </UL>
+
+                                                <H2>Info</H2>
+                                                <P style="margin-top: 3px;">This blog is powered by <A href="http://nucleuscms.org">Nucleus CMS</A></P>
+                                                <P>Get <A href="http://getfirefox.com">Mozilla Firefox</A> and rediscover the web.</P>
+                                                                                        </DIV>
+                                </DIV>
+                        <DIV class="clear mozclear"></DIV>
+                </DIV>
+        </DIV>
+        <DIV id="footer" class="inside">                                <P style="margin: 0pt;">                        ¬© 2003-2005 Jeroen Budts. This work is licensed under a <A href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license">Creative Commons</A> License<BR>
+                        unless otherwhise noted. Please read the <A href="/weblog/about#disclaimer">disclaimer</A>. Valid XHTML and CSS.
+                </P>
+                        </DIV>
+</DIV>
+
+</BODY></HTML>_http://budts.be/weblog/item/513Ytext/html    & D V e { Å^„_                           _

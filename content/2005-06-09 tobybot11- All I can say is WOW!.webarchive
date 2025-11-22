@@ -1,0 +1,1126 @@
+bplist00“+_WebSubresources_WebMainResource´"%(”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO¨body {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+    margin: 0; padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    font-weight: bold;
+    color: #036; background-color: transparent;
+}
+h1 a {
+    font-weight: normal;
+    font-size: 80%;
+}
+h2 {
+    font-weight: normal;
+    color: #036; background-color: transparent;
+}
+h3 {
+    color: #024; background-color: transparent;
+}
+.hide {
+    display: none;
+}
+hr {
+    border: 0;
+    width: 80%;
+    color: #369; background-color: #369;
+    height: 2px;
+}
+table.choices {
+    margin-left: 1.5em;
+    margin-right: -1.5em;
+    margin-top: 1em;
+}
+table.edged {
+    border: 2px solid #c5dff9;
+}
+table.edged td {
+    border: 1px solid #8fc3f7;;
+}
+.standout {
+    text-align: center;
+}
+.standout .container {
+    color: #000; background-color: #c5dff9;
+    border: 1px solid #8fc3f7;
+    padding: 3px;
+    /* margin shorthand isn't recognized by IE5/Mac */
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.errorbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFEEEE;
+    background-repeat: repeat-x;
+    border: 1px solid #FF9999;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.warningbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFFFDD;
+    background-repeat: repeat-x;
+    border: 1px solid #FFCC33;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+
+/* layout */
+
+#Userpic {
+    position: absolute;
+    width: 100%; height: 100px;
+    top: 0px; right: 0; 
+    text-align: right;
+}
+#Userpic img {
+    display: inline;
+    border: 1px solid #FFF;
+}
+.talk-comment {
+    margin-top: 1em;
+    margin-bottom: 0px;
+}
+#Logo {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 68px;
+    margin: 0; padding: 0;
+    color: #FFF; background-color:#69C;
+}
+#Logo img {
+    border: 0;
+}
+#Greeting {
+    position: absolute;
+    left: 300px; top: 25px; right: 112px;
+    width: auto; text-align: right;
+    color: #FFF; background-color: #69C;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Setlang {
+    position: absolute;
+    left: 300px; right: 112px; top: 45px;
+    width: auto; text-align: right;
+}
+#Setlang a {
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+/* Fix IE5 Horizontal scroll */
+* html div#Content { width: 100%; w\idth: auto; }
+
+#Content pre {
+   line-height: 1em; 
+}
+.talk-comment {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+#Upgrade {
+    position: absolute;
+    top: 60px; left: 70px;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#Upgrade a {
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    border: 0;
+}
+
+/* Forms */
+
+#Search {
+    position: absolute;
+    left: 300px; top: 103px; right: 40px;
+    width: auto; height: 20px;
+    margin: 5px 0 5px 5px; padding: 0; border: 0;
+    text-align: right;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    clear: both;
+}
+#commenttext { width: 100%; }
+
+/* Navigate */ 
+
+#NavMenuList {
+    color: #000; background-color: transparent;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    padding: 3px; margin-left: 40px;
+}
+.NavSubMenuList li {
+    display: inline;
+    list-style: none;
+}
+#NavMenuListTitle {
+    display: block; margin-left: 40px;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+#FooterNav {
+    margin: 0px; padding: 0 100px 0 70px;
+    border: 1px solid #69C;
+    color: #FFF; background-color: #69C;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+    color: #FFF; background-color: #69C;
+}
+#FooterNav a {
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+/* Form Items */
+.formitem {
+    color: #343434;
+    font-size: 1em;
+}
+
+.formnumber {
+    font-weight: bold;
+    margin-top: 1.8em;
+    font-size: .9em;
+}
+
+.formitemName {
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 1.8em;
+}
+
+.formitemDesc {
+    margin-top: .4em;
+    margin-bottom: .4em;
+    color: #505050;
+}
+
+.formitemNote {
+    color: #da6320;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.formitemFlag {
+    color: #CE0000;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.borderedtable {
+    border: solid 1px black;
+}
+
+/* the top of the borderedtable, use th tags for header columns */
+.borderedtable th {
+    background-color: #dddddd;
+    border-bottom: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+_(http://stat.livejournal.com/xc/basic.cssXtext/css”
+O¡/* The 90% width keeps the menubar from wrapping prematurely, 
+but overlays the upgrade button in some browsers. Still
+looking for a good fix. 
+100% stretches the bar and creates a horizontal scroll. Suckage. */
+#NavMenuList {
+    position: absolute;
+    left: 60px; top: 60px;
+    height: 40px; width: 90%;
+    margin: 0; padding: 0;
+    display: inline; white-space: nowrap;
+    clear: both;
+}
+#NavMenuList li {
+    display: inline;
+    list-style: none; white-space: nowrap;
+}
+#NavMenuList a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; display: block;
+    border-top: 1px solid #FFF;
+}
+#NavMenuList a.preextra {
+    padding: 2px 1px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#NavMenuList a.extra {
+    padding: 2px 10px 1px 1px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+    font-weight: bold;
+}
+#NavMenuList a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuList .NavSubMenuList {
+    visibility: hidden;
+    left: 0; top: 20px;
+    position: absolute; height: 20px;
+    width: 100%; display: inline; white-space: nowrap;
+    margin: 0; padding: 0; border: 0px;
+}
+#NavMenuList .NavSubMenuList li a {
+    color: #FFF;
+    background-color: #69C;
+    float: left;
+}
+#NavMenuList .NavSubMenuList li a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuListTitle {
+    display: none;
+}_.http://stat.livejournal.com/xc/menu-normal.css”
+Oîbody, dd, dt, th, td, p, div, li, pre, code, kbd { font-size: small; }
+h3 { font-size: medium; }
+h2 { font-size: large; }
+h1 { font-size: x-large; }_/http://stat.livejournal.com/xc/normal-fonts.css”
+O‰body {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    margin: 0 0 0.5em 0; padding: 0;
+}
+h2 {
+    margin: 0.3em 0 0.1em 0; padding: 0;
+}
+/* h2+p {
+    margin: 0;
+} */
+h3 {
+    font-style: italic;
+    margin: 0.2em 0 0.2em 0; padding: 0;
+}
+p {
+    margin: 0.75em 0;
+}
+.hide {
+    display: none;
+}
+div.centered {
+    text-align: center;
+    width: 100%;
+}
+.lesstop {
+    margin-top: 2px;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+/* layout */
+
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 20px;
+}
+#Content pre {
+   line-height: 1.1em; 
+   font-size: 1.1em;
+}
+#Logo {
+    color: #FFF; background-color: transparent;
+}
+#Setlang {
+    position: absolute;
+    left: auto; right: 5px; top: 0px;
+    width: 250px; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right; white-space: nowrap;
+}
+#Setlang a {
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    color: #FFF; background-color: #69C;
+    text-decoration: none;
+}
+#Greeting {
+    position: absolute;
+    left: auto; right: 112px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Greeting.nopic {
+    right: 50px;
+}
+#Greeting a {
+    color: #FFF; background-color: #69C;
+    font-weight: normal;
+}
+#Greeting a b {
+    font-weight: normal;
+}
+#Greeting #Logout {
+    font: 9px Arial, Geneva, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+#LoginBox {
+    position: absolute;
+    left: auto; right: 20px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+#NotLoggedInDiv a {
+    color: #FFF;
+}
+
+#Upgrade {
+    position: absolute;
+    left: auto;
+    right: 142px; top: 59px;
+    width: 180px; height: 20px;
+    padding-top: 2px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, sans-serif;
+    display: block; float: left;
+}
+#Upgrade a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; white-space: nowrap;
+    display: block; text-align: right;
+}
+#Upgrade a:hover {
+    color: #000; background-color: #FFF;
+}
+#Userpic {
+    display: block;
+    position: absolute;
+    left: auto; right: 0; top: 0;
+    width: 101px; height: 100px;
+    color: #FFF; background-color: transparent;
+    text-align: right;
+}
+#Userpic img {
+    color: #000; background-color: #FFF;
+    border: 0;
+    border-left: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+#menu-tos {
+    margin-left: 60px;
+}
+#FooterNav {
+    width: 100%; height: 20px;
+    color: #FFF; background-color: #69C;
+    margin: 0; padding: 0; border: 0;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+}
+#FooterNav a {
+    padding: 3px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+#Search {
+    float: left;
+    position: absolute;
+    left: auto; right: 40px; top: 103px;
+    width: auto; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+#Comments q {
+    padding-left: 2.5em;
+    font-style: italic;
+}
+
+_+http://stat.livejournal.com/xc/extended.css”Oùvar xcol_cur_menu = null;
+var xcol_cur_submenu = null;
+
+function show(id)
+{
+    if (!isDOMcompliant()) { return; }
+    var menu = document.getElementById("Menu" + id);
+    var menus = document.getElementById("NavMenuList");
+    if (!menus) return;
+
+    var submenu = menus.getElementsByTagName("ul").item(id);
+    if (xcol_cur_submenu == null) {
+        submenu.style.visibility = "visible";
+    } else {
+        xcol_cur_submenu.style.visibility = "hidden";
+        submenu.style.visibility = "visible";
+    }
+    if (xcol_cur_menu == null) {
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    } else {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    }
+    xcol_cur_menu = menu;
+    xcol_cur_submenu = submenu;
+}
+
+function unshow()
+{
+    if (!isDOMcompliant()) { return; }
+    if (xcol_cur_submenu != null) {
+        xcol_cur_submenu.style.visibility = "hidden";
+    }
+    if (xcol_cur_menu != null) {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+    }
+    xcol_cur_submenu = null;
+    xcol_cur_menu = null;
+}
+
+function isDOMcompliant()
+{
+    return document.getElementById && document.getElementsByTagName;
+}
+
+function xcShowLoginDiv () {
+    if (!document.getElementById) return true;
+    var notloge = document.getElementById("NotLoggedInDiv");
+    var logboxe = document.getElementById("LoginBox");
+    var xcusere = document.getElementById("xc_user");
+    if (!notloge || !logboxe || ! xcusere) return true;
+    notloge.style.display = 'none';
+    logboxe.style.display = 'block';
+    xcusere.focus();
+    return false;
+}
+
+var showNothing = function () { show(0) };
+if (window.attachEvent)
+    window.attachEvent("onload", showNothing);
+if (window.addEventListener)
+    window.addEventListener("load", showNothing, false);
+_(http://stat.livejournal.com/xc/layout.js_application/x-javascript”O't/*
+ *  md5.jvs 1.0b 27/06/96
+ *
+ * Javascript implementation of the RSA Data Security, Inc. MD5
+ * Message-Digest Algorithm.
+ *
+ * Copyright (c) 1996 Henri Torgemane. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for any purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. 
+ *
+ * Of course, this soft is provided "as is" without express or implied
+ * warranty of any kind.
+ */
+
+
+
+function array(n) {
+  for(i=0;i<n;i++) this[i]=0;
+  this.length=n;
+}
+
+/* Some basic logical functions had to be rewritten because of a bug in
+ * Javascript.. Just try to compute 0xffffffff >> 4 with it..
+ * Of course, these functions are slower than the original would be, but
+ * at least, they work!
+ */
+
+function integer(n) { return n%(0xffffffff+1); }
+
+function shr(a,b) {
+  a=integer(a);
+  b=integer(b);
+  if (a-0x80000000>=0) {
+    a=a%0x80000000;
+    a>>=b;
+    a+=0x40000000>>(b-1);
+  } else
+    a>>=b;
+  return a;
+}
+
+function shl1(a) {
+  a=a%0x80000000;
+  if (a&0x40000000==0x40000000)
+  {
+    a-=0x40000000;  
+    a*=2;
+    a+=0x80000000;
+  } else
+    a*=2;
+  return a;
+}
+
+function shl(a,b) {
+  a=integer(a);
+  b=integer(b);
+  for (var i=0;i<b;i++) a=shl1(a);
+  return a;
+}
+
+function and(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1&t2)+0x80000000);
+    else
+      return (t1&b);
+  else
+    if (t2>=0)
+      return (a&t2);
+    else
+      return (a&b);  
+}
+
+function or(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1|t2)+0x80000000);
+    else
+      return ((t1|b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a|t2)+0x80000000);
+    else
+      return (a|b);  
+}
+
+function xor(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return (t1^t2);
+    else
+      return ((t1^b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a^t2)+0x80000000);
+    else
+      return (a^b);  
+}
+
+function not(a) {
+  a=integer(a);
+  return (0xffffffff-a);
+}
+
+/* Here begin the real algorithm */
+
+    var state = new array(4); 
+    var count = new array(2);
+	count[0] = 0;
+	count[1] = 0;                     
+    var buffer = new array(64); 
+    var transformBuffer = new array(16); 
+    var digestBits = new array(16);
+
+    var S11 = 7;
+    var S12 = 12;
+    var S13 = 17;
+    var S14 = 22;
+    var S21 = 5;
+    var S22 = 9;
+    var S23 = 14;
+    var S24 = 20;
+    var S31 = 4;
+    var S32 = 11;
+    var S33 = 16;
+    var S34 = 23;
+    var S41 = 6;
+    var S42 = 10;
+    var S43 = 15;
+    var S44 = 21;
+
+    function F(x,y,z) {
+	return or(and(x,y),and(not(x),z));
+    }
+
+    function G(x,y,z) {
+	return or(and(x,z),and(y,not(z)));
+    }
+
+    function H(x,y,z) {
+	return xor(xor(x,y),z);
+    }
+
+    function I(x,y,z) {
+	return xor(y ,or(x , not(z)));
+    }
+
+    function rotateLeft(a,n) {
+	return or(shl(a, n),(shr(a,(32 - n))));
+    }
+
+    function FF(a,b,c,d,x,s,ac) {
+        a = a+F(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function GG(a,b,c,d,x,s,ac) {
+	a = a+G(b, c, d) +x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function HH(a,b,c,d,x,s,ac) {
+	a = a+H(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function II(a,b,c,d,x,s,ac) {
+	a = a+I(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function transform(buf,offset) { 
+	var a=0, b=0, c=0, d=0; 
+	var x = transformBuffer;
+	
+	a = state[0];
+	b = state[1];
+	c = state[2];
+	d = state[3];
+	
+	for (i = 0; i < 16; i++) {
+	    x[i] = and(buf[i*4+offset],0xff);
+	    for (j = 1; j < 4; j++) {
+		x[i]+=shl(and(buf[i*4+j+offset] ,0xff), j * 8);
+	    }
+	}
+
+	/* Round 1 */
+	a = FF ( a, b, c, d, x[ 0], S11, 0xd76aa478); /* 1 */
+	d = FF ( d, a, b, c, x[ 1], S12, 0xe8c7b756); /* 2 */
+	c = FF ( c, d, a, b, x[ 2], S13, 0x242070db); /* 3 */
+	b = FF ( b, c, d, a, x[ 3], S14, 0xc1bdceee); /* 4 */
+	a = FF ( a, b, c, d, x[ 4], S11, 0xf57c0faf); /* 5 */
+	d = FF ( d, a, b, c, x[ 5], S12, 0x4787c62a); /* 6 */
+	c = FF ( c, d, a, b, x[ 6], S13, 0xa8304613); /* 7 */
+	b = FF ( b, c, d, a, x[ 7], S14, 0xfd469501); /* 8 */
+	a = FF ( a, b, c, d, x[ 8], S11, 0x698098d8); /* 9 */
+	d = FF ( d, a, b, c, x[ 9], S12, 0x8b44f7af); /* 10 */
+	c = FF ( c, d, a, b, x[10], S13, 0xffff5bb1); /* 11 */
+	b = FF ( b, c, d, a, x[11], S14, 0x895cd7be); /* 12 */
+	a = FF ( a, b, c, d, x[12], S11, 0x6b901122); /* 13 */
+	d = FF ( d, a, b, c, x[13], S12, 0xfd987193); /* 14 */
+	c = FF ( c, d, a, b, x[14], S13, 0xa679438e); /* 15 */
+	b = FF ( b, c, d, a, x[15], S14, 0x49b40821); /* 16 */
+
+	/* Round 2 */
+	a = GG ( a, b, c, d, x[ 1], S21, 0xf61e2562); /* 17 */
+	d = GG ( d, a, b, c, x[ 6], S22, 0xc040b340); /* 18 */
+	c = GG ( c, d, a, b, x[11], S23, 0x265e5a51); /* 19 */
+	b = GG ( b, c, d, a, x[ 0], S24, 0xe9b6c7aa); /* 20 */
+	a = GG ( a, b, c, d, x[ 5], S21, 0xd62f105d); /* 21 */
+	d = GG ( d, a, b, c, x[10], S22,  0x2441453); /* 22 */
+	c = GG ( c, d, a, b, x[15], S23, 0xd8a1e681); /* 23 */
+	b = GG ( b, c, d, a, x[ 4], S24, 0xe7d3fbc8); /* 24 */
+	a = GG ( a, b, c, d, x[ 9], S21, 0x21e1cde6); /* 25 */
+	d = GG ( d, a, b, c, x[14], S22, 0xc33707d6); /* 26 */
+	c = GG ( c, d, a, b, x[ 3], S23, 0xf4d50d87); /* 27 */
+	b = GG ( b, c, d, a, x[ 8], S24, 0x455a14ed); /* 28 */
+	a = GG ( a, b, c, d, x[13], S21, 0xa9e3e905); /* 29 */
+	d = GG ( d, a, b, c, x[ 2], S22, 0xfcefa3f8); /* 30 */
+	c = GG ( c, d, a, b, x[ 7], S23, 0x676f02d9); /* 31 */
+	b = GG ( b, c, d, a, x[12], S24, 0x8d2a4c8a); /* 32 */
+
+	/* Round 3 */
+	a = HH ( a, b, c, d, x[ 5], S31, 0xfffa3942); /* 33 */
+	d = HH ( d, a, b, c, x[ 8], S32, 0x8771f681); /* 34 */
+	c = HH ( c, d, a, b, x[11], S33, 0x6d9d6122); /* 35 */
+	b = HH ( b, c, d, a, x[14], S34, 0xfde5380c); /* 36 */
+	a = HH ( a, b, c, d, x[ 1], S31, 0xa4beea44); /* 37 */
+	d = HH ( d, a, b, c, x[ 4], S32, 0x4bdecfa9); /* 38 */
+	c = HH ( c, d, a, b, x[ 7], S33, 0xf6bb4b60); /* 39 */
+	b = HH ( b, c, d, a, x[10], S34, 0xbebfbc70); /* 40 */
+	a = HH ( a, b, c, d, x[13], S31, 0x289b7ec6); /* 41 */
+	d = HH ( d, a, b, c, x[ 0], S32, 0xeaa127fa); /* 42 */
+	c = HH ( c, d, a, b, x[ 3], S33, 0xd4ef3085); /* 43 */
+	b = HH ( b, c, d, a, x[ 6], S34,  0x4881d05); /* 44 */
+	a = HH ( a, b, c, d, x[ 9], S31, 0xd9d4d039); /* 45 */
+	d = HH ( d, a, b, c, x[12], S32, 0xe6db99e5); /* 46 */
+	c = HH ( c, d, a, b, x[15], S33, 0x1fa27cf8); /* 47 */
+	b = HH ( b, c, d, a, x[ 2], S34, 0xc4ac5665); /* 48 */
+
+	/* Round 4 */
+	a = II ( a, b, c, d, x[ 0], S41, 0xf4292244); /* 49 */
+	d = II ( d, a, b, c, x[ 7], S42, 0x432aff97); /* 50 */
+	c = II ( c, d, a, b, x[14], S43, 0xab9423a7); /* 51 */
+	b = II ( b, c, d, a, x[ 5], S44, 0xfc93a039); /* 52 */
+	a = II ( a, b, c, d, x[12], S41, 0x655b59c3); /* 53 */
+	d = II ( d, a, b, c, x[ 3], S42, 0x8f0ccc92); /* 54 */
+	c = II ( c, d, a, b, x[10], S43, 0xffeff47d); /* 55 */
+	b = II ( b, c, d, a, x[ 1], S44, 0x85845dd1); /* 56 */
+	a = II ( a, b, c, d, x[ 8], S41, 0x6fa87e4f); /* 57 */
+	d = II ( d, a, b, c, x[15], S42, 0xfe2ce6e0); /* 58 */
+	c = II ( c, d, a, b, x[ 6], S43, 0xa3014314); /* 59 */
+	b = II ( b, c, d, a, x[13], S44, 0x4e0811a1); /* 60 */
+	a = II ( a, b, c, d, x[ 4], S41, 0xf7537e82); /* 61 */
+	d = II ( d, a, b, c, x[11], S42, 0xbd3af235); /* 62 */
+	c = II ( c, d, a, b, x[ 2], S43, 0x2ad7d2bb); /* 63 */
+	b = II ( b, c, d, a, x[ 9], S44, 0xeb86d391); /* 64 */
+
+	state[0] +=a;
+	state[1] +=b;
+	state[2] +=c;
+	state[3] +=d;
+
+    }
+
+    function init() {
+	count[0]=count[1] = 0;
+	state[0] = 0x67452301;
+	state[1] = 0xefcdab89;
+	state[2] = 0x98badcfe;
+	state[3] = 0x10325476;
+	for (i = 0; i < digestBits.length; i++)
+	    digestBits[i] = 0;
+    }
+
+    function update(b) { 
+	var index,i;
+	
+	index = and(shr(count[0],3) , 0x3f);
+	if (count[0]<0xffffffff-7) 
+	  count[0] += 8;
+        else {
+	  count[1]++;
+	  count[0]-=0xffffffff+1;
+          count[0]+=8;
+        }
+	buffer[index] = and(b,0xff);
+	if (index  >= 63) {
+	    transform(buffer, 0);
+	}
+    }
+
+    function finish() {
+	var bits = new array(8);
+	var	padding; 
+	var	i=0, index=0, padLen=0;
+
+	for (i = 0; i < 4; i++) {
+	    bits[i] = and(shr(count[0],(i * 8)), 0xff);
+	}
+        for (i = 0; i < 4; i++) {
+	    bits[i+4]=and(shr(count[1],(i * 8)), 0xff);
+	}
+	index = and(shr(count[0], 3) ,0x3f);
+	padLen = (index < 56) ? (56 - index) : (120 - index);
+	padding = new array(64); 
+	padding[0] = 0x80;
+        for (i=0;i<padLen;i++)
+	  update(padding[i]);
+        for (i=0;i<8;i++) 
+	  update(bits[i]);
+
+	for (i = 0; i < 4; i++) {
+	    for (j = 0; j < 4; j++) {
+		digestBits[i*4+j] = and(shr(state[i], (j * 8)) , 0xff);
+	    }
+	} 
+    }
+
+/* End of the MD5 algorithm */
+
+function hexa(n) {
+ var hexa_h = "0123456789abcdef";
+ var hexa_c=""; 
+ var hexa_m=n;
+ for (hexa_i=0;hexa_i<8;hexa_i++) {
+   hexa_c=hexa_h.charAt(Math.abs(hexa_m)%16)+hexa_c;
+   hexa_m=Math.floor(hexa_m/16);
+ }
+ return hexa_c;
+}
+
+
+var ascii="01234567890123456789012345678901" +
+          " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
+          "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+
+function MD5(entree) 
+{
+ var l,s,k,ka,kb,kc,kd;
+
+ init();
+ for (k=0;k<entree.length;k++) {
+   l=entree.charAt(k);
+   update(ascii.lastIndexOf(l));
+ }
+ finish();
+ ka=kb=kc=kd=0;
+ for (i=0;i<4;i++) ka+=shl(digestBits[15-i], (i*8));
+ for (i=4;i<8;i++) kb+=shl(digestBits[15-i], ((i-4)*8));
+ for (i=8;i<12;i++) kc+=shl(digestBits[15-i], ((i-8)*8));
+ for (i=12;i<16;i++) kd+=shl(digestBits[15-i], ((i-12)*8));
+ s=hexa(kd)+hexa(kc)+hexa(kb)+hexa(ka);
+ return s; 
+}
+
+/* This implement the MD5 test suite */
+var testOk=false;
+function teste() {
+ if (testOk) return;
+ document.test.o1.value=MD5(document.test.i1.value);
+ document.test.o2.value=MD5(document.test.i2.value);
+ document.test.o3.value=MD5(document.test.i3.value);
+ document.test.o4.value=MD5(document.test.i4.value);
+ document.test.o5.value=MD5(document.test.i5.value);
+ document.test.o6.value=MD5(document.test.i6.value);
+ document.test.o7.value=MD5(document.test.i7.value);
+ testOk=true;
+}
+_$http://www.livejournal.com/js/md5.js”OGIF89a  ƒ      k î ﬁcÔˇ∆˜R!!!)))11111≠99ŒBBBRRåZZ•{{{ÑÑÑ•úúŒ∆Ω÷Œ∆ÁﬁŒ˜ÔﬁˇÑ               !ˇNETSCAPE2.0   !˘
+  ,       l‡&édiäL ú%c]Y∂≤SYq<ü6ûÔ¶^NF˛ä∑!∞ïå]ñ%,sÅ–Pf-
+ 8- √Ä<0Ä≈h!p‹ÎÅf?8»7tn	 àeÄ
+ ïñåW&!  ;_,http://stat.livejournal.com/img/userinfo.gifYimage/gif” !OXGIF89a  Ê  ÃÃÃÑÑÑˇˇˇ≥≥≥≤≤≤πππ' ØØØ333ôôôVè  ±±±vzpÒ˜Ë. (CQÜ 3f 'B fffNÅ XYW‰Ô‘àààxxx$ ∆‹¶âäÜ µµµwj2T BD@ Sä 33 fô3Ft ∞∞∞ÂÔ÷ŸÍ¿ááá% ñº^÷‡∆0P * Hw - yyyUVTâââΩΩΩÛ¯ÏºººíºTn|Wfú∏∏∏2 MNL∑‘å™™™CL6‘Ê∏L~ œÂ¨~{ôÃfÄék"fô                                                                                                                                                                !˘     ,       µÄÇÉÑÖÜ äãåççàéëëêíïäîñ	èâï*:åòçE-;A¶ûå	47(G.∞ãò8	 ,C2úæ≤'HD)B?9%J0À±ã&
+
+#⁄Õå5$1+Ëó≤ã@/ ı ú‚ñ ƒÇ=:⁄&â¡#D `¿Píç>íP‡Q±“Ä:Y≤4p§© (S™\…2@  ;_,http://stat.livejournal.com/img/btn_prev.gif”#$O™GIF89a  ’  ÃÃÃˇˇˇÑÑÑ   FFFªªªDDD}}}∫∫∫∑∑∑fff    ¨  ô  BBBf  |||µµµ  ˇÊÊˇÃÃN      IIIÔ∑∑3  «!!⁄PPÏùù∑»EEO  ©©©á  Ãff©  ôôô∏ﬁmm¿IIµ--ä  µ·ûûÔwwÔuu°—CCÆÆ  ﬂwwØ--  R  L  Ã33                  !˘     ,       «¿ÄpH, `0P:üP%R…åZùH¶∂yÖf∑‹.6π'"äÄ8("	)π 6(Øå(sß÷SO	v1B-) ÅN$, î0#êJ
+.('2*5´
+† 
+93´∑´Ødë∑%∏¨üΩJÉ¡	∞ 7 ∑Õè∆N‘+Ã€rW‘8!Ê‹ËÈ6ÔO“Ok˜ﬁQ$òêEÄ¡É*4 ;_*http://stat.livejournal.com/img/memadd.gif”&'O\GIF89a  Ê  ÃÃÃÑÑÑˇˇˇ≥≥≥≤≤≤πππ# ±±±" R[EôôôØØØi£ôÃfÇπ.ff3å∏KêºP fô êøJïƒOáááàààM[8BC@Q[Bfffµµµ≠Ã~yyyU[LëæN™™™ 3f ~≠8n†$ºººÃÃôQZC2S KT<âââøﬁêMÄ xxxu™&àΩ8Ué í¿MWl833 π€ÑåëÑ∏∏∏ôôfQYD∞∞∞% $ ΩΩΩÇ∂6AJ4Èıÿ4V âåÖNOLMQGOÑ 0 333ï∆J$.JY3agV  á∫:)E S\D                                                                                                                                       !˘     ,       πÄÇÉÑÖÜ äãåççàéëëêíïäîã
+ñóâãD7Nñò B'4í®(6,G/
+é®K9A
+&ãøR310$%H#;Õüä	 P“-).€åﬁ@2#IJ+åø:Q=<!|qK•ÇA"2(H'ê—Å&CûÒp†*òQ„‘@ ƒÍÑ™”£è&õX…≤•Àó ;_,http://stat.livejournal.com/img/btn_next.gif”)*OºGIF89aD Ê å≥ŸŸÂÚ≥ÃÊõ ·ıÕû4f`ì∆YåøL≤@s¶6iúº“ÈSÜπcñ…\è¬‚ÏıpüœFy¨É¨÷ı˘¸†øﬂ9lüy¶“=p£≈ŸÏÏÚ˘ñπ‹9lMÄœﬂÔPÉ∂'MÄQÄ≤Cv©VâºI|Ø-`ìÃÃÃ
+<n©∆‚7i1cñ&Yå@sO~Fy SÜ+Yåaë≥&Py<fôDv~Æ As:lø¬∆ôìâDuú∏ßê%PÉ#MÄkõª`YyGy=j0Fp\m{ë¡ŸdÄõ:lîMÄ≥ K{Fs¶à∑“-]èAnü=lü≥∆ô¶≥œÜèÂÏÚ≥πø=Zt:m†VÜπ[åøÈÎÏFm÷∫ó{ÄÇÊ√õ®ùç=pÔìñ,TÜ7`ì.Pq¸¸¸âúØ)\èç©∆@Mspâ£få≥ØyâèlÉkvMlå¬∆…Úı˘üsÜN§'SÜﬂåìøÄå)VâﬂÊÏÔÚı“““ @lp`|ııı@cÜ3fô 3fˇˇˇfôÃˇˇˇ!˘   ,    D  ˇÄ~ÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕ…$||	Œ◊ÿ†“”›|{Ÿ·‚ï$ﬁÊ|„ÍÎâ-›>hOxA›é!	
+{ˇ{DÄèù¡]Ó¶yßÃ9jä0∞¢≈	‹hKÖ¬.i∫ibÖìi‡à`±BÇF$Hp1`Aé8[!òvßãèi+öÙj≈I∑tÉ–ƒËA#"*TT "ßUU‹‰¸‰#Jû°}Íàâ1Ìû•ˇ.0hàÅTÄUˇØ u@°õiknî∞Üës(Óâ‡`RñˇF¥ Ä„ï(8v°êÜ…$íåy2‰E0kVD·ÿ@ãzÚËB≠1c8QQÏ a^ 3E∑_Îßœ „âvÚÒÅÇ´ﬁ%Ãt3ëÜâi"‹$‘@Çô	F pJ»¿âÄ∞àJç_ €'7!Ùk@ü>{ﬁÙê¶ı◊«˙…‡ ÛÅ%†Çˆ1¡oá48TÑ–∑»˛)baf8úqC)¢\sLD›dÒaƒÿ√QÖ‡¡5§ÄvÑ ∂à®7‘âÿP¿ëK2ˇXüíX¬_ÑD&ÚaàÜaîà\…‡ÇFbÖ˝Èß°"ZJË!ò"G"râl–+∂»¬1ÊôCY ò	 –‘˙D÷
+ 9é{T‰zäPq‰ë^“îÑX@_jÖLi`ï]≤πôò`qÊòÇxyjÅêû⁄Önñ®àÅX)Íp∏í∏H›8]ã.ò@Cûy≤ÄùRUÄ¿bà†ıOIƒ¨n≠9iíÖúêﬂ ‹Íáß} Æ ∞⁄Í "OÇ’Å ¯Å5A®Á¶Í≠˙A‡ôÖ|x‡qƒôK_π˘Œ;I9|Ãp√_|X√¡ùƒêƒu‘D@#"¯Û„ˇ Ç!Uàñ†ÇÑël'à¶`ŸÁGªjJâØ#™˚—g2!-∑LÛôx´oµ∆
+Á!⁄ˆ◊‰©X^Úzú§Ç lPD√Ã8ç∆é8‡èl˘!Fáp|I∫}4	6Ü*˜˚àÕ1É’≥ΩK3—_∆Î≤¨>MØÅúÆlÈß˛¢ö…rÚ9à|¿ÿû|ò…÷{h|u◊’"ÇÑîWq \B@ﬂ	áÄ	⁄Çh…Â ¢ì)7Ëw˜´π‹q”ó¡àtín `˜m∑%ºNCB!{µ±EBì£Ç,˘êã|0)áh∞≠Ûjw  ‘'ÔP∑É˝v⁄±∑Ó7Íı˙—≠ˇŸ7’vöÈù©∫Zﬁû:ˆùºÇ»„IÏ√(E¬x÷¸s|+ÑÚéƒ<C¨n(π·–P^'ΩπØ|3ƒ¶:•æ˜}o^W¢¿˘F¡ ¥2Ù¬Ö2Œô.Çú8öj‰4®IëáS˙óíçEÓ,@¡*»∞j{t #P7A¢nÚbù˜4≥÷†]Ô
+°¯*O—à¨‡¶Aº¡jàSú#h‚î¯/K74Dwƒ}…‡QDÔŸ≠f$’–:h°˛¨¨¿àƒNL°äDÔÜ’0‡q ,)„mà<E¨Òz ⁄Vî≈$¢0ˇC•≤åŒÿ>1	gnÏI ˛ °@‡C÷Û§ﬂ6·Ä
+xÑÛ+D˝Üøo<¢Na‹ˇHàK"‚|T‰`Y	 %¬.\À<·ùi¡˘ã=Sö ´0˘Ã€°Œ∏ÄFT»¬ß5ÏÖTSM¯êa&oyâ∏‘êB	G)bÚv¨"€ ®»L<RÛC`#Ê˚ÿC2	ëèû˙ÿL5GNàG[‰CA8√+å"CD?1Ç¡∏”íDƒ¯˙…hBuZ"§ X•LYÜ®î•¢œ⁄P:!Bûb“gC5q Ù‚ê”H§ z˜F“ GKX#ˆÇA–ƒMÑ1QP{zÓ§Ûˇ◊k™zEYö–Çﬁî)}ˆËDAåÙ†É8_ÑﬁUHLÑÛ&V^.	Ò!‡ ã0c"˝ëQ?x§Tÿ.§à´>Çü∑ÀîjÉ”˙Pï>€C¨4˝Ä”	ƒr†ÇÄÄZôYU1Õ‘•õ@ ’.êÄÑaÖÑ‡ÄtÄÉ-ËÄ ¿¬4ñ∂à`Mh‘£"ƒPALı¸Ï√W7ŸÅv`P´˚“î⁄π.B@rCXØ≥ÃìDZ%3œäô7ŒÕ¶ï0ÄOa|0 pU-l◊[Ï0bGÉ0œvã75Ü~<b"‚òF“E®oj‚}HU…S	bÉ'$íb—:≈»Åç¨;cˇ#$6(@c	@‰ 6êˆÆ∏\ˆpMãZºµo`Ù‹¬äI†i
+Y	\»*¬õÌœ)Ω'àUÓÿBUÏ!~àb ∫ ûã0Ä5Å€‚ñπd ^ÎaHaã® ¥ò¶[˙ˆß∑~¯Ìˇ∫∫Ãy˘@ó•qÑfõKH¿<ˆ√Ç˚–U "h›{&CªD$+Ç¬\™LªB\° ∞Õ¬4&V(‡&˝4!(0ÆJ¿nì´o∆’I Xz\◊ƒe”ÅPSµ1èŸ1" @ÅL¶¥πq•˜3Æ·é‘ôöu!,PÈôJ†“÷„ıß≈Eâ4ï…
+8ƒyuˇ« ö wÖ·!paBT¿…s…v'êH4N£› Çû≠Éi,Ÿ!ØFúNmª˚ÁˆCˇ˙*à[Új¿BïµÄ◊F?⁄⁄ÿ~∑¿)aÄ-¢Í6Ñ\`é’zx∂Ü∞Z\1b®¸‚ì¿ƒskqEÄÅõÜ∂ m ∏ó;âB˘D1ŒÚF‹Ê9q;∞o\¡‰e·ŒÊKàé2∫Â@G’h"	0¸!ÉÁÀ˝ê[û˝Èç %>Ú†2ΩD8+ê5®{ﬁ>6¡i~îT@“,ë˘◊◊~ñoc¬Ë|Cd^q∂€ùfl∑/–ıA‰vÈw_{ﬁGa5ˇæ>f˚'
+ﬂ˜√~	ÁÑ’„xƒˇ£Òöòº⁄+ÔıHöÁ¸·q˘Kåÿ¢ºyˆ0qLt4òOΩ∂ˇ@˚⁄€ﬁˆP¯«⁄p˚ﬁ˚æ˜P8√»˚‚ˇ¯»OæÚóœ¸Ê;ˇ˘–èæÙ£á(“?B
+R0ÉÈ{ˇ˚‡ø¯«O˛Ú€)∞>ˆù_%Ï·60ø¸ÁOˇ˙€ˇ˛∂Á@∏œ¸º`)p¯7ÄXÄxÄµ˜È˜/Î˜{5∞$<ÄxÅòÅ»|\0ÅÒ<¿5P3¿;ˇê;ÿÇ.¯Ç-»ò# 1É8òÉ:8Ä3pÇë/∞3`Å;XÑFxÑ ;_/http://stat.livejournal.com/xc/logocombined.gif‘,-./0_WebResourceTextEncodingNameUUTF-8O%’<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><HEAD>  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>tobybot11: All I can say is WOW!</TITLE>
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/basic.css">
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/menu-normal.css">
+
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/normal-fonts.css">
+
+ 
+  
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/extended.css"> 
+  <LINK rel="home" title="Home" href="/">
+  <LINK rel="contents" title="Site Map" href="/site/">
+  <LINK rel="help" title="Technical Support" href="/support/">
+  <SCRIPT type="text/javascript" src="http://stat.livejournal.com/xc/layout.js"></SCRIPT>  
+<SCRIPT type="text/javascript" src="http://www.livejournal.com/js/md5.js"></SCRIPT><SCRIPT language="JavaScript" type="text/javascript">
+    <!--
+function sendForm (formid, checkuser)
+{
+    if (formid == null) formid = 'login';
+    // 'checkuser' is the element id name of the username textfield.
+    // only use it if you care to verify a username exists before hashing.
+
+    if (! document.getElementById) return true;
+    var loginform = document.getElementById(formid);
+    if (! loginform) return true;
+    
+    // Avoid accessing the password field if there is no username.
+    // This works around Opera < 7 complaints when commenting.
+    if (checkuser) {
+        var username = null;
+        for (var i = 0; username == null && i < loginform.elements.length; i++) {
+            if (loginform.elements[i].id == checkuser) username = loginform.elements[i];
+        }
+        if (username != null && username.value == "") return true;
+    }
+
+    if (! loginform.password || ! loginform.login_chal || ! loginform.login_response) return true;
+    var pass = loginform.password.value;
+    var chal = loginform.login_chal.value;
+    var res = MD5(chal + MD5(pass));
+    loginform.login_response.value = res;
+    loginform.password.value = "";  // dont send clear-text password!
+    return true;
+}
+// -->
+</SCRIPT>
+
+  <LINK href="/go.bml?journal=tobybot11&itemid=1721&dir=prev" rel="Previous"><LINK href="/go.bml?journal=tobybot11&itemid=1721&dir=next" rel="Next">
+
+</HEAD><BODY class="home">
+  
+
+
+  <DIV id="Content" onclick="unshow();">    
+    <H1></H1>
+
+        <P><TABLE><TBODY><TR valign="middle"><TD>tobybot11 (<SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=tobybot11"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/tobybot11/"><B>tobybot11</B></A></SPAN>) wrote,<BR><FONT size="-1">@ <A href="http://www.livejournal.com/users/tobybot11/2005/">2005</A>-<A href="http://www.livejournal.com/users/tobybot11/2005/06/">06</A>-<A href="http://www.livejournal.com/users/tobybot11/2005/06/08/">08</A> 23:42:00</FONT></TD></TR></TBODY></TABLE></P><DIV class="standout"><TABLE class="container"><TBODY><TR><TD>
+<TABLE><TBODY><TR><TD valign="middle"><A href="/go.bml?journal=tobybot11&itemid=1721&dir=prev"><IMG src="http://stat.livejournal.com/img/btn_prev.gif" width="22" height="20" alt="Previous Entry" title="Previous Entry" border="0" align="absmiddle"></A>¬†¬†<A href="/tools/memadd.bml?journal=tobybot11&itemid=1721"><IMG src="http://stat.livejournal.com/img/memadd.gif" width="22" height="20" alt="Add to memories!" title="Add to memories!" border="0" align="absmiddle"></A>¬†¬†<A href="/go.bml?journal=tobybot11&itemid=1721&dir=next"><IMG src="http://stat.livejournal.com/img/btn_next.gif" width="22" height="20" alt="Next Entry" title="Next Entry" border="0" align="absmiddle"></A></TD></TR></TBODY></TABLE>
+</TD></TR></TBODY></TABLE></DIV>
+<DIV style="margin-left: 30px"><FONT face="Arial,Helvetica" size="+1"><I><B>All I can say is WOW!</B></I></FONT><BR>
+<DIV><A href="http://tiddlywiki.com/">TiddlyWiki</A></DIV><BR><DIV>Javascript + CSS driven design + Wiki + Blogs = WOW!</DIV><BR><DIV>Since inception 10 months ago, notice how many derivatives of this there are already. Reading through these sites gives you a great number of hints about Web 2.0; embedding base64 images into HTML, sortable tables with javascript, etc. Not all is goodness though; This is a great example of DADD or Developers Attention Deficit Disorder. Would everyone please just work together to create one uber TiddlyWiki!</DIV></DIV><BR clear="all"><HR width="100%" size="2" align="center"><DIV id="Comments"><A name="comments"></A><FORM style="display: inline" method="post" action="/talkmulti.bml" name="multiform" id="multiform"><P class="lesstop" align="center"><B>(<A href="http://www.livejournal.com/users/tobybot11/1721.html?mode=reply">Post a new comment</A>)</B></P><INPUT type="hidden" name="ditemid" value="1721"><INPUT type="hidden" name="journal" value="tobybot11"></FORM><P><A name="comments"></A></P></DIV>
+
+    
+  </DIV>
+  <DIV id="Logo" onclick="unshow();"><A href="/"><IMG src="http://stat.livejournal.com/xc/logocombined.gif" alt="LiveJournal" border="0"></A></DIV>
+  <DIV id="NotLoggedInDiv" style="position: absolute; left: auto; right: 50px; top: 15px; width: auto; height: 20px; text-align: right; color: #FFF; background-color: transparent; font: 12px Arial, Helvetica, sans-serif;"><I>Not <A href="/login.bml" onclick="return xcShowLoginDiv();">logged in</A>.<BR>(<A href="/create.bml">Create</A> an account?)</I></DIV>  <DIV id="LoginBox" class="nopic" style="display:none"><FORM id="login" action="/login.bml" method="post">  <INPUT type="hidden" name="mode" value="login">
+  <INPUT type="hidden" name="chal" id="login_chal" value="c0:1118296800:700:300:DOJqgqAEmWz4twz4lfyI:bba93983ad525c4394cb6af27bd00586">
+  <INPUT type="hidden" name="response" id="login_response" value="">
+  <LABEL for="xc_user">Username:</LABEL> <INPUT type="text" name="user" size="15" maxlength="15" tabindex="1" id="xc_user" value="" style="background: url(http://stat.livejournal.com/img/userinfo.gif) no-repeat; background-color: #fff; background-position: 0px 1px; padding-left: 18px; color: #00C; font-weight: bold;">
+  <LABEL for="xc_password">Password:</LABEL> <INPUT type="password" name="password" size="10" tabindex="2" id="xc_password">
+<INPUT type="submit" onclick="return sendForm()" value="Login?" tabindex="3"></FORM></DIV>
+  <FORM id="Search" action="/multisearch.bml" method="post">    <LABEL for="SearchTerm">Search:</LABEL>    <INPUT id="SearchTerm" type="text" name="q" size="15" value="">
+    <LABEL for="SearchType">Category:</LABEL> <SELECT id="SearchType" name="type"><OPTION value="user" selected="selected">Username</OPTION><OPTION value="email">E-mail</OPTION><OPTION value="region">Region</OPTION><OPTION value="int">Interest</OPTION><OPTION value="aolim">AOL IM</OPTION><OPTION value="icq">ICQ Number</OPTION><OPTION value="yahoo">Yahoo! ID</OPTION><OPTION value="msn">MSN Username</OPTION><OPTION value="jabber">Jabber</OPTION></SELECT>
+    <INPUT type="submit" value="Search">
+  </FORM>   <H2 id="NavMenuListTitle">Navigate:</H2>
+
+  <UL id="NavMenuList">    <LI><A href="/doc/tour/" onmouseover="javascript:show(0)" onfocus="javascript:show(0)" id="Menu0" style="background-color: rgb(0, 51, 102); color: rgb(255, 255, 255); ">Welcome</A>
+      <UL class="NavSubMenuList" style="visibility: hidden; ">        <LI><A href="/login.bml">Login</A></LI>
+        <LI><A href="/create.bml">Create an Account</A></LI>
+        <LI><A href="/update.bml">Update Your Journal</A></LI>
+        <LI><A href="/manage/siteopts.bml" id="Setlang">English ‚Ä¢ Espa√±ol ‚Ä¢ Deutsch ‚Ä¢ –†—É—Å—Å–∫–∏–π ‚Ä¢ ‚Üí</A></LI>
+    </UL></LI>
+    <LI><A href="/site/search.bml" onmouseover="javascript:show(1)" onfocus="javascript:show(1)" id="Menu1">Search</A>
+      <UL class="NavSubMenuList">        <LI><A href="/random.bml">Random</A></LI>
+        <LI><A href="/directory.bml">Region</A></LI>
+        <LI><A href="/interests.bml">Interests</A></LI>
+        <LI><A href="/directorysearch.bml">Advanced</A></LI>
+    </UL></LI>
+    <LI><A href="/support/" onmouseover="javascript:show(2)" onfocus="javascript:show(2)" id="Menu2">Help</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/">Ask a Question</A></LI>
+        <LI><A href="/lostinfo.bml">Lost Password</A></LI>
+        <LI><A href="/support/faq.bml"><ABBR title="Frequently Asked Questions">FAQ</ABBR></A></LI>
+        <LI><A href="/site/">Site Map</A></LI>
+        <LI><A href="/manage/siteopts.bml">Browse Options</A></LI>
+        <LI><A href="/press/staff.bml">Contact¬†Info</A></LI>
+    </UL></LI>
+    <LI><A href="/site/about.bml" onmouseover="javascript:show(3)" onfocus="javascript:show(3)" id="Menu3">About</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/faqbrowse.bml?faqcat=about">General Info</A></LI>
+        <LI><A href="/press/">Press</A></LI>
+        <LI><A href="/download/">Download</A></LI>
+        <LI><A href="/news.bml">Site News</A></LI>
+        <LI><A href="/paidaccounts/">Paid Accounts</A></LI>
+    </UL></LI>
+  </UL>
+
+  <UL id="FooterNav">    <LI><A id="menu-tos" href="/legal/tos.bml">Terms of Service</A></LI>
+    <LI><A id="menu-privacy" href="/legal/privacy.bml">Privacy Policy</A></LI>
+    <LI><A id="menu-legal" href="/legal/">Legal Information</A></LI>
+    <LI><A id="menu-sitemap" href="/site/">Site Map</A></LI>
+    <LI><A id="menu-siteopts" href="/manage/siteopts.bml">Browse Options</A></LI>
+  </UL>
+
+
+
+
+</BODY></HTML>_4http://www.livejournal.com/users/tobybot11/1721.htmlYtext/html    1 = D V e {+V_f+\c˙,3..I.P5Ò6676>]∂]›]‰^Í__#_*aÜaµaºcjcócûe˛f-f4qÙr&r/rMrSò,òc             1              òm

@@ -1,0 +1,457 @@
+bplist00Ó_WebSubresources_WebMainResource_WebSubframeArchives¡Ô	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÔ	UUTF-8O(•<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><TITLE>engadgeted.net Â» Productivity redux</TITLE>
+        
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META name="generator" content="WordPress 1.5.1">
+
+        <STYLE type="text/css" media="screen">
+                @import url( http://www.engadgeted.net/wp-content/themes/snow/style.css );
+        </STYLE>
+
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.engadgeted.net/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.engadgeted.net/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.engadgeted.net/feed/atom/">
+        
+        <LINK rel="pingback" href="http://www.engadgeted.net/xmlrpc.php">
+        <LINK rel="archives" title="May 2005" href="http://www.engadgeted.net/archives/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.engadgeted.net/archives/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.engadgeted.net/archives/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.engadgeted.net/archives/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.engadgeted.net/archives/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.engadgeted.net/archives/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.engadgeted.net/archives/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://www.engadgeted.net/archives/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://www.engadgeted.net/archives/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://www.engadgeted.net/archives/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://www.engadgeted.net/archives/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://www.engadgeted.net/archives/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://www.engadgeted.net/archives/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://www.engadgeted.net/archives/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://www.engadgeted.net/archives/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://www.engadgeted.net/archives/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://www.engadgeted.net/archives/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://www.engadgeted.net/archives/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://www.engadgeted.net/archives/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://www.engadgeted.net/archives/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://www.engadgeted.net/archives/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://www.engadgeted.net/archives/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://www.engadgeted.net/archives/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://www.engadgeted.net/archives/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://www.engadgeted.net/archives/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://www.engadgeted.net/archives/2003/04/">
+        <LINK rel="archives" title="March 2003" href="http://www.engadgeted.net/archives/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://www.engadgeted.net/archives/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://www.engadgeted.net/archives/2003/01/">
+        <LINK rel="archives" title="December 2002" href="http://www.engadgeted.net/archives/2002/12/">
+        </HEAD><BODY><DIV id="wrap">
+<DIV id="header"><FORM id="searchform" method="get" action="/index.php">
+<DIV>        <INPUT type="text" name="s" id="s" size="15" value="find..." onfocus="if (this.value == 'find...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'find...';}">
+        <INPUT type="submit" name="submit" id="submit" value="find...">
+</DIV>
+</FORM>
+<H1><A href="http://www.engadgeted.net">engadgeted.net</A></H1>
+<UL>
+
+
+<LI class="page_item"><A href="http://www.engadgeted.net/archives/" title="Archives">Archives</A></LI>
+<LI class="page_item"><A href="http://www.engadgeted.net/feeds/" title="Feeds">Feeds</A></LI>
+<LI class="page_item"><A href="http://www.engadgeted.net/projects/" title="Projects">Projects</A></LI>
+ 
+</UL>
+</DIV>
+<DIV id="main"><DIV id="content">
+
+
+<H2 id="post-1148"><A href="http://www.engadgeted.net/archives/2005/05/18/productivity-redux/" rel="bookmark" title="Permanent Link: Productivity redux">Productivity redux</A></H2>
+<P class="meta">Posted on Wednesday, May. 18th, 2005 at 20:46  </P>
+        <P>Having written rather extensively about backpack before (<A href="http://www.engadgeted.net/archives/2005/05/05/in-praise-of-backpack/">the good</A>, <A href="http://www.engadgeted.net/archives/2005/05/04/a-few-suggestions-on-how-to-improve-backpack/">the bad</A>), itâ€™s appropriate to mention that 37signals kept their promise to <A href="http://backpackit.com/weblog/archives/announcements/backpack_becomes_a_web_service.php">introduce an api for backpack</A>, and an <A href="http://backpackit.com/api/">extensive and well documented one</A> at that. As i expect my copy of tiger to arrive by the end of the week, could someone put together a dashboard widget for backpack pretty soon pretty please?<BR>
+While iâ€™m on the topic of productivity tools, <A href="http://www.tiddlywiki.com/">tiddlywiki</A> has regained some momentum lately, mostly due to <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">gtdtiddlywiki</A>, an adaptation of the original tailored to getting things done. <A href="http://www.43folders.com/2005/05/how_are_you_usi.html">43folders asked its readers how theyâ€™re putting it to good use</A>, worth a glance-over. Also noteworthy: <A href="http://phiffer.org/tiddly/">tiddlywikiremote</A>, a neat tiddlywiki implementation with a serverside component and <A href="http://www.dcs.gla.ac.uk/~jp/tiddlywiki/">Jonathan Paisleyâ€™s hacks</A> for safari-saving support and putting gtdtiddlywiki onto your dashboard.
+</P>
+
+
+<H2 id="postcomment">Leave a response</H2>
+<P class="meta">Moderation is active for comments and pingbacks. Please do not submit your comment or pingback twice - it will appear shortly.</P>
+
+<P><A href="http://www.engadgeted.net/archives/2005/05/18/productivity-redux/feed/">RSS feed for responses to this post.</A></P>
+
+        <P><A href="http://www.engadgeted.net/archives/2005/05/18/productivity-redux/trackback/" rel="trackback">TrackBack URI for this post</A></P>
+
+<FORM action="http://www.engadgeted.net/wp-comments-post.php" method="post" id="commentform">        <P>          <INPUT type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1">
+           <LABEL for="author">Name</LABEL> (required)    <INPUT type="hidden" name="comment_post_ID" value="1148">
+        <INPUT type="hidden" name="redirect_to" value="/archives/2005/05/18/productivity-redux/">
+        </P>
+
+        <P>          <INPUT type="text" name="email" id="email" value="" size="28" tabindex="2">
+           <LABEL for="email">Mail</LABEL> (required)    </P>
+
+        <P>          <INPUT type="text" name="url" id="url" value="" size="28" tabindex="3">
+           <LABEL for="url">Website</LABEL>
+        </P>
+
+        <P>          <TEXTAREA name="comment" id="comment" cols="60" rows="8" tabindex="4"></TEXTAREA>        </P>
+        
+        <P>          <INPUT name="submit" id="submit" type="submit" tabindex="5" value="Respond">
+        </P>
+        </FORM>
+
+
+
+<P class="postnavigation"></P>
+
+</DIV>
+
+<DIV id="sidebar"><H2>About</H2>
+        <P>My name is christoph wimmer and engadgeted.net is my personal website. I'm a 23 year old computer science student living in vienna, austria. You can contact me at <SCRIPT type="text/javascript">
+	 <!--
+	 document.write('<a hre'+'f="m'+'ai'+'lto:'+'%63%68%72%69%73%74%6f%70%68%40%65%6e%67%61%64%67%65%74%65%64%2e%6e%65%74">&#99;&#104;&#114;&#105;&#115;&#116;&#111;&#112;&#104;&#64;&#101;&#110;&#103;&#97;&#100;&#103;&#101;&#116;&#101;&#100;&#46;&#110;&#101;&#116;</a>');
+	 //-->
+	 </SCRIPT><A href="mailto:%63%68%72%69%73%74%6f%70%68%40%65%6e%67%61%64%67%65%74%65%64%2e%6e%65%74">christoph@engadgeted.net</A>.</P>
+
+<DIV class="ads"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-4272096634500235";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel ="";
+google_color_border = "EEEEEE";
+google_color_bg = "FFFFFF";
+google_color_link = "DD0011";
+google_color_url = "660000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="160" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=160x90_0ads_al_s&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&color_bg=FFFFFF&color_text=000000&color_link=DD0011&color_url=660000&color_border=EEEEEE&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+
+</DIV>
+
+</DIV>
+<DIV id="footer"><P>Powered by <A href="http://wordpress.org/">WordPress</A>, <A href="http://flickr.com/">flickr</A>, <A href="http://del.icio.us/">del.icio.us</A> and <A href="http://www.bigbold.com/rssdigest/index.html">RSS Digest</A>. Hosted by <A href="http://textdrive.com/">TextDrive</A>. Subscribe to the <A href="http://www.engadgeted.net/feed/">RSS feed</A> of this weblog or find out more about other <A href="http://www.engadgeted.net/feeds/">available feeds</A>.</P>
+</DIV>
+</DIV>
+
+</BODY></HTML>_Ahttp://www.engadgeted.net/archives/2005/05/18/productivity-redux/Ytext/html¡ÑÕ	_WebResourceFrameNameO<HTML><HEAD><STYLE><!--
+#abg{font-family:arial,sans-serif;font-size:12px;color:#000000;padding:0px 1px;white-space:nowrap;font-weight:bold;}.sep{height:2px;width:100%;}.bb{overflow:hidden;width:160px;}.al{font-family:arial,sans-serif;font-size:11px;width:160px;overflow:hidden;line-height:13px;}.al .alt, .al a{color:#dd0011;font-weight:normal;text-decoration:underline;white-space:nowrap;}//--></STYLE><SCRIPT><!--
+c=0;aa=new Object();na=new Array();qs=location.search.substring(1);pa=qs.split('&');for(i=0;i<pa.length;++i){pn=pa[i].indexOf('=');if(pn==-1)continue;an=pa[i].substring(0,pn);v=pa[i].substring(pn+1);aa[an]=v;na[na.length]=an;}if(!aa['kw_type'])na[na.length]='kw_type';if(!aa['prev_fmts'])na[na.length]='prev_fmts';aa['prev_fmts']=aa['format'];aa['format']='fp_al_lp';aa['random']=(new Date()).getTime();aa['kw_type']='broad';aa['color_bg']=aa['color_link']=aa['color_url']=aa['color_text']=aa['color_border']=aa['alternate_ad_url']='';function gurl(rl,kw){if(!aa['kw'])na[na.length]='kw';if(!aa['rt'])na[na.length]='rt';if(!aa['hl']){na[na.length]='hl';aa['hl']='en';}aa['kw']=kw;aa['rt']=rl;qs='?';for(i=0;i<na.length;++i)if(aa[na[i]]!='')qs+=na[i]+'='+aa[na[i]]+'&';qs=qs.slice(0,-1);return location.pathname+qs;}function ss(wi){window.status=sl[wi];return true;}function cs(){window.status='';}var sl=new Array();//--></SCRIPT></HEAD><BODY bgcolor="#eeeeee" text="#000000" marginwidth="0" marginheight="0"><TABLE bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><TBODY><TR><TD height="15" bgcolor="#eeeeee" valign="middle"><DIV class="bb"><SCRIPT><!--
+i=0;adu='';adt=new Array();adt[i++]="Mozambique+Map";adt[i++]="Tokyo+Map";adt[i++]="Denmark+Map";adt[i++]="Map+Software";adt[i++]="K2+Map";document.write('<a href="http://services.google.com/feedback/abg?url=http://www.engadgeted.net/archives/2005/05/18/productivity-redux/&hl=en&client=ca-pub-4272096634500235&done=1');for(i=0;i<adt.length;++i)document.write('&adU='+(adu+='+')+'&adT='+adt[i]);document.write('" target=_blank id=abg>Ads by Google</a>');//--></SCRIPT><A href="http://services.google.com/feedback/abg?url=http://www.engadgeted.net/archives/2005/05/18/productivity-redux/&hl=en&client=ca-pub-4272096634500235&done=1&adU=+&adT=Mozambique+Map&adU=++&adT=Tokyo+Map&adU=+++&adT=Denmark+Map&adU=++++&adT=Map+Software&adU=+++++&adT=K2+Map" target="_blank" id="abg">Ads by Google</A></DIV></TD></TR><TR><TD valign="top"><DIV class="al" style="padding:0px 0px"><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCi61bAAEOhAoSZ0l-cgekEg5Nb3phbWJpcXVlIE1hcBoIjSIVUi97pII','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Mozambique Map';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=fp_al_lp&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCi61bAAEOhAoSZ0l-cgekEg5Nb3phbWJpcXVlIE1hcBoIjSIVUi97pII&hl=en" onmouseover="return ss(0)" onmouseout="cs()" class="alt" target="_top">Mozambique Map</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCi61bAAEOrwoSZ0l-cgekEglUb2t5byBNYXAaCBZWdWWdYUDt','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Tokyo Map';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=fp_al_lp&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCi61bAAEOrwoSZ0l-cgekEglUb2t5byBNYXAaCBZWdWWdYUDt&hl=en" onmouseover="return ss(1)" onmouseout="cs()" class="alt" target="_top">Tokyo Map</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCi61bAAEO3AoSZ0l-cgekEgtEZW5tYXJrIE1hcBoIPFsyTCMsnAk','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Denmark Map';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=fp_al_lp&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCi61bAAEO3AoSZ0l-cgekEgtEZW5tYXJrIE1hcBoIPFsyTCMsnAk&hl=en" onmouseover="return ss(2)" onmouseout="cs()" class="alt" target="_top">Denmark Map</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCi61bAAEPAwoSZ0l-cgekEgxNYXAgU29mdHdhcmUaCCkWd7VIH-W7','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Map Software';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=fp_al_lp&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCi61bAAEPAwoSZ0l-cgekEgxNYXAgU29mdHdhcmUaCCkWd7VIH-W7&hl=en" onmouseover="return ss(3)" onmouseout="cs()" class="alt" target="_top">Map Software</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCi61bAAEPKwoSZ0l-cgekEgZLMiBNYXAaCEZFO-swg1Ip','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about K2 Map';//--></SCRIPT>Â Â <A href="/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=fp_al_lp&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&prev_fmts=160x90_0ads_al_s&rt=ChBCi61bAAEPKwoSZ0l-cgekEgZLMiBNYXAaCEZFO-swg1Ip&hl=en" onmouseover="return ss(4)" onmouseout="cs()" class="alt" target="_top">K2 Map</A></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_ðhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4272096634500235&dt=1116450155524&format=160x90_0ads_al_s&output=html&url=http%3A%2F%2Fwww.engadgeted.net%2Farchives%2F2005%2F05%2F18%2Fproductivity-redux%2F&color_bg=FFFFFF&color_text=000000&color_link=DD0011&color_url=660000&color_border=EEEEEE&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=36&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I K T r „ “ © ¯'j'¤'¶'¿'ÅP^P¢P¬P®P±P¼PÓköl	                           mý

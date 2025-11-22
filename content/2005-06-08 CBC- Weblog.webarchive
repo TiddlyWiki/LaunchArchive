@@ -1,0 +1,812 @@
+bplist00Ò_WebSubresources_WebMainResource¥Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO(Æ	body {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #333333;
+		line-height: 1.166;	
+		margin: 0px;
+		padding: 0px;
+		background-image:url(images/bg_bm.gif)
+	}
+	/*************************************** Misc Styles Start ***************************************/
+		body {
+		background-color: #DCDCDC;
+		background-image: url();
+		font-size: 14px;
+		color: #666666;
+		text-decoration: none;
+	}
+	a:link {
+		text-decoration: none;
+		color: #333333;
+	}
+	a:visited {
+		text-decoration: none;
+		color: #333333;
+	}
+	.style77 {
+		font-size: x-large;
+		top: -18px;
+	}
+	.style79 {font-size: small}
+	.style1 {color: #0000FF}
+	.style16 {font-family: Arial, Helvetica, sans-serif}
+	a:hover {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	
+	.style83 {
+		color: #525252;
+	}
+	.style84 {color: #525252; font-size: 22px; }
+
+
+
+
+
+.style87 {font-size: 22px}
+.style88 {font-size: 14px}
+.style89 {font-size: 12px}
+.style90 {font-size: 24px}
+.style92 {font-size: 26px}
+
+
+	/*************************************** Misc Styles End ***************************************/
+	
+	#container{
+	position: relative;
+	margin:0px auto;
+    text-align:left;
+	}
+	
+	/*************************************** Header Start ***************************************/
+	
+	#header{
+	position: absolute;
+	height: 100px;
+	width: 800px;
+	left: 0px;
+	top: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #5E5E5E;
+	border-right-color: #5E5E5E;
+	border-bottom-color: #5E5E5E;
+	border-left-color: #5E5E5E;
+	background-image: url(images/bg_bm.gif);
+	}
+	
+	#cbctitle{
+		position: absolute;
+		top: 6px;
+		left: 10px;
+		z-index: 776;
+		width: 350px;
+		height: 30px;
+		overflow: visible;
+		}
+	.cbctitle {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 26px;
+		font-weight: bold;
+		}
+	
+	.cbcsubtitle {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: #000000;
+}
+	
+		/*************************************** Global Nav Start ***************************************/
+		
+		#globalNav{
+		position: absolute;
+		left: 0px;
+		top: 50px;
+		width: 800px;
+		height: 22px;
+		color: #cccccc;
+		padding: 0px;
+		margin: 0px;
+		z-index: 1000;
+		background-image: url(../data/images/gl_bg.gif);
+	}
+	table#nav {
+		background-color: #fff;
+		}
+	
+	table#nav td {
+		text-align: center;
+		font: 14px "lucida grande", geneva, verdana;
+		background-color: #fff;
+		border-top: 1px solid #a1a5a9;
+		border-bottom: 1px solid #a1a5a9;
+		}
+	
+	table#nav td a {
+		text-decoration: none;
+		display: block;
+		margin: 0;
+		padding: 3px 15px 3px 15px;
+		background-image: url(../data/images/bg_white11052003.gif);
+		}
+	
+	table#nav td a:link, #nav td a:visited {
+		color: #000;
+		font-weight: strong;
+		text-decoration: none;
+		background-image: url(../data/images/bg_white11052003.gif);
+		}
+	
+	table#nav td a:hover {
+		color: #000;
+		background-image: url(../data/images/bg_gray11052003.gif);
+		display: block;
+		font-weight: strong;
+		text-decoration: none;
+		}
+	
+	table#nav td a:active {
+		color: #000;
+		background-image: url(../data/images/bg_gray11052003.gif);
+		display: block;
+		font-weight: strong;
+		text-decoration: none;
+		}
+	
+	#one a:link, #one a:visited {
+		border-left: 1px solid #a1a5a9;
+		}
+	
+	
+	#eight a:link, #eight a:visited {
+		border-right: 1px solid #a1a5a9;
+		}
+	
+	body#sectionone #nav td#one a, 
+	body#sectiontwo #nav td#two a,
+	body#sectionthree #nav td#three a,
+	body#sectionfour #nav td#four a,
+	body#sectionfive #nav td#five a,
+	body#sectionsix #nav td#six a,
+	body#sectionseven #nav td#seven a,
+	body#sectionseight #nav td#eight a {
+		background-image: url(http://images.apple.com/macosx/images/bg_blue11052003.gif);
+		color: #000;
+		border-right: 1px solid #a1a5a9;
+		border-left: 1px solid #a1a5a9;
+		}
+		/* Global Nav End */
+	
+	/*************************************** Header End ***************************************/
+	
+	/*************************************** Page Surround Start ***************************************/
+	
+	#pagetitle{
+		position: absolute;
+		height: 20px;
+		min-width: 640px;
+		padding: 0px;
+		margin: 0px;
+		z-index: 1000;
+		width: 250px;
+		top: 10px;
+		left: 15px;
+	}
+	
+	#contentheader{
+	position:absolute;
+	right: 0px;
+	left: 0px;
+	top: 100px;
+	width: 800px;
+	border-top: 1px solid #5E5E5E;
+	border-right: 1px solid #5E5E5E;
+	border-bottom: 1px #5E5E5E;
+	border-left: 1px solid #5E5E5E;
+	background-image: url(../data/images/bg_content.gif);
+	z-index: 2;
+	bottom: 0px;
+	height: 75px;
+	}
+	
+	#bcrumbbox{
+	position:absolute;
+	left: 7px;
+	top: 3px;
+	}
+		
+	#toolbar{
+	position:absolute;
+	right: 0px;
+	top: 3px;
+	height: 10;
+	z-index: 1002;
+	}
+	.toolbarstyle {
+	font-size: 12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+}
+	.toolbarstyle:hover {
+	font-size: 12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	padding-top: 4px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	background-color: #BABABA;
+}
+	.rssbutton {
+	padding-top: 2px;
+	
+}
+	#bcrumb{
+	position: absolute;
+	height: 18px;
+	min-width: 640px;
+	padding: 0px;
+	margin: 0px;
+	z-index: 999;
+	width: 100%;
+	top: 55px;
+	left: 0px;
+	background-color: #DDDDDD;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #5E5E5E;
+	border-right-color: #5E5E5E;
+	border-left-color: #5E5E5E;
+	border-bottom-color: #5E5E5E;
+	border-top-style: solid;
+	}
+	
+	.bcrumb{
+	font-size: 12px;
+	color: #333333;
+	}
+			
+		
+		/*************************************** Subglobal Nav Start ***************************************/
+		#subglobalnav{
+		position: absolute;
+		left: -1px;
+		width: 180px;
+		color: #cccccc;
+		padding: 0px;
+		margin: 0px;
+		z-index: 200;
+		top: 75px;
+		background-color: #F0F0F0;
+		border-top: 1px solid #5E5E5E;
+		border-right: 1px solid #5E5E5E;
+		border-bottom: 1px solid #5E5E5E;
+		border-left: 1px solid #5E5E5E;
+	}
+		
+		table#subnav {
+		background-color: #fff;
+		border-right-width: 1px;
+		border-right-color: #999999;
+		background-image: url(../data/images/bg_gray11052003.gif);
+		}
+	
+	table#subnav td {
+	text-align: center;
+	font: 14px "lucida grande", geneva, verdana;
+	background-color: #fff;
+	border-top: 1px solid #a1a5a9;
+	border-bottom: 1px solid #a1a5a9;
+	background-image: url(../data/images/bg_gray11052003.gif);
+	color: #fff;
+		}
+	
+	table#subnav td a {
+		text-decoration: none;
+		display: block;
+		margin: 0;
+		padding: 1px 15px;
+		background-image: url(http://images.apple.com/macosx/images/bg_white11052003.gif);
+		}
+	
+	table#subnav td a:link, #subnav td a:visited {
+		color: #000;
+		font-weight: strong;
+		text-decoration: none;
+		background-image: url(../data/images/bg_white11052003.gif);
+		}
+	
+	table#subnav td a:hover {
+		color: #000;
+		background-image: url(../data/images/bg_gray11052003.gif);
+		display: block;
+		font-weight: strong;
+		text-decoration: none;
+		}
+	
+	#one a:link, #one a:visited {
+		border-left: 1px solid #a1a5a9;
+		}
+	
+	
+	#eight a:link, #eight a:visited {
+		border-right: 1px solid #a1a5a9;
+		}
+	
+	body#sectionone #nav td#one a, 
+	body#sectiontwo #nav td#two a,
+	body#sectionthree #nav td#three a,
+	body#sectionfour #nav td#four a,
+	body#sectionfive #nav td#five a,
+	body#sectionsix #nav td#six a,
+	body#sectionseven #nav td#seven a,
+	body#sectionseight #nav td#eight a {
+		background-image: url(http://images.apple.com/macosx/images/bg_blue11052003.gif);
+		color: #000;
+		border-right: 1px solid #a1a5a9;
+		border-left: 1px solid #a1a5a9;
+		}
+		
+		.news {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	padding: 2px;
+}
+		
+		/* Subglobal Nav End */
+	
+	/*************************************** Page Surround End **********************************************************/
+	
+	/************************************* Page Content Start *********************************************************/
+		
+	#pcontent{
+	position:absolute;
+	right: 0px;
+	min-height: 400px;
+	top: 75px;
+	width: 619px;
+	background-color: #F0F0F0;
+	z-index: 999;
+	border-top: 1px solid #555555;
+	border-right: 1px solid #555555;
+	border-bottom: 1px solid #555555;
+	border-left: 1px solid #555555;
+	left: 180px;
+	height: auto;
+	}
+	
+.article {
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 6px;
+	padding-left: 5px;
+}
+
+.articles1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #5A5A5A;
+	padding-top: 6px;
+	}
+.articles2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #555555;	
+	}
+.articles2:link {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 18;
+	color: #808080;
+	}
+.articles3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #555555;	
+	}
+.articles3:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #808080;	
+	}
+.articles4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;	
+	}
+.articles4:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #808080;	
+	}
+
+	/* Page Content End */
+.imgright {
+	float: right;
+}
+.links {
+	font-size: 12px;
+	background-color: #DFDFDF;
+	padding: 4px;
+	border: 1px solid #999999;
+	margin-left: 5px;
+}
+.links:hover {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	padding: 4px;
+	background-color: #C8C8C8;
+}
+.linkshead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	background-color: #CBCBCB;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	border: 1px solid #999999;
+	color: #333333;
+}
+_,http://copperbeechco.com/data/cbcmainphp.cssXtext/cssÓ
+OÅ/* CSS Document */
+
+/* Wordpress Blog Start */
+
+.search {
+	padding: 0px;
+	height: 10px;
+	font-size: 18px;
+}
+.feedback {
+	3font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	padding-right: 15px;
+	text-indent: 400px;
+}
+.storycontent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #555555;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.storycontent:link {
+	sfont-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #343434;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.storycontent:link:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #55555;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.meta {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	padding-top: 4px;
+	padding-left: 6px;
+	font-style: oblique;
+}
+.post {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.blogdate {
+	font-size: 18px;
+	color: #979797;
+	padding-left: 6px;
+	padding-top: 8px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #9F9F9F;
+	border-right-color: #9F9F9F;
+	border-bottom-color: #9F9F9F;
+	border-left-color: #9F9F9F;
+	padding-bottom: 4px;
+}
+.storytitle {
+	font-size: 17px;
+	color: #666666;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	border: 1px solid #999999;
+	font-size: 18px;
+	color: #333333;
+	background-color: #CBCBCB;
+	width: 100%;
+}
+.blogborder {
+	padding-top: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+}
+.bcrumb {
+	font-size: 12px;
+}
+.toolbarstyle {
+	font-size: 12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	padding-top: 4px;
+	padding-right: 3px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+}
+.footer {
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+}
+.footertext {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+	padding-right: 4px;
+	padding-left: 2px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 12px;
+}
+
+
+
+/* Wordpress Blog End */
+_+http://copperbeechco.com/data/cbcwpblog.cssÓOˆ‰PNG
+
+   IHDR   µ      ]V¯¶   gAMA  ¯È7Šé   tEXtSoftware Adobe ImageReadyqÉe<   ]PLTEˆˆˆˆ ÏDi´îñø»»»A "N§DDDîîîffff…Âİäñ333"""»Éä3\­ÌÖë™­Ö™™™wwwÌÌÌİİİw’ÉUw»ª»İUUUªªª    3™ÿÿÿeËÆN   tRNSÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ Ív  †IDATxÚÔXÙv«0ô‚ÙÂ–ÄşÿÏ¼–7,H›æ”>\šĞ0–G#	¢şä¸ĞN¨¿;Èü&§ÔÇÿÆz–;Ö÷¢zê£ÎÈxk!eÊÓÑ¡J5úaFLHæ÷ZJ®ÿ<Úõúl³¬‚?YVóìŞä²˜íì–`³0@‚6— Ñ†š3ıG¿ëYç	®.ä¤Õß¯§(„í-LÂªoè?üİH!k`­yƒR§ètQ†3™C|¢k±VwÚü”lLµPdG6¶Ã¿a­n‘SXƒp—pjĞhˆï¡ûØÿ†u¢Ñz
+k®Ÿ1o m¥‹ïIåå<Ö
+$r_—ú!› E<›Í'HU6…‹M)ŒÏ¥Âg+f!%òë#k“Èç¤n7ªuq\¼²*’¶¬äÚ¢å´=fvêáz5¥Sê®ò!nœŠíşE€û¿g_kóa¬ğæ_RoÎx5'ªğß&^2E¬E„ì0È%°çFH°Xûa·c’±ıA|Éz„J“Y•ö#ƒóÅÓÆ¼ğ´÷E“Mö˜ø„‹,²eçäv¡Ûrt6i°ØÂ]6° feşšõÕ÷±¾z³óÊ°&›RµsÆõYÙ…½c²=¥Ù˜ÆÙ)¬íQämî†ô>xZ¸9ä—¬a‡ï.æFÂy]hÉ¶(…X%UŞâ“=&[øü#©¤Q>v5Ùaé¸q[U§· ğú¶§òˆªıš¹ëNák²ÇähÒ©äQvv–>E.38A¡ÎNG¾yÇôQå˜µ•d…÷Ø”[Ö…0Ùª¶S€	nÈNo{3*Ÿ½[bMcğ’õ¸n¤Õ¾ÎGGæø¬”“-éœ(DBÛX-,Şd."å5û†µéTá±-‰ÌC)1Q®÷˜ìÃ×v>;¹7Dy`Íö¬ÓoXg•
+näÛêKZ½ÎÇ“¸iJMp§Ğ1õòşkùV!èxÏZ=Ì±5ä”aKî`CŸúüBä²ñÖ¯Ú×Ü„·½ïñÆš&!¸¦…‚‰3”—WÙ(â®à3ÖiÉË>i¬‚UF8juM‚ÙÙ³P0)ê¨–WÎÇâ®à3ÖcèF¢"êÂ-Õ…†˜.ÂÉå0,©;HyŠZ°ş3Öª=L8ãûÂõÑq7b†àc9ôx£^T)¬²©øõéà ¹G¸±R;LĞÌ§äc½,H·H–®3íq#Îl3Õ€}kÜœ>{|ú»ïĞı¹_æXº¶#·¡E˜(œciâ!·¸´Ò7@³¿=?Ì\Ù/Ü¿Y¨¯	Ê¶1šS]¿œĞ®I’$·ÚD]aÍí¢+µÇhğœãà9<ôBºMf* 6øğÂ&eO»73+‡¢:Öš\æêbô¨¼~VöµdÔXûz^?¼|[İ›dº?`ÄºAÁ½Ä¸@ìŒò¯ß9¥’i‹²ùt¼f-L`oÍæ]Uíç/„ÿ	0 s7„D,œ2    IEND®B`‚_8http://www.copperbeechco.com/blog/wp-images/wp-small.pngYimage/pngÓO;8ÿØÿà JFIF  J J  ÿş AppleMark
+ÿÛ „ 				
+	
+
+	
+
+ÿÄ¢          	
+       	
+   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùú  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÀ ! ÿÚ   ?  ò ­²E'˜ñúW9¯ÜI´Ì}÷ğ¯T>²ã©ËZ^Oö­¬€z?á]•“ˆ9~j|×48=K ³ùTeŒ ÑÌÌl–ˆA±Tñ“ëH]º(½&îZÇğ§în”€7y‡†àP_°ç=É}J¾‹ı¬ˆƒ‡b ÿ ZçäĞ.m]—Ë9è0ôªæ4‚*fÉxeäã8Ïó®’Ëáåíüâ—aüaTÖ¥²§îêX_†:ŒªÜÊ‡ŒğWüëRËÂŞ¶lk7nvuDbùüOJ.Œ¯}Lıf=™íô]~^ùæ¸ÛÈ>bB0'!j“5‚2¤2!!‘±œdƒUÙÁ9uéÈÉÅ&SØÙå_/˜Á'Ş©ı«ËtüqU`t‘Tİ4¿&şnGòÅW3©lHï–cÿ ³V¼ö#ØÁîH÷J'ÍÇ@	ÇêÕZkÃY8öëúÒu'Ğ=„;A¨˜TÜ§ØâŞ¾ÿ ŞJ[ñ-Gµ˜/™åb}ºçVaº2ù'·$còÍ/kÜ¯«SĞñOŠr–ñd°§V>õÈo>ß÷Ñ®µ3Ç©BÌû$ø¬!İæ7<š¡}â4»BL~5çJ6g³ì¯ïÛßÚ†IÏCµØi:´¯1ŒÒØÎTÙ¡&Ò2	çšLŸÎƒ+rî•8ëNE<`cõ¦R
+n<‘O`…>÷ç@Åˆ=})£œdñ@]£{ÃşÔõ©Õm pƒ‡)8•©©xYfK"Ï»Äµ7ÖÄ©»™ğQË~×öğ±$Ì2¿†u–>¹ğÍ€–æhnÃtò¿z× T»Ür—2±ÊøšĞ[î»PI'ÜBƒr¯U¬mGk½Aø<Jİ]åØ1şñæ¦à–†—<6Ó[Çm£iÖ~OFÁ,}Û©5ÁÚü7Ö¦Ô~Î¶Ï»<üìHÏ³+KÙI¦?Ä¾ÂoÔ ŞXlQÇøWâ?i?ñ÷¢(8Ï’X¾ß^Â©li	7#‘¸·19Y˜FªSZD„«œäg"¦ÎZ”%·ŠŞ¬Nj·î”œqõ­•™-_P/	R'ÛšhX³“šw¶–'“Ì¶,œ=i‚N £›ÈN/¹4&21ßŞ®!P¡@ÏÒ¢I7r¹^š3ñ@¯ü%Rqÿ ,Sú×%•ô®ØÚÈñª'ÎÏ£.R@G9È5K»•ù01Œõ®)EÜ÷VÃÒf7ù‡9­}#W•dXÃ7^µhDCÒïænÉƒÍ^VòˆÉõ£¡Í=ÈÜ€qš®AãŠè*£g9©âˆ3|Ë¸}høíÉÌ»”(ìZ§Óc¸šö( y_jàŒĞçğ ™l}?á{oøkÃ±ZÇ™Z/ÜÌqÆ=Nj	.´X”l­*X“SoxÍM^–+O•şë:}¶Ÿ‘s#)¸Àü(c:İGğ–¦¢âÿ KñÆù>
+Ô¾ğw‡®#?eÒíQ1ÔF‹ÇçX95"ÖÇ'¨xuìÁşÎ‰…Bšä®¼O…ôvZî‘åN_rc,=JÑK˜â,’ëw¡whÃìe—$øÛ\Ü>“Qp·¤F9U'ŒV©Y¥ÊÎG[ğ†,Ì‘3 ¤Œâ¼÷V°ÆR£¹üišÂ|ÎÆ$àJJ–úbªáT‚}ëHm¡	#ç×5	È')øæµÈÉhòHà\ÒÃ.ó´(?'PAÈŒ{Ôğ¹'ñ¬¥º+©ã¿·ÿ ÂS'?òÅ?­r?­uÇcÅ©ñ3èÙäfÜ8ÍT.Û¹°¹î!ZVPÓ\TÖ÷(=ñS%tL÷Ã:†àBr2+¯ŞÈ»•2H¬L&¬Ñ3±Ê¨¦†“¦Şı)2Ë’©©r„N[¦Ïé@k‰f+m	‘˜ñµjî|¤IÙÔ.mWœ¥2d{$ºŸ¤ù‘	..
+÷ lã¦+Î­<Cq}«½»Üa™2AJ-© Yê÷&İºeÁÚÀ¯nõfO´\œ$C%ÆqÏ/p5-ãÔÒºôë[–k«,h%ˆà|ÄGùíXM-î_A—"şéw6‰AàG5ËxŸA›W³h®¡™Ah0wvæŠ[â¦•w¦İ”Õ‰cmÈ3Áçõ®ÛMñ6–te¶6¤msÓÖºI”N"óGŠïReETœù×¬x6Şîk›ilöL¹eq»ğ=Ôyf¯§µ…Ô<`•8ëŠÈt$ŸİcõpÜéNêåIÏ—ÈˆŸÆ£2m	Œûæ¶ˆÚ_àä~İ¸2±ÏÓ±ŒÈ½©¡™ó˜à8üë9-Jêy7Ä©YüNìP©Oë\¦óıÁ]KcÆ©ñ3èKœ€0sĞÕfò?3ŠãlöÙ33mÎ ô9©",ßwx>¸­/ çÂqİ†ééÖ»Íå@?Ò±–æF“ÇŸJ±qğOsRG1*ÁæI–ùv3Ú¬Á¤µÄKåØÈø9gÜĞÇ]¢Ø&›nïo§D¯0Úf|?İu>²»‹ˆn_¨\dš	{¾‡>°şC0Ã.w5§¦ü7ğÍŒuî™ËÙ”³0üˆ¤İ„u~ÓÓ‹H$U£Ù>ÜšŞ³ğ”jUğı+	T¾±ĞZh‘.7*ñßmhÿ gÛşù¬¯rBÍ"ˆY¶ñıÚàõP°,Î¯,,J—Â=ª¢ìË„ù´<ÿ ÇŞûvŠ×öÊòy#q ‘õ¯ûX´—Ê•rd`·S]0wFXt4³2í ö=ªÔ6Í©êFKUy'*¢´3g‘üUğıÅÉ½0|®rÈ¯1™Jå•x>œÕGs¦İ(Nıª-›—Ìæº.UÈ$Û´Œ’Oz‰Xå˜‡¬¨[å*qØ‚jÊH6€¿'àE'º+ª<Ÿâ;#x•Oú”şµËå?¼k¥5OŸEËo/›˜ÙIÏsÆ*«¯ÌD„g?…qÙÜöØánväG²ñùÓÒÜ¥c*6àÔ;ˆî|ª\µÛ¹İĞ-I…R5IpJ¨Ç¨©áI^@~cÓÒƒtš‡îuíJßHÓíÄ®A.N©#¥{@øs.‰¤G !K($¦q@}´ŒmæV)	%±ø×Aáı&ÈåmÙÏ4ï4èí¬"+%nät­½"Í$ÉÎyÁéYÏ`:›+UÀc3ÔZ1ZÎñô®d®Èœ¬‹h»F1NÇµ6¬e5¨J¯=¬s#,ˆ¬cHÒ6¨æ.<=4¶OÉ· zWÍ¿ü-sáínã0;ÂÇ(È¸ŸZè¢îÍã.mNQb’Bc÷«®ğ§•§Ç*"&ù—ifôï[m±/sÎş([Ûk7ŞÎ2á2=³_?kZ}ÕÜ°I&ÓÜÅrâô1ä‰ÂîwãÔ­1”„ÎâGÓ­ksu±ZUÇ^}C·8RäHß’0}ªhã²ŠotWTy?Är‰\l'÷IÛë\¾áıÃùWM§ÆÏ¢¥ º¾y<U´¾
+n w$s\ç¶H“³Çåo9ëœRÁ9rC9 qY0;ÿ 	pŸ!ãŠìÓœ‘Ğw¬Ù…]Ñ<X+€	ïÅ^Òí$½»[X:KR3>ø5¢YØÄeµ…]»d›nHã±®ßÅ1#aƒ1÷íI’Ï<Ô&†;¬`1Æ{VÖŠ²JÀ…ÇQsI» :İ3L{“Ëƒ©ÆušmŒpiŸRk9Jñ7¡ˆF£ Uœ"®à9¬‘Ï-Å#8¥¦H:R61ÈíRË[I8ÁQ‘Ü×	ã
+Çª¡%[à®sWMÙ›Sv<{Vğı¥¤Œ‰c2·9ÇõÊê2Ën­àQÁcóÃ“])êQÆê0¦â"”·™Õßƒšó/ˆ:rD{mßİ½j™PÜóiÁÏ<©è*¾ìnÀô«[$R•f H¾*&>’(úÕ¡%€ÿ X9ö§FÙÆeô§Ø:£Éş#ÿ 	+ò?Õ'­s>£ó®¸ìxÕ>6}j«…g§5Ê{‰ØDe ‡µ:Ò7˜¨=Ï8¬ä£øR1ÚGa]`EÁùy¬™…RÍ»Gåùm<õÏ5Ùx&Âæîò;[K@¨ã!ßšFw>˜ğ~–º-”VáA_±ü_ç~öÓíà…“q:Ô½,Á¾ğ¬)ó¼,z‘Åii:,Ì£dEw
+y¬æô¯Ó­<€«·œv­ˆ# íšÇRY~6R3qS®ÓÚš0’w$Ú1F éA"7Zk.G"“)0 uFòè~]ŞÔ¯bïª±ç>.Ñ­nƒnO.AĞ?:ğßi×Ös‡òİtS»68K¸î/ÇåãïcÒ¸ŸY9°’mé¸dÖÅCsÉæ„‡ÆıØ<ät¨'‰r «MXé+I	úUyæ ı*Ó…yÁte#a–«ª¨ò¯ˆÇ>%rşY'o­sÿ {ô®´Õ§ÆÏ g¹$…(xïŠ®YŸv ®SÙ$I<’Wëš’È‘ ıŞN{‰ì3Ñü23ŒgŞº˜ËmÃŸéXÌÙĞl$Ô.×åW;Ÿ²ıkÙ¾éĞEU€*œ–ÆÇop‚"TqÒ“O¼frÎ©´àÔOaô/ÇºW*´g˜ÇçZövÎ  ¾‚°¸ÑÖ“Ö®A2ÈÛ„Zq!S õkq Â¥îe-‰È¤bE"FM#G Ğ20x©<ŠËò8ëA¬#Ôæ|Aj·P8AózŠñ	­šHf·iFxıŞïç]Y³VV8+[hõ;§‚&Bx&2£P+ø›¦6Š#ŸŞe8eúŠÔPÜñ©¡¶Rrjƒ@Á°T1÷jgHÙ`Êd€¿gº´oœŠ¸n‹&ãµ°¿…3	»#æúŒ
+Õn.¨ò_ˆûÿ á%|`~é?­rùjÙ-OŸ@\¦Æ$0>Ù¨Ø Át¬h`w+òH=1W,äf!ëıì`TOaápŞXà:×P„±¯OZÀÊgmák"ºd—;~ÿ ³ÇÒ½wÂöqéÚTs²”™”wÁü¨0:Í;Z’å¥¬Ó¹áŸ có®·DÓ®ãAö˜¡ù±ŸÒ³›VCn+HÃch«Iµpƒ=;W7Q›b¸úQ˜ßÀ=ªÖÆ–º5í!²—<u«Ûiu9æH8á‚0EIJª3HÚy ,È¥ÚFÏ5™wl·ÆNÿ Ò‚á+hbêfkx[p¸JÊJGWUÎlÖ´İ™½îÔlA½¼šiU6A ƒù×‘øŞÏVÕº®ešß8È;€üºWBØPÑc<IŸ'ĞŒUU·ùòqíšgR×`»·€„Æ=ºÖ$êRR¥xÇ«†áb6$§luüi«@2»Iõ5ªÜ]Qä?äfúäŸÖ¹lÖÈñj|l÷ÙÚMÅ°1UC*p "²=¡c#;ssW,äÌ˜÷ÅDöé|@2:u®†ÁŠÀÎG ø2ıN63}ÕÇ§Zö¬¢µd“t2B¼Ç×4™ƒ=Â:U¼AK°G\Zêd	~épCœ×4¶)lEùn	ÏáWm¤KRD8êS¿—cn9çV´ËwU‘²T{S4¿,lt¡¡†-ïÀªzÔ*¸€–úæ¡î`ãr+]JYŸæ–¶"`È®„¸X’FPFFi›—ÅI7{MqK’Ä}j,7?êŸô(Ø©}j“[˜Ê‚}kÏæµK}Q¡cvqéUË§ÔóßXXËuqÑ:}à?¥yTZèÚ‹İF»í¤ù^#ó£üu-†yOü3‘®Ÿ±®mn?y#îƒÔ~uÑü4ø;©øæAä~î ~i
+j«èlåÉ÷Œe™´í)îlä:.wt¯–|K¢ÜèºœÖ7HUã$P¥ Q¯Ï¡ŠI$nã™.Ñ†BÇõ´M^èò?ˆ¤Ÿ¾î?t¿Ö¹ŒZê[%Oõ6O1ì*=± èÀûŠÀö‰!œƒ‚úÕ5K“Ÿ›Œ
+ÎmXg¤øx•·fé‘[ó*î‡ó¬H‘ÙéWQDñÂ¹ óS_@x
+	5m21$*| úzRfXõm¶¶EP¼›=©òÏmçˆCòÍsKb–Â¥³©BƒŒàš™™¡}»…$4Fnæ
+ÊH=+¢´‚"Ür0)ÜÆ£×C^ñ¾7¼¸ç f¸¹<}ôÏo`³’­å—Û´UÊ¦±I£LÔõ]=ãk¤yğy®¦ÏÄÓH‘2”vé©’è‰¨•d™$Mù
+ÎÕu5²y= &Tãw©‹ss$àKqrÈDQÍ?L(å%®zn¢ÌèœRZ›–Xğ„°õÅp^-U´Õa”1\ŸJqÜÊ‰Üâ|H-dÖmL®­¶4ïx:ÃSÒQt›0gv^Tà¢µç°Ïšş5-•†»g¥@D²ÙÄYş/LW¸~Îº¾•ˆ°Æñ‰AÉéš½Ö†“Wë¾&Ö´»mynæ@¡9É b¿:>/jv:¿Œ¯nì òL„.;â”OR0ñI³Ïä
+2
+š` dfºSW:Yäùñ4™R?tŸÖ¹|/¥uÇdxµ>6{»Í–b=j7”Ö±=¡ğÎ¹ÊÇjØÒ¼•›Îr îe4R;;VÖ8¼´Àéš¿§Á@#w×ŠÊÄ½ÏCğUş“«İ[Úß[È$àyÑOå+ê¯
+Å®¶*Z5]‹’Iéúıjg±C¥Ñ­şlNåUNH¯§³ı±Ã7˜Äü¤@úW4ƒ ÙeP¡ ƒõ¬©¯¶Í† óÀÍ$„ji²…pÀƒxç«sxU ÜùôUÍ":œüúZ¼å¯¥8şÒ–‡Z¬ÿ jK†î?Ùª½‘KFI~ˆ“$q6ğ§§·ŠDxî¤Œb0p)ó(İ£GL»BûÁTñ+3*)l!lÔ²m"–KØ
+©Ûò¶y®N}#Ä¶Z xÌ±Û0åÑ÷‚r‡¯z¸½ÇIá}Jø]Ic6Y@áö2çó¦øëNy-^ñÍäÖ—S+jxÍçˆMÜÂæ#äàùƒVµˆvÑŸ:õ—dlª
+‚}Éëô­y/©kcæO&«ª_]j÷r4X³rÍÌqYøƒ«xd“c<ˆÊ{
+Ò*ÚÆ<êÄ¾*øãâÍrÜÙ]ßÊ#ÛŒÅy¬º‡Ÿ!i:ç«M[Z4­¡Ä2nª$Ãp-·ÆªÛ%ÊìyÄ¦âyòÉ:~5ËdtşUÛ¡âTøÙôç†§{.:ô¬y´ëˆä,F1Æ1\üË¹í·¶‘Xå}êÔ-q‚GB8Å'f‹H³ms0V-—?•_¶¿(7ÇĞæ±Ğ,v>×ZËQ‚A!ûË‘šû«á¶³k>›h*á¢rj$sÖ;‹ˆâ™örqœU¹®Y3õŸjå’'¡UînqÆ:Ö,³!›’2séUtÆ•òL$LíÜWWèí>¼óQÔ™6†Üé±8ÜŠsÆ±®´Ë’øy~´‰‹ê\Ò´¥V,ÿ 9QÕºV“Edƒçu,z¨"‚å'tfÏ2‚|¢ªt±u{›¡åtYëš
+óe›KYdŠ;›u ‘ÍkÅq˜ŠxğÀrJñNäM‘Mmlíº,!×­QÖØ-›£êTƒëÒšÜ¨­œ<_á&–úK›k‚…˜ü¡sŞ¦°Ğt]/Iiî ig üØ'ĞzWBnÀsºÇƒm×ÁzÖ±wl!WŒ¼@së_/_6ÉY— <U-Íé¾Us
+ıüÙ2;µW~:`â·Jå)İŒ’GhÉP0)‘°` 1Um…'yOñ âW†<”şµË|ßŞ®Ä´<ZŸ>êºÒm%dkµÌjO1‡”9ï+Ì=dõ(ÇáĞ	#oåšŠ]’qÆ9§s^rŒš)
+vñëUÏÊ;B¼TŒ¹fí« Ã‡=}cğ+ÅO§ÅesqºKxúç­UUÑô'†ñ*É;¾]×pRzVĞ·_)GÏš~f=µa=Ì–ÄÖÛ#ÊñòıŞõÌNïÍŒuÁÏ¥:[1£°ğó8…Lƒ«z9—vV±êDÍMÈ3ÜTrÚ+)'°¡˜©{Ö3'¹•#‘`ÔU[k:?=®²çß¥#]Ê7R4Åc¼CƒÈ+N{K'ÓöNA dsÖƒFıÛ-ã¤ÛƒB‡=¹®˜Ú£.Ü3Çjª+YŒ6ê£ b²õEŒÆå±€:P8Lñ_Kejí4ªJ9ØyÍA­hyo¤d^‰¸
+í[5ÙÄ|Tø­§K¢Äî¤{ÁôÉ#ùWÌ×,Ò1à1'š-©¼]Ñ—)o^*'$m?ZèÅŠU˜m^ P¼ÎŸ`ê&øŒGü$¯Ïü²Oë\¾G­u­§ÆÏ½IùHÈ5RàF~V^İkËG§ÔÎ“bäªãÛÖ©]ïÜNÜg¿SIš£6yQU‰ sĞ÷¬Ù§GbH¦ZNÃ×xnÀô¯Rø7â/°x†!,ûÀU\àÚT^éöG‚ï^íüì°ÚGnŸızî¥ù¬#%Èx pk
+›œèÏ»¼W·ù²}ÇZÃxÌ…FÒ@Ï~´éé4u:s$pÆ¸½hÙbgù˜x¬º“#~!µG$Œu¨o®vF!B7?¥&`¢¹®WXãŠ! KyäTqÙY+ ±+±ên#[ØÇÖ<*"ŞØHÖó£çå>•SP°Ön e' ÉÏ½" Óv*éZ_Ù%X¾Ö98cŒs]…£ÓcI»JYëbG‡¥rÚıéµväE‚GÍŸüFmõYôÕle7•àZ×ˆ¤Uxã™ÉçøÅv­}§y}4¬Ìò¹Îs“šÎ$»ã×Ö®6¾¦‰[B­ÚíààUU*8=s[\d›°F+uû‡#Ú¨}Qä_Âÿ ÂJÿ /ü²Oë\¾ûµÖ¶<ZŸ>ï–@[`5FâVÃg×å£Ô[”&!—9ª—3B HáÄà°i7¬0>\Húäuö ÔÁ¾!Xà cÔ.©?Î¨´‡;wãğÍÑØa¸mØŸÂ¶´-Zk	â¸ŒíupÊ}õ ÎzŸUüøÏ¦Ü4VÚœ…%ÊÄsĞ“À¯¦ì¯¼›Eµc¾F?(ÛÓ#5G4ÕgP—Ê–krìpŞ(\=¢(=H¬¶ˆša0¡­{ù\*C£4'¼[tÃ8ªPÎ's<î>ï<
+—¹šÈ¯õeM ÜDœã9‹®éĞíwºô;i”¶uK 3¥ŞBöÈ¬k¯Ø1(÷1’:‚3ùâ‚¡xÈ–ö3|.½s•é]¤¯m»$ZhÖ¤SF“Mº Ù¸ŸKÓ$ğiÇsFÚüwÖXxâïÊ˜ªàçµxåäÌì]Y˜±®³¢;r´ œàgÖ we`=×­2Š“1Æ$™¨ÕP¸8ç+U°"ÊÙXã'ğæšË*0ê1Nú {Cñ7ü$¯Ïü²_ë\ÆÖõık±lx•>6}ÕqÄ9ëY³ÈH8ëÌG®·)\HU7w¬»™O—æƒŒK‰÷–|ŠÏ’fİ¼6±Ø|2‘ûĞA™«¶ò4;{
+	_§C êsé÷i<2È¬¬ 2GåÖ¿C~xªÇÄ~±ñ=åÌCÍZ@ÎÂ ŸN™üh’ĞÃĞf§ªÚê¬¯§<oô`ÀƒîMo¡dÈätéYIY-ÊŞ$ûÉ$b®ØmRªsÈ¬ìÍ‹xåŒm‡ZÈ½Ğlf¹â}ÄGØõè*Yše[İSÂšy;Ê,ˆ2p¥›?Ò±$ø¦F$TĞf~r	
+w~Y•©Jïâo‡c>Tş¹;8…Oõ¬óâÿ  ]\}šãE¸·ó¼
+1øƒV•ÇÌĞßè0&5	ê²£U™Bíüë¤ğq¿¿Ò –ïg™ĞãÚ‰ÆÑvÎ§Éh¡Á$ûWâË„¶iæ#b+7'¦*!«F”õ>ø‹¬cÄ×÷¹á¦`°5ÉÃn×2ˆÓïí64_Â‘Ä»›#5Êêvíg NÙ¤µØFlî™äğ=*ñŸ»ÕªNÃ/[OÇ€p{õ1Ù$Gqhwºİ/ñqâGÏî—ùšåñşÍv$ìxÕ>6}És»æù»ô¬›¦à‘í^r=ˆ­L™ç$ğN+.òFUÚ óŠ«ƒ… UCó'ãƒAJH|%PóÓÒ¬ÛHÈûsM­÷4`—ÉÁìzoÃ-_T¸Õ,ôŸíµ±yÉJ@+Ğş{R&§Â}à{Ão4šXs‹fm…›$¡äş8ü+Ô =¦ò0ËŠŠ›İ¿@qq§ˆˆÉ æµl¡Wv9SŠÀ‰@ù6ƒTî»ĞÔ=Éæ¯áû-UrÑv<°5Ë\x3Yóü˜n”Åœ.œU^ÈÚ;2OøF³Šÿ ihÉ|™æ@ÜÂ±õÃ÷q0ŠÊö× ü¨§ƒZ¸=Iz£‚M'W´»›Ûƒ	||ïŸ—5î~uÆ "Æª£º´:™O’N+Ã¾?ø‡ûÂ7’Ç&Ùdœk(-K¥¹ğµüÍ4Ï+rrEUµ¼6W>a|]–º±ĞÎ‡ş+ƒt·	¿Šâ5«áytHo–œ#fOSä`c Udm¬>a[‰–Ú6İÆßz™nK€™ zè£É¾$ø•ğÃıJwú×-·ı¡]qØñj|lûvîvÜpcÜJÍÉµå£Û…Œ™d!NEd^È“ĞS*ú”]Ô«sÍ@eQ»>´r²‘Ê®ŞÕf92Bîõ£^éH¹lää•ßü.¹ò<SbÌNß0"+!MŞ'ÔZe ´× º[dÑ¨aJöM*Ú9­Ã«¸üj*lséww¾@'k¶+°ÓdËÏlšÀ‰—œlÃ¦«Î›òµrS*2ojXã&ìô »–¤	å`ª‘ß#5•}£BIIúSOP†ç­éPy¢E‰WœÖ¿„ˆ_'j«ÜÚJÈê.äH¡g~6½«âßÚ—ÇcSÖÃ¶7ã·æSĞgÒ´¦½âa¹ó¤¦L1ÚIúv¬‹§rO\ƒÒº£k›ó<…şløA#)$ğ1ïZ4º	ìT¸`~éoÆ¡áU3Ÿj:‰K|§’O¥X¶WÙ»ËcAMî&ø‰&|Hç?òÉ­s;Ï­u­§ÆÏ·®åUVãœÖ=Îà¹=óŠòÏilbÜî1İk&rsêhRiŒÏ¹yB ¥R%°Je³[§t4Kl½êÔQNÌ—¾zÔÏaš¶¨1’GÒº]fêö÷Dü±Èı28¬‰¶ŒûÃóÅ©E§^@	FPIü+Ø´ÌJ°¶
+?(OAÅe3Ÿ©vöÓÊ9Âã¡¦]0¸ö5ƒÍé^<+¯<Î[Â\¤œsŞ‘”U….îØÅ$rJhOÒ‚ŞÅ‰–/˜s•‰}wµ¶• PU=ÎjúOµÜyXÆŞ¦§ğÛ«êrì
+6Õ#i£?â÷-üá{«Æ™|â¥!#,M~zx›Z¹Õµiï/Œ†I¤f%½ÍtRDÓ[™Øƒå“ŠÈÕ¶Å0ÛéÍY¡‘9ãwªruëŒÖÔÂ[Ì@MİjºÉN}jÈD„˜fç¾*tº—ËòPãÜU"ºOñ*øÆú¥şµÌå}n§ÄÏ·5=BÚÉKİLˆ#$×+ãm/ˆã‰ä ã q^z‹=Õ±{âø‘bß\qT%ñKŒZ ükHÃ«Õ^@êğ.Bh†B¸…XäàÂ¯m
+E¨.QYG”8­.â ~ìVSı¼Ñ,g5£Œ‡g·³+NV}#ğÅÉ¨[¦‹z}üŸ7Q_Qh˜0$E†WzjÊ¡ÈôfÜ‘-Ô"FïZ¬ĞÉg¶EÏÊyƒ³ot'ˆ4{FzÕMBÍ¥O6<ß¯ZDZÒ*YŞ”“Èº}N3ZĞMç¿½i½‡NÁ¢$|ÇÛšÄ»€¹Éç==¨=§+®İ¦ŸGÖšS°`äæ¬hßñ%Ó%½¾—i#s· «ètİ5¹òÇÏŠkâ­déúuÁ’ÒØ•9İëÂõK¥p7(İúŠê£°AnfÇzÈ¸_Z£wv¦O›š¦®ôE®”ƒƒUÚX€eUÇ¯¤4ÜObœÓ[g+ìñŒô¦¥_˜ÛÆ*ÈCÒê'
+Z.¾Õ*ÜB¸eAøÕ"ºWñdo¹Ø?Õ/õ®gÌ_î-n§ÄÏ~Ö5{İJàÍ<¬rÄ„fï;sĞ×*ZÈFáø~”äm­†o§H¤K.×ñ‘×E#6à\œtãŠOq—íİFsØÕ˜2Ÿ99µa-Æ‹ğOæ®å Ö·[j’p:‘R3­ğ_‰.ü;­Úê¶lÁ¡3Áçô¯¼¼â;/h–š¶8)"A#*ØäJÊ¢9æµ;»F`¡«F˜ßµs™'bœ%ì.nÆ<U›—#•$£Ò‚Òæw3çò®r—‚z2õY¡fAˆ¬Ê:sÍI­¬„>#!ì‡ø³\ş«ãFµFû<3lgH^Îú˜ÚE¥åõéÖ5–
+€ƒ:çãÿ ´GÆt[Y<)áÛ¢ò.eVÆÑÓhÇzÖ™Ø¨Àùj{–•ÚF‘‹I'95›r]É ’k¡.Ubš±Iä#Ÿ^*›Ù&LÓŠÖ˜º´KffmŒøêËı+?ÄVVóBn*8à‘Æ
+iŞ\ qÒ¸Øß*¶rOjÑ«	îIÎ£bÈÁãš”pOáM©æHÿ „…¿ë’Zæ²+txu>&{¼±mËƒÏ5\mç$\Ç·f81(Q·×½.Â„9†éïL¤8FÅ±ÎéSFp&ëOùhÿ €5¡¸¸8„·-áÓ]8Lbµ-4ù±´ [;Ô¡g‘°Ê’A½«àwÄÍGÁºÜ:lâI´û¹Kş#$à{Q%¡”Ïµ¬Ÿíˆ’«üàtÈ>ã¥jÚ8…p+’Z3šZud³‚«€W‘µ^+bÈP†$uÈ©ÊÆ]ı¤°±#8=é–¦CÃ/âEMÔ“ü¬P—1©P2ÙÆ„:…ÛİL6B‡ màÕ"îÑÍøË^»e:6”î;çWü«ã1“ÄÆ9Y€•†Xä·&º¡+Š2w93ØcÍDîbÉÀükKÜ¶îg\>ö$ŒU)A# Ö”À}®§qi˜È'÷sŠ¾…õHüÉÓh_º‹ÈüiÙEó‘«iª¨ÓB 2ıáéYI„'¡­/}D÷f$É:ÔëÜM©å_ˆÿ „ùÿ –KıkšÈõ­§ÄÏ~¹E-ÔŒqŠ¤ñ ~	÷¬OttIîO§*m
+¤¶Aã=¨`°uøj?”ç¥’iÙùlW$›<£Òº¤ğÎ ÖñŞ¥œ±ÆÊ
+¾Ó‚Oäk*…'cKJÓ.®ËQ¼—äšêßÂRiv‹w«£Ä’ñÊT–ÿ 8¬ÌäõEğÒj†AĞìu$w§Î¶–—»m$gHğgÜ\cñ ‰;Ÿ`şÏß[ÅşM/P¹İ©iê¨[¦è†6Ÿs×ñì©nÎ'Ê}Zçªµ0~ëÔ•óGà¥I`:ŠÈL¯~‚H€Uè3ŸzËH'8 Ö‘âYÛì†bq\ä’ù6^Tyç©¦·:?[´–;)çq‡™HV<_/|Bğ©¢Ü½üÑ´–ò¹c"‚vóMtA’™çW<Ÿ—Ôb³®sœbµ,§ \·ª’€EiL
+¿"ó×'š¹¦–é°gÕm\.P¹Ô|àè:9ç5[+÷Q†ã«d&ÇaŞŸjR¼dà
+h})øƒ·ş'Î?Õ/õ®oäö­ÑâTø™ïW$™8ç'5]ò7§°=Ë¡#%T§µ2é¼Ğ+†~lRqĞ~*X‹–í…Ã}Şã8ükÔ<3ã{Ñek§İÈe±³eÚ”ôç©ëùÖSÎƒ]Ğ/|6öÕ¥¬±YßÆ×Vû¹e\ôqØç=}«µñ?‰|1âÚÃqw¾îÕ;p2ÛFGê+3)=NkÂ3Î5).´»	%‰Tá–ÈïÒ¨j›Éæ†%I	ÉBxSéí@-dz§ìÙã+}ÇöÉ~ÉÔ”Úd°Pßtşy¯¶£R$°ù	õÇ¨š9«ß™X¨#üj)Ñss0Nì¨nL³wª—rEËf‘¼49ím£61œæ©Ûé%¸:ŒóME{íÚîşÖÓ1©İ´¸®SÇ>²º3[#Ã(8õô«ƒ2×˜ùâ_.|%¬<» r^2Q^t€ı+©ljfÍÎIù~½ë>r¹ )àõ«¦2¤œ©À¨dVàóŠØÎW¹^`¢(T9©ÜEU#.ùÀöëNDcódãĞÓF«¡åŸYá$~?å’Zæ2¿äÖÈñj|l÷ÉÎĞ~uÆ=yªÁ÷!'Ê{Ç±”ob ©‰#m€ É\’}{U¦åaTnõE!#!€BGµu>»·öÛí|…u3.:®FJ‰ì=ÿ Åÿ ¯|Gáxô›Hb´Ó.m£rƒq‹ p:sÍcŸi6>ºÕ ·Šê{DU•"lªÿ ¶~£ÖvfnâÃ¡[²Y–•%Ób`lÎ9Ï¥aKrò3ÊÌÅä%‰<ĞiÔ×ğş£&Ÿuİ»mš!ÏFcùıøgâdñO…l5e|´°ù?ÅŞ¦{Ö§bzu¦Ëº‘\½L`ŠrZ,x—ÏCPJËŸ1Aô.T“F·eŞ‰•ÏCD–(ÎĞ3ÚƒDô(­’Âÿ k¸PN6 ÷ö¬]{O“¢¯,‹‚_ëMhËƒÔñŸ¿Û\Ğæ(Ò­AtÀÉ#¸¯u[f·•‘†
+¤w<æºéÊèÑîdÜªI›:!ÈsWÁlR‘ ¦8]µ¸™*‘ÅE>÷jH@vH6—ÇãHN9"­ÔòÏˆJ§Änxÿ T¿Ö¹‹í[£Å©ñ3Ş.+89ªòí7Gß­s¹?&àÂ‘[`-‘Í .Zíe,HüêurFv•³TZŞ=kSJÊËæ7*¿x{•Ø´´=4x’;ıÆÖK·V#ÉóW£)äñëÏ_jIüC¨A,öÿ 4Qß…K„Sƒ´qôÏŠÀÉÅ6uş²Ñ#±»¹‚àí¸ŒB<öWò½øè?Â¬xKÀ&±òkß±¤2îü)Sß'Ewqzz·†ÛG•dKŸ> ì©*©ÇGô·ì¡â‰fÓ/<5s.ãhVHòyÁÇõ¥±3´•Ï¢á•ˆİÜEXêµÊ÷1z"&;dS´qÈ¨%·Œô dç­H“#T .õÈªppÔ™§™&éq>QÚ±c¶MÓH[qf¦ö5‰Ÿ­éğ\Û<rò¥H?.kàŸŒ:$:7‹õ(†Ôó F:óZQ–º›w<e8	‘ëY·I´Àü+ª:1£<ÙfãÓ4yKåšÔL©(Ú3œvª¤ímÍÈ5I˜–ùHwQg—øü"ø…Æşé{}k›Êu¿*İ#Ä©ñ³İn#ÌùXğj¸r?^•ëHlb q%p;
+"E\ LÒw-"¯@@éSFIûÇÆ)›–ŞFp…uğø¾Ômá¾‘- gÃJêp¸Ç9èk9»zÛ=ïü%maáÛ}%5I'd–xÜÒ%T(ç$Ç¥Q¸¶ğçŠ´µ±M*Ktå¶ƒ³Ê_˜~8jÀÅ²šû°½4ë+‹/í±vÛœ‚;Tú†×…-|?©ÜŞÛù¤lÂ•î1@—ÁZ£7Ú%ÔàŒiqAæ3H¦U‘ÈèEtß µx4‰°ÙZJ|›Á$8^ƒÒ†D‘öT-È'V|ÔéÎ}«–fMÚ¤mÎ{Ôrª? *"±…yäñÔTf8ÁŞÇ© «¯f&Š¾z‘éXÉ˜T+’ ê}èfĞíãx	àd×Åß´ÎŸ6’dLy±#Ê®æ¬ğùw+ujîec¨î¶¸¸[g?uC]Dj>¼]åv0
+î®b{)mƒ,„†‚¬¥Qò—û¦¡hó£è+KR'ò2¤~$Ví¼ñM½‡ÕSñx’Nqû¥şµÌìoï~µĞ‡‹Sãg»ÊFCc©ÍBd,:
+ÀõäE€»Î)Ğ•#%jIå€cƒg géV`Z\ƒòç¯jwF×;
+èÑÏ}÷¹¶GE™”ôÔW¬|Eør¾»ŠòÀ,zTÀMmH$1ü ÄzŸğ®zìÎO šw†Õ´©®åÕ¶±2Ç=¦YLDN8?Ş¿Ò¶-ìì<s.³?ˆ »º½¶’;yã‡tÀ#?‡9ëş(”dé–zeæk_5åíÕÑO&iÈur{wÆ}+I4ßÅi.§jÅz³yÂ@=·dÂ€(kæ«¤éëáˆ¯'Š(å2K)VF`)'·OÎº/0Ïyñ/E—ù&.I¦iKDh}Ù6ÅÏP9©£#vr+šLÎÃüğò3õ¨§˜zÔÔ§%ü‘Œ?W{µgÌcøPj–„Šcd$k>æÛr“3H¨îd_$‹T=x¯–ÿ j0‹ë-H.|Èö|V”÷4>sAÀ8÷ªaW§ÔM˜_Á{¤	mÖîØ€§9ÏáX×ŸgÕ¥jKä¾0] ûŠiê­á÷³p@-üË äYÀÑ¿ ûqWÌ^‚¬T–5fÎÖIR3É8àf©½…ÕÅ5‡Š¼©n3ZÇ! Œîí\oö2ÿ ÏÌ˜®„İ§ÆÏ`•n1ĞT-±pxÍd{k©eÂ8Qô¨²@PX)¿áOŞx›P]?N„Ïpßv-ÀıjÚñ„5Oj'MÕmZŞâ,;©»ZÍ½Fz/ÃXkvö±.º¶²Z‰.ïLŠ DB¸Æz’r1ÛÖ½sâ\–—ÿ à¹Ò¦UĞV@±Jøiæ—yëÜƒøT3/´eøgá×õi×Zf¢ ·ÔnL¨oâ¬ÊÍÛãÖ°¬ü!á6®—^#†êîŞçÈ…¥Sß9ã¨?•!/ˆáŞ_±=ÆqŞdrŸŞÚd#×¡?uŞ ğ%æ·­éréwĞºÌKHùù£ÚTó×œÿ µL©ø¥o¿ŒnwQ\æ(Ùäƒrz{Œ~ì¿²gƒëP¼ñ\ñ“²a,?ŒõÇàEE]‰“Ğú›Ê9ÈÍ9“)ò§ò®C$ÊìÄ>OQMY¾bN()nVº‡rÖc3)èx¤Î„Ğ\1!pjÄ»|®i™y²q^!ñ÷Ârk¾–{tÌ–DÊ02qß­'fR>9¾€Ç!Ò²æŒòO®±—´MZãE½†òRPç»”zôKÛk¶‰äé¨\©İºƒ—ôÚ9 Î[Ó.ü,ÚBéåƒÇ%²0ÌË´ç°ç©¯%Ô,ã¹¾”YÁ¹‘ïHŸq§ÏhJÍGÇŠ×ğ½¤bñ%—#;ÏáZ·d‹ê(øÌ/ï¼m-ÖlFSƒ÷rØ®ìWŞùêOCÅ©ñ³Øeˆœí|sQÈˆÉœŒŠÄö§bÔäˆ»``ƒÎiÖü;•´ß%Ğ—Ê1¶àá±Ç¦}Oaßîz=¥—Äoën©noÖoµÂì»¥–4^½Z±–àp×Ë¦ÚXÛßhR­´îVŞòÉ$Ã	W†8ë´ã'Ş»{OŞøŸÃš7ÃûXì¡·¸•Ã’)7nÜq–©"[¬ø¯Ä~ ñ'Øµ;ˆâ‰tknN!"†ıêİOóä×>ñ+ëö6ÑÙ*ß]t$-òÎdË	í’O¨";—<Q§ËâÛY9ÍòÂ°ŞFcò‚08úré­<¨øwN¹ñw†õØÅ½¦ØüÁ(À~(ç©ÍËcŒÖ´mcM¼©B7\fE“vàäüÄgÔxõ÷WÁ#EÒ|¥¦ŒñIÄÙ1g#œã½Lö2ùODØn”‘\–2MØ¬ñÜŠ­>ÅÈM°)Ë#ÉÆ íYÌ¿1goòqÚ“:ÄIrLú
+ÒÏÚ" zR°æ…Jí®w\Ò ¼·šŞd’!R¾Æœ^¥üXğ„ñÍœ‘9xØ6“Ç>Õçñió]]¬QG’ç
+{WtuWÒÃiàû ,õ{k‰g)ûÉPác§z­¡Ï¥hú¤†É¥yÔ”Ø}Å39nM©M¯Ü´ñİÛ4ğÜIÿ 1 ÿ ½ŒT¶6:,“èf¨ŞH× ?½ µ9rîmVäÏ}µœ  MK¦XHğ¤p)ónX*€)·±oF®y§Ç;­3ÆâÊd
+ÑYB0ûÕç¹—ĞşUĞ‡‹Qûìôù†ØÜZªÍ#ÙdN››kÕ›xğ	‡°ÏáŞ‘³âi4l‘ş_U\Šö-OU]&ãJ}Ê+'Ó´Ó#²óç°=_ëŸÒ¹å¹/r†>Ñ5(¯µıbÇírZ\ùÊ›ö_%?Vı+CÇĞô++OB²k[«ya–'góœŒ¼i	ìw^	Ñ.ş$xVÓ\ñV¯%Ò‹£Åå(*K67 c=‰ğ‹¯é×$–ò=¬k*)*]Ê— ÁÂqÅv<ÃK¼øHb»»ßu$Ò4[¤rYO#vîÿ Jš}gTÒc½’;H§wxádbÃ¾ŸÒ‚ú§ƒtÄñeåŞ‡¨ÜJV–h¥'s!ÇoËõ¯Mı™üg¬é^*“ÁfvÂ@änT§B?*RW&{VArÌvcÏ_óëVÉÁê+	-­dG"ƒŠ¥p nd4R•wdT^´ŒœPtE”î`P¹¦³Ş1ó(E7büq«Iós‘Uo,â,ÃÖsûAø+KÔü9.³qÿ VŸq‚˜Î|‡p©asÄ¹=G8Á×U7¥ŠİÖ‰§i~0Ó›PÖ,ØÏ
+à˜¤ØQŠæZÂÎâòæåbdŠ#µaİ‘­h÷%­İàH>[KU¤œ‚zœW›ÍªÌ¯uopÀ mgnTç­Or…œâí"væG›¦½ªÛÁZf“6“yŞËn$Á^7$]Gv|£ûMxãş¥Ükoˆí¢AïËW”ÿ ÂEuÿ <c®˜­àÏâgÿÙ_0http://copperbeechco.com/data/images/h_laugh.jpgZimage/jpegÓO¬GIF89a  Õ     `ˆè8hè¨¸ğX€è@pè¸ÈøØàø˜°ğ °ğ¨Àğhˆèx˜ğpè`€èğğøèèøĞàø°Àğ€ ğpğXxèxğàèøˆ ğĞØø¨ğÈØøÀĞøPxèøøøHpè                                                                                                !ù    ,       É@`H,E!aÁl:ŸP¦c¸h$XÉ¤Á\·İ/w1t,"t±Ğ<Ôl7|Ïñ€|ƒwCyŠ‘“•—Cy		£
+§©Cjj¸ºi¼¯³ÃÃrËÍE³CCÙÛFÓéëíïãD³|iëùûH ˆ+" ÁƒF„ \( D ;_,http://copperbeechco.com/data/images/rss.gifYimage/gifÔ_WebResourceTextEncodingNameUUTF-8OX<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><TITLE>CBC: Weblog</TITLE>
+
+<LINK href="../../../../data/cbcmainphp.css" rel="stylesheet" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.copperbeechco.com/blog/wp-feed.php"><SCRIPT language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</SCRIPT>
+
+<STYLE type="text/css">
+<!--
+body {
+        background-image: url(../../../../data/images/bg_bm.gif);
+}
+-->
+</STYLE><LINK href="../../../../data/cbcwpblog.css" rel="stylesheet" type="text/css"></HEAD><BODY><DIV id="containder">
+<DIV id="header">  <DIV id="globalNav">      <TABLE width="100%" height="20" border="0" cellpadding="0" cellspacing="0" id="nav">        <TBODY><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="../../../../">Home</A></TD><TD id="two" nowrap="nowrap"><A href="../../../../family_photos.php">Photos</A></TD><TD id="three" nowrap="nowrap"><A href="../../../../family_reunion.php">Family Reunion</A></TD><TD id="four" nowrap="nowrap"><A href="../../../../projects.php" class="style88">Projects</A></TD><TD id="five" nowrap="nowrap"><A href="../../../../weather.php">Weather</A></TD><TD id="six" nowrap="nowrap"><A href="http://copperbeechco.com/blog/">Weblog</A></TD><TD id="seven" nowrap="nowrap"><A href="../../../../links.php">Links</A></TD></TR></TBODY>
+      </TABLE>
+  </DIV>
+    <DIV id="cbctitle">    <A href="../../../../" class="cbctitle">CopperBeechCo.com</A> <A href="../../../../" class="cbcsubtitle">v3.3</A></DIV>
+</DIV>
+<DIV id="contentheader">      <DIV id="subglobalnav">        <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#DFDFDF" id="subnav">                    <TBODY><TR align="center" valign="middle"><TD nowrap="NOWRAP" id="one">Catagories</TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/">All Catagories </A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/?cat=3">Tech Blog </A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/?cat=4">Project Blog</A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/?cat=2">Geegee's Big Gig Blog </A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/?cat=8">Halo Blog </A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/?cat=1">Other</A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap">Meta</TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/wp-login.php">Admin Login </A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="http://copperbeechco.com/blog/wp-register.php">Register</A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"><A href="feed:http//copperbeechco.com/blog/wp-feed.php">RSS Feed</A></TD></TR><TR align="center" valign="middle"><TD id="one" nowrap="nowrap"> <FORM id="searchform" method="get" action="/blog/index.php"><INPUT type="text" name="s" id="s" size="15" value="Search Posts" onfocus="if(this.value=='Search Posts')this.value='';"><BR></FORM></TD></TR></TBODY></TABLE>
+                <DIV class="news">                  <P>New CBC Weblog!</P>
+                  <P><SPAN class="storycontent"><A href="http://wordpress.org/"><IMG src="http://www.copperbeechco.com/blog/wp-images/wp-small.png" alt="WordPress" width="135" height="22"></A></SPAN></P>
+                </DIV>
+                <P></P><DIV class="news"><IMG src="../../../../data/images/h_laugh.jpg" width="100" height="100" border="1"><P></P>
+                <P>Geegee's Big Gig</P>
+        </DIV>
+</DIV>
+      <DIV id="pagetitle" class="style89">        <SPAN class="style90">Weblog</SPAN> </DIV>
+      <DIV id="bcrumb" class="style87">        <DIV id="bcrumbbox"><A href="../../../../" class="bcrumb">Home &gt;</A><A href="http://www.copperbeechco.com/blog/" class="bcrumb"> Weblog</A></DIV>
+        <DIV id="toolbar"> 
+          
+          <SPAN class="toolbarstyle"></SPAN><A href="http://www.copperbeechco.com/blog/wp-feed.php" class="toolbarstyle">  <IMG src="../../../../data/images/rss.gif" width="22" height="12"></A><A href="../../../../contact_info.php" class="toolbarstyle">Contact Info</A></DIV>
+      </DIV>
+
+<DIV id="pcontent"> <DIV class="article">
+    <DIV class="post">         <DIV class="storytitle" id="post-36"><A href="http://copperbeechco.com/blog/?p=36" rel="bookmark">Ever wanted your own wiki?</A></DIV>
+             <DIV class="meta">Catagory: <A href="http://copperbeechco.com/blog/?cat=3" title="View all posts in Tech Bog" rel="category tag">Tech Bog</A> â€” Karan on May 18th, 2005 @ 9:11 pm</DIV>
+            
+        <DIV class="storycontent">                        <P>Tiger has one, wikipedia obviously has one, now you can have one too! Best of all, itâ€™s just one file that you open in your favorite browser, edit and save. What could be easier? Well, a notebook would be. But we geeks like to go the classy ajax/dhtml/css/xhtml transitional way. So there.</P>
+        <P><A href="http://www.tiddlywiki.com/">Tiddly Wiki</A>
+</P>
+            </DIV>
+            
+        <DIV class="feedback">                                    </DIV>
+            
+            
+</DIV>
+  <HR width="100%">
+  
+<DIV id="blogdate">No Comments 
+          <A href="#postcomment" title="Leave a comment">-</A>
+      </DIV>
+          <P>Â </P>
+          <P>Â </P>
+          <P>No comments have been posted.    </P>
+    
+
+  
+    <DIV class="storytitle">Leave a comment  </DIV>
+  <DIV class="storycontent">  </DIV>
+  <FORM action="http://copperbeechco.com/blog/wp-comments-post.php" method="post" id="commentform">    
+    
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+    <LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+    
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+    <LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+    
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+    <LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+    
+    
+    
+<P><TEXTAREA name="comment" id="comment" cols="70" rows="10" tabindex="4"></TEXTAREA>    </P>
+    
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+    <INPUT type="hidden" name="comment_post_ID" value="36">
+    </P>
+        
+  </FORM>
+    
+  </DIV>
+  
+  
+  
+</DIV>
+
+
+</DIV>
+
+</DIV>
+
+
+      
+
+
+
+
+</BODY></HTML>_#http://copperbeechco.com/blog/?p=36Ytext/html    1 7 > P _ u)?)n)w)~5G5u5|;;C;M;TvvÃvÎvÕx…x´x¾xÇxåxë•G•m                            •w

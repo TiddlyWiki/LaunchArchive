@@ -1,0 +1,806 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO$å/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_;http://kemitix.net/blog/wp-content/themes/default/style.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O5O<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><TITLE>Kemitix.net  Â» Blog Archive   Â» Are you Local?</TITLE>
+
+        <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <META name="generator" content="WordPress 1.5-beta-1 2005-01-30">
+
+        <LINK rel="stylesheet" href="http://kemitix.net/blog/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="stylesheet" type="text/css" media="print" href="http://kemitix.net/blog/print.css">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http:/kemitix.net/blog/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http:/kemitix.net/blog/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http:/kemitix.net/blog/feed/atom/">
+        <LINK rel="pingback" href="http://kemitix.net/blog/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://kemitix.net/blog/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                             #page           { background: url("http://kemitix.net/blog/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                   #header         { background: url("http://kemitix.net/blog/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://kemitix.net/blog/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /**/
+                #headerimg      { background: url('http://kemitix.net/blog/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                /**/
+
+        </STYLE>
+
+                <LINK rel="archives" title="June 2005" href="http://kemitix.net/blog/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://kemitix.net/blog/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://kemitix.net/blog/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://kemitix.net/blog/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://kemitix.net/blog/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://kemitix.net/blog/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://kemitix.net/blog/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://kemitix.net/blog/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://kemitix.net/blog/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://kemitix.net/blog/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://kemitix.net/blog/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://kemitix.net/blog/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://kemitix.net/blog/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://kemitix.net/blog/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://kemitix.net/blog/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://kemitix.net/blog/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://kemitix.net/blog/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://kemitix.net/blog/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://kemitix.net/blog/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://kemitix.net/blog/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://kemitix.net/blog/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://kemitix.net/blog/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://kemitix.net/blog/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://kemitix.net/blog/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://kemitix.net/blog/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://kemitix.net/blog/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://kemitix.net/blog/2003/04/">
+        <LINK rel="archives" title="March 2003" href="http://kemitix.net/blog/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://kemitix.net/blog/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://kemitix.net/blog/2003/01/">
+
+        <SCRIPT type="text/javascript">
+<!--
+function exh_popImage(oContent,oTitle) {
+	var x = window.open('','windowName','width=800,height=800,resizable=1');
+	if( !x ) { return true; }
+	x.document.open();
+	x.document.write('<html><head><title>'+oTitle+'<\/title>');
+	x.document.write('<sc'+'ript>');
+	x.document.writeln('var isNN,isIE;');
+	x.document.writeln('function reSizeToImage(){');
+	if (navigator.appName.indexOf("Microsoft")==-1)
+	{
+		x.document.writeln('window.innerWidth=document.images["ex_popimage"].width;');
+		x.document.writeln('window.innerHeight=document.images["ex_popimage"].height;');
+		x.document.writeln('document.title="'+oTitle+'";');
+	}else if(window.opera){
+		x.document.writeln('window.resizeTo(100,100);');
+		x.document.writeln('width=130-(document.body.clientWidth-document.images[0].width);');
+		x.document.writeln('height=100-(document.body.clientHeight-document.images[0].height);');
+		x.document.writeln('window.resizeTo(width,height);');
+	}else{
+		x.document.writeln('window.resizeTo(100,100);');
+		x.document.writeln('width=100-(document.body.clientWidth-document.images[0].width);');
+		x.document.writeln('height=100-(document.body.clientHeight-document.images[0].height);');
+		x.document.writeln('window.resizeTo(width,height);');
+	}
+	x.document.writeln('}</sc'+'ript>');
+	x.document.write('<\/head><body style="margin:0px;" id="ex_popbody" scroll="no" onload="reSizeToImage();self.focus();">');
+	x.document.write('<img id="ex_popimage" name="ex_popimage" src="'+oContent+'" alt="'+oTitle+'" onclick="window.close();" \/><\/body><\/html>');
+	x.document.close();
+	/*x.innerWidth=x.document.images["ex_popimage"].width;
+	x.innerHeight=x.document.images["ex_popimage"].height;*/
+
+	if( x.focus ) { x.focus(); }
+}
+// -->
+</SCRIPT>
+        <STYLE type="text/css" media="screen">
+                @import url( http://kemitix.net/blog/exhibit.css );
+        </STYLE></HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://kemitix.net/blog">Kemitix.net</A></H1>
+                <DIV class="description"></DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">Â« <A href="http://kemitix.net/blog/2005/06/03/nhs-direct/">NHS Direct</A></DIV>
+                        <DIV class="alignright"></DIV>
+                </DIV>
+        
+                <DIV class="post">                        <H2 id="post-5773"><A href="http://kemitix.net/blog/2005/06/03/are-you-local/" rel="bookmark" title="Permanent Link: Are you Local?">Are you Local?</A></H2>
+        
+                        <DIV class="entrytext">                                        <P>I like surprises like <A href="http://www.uip.co.uk/leagueofgentlemen/trailer.html">this</A>.  I didnâ€™t even know that they were making a film version.  Itâ€™s on at the Odeon as of today.</P>
+        <P>In other news. DDS put on <STRONG>No Sex Please, Weâ€™re British</STRONG> a couple of weeks ago on 20th and 21st of May.  It was a farce (intentionally), it had scantily clad young women, lots of doors, scantily clad me (sorry) and a great turn out came to watch.  We didnâ€™t tell them about the half-naked me running around stage, which no doubt helped.</P>
+        <P>Working on a new Project for Audio Plays using Cossmass as the basis for the first script.  Hosting for it will be with <A href="http://www.roseweir.co.uk/">Jason</A> at <A href="http://cossmass.co.uk/">Cossmass.co.uk</A>.  Go check out his rates.  <A href="http://rosewired.co.uk/">Very much cheep</A>.  At the moment Iâ€™m working on the script for the first episode and lots of new setting and background details.  Nothing that happened in previous incarnations is necessarily the same in this new setting, even if I keep some of the names.</P>
+        <P>Wonderful tool Iâ€™m using to help with putting all those notes together is something <A href="http://www.livejournal.com/users/scimon/">Simon</A> pointed to last week.  <A href="http://www.tiddlywiki.com/">TiddleWiki</A>.  A self-contained HTML file that is a Wiki.  Editing the file locally it rewrites itself on disk as you save changes.  There are a number of customisations that people have done to it, including one to use it hosted on a server.  Iâ€™ve been quite content with the basic Tiddler.  It is a wonderful demonstration of what you can do with javascript and a web browser, as if <A href="http://gmail.google.com/">GMail</A> and <A href="http://maps.google.co.uk/">Google Maps</A> werenâ€™t good enough examples.
+</P>
+        
+                                        
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Friday, June 3rd, 2005 at 6:44 am                                         and is filed under <A href="http://kemitix.net/blog/category/writing/" title="View all posts in Writing">Writing</A>,  <A href="http://kemitix.net/blog/category/cossmass/" title="View all posts in Cossmass">Cossmass</A>,  <A href="http://kemitix.net/blog/category/filmstv/" title="View all posts in Films/TV">Films/TV</A>,  <A href="http://kemitix.net/blog/category/stage/" title="View all posts in Stage">Stage</A>.
+                                                You can follow any responses to this entry through the <A href="http://kemitix.net/blog/2005/06/03/are-you-local/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://kemitix.net/blog/2005/06/03/are-you-local/trackback/">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+<FORM action="http://kemitix.net/blog/wp-comments-post.php" method="post" id="commentform">
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<INPUT type="hidden" name="comment_post_ID" value="5773">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment"></P>
+
+</FORM>
+
+        
+                
+        </DIV>
+
+
+<HR>
+<DIV id="footer">        <P>                Kemitix.net is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http:/kemitix.net/blog/feed/">Entries (RSS)</A>
+                and <A href="feed:http:/kemitix.net/blog/comments/feed/">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV>
+
+
+
+
+</BODY></HTML>_1http://kemitix.net/blog/2005/06/03/are-you-local/Ytext/html    1 3 : L [ q%Z%˜%¡%ª%È%Î[![U                           [_

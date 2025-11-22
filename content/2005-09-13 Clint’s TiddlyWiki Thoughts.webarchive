@@ -1,0 +1,505 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives°’	
+_WebResourceMIMEType_WebResourceData_WebResourceResponse_WebResourceTextEncodingName^WebResourceURLYtext/htmlO,€google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  var region = (w.google_ad_region == null) ? '' : w.google_ad_region;
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats_by_region[region] = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && region == '') {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  var client = w.google_ad_client;
+  if (!w.google_num_slots_by_client[client]) {
+    w.google_num_slots_by_client[client] = 1;
+    w.google_num_slots_by_client.length += 1;
+  } else {
+    w.google_num_slots_by_client[client] += 1;
+  }
+
+  if (w.google_prev_ad_formats_by_region[region]) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats_by_region[region].toLowerCase());
+    if (w.google_num_slots_by_client.length > 1) {
+      google_append_url('slot', w.google_num_slots_by_client[client]);
+    }
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats_by_region[region]) {
+      w.google_prev_ad_formats_by_region[region] = w.google_prev_ad_formats_by_region[region] + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats_by_region[region] = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  google_append_url('bid', w.google_bid);
+
+  if (w.google_noframe) {
+    google_append_url('nloc', document.location);
+  }
+
+  if (w.google_onpage && document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+  w.google_bid = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+function google_in_adframe() {
+  var w = window;
+  var d = document;
+  if (w.top.location == d.location) {
+    w.google_onpage = 1;
+    return false;
+  }
+
+  if (w.google_ad_width && w.google_ad_height) {
+    var wd = 1;
+    var ht = 1;
+    if (w.innerHeight) {
+      wd = w.innerWidth;
+      ht = w.innerHeight;
+    } else if (d.documentElement && d.documentElement.clientHeight) {
+      wd = d.documentElement.clientWidth;
+      ht = d.documentElement.clientHeight;
+    } else if (d.body) {
+      wd = d.body.clientWidth;
+      ht = d.body.clientHeight;
+    }
+
+    if (ht > 2 * w.google_ad_height ||
+        wd > 2 * w.google_ad_width) {
+      w.google_noframe = 1;
+    }
+  }
+
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (!google_in_adframe()) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (!google_in_adframe()) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+if (window.google_num_slots_by_client == null) {
+  google_num_slots_by_client = new Array();
+}
+
+if (window.google_prev_ad_formats_by_region == null) {
+  google_prev_ad_formats_by_region = new Array();
+}
+
+google_show_ad();
+Obplist00‘
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver Ü†—	_WebResourceResponseÄØ(./67;?CYZ[\]^_`abcdefghimpU$nullﬂ !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1ÄÄÄ#A°Ø≈[Ñw #A°ìé\?£Ä#A°ñkøèr÷Ä”)*+,-WNS.base[NS.relativeÄ ÄÄ_7http://pagead2.googlesyndication.com/pagead/show_ads.js“0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYtext/html“89:YNS.stringUutf-8Ä“01<=£=>5_NSMutableStringXNSString”@ABÄ	Ä»”DEFOXZNS.objectsWNS.keys®GHIJKLMNÄÄÄÄÄÄÄÄ®PQRSTUVWÄ
+ÄÄÄÄÄÄÄÄVServer_Content-Encoding]Last-Modified]Cache-ControlTDate^Content-Length\Content-TypeSP3pXCAFE/1.0Tgzip_Sat, 03 Sep 2005 01:54:54 GMT_private, x-gzip-ok=""_Tue, 13 Sep 2005 22:46:05 GMTQ0_text/html; charset=UTF-8_lpolicyref="http://www.googleadservices.com/pagead/p3p.xml", CP="NOI DEV PSA PSD IVA PVD OTP OUR OTR IND OTC"“01jk£kl5_NSMutableDictionary\NSDictionary“01no¢o5_NSHTTPURLResponseInternal“01qr£rs5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d Ñ ä ´ Æ ≤ µ π º ø √ ∆ … Ã œ ÷ Ÿ › ‡ ‚ ‰ Ê Ë Í Û ı ˛ (*,.hmvÅÖãíõ•™¥∫º¡≈◊‡ÁÈÎÌÙˇ )+-/13579;BUcqvÖíñü§ƒ‹¸˛àçëß¥πºÿ›·ı             t              Uutf-8_7http://pagead2.googlesyndication.com/pagead/show_ads.js‘	
+UUTF-8O%˚<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>   
+<TITLE>Clint‚Äôs TiddlyWiki Thoughts </TITLE><META http-equiv="Content-Type" content="text/html; charset=utf-8">      
+<META http-equiv="imagetoolbar" content="no"><META content="TRUE" name="MSSmartTagsPreventParsing"><META name="generator" content="WordPress 1.5.1-alpha"> 
+<STYLE type="text/css" media="screen">
+@import url( "http://tiddlywiki.blogsome.com/templates/wp-layout.css" );
+</STYLE>   
+<LINK rel="alternate" type="text/xml" title="RDF" href="http://tiddlywiki.blogsome.com/feed/rdf/"><LINK rel="alternate" type="text/xml" title="RSS" href="http://tiddlywiki.blogsome.com/feed/"><LINK rel="pingback" href="http://tiddlywiki.blogsome.com/xmlrpc.php"></HEAD><BODY>
+<SCRIPT type="text/javascript">
+function wpopen (macagna) {
+    window.open(macagna, '_blank', 'width=400,height=400,scrollbars=yes,status=yes');
+}
+</SCRIPT>
+
+
+<DIV id="rap"><H1 id="header"><A href="http://tiddlywiki.blogsome.com" title="Clint‚Äôs TiddlyWiki Thoughts">Clint‚Äôs TiddlyWiki Thoughts</A></H1>
+<DIV id="content"><H2>September 9, 2005</H2>
+<DIV class="post"><H3 class="storytitle" id="post-2"> <A href="http://tiddlywiki.blogsome.com/2005/09/09/why-in-the-world-a-tw-blog/" rel="bookmark" title="Permanent Link: Why in the world a TW blog?">Why in the world a TW blog?</A> </H3>
+<DIV class="meta">Filed under: <A href="http://tiddlywiki.blogsome.com/category/the-focus-of-this-site/" title="View all posts in TiddlyWiki" rel="category tag">TiddlyWiki</A></DIV>
+<DIV class="storycontent">                <P>Let me put the cart before the horse. TiddlyWiki (which I‚Äôll give you the scoop on later) has an incredible userbase. However, because of how the system is currently setup, the great inter-linking between different TiddlyWiki appears to be nil. At least that‚Äôs what Google is thinking.</P>
+        <P>Google (the search engine, duh!) crawls around websites and reads them. Its been called most important blind visitor any site could have. As Google crawls each site, it finds links and follows them, just like you or me. If a site has a lot of links pointing to it, Google figures its probably a pretty important site. This phenomenon is called ‚ÄòGoogle juice‚Äô or, at least that what I call it. So now you know the lingo; if I‚Äôm linking to a site I‚Äôm giving it Google juice and making it more popular in google‚Äôs eyes.</P>
+        <P>So what does this have to do with TiddlyWiki? Plenty. The google crawler is not only blind, but it also ignores any JavaScript on a page. (Which gives us a darn good reason to code a version of any page that works sin-JavaScript.) TiddlyWiki being very <A href="http://en.wikipedia.org/wiki/AJAX">Ajax</A>-ish  happens to rely very heavily on JavaScript. Without JavaScript, a page looks like this:</P>
+        <BLOCKQUOTE><P>NathanBower‚Äôs GTDTiddlyWiki is an adaptation of an earlier revision of TiddlyWiki. It‚Äôs geared towards DavidAllen‚Äôs GettingThingsDone methodology for personal productivity. It‚Äôs available [[here|http://shared.snapgrid.com/gtd_tiddlywiki.html]] and Nathan is also hosting a forum for discussions about it [[on his site|http://shared.snapgrid.com/gtd-forum/]].\n\nIf you want to have the GTD look-and-feel but still be able to use the latest TiddlyWiki features, check out the GTD Style at [[TiddlerWiki|http://checketts.objectis.net/wiki/]]</P></BLOCKQUOTE>
+        <P>Notice how a link is rendered [[TiddlerWiki|http://checketts.objectis.net/wiki/]] rather than the usual html &lt;a href=‚Äùhttp://checketts.objectis.net/wiki/‚Äù&gt; TiddlerWiki &lt;/a&gt;? This confuses the Google crawler and no linkage.</P>
+        <P>Lets not cry over spilt google juice. This TW blog will try to act as the Ace TW correspondent in these dark times. Okay the ‚ÄòAce‚Äô is probably exagerating, but we‚Äôll let you judge the blog by its fruits.</P>
+        <P>Let the google juice flow.
+</P>
+
+</DIV>
+
+<DIV class="feedback">        
+        <A href="http://tiddlywiki.blogsome.com/2005/09/09/why-in-the-world-a-tw-blog/#comments">Comments (0)</A>
+</DIV>
+
+</DIV>
+<BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR>
+</DIV>
+<DIV id="menu">      <UL>      <LI><A href="http://tiddlywiki.blogsome.com">Home</A></LI></UL>
+        
+        <UL><LI id="links">Links:
+        <UL>          <LI><A href="http://blogsome.com/">Blogsome</A></LI>
+<LI><A href="http://blogsome.com/forum/">Blogsome Forum</A></LI>
+
+        </UL>
+        </LI></UL>
+        
+        <UL><LI id="categories">Categories:
+        <UL>                <LI><A href="http://tiddlywiki.blogsome.com/category/the-focus-of-this-site/" title="Most anything in this site should be about TiddlyWiki">TiddlyWiki</A>
+</LI>
+
+        </UL>
+        </LI></UL>
+        
+        <UL><LI id="search">Search: <FORM id="searchform" method="POST" action="">          <DIV><INPUT type="text" name="s" size="15"><BR>
+          <INPUT type="submit" name="submit" value="search">
+          </DIV></FORM>
+        </LI></UL>
+
+        <UL><LI id="archives">Archives:
+        <UL>                <LI><A href="http://tiddlywiki.blogsome.com/2005/09/" title="September 2005">September 2005</A></LI>
+
+        </UL>
+        </LI></UL>
+        
+        <UL><LI id="calendar">           <TABLE id="wp-calendar">    <CAPTION>September 2005</CAPTION>
+    <THEAD><TR><TH abbr="Sunday" scope="col" title="Sunday">S</TH><TH abbr="Monday" scope="col" title="Monday">M</TH><TH abbr="Tuesday" scope="col" title="Tuesday">T</TH><TH abbr="Wednesday" scope="col" title="Wednesday">W</TH><TH abbr="Thursday" scope="col" title="Thursday">T</TH><TH abbr="Friday" scope="col" title="Friday">F</TH><TH abbr="Saturday" scope="col" title="Saturday">S</TH></TR></THEAD>
+
+    <TFOOT><TR><TD colspan="3" id="prev" class="pad">¬†</TD><TD class="pad">¬†</TD><TD colspan="3" id="next" class="pad">¬†</TD></TR></TFOOT>
+
+    <TBODY><TR><TD colspan="4" class="pad">¬†</TD><TD>1</TD><TD>2</TD><TD>3</TD></TR><TR><TD>4</TD><TD>5</TD><TD>6</TD><TD>7</TD><TD>8</TD><TD><A href="http://tiddlywiki.blogsome.com/2005/09/09/" title=" Why in the world a TW blog?">9</A></TD><TD>10</TD></TR><TR><TD>11</TD><TD>12</TD><TD id="today">13</TD><TD>14</TD><TD>15</TD><TD>16</TD><TD>17</TD></TR><TR><TD>18</TD><TD>19</TD><TD>20</TD><TD>21</TD><TD>22</TD><TD>23</TD><TD>24</TD></TR><TR><TD>25</TD><TD>26</TD><TD>27</TD><TD>28</TD><TD>29</TD><TD>30</TD><TD class="pad" colspan="1">¬†</TD></TR></TBODY>
+        </TABLE>
+        </LI></UL>
+        
+        
+                <UL><LI>Most Recent Posts
+        <UL>                <LI><A href="http://tiddlywiki.blogsome.com/2005/09/09/why-in-the-world-a-tw-blog/" title=" Why in the world a TW blog?"> Why in the world...</A></LI>
+                </UL>
+        </LI></UL>
+                
+        
+        
+                  <UL><LI>Most Popular Posts
+          <UL>                      <LI><A href="http://tiddlywiki.blogsome.com/2005/09/09/why-in-the-world-a-tw-blog/" title=" Why in the world a TW blog?"> Why in the world a TW blog?</A>: 3</LI>
+                      <LI><A href="http://tiddlywiki.blogsome.com/2005/09/09/why-in-the-world-a-tw-blog/" title=" Why in the world a TW blog?"> Why in the world a TW blog?</A>: 1</LI>
+                    </UL>
+          </LI></UL>
+                <UL><LI id="other">Other:
+        <UL>          <LI><A href="http://tiddlywiki.blogsome.com/wp-login.php">login</A></LI>
+          <LI><A href="http://tiddlywiki.blogsome.com/wp-register.php">register</A></LI>
+        </UL>
+        </LI></UL>
+        
+        <UL><LI id="meta">Meta:
+        <UL>          <LI><A href="http://tiddlywiki.blogsome.com/feed/rss/">RSS .92</A></LI>
+          <LI><A href="http://tiddlywiki.blogsome.com/feed/rdf/">RDF 1.0</A></LI>
+          <LI><A href="http://tiddlywiki.blogsome.com/feed/">RSS 2.0</A></LI>
+          <LI><A href="http://tiddlywiki.blogsome.com/comments/feed/">Comments RSS 2.0</A></LI>
+          <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+        </UL>
+        </LI>
+        </UL>
+
+        <UL><LI><UL><CENTER>        <SCRIPT type="text/javascript"><!--
+        google_ad_client = "pub-0490979434562042";
+                   google_ad_width = 120;
+                   google_ad_height = 240;
+                   google_ad_format = "120x240_as";
+                   google_ad_channel ="6155959376";
+	google_color_border = "8F5030";
+        google_color_bg = "4F281F";
+        google_color_link = "F0974F";
+        google_color_url = "F0974F";
+        google_color_text = "C08760";
+        //--></SCRIPT>
+        <SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </SCRIPT><IFRAME name="google_ads_frame" width="120" height="240" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0490979434562042&dt=1126648674708&format=120x240_as&output=html&channel=6155959376&url=http%3A%2F%2Ftiddlywiki.blogsome.com%2F&color_bg=4F281F&color_text=C08760&color_link=F0974F&color_url=F0974F&color_border=8F5030&cc=100&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=11&u_nmime=138" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+        </CENTER></UL></LI></UL>
+</DIV>
+</DIV>
+        <P class="credit">get your <A href="http://www.blogsome.com">free blog</A> @ blogsome | for theme info - <A href="http://www.blogsome.com/wordpress-themes.php">WordPress Themes</A></P>
+
+</BODY></HTML>_http://tiddlywiki.blogsome.com/°—’	
+_WebResourceFrameNameOù<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';} function jcc(a) {pha=document.getElementById(a); nc=pha.href.indexOf('&jca='); if(nc>=1) return; jca=(8966)-(701)-(109); if (a=='aw0') {jca+=(-192);} else if (a=='aw1') {jca+=(-3379);} else {jca=0;} phb=pha.href+'&jca='+jca; pha.href=phb;} function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb; jcc(a); }function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb; jcc(a); top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb; jcc(a); top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#f0974f" alink="#f0974f" vlink="#f0974f" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="240" cellspacing="1" cellpadding="0" border="0" bgcolor="#8f5030"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://tiddlywiki.blogsome.com/&hl=en&client=ca-pub-0490979434562042&adU=www.shadows.com&adT=Blog+the+Shadow+Web&adU=NewsInABox.com&adT=RSS+Reader+-+NewsInABox&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#ffffff">Ads by Goooooogle</FONT></A></TD></TR><TR><TD bgcolor="#4f281f" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.shadows.com','aw0')" onmouseover="ss('go to www.shadows.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#f0974f"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BCjfOrlYnQ8yYIMfOQe6g1PQNpq6AC5yA2-QBwI23AfDmFxABGAEgsq71ASgCQIoWSI85UMCgo7_6_____wGqAQo2MTU1OTU5Mzc2sgEXdGlkZGx5d2lraS5ibG9nc29tZS5jb226AQoxMjB4MjQwX2FzyAEB2gEfaHR0cDovL3RpZGRseXdpa2kuYmxvZ3NvbWUuY29tLw&num=1&adurl=http://www.shadows.com/%3Fgcid%3DS15817x038%26keyword%3Dblogging%26%3Futm_id%3D1004%26utm_source%3DGoogle%26utm_medium%3DPPC%26utm_term%3Dblog%2Bkeyword%26utm_campaign%3Dblog%2Brelated%26utm_term%3Dblogging&client=ca-pub-0490979434562042" onfocus="ss('go to www.shadows.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.shadows.com','aw0')" onmouseout="cs()"><B>Blog the Shadow Web</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#c08760">Blog and Tag Any Web Page Help Create the Shadow Web<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#f0974f">www.shadows.com</FONT></DIV></TD></TR><TR><TD bgcolor="#4f281f" id="taw1" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to NewsInABox.com','aw1')" onmouseover="ss('go to NewsInABox.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#f0974f"><A id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BFeEmrlYnQ8yYIMfOQe6g1PQN44nqDJ3_s8MBwI23AYCQThACGAIgsq71ASgCQIoWSI05UPiY5vz7_____wGqAQo2MTU1OTU5Mzc2sgEXdGlkZGx5d2lraS5ibG9nc29tZS5jb226AQoxMjB4MjQwX2FzyAEB2gEfaHR0cDovL3RpZGRseXdpa2kuYmxvZ3NvbWUuY29tLw&num=2&adurl=http://www.NewsInABox.com&client=ca-pub-0490979434562042" onfocus="ss('go to NewsInABox.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to NewsInABox.com','aw1')" onmouseout="cs()"><B>RSS Reader - NewsInABox</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#c08760">Newspaper style feed reader No configuration required!<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#f0974f">NewsInABox.com</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_{http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0490979434562042&dt=1126648674708&format=120x240_as&output=html&channel=6155959376&url=http%3A%2F%2Ftiddlywiki.blogsome.com%2F&color_bg=4F281F&color_text=C08760&color_link=F0974F&color_url=F0974F&color_border=8F5030&cc=100&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=11&u_nmime=138   ! 3 I K V l ~ î ≤ ¡ À-™2π2ø2˘33YY)Y+Y.Y9YPkÒl                           mÉ

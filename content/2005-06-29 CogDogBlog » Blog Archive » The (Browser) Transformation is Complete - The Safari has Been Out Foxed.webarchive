@@ -1,0 +1,1018 @@
+bplist00Ò_WebSubresources_WebMainResource¤Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO3+/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+    text-align: right;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: right;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: #000;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 110px;
+   padding-right: 35px;
+	margin: 0;
+	}
+
+.description {
+	text-align: right;
+    padding-right: 35px;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+
+.arch_list li {
+   padding-bottom:0;
+   margin-bottom: 1em;
+}
+
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+
+pre {
+    border: #777777 1px solid;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #e6e6e6;
+    color: black;
+}
+
+/* End Various Tags & Classes*/
+
+/* Alan's Custom CSS for content inserted for flickr blogged content */
+
+.flickr-photo {
+	border: solid 1px #000000;
+}
+
+.flickr-yourcomment {
+      font-family: "American Typerwriter", "Courier New", Courier, monospaced;
+      font-size:1.2em;
+      font-color: #111;
+      line-height: 1.4em;
+      padding-bottom: 4px;
+      margin-right: 60px;
+}
+
+.flickr-frame {
+    font-family:"Lucida Grande", verdana, arial, sans-serif;
+	float: left;
+	width: 150px;
+	text-align: center;
+	padding: 3px;
+	margin-right: 10px;
+       border-right: 16px solid #ccf;
+}
+
+.flickr-caption {
+   font-family:"Lucida Grande", verdana, arial, sans-serif;
+   line-height: 1em;
+   color: #557;
+	margin-top: 0px;
+}
+
+.flickr-album {
+	padding: 0;
+	width: 550px;
+}
+
+.flickr-thumbnail {
+	padding-right: 20px;
+	background-color: #fff;
+	border: 1px solid #a9a9a9;
+	margin: 6px 6px 6px 6px;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.flickr-title {
+	width: 500px;
+	color: #260;
+	padding-top: 6px;
+}
+
+a.annotation {
+	position: absolute;
+	border: 1px solid white;
+	padding: 0;
+	display: none;
+}
+
+a.annotation span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* Setup opaque background in notes box with browser specific opacity
+	 * properties (they aren't valid CSS - sorry).  If having valid CSS is
+	 * so important	to you just get rid of the next 4 lines after these
+	 * comments (you'll sacrifice the opaque background in the notes
+	 * boxes.
+	*/
+	background: white;
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+a.annotation:hover {
+	border-color: yellow;
+}
+
+
+/* begin styles for RSS Feed */
+
+.rss_box {
+	 margin: 1em;
+	 width: 100%;
+	 background-color: #9CBDDE;
+	 border: 1px solid ##5F74CC;
+	 
+}
+.rss_items {
+	margin-top:0px;
+	padding:0.5em; 0.5em;
+	margin-left:0px;
+	color:##0099ff;
+}
+p.rss_title {padding:0.5em;}
+.rss_title {
+	text-decoration: none;
+	font-family: verdana, sans-serif;
+	font-size: 110%;
+	background-color:#3984BD;
+	color:#ffffff;
+	font-weight:bold;
+	margin: 0px;
+	padding:0em;
+	text-align: left;
+}
+
+.rss_item  {
+  font-family: verdana, arial, sans-serif;
+  font-size: 100%;
+  font-weight : normal;
+  list-style:none;
+  padding-bottom:1em;
+}
+
+.rss_item a {
+	color:blue;
+	font-size: 100%;
+	font-weight:bold;
+	font-family:arial, sans-serif;
+	}
+	
+.rss_item a:visited {
+	color:#330066;
+}
+
+.rss_date {
+	font-size: 90%;
+	font-weight : normal;
+	color: #F60;
+	}
+/* SUBSCRIPTION MANAGER STYLE */
+.subscription-manager {
+padding: 10px 0 20px 0;
+margin: 5px 0 0 55px;
+width: 650px;
+}
+
+div.wrap {
+background: #fafafa;
+padding: 5px 10px;
+margin: 20px 0;
+border: 1px solid #ccc;
+}
+
+div.wrap h2 {
+margin: .5em 0 1em 0;
+border-bottom: 2px solid #589bd2;
+}
+
+div.wrap fieldset {
+border: 1px solid #555;
+margin: 1em 0;
+padding: 5px 10px;
+}
+
+div.wrap fieldset legend {
+font-weight: bold;
+font-size: small;
+}
+
+div.wrap p.submit {
+text-align: right;
+}
+
+
+.updated {
+        background: #B9D6EF;
+        border: 1px solid #589bd2;
+        margin: 1em 5% 10px;
+        padding: 0 1em;
+}
+
+.updated-error {
+background-color: #FFA3A3;
+border: 1px solid #FF5D5D;
+}
+
+div.wrap form {
+margin: 0;
+padding: 0;
+}
+
+div.warp li {
+        margin-bottom: 6px;
+        line-height: 130%;
+}
+/* END SUBSCRIPTION MANAGER STYLE */
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_Jhttp://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/style.cssXtext/cssÓO·ÿØÿà JFIF   d d  ÿì Ducky       ÿî Adobe dÀ   ÿÛ „ #%'%#//33//@@@@@@@@@@@@@@@&&0##0+.'''.+550055@@?@@@@@@@@@@@@ÿÀ  „ Š" ÿÄ œ                                !1AQaq‘¡"±2RÁÑBb3r‚’#áCğñ¢Â£$        !1A‘QaqB¡Ñá"2RğÁbñÿÚ   ? ß¡D …æ¶j,Ô5RÚãEê!œh$œ€Y­ëŞ–V.u½ˆw#à´ÃÒáóŞ²»¾á¹¿UìÆFÖ¢/–6õ0aö­ííİ±?hï™\¼©Ş{è7äÙ­Éi¹¸~A“Å•hí*½ßişÕ´Îéqcï+•›cx:±páŠav¶øÔÄ®onB¨øÍÿ ^À|ÖrĞöô~îÛœ@–9¡æKC‡ş78ø*ÀÒÜ(( I áÁzv¶»óœ&şéà§Êoí7M¾÷k†Hï¢´ô:ğR—8uŒSÓ½€¸bõÇCĞ^À<U½…ï¹vö5ÚÉYôH$4ü²
+»¾©;ËjÙº¨[!wì¯…cÖo3æ‡Å>áğ›({~ëk¸2±êQóÁ(Ñ#:Ç±‚˜³›ÁB!!„e‘±FéhÖ‚Iè	J»~˜Ã·Jài=EÀË¶•fıA<§Hº™Wö`9Ê‹]ÉÍÜ]u&jµİ
+wP*sûÎKÒûµÆ;QVË0ÁÒğ roÅ8n#´ÇšL{6Ñ$¦{–¹ò;4ÖWŠSeº[E½à[Kâcû½›8ÖšHî.Ç)–V÷s6hÌ²;&·—3È-PÛ¶ı» ¦½õªòÕĞØµì²ŒB×š»2ãÊ¤Ô§›«[
+t«á\¢KÒn»b@^=²Û{m°¸Üî›‚!­îwÒ*GoŞß©86¸•öWnî28¸Bt4W>o2&úq3
+
+
+§vqí‹—Kâ( ‘úµnãY¶?¥›´ñ’#püØY9Òâ8pêìO–È^	5æRM´U©$5B«™¬€â	¡!½&¿eU®Ça¸Gqû‹+–:3ú°ÆíEÂ˜ja§zbhã{-ƒ
+•ÒKÃØçG Å®´„¦ón×­PÉ”0”6;…WÔRºOm?ìè±H'w§/ö®ÈM[AÌ.ŞşXdô.úšó‡Ş±›g»ÜKmw‘ëDpmÈıFuÓ5°k¡»·k^ñ+¬SúÍ”»²ºª¡;mò—…ËW– }¼Gï)h$av€á®š´ñ¦UJTPÉ4WLk\Æ¹ ñx`;µw«¨d08‚¨Ù¾·5é§#¹l¡¦qhBÓ8*_tQÛ{¡Õ¥Ò†ö88øt±ÛÅù¹ºyi¨iÓà8ö¥÷W}»gµşÑÚZ/uHôÜ²•¬‡ÓX”O)@–GÍïø$Ó<Ô“-Û=	ZŠHJk	DôÊxuÇs)Ì9î'½J}ı´D6Ydåª¢½êÂ×h}ÍÃ¨ZÆV¥Ç<yÎës±Û´ÙÛÄİÂé§Í,˜Ã‡ÒÑó8rËŸ%ge¼Ü6ÑC§úá õMÉÉºÌÖîSøi%ê<O:Bg÷­ÖZáAZU\¬ùqi‰4Æ’[œ¢\ÛÇ6'}A1s7˜9ÁÃJ‚àÈÒ×fŞ<ÑQ”Ùm2€àÁöĞ¤j¡Ç‡B¶öîå$	1>®¼ÄñUNr±Û¶ôI u&±”88cXİ¤–ÒRUm³ƒÀÕ½'œ£Ó=Ã|Q²ƒÅkˆšğğecÎb¿/lš¥ñWäq™«±ı³%äâÓö%ØNpç=À0Ó>u¢ùîœÄ^ ŸI^XË[‹u¶Hô|iıËô „+1İÉx·—@«ô;Hšašç¶ÑÎ4—8<=ÌÓ4¸ƒCÖº$¸Fî¥Ï]8s£‰gªş·¤·ÔÒ¸cıJ;V§,+g™ÅÎÀ4$Ô¸×¹:AoÕO
+¤ëÒ*M ÍN”ÀÌò1•O²5K-íÃ‘Åài‹›İÂCã™à¹ÚuV´Â¼p[Û°ÎÊ¢•cIë²Q\&–h%¼‘ÆâÇ½¤5ÃHYKxšĞ Şwˆ\¸/LÀã$s‰s°.$šeŠ¹Óö×,—  Ğ‚'Îu-Å»á
+¨ öI!ÔP.ƒ›!qÅ®È©Ò&¶'8f¤Fm°CeZá!¥ÛËG†—@e^•Ï$ÔæR–z£İE%œîÔÒĞıàB»ö<dM|×‡1€“¨³›cMÅüp¸’$ÔÒs¡- ÂµŞÖ·}­¼ï”i‘òĞòg—ãU7¬^S¶{y7ØG™?(ÖÂÃ-ÀF"Œ<è>rò&×nqÅÃ³şJf¨Şü´·>UsqğVQám¤ñi'·ì,Û'}1•¿Ê*¾rÛÆ™³€<ğ•Ã
+=r7šY}HÁèO([]}^Jjú)*7?è»©sK'kšRsgv¦J+‡Bæó·ö»ãpt•u•Ş-P.r‡Mj5ÅâTGë$×S?3~	¹q‰Á(aB8¯hG¥Œ•)œ„"Ro°¾)ZîñÒ„t+ÙKáÒ0jÓ‰o03[k5M ƒß3*!…A Ê››9m#T|2íäšŒ>Gi¥ÎäUÔ;…¬ƒæĞx‡aş‰ñ=³F3°±SN±uSKÚÔãÕZ|)%\è¶Ùê—
+¡ôÒ¼Œ¯‡f»”UÅ±ôSà‘{³ŞÚÂgsD™ìÇOñ
+|Û•¼L/ÕPÜÜphïUãŞ²@í•¤©ä€kùhpE¡¼¸õĞxŠPsœî:nÒÚSQVàI©>S?3Á‘Ä;P'4ÙrNª¥Eæx˜½ÆÉàªj®1´–{(ÿ Ş¶-qcĞ
+ßË›“pk¡ÔqXÿ oX»ü£šq•ipËYò}ët"õ®N-¡<šjX¸qmWZø¶"PÙnÛ3a©Ÿ>êAä–·7y@é8&7P#‚ŞÑ§<Óæñ¡Rà Pÿ (ä Jówº´YìÄĞ|zŸ´Bû„ë>S»EnÅ™Â^Ø3L©IH…ºc-_ˆÀŠ‚Ş·»õƒË 1IÚ<>xª·İ¹·ÖrDÀò#{×.º”‰®Şïµu_€ÏÀç1VÒ‡[éwÍ©é`ãØ:U[$y¥<.!9T~ĞT«iñ -&š~—}=JEËdã/Œq¡±ÆM	ÀAM‚Ó‹MG‚”SÉW¹XË3ÚEê·7F?„PÕS;u”`ÈƒHÏQ'á¥l‡y´Y^’é¢Cşã0=¼
+sm¸²[èX~Ã?1¿nùÆÍÍ?äÿ Fe&yÅdqw!G ŒÖ†OlÜÑ™5‚ß†¤–ûZéîşì±´sn§xÕ\nvA‹¨ p¡
+IGmº,u#1<k_ŒÏç€Zİƒfu»İÃ?¿Bbß†¼OJ~Ãc°ÛÜ$?İ˜d÷ğşğVğ5ó»KTíßPÔ¦İ¬àÌp¨ìÑÍ¾ËA.Ò«ˆ|ki±q6&ùæyÕ#¾§»2´ºE­£ŞïÔxÓ^¾I›+F@53Îe1¹]z’˜|±çÒïôSµ—f¸Ø±­<øü§¦—m ¢&~75ĞŠ< Iä Ä¤ì0>G:áâê¡à2°*éK¯.[jÌXÂÇ§6³í=‹Ual!ˆ
+'ö64)¸F/—„_tâ¾ÚúM[Çé%Œ„ôVÇ´9¤ê	‰÷VÆçyjö;GâhèæV‹	óFáG7£¡u«ˆ3!a÷ÿ m½}Å£q8º<<ÛÈ¬nÚÕˆó†Ëx-jïáéo×é)™vÚÑî<„ƒGæŠ˜ËÃA—Ï	™ˆş`©ˆ-%®sM8zW­{Øj×õ“YW  5”¼ıüy°zü„jş—P¥7r¶?1tg“ÚGÂª€šš¡yì,4	¡ÿ #mø_¨ò ıÈıÌÓF47™ÍRDúem.K'·§,|g,´ÊYÛ[4šÈíGûÕµ¹k ‚¨Šv´UÆ‰ïŞ¸1à>®)fWcü¤YÕŸù„µ÷CtF|ç3ÉT]\½¤AšæL¸†7ëwÙÏ½0ûÇ¹ÆP$Ÿ'8âÈÿ ‹™èï¢·Ù¶mÕ–¯{§½Ø¹Ç™Omv„ÑŸñïõ}"w¯- RŞ.snÉ#dÚÄ‚ENdœÉ8’zJ¾‚‰1°1 ¥RO‚„BB&¦’´‡ê	˜İ½³Í_¦àöàáÿ ++y°_[ z­SÊîã‡Šê$š-œRf,ŠÙ‰µ­ÅÛ_ƒ;3§%’9"$JÇGLËú	pp«Hpæ1]>m’ä½±o!«£kºÀ+3`p&8½Vàü‘[ÀÓç0-¯$ôW,k´ú€;•E{–Ì{NĞ gô¹I‹Û±7 Ğ ¹;`so„õº£­âÕ˜ø¥•ÿ §’d÷ÓÁX[í—÷D	O¦Ã›#'·à{¨µì°³0§Ekc ºM½µ5¦£ş¢·w—®`N‘Ø¸J³cŠİ­C@È@®™X(P d…´ZB!D „!‚„BB!D „!‚„BB!D „!ŸÿÙ_@http://jade.mcli.dist.maricopa.edu/alan/images/fire-fox-logo.jpgZimage/jpegÓOGIF89a  ÷  ÀÀÀàæîËØæcˆ­t•¸É×åØàèóöùùûıöøúK"V…'Zˆ;m›Ky¤U«i“¹©ÀÕºÍŞÒÜåJMK€N‚MM€OƒNN‚O€NPƒR…QƒM|Q„R„N~OQƒRƒQR…S„RƒS†T…U‡T†WˆS…O~SƒVˆYˆ![ ZŠ*d“+c’-d“1h•3i–>rœK}¦Sƒ¬Sƒ«i‘²®Ç¢¿×«ÀÒÁÔäÜâçñ÷üğöûåëğNQOR‚RT„ZŠW‡Y‰W„X‡ZŠZ‰Y‡ZˆZ†X„'d”%_%_Š&_‹*d*c(]…1k–:o—=tCuK§T„¨X†¨c”¹e±y¢Â{Ÿ»‰©Â²Ë°È—·Ï£ÂÙ£ÀÖ­Ìã¢½Ò±ËŞ­ÃÔªÀÑÏŞêñõøëïò"^‰5n”>uAy AxDwœJ¥N‚§S¡o˜µw£Á{§Ç‰³Ğ~¢»‹®Æš·Ì­Ìâ³Ïã½Öè´ÉØÇÙæÆØåÇÖàÚéóÚèòÜçïàéïßèîæíòf”²Ÿ¼Î¡¾ĞºÌ·ÓåÙçğÙäëæîóáéîÖçñÛâæöûşíòõøúûàêîèíïşÿÿÿşüÿşş                                                                                                                                                                                                                                                            !ù    ,      @ü ˜*	¦S—.……` ÀQZh¹ã°"€CşŒXIB RCğ4è‰‹4,ÖÉ!‹§¥Ôx1ÄbªˆĞ ÃL§Šy
+õX°ÄÂ…
+dtñ³H@%@h\™#R @” xÆÉ4,
+øñ¡É£«ÜHÁ%'M›"8B¥J¤)#ÈğÁbÃ !“,B
+Ä$5qğys†…+‰&Pô…ƒ O"íğ0¡(Á!úHª
+ ÑGö¬¡2"%‘tX³À6RV”Ø!D#:Dèø€¢Ì‡Â¨8%F”)7Æ‚c©¢¨EBBº{Õ€ ;_8http://jade.mcli.dist.maricopa.edu/images/technorati.gifYimage/gifÓO+GIF89aX  æ     «±ªÿÿÿ¬²«@@@€€€­³¬¯µ®²·±®´­°¶¯   ·¼¶µº´´¹³¹¾¸ßßß®³­±·°ÏÒÎppp¸½·ŸŸŸ000»ÀºÎÑÍÃÇÂ¯´®ÄÈÃ```ÍĞÌ¶»µïïïÂÆÁÍÑÌÆÊÅÉÍÈ³¸²¿¿¿±¶°PPPÈÌÇÇËÇ¿Ä¿½Â½ÅÉÅÑÔĞËÎÊÎÒÎ»À»º¿¹ÌÏËÀÅÀ³¹²ÊÎÊ°µ¯¼Á¼ĞÓÏÌĞËËÏÊ¾Â½¼Á»ÅÉÄÀÅ¿ÊÍÉÁÅÀÇËÆĞÔĞ¾Ã½¾Ã¾ÏÓÏÉÍÉÏÏÏÄÉÄ¯¯¯²¸±ÈÌÈÁÆÁº¿º¿Ä¾ÆÊÆÂÇÂÊÎÉ½Â¼ÌĞÌÄÇÃ454ÀÄ¿ÑÔÑ¹¾¹565NON´º³ÒÕÑ(((ª­ªÅÈÄuwu‘“iki¿Ã¾(('ÂÅÁBCB\^\vwuOPN¸º·¶¹µvwv‚„‚ƒ…ƒ555gigNPNtvt\]\¶¹¶hjh‚„µ¸´„…ƒACA]^\!ù     ,    X   ÿ€ ƒ„…†‡ˆ‰Š‹Œ‰‚ ’“”——	
+&:GA"$D%B15V##<51BN,$"6G: &
+9	š˜—•“„Ò•Ğš	)¢4?FYª$,%8<#2ï2#¸I¼¾AF?4&(8 ‚&h–ª¤PÒ5l"tú
+„…R.Z<YÅ"I+ø|ÑBˆ‹84|è!dE/Q\+v,ÙŸ]SÈ°¡%LÎ8åèvcT¸Gll ÒªÇuI P€„AzÈÑ#	‘†ãçï‚DX­§ÂkÙÿ¶)˜ĞäÆª¤¤ù€„¾pÕÍb”â«…Ìş4HĞàC‘Â(w‚	0ÅQú‚…î ÀB°k ”A¢GK aõñ3†l Îµ˜0kŞ,Ñ‚¢à è@3dU‰#ÔTâºº Z®P¡¸×“(: k€,ÅÍf:ƒ·Í<<Ó¦C*Uï’V¨÷ ¨  Ä‰( A@ € È±ƒ5xµ„SÖYËä´Ózí‘'x3_>d1,PÁƒ~ @~PÀUH 
+ °Q<PÁSáÂıPZÀEƒa†Aqè!ÿ) ±Á+àğX   üı J(0Pğ+€„@2`Ì•—4nI3ÀOîu¶ä3ø@Z”#Pi%X  (ˆa@&	œ9CjDz—ÁÉœ›Ùé ¤ä¹'t~BBŒ @Àj*   ¬‘hN€eƒi
+9i‘sù4œ)iWNB)%e  
+*hÀ„ ' G˜c–¹h)iZ–]XIœ˜º÷Ş\wfàB#–xb ,ĞZu‚…ÛEÈãSdñXdg)À®¹~{©5ÄÁGÔ‡õ‰p_¨í€ *À+Xªl±`ÿ%ñ`UHØ€Y)TèŒ·”€K°†œĞ	X¤\Í‘ğ\ŸW¤aª¡‚AÀ¢dÜÈ½Aöv®ÂeQqsUdAã±Ô
+Bğ Wˆ1ˆ
+' P@ª xA´Õ ²êV&Lj![–úôP¯sÕÅé]
+ëÃS;ÀĞ†pÑG0,hN0aÇÚNÆ-ÒºÊI'DïÅ‡\8§H]Z	NÉ€D[Œ1ÇfŒÆEĞ¶R	;^{Ä>ı|L!A#Ã-°Ü™NäÙ¦O›«Ñ*T;¥;Ãñ0±CJ+%áRO8¤ÿ­VzF®çÈöÜwïıö'VÀÿÔÁX³Y)ş ‚1a%_) ÌÒ/XøôB€`U	F şòÿ´?p}úƒVÄe¥@È€‚À©!Áˆ½ZóÛ_ıLÁXƒ ßş(èAû%0„`B<‚²~h` ¬
+¨@€ŞW	P‚ùıF8ÂNp„r¡±@C‚pY!(@cèÃ®&0` ı # À¨O‚ìŒû€H !
+„ÀbûÓ¿ô¥Q Y<  úw)¦¯Š„ 0pÙp«â)X]Ğ$¢ öØÇîïJd¤ÙÅùAÀJÄcë§Å$/ˆ‚|á5xHE6Ğ…H"9	‰T 5è£`,± .^²5+” 
+”ğÃó‰”\$£)myBO¦–ñã']$ˆîï˜‚T Aãó€0¨2Np|x8¯¹MLr³]ƒ’ 5i9(T€›Z€:Ç§¬x¶³TTA§=ãù½~úóŸ ;_9http://creativecommons.org/images/public/somerights20.gifÔ_WebResourceTextEncodingNameUUTF-8O/<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>CogDogBlog  Â» Blog Archive   Â» The (Browser) Transformation is Complete - The Safari has Been Out Foxed</TITLE>
+
+<META name="generator" content="WordPress 1.5.1.2">
+
+<LINK rel="stylesheet" href="http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/style.css" type="text/css" media="screen"><LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://jade.mcli.dist.maricopa.edu/cdb/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://jade.mcli.dist.maricopa.edu/cdb/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://jade.mcli.dist.maricopa.edu/cdb/feed/atom/"><LINK rel="pingback" href="http://jade.mcli.dist.maricopa.edu/cdb/xmlrpc.php">
+
+<STYLE type="text/css" media="screen">
+/*      To accomodate differing install paths of WordPress, images are referred only here,
+        and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+        not, then go right ahead and delete the following lines, and the image files. */
+                
+        body { background: url("http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/images/kubrickbgcolor.jpg"); } 
+        #page { background: url("http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+        #header { background: url("http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+        #footer { background: url("http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+
+/*      Because the template is slightly different, size-wise, with images, this needs to be set here
+        If you don't want to use the template's images, you can also delete the following two lines. */
+                
+        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+
+/*      To ease the insertion of a personal header image, I have done it in such a way,
+        that you simply drop in an image called 'personalheader.jpg' into your /images/
+        directory. Dimensions should be at least 760px x 200px. Anything above that will
+        get cropped off of the image. */
+        /*
+        #headerimg { background: url('http://jade.mcli.dist.maricopa.edu/cdb/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+        */
+</STYLE>
+
+        <LINK rel="archives" title="June 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://jade.mcli.dist.maricopa.edu/cdb/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://jade.mcli.dist.maricopa.edu/cdb/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://jade.mcli.dist.maricopa.edu/cdb/2003/04/">
+
+</HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://jade.mcli.dist.maricopa.edu/cdb">CogDogBlog</A></H1>
+                <DIV class="description">Alan Levineâ€™s (2nd) blog space for barking about instructional technology</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">Â« <A href="http://jade.mcli.dist.maricopa.edu/cdb/2005/06/28/fire/">In The Fireâ€™s Path</A></DIV>
+                        <DIV class="alignright"></DIV>
+                </DIV>
+        
+                <DIV class="post" id="post-986">                        <H2><A href="http://jade.mcli.dist.maricopa.edu/cdb/2005/06/28/fox/" rel="bookmark" title="Permanent Link: The (Browser) Transformation is Complete - The Safari has Been Out Foxed">The (Browser) Transformation is Complete - The Safari has Been Out Foxed</A></H2>
+        
+                        <DIV class="entrytext">                                        <P><IMG src="http://jade.mcli.dist.maricopa.edu/alan/images/fire-fox-logo.jpg" style="float:right; margin-left 1em;">Iâ€™ve been jumping between my Mac web browsers, habitually in Safari, running to FireFox to try the cool new stuff, or to log into a site as a different user.</P>
+        <P> But now I think I will not be going back to Safari. There is just Too Much Cool Firefox Stuffâ€“ <A href="http://www.google.com/search?q=greasemonkey">greasemonkey</A>, the search plug-ins, RSS reader extensions like Sage, Fox-only things like the mechanism in <A href="http://careo.elearning.ubc.ca/weblogs/brian/archives/012634.html">TiddlyWiki as described by Brian Lamb</A>. </P>
+        <P>The only hang up was the motley crew of bookmark tools I had lingering on the Safari toolbarâ€¦ no sign of an easy export. A dab of Google gets me to the <A href="http://www.versiontracker.com/dyn/moreinfo/macosx/19266">Safari Bookmark Exporter</A> (wonderful tool) that allowed me to export the Safari bookmarks to a Firefox friendly HTML file. Sweet.</P>
+        <P>I know, I know. Firefox has been cool for a long time. Iâ€™m just a creature of browser habits, but have finally picked up and made the move. The Fox is now in my web driver seat.
+</P>
+        
+                                
+             <H3>Similar puppies to this post...</H3>
+             <UL>             <LI>No related posts</LI>             </UL>
+
+<P class="tags"><IMG src="/images/technorati.gif" alt=" " width="19" height="18">Technorati Tag! Your it: <A href="http://technorati.com/tag/firefox" title="See the Technorati tag page for 'firefox'." rel="tag">firefox</A></P>             
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted -1 years, 12 months ago 
+                                                on Tuesday, June 28th, 2005 at 10:15 pm                                         and is filed under <A href="http://jade.mcli.dist.maricopa.edu/cdb/category/pile/" title="View all posts in Blog Pile" rel="category tag">Blog Pile</A>.
+                                                You can follow any responses to this entry through the <A href="http://jade.mcli.dist.maricopa.edu/cdb/2005/06/28/fox/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://jade.mcli.dist.maricopa.edu/cdb/2005/06/28/fox/trackback/" rel="trackback">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://jade.mcli.dist.maricopa.edu/cdb/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="986">
+</P>
+
+
+        <P style="clear: both;" class="subscribe-to-comments">        <INPUT type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: 20px;">
+        <LABEL for="subscribe">Notify me of followup comments via e-mail</LABEL>
+        </P>
+
+
+
+</FORM>
+
+
+        
+                
+        </DIV>
+
+<HR>
+<DIV id="footer">        <P>                CogDogBlog lives at<BR>
+       http://jade.mcli.dist.maricopa.edu/cdb<BR>
+        and is deftly powered by the awesomeness of
+                <A href="http://wordpress.org">WordPress</A>. 
+                <BR>Follow our tracks through the mud with our feeds:<BR> <A href="http://jade.mcli.dist.maricopa.edu/cdb/feed/">Full Entries (RSS 2.0)</A> or <A href="http://jade.mcli.dist.maricopa.edu/cdb/feed/rss/">Entry Summary (RSS 0.91)</A> 
+                and <A href="http://jade.mcli.dist.maricopa.edu/cdb/comments/feed/">Comments (RSS)</A> plus <A href="http://del.icio.us/rss/cogdog">del.icio.us Bookmarks</A> / <A href="http://www.furl.net/members/cogdog/rss.xml">Furl Bookmarks</A>
+                <BR>
+
+<A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/"><IMG alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.gif" style="margin-top:12px;"></A><BR>
+Everything in the doghouse yours for the taking, licensed under a <A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons License</A>.
+</P>
+
+
+
+</DIV>
+</DIV>
+
+
+                
+
+</BODY></HTML>_6http://jade.mcli.dist.maricopa.edu/cdb/2005/06/28/fox/Ytext/html    1 6 = O ^ t3£3ğ3ù4 B»BşC	CG3GnGxGN®NêNóOO~š~Ó                           ~İ

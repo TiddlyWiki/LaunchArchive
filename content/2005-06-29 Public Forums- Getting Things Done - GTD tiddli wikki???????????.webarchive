@@ -1,0 +1,2512 @@
+bplist00ÒI_WebSubresources_WebMainResource¯!$'()*-0367:=@CFÓ	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOGÂ/*======================================================================*\
+|| #################################################################### ||
+|| # vBulletin 3.0.7
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2000–2005 Jelsoft Enterprises Ltd. All Rights Reserved. ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- VBULLETIN IS NOT FREE SOFTWARE ---------------- # ||
+|| # http://www.vbulletin.com | http://www.vbulletin.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+
+// define a few variables that are required
+var vbmenu_usepopups = false;
+var ignorequotechars = 0;
+
+// #############################################################################
+// lets define the browser we have instead of multiple calls throughout the file
+var userAgent = navigator.userAgent.toLowerCase();
+var is_opera  = (userAgent.indexOf('opera') != -1);
+var is_saf    = ((userAgent.indexOf('applewebkit') != -1) || (navigator.vendor == "Apple Computer, Inc."));
+var is_webtv  = (userAgent.indexOf('webtv') != -1);
+var is_ie     = ((userAgent.indexOf('msie') != -1) && (!is_opera) && (!is_saf) && (!is_webtv));
+var is_ie4    = ((is_ie) && (userAgent.indexOf("msie 4.") != -1));
+var is_moz    = ((navigator.product == 'Gecko') && (!is_saf));
+var is_kon    = (userAgent.indexOf('konqueror') != -1);
+var is_ns     = ((userAgent.indexOf('compatible') == -1) && (userAgent.indexOf('mozilla') != -1) && (!is_opera) && (!is_webtv) && (!is_saf));
+var is_ns4    = ((is_ns) && (parseInt(navigator.appVersion) == 4));
+
+// catch possible bugs with WebTV and other older browsers
+var is_regexp = (window.RegExp) ? true : false;
+
+// #############################################################################
+// let's find out what DOM functions we can use
+var vbDOMtype = '';
+if (document.getElementById)
+{
+	vbDOMtype = "std";
+}
+else if (document.all)
+{
+	vbDOMtype = "ie4";
+}
+else if (document.layers)
+{
+	vbDOMtype = "ns4";
+}
+
+// make an array to store cached locations of objects called by fetch_object
+var vBobjects = new Array();
+
+// #############################################################################
+// function to emulate document.getElementById
+function fetch_object(idname, forcefetch)
+{
+	if (forcefetch || typeof(vBobjects[idname]) == "undefined")
+	{
+		switch (vbDOMtype)
+		{
+			case "std":
+			{
+				vBobjects[idname] = document.getElementById(idname);
+			}
+			break;
+
+			case "ie4":
+			{
+				vBobjects[idname] = document.all[idname];
+			}
+			break;
+
+			case "ns4":
+			{
+				vBobjects[idname] = document.layers[idname];
+			}
+			break;
+		}
+	}
+	return vBobjects[idname];
+}
+
+// #############################################################################
+// function to handle the different event models of different browsers
+// and prevent event bubbling
+function do_an_e(eventobj)
+{
+	if (!eventobj || is_ie)
+	{
+		window.event.returnValue = false;
+		window.event.cancelBubble = true;
+		return window.event;
+	}
+	else
+	{
+		eventobj.stopPropagation();
+		eventobj.preventDefault();
+		return eventobj;
+	}
+}
+
+// #############################################################################
+// function to open a generic window
+function openWindow(url, width, height)
+{
+	var dimensions = "";
+	if (width)
+	{
+		dimensions += ",width=" + width;
+	}
+	if (height)
+	{
+		dimensions += ",height=" + height;
+	}
+	window.open(url, "vBPopup", "statusbar=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes" + dimensions);
+	return false;
+}
+
+// #############################################################################
+// function to open an IM Window
+function imwindow(imtype, userid, width, height)
+{
+	return openWindow("sendmessage.php?" + SESSIONURL + "do=im&type=" + imtype + "&userid=" + userid, width, height);
+}
+
+// #############################################################################
+// function to show list of posters in a thread
+function who(threadid)
+{
+	return openWindow("misc.php?" + SESSIONURL + "do=whoposted&threadid=" + threadid, 230, 300);
+}
+
+// #############################################################################
+// function to open the reputation window
+function reputation(postid)
+{
+	window.open("reputation.php?" + SESSIONURL + "p=" + postid, "Reputation", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=241");
+	return false;
+}
+
+// #############################################################################
+function manageattachments(url, width, height, hash)
+{
+	window.open(url, "Attach" + hash, "statusbar=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes,width=" + width + ",height=" + height);
+	return false;
+}
+
+// #############################################################################
+// function to do a single-line conditional
+function iif(condition, trueval, falseval)
+{
+	return condition ? trueval : falseval;
+}
+
+// #############################################################################
+// function to search an array for a value
+function in_array(ineedle, haystack, caseinsensitive)
+{
+	var needle = new String(ineedle);
+
+	if (caseinsensitive)
+	{
+		needle = needle.toLowerCase();
+		for (i in haystack)
+		{
+			if (haystack[i].toLowerCase() == needle)
+			{
+				return i;
+			}
+		}
+	}
+	else
+	{
+		for (i in haystack)
+		{
+			if (haystack[i] == needle)
+			{
+				return i;
+			}
+		}
+	}
+	return -1;
+}
+
+function js_toggle_all(formobj, formtype, option, exclude, setto)
+{
+	for (var i =0; i < formobj.elements.length; i++)
+	{
+		var elm = formobj.elements[i];
+		if (elm.type == formtype && in_array(elm.name, exclude, false) == -1)
+		{
+			switch (formtype)
+			{
+				case "radio":
+					if (elm.value == option) // option == '' evaluates true when option = 0
+					{
+						elm.checked = setto;
+					}
+				break;
+				case "select-one":
+					elm.selectedIndex = setto;
+				break;
+				default:
+					elm.checked = setto;
+				break;
+			}
+		}
+	}
+}
+
+function js_select_all(formobj)
+{
+	exclude = new Array();
+	exclude[0] = "selectall";
+	js_toggle_all(formobj, "select-one", '', exclude, formobj.selectall.selectedIndex);
+}
+
+function js_check_all(formobj)
+{
+	exclude = new Array();
+	exclude[0] = "keepattachments";
+	exclude[1] = "allbox";
+	exclude[2] = "removeall";
+	js_toggle_all(formobj, "checkbox", '', exclude, formobj.allbox.checked);
+}
+
+function js_check_all_option(formobj, option)
+{
+	exclude = new Array();
+	exclude[0] = "useusergroup";
+	js_toggle_all(formobj, "radio", option, exclude, true);
+}
+
+function checkall(formobj) // just an alias
+{
+	js_check_all(formobj);
+}
+function checkall_option(formobj, option) // just an alias
+{
+	js_check_all_option(formobj, option);
+}
+
+// #############################################################################
+// function to check message length before form submission
+function validatemessage(messageText, subjectText, minLength, maxLength, ishtml, tForm)
+{
+	// bypass Safari and Konqueror browsers with Javascript problems
+	if (is_kon || is_saf || is_webtv)
+	{
+		return true;
+	}
+
+	// attempt to get a code-stripped version of the text
+	var strippedMessage = stripcode(messageText, ishtml, ignorequotechars);
+
+	// check for completed subject
+	if (subjectText.length < 1)
+	{
+		alert(vbphrase["must_enter_subject"]);
+		return false;
+	}
+	// check for minimum message length
+	else if (strippedMessage.length < minLength)
+	{
+		alert(construct_phrase(vbphrase["message_too_short"], minLength));
+		return false;
+	}
+	// everything seems okay
+	else
+	{
+		return true;
+	}
+}
+
+// #############################################################################
+// function to trim quotes and vbcode tags
+function stripcode(str, ishtml, stripquotes)
+{
+	if (!is_regexp)
+	{
+		return str;
+	}
+
+	if (stripquotes)
+	{
+		var quote1 = new RegExp("(\\[QUOTE\\])(.*)(\\[\\/QUOTE\\])", "gi");
+		var quote2 = new RegExp("(\\[QUOTE=(&quot;|\"|\\'|)(.*)\\1\\])(.*)(\\[\\/QUOTE\\])", "gi");
+
+		while(str.match(quote1))
+		{
+			str = str.replace(quote1, '');
+		}
+
+		while(str.match(quote2))
+		{
+			str = str.replace(quote2, '');
+		}
+	}
+
+	if (ishtml)
+	{
+		var html1 = new RegExp("<(\\w+)[^>]*>", "gi");
+		var html2 = new RegExp("<\\/\\w+>", "gi");
+
+		str = str.replace(html1, '');
+		str = str.replace(html2, '');
+
+		var html3 = new RegExp("&nbsp;");
+		str = str.replace(html3, '');
+	}
+	else
+	{
+		var bbcode1 = new RegExp("\\[(\\w+)[^\\]]*\\]", "gi");
+		var bbcode2 = new RegExp("\\[\\/(\\w+)\\]", "gi");
+
+		str = str.replace(bbcode1, '');
+		str = str.replace(bbcode2, '');
+	}
+	return str;
+}
+
+// #############################################################################
+// emulation of the PHP version of vBulletin's construct_phrase() sprintf wrapper
+function construct_phrase()
+{
+	if (!arguments || arguments.length < 1 || !is_regexp)
+	{
+		return false;
+	}
+
+	var args = arguments;
+	var str = args[0];
+	var re;
+
+	for (var i = 1; i < args.length; i++)
+	{
+		re = new RegExp("%" + i + "\\$s", "gi");
+		str = str.replace(re, args[i]);
+	}
+	return str;
+}
+
+// #############################################################################
+// set control panel frameset title
+function set_cp_title()
+{
+	if (typeof(parent.document) != "undefined" && typeof(parent.document) != "unknown" && typeof(parent.document.title) == "string")
+	{
+		if (document.title != '')
+		{
+			parent.document.title = document.title;
+		}
+		else
+		{
+			parent.document.title = "vBulletin";
+		}
+	}
+}
+
+// #############################################################################
+// open control panel help window
+function js_open_help(scriptname, actiontype, optionval)
+{
+	window.open("help.php?s=" + SESSIONHASH + "&do=answer&page=" + scriptname + "&pageaction=" + actiontype + "&option=" + optionval, "helpwindow", "toolbar=no,scrollbars=yes,resizable=yes,width=600,height=450");
+}
+
+// #############################################################################
+function switch_styleid(selectobj)
+{
+	var styleid = selectobj.options[selectobj.selectedIndex].value;
+
+	if (styleid == "")
+	{
+		return;
+	}
+
+	var url = new String(window.location);
+	var fragment = new String("");
+
+	// get rid of fragment
+	url = url.split("#");
+
+	// deal with the fragment first
+	if (url[1])
+	{
+		fragment = "#" + url[1];
+	}
+
+	// deal with the main url
+	url = url[0];
+
+	// remove styleid=x& from main bit
+	if (url.indexOf("styleid=") != -1 && is_regexp)
+	{
+		re = new RegExp("styleid=\\d+&?");
+		url = url.replace(re, "");
+	}
+
+	// add the ? to the url if needed
+	if (url.indexOf("?") == -1)
+	{
+		url += "?";
+	}
+	else
+	{
+		// make sure that we have a valid character to join our styleid bit
+		lastchar = url.substr(url.length - 1);
+		if (lastchar != "&" && lastchar != "?")
+		{
+			url += "&";
+		}
+	}
+	window.location = url + "styleid=" + styleid + fragment;
+}
+
+// #############################################################################
+// simple function to toggle the 'display' attribute of an object
+function toggle_display(idname)
+{
+	obj = fetch_object(idname);
+	if (obj)
+	{
+		if (obj.style.display == "none")
+		{
+			obj.style.display = "";
+		}
+		else
+		{
+			obj.style.display = "none";
+		}
+	}
+	return false;
+}
+
+// #############################################################################
+// ##################### vBulletin Cookie Functions ############################
+// #############################################################################
+
+// #############################################################################
+// function to set a cookie
+function set_cookie(name, value, expires)
+{
+	if (!expires)
+	{
+		expires = new Date();
+	}
+	document.cookie = name + "=" + escape(value) + "; expires=" + expires.toGMTString() +  "; path=/";
+}
+
+// #############################################################################
+// function to retrieve a cookie
+function fetch_cookie(name)
+{
+	cookie_name = name + "=";
+	cookie_length = document.cookie.length;
+	cookie_begin = 0;
+	while (cookie_begin < cookie_length)
+	{
+		value_begin = cookie_begin + cookie_name.length;
+		if (document.cookie.substring(cookie_begin, value_begin) == cookie_name)
+		{
+			var value_end = document.cookie.indexOf (";", value_begin);
+			if (value_end == -1)
+			{
+				value_end = cookie_length;
+			}
+			return unescape(document.cookie.substring(value_begin, value_end));
+		}
+		cookie_begin = document.cookie.indexOf(" ", cookie_begin) + 1;
+		if (cookie_begin == 0)
+		{
+			break;
+		}
+	}
+	return null;
+}
+
+// #############################################################################
+// function to delete a cookie
+function delete_cookie(name)
+{
+	var expireNow = new Date();
+	document.cookie = name + "=" + "; expires=Thu, 01-Jan-70 00:00:01 GMT" +  "; path=/";
+}
+
+// #############################################################################
+// ################## vBulletin Collapse HTML Functions ########################
+// #############################################################################
+
+// #############################################################################
+// function to toggle the collapse state of an object, and save to a cookie
+function toggle_collapse(objid)
+{
+	if (!is_regexp)
+	{
+		return false;
+	}
+	
+	obj = fetch_object("collapseobj_" + objid);	
+	img = fetch_object("collapseimg_" + objid);
+	cel = fetch_object("collapsecel_" + objid);
+	
+	if (!obj)
+	{
+		// nothing to collapse!
+		if (img)
+		{
+			// hide the clicky image if there is one
+			img.style.display = "none";
+		}
+		return false;
+	}
+
+	if (obj.style.display == "none")
+	{
+		obj.style.display = "";
+		save_collapsed(objid, false);
+		if (img)
+		{
+			img_re = new RegExp("_collapsed\\.gif$");
+			img.src = img.src.replace(img_re, '.gif');
+		}
+		if (cel)
+		{
+			cel_re = new RegExp("^(thead|tcat)(_collapsed)$");
+			cel.className = cel.className.replace(cel_re, '$1');
+		}
+	}
+	else
+	{
+		obj.style.display = "none";
+		save_collapsed(objid, true);
+		if (img)
+		{
+			img_re = new RegExp("\\.gif$");
+			img.src = img.src.replace(img_re, '_collapsed.gif');
+		}
+		if (cel)
+		{
+			cel_re = new RegExp("^(thead|tcat)$");
+			cel.className = cel.className.replace(cel_re, '$1_collapsed');
+		}
+	}
+	return false;
+}
+
+// #############################################################################
+// update vbulletin_collapse cookie with collapse preferences
+function save_collapsed(objid, addcollapsed)
+{
+	var collapsed = fetch_cookie("vbulletin_collapse");
+	var tmp = new Array();
+
+	if (collapsed != null)
+	{
+		collapsed = collapsed.split("\n");
+
+		for (i in collapsed)
+		{
+			if (collapsed[i] != objid && collapsed[i] != "")
+			{
+				tmp[tmp.length] = collapsed[i];
+			}
+		}
+	}
+
+	if (addcollapsed)
+	{
+		tmp[tmp.length] = objid;
+	}
+
+	expires = new Date();
+	expires.setTime(expires.getTime() + (1000 * 86400 * 365));
+	set_cookie("vbulletin_collapse", tmp.join("\n"), expires);
+}
+
+// #############################################################################
+// function to register a menu for later initialization
+function vbmenu_register(controlid, nowrite, datefield)
+{
+	if (vbmenu_usepopups)
+	{
+		vbmenu_doregister(controlid, nowrite, datefield);
+	}
+}
+
+// #############################################################################
+// functions to handle active cells
+
+// active cell mouse-over
+function activecells_mouseover(e)
+{
+	this.className = this.swapclass;
+	if (is_ie)
+	{
+		this.style.cursor = "hand";
+	}
+	else
+	{
+		this.style.cursor = "pointer";
+	}
+	return true;
+}
+
+// active cell mouse-out
+function activecells_mouseout(e)
+{
+	this.className = this.origclass;
+	this.style.cursor = "default";
+	return true;
+}
+
+// active cell click
+function activecells_click(e)
+{
+	this.className = this.origclass;
+	var script = '';
+	if (r = this.id.match(/^([a-z]{1})([0-9]+)$/))
+	{
+		switch (r[1])
+		{
+			case "u": // user
+				script = "member.php?" + SESSIONURL + "u=";
+				break;
+			
+			case "f": // forum
+				script = "forumdisplay.php?" + SESSIONURL + "f=";
+				break;
+			
+			case "t": // thread
+				script = "showthread.php?" + SESSIONURL + "t=";
+				break;
+			
+			case "p": // post
+				script = "showthread.php?" + SESSIONURL + "p=";
+				break;
+			
+			case "m": // private message
+				script = "private.php?" + SESSIONURL + "pmid=";
+				break;
+			
+			default:
+				return;
+		}
+		window.location = script + r[2];
+	}
+}
+
+// #############################################################################
+// ############## Main vBulletin Javascript Initialization #####################
+// #############################################################################
+
+function vBulletin_init()
+{
+	if (is_webtv)
+	{
+		return true;
+	}
+	var imgs = null;
+	switch (vbDOMtype)
+	{
+		case "std": imgs = document.getElementsByTagName("img"); break;
+		case "ie4": imgs = document.all.tags("img");             break;
+		default:    imgs = false;                                break;
+	}
+	if (imgs)
+	{
+		// set 'title' tags for image elements
+		for (var i = 0; i < imgs.length; i++)
+		{
+			if (!imgs[i].title && imgs[i].alt != "")
+			{
+				imgs[i].title = imgs[i].alt;
+			}
+		}
+	}
+
+	// init registered menus
+	if (vbmenu_usepopups && vbmenu_registered.length > 0)
+	{
+		for (i in vbmenu_registered)
+		{
+			vbmenu_init(vbmenu_registered[i]);
+		}
+
+		// close all menus on mouse click
+		document.onclick = vbmenu_close;
+	}
+	
+	return true;
+}
+
+// #############################################################################
+// function to initialize active cells
+function activecells_init()
+{
+	// hide this functionality from browsers that break it
+	if (is_webtv || is_opera)
+	{
+		return;
+	}
+	
+	// init active alt color classes
+	tds = document.getElementsByTagName("td");
+	for (var i = 0; i < tds.length; i++)
+	{
+		switch (tds[i].className)
+		{
+			case "alt1Active":
+			case "alt2Active":
+			{
+				tds[i].origclass = tds[i].className;
+				tds[i].swapclass = iif(tds[i].className == "alt1Active", "alt2Active", "alt1Active");
+				tds[i].onmouseover = activecells_mouseover;
+				tds[i].onmouseout = activecells_mouseout;
+				tds[i].onclick = activecells_click;
+			}
+			break;
+		}
+	}
+}
+
+/*======================================================================*\
+|| ####################################################################
+|| # Downloaded: 15:02, Wed Feb 23rd 2005
+|| # CVS: $RCSfile: vbulletin_global.js,v $ - $Revision: 1.89 $
+|| ####################################################################
+\*======================================================================*/_=http://www.davidco.com/forum/clientscript/vbulletin_global.js_application/x-javascriptÓ
+O3ç/*======================================================================*\
+|| #################################################################### ||
+|| # vBulletin 3.0.7
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2000–2005 Jelsoft Enterprises Ltd. All Rights Reserved. ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- VBULLETIN IS NOT FREE SOFTWARE ---------------- # ||
+|| # http://www.vbulletin.com | http://www.vbulletin.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+
+var vbmenu_usepopups = true;
+var vbmenu_registered = new Array();
+var vbmenu_initialized = new Array();
+var vbmenu_activemenus = new Array();
+var vbmenu_currentactive = false;
+var slidetimer = false;
+var vbmenu_opensteps = 10;
+var vbmenu_doslide = true;
+var vbmenu_dofade = false; // can be very slow
+
+var vbmenu_datefields = new Array();
+
+// #############################################################################
+// another function to handle the different event models of different browsers
+// and prevent event bubbling in a lesser way
+function e_by_gum(eventobj)
+{
+	if (!eventobj || is_ie)
+	{
+		window.event.cancelBubble = true;
+		return window.event;
+	}
+	else
+	{
+		if (eventobj.target.type == 'submit')
+		{
+			// naughty safari
+			eventobj.target.form.submit();
+		}
+		eventobj.stopPropagation();
+		return eventobj;
+	}
+}
+
+// #############################################################################
+// get left position of elm
+function fetch_object_posleft(elm)
+{
+	var left = elm.offsetLeft;
+	while((elm = elm.offsetParent) != null)
+	{
+		left += elm.offsetLeft;
+	}
+	return left;
+}
+
+// #############################################################################
+// get top position of elm
+function fetch_object_postop(elm)
+{
+	var top = elm.offsetTop;
+	while((elm = elm.offsetParent) != null)
+	{
+		top += elm.offsetTop;
+	}
+	return top;
+}
+
+// #############################################################################
+function vbmenu_doregister(controlid, nowrite, datefield)
+{
+	if (document.getElementsByTagName)
+	{
+		var controlobj = fetch_object(controlid);
+		if (controlobj)
+		{			
+			if (datefield)
+			{
+				vbmenu_datefields[controlid] = datefield;
+			}
+			
+			vbmenu_registered[vbmenu_registered.length] = controlid;
+			
+			if (!nowrite)
+			{
+				document.write('<img src="' + IMGDIR_MISC + '/menu_open.gif" alt="" border="0" />');
+			}
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+// #############################################################################
+// function to get the menu basename - 'menu.104' returns 'menu', 'x.menu' returns 'x'
+function vbmenu_getmenuid(controlid)
+{
+	var dotpos = controlid.indexOf(".");
+	if (dotpos != -1)
+	{
+		return controlid.substr(0, dotpos);
+	}
+	else
+	{
+		return controlid;
+	}
+}
+
+// #############################################################################
+// handle menu control mouseover events
+function vbmenu_eventhandler_mouseover(e)
+{
+	e = do_an_e(e);
+	vbmenu_hover(this);
+}
+
+// #############################################################################
+// handle menu control click events
+function vbmenu_eventhandler_click(e)
+{
+	e = do_an_e(e);
+	vbmenu_open(this);
+}
+
+// #############################################################################
+// close all open menus
+function vbmenu_close()
+{
+	if (vbmenu_currentactive)
+	{
+		for (key in vbmenu_activemenus)
+		{
+			fetch_object(vbmenu_getmenuid(key) + "_menu").style.display = "none";
+			vbmenu_activemenus[key] = false;
+		}
+	}
+	vbmenu_currentactive = false;
+	
+	if (slidetimer)
+	{
+		clearTimeout(slidetimer);
+		slidetimer = false;
+	}
+	
+	if (is_ie)
+	{
+		selects = document.getElementsByTagName("select");
+		for (var i = 0; i < selects.length; i++)
+		{
+			selects[i].style.visibility = "visible";
+		}
+	}
+}
+
+// #############################################################################
+// open menu under pointer if another menu is active
+function vbmenu_hover(elm)
+{
+	for (key in vbmenu_activemenus)
+	{
+		if (vbmenu_activemenus[key] == true && key != elm.id)
+		{
+			vbmenu_open(elm);
+			return;
+		}
+	}
+}
+
+// #############################################################################
+// detect if selectobj overlaps m
+function vbmenu_overlap(selectobj, m)
+{
+	s = new Array();
+	s['L'] = fetch_object_posleft(selectobj);
+	s['T'] = fetch_object_postop(selectobj);	
+	s['R'] = s['L'] + selectobj.offsetWidth;
+	s['B'] = s['T'] + selectobj.offsetHeight;
+	
+	if (s['L'] >= m['L'] && s['L'] <= m['R'] && ((s['T'] >= m['T'] && s['T'] <= m['B']) || (s['B'] >= m['T'] && s['B'] <= m['B']))) { return true; }
+	else if (s['R'] >= m['L'] && s['R'] <= m['R'] && ((s['T'] >= m['T'] && s['T'] <= m['B']) || (s['B'] >= m['T'] && s['B'] <= m['B']))) { return true; }
+	else if (s['B'] >= m['T'] && s['T'] <= m['B'] && ((s['L'] >= m['L'] && s['L'] <= m['R']) || (s['R'] >= m['R'] && s['R'] <= m['R']))) { return true; }
+	else if (m['B'] >= s['T'] && m['T'] <= s['B'] && ((m['L'] >= s['L'] && m['L'] <= s['R']) || (m['R'] >= s['R'] && m['R'] <= s['R']))) { return true; }
+	else { return false; }
+}
+
+// #############################################################################
+// open the clicked menu
+function vbmenu_open(elm)
+{
+	var openmenu = vbmenu_currentactive;
+	
+	vbmenu_close();
+	
+	if (openmenu == elm.id)
+	{
+		// clicked element was the control for the currently open menu - exit
+		return false;
+	}
+	
+	// get the id of the menu to be opened
+	var menuid = vbmenu_getmenuid(elm.id) + "_menu";	
+	var menuobj = fetch_object(menuid);
+	var force_right_slide = false;
+
+	if (typeof(vbmenu_datefields[elm.id]) != "undefined")
+	{
+		force_right_slide = true;
+		fetch_object(elm.id + "_output").innerHTML = fetch_object(vbmenu_datefields[elm.id]).value;
+	}
+	else
+	{
+		force_right_slide = false
+	}
+	
+	vbmenu_activemenus[elm.id] = true;
+	vbmenu_currentactive = elm.id;
+	
+	// get menu position
+	var leftpx = fetch_object_posleft(elm);
+	var toppx = fetch_object_postop(elm) + elm.offsetHeight;
+	
+	// un-hide menu	
+	menuobj.style.display = "";
+	var slidedir = 'left';
+
+	// attempt to keep menu on screen
+	if (force_right_slide || (leftpx + menuobj.offsetWidth) >= document.body.clientWidth)
+	{
+		leftpx = leftpx + elm.offsetWidth - menuobj.offsetWidth;
+		slidedir = "right";
+	}
+	else
+	{
+		slidedir = "left";
+	}
+
+	// shuffle the IE menus a bit
+	if (is_ie)
+	{
+		leftpx += (slidedir == "left") ? -2 : 2;
+	}
+	
+	// set menu position
+	menuobj.style.left = leftpx + "px";
+	menuobj.style.top = toppx + "px";
+	
+	if (is_ie)
+	{	
+		menuarea = {
+			"L" : leftpx,
+			"T" : toppx,
+			"R" : leftpx + menuobj.offsetWidth,
+			"B" : toppx + menuobj.offsetHeight
+		};		
+		selects = document.getElementsByTagName("select");
+		for (var i = 0; i < selects.length; i++)
+		{
+			if (vbmenu_overlap(selects[i], menuarea))
+			{
+				selects[i].style.visibility = "hidden";
+			}
+		}
+	}
+
+	// slide menus open (internet explorer only)
+	if (vbmenu_doslide && !is_opera && !is_ie4)
+	{
+		if (vbmenu_dofade && is_ie)
+		{
+			menuobj.filters.item('DXImageTransform.Microsoft.alpha').opacity = 0;
+		}
+		
+		var intervalX = Math.ceil(menuobj.offsetWidth / vbmenu_opensteps);
+		var intervalY = Math.ceil(menuobj.offsetHeight / vbmenu_opensteps);
+		
+		if (slidedir == "left")
+		{
+			menuobj.style.clip = "rect(auto, 0px, 0px, auto)";
+			vbmenu_slide_left(menuid, intervalX, intervalY, 0, 0, 0);
+		}
+		else
+		{
+			menuobj.style.clip = "rect(auto, auto, 0px, " + (menuobj.offsetWidth) + "px)";
+			vbmenu_slide_right(menuid, intervalX, intervalY, menuobj.offsetWidth, 0, 0);
+		}
+	}
+	
+	return false;
+}
+
+// #############################################################################
+// internet explorer slide menu open left
+function vbmenu_slide_left(menuid, intervalX, intervalY, clipX, clipY, opacity)
+{
+	var menuobj = fetch_object(menuid);
+	
+	if (clipX < menuobj.offsetWidth || clipY < menuobj.offsetHeight)
+	{
+		if (vbmenu_dofade && is_ie)
+		{
+			opacity += 10;
+			menuobj.filters.item('DXImageTransform.Microsoft.alpha').opacity = opacity;
+		}
+		clipX += intervalX;
+		clipY += intervalY;
+		menuobj.style.clip = "rect(auto, " + clipX + "px, " + clipY + "px, auto)";
+		slidetimer = setTimeout("vbmenu_slide_left('" + menuid + "', " + intervalX + ", " + intervalY + ", " + clipX + ", " + clipY + ", " + opacity + ");", 0);
+	}
+	else
+	{
+		clearTimeout(slidetimer);
+	}
+}
+
+// #############################################################################
+// internet explorer slide menu open right
+function vbmenu_slide_right(menuid, intervalX, intervalY, clipX, clipY, opacity)
+{
+	menuobj = fetch_object(menuid);
+	
+	if (clipX > 0 || clipY < menuobj.offsetHeight)
+	{
+		if (vbmenu_dofade && is_ie)
+		{
+			opacity += 10;
+			menuobj.filters.item('DXImageTransform.Microsoft.alpha').opacity = opacity;
+		}
+		clipX -= intervalX;
+		clipY += intervalY;
+		menuobj.style.clip = "rect(auto, " + menuobj.offsetWidth + "px, " + clipY + "px, " + clipX + "px)";
+		slidetimer = setTimeout("vbmenu_slide_right('" + menuid + "', " + intervalX + ", " + intervalY + ", " + clipX + ", " + clipY + ", " + opacity + ");", 0);
+	}
+	else
+	{
+		clearTimeout(slidetimer);
+	}
+}
+
+// #############################################################################
+// function to navigate to the href of the first found <a> tag
+function vbmenu_navtolink(e)
+{
+	childLinks = this.getElementsByTagName("a");
+	if (childLinks[0])
+	{
+		if (is_ie)
+		{
+			// use this in IE to send HTTP_REFERER
+			childLinks[0].click();
+			window.event.cancelBubble = true;
+		}
+		else
+		{
+			// other browsers can use this
+			if (e.shiftKey)
+			{
+				window.open(childLinks[0].href);
+				e.stopPropagation();
+				e.preventDefault();
+			}
+			else
+			{
+				window.location = childLinks[0].href;
+				e.stopPropagation();
+				e.preventDefault();
+			}
+		}
+	}
+}
+
+// #############################################################################
+// function to toggle the background class of a menu option
+function vbmenu_switch_option_bg(e)
+{
+	if (is_moz)
+	{
+		moz_rclick(e);
+	}
+	this.className = (this.className == "vbmenu_option") ? "vbmenu_hilite" : "vbmenu_option";
+	vbmenu_hand_pointer(this);
+}
+
+// #############################################################################
+// function to set the cursor to be pointer/hand
+function vbmenu_hand_pointer(obj)
+{
+	try
+	{
+		obj.style.cursor = "pointer";
+	}
+	catch(e)
+	{
+		obj.style.cursor = "hand";
+	}
+}
+
+// #############################################################################
+// function to initialize a single menu entry
+function vbmenu_init(controlid)
+{
+	var menuid = vbmenu_getmenuid(controlid) + "_menu";
+	var menuobj = fetch_object(menuid);
+	
+	if (document.getElementsByTagName && menuobj)
+	{
+		// do control object
+		var controlobj = fetch_object(controlid);
+		vbmenu_hand_pointer(controlobj);
+		controlobj.unselectable = true;
+		controlobj.onclick = vbmenu_eventhandler_click;
+		controlobj.onmouseover = vbmenu_eventhandler_mouseover;
+		
+		// don't initialize the same popup menu twice
+		if (typeof(vbmenu_initialized[menuid]) != "undefined")
+		{
+			return;
+		}
+		
+		// do popup menu object
+		var popupobj = fetch_object(menuid);
+		popupobj.style.display = "none";
+		popupobj.style.position = "absolute";
+		popupobj.style.left = "0px";
+		popupobj.style.top = "0px";
+		popupobj.onclick = e_by_gum;
+		
+		// reset inner table width
+		var tables = popupobj.getElementsByTagName("table");
+		if (tables.length > 0)
+		{
+			tables[0].width = "";
+		}
+		
+		// init popup filters (ie only)
+		if (is_ie)
+		{		
+			popupobj.style.filter += "progid:DXImageTransform.Microsoft.alpha(enabled=1,opacity=100)";
+			popupobj.style.filter += "progid:DXImageTransform.Microsoft.shadow(direction=135,color=#8E8E8E,strength=3)";
+		}
+		
+		// do menu options
+		var tds = popupobj.getElementsByTagName("td");
+		for (var i = 0; i < tds.length; i++)
+		{			
+			if (tds[i].className == "vbmenu_option")
+			{
+				tds[i].style.cursor = "default";
+				if (tds[i].title == "nohilite")
+				{
+					tds[i].title = "";
+				}
+				else
+				{
+					tds[i].onmouseover = vbmenu_switch_option_bg;
+					tds[i].onmouseout = vbmenu_switch_option_bg;
+					tds[i].onclick = vbmenu_navtolink;
+
+					if (!is_saf && !is_kon)
+					{
+						try
+						{
+							var links = tds[i].getElementsByTagName("a");
+							for (var j = 0; j < links.length; j++)
+							{
+								if (typeof(links[j].onclick) == "undefined")
+								{
+									links[j].onclick = e_by_gum;
+								}
+							}
+						}
+						catch(e)
+						{
+							// hmm
+						}
+					}
+				}
+			}
+			else if (is_moz)
+			{
+				tds[i].onmouseover = moz_rclick;
+				tds[i].onmouseout = moz_rclick;
+			}
+		}
+		
+		vbmenu_initialized[menuid] = true;
+	}
+}
+
+function returnfalse()
+{
+	return false;
+}
+
+function moz_rclick(e)
+{
+	if (e.type == 'mouseover')
+	{
+		document.onclick = '';
+	}
+	else
+	{
+		document.onclick = vbmenu_close;
+	}
+}
+
+/*======================================================================*\
+|| ####################################################################
+|| # Downloaded: 15:02, Wed Feb 23rd 2005
+|| # CVS: $RCSfile: vbulletin_menu.js,v $ - $Revision: 1.13 $
+|| ####################################################################
+\*======================================================================*/_;http://www.davidco.com/forum/clientscript/vbulletin_menu.jsÓOFGIF89a Ë Ä  vµÇƒ ‰“‹‡‘‰‡‘Š‡‰ˆ‘Šˆ“Šˆ“‹8“­„‰“Œ„ "§?€€€„¡ÿÿÿ                                             !ù     ,     Ë  Ã`òŒdihª®lë¾p,Ïtmßx®ï|ïÿÀ pXH$qÉl¦Œ¨tJ‚N¯Õ+vdÕF³Ş/7,~t½àp=&¯µï­™Ì )è¤†~Ïïûÿ€‚ƒ„…†‡ˆ‰Š‹Œ‘’…•–——›œœ£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ºÂÄÆÆÉ˜ËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğã! ;_5http://www.davidco.com/forum/images/dac/bg_header.gifYimage/gifÓOµ=GIF89a"˜ ÷  ˜éªG•«X—§ñöøˆ¹Èbteœ©1ªSsh’©™g{¾üÌ"tŒVÅn§ÅÉKkXW¤¸—¼Ç2HH¹ÖÛ„‹…§ËÕÔææw´Æv¨¶Wªe){”˜ÄĞÄÛÛµôÃ§È»(…©ª©wƒy3’«:’ªš›™Yfˆ¥¨©ó¹sÕ‰ÃÿÏ"Š¦‡Ï”{–HU(Œ¦ lƒEœ´5x‹Yi&ªD£ºº…­¶:µVSœ±y˜–‹’Œ†£BWO/G4ˆ²¾bÌykºy®îºfxreµs!†¤Óš”«¨{‰ƒº¼º2}“iˆ…ÈÈÈ2„›˜¶©K¾d+ªdª½C¥8—±ÆÿÔV”KŒx£­„›˜£ï´–Û£$dhs½ƒk«¼*’¬ := ä­Pz…uÃƒßªÕÕÕh£ª¦ç²£¾ÃD‹›b‡yKˆVª³©C¹]h—„VŒ›‹¸ÈŞá³³¹÷Ç|ÇŠ“¶¾ q†s{¦—œ¶º²ÌÉA‚”;€“Ïãä9…±ï¾¸ÔÎ±ÏÖp¾}•®²}ËŒ"Zbl„±ô¾»¿šŞ¦‚İ•|©‡j”:‹ŸyÅ†m¤²e•zM¢¹_¦º‚Ë¶ûÆŸ¦œ1wws“`£µ2‚•i®Á¼÷Ë:eBC„)uŒ)oz‹ãjÏ)r„i¦tÍâŞ{ÙR»i*yJŒ”_ƒj›Äµ‚J’ 9iumÓ„‘×C†™g”ªë·”²µ†ßš’”‘<Šx•º½K„’\ƒå¤‹|^®kl Š½Úà$ª.®K;•©ÅÕÎ_šj“Ö¢Ÿ»´BŠ•™Í£ ¦=l²ÃŠŞœr®¿p™x±¶°3²Pi¶u2Š$yºûÉajb°ÒÛq¥{v°À~±—“È¶ïÃ,† ªå¶Ÿ¡K`[Óİà­ĞÈm´{×©®çºf¦ºP¢/x…‚Ö•0`m“¾®rÏ…ãíïs€nI†˜1’¦o¨*noG2oßßßa²oŠÓ˜í¯iºuÃĞÔ°÷Á0oq8~ß¡uÏŠ<‡—¾Ê»ÿÿÿ€€€!ù     ,    "˜  ÿ 1¤8°EªÖiQ§aC:uèĞ!D‘Ğ‹2j\`€#G CŠ9ÒcÇ“Sª\¹ FF—0`ÆœI³fL:0pê”È³§O‰@5 ´Ñ£H“*…Ö€)´§P£J:uƒÕ«¥6\bÂ§§$I8qZ…_©¬gÑBã´–iƒ¬I6¤=m´RwŸ½j(NZ­^ÚÀ¤p¶«œšn ±!hV«¥¼ÄÙR"(PàÉÈSE€€<4s®âj]•Ó§ÇU7®ë×ã<80û€meØ¡Z5|ø(@¼€„ã8H0£Ü­å†ÌH7D]º™@àÜÃ½F8j‰ÿàáÅË„óx çÆM{nB˜©¤‰‘+%®È İ»v8ØaÄ	'lsEµ`•ÔÒ hØÑ„#ğÀ^n|€G0~óÆí$€†#íXƒŠ(ì±GŠ\ğÆ¢Ä¨bŠ4^€âŞt°â<¾ÑÁ@vàCR@üÕ`ÆPĞ½tĞË”½IÁ4ü1–YbiÁ—`~É˜”ifrÆW`à¦oÊÄÉÅœ\@!8X¢g8ğ‰ÃŸÆ€C 1À¡ÀD‘(0$0Ê(	F*é¤“"©¥˜’€)œvêé§ †
+êjê©¼ğ„ª¬®ºê¬Âÿ*ë¬´Îº¬·æúB®+ôê«¯D¬ì°Âaì±È&»Ë6ëìĞB‹ÁdmBØ2ÄC2QE©„RH&‘TÒ¸&yÄÒº¹ÔÒ»1µ$“¼6Í¤SN9ıÔ(tğ[PD%”RåTST%¬0ThÉµA[%q‹\RJQDq	Xq¡E4tl°ˆ*}Šƒ%ä¡GX<ñkPAÑ‘D6Lf•S€]¥ckñe'.át“Pœ\&y¼–<LÓrK® †l¬­F±yfÛ–€[n¼ıVpÃ0GšÈ%·Üq†¬m†!wÜQ!Øqg·vKSyèMÿĞÃŞéIã…ÒÁ1MLrÅâ“(ÙŸãÄÔ€Švx`‚µ,è`%¸ˆÃ9l@À@`G?£º#	”€ˆlğÂË+Æ(J¶ïa;Š)¢ˆ¢79ª¸¢îAJ9¤C7üIÇd‘VFo%–[r™å—„	f™˜©€¾šmúà¦pÊIçzæA–˜è ‚Šh ÀäŸ(¥üSš©¥šºÔ4…€ü€¢J MU*T=T/(U«bEÁZYPV·Ú•…õ‚`ıêWÄ
+a²Fˆ¬f1‹YÏŠ–´¨•
+Ä Ùj4¶åˆx\	×FNÂCrÀáÿÏ•®°ëˆï‚—¼–X/šÜë‰úú‰¿&°¡ìŠMÉâÂ¶8	,ã1F2VŒcqéS…÷Y~'{£jN†àOãAP.s“†	  ¤U¬Ø¢,æf‹aÌÍ`PÀÀ‘ è„$5#ƒJ2’£™Zj¨6*ÈFk¶±Är£›ŞôflÁ)ÛÙÒv3°Í•s‹E îPƒÜ¡nÚ	w˜½™§éQÏŞ G8µç
+ÌPƒ®0‹+¡xø “¼ñ30ï†@œ€Np…Zx3ªD%r ¡¸¢³P¬‡~§(á:4 ¡¼8ït·ÿ;QèNw<âİpÔ¢¤ƒG{(Ş”W$?øIóaÒğ€‡,ıÁX2Ò44Z=‹fO{Û{@÷¼ç=	¤IMlzSú”±¾;‰cOo,™üêw¨B!JQŠrTÿv@ bÊ€šê7¥À¢~Š„`ª\5A¦^ğ©ÔU‰°«‚PXX	·jBg¡P…ÔbaAÃ…˜µ†İú!Ü%®r•ë\"ÉºP‚Dv¹&L”‰^kòÄ|E±e=ù—‰‚E‚Œ‹ˆeØc8¶Àp¥Œb$Kø€F0F†—øÓûşôFHÀ8€„h!a'(@!
+  JÁ/ˆ%1¯}¢Ğ£ÿğ¥.·e
+e42“N¸¤q‡;àA¦%Aš)i¤öšÕ°Æ“¤M(½¶RfÀcNÊÆJä0–®|›,c¸eßàÀaöm˜îåzW8b(@úy¦4“¤$bpG–
+„¾	Îp’ÓsM@'74ÁX£ığFë €‹h¢Â§¨0ØĞoøÎŸ3â‘ˆEÌOà9”H
+‘”g¤‡Z	õèE§Ñé]IK×ûèGÃ4&’~/Mã[S›ªßTC}sr©%òS?JPP¶şĞ(üí§Xª¤
+ØSõË¡Bê©PÕÔ2?ª¸Ò ±:hU`e5ÿ«[%aWQøU°N«Za¶ÎŠÖVä",‡h.’Q]ueÉ]á5¯&Ú_;ùë¾ú°˜¥°KÑbbë3¯h¥0bŒlÆ4–‡q(|Ğ¬Ÿ:‹ƒ(Œc´¢--,q˜lğ	káDÄnV4œè¡
+z|ÊU¹Ø¥¶F©‰oaàÛIf¦ä G%eP\=äa¹©q®k^ãIÙlM”¤äÍ)Í§İ³§»nk%Ü°3KÇm‡;Ù1ƒ/İ_÷g¾ïQ‡2uÀo#¨AIP’wîàß&Äb›—SĞÂy%(	{ ˆ|€¢s„ìÀ‹vlØ8‡7Ú"É¡ÿÅQÁòsœƒå,ÿ€Rü##±˜¢Í[ÒD+Ú¥,IïJ[ÊŞõ@Ú½¢?ÀÇe"_qÈ]ä•¶ô¥oŒºLŸL?CÙOQ$Èi£²\)ş	µËŸê)˜ŠÔš}UdªÚÏ|Á¨nÍUmó›EgeĞ«`]aµ`HVl-ÜŠHZ)¯•ø°‡éˆ9zhÄÅZ®‰VÉ¢­Wz9Ò–4¥y2¡ÀÓ™vÊ¦¹øÈ|e+ ¾ÄG=Y4Ê…)œ¸£“ß¿ T~£‡¬¡€>ĞL0…1aøÂ„1á H>òÃü›=¥_Fy­X.C}xpbÚÒÖƒJ#µÕx¿“İMÿmºö5ëŠlÛ5›IYÙ¶öG‡:±/-1pìüû€oşë]{ó=íQ÷U	:Ğèpü95à_ğ6 ÜäMÇ µ`W	ç” òU:vğ
+P!ĞpMpøÄÖğNâO!èrnp-è0èr2ør0s#ç$)V$BòxĞLRQĞós7t9†=ÚÓc$…&&dBæ&Mwd,õtL?NFuõcSˆ’?Z§S\·eZ@_H@b7v`&fd*TfkÇvävºÒAq÷A!guWBwGgy§w.ôB}çw4$x~ög:¤‚Æx$Ah>ôx‘'y/ÁhyÿÕD}i’Æ/.cEwi w‡5zSz=1¨—e$Y#F3Q`2ğGQ  °	xbZ²( VQ3…qHºhÆ–|¾ø‹Àè‹‰„HX1œ@Ç(m•
+›amÊ55ªñĞI J£¤æ÷©D«”6¶0mK 7ñ×nqsóQ7:À^ LÀ„íˆÆD8ì!WÀo:`Ü1QóáÙ7 F0`µp "NÛ h`NËĞ:¤¼à§@:h`Ş`¨`¼;ç0sş”‘.ø‚.‡
+3X’3ˆ
+2Gs<NB$Hâ<å$T2%Ó£%ÔÃ%ÿ0tGXt%U&J(dmM'Q8'v‚'{GU(†‚…S‹²u]x)T	)_7Tœâed˜@fø@¥²TK¥†lX+n¨f·âAm6‡ZU‡Ç2gĞRgÑrgc¥g~Èg‚7ßRxmÅCrW…Dsµˆ+1yyE/–ÇW˜§y›Gœ }œ70™h0šÆ‰
+ówñ0Z±1[1Š£ö”Q°z ¥†1ãĞ'nQpğŠº§{²u" ©‹ Çç3VÁ|Á˜HÁ¨|Ê×iiŒÊ8mšamypmgĞ}°5Ş6än»Q×•Jª´~Èñà^äèø6‡W°ÿĞ< Bğè™Ò òµò€" º
+@j` p5ğn±  –ãM•@JP	¼ Ğ:§à¼à< §€!xpÖ`l rlà¨ào0PnP¡
+ƒ1Ø‚#‰’Ô4rÇS<>rrQâPI¢sx “@%F‚c`“8¹c<Æ“>>JGlBdFF”tÂì£'R·”1 eƒb?À@e‹’?R9•U	vWÙ)Z¹•¢Ò•^‰vL–k8–”fg	+T%wjY,li,n™B*$—sÙ‡1CgCj•CöVB”xˆ‰whF$˜íÒˆ”w˜ˆ™˜Šù2@á/şÿ™H±‰”IYÑ3V1`ñX‹©y(­g©ó©¸Š ¡õŠ±öš°	‹˜°ª\°ª´…›¹Ù›²
+$°¿È›VÁ”u\›±*ƒ\›5ëÀ}šÄmŸT\sÖdã«tnÈ1Òjw0rCró6Û±ŸPÃT³Pä“ÀÌ!Pÿ0‚#_ò•ï‘ ò©“ ‘Ãøù  0 
+@9°p²R	J :­cO¼0	z
+ìˆó¡g‚¨ğ#éà#É8âÅ¡¸b#6²{°¢>²¢N2sUò’ÎóQò#4=ÕC„9©£;ÿÙ“jÃ„å#”CŠdFz'SÈ'K9(MŠ…O
+•X÷(T
+†>Õed@Yé)Yª¥œRv]ªTbéTbšfow–T…–Xåfj¹¦lz‡o™‡pÊwe¥-ÜxIxl•‚Ö—IDè‚h‚J˜ñ²·|[/‘¨y.ã˜cĞç¨©]D©˜ Æ™#eR–1®À“®ğ”^1[g@Y©Öš¨j¤°¹ª˜'8pl|1«Ì÷Ùğ‹Ù€«›|°û Up®5·»z@\PsmÃŠm›ÔIY#]¶Ñ×˜Ö…]èSnĞ*ØyP­Ú
+7·„İi½·d9° ãÿ:	âj ¾É„®äúƒ3_ÆÄ:PÄ@’rx <  ¸8İ”9† (b!¥s
+hÀ§Ğ`àÂ	°a÷¤‘ç€;ìO¹Cb#¶##‹P+Z<V"$~Ğƒ0‰Rò4Z%…cAW³F¸£pt$å£?ê„O('Q¨dI?òƒQ†…1ğ¤•SÚ…M)C5@ÿCTTf_yµd†vb¹µcúvT‡n&¶sG¶f‹‡h+VD ¶{ö‡€x§xº—‰gˆ~‰ˆ€*¨)¡·”‰7‘y‰¸–Ö¨*™¢‡¸R¥‡™—€z‘EŠQ e9ü'
+F	‘8ÿ‹¨jZ˜ĞªâĞª0°Ê›½)€¾˜pŒ°}¼§á
+g°§¬Õ–»¨ÜÊÙ¶mÔèm[S~âÖÍ:İxÒj­pc­Úz²”­îF95°{#€â+¾jĞÌä‹è‹Ò ëÑ`üvÿÆ¯Å×€'0 vÉpÀ3PÀñ” ‡¨0Ú:`À÷Ô X²1$»“"ÃP,
+\<Ê#%Gò¢UÂ4)³(\„D×c#å“âÃBFn=[¤JÆd}B…3uGV7e$`eIK¥şS)W*µI¼¥K|vh˜vOÅeéµl†¦s§¦kÿÚ¦p©wqº¶€×¶ƒ·Vq»Cnµ ‹G.C]Æ~˜x+˜lüˆ†úhP4‰-3XS¸‘y¸x{\©}Ü¸šú¸‚<Èƒ2Ybt	+ãi¥º{¦U'·ÆWQjº‹é |pPĞ›ÇÇ·»2Ú§ÓæŒ®,¼ÒØmÆûœ`#n6Ğ¼¸¬~s ½»\­ÀÚ
+ Õ+Û7fpı'@®
+ÀÌ¤®ÎÌ®ÓÌ¾ï!º€ÍMàÛlè…¿ÛtË´ ‹NGğ¿rÎà§`‰ ¡n€Ìš ®s
+Ê ?b;+*#üT;5B²	Es8è’ÍóƒQ³
+ÿ-c9Ş,üĞ&:Û&A9ÃEù³Pu8<SUg?…•úÄBLÄø}ÄbxÄ'=*K<fXëTk÷*.M¦pHÅi9ÓXœÅg»ÅxæÅ_ÌÓ8Æd|x…fˆi¬Æ¼E¨…éh—÷Ô“h‰‹JXu¬EsÕQ›`±Õ˜ÚÕQ 
+‡B´òÃ'ñó”¡¶1Q°d´ÙÈuÒª\€1š\ÁIÀ¡<«àşğº  °ä L3ªg»® 2 }•tœ¥qÊU`ØÏ•5Èš¬Õ%nÙÕ¬gÙ°ËÖ*­–}Üiû©fpùÇ"ÌäºÌÌ¬É¤ä[ÚòÈê ³ĞÿÿVÒÔƒßñn ûŸ
+N[Îh0q°²ãÚïtèô:"Òa	šÀ6b;OBÁşd#5‚Áü"
+•²+YĞ!<%@’ĞŞ6û%GçÂ.l&>jR}>B
+…}¤05u‚¢Ãm´ Mß"ß]—)Bvı}T)}µ©’íYÅ\+Up¶à®àXlÓÓş‡nëgz)·neáDˆH¨yËá}[ï6âPÍy3Õ™‰Vâ“ÊqÁâœ1$ ãöÖïÃ'ã“³õ™©èš²¨ÖLYƒ‘F Ï ºÀˆ|\ğäşàQ@JNÏp«°[|—`Êg ØXÿ¾¬ÌåÌõ\á‡¬Š­¼Œ}Ësàß˜æl.­rSÙûÌÛ:²­$p 7Üğö:¾åK¾Í\õ~>	îº}3:Bp:PŸŞ¡$Õô ò¯ßü€™3ÎãT	BĞÛçÌÖ`ËàM sgapïŞ"nğÄÓOµCÁª.#\²L$ÑãŞĞÎc$Ş==Ö#Ş …„-Œth¢t)¥Şë}Ñ´7uT×Ñ÷óÑúseKK•Cµßü]íÂ¥g˜†N<àÜ®ARl¦qxUcK¶ä^î©ĞÅ×’-t*ábhxînhH­áI„W|ÛÔ¨q3TTâv|â(®7ÓÇ›ÿé¸ vtG3úa}kŸJªğš=şÈ«ŠŒ›Dş0'o»¿˜©ÉÇ(ï üL‡ÄA„@$Ù$‰zBÔ“'+WgÖUÙXÅã8ãÚ )àÀÉ­ÌĞ²¥j>dú(0Ç¦M	sbÍ‘`FÂCAïÜ‰(Ğ3I‡š©ñ@ˆiÒ„™4IM«j´öc¦†³%şñ˜PvÜ„èÒÑœ5j˜‰[ãm #FNœ¸r¥Ö‘Wr®”£–%h¸qƒ a™7hfë÷Ï‡DùØ°áeÍš7?¼ÜtuAÔQ©U—.½çÂk×¯e_Ø#ªCÿ
+ğìÆóàAï†Š0zç7…^ö:ô¢Û‚ïç¾¥?PİºuÙµKàP@BîÄÀà£<Õª)cÏÅ=qñ-Í`	GùïãÇÿGŒ  `Hˆ˜	$aAt°AHˆÁ	!BĞ0Ã;ôğC5|Ÿ(ÑD^ ñ‰Xt±E_qFk”q…_ÀG"ˆxˆ‚RH ‹\¡È“TrÉˆhrH!wrJvÀ •TZÈ2Ëºì²À¬cÌ:è(“:!póM7X@Nè”Óœ:À³N>çtÓ?éŒNB-´ÍÚTÿtÑDÙl”MHÙ¤†I+¥ãRL3¥”M/m€OAi ÔQK5õÔR¡i@UhZuõUXc•µh6(e\ºdW&øàc`£ˆ"€aÔïXşò³¤>Hì#–$8I" (ª…‚‹k1áL,aÂ¡o/I‚‰` Ä!ö™l@ — p`ê¨€vŠ>ruH‡ôX,ºhuÎğháJ"	¥,y€¥F\ÊÀ†™dš£&pÒi By(£à¸Ãä“ízà¨AJPÃªªª*a¬dai&èÁ‹²ÒúGšPbR~@®’&æé@øª¥–¾«ÿÄJ„P‚Å[FbxIä²~ü-GNqäœvÎù küHÍ´Õj3ín×DÙ#¶Ùj»Íİ¦3Ã7Cl™Ãâlˆepä–£à3áé?*ÿÃ<,0ã¦9d*€&î´¼ñJÇ €jÒS¯½÷âg>ú–EVd¸µ‡ 	€{çıAàƒ—PÂˆÇPB‡qyæ7,qEèQ„ñÅéc´ñzqÔq{ÔÊ Iò•lr‡ºP}_V˜RÊ*¯ÄRKú½ü2L2Ë¬M5Õ\€CjNvâS8@A%0€<”›Õ(FJ‚’¢T5uAMqªœ•QõÿAT±jU²"a	]e+\åª!—`B¯~µa	K@Àİ±òƒì€ h%!
+â°Vµ°µ-nq×¸b‰äà€%0€ààQè…½êõ†( D°Ä%"°$D#y GÁ,‚„uä#m ‰ ¨`’‡D%,É€Z“ŒuŒs7ŠDfˆ¡$òF)Nr/á
+:¨ ÌJP¬è@³ YÍB0³œ…"`Kˆ!ºXÆ«ôÃ*WI½ä 0‚La*¡8Œ€hšŒD¸pÁğÆ p
+08§h‡7Ğ€o\ µI5ó†7Úÿds6´9Mz“9é$Å¶ˆE,N€¸mÂf@r€cÈçXN9±Eê™±9pàÙ©NwüY:òÇ©[ëÜãºfÕ²»!2jW;n=b†¢è~'¼ïxÃ[F‘ç¡6O¤$")ŠL4"¥ôE+Å^K··½ıÈG@_øtS$•¯|Oê‚/ºğ„vÁIï‹ßü¶d¿ûA#úKSšÖ„¨B%€Ì˜'ú‰DÔõU°J°R¤3ÅAOjS£Z+A(BÆuVµºU
+“°+ú
+X0”¡€lxCüÜg>ÍjV~¢>à€ˆEÄ–¶l×­(|«ÿ!—8ÒáE0^6â ¢èE2"¤ ˆÂ.Á	#®ÈÁG,¬
+!¹£ÃPÒˆ‰U¬VØíÅÉ9ÃÙäÕ)œÈ¹ÎE!o9Ù0!DEBP‡d¦†›Íb““3&qÉHƒ,@ã†4j¡°ãë}À¼á›´·½°EN ƒ©	Æ0„AŒ¸Á¯-OëÇnÎ‘ M$@Á
+æ*x‘€ĞM5v{k²é¾É¦6oè àÀ	¹ Œ3ˆCÜ^ñ€æ çIù‰('ÏÌåÄóèDÇî T<§KêÖ£Œ÷ÀG>°K–~"P‡>wÿ"ÁîzG (`TÊ½PG?ª¼´yÏ3i—SÄ¢/WE.ÅöbÚ=Õ§kÖ©NÏ—> ú¨C¥’•°Dúq	©ĞÈÃÎ@‡u €0   £(©ÖémXtn±§
+PP[}Ó-¨ §®º)T€G¢")*T!R“	›ò  ”Õ¬—Ò 7*·6€óAD5*¸ÊU×Ğ U
+UÈ++†ªğ+ÿ
+XZËÆ+¢`‰"1[¶C†20!ÜñÙLÀA/>ët € .z± 	ÀÄ_ñaµ	[c_ë
+„Év¶uÉÃL¢G–ğÖ
+~´ÿÆh-H[wÃÊÂG”¹Ô /ŒDŠD°˜L@•”†¾2	H£¼êP'­òÉ	 M”ºP‡ÔPƒ$å†ˆïeÚ»Ê Â¾†¡Ú`r`K(A—¼dƒPÑ`¬Äh7&Àµ±¼ ÀığÔÌÍÂ­6·išÛØÃ7À	Î:ÉIâlÃ'ng/VLê¼ØrøƒŒ7ö¹ÏÉ$tüüçw z³ÈEè²æsıXÂ¡èDôxßMÙA²2å«\åeYËÌãrôJ¤"–Ùzd®‘™¹¤‰¦6ß‘ÚL>Ê9¨t†Ÿªg/‰É‹şè€ºÿH(CÃIªWåÓî`xh¡OY¥´›Æ§7uÕşhCô!Õ(*øc NÔ¤Æí¦é_ZRD«ZIuşS%á^LÇ` *VíZ×½®«¿x¥WaÏĞØ6l}˜¥ìe‹€qÅŠ¶ÆB"L ö¨6qè—E˜†?À. ?˜† ˜¾zÙ.ˆè€oëX„îÈ†gø•(8Ôˆzs£‹À·Øb¨-;	ÜZ‰İÚ-‚+8D¸A2¤Ÿ°¡ˆ 0Gb$¼08P©H‹’û‡S$ ¹ÿR‡Jš™„ğ`†è¢.0š˜ƒ9š“¯÷z/T0„Xª€Àğ¹ÂÈÿ4@Œ]òš&ø ¤ë‡£c˜€]B¸y›àÒè 	ÓÃ°®Ë0Øè¦?˜ÂY'á(±´;ûæp»Í©¸éxÎ1¸‚«¸˜½Ë±ğø;ò@*¨ 2"C<#K2%Ëy2(“<
+á¨ÂâÙäQÍÓ2.;‘=1³Ñ#½1½ÉïQ³ÖË©×K’7û© ò)Ú³Û»=¤ú™  0„P°0“à#”D›@©pK»m¨( 0„å æ[€q3Ç:É´°ê;GO“ ˆmH6y> È6È“Uë”Wë XC•qˆ¢^ØÿF3ƒ0ƒDY•’¿¸ª¿_2Áš¡:¶ğ?Z6eS(e"‚(p¬ÇR@d°"\aØƒ  	`õ¨ ­i¼j( 
+À— ‡lxÊgØ«t…Ô2˜7rA9Ú·:º#EÈ£FP	ŞÚ-28°TŒ±‰rZ8C:¤E:Š €F’Ëå2‚+8ø‡
+˜…Ğ˜™™™Ñ…ĞØË«°Š±ğ‚
+@‚¨`9—;¥˜‹9TWB…™C…Xª…5¬%Ã@Œ¡k6˜Ã`MõB…DÀp6p¸AkpT`ÕÈº»á:Cü:°ë°±“3œ‚Ûµ3ÿJì…^˜	8³´`14„>¸; +Î Qì¿3™@‚<Â{Ø±ÀºÚa<L(Y„¼±ÅŒâ(+«²¹úE‘
+Æy	½9FdÌ˜Ò I="Q=6s½h”F ©ÆÙ{l”Ÿ<ÛF1©ƒ8 /p G0[¸… 2€6hHè£*°ğu8Ğ¾A0A”EÓ*J3 sÜĞ7¡‚6h€Ä…•“ëƒrğ‡nÒMÈrt5Çî«TcµLù”q ê SÅĞUˆ¢0 Ji•38€qøHX‡¸W	Ó3€ÿú«‚(-]i!½ %ê+c¹¡P"#3<ÂZ6?‡ÂZ²}Ù–m©Ét¨ H‚ZéÀĞ¾H‡t8—İÓ¾t° h+b—ƒxJ& –3Èª¤ˆ68 2X‡Ü9¢-‡ù7€[	+K²4ËßDË@Pœà‰â
+™9`¤ˆ;$|‰«Â´P‡ëÂŠ+Ô
+­à®
+ø¯@'$¹¶ˆk¥˜{ oˆ¯ [ªÑ¯ıÊ\R‚ 0Çh‚²MsÍ@›ÕÄ48‡=@
+ &Õ¸Ò°ÛÔÜÜ0İÁ¹[ˆœ;§Hì‰áœ
+°€Yµ3à ÉñÁ²¸ÿ>Ú­“°ğĞÒÉÎñ8ôğ±k×!2û°#+ÏX'£Å(cO+ƒ\4¡O`,©ù¼0ÓOşìOe|©4«©g4Ğu'IŸJÚ.`Ğ½³…ĞıÈU¸ĞõEø¬°èûG¬={œ*ğ‡?@Qªu$ğ‡+èQx(Hr;'êëíƒ¾[RØÇ…[ÀÚ‚«PõÒGğ‡(Hp/…qÃP
+ƒ%ƒËÚHx P˜¾x\°I9€” ÈRhÑ,5 ƒxTpóK†ğxÔğ·è€6 N€†xƒq]Øƒ(ÿpáƒj°Ü7Xİ=ˆUğğF‚h„qÀËª†˜Ä p[(eCYˆ!ÃŠ·aÁ6rÙ F]è¶J-_r‹Ôà„èTüQÅŠ‡‹É xA #**Á<Ê­è$Ë²<S;0„µ™Ÿp8¢0
+!ŒGºGz3ĞšÑ.ÃÌŠ«ÀŠĞŠœ™…ø‡I@‚ê¢Ö—‹¸¦1bĞÖ÷Z¯nm#È¯¾¸‚J°¥7DƒS °XÑDºh‚&p;à^`ƒwM€sè°[Û¸­»°½ÁM°{²ƒœÈ1»ÃN+89@±J´€^ÕÁ9ˆ}J
+8Ëÿ—x‰Ğiã*š ¼¡4(!TØOdy¨Ç&#–ŠR˜<™Å< äšµÙ±O“ú²-ÆşLÆ93Q³…Æ=½Æ¢ÒF¤ŠPB HÆİPæµ‡+„(z…s¬Ûw<°%Q{([5X‚Y¦—nØ‹!"\0Ç:1°‚qô‡-æt0'rŒ¢PöÑ¯ÒU¨Á-ÒÄuÅİP€€98eî„DÁÀt8§ËŠ/m«X¿NÀP~äs<ÇÀ[ˆ"$]‚Pœ(º¬°rL/…7˜ÔÈgr¤>PpˆĞ><øbJ}ZÈƒzùCÀíË_ÿ	ğ
+	€„.’€ıU,™L(Ü9,_ã_S!D€l ¢4ßò€xX„ OußP]#‚Ñƒğ7¨5}k˜ÚêÊ®<‰‰¸FPè´‚m°‚ÃÙš@ø˜( Š¢@à¡pD	fŠu
+!(Vìª ] f½
+f°˜¾Ä
+¦.øBõbŠÈtaWŠ/Tà‹¨€+ØŸÓÌ:4 “G˜Ã1ğƒ`¨Œs8;°ƒ8‡Í`o?xì«°'fCÜ›)şº½y+şßœË	Sj/¦œJœ¸Ë€À¹3Îñ 	šÀ;ã;Òù;ÀKÅ‘%YÿK Ï•\¨<¦•İ–õ	äª¼]ÜE^|nDE>b3a©G†äÿD³ïŸ¡-ZEõ)¦İdN†Úée·XHQ0(Ñµ0ƒÎ½Ğ­…W¶ÀƒíQsì†t¸P4½Ğ+ÆÅx€Ts¨Zİ†Ş}p•fH€•“GqènÀP¸ /8GÄ5fkæÛUÒNè\æ8Çéë,ıÜ(2\J)•è]L>Ñí»„!ÍÈ¾t ğŸæÎ-È^ñ#ÿ\Èp3 P¨íkssX…Ë²s€‡8U0sÿZ¨‚s‘K£¸0¸€6( "q€ú¡lk!ÉR…XßlÀ„7ø6–€^°„xqèX„lø~¸iŒp-ÖZ‡H
+ Ù¢-ş½­=8EuPàXpê^İ¢XKÉ	B®ê­
+Tz #P‚#à¤
+¸.š‘™®è
+›)ˆÖæ¿D¯¶¤Aº0ƒ3Œû²Ë©ÙZºáJ¸ÄĞat-ì?¨~ÍÎÀ…8…sğÎpk°L¹™›½!Ä»©0DÌĞ¾â¤ØÕëâHœ3 Dã€ˆå 	xíi€@‚·ï¡‰íÈÕ±ó ¨óÎÿ:N¨ÃÏ…‚ÅÛ‘Å?6ää[¬BÎåÁ¼èNä’ò¼idê=ŸäÓP¡­dğ6Z¤Ídİä§µŸ:Pª1Iïí"sHQï†¨ï¿ñ¾- ¥ÚÒP ·,¥Z¢Çp,}…ùÆP¨'ÇU(p½ƒÏğGY a>=[İj–p5s0Pq-ÈÈèo€{/ŞSçÑå„ |L™>b]Zvå6ğ‡X]¥Z­?H ÇWğÜA¨À…A˜°,×rsr{ĞrpëüU8ñ1X(H1oƒ¢| 0X0:¶×ÑÔìİ—g–(€éÿõgPo3_L‡Ş_ßyùI(Á÷e-5b-|Ë€? Ôß(jO‡N2@jEÈmx…mğR·bˆšm°j›@$ià£@
+DŠzOŠ¸u!àË{Â° öMê®™©
+¾ˆ“B © M‡:]
+¨ãĞD8ÄˆÕ€s§I #'¶ÕªueÛ•+9*å°£D	šS< @pÔ„X°`Ä¨ÉÄcí„£€qtŠkíĞ8j×îƒ?¢.\X*Ê)Ó={˜Rİ#êM‡?¶>0cÆ-CæØ8qÂÊ¶sÌLëE¡—3æÎáğç…¼Hğá÷ïßs˜Ë¡€„Šÿc(€ƒÕ&WSÆå2qš!A²Á³%¢EG@†é4êV@Â50Àb“¨mû6îÚHìæí[·ïİ†çMü8òäÊ‡?AĞüÉóè^LòÂ:öÚ­kïîı{÷ÚÅ‹'¢İüŠôêÓYÑş½{"òçÓ¯¿ƒÈ]|íï¿ã?€ì€A*©ÑB*¶° ƒ-@ÓB>øs‹.Ğ?.xQ¡	öø³¡?,‡=$Ú3À‡.˜ ÅàÏ4º0ˆ‹t“`ø³†ª¸?«lx‚?µ¸`†?2lèa…şØÓ#‡D®R¡Àp%éøÓ=Kh	‡Šfèÿ‘`¸àa—ö¨i–`˜P¦Œoúc¦	4pg:éT8œÜÙ€Ÿœ@ƒ¡	šà"“¸ìh¨‡q¶±¨	öH£n©?²é*ğÀãäæøÓ9¡ÂC‹?c˜Ï+©®²‰–m¬²Ê-@®¹Š‰f8 @ ø ìÉ*«,âpğFU{ôR€%Ù,»,ø“%L,Â‡+ü¸®2Œ›‡+ë¸ò‡?ŒSEãŒCÅ8PñëùĞˆXa…"Šä °¯ä0G iÅË	WÄrG ±Ìq‡wXK ßñ•Å×àUEwˆ M³ü#Òè2Ë,:L2ÿIÉ/— ĞÌ!7B¨“
+8äPÆİAŒ!ÅQÃ”ƒH•T²(¡±’4.}ĞÏÖğ€”7
+ğâ.:íÄ.íXcM@9‚/Öœ£Ô@õÔRTEuUxpÅ×WaB–eY¡Öôr¸V[IÀAáÓÜõø\ØR€”+æÃâ„vXb‹]ş˜d“)3:fš‰cIgŸáA£­Œi¨AÃj®0QäN[n½ÛÖÛo$Œ°ÛğÃ?\pÈ/·<óÏ9]sÔAwõÙqöá÷y/´çızáÃ7~}åÓwŸ~ü©ß~ 8`
+&Ø „ÖáœaR0ÿf˜Lºbš–°¦%È¨F/z•\$àÁ	XÔ†e "%`CƒH•Ğ1ÉNòQ&8§U	Kğ
+SˆB*IŠLşÀÅ™œT¢5©iJeâl¿:ÑáNÈŸ`ğ§?A£„RŸ@&éè{‚A% 8±Cü3 (8¡*ÆpSƒ€Gô°À`ljTæ­Öá7˜ƒVo˜“¢: †6¶u¹Â•8
+0XâW£	@¢À‡¤ƒPHğŒk1K7ÖºV6€<N#˜F˜À>,‚|à?ôs¹]® Â/p€*TA^ó²— ¡/Y ÿÿ:@%–ƒ‚UÂ± ‰ÅÌb‘@Ì¡˜w˜Ø0–1Cx¥c†ø˜î 3AGĞ.şQ°LŞTC	t1³šÍbj˜D	P–„(`@ bb˜C»ƒF’vˆd$•°.¤¶’–4¡H¡Æ ğ`|À§[Ú¸1ƒvğ¢ 
+QÚf7¸ávsÊTìv«`Eo\ñŠ-æ`[ø ,gÙ†ÖÒ·he0‹³À4rê8Ç†.˜å*—¹ÂlÎs‚ÑœMSË\
+»:İgTçºÕa"v¨ÁAkZ#İÍf6¾«0bƒG<"d}„Xq#œ‡­ÅÿóŠ#±Æ`yÎƒÎó0‚HR˜«_÷:½ìd¯°âábÍÃ=ô\ç	]èÂ _¨Ç|–Å~Ò·Ÿ'øÂíüâ— ùÑ¯’Ää£*íoIĞŒ\0GQê€´­ü¡ÅcµUêFşT„¤+©Gş®9¨´€°ËL²Ò•~ø
+ØzHGPQo$0x!¶«à®SKÔªh=lÀ7h!şiG$”ƒòŞé”-¤ÌÛB>°Šš.Ÿ8Q
+	øãƒ Ra,"
+ƒ‚SeË 
+[šÕ-æà@ É
+³,qÇÎX¢ş°€ÿ°D3ŒC|`,`É<ípŒ2œÚÒD@3˜P†`z±K†hâÈ’³ñÉ%2	I@º°?P€
+¬”W¨p/è‹hl	°W,JxÅ6bafx‚Ä;&œ!–±@Ü™fxØÇj g=ë@Û‚6ÿÁ²”s -›D¡Kğ”q£*S‡âÎx##FÈK$’‘á
+JIÓja‡¨¡Ü`	:Ÿ@€	pClÀ†ˆ¸@ÌSàÂÖ°Úæk Â#…TBj7’æmo0Ä1SÎ
+98Øâ{e,0ƒğÿò€¼< ˜sh©_làƒ9à”:½ñæ8 È©ƒqLé,šĞŒ†È¨ì”QUÔ`
+Çg"àÕØè®wceÄË*ñ³Æà6ÂI\‰3W²U¬§+]íêœ¼òu®&Á_SrçPï%W¹°wØî•G±OØkd÷
+ÙG¶OˆÏeåÃŸş8Öœ=zg“îh´
+*mığ—Úı­–-lº[¡@©€U:` ¥c‚ƒ?Àô\$PEŠZa;¸Å1Ì¨J@!xKr„ˆº.İcX! ÁPTôQüQƒ
+İğPã}a˜ÎK$ÙÃ8¯„P…ÿ½` «„.¡­6à·Š0â˜‚Ø_‘}u*Å	ÓQ¨U„h«âC#PÔ“ê»QÀÁÛx‹*äi é˜Õ*Öƒ]é[ß­+ÀÒÁ?ò“šdB6 dôâG!Š:/~ñ§Ğø{ 7bğÈ$_¿ıNÖ0à®ñ ë¸²¼îÕ.ï«È@-ı‹"°ÁØÀ6à.ÔÃàÂÀÁÁ	Ô@ÄL*Ó›3uŒW˜AÜAœ€Ÿ¥ğ€:TÀ?pÓ?¨Ã?ÔÌË¼ô öÀ,è‚.¨Ì95Á¥I D1ÄÑ| *‚FtDğSøÓ6AJ œÿ4ÁğBüh.ìÄĞ€«ñB®I!Q°¤„Fñ‚XC4EÜH…H1›I™Á0XˆY¼Ô.qØLQ@M™ãà”NANäØÂ\ †øáNÑ›`Ì[½½†`(&p¾MÕh@ÀÜiÜ!DÀVÉ†WEXÅ ÄEœY™Y¡"Ç	O[e\ÆZÅ¢Ç ÈœÈ=‡_¡œ.¦ÊÁ\ÊMËùbÌÉÜö”Çvàdå\ÏõÜc5#ĞYÖĞñÒ!ÒùÂ0]ˆÓÑÏƒÜ„Pˆ…DQ•´ÔÀ–L<øƒ€…ˆ‰hÉ¶L‰¡H<¤…– ÿ—„‰–‚ÖY‘ W<Â	 p%€r]‰„‚¨ˆ	hÉ”øÏ¹@âÀF´Šè9yñĞĞ<äÖ ˜H€–€"Ôˆ ĞØÀ ˆŠ¢T‘‘êq¦t^Ø »èÖ Ìˆ)ü¶ØÃüİ‚;TØ–ß8ü?Á„A‰RƒÃjXÂ4ÀÀÒ’]ß#%ËnÄ $`‚b0â¼!b(C 0R²$]f$îÉX
+u€ Üß•ÅËşQ¾ô˜ıË6(Â+¼B/ÅÂ+àlC œ€àÈ´!“œ] ZŒIT„ˆÿ@œÌAx“Hƒ::™Ó¢MÀô ôÃÎ¨L¨QD=Mo>€7ü&1$MğSÓü“‚©9a<Ô¶š«i‚&€ò lB€2!Û0!.´M;àB%lÔ9¤!´ÔÍ²]E/àÁp…XÌáXØ@lÄàØ [P }şA·ÍEáÜE¸åÅX F`bNYÀM)"½5¢æ•b(ƒgÀT X"ÁÜÁm"ÂE WÉ†ÖF ”"‡JëœÕ)®¢ñ\\‡È"ZU\-Ú¢È•Ü.¾(/
+ãhÇË©\öÌb­ÀÍéò\32c3şÜeI£Ñé4VãÒ…–üĞÿOÔÖ Õ…ÉP]mŠ„Ä‰‹´ˆ
+…ÈÌ—Ö©ˆ9ÜAùm„?TP˜PÖ@ı] \é†)
+šêİäO¹‘à¹Àv1ä+¤#
+™AOªHã]„däåİ‰@hø™<Ê¡, .Ğß¶Ø@¡¸À£˜'´PMV‘‡¬Â¤P:´AO‚<(<®Ñ-|ĞÙÃ¦˜Ã|
+­J«úl®Ê8ğíĞÎj´X ø@/äI-	À8,\È¥\fÃ$Ù0k³.Ë3¼†%ÀÀéHÀ8ø%¼ÀË¼ÜË,}™XÀ¿"œÙ+œ@,lƒ$ .l„œ ÿA-À“ÄüMfÎY,Ø>“ÅÀSE”“:HÃ? ÓÌ¨ƒ„ 3´àË¨ClN€Ì3ìÌ),Ã$ğ¦DCÇVÚ‚MÃA-pDq*A. '7œZÆr8L uà©ÁëÂæ$€rC8Ğ…I$€5˜¡xÃĞH[IÁáVôMX´ç	PÛµÉç4Ğ'\ÈEäØ^ähPù'»ıNMC®å"Ú[Q1¯ºN Hh„âÊÁMè­<Âlˆ"îÔ)rè‡†(*ªâY¡ÕñğÆğ(,v\ŠÒÕâ†Ür4-ŠÕÉ™åÂ\/şÕŒÖhÊİh1^Ç^IÿA2úè26#é:#4úœ‘¦.gU#6ŠÖÓ5ˆiİO€¤VI¦
+!Ğ.
+O@I˜P×†/‡è®—ßIP…Ü©ñš€óïBtÁ@¦–×•,@õŞîóZˆ¦|× *—îò„¯yı	´ÈßÁ*T¯õb¯9€s¯‹ĞWĞ®ã5 õ:¯¤xÁû~Ş¬ŠÀCá‚íÑ(˜§ÌŠü^ĞBÁƒHˆh9t‚€á%’G íªŒuŞôÂ`ÀÀ3<ÃXJ«
+7k6<C XB5pÀ4œúÃ¶öå:œ·¶’ ´Áş&¹š«µ¥«bÚ€à„œÿÀIˆÀ<=Œ¾fDÆ(“e 4yæÇ¤Ó˜Œ4 š6U@	xÄ"š4xÁÀlªÁÎ°SC\ZĞÌ™F¥™…§ÕÂ	0ÍH /à‚¸,ª%ÀJ 2l`ô¬NğìÍ2!7€Ğä„ğ‚°ƒ7X&‹B4›zšAJÑ¡Ãç	pØ[ÔçV¤­»9ÎãôTb´2b (Úš­Ú(R=âa,ˆFŠõªÜÊÎ„nbÂqUÃ‰bYùm‡†èà&sÅé•+úÆ^qŠ®¨ã.Ç_Á(ŒV³0®œæò1æè„.2†óÎ=–î3ÎÇ7é‘²®’n#ì:ˆìb¯óÿBîJêrÉs˜lolıî×¹Şòú.?gªŒÄ–ó.Wö¶ÈóÊöô¤^oø‘CKªDÛï–¯¡,—¦L*œ¯óVÉ5À¢~ïEo4hÊBv´•Ğnİ	ö‚(4ÀøÒˆÿìÉÿÂ€“% O˜‚MØªĞpK_‚-´A¶·3S3µ ø@¶^©ñ…0½a€$ÒNl,‚"!À3pu$uõ"ôã€% ™Óp‡È ¼ŒÃ¸¬C³Ò_¶R ±¿dÀü/$¦bºÁY tz„Ô×‚CXÌÄ`ŒÏÙÆ|E4Áy&V“èÀ?|±@|Ó9½Ì,”ÿ@@Tì„€.ìŒ.ll ÍjD à wÄ	xD%œTBô1Ò­r!Û,uö€NÜ¬ÍÚ,KĞ7”oEI¸œÃÒ^rH¹áŞ`àJ	"YNZø€!hm/ØgäÌA!âEØîE_ †º©[^œm€Î²½!(4†ÛÂ-íˆœÆ}kâÙ-àíîĞF1óÄÅb*z¨2ëÆˆÇp$®,vœ4×Õr„•äZ³ÉùU6_øæv³x$c8ëÜ8CÇ8—.é3©:);76¾.ƒÄîıĞ³‹Ğs‹l)! ´ÙïIo,ôîV4ƒĞïbtGWÉŒSŠ«ÿC6´C×ÈôÂÀŒïŒ/—“Û¯ëé“/×F+Q‹\ÉGƒô”›@•WÉK
+”4E[‰Ÿ`	(@'”¹• 
+'89	˜»ˆ¬‚‚“5Y ÃC§”‹™Ë:ƒĞNó°2Äc­ƒ ¼­.¯X2õ&C#<À¤5øMõ¼[œ­!¾ÅLEñui—ß4TC ¸˜’º¤‹\³\ûğ¯dY¾XÁŒZìÒF¬Bxš(€PD2ìœÍ™b ÄüÌH`pƒŒ“Í0Ã9m6¢•€:t3C?LÂ'C@öj¯6§!˜Eœ,Ó(wâÁ*ÿÁCA€4´ZÊæ òâìÍ®ÄOhaØä6®Å9œ*øAS°¡ÂkòyFm‚…Jµ§à\­!ø}ê!p­-€Û„í×öP‘-€Ê2ÚêÅ-ƒÎc,Æ½ydèr¯¾ğ®pİs‡^hl¸)²NZáFX®à.‰(œ¨ƒ7øŠJA„ŸÜ5Ï`]‡^a¸Êq³†C–àœÕû÷TVz8–ˆx}Tã¨ng­ euVë.)ÔAƒìÖ=³==×x/@]‹ÌøĞX‹8oGß8İ?¹ß3ù=9F~áãı=cÉ•K¹âË¹•49–t”[	(4d9L—ùFwÿyG^/–øI±9şFşKCC¾é
+ ˜~ p¼œ*€‚ì—‚“mÒ'…’ä¾+œpÂ4'è±\‚,VrÀ‡­ØKí´ª/™(‰ÒM3ÁSsŸ%Yº¨o?÷—W& Üå&éº¨\¯CĞB¹È -äÁ-ÜÄ¿·$&J'.lC Ä+E9¬àâ¦–%JDäTãN¬ˆÅŠE1Ğ3†Õ0“Ñ<&pã&­B‰!Ô°œ¤FÍ¤IºJLâA ä?fı&©S'M‡bÄŒÀ1ÈHÒ&HO$mzâD­Z'®äXˆ›[‚ ÿa{ğè1ä„­c¹‘lL‚ƒ<Ğ$€°4n¬¹AåçÂÁ÷Õ¡3l´õøñ6¬lËqÂF?8ÿiÌÁ„¦ı1mšÃœlù(°Z‚…i³-ÔVÛ‡×0øè¡ZpºwóÆ€A 8”+ğ|9LP¨O X Ú‹B"{ñãÇÇ F}zõ$b<Šğ~üG1F °ÿ>°ùûc´ïÿŸ„úğÃo„ÿbBŠ¬ï‰'^hğÁŸÁ
+-¼ğ…5Ìp…'¡‹D±‹'V8ÅˆPQE_ºxFM$‚Æw b‡ğeÿÇ}Áq‡ wÀ`ÈTŒl!$[X’Éêp²(	©ƒ:¹’²\€Ë.0À€/Á4À1Ç“Ë3Ã\óK1ÍÓË8åä/ë¼<óÜ“O:É¥:=´P5”èh ÑF˜”ÒJàäÒI1Åš:…N6ÔRM=õTN¾dN6x5‰K.a‚ZY$Š\sa²ášK^\ŸSe0ÀXG K˜ º Æ	 ŠEj­UÖK’Ø6‰º}u¸À`5z),tÀŸvİ}wİt/xƒ$À@qx„~yM‚=ôÈãŒu\qeÿuòÈCÀÈc[$nƒb*yà•6°%ì°l ÊÀà!%„8ùˆ+c¢£îxù¢XjàÈ;à0£%¼ À‹	¤áFˆY&	%f˜Q£„YtÑe’
+şÑa%˜xòIe&iÂ¨¤JÊ)¥Q€*©®¸¢%p9û•­Ô–F,±xk´HÒÄ¤UHæ¦$npä.½q4îâåœ¾ÎñCQ[\”7cŒ±Ğl™ã1l€ÊŠËN0Ä
+zéÅ3æˆe²9° rÆ$óÁòlğ!N§Í‚?dË­8Ş|¨æ¸à!—¸×€S†¹æ–;>ºé¦£‡ì¾Ã.Šîº‹ ÿñªïíÖKºGO¾ğÏóüî Æ?şæëOÀLPAD A^ _B	'¼ğB
+7Ü°C/ ‘F$¢¼ E+J ‹ø„½È/¨‘p¤#ùƒ?Rˆ„#%)IMrÒ£TB+Y	K[ÒRšØÔB5¡IMmZSÛ4'ÊéN¨“õÔÃ>å‰}Ô¢ˆX¨C9ÊQ†B¢¤,ÕDJ}ÊS¨’âQÅ	:p	®ò–¶˜@«bİJWQàU¿^R@ãU U¨•°*4q, œqä*`—Ğƒ¶¸UŠ$”¢iV¯@À„E Y\PïrÇ›jp
+ÿP	øE]ò_ŞØÂòà
+NFÌ  Eà dxÀrğ
+¬(¡'È\e¬ˆ€¸8YÉj¡ 8ÀÁ–'ÈÈËîPC<À!y@ àgúìgÒ JMdR‚
+èB¨f ‡°¤%ğ	PĞ„&h)él1PA[œ#'ØF-ƒm”m!°¼Š–·A`pãÁ@Õ2P4¼­-aAƒ#xp
+ºôh~³†¬q7 NqĞ(a÷8ÈÙÂ“‹el`Ìb31ƒB#šÓœÆ^XMXW€9Äf6·±îŠó›ŞGÊ ×nK,ÇxÑÂÁÿò¨Ã¼ì€‡;Ş!Æs=ñHa=ßãz¾Ÿ÷„ï>í³	àÓş°Ï}îC_ü„ úÕ/’ëƒ(Ä?ıOCÚ_ˆF$…ı•u ŒJÔMğF9òQ5¸Á‰J
+a“ %R	…XZ¡—hC1•éLoroXÚ8å‡©İ((×¶„""£h[(H-‰·u¢¡HEßN±¢Êb »•-/~‘´Ê†³AÆ@n ‚ŒUôp†qàÀq´„³æÈiEzìcd Hó
+½iÄäzÙÛŞ~1!ØÀ8¹°u¬
+m¨Â8`1 2•VÀÃxÿñ
+³ÁòrŠØÆ‚mPÌ¸A—B8B	A84åÇD¦2Í°‘màgÎÔ›4¥ÁiA"Àæ?* ƒ—¸˜fø¥v¢ŸœÂÅë´%×ŒĞ”&@Åò´C%¬"{Vâ•(›"Ú¡4x%¡†ÜÒò¹ÙE.İ›\ìò·°˜äh°FÚá†sx£‰ÛhaöĞQÅ0f# ÜHe¹+@ÅèÅ4(ğ[H@Î‰ijg;@«†uˆ.@íps:ğ”7ÂÛPƒªLä®wÎ:^R—ÃTê@¢yØÙ	¢×êYU<ãÛŞöÌ¾ğÁø)ßÔgVú¤u@O`«üè÷„ÿ^Ûsu‡êÊ?ÿá5€E„@ÀhEÑ,ëÀ!¶‚‹Í „ôX*I„O÷eOˆ¥ÊÉ…o
+­9Æ´ v{–M5ìœLÛ¥æ0O¬õ!Ÿ‚¸'Ø**¶´8Eğİ¼·¿Uø©Îø\XÅª‹¶ºÕ%Ğè«l0ŒèEc1•6RÕ’ì.´îX+=pk[ä0ïÊÆ3ª—î•¹¿ºØÅmmÒ“œ<˜«_*Ò” ¶Â¬ WM%%ˆ13‡mğód&«EQàğãŒ@å9¨Å+„€·	8Ó™8‘æÉ~fbuüã³P	5gQƒÀ!¿DtğuèÿÂj8'Ö·1¶môøcÛø,ù©«ä³cløÛVÜv—´¡šˆÉ¶PsÌ€`Q(XH–%XC	í8Ç9>€ÑÂhT0‡é@ccÆbs`İå”~g—ö¢^“!İ‰:ÈY@ö³ŸŒbw:Ü 2Í]5&T.ˆãùÊ jï¸`<ç@g©Mmêu´Sê§âàÔÖ‹@VÕ­zO?¯~D«e}ÖıH×Z+[¥Ğ…^ûÚAöv\Ÿ`×
+á•CöªşDÄDm¤-Ú^ Úªí°h$±,ˆ±«ÛŠäƒÀ­IÆí²ªÄÜ²D…8K†\è…b¨³äŞêí´èdşDµò­µÿˆ\ĞˆEN¶pëQ&…‰î‰<%ŠnáV6À¸®ÅZi¹.W©Œ^%¸ Áãƒ9"ÀYê© %
+\ÆëX.¸åÒkŒz%æfÎâ".e€¾êkvnznÆ¡~î¿À
+È V	ÉÎ.#sìÌÎtï¸„@ñ
+ŒÀÂ>ÌHÂ\àëÀ‰VApí¤I›†&&^bJ@€~	¤¦î @‚â—al¨¢ï¶!ÈŒÀ Â^¡âB	j,É²B	~ÆŸÂ‚óïn¼ ,Ôf,à‚oÚ"FFoÔ†xA	‡ô>àõÿR1Ş,rZCö&çr¬ m@4r#7şLÎla4^ªv m¦^ÃnªÑPÇ^Ix‚Ã+M~gúªx¼‹Óp@ûšê9Æ‡ZÆ‡zÄï=VM«Ôã{²=^«„¬ÒÇ?Ä*şÚê?dŞ
+ÿ€-®øÏ®Ù–¯D¤CşJ -°¢È%ëÚ0Û"P9ˆ%K„FJ(Jè Ê` =p†Ô-EP†j¨MĞNPğŞôDßZëßn¶fP‰%‰rK›(á|Pá^½¶eV¼ÈZ˜ âºèâ²a¹Ğ+º6 T8¡˜àã˜ÃÄ»èÈğèäü¨¼J¡/	.ÿárå6 Å	ÄÕòâÌ†Ò0ækaÒğò‹b.³AÌà:â¢¬`!4s °np±dN¦—ªÎx ì\ c³g¤ítàNÆÅ8‘šJ@&@nFAQ¤á'˜†°æà
+¨b1ãc"**ñÀÊ† ¬.Ø‚-LBÿ©,(odŞf -îæmÔ¦dØ Íì¼á: õ6ª£X¯1BÊ"`Ïr¬Àr@îì¦muFç¦FCQGXA4í@1Í‘2€wªAi¨Šª!©®/:
+B-ªÎ# âè ©«Êo«r=ÿÔ/ÆÊ|ºç¬ü#şğƒ¤­¤ ÿ8ò~>rÿÈÿ ®êo K¤CR’Ep%%)H±h’ÛlÒƒR!²¾-'1ğ'1k7+N@ğK@k†¼t†FŞ–’)ïmY+*ùíµ\p¶bPåQlNqp++¥+½’Š^ÎáŠKVksXà¾’°_ZÀT(%.£`Z¢P»æh9J.·'•0ÑKX„E„1×K-Ÿ	áZø329I2õ aFÖ
+Ú@bn39°â3•`ÉŒ  b¸AtI–S(^añ¿6}&›f¡îÒ®&B@&¦UÿD¬ğÀ¤ÆÆˆ3Çfl9¯À2Àõ9‰É^a:q¡ò	Ìæ:İ&¡4¡;
+,®l-Æ+O.  °,Ö*Á¢ÚÓ(€0Øl>;Œ#îÀ^ÇbÁ*£¤HóÎ†oö,'DNÇø‚Aiêuâuè‘\ª¡!”¡Äá ¡.‘¨x‡x åú¸ =ô9¶Ã;rÖ=P-Pt!Y|R>ZT­(r>àoFí£@à~$GéÇ#÷OjM
+€4D¨˜-C”ÔH&lÁöµƒtHn’J/„ÈMƒr(çíY¨İ^ÈL’2ŞÈ”)uÈ)W[Ğÿàh°ˆÅQàôQn°Ní”ñô+7Nº ,‹17@-™ 	0W~eâ‚kaQ±Ä¸ëº …Z®0RıhRÏ«0ÑPaî’Óù@TEÕ“ÈÓUiaad€hôàZub2S39Ó\÷5Øà"w°.^AoTÓ|‰(ŠUYaóŸ	ì|S\l %d¢%dB*@zà™®`ƒê8a,ìŒ` ÁÕ2—Èál–QÌU	¬ØÀê"¡âUêÊ²s `F-êÔF”À„€püâ¬0âSq§õ6"öŒÀÿ!?í¬è$Á 5L§ĞídJ¦TÃhjÑ€‡s'J–BS–e (CCC­O©<
+®£;ØHz¨'üÆEÍ¯Õ¸
+<ÔoÊ‡|Üï@’Ö>à‡­ö­vTjó'Cü/€ş‡$pPÄÙ ËkY2lóG*ˆ&kòl1@§Ï‡€8À’O†cO‘tøˆo22à ùÎÀQ–À‘–,Y“7™“;Ù“19À1”Gy”­ N™”QY•WÙuP™øX¹•cÙ•[Ù‘!”øªá–sÙ–q™—m —Ù—ƒ˜‡Ù—w‡uzÃ5\c7&í7”y7
+š¡Yÿ¢šÉ17
+yšeØg˜™Ï›™ùœÇ™ùšÙ›ƒAUCöJ'ícïeXĞæ™1Ş Ã â—jààø¹ğ  ıÀìÁ¦‚j@ìÁ‚ìá
+t@*"Z¢'ºà€`	úûa	::£;	J€Å |¯@˜AŒfv¢‚!: –@¡ÿ`	 Ú¦ààíanFÜîí>ÀˆAŒ@%@ífaZ‚U*¡®€’â
+À† ©©">€Ç‘B ôü 1 #]Êº¬/ 1ììa :c3¶ÃÃvPg3ş€­) Şàÿö€¯ùº3^ê4öú¯ùš48cÏJÃ÷ï¦ùÑdc6Hc6°™²“¯¹6
+¹ ‚G7Í³¯™C[´7›šƒ'wJÛ´E{8:»³G;´‡Jxb;µc›\jûµk·Ã8ŠŠ·{Û·Û¶ƒ»·§á8Œ¤ÕÖJ¯tJÌíÜ<P)Gkn‘Şä-oOS‡:µş¤µÅ»%QÚTpãô¶r°R$S2E½9¥¸Ü2,¹(ânåVÒh¾±©¢P
+¯'ä²+ä 
+ <t5í9t¥V*õ¹Z·[¾Eº©u]Î¼8pW&UKUçì‹çÚ`”H	ÀVvè Ï&Ÿÿ*a]•¬*¡À•D`ê,ÌŒ YãF6½×7›ºuhdÂ% º{Á'z ,î®	Ôà—ˆ! l¢÷y¥Ÿ” —ö0ŸœLÉê¢Ê³;å†}ÇBmÄ‚JnÆ\Ë1¸.ìÀ¢PŞs£4*q: >à˜8Âî am ö(C–\¸…ß1A{Os˜¦ÄYcqƒjŠ¨†¸dÀø¿šE€ƒù±‰‘ç‰ÈOÔ:gßÃ@B]ÔG½?¤@ı˜Í€(dÔá#ïï	ØvAJd5ÄÈAn=B|ÁGùƒN|aÖ…ôENÒ Ùë]¤\ÄE6Jÿ?(mÃ'}ÒPRHKÓäÃ”Lêö(Å”º«»¹ñMßÒ´û­*¥PÖı*Î¼÷Nİ›á7‡Pâğ(×ˆ¢`$i<ş;»F7â
+Ä:’Cf|º<½ÒÈÁ0ÿHÁ!|åÈd€Â/Ü“2\ÃÆ“ÆŞ0aQé5SõÂt)/NA&/Dà‡ÂN µ6“õ™Ñ™„à¡kBTÂ|_ÂY¥¡gd³x¦¤Aj€Š	Àæ[ìyµÓ¤ÁğpÕ€íÀ J^…-&/nL",pAÑ`òŞ†.x+ø)NìÀü¢ÍßÀÿSÏqVo®C
+ÏvÏëLbC¹?ßñÏşÌÍví5(‡¦do
+™ÉBM›dae¹ eİş‹€Ê«aCŸã:j6 ¥ø;ºƒ=" ’"éÓÉÃ=fÿ«ÔÏö³Ç}&R}¼'id×6ò×Ä×xô#3$kù }B²6kêX%‘õØk‰ Ù#Ğl½í¸‘{'3ğÚƒ²¹áNBkİĞ„İìVıÃ]ÜõöLó„»÷$ş7ˆàÜTİÅŠn+‚N
+<ˆ°4…
+¡9|1¢D‰¥ m(µ!ã†$I.1ùÈgÑ¢($£(åL ,YF°ôò%$KÿjÚ(â ±w2J>|˜h<Šôh’›–*ÅéiT©œ8‘«z(yÎ¬s%C®zôäÉcö¬Ú³·ª´×¦Eè>xõ
+®«øı›€à\LH äŠ‘5\™0ÁKáÈ^*{q!9³4&M*á9´šI³T¦l9uÓ	àÔ¸CìÄ¶'®\Ùv%‡îZ•r¼«V%Ä• aÃ«R`<¸AàÑ:tÈ<&Dç†=ó½šVòš½BpÙqãæÁ¹soDí¹°'¾¨|0cÆ-[±bù˜3‡'Ø`…"ZQ ‚6ø`ƒ€6Äò@„>P€ÿ2Ø`ƒ< A‡sŒ8b54rÀX‚bŠX¢L5Õ(c5È°´R9â°S;á L À˜4d5E€d’J"ù“<e“RNe•PJ 	Y"exƒ—#pIf™df˜R„9Â<á&œoºùÂuŞig/ì‰€~úÙ…+ìIh#Œ E ]ŒàËD8ºB¤’JJÄ
+•^j)šnÊ)§;±Ã
+¾ŒJª/ î€ê¨
+B*-¸új²ÎZGuÜz+uB!¾úº !;¬‹ì±ÈÀl³Î2kÎ±Ò&k,±Ö^‹-±0»m·Ş. ƒÿ·áK.ášKGº0¤
+»é¾Ûî@¥Û (	İ›ĞBúNÄo¿U„‘FK]B0D…4I,¼°+-µHÂM7A‚ÓN8‰c	ãtpQK	œTÉ=EUU*W
+'ZiÖ:gx%Xa™åŠ´˜ÅóYğĞ²m¸%@t)bF¸à¥—^`ñ4€	±JdƒVÄÀñÀ	‘vj§í7WÔRÂh ‰¦ƒÜd&vjbO€†fÔpEmµá–[¼í¦oJàBálØvÍ1ÇxwÔIÆ8v‡ÍPİÜĞ-5`§ ††Öœó¨ˆò|ğíñÆõá÷Àÿ~¶,è_€´mc "Ö¥È¶H0ïXğÇï¿K â‡Z8‡v(A5$–˜Š)Èñ8¼ÈÅŒ2"S8âÈğJ>îäSÀ $0FVIÅK&)å“ğ[I?ıRh©%—$|ù%˜ù›i&4Å`MjSœø¦  OÔSü„¨?ŠPOÂ¡u¨=UjR´”1Õ©z
+T+xB©FuªT­
+©h¡«`5+[µ ¸ÊUzu€94"\ÙZ (Ú ´AÌRÖ³ˆ¬!@¬VŸ8,xmŠğ€A'À…Eriq‹èZW»ŞFx±^±WA‚¯{é«!şjcÿD*Òu$KØI¦
+><Lb1™ØL,f“œŒâˆXøP¢Œ¬dq<F¢¨¬ìe”9ôàŠ*hÒ+`9ËXÊ’PòŒc¡Å-àr¹´¡.0C^^Á¼Tâ•¨e%ˆsË#ÔB	<ğ‚9¤‘€#w0ƒ×.36¹I2^àA	®6Ğ” 4£Ñ:”™e®&2Ü¨ÄlN €Ûä&7µØÆ6zs6ŞìR	¯‚ØP	4$à9‚a\ sOèD‡9æà¸Cn°Lˆã9k ÂŞ@İéâ£º^˜øÙO€‹Yá²Pd;Ìá?#Mğ„ÿ'¯BòA‡DšR	Ø È lĞˆœ(Eâèi#p`‰ ŠDí^÷"¶£ğñh|PˆAú¢ Œ"	Ií{üä%¬>‰JõÆ˜ô×¥şõK `š8@"N
+l [÷Á?!jP|Â¡,(F=ê“Ú`¤@øA
+öS¡:!
+S…ª¶0VŒ¡kxÃ3¤c éğÇ‚•­À 2ğÇ6”eÄg–Yµ‚±áxHŠO4ƒ?^ël\ßâáËP¬ë\_ìmÛõÅ×ŒiÄ×İˆÜY$`L!˜G–0…1ì{tÉK`B@ö$cããù1ÿ‰,#Yî"	°ŠLe’•¤¤Æßqhò+aqE>¹–´äák9å!€¥è¸SDlw`İ(8ÛÈÁm¸án<M	Ã¤¨0ƒ3`‹Ìj1	Œ&ÄÓTCÛzéálªØÃÌì4N`sæ¦Á985Î†‹òÜhPÔN¡„e á9şd\u¦Sf^ÌYãp
+ç<m~Bç>·ĞîtîQ]òc	ØbÍ€6ÚÑ£è 2³`†	=ÀBhPäRâ¯ 9=Ñ‰tŠ"K€EA´ ‡JTØ¨ß[Æ#Lø¨|'AŸHĞ¾©Zÿ5~œ¶ÒVë%`€•KkâŸÿÊÀ5Moš“«Ûº@=ÉšPqı“&¸§àÕ‚‡²“¦:Ø×V°"l	›ÂÄªÊ…/tìcm•+:\b (ÒñaaË 0gÛĞ,#.ÀË*bQÄ¤ã«Õk³EmnqK\´½í¸t«Ûs­]a#½b/:¼¸ÆeHr“Ç8n$	LxnK¾”ìÑª0dMé#.´O ˆÊÁFÇôÂ’P‘$ËÚ«È€
+ˆï|k–3rpE-öµ¯ZÖ±[¬.p€Sd… Aà¨ƒhcÚ(ı¸˜À*ÜY#hÍ˜ÿ½Ô°‡;<™ÊAFPƒ×C05”@¦aæi,C€Ó@fík¯9”@ŒXÆH7çpDàÎÁ	f/¸à†•Ùe#OÇ:İÉ§à!Àv gvü¢Ï¡ânH{äƒº7PÀ¶0„~,Ô khÔ
+zÅšk—;ä!ïâ€\ÏÄT¥,å€lOûšÚÏ-´õ €ëUFŠ¦£|¥2µ©A"	Îw>÷Q5Nuª„ )˜/ªé‹ª÷³ï}íCû÷ÛÒ–ö&0‘Õd:«ª±$'8­õN±~k­-((\¿àPL”¯ùJ)ÁXÄ&BÆfX¦‚XªÂ*ÍÖÿX³ĞVCo¥`.ğ „``“%`şĞ` !±@YA†0 şÇ-ÌbÆ¢ş $XY0,2`±5‚ğ ‚ö@Öòm oëĞşë° z ‚o@`.s`0@o`o€¥0`ír [ pıæ[ÿVÄEpq\çF'ƒ—ÀpC"QªÀ0"Q]312¡]ÃTâÀ(qHDñÁ	á†%—2*ƒrºÕ	z@×ãrUp_y`_b1s–¨‰5wë°_T0,÷sÓ#t
+Ò ‚Š"µ #f Íñ4QGŒ1k×ÿa†A¸ÈLÒ pÀ¿hÑ4	(7*vv,6G6Ûc}ÓµP9&Äá{á…h €ûÔv(Æ8ıd9İQ9›Ce‚P–Ÿs¨ :îñP^ÆyåvĞ bÛŠ`4§Çf6pgVğf¬g­z¨x!ÌÃ<²h:¥"'"h8à",ñ"@¥hÅ#-áhJ%iããTC‚>PETUUÎ‡’)©’+‰?çç’e5¦Ö?ÿÃ~}‚Vjk%'ôçVTA¶&Aú—W‰Â•€€H€#*&tBÉ¦€,äB(+µb•¸" ş½rş`„0ÿY#åDHè·Ğ	0 V°ƒ·` pŠ°ƒÏ2ƒà¶ ö k¹‚· \Øé€ƒ˜>pÖBé omàxp –s€„s ğ0@‰ş``˜®%[9`YdÈ.ÂpÂ•†ùbplØF	Gá !v>®T1AÙH§1Ãq(ñqKá†‡èHRar.ƒráë|=×rªP`¡ë Jcq<£3e¤Dy€sq f f tC7t'pg" spıTÂ¤55`<`u¸ˆaWÒ ^WH@M!PÅHqc -æÿa³!N4·$Òğ4Ö({7OÜHPL¦OÑ‘O’¼Àä¢Ô‘¡Z9 :öq~@¢py]Ö@cö: gvPtê©¯`4F`uFzâ©p!éÎÓ!¸—RÊ°{À)`|c	)#6Ò1IiPĞ‘=ò‘P Ïë3}À’,™%Îw~(‰ c§eò?$ &bõU5‰ êƒ“l:ÙV³¦'}bkDWuuA#W|)À&l ´”›b€È–€ŠÅ€0D+xC0 ¼BàzÀ˜ã° ’¹^i pğnù y h öªÎ‚ÿ—ÆÒYs ş°ğ8øé Zë¶  ¬×B°õZz ˜Û™épä ëà•0ğz™s@®¥tĞ˜0@šUP…bhšô\‡†«¹†®Ù/n˜S0Ğ…áÃ¹©›¼É>Ç=âˆHâUL°HNá(³œ”D°-°r…Ös.7®p‰eh¡37c+@Ó·JB£Tp °fêItbff<€µp@†æ ·¸va“bÜÀ_'b!€ÒPŒ™aŒÇ˜bÜd·AcºQPÃd~!TehP¡Ì¡¡äxO5k9íp9ÓbÍ!« ÿ¼à9íğ9X¶¢ğ{@:í¡yfûñ •!r;ºfĞVpg§¸!Àz|ÛR"ÂR²g{)U ±÷¤¼'hƒ&ÂTŠ&#1¢Â§#ö¥ä$—6$Qì£$'™¦+¹¦)9&-Iº£†~uz’xÊ%hB@ïçjò—@	4k{b'/ ”r¥{B”¼6&~Å¨˜)Œš)šblNY*PI©‹e©U9C5´şÀ½B@„`Š©nìf °¦Jğ—±Àm@ş`æÖY6`,' ‚åp˜·€„å{ ¥…-’©JTğë ™"ş@Û²½ár@­ŸJÿé`ÀTà@¤9 [Ùoc(pòRF¨¹šjØšêÊ/!‡s$‡µ	qÃg0q{Xq¾yùšyH‰Tœ·‹0ËˆíÂC ïTÙ°ã 
+÷å
+_asÚ©_kÁû•rŠ£x dPŠAš·'Ÿ2µĞ´µ p wğ6ÆL†¡Ÿ-öŸjĞ¡5?›bÊt ÈQ÷M¶89&Ü°
+Òàµ}‘<x‹ÃùTµ=°OGÖ8İ‘ ÙÈíğêa<¦ìˆ
+,*
+Áğòáe~À¶n›!8êÉAJ·¦5EtVĞ;EJ<uv¤"{R!)…"+ÿËQ:‘ÀÇ¸8€h+#Óh]ê¥>¦Í’îSUHò¹nZºZ2ê£>Ù^e~dB§¦&&ªË%i¢j|J'sò§nµ@u"¨@‰(¹»ˆÒ‹’k¿Û¨Ãû]ĞÎïÜÃ*$t€È»€Œµ¼Ì‹+àg. À `Y„À˜D(¬&¥¥ª øĞ±@DÍòªD¤nö`,mğ ±µ Û Ò‚Û›-
+l-p¹-šµ ­:.İ­ÓZÀ0P×k.Z¸‚â:® G®ªy®—®L¼ïúp$a‡ƒHyÈGØeqÔSàC0,2 ‡3¼päE^Ra.á
+zpÿ‘È1>,  ÄUÀI€IüÀzp	zä`Öf‡k½ÖñÖ%Ì{®pUppª@Ô©I€]„MØU`
+ª 0 ?³	¦ Ùª &`ÍRÙ@Ù˜Í,•mZğØıÙ¦ ”ÍÙ”=&0§}Ú¦MÚ­MÙ½	´@±2PÛµ]Eäæ Z î¦î@	øĞÛ½ÚÇÜ.0Z°Ü¨ÚËÍÜîàZT@dğÙı±ı,gİ×Mæg×MåM¦@ï Ùë½¦Pü%kU0ë04o!`ùmŞPŞüÍrÀ|>7-_‚Íÿ×ë
+‹ ±üpnÂÑÖ°üğ!Á‹Ï°ás‡Lğñn>‹ À )Î)Şâ,ã2Ğç}çã-ãÏğ|7®% ÀâA®ãBOÀ$°ÌüÇ)/ äO+ äRNMU®@#À°å]À^~åWŞ)/àÎîÌlõ¨‚5(òç&ôóLXó|B/à	˜
+ÉË€1d•X şĞ+¥@½0 ĞzpÒŠù˜‡)¬*È,Ğ±š—§Ú‚æ.Dc©~—½:Ü5ØmØâ¿Är­KhYœà6.ûx [/m1ÿ*gY2ğÌÏ6F½…Á‡FÜÓ>L2³9‡tháÃÕÕ%1·1P1@ñÂƒHˆ·FÁpt=ÃTıé’U|âÀãşÕc=Ó®`ÖÎyp	îŞÖ²	××ohÖ3£ï}ı×Ø…]Ø†-ğ Ğ	ğ³Ù…İ	¥­Ù—Íğ¤Mç½Şm`
+«íÚñŸ›Û±=Û²-Û”Ğ	ZĞÙ½½ ø` ½M	ùàÈÍÜÈ}ÜÊ½ÜªÚÁ­òøàÖŞ´Úıİdğİã}İV Şé]Ş¦ ŞëÚ}¤Dñ­Iîm
+¡(`‚&h¢ÈßÒÿ`×¸‚& ªĞr_Øc?ög@fØ-8pµ9áNáÎá°~	*â¾}é Ïàâ*şäÙ°â0ø °7î}~Oä)Îã>ÏPøLnåV(y(HşãNäš_åQ>å@^å+Àåì0&[NúìÀU®)a®úgîúòç(i>æuÂævçŸ’
+šr€vN©øìlˆ+ĞçPÄÊ	0PÀ>dY€ªP—Ü†œå½©º½né,şĞğ \xÒ©ÕĞ‚æ
+x	
+«Š-­º˜§Np¹ 6à´°-¤©îo1-[ä Òüœ|  ‘çÂ:eÿ°AB:4là0âDŠ¡5¸MãF=~„¶¡Ô’’$1É„J>|ø-zåL”RI ÇÎ–pD°Ô'$¢ ˆƒ´ófË(M[®d5IÔKL60IrÉäÉœ6¸À¥š2²\ÌŠgIíÎœã\%Ñs†Ÿ+~üô\Ò“„Ü“—Nş|Ònİ¹Å8“8q•ÄªW\Å±dU:Q’±ÉÔæÍäL0ñ94hÑ M› Åyó8J&´„†ÛEìÑ®E¿~İÉÔ»b›Šñ6¼‰9x´,p·@‹q-î(åÃ§EË éƒ¬_·z‰íÖ¥ãsç._¾wd¨¼ËG‰¾ÿô”È¼?ğ^ş|ø¨Ü§ÂYóæM›Öİ¢hÑ£À< S
+8à gü¤°-$C
+U€ÃqT¡BU±Äq8 xRåŒE^|†Ÿg˜xf‘›nqÆ©Ê†	˜°˜ „˜gáÇ$}ü1œt€¡²J`H@òI-|fJ+ŒJ-ÇLØ!a„4G^H2NVH’NˆxvFØ“üì“;ï$¢PC_x‚DŸx'VÀ³PBAØáÎJw8ôDõå	_ˆÀS"R•_N=õ_v`•ÕT0ØƒTfM¥…Z[À×ÿ:ZØµ_ğ'Ø7J!dXÀdÁx ñçÌÀ 	6kµ]@[{‚õÇPP6X3Xà‚`;a
+.`·ŞàñgzaX`€wÉ!
+€
+üIÇô€a 3`ÈÀŸ<`¸À:ôğ×Ÿ7d8è †@y¨!:@¹"“MÎ#VfY£‘Jâ
+¥“¢réÅ¦nÌCv (¡"H
+KŠJÊ•EšŠ‚©§ Šªé©¦ª*+«DªBœj0P²01‹‹´ÔJqÁqÎHÂ•Äèâ'Kr.e¯¬;i/rd(…¼+ŒŸ9Î(F1Å3¬o¿U¡Å„ÿ{ó¡E³*LQÅ³Ï´­rmO£„³66{­6Ú6ß<óØ(éO¸|d 'rÈ¡w/¼N’sN=w¤›®ºë\Ä…î¤s.öçÈCo¼ñÔ{?^‘y+æk
+ûòÓO³Mn1ÀiÉƒÀWk£\0>*$@A
+@KÔodA9TĞDùU‰BDï_ÑÅ÷_$Fq¸ÑMú•5—¨‘¨
+*-bLLŠ“@@Z)Ka‚R—¾8ÉILÙø`6Ğ”&ò‰Qê æT§$½àO&l L©H
+O]P”¢õMIJT…ú¡¨4ÅCFq
+R¡*©Lÿ…*TµÊU°Â ju«[åŠW¼ò•¯J!€RĞ_$ÄÂh/°«ŒgœÜänñ­4NNm8c¸Ş8¶!^öÂcÙÅ¯60l+Ø¨P0Bt8d"e@…‰u¬ciC‰œeQYË4é2—•d~yZø°?¤h)zĞÉN"ğ“ŸølhD+Š8p´–LeiMÃåT¤‚•¨”ä–ÀÀÕQ±”å,jQËŠğ–30F.h»‹Ú·“È 0tƒË`sÁı­™gpE1Âi¾©¢¡Y€ò±Æu‚4’{\iDc‚N@ÏTÁ<9·O~jg8§#İÜZœÿähÁ Ë¡>ÖS;êLç:µ«kˆ7ÑğP‚èY>À£QZğÂ<ñ‰}Èğ?'åÏôLñŸM(gÚ‚î)!5ˆAd(ßù(D†a§:}Ÿ >4¿¥E,Òÿö@¦
+ğHL¨Ê/Ñ¤g0pHEÒ åÄ„0MpƒU·¤¥g|iJHê*
+[˜$"t	MhbÓš 'JSìÀ+Ÿøô§âÕ††ì
+rÈ(G1ê†"”¡*E„ JS›òÔaK%*RaŠ‰¾P•wğªXÑjŠVÔU ‘E_Ñ¡ãõ.ÖN®µm—9ÀåÚ8Æqµ·µ¿¶G~ÿ€4dÁ9ÜC:Ò‘+ÙÈ²\KZ2e›„.4J!]éÂÌ/M»Ä(‘À -•<qeÏ‚KH ÅG –Ö§íÒ½X!	ÆL` ÁæÖº†–dªˆ2Ld‚¶œÁ¥Ö‚sàln“†Ù›ßã7rö­
+ü8M'ÇZœæ4¥ñphÜ¡Sx®Ÿ&˜ŠOLÏN, §ƒ1%^˜Ã8Ên:†6¢ÔDEy×:"·xD6‡FñA…÷@¤!)/ÂÇäû”/?·PiK”‡ìqyq¦hƒ*îù (‚Aã¨‚ùtš¼õYÂ}!êĞP‰*¢úÿªP*Œ^@S0*Ï¨ÊŒ
+XV)«XB“hTÖ*aµJb}Ò½ºÁµ«c2	Öt&5í	NÂœ^D!@¯}Ša_ÙACª±](ba¥)Hù°Pu,!û„$q²K¼¬f9+«ÏÚ
+´¡%­i	áÅÔŠQhliÛÆhCÛ¶¸½­nµİ[n7¸Ä·q=¦I’l" k®E0İM„º/.Y¤íŞÈ»àe¥xB^¢Ì2 MaÉSr‰KO’Ä8ÈZ}ïLü*ÊØ/2-1©âC2IŒ]à‚½ôÅnoó-£‡ºÈÅo¶XcZT¢ Gæ„‹ÿ§eWŒs¾óÃ>Íˆ9LÒìs;ı´È±€N½ (NP¢¿î2Õ‚B££dw4È¥Äì´N»ÙÑnÈQÏ¨z¨œ‘–İyæ;)ú³S‡Ğ†« !*¤¹A6mPñ!À)„DD™ÉşåNŒ2•‰ı½„4’Ñ"r¢
+ :ÕG¸<àå8$VĞJ$XÄ‹ôùgˆÉÒ“şRé“dú¶>N¦V›d{6ù	Â+ªûä(¾JR€>^ CYÑ°%¢ñ‘Ï¨#úS•vªVåÄa{ÖØ í³èEfQ·yœökkŒFjÏ¶¶ØFÿnÿwËmàşÖÛàN¤¸Ç=²äš›’é¦ÈsÙİ2w“Dº#‘–X„–8š( (Êû.}Ó7òš%¤¡Û¥«°
+&0Àqˆ‡aâe¨/…³/b"ˆ;&µÈ¾sŒŒ+’+$(…¼¸‹Û8¼ğ‹¼È&Ä+ Ê0ÇğAÂóÁK# ‡M8ƒ›§›KÂ˜3…qØw€ã}jh±N …‚ÑB8£;ºƒZ |¸P „æ@õp:Ãó £8ôº9l5T2|Ø„÷8&+;ù°2);©wØ,«á ƒMÈ ¹…Y»ğÙ*§Í¨‚œÿ²Ä*§³á¾©ºp>(ÂH<œèœèŸÇ{<&HE¹	S
+€E@ ª¸<) 	½«j4CËÅÑó<4zFû’J«Õ3FcÜ“3Ù´ScFİcFMé½š”¢¡ ,ãÛ!F5lÌµåk>$Gá»¬ék•a“¢ë«¢\í+­:X60‚0#<ª­i›s¨¶hÓÇó+£ô[-m[?÷ó6C‚?ù{$r+ˆI:7üË¿uÛ?–‰—™. ¬
+|—¨Ÿ â~P
+Uj¥ x%¢€(p’Œ@¨@‰‚k N@¸¼¯±ØÀûZ8aÒcâKH‹*3Xô¢Ÿ3ÿhAÂ¸lšAP2ÊËA“;”“0•ƒÃ£!—ÏCy2›³ÊĞPÍÑ§ØØÙI±ÑHDê.¤ƒÃBPPK-<º‚ÃËPæ ê:Ûñ¨K× Ã½$²%{* >ìC20©ûx*Ë©û¨‚6ˆû »´Sù)ûˆu …ÄÁ0K³º»uĞZp…·Óƒ<ø/Ê“p‰!á‡KpÍ×„*Î#‘E  ‚*@SÉ†Ğë<«ú^ÄÅ*éI;=a´ K+µR«	J¸Š+N;èÜbQÃ+Uû+Ä¾7¹FlÔFğT¾òµQ)•QaqÿD•Ì¢>(²¾tD6v4-îƒÇÕªGv‘-i+£üÜÇÖb­ÿôÇÜú#ö+$àú¶ø‹?ƒ¤?å*ûcHuËˆ‡\™é*8‘à T	›i
+›¹	Ğø·¦ Ñ›šP/>Hšé¥h “pÑ$È@HÀ­&dÀÑ¬/a
+&t8¯A‹Ø=‡û‰pÍ¹H>xA·¡&·9k›Ó¹‹P,†'Ä«°30…ÆÈƒ42(ÉÂËÊĞĞZpÂsÒÓ-0‡é0ÓKº£SK¥ãr8K9E:3\Kå@w¸ã8(öĞ¨ï¨:ì ²ª{ïØKÚ1‡ğxT| óÿ |`2^h)›LœròùËO…Ì	1Ì6°²œŠŸ©QLÆ\»©©»—k•›0³QŒ¾áÅÃ‰(@ÅgX‰Ç«‘V ‘ÅA»¼İd´ÎÃÅÑN*Éª´úÅ`ü*´ŠÓ‹’<‘“Q«NÚ[İÛÖ>áÛ+ß›ÆÄÚÎ][”ğÏ]«5ótW%B"U	¶öì¬bƒÏ+"­ÓrGf‹Gy|¶×"?ı?~P=ÈŞÈn;ĞpSĞ¤„4·ˆ@·Õ?	ıˆˆ$	™INàØš ’Dš3¸‰3 ÊÃ>	Ø€T ‰(‰K(I>Ğ¥”°
+™áƒ WL¨Ñ¬ÿñÙµ¯ ]¸¬©­R³8Áu 7SIt['¡Ì‹š@Ê¸9	)=;•Ó¸˜ƒ¾ñÚÄèR¾!ÍM(¹xœ«l#ƒ'«$KİÍ‘BØ2Õ±±N Zr(…:-º²<¥ûB=}å`:¥„×áğ˜5t(D­8½:DÅ„ûÀs°Tœº»’)LU
+Õ“òïQ*ğ+û÷@É€»«©šBq¸Rê
+ùôšMûÙ™ Ÿ<{‘m*§šÜÌÍ©" Y=`è<+áE+aj5NICÎ*Q½-aÎj]«Õ{5‰«o•½mÕ»×¢!î¼µVÿC×"ÚFñ|v-x¬THOy•>asOZ¹>+Ú•ÑJ¶ÓzGB¤µ6ó«¶ò#Ø~,X<:Ø„5ĞdXE®åbPæzĞˆ¨X‹í
+-¸·éŠí‹¼‰¦pP¸„ ¸ 	HÛ •Máö¿
+KàWÈƒÍš‡ÃáaâQÚ›$A³°„<X¤´hÚ§•ŒÃ›¹¢üğ(Õ¼•bPà„…$( Áé¦[§Ày9!Sy*SĞ SpÛèJîĞ0 ‡Nˆ›)í[ú+KS:,L:ÔéÛ;£S¨¶œğ²èxÜÚq‡ÙÈ@dîà7D1ïĞ¨áÿQ²òğ¨ÀT2³ûàÄPİÑ€îaòé*P„ÀÁ;
+ñ;ôÁØmÅÃ*ÀYÍRÌİ è¯°Á3ß­‘ÊÓ	á½„™E©ÚMd\TÖ
+*Îc´Vé5+:ÆiÆÖin½gHF½Òæ¼j“²“Ğ+Ü[µr5_À"”»ÂÆõ-¢pß÷u¾_Ãúm"z"{=6|İ¾}õ>ÕšG2ØjËO|ØN`Ğõë¶&¤‚,.FÈH¢à‰eÈÆ`ÆØŒ5‰×„ÁÀÀÈVäƒ*ö¿(	&Yašõ$—uÑøŠHĞIK€.à.xé‡ûÙš6Ú¿³‡SKÿ°£*ğ;7{t&h²‹¼@0‘sM'9¸¡›€:(Œ-u¦”“U©D[xB[2&Ó"|£éĞBµÜ±®bNØ[,LK¥;º7†±¾Eä Cr TÅ¥ËÙaÔÈÕ‚Ù8dEækİÑFÖH^$ìwp“b])ÌÏE©5
+]0ëR€ÿà2Ñ‡6ÈéÑ ÑbX‡.6…,5Œ3Œpz&%}0Â€‰º€‰‰‘•píE‹Å§¢‘Ü,Şb>V®r a‡Eğ`ğí#Á^`$“hµÖ1‰Ö±ªfo~’xÜ3! µºÂ:1gëN¬ßãÎi¼5\{m¤µvv×_3ÏçÿÍBïêÃß{Í¾ş¥O ş>z?-&Ø‚Ğ€¤H}`q‹`‘qĞ
+¶`‡¬è~7ê*¸‰4‰RèØ¾°P
+í$‰¬®R°ğş‰êÚŠ%~p	Ÿ—øÄ¹8> §§µ÷Ä· ’£‹$°&%&júràÀpÍ·™Á?	‘kêÓ9€¹(9!´y°s9«Ó¬$ÓĞè„|â¹Ñ8:MP¨	²VK~)Ë@ZK<Fº¾-ÜÀmK¸t°d‡ª:3Íœéèë7Odël-X(:WöÀ;*¸d)³²wğs?¿O½œ[ ƒ ¡,[£[ˆìîIôÅTtSÿP'€ZX‡–BÄ–M!6ò¡hANç¸Øq›PÏ®×Duª@u×ŒÍª0^J´c>Özİ RîåŒ´Ó{fgÖb¬æìÍŞb«`_¡Âîcÿ«e¾ì¾g7%¢”^S¬òô¦ç_Ğöfh†ğö5 w'w ÷0÷O`…HQD…dğ„\ €y§,À‚ @B(ğ€8ğ÷LÈxW(øƒ?xƒø‚xø‡‡x€ø8È·ø8èwç÷ßø>ğ€> ùù ù 0y“‡…”Wy•/ƒ–×†–‡ù2ø‚™§yšƒ›Çù›ÿ?18„?„,øù,z¡o…,†V@ú¤o…"`ú¦Ÿ‡§zú©ŸúH°ú«·zAˆA®çz9 {9`„±û0`„0@{´ß‚0X{@Ø‚- „¸—{@ ‚¸‚»Ç{ p½×{gğ{gÀ‚Áy0üÃßÃß…ÅgüÅ×€]Ğ€È—üÉ§üÊwüÆg|yHüÃ7|Â'ü¿w†z}½¯‡¼Ç{º¯û¹W}@ÖOû×7{²ïú°ïzA°ı­×z¬·zªç}€ú§oz¦_z¥Gúa0z£‡¡÷ùçyœ_ş/ƒ/8é€šÿ‚2 z ù–‡…2‚î‡…ïÿ“ÿù‘ùByØ÷}çwÏø‹§x‹—øLˆ†h€xø†'øıWx€`À@Å@<¨p¡Á>A´Š%aÄxOÒ=÷>~,TŠ‘$ObAe%z-éÁ@O&€š5sáÌéIŸ'OÉ<ÉJ&k(¢¢ˆF¥tiŠQ)Bİ—+ªè>±ú¤uëŸº‚íê@ì±Î¢MëÀÉZ'nß¾]ãdİºknÜ½{cïŞf7šük0á_4Ó8œxñâc4A†,è†Áıâ¥û-X¬O•"’µ3WM˜+IŠ,äARÖ#&,vÄLlãÎ-S¦8¾{ûÿÜCâcCî!yŸæÎ‰VXÖ¯ÃÒVV™îŞ»)óe<y1_Ä O/æûöYe‰/?Ë°Vöï·*’¿ÿşóş³0ÈB$F’`‚‚D"ˆÊ¡„ŒÈÁˆ…a`˜áÈ†‚"€ Q¢‰Î ¢3+²¸â/¾(ÏòĞX£<»Ü¸‹;j°‹?¤@ú¸£‘7Öˆ#3Âøb‹-¦¥‰%†Xe•n˜a†Rh¡„:È 
+*h`
+øß<ı±©~õ“E+óÉ_{ì©§Şyäñ	Şwßaw]uÒE×GÏ5ÇÜrÊwœpÆpÿ½é†Ûm—ÚAÄ§Ÿ~*[C°MdQE’œŠQk±
+R!÷ˆ„ÚI$¥ÄÒK0Å4“M –S.üÚ“PÉE”Qåµ”²M9ÕTS±RUV[Q–µd©¥)Â[İÂ®\vÑ…_çş•®`ÍüÂna†ÁËXc‰E&e„v®fn¥å•gMN¥¹”j­æÛnšvº)DÃ–in·ñ&©ÅÂ=Z\£É-Ê¢ÍJètrWòwá‰'Ÿæ—'z‡¬÷ÌtÒ'g}øéÇæšjx&’¹ ˜~Ù%—j¹¡Ò[tÈ´•SB½bŠOáL“1Úˆ£ÖFêØãÿ_Yd\km£Œ26iõ“R£5•#†è4Ó[(F–a0‚7—R(!„2´™™æE¬Ù_~øİ''Íñİ	³Ë{¢ÇgxãıÙ]É$*òÇÎ’ÇÉi\:Æ¿YÌÛÄÓöĞ¦¯7ªì:±D™MkaäQ®Â:’I³ÒjëJ¸âº+¯7ùºSO>”QÇ&ËT³ÎBeUVWU«•W×‚5¶ÙåíZàŠ;¹y™‹®_—	öî»òÊëX½“Uff™ÉÅïY±â3H>H#“‚¡F$	sM¦\W;NÍ¦u¬ãÍn$U±HeÌ8ZÔrúPˆ>`ãs"É¸“9ÿï\Îr•sÙzØóøĞ,N­€Ó}r¦3ÄH@gZĞÔ ¢AhBGË›–°d·y¨J#rÛ‰¦Ö¢«1Él4"Ä6°‰ŠJ2“Òö¤©1‘J$Š[ÓXÄ-ñK@àzè³ngmZœ}hX3:Ùé…’›œåTvBÍm§„#<Ôçúàz t+qNG)JQŒu—¢M§ ˜ÙaRT­Ãî.Â;I¬$®É=ˆ‡•Ø
+y3ÑÕ®|…`=zÑ›²”e½¦`O{T¡V÷À÷ƒz”¥,ä;Ë¶¶Å-' /}ë+—^Ğ¥.ø±Ë]ƒQLb¦I¿zEøÊÿ6cÿY¡MM¾€À’¼ê8ªZXDòÀJJP –º ¥‚ƒÁálpƒ ]!%²Zg;LayZæ2<İéq2dœıƒÃ4½‘‡=ÑÔh4.Ñna „İ’¨Ä1QEk«Z“Î–¤)æ¨Š>º"K‹Ä5$mqIhƒ‘ÚÖÖÄ%.±Jrãhİ´”·£UHŠ{´7Æqst~lö¸Èí‘…–»ÜË €zŸÃ†"9¶ÁâœîbäÅ&ÙÀÖU2v˜\kCÒ‘Rª"»¥F8"ÊWáux³2KTIå¹’'ÏûIôŒ•D”Ã–¸ÄŞ³´÷	îñò{¾f0ÓbLno-ÿÇ—[Æµ¾ö9ó}ğ“_aè7¯ÇÜï^úãK]¼)>¯„sÈ" Mc°Ô,Ğ"g]Èll÷‰å&¸õk#óyÈå|°Ÿÿ( ÿDĞ•ô îá|ê#'Æíg?;Ëá„ 29ˆ¨AŒĞE‘¦!3zh£MûhHè"•tF'Õb×¬ÈR!¹”ŠH²ßË")xŒp³Ò‡êv7¥‘¼~£¨QÔİ.qü¡#ãG3;µg=,dYŸ¨ú§Í	Òsı<®WVâ`¬*.+Y'©©v^’­ z˜i“»hğnUvÉ«JYJSÖ*•·J`],ŸÈÒ°ˆE¬-•²Ø\J²½ôÿ¥ø¾I>cnË[œí¬ú>«—föå/Ğ”ficÓÚ/µùk73ãÚ±h%¶$çOƒN„±Æ7”l+7)OL©î‚¨#®Æ6vDŠĞŸË%™@3GÕ‚R.O0K(uå#Ã›Õpq]SÏ"úİ†É¢|Ã(5Ê´z4D8%QÔÖß«I¦TôÚ}‡”_²Åº‹^t5Ym¥T›ñÀ?ªPÃ8ÁÎg†Sê„sÆ8ëÎéÂzŒê
+ÍÃaÌ¡,s ”uåÏB.‡«lXÃšºİš¬’Ü$ìb,ãŠT¦B•îx·xx±Ò+­PÉUÆ°¼Ò‰ó„UXZ¥zK‘Êõÿ²§ËÇòÒ{_¹V•…)LËS³ÈÜr—½ìÌ0_¦]"'­iç…Mm®v/­õßkÿ…”Ğ$#'u¾­Yãš=#äu~ş3º)†º{bÌQ!9Bê T;NÙT7ü²é>>3dè~ü£&ˆFÔ¨€«hÑ†·¯g©À©fo{]í$™4k)­"­kß±½4¦2íïÚêÑ6·ñ×sÛèy‰8Ä¾})L2êƒ¯~86Q¸©Q‡*µÓ3U¦ŸpÛØéœ··Jbã¢ØÜ¿kY]ŒV¾{v„ñ[/’*Um$”<
+~L¼ ÿÛ¯weÁ{RXYP)M~²³´7­ˆKv²V¾¸¶¼Õÿ­¶(³ãÌüø3GKòx•µÙT-›1³r¶p&Îg	fg‘àYw¯i'ŸùìçyŞÆ‚ª4¡ó):~ıŸÕa´	Qè§¦ç -t¡B¯;õLßÏèĞ}š‰×ŞßQİ$‘Ó<«M‰Š¸×{ÅW¬iQÛ¹‘À]ÜI‘®‘¯I ‰˜Ş%‘©ù”Ş›…—"Rˆ)SUXœ<|h˜T]Û£ıVQ‡ˆ’è×‰™[oTú-Œ¥°[í´UèÁ[ÃØX'á}R¾•„)ù[ì!Ï_ÙD¯è„`Ù^±àŞôè^“9EÃ=‹´lğ}ÅÄ…0¶¨¿lÿgyV]dhËûˆY4b šIßô­Y›]gt…<¤A AÀœÌÙV©†ÍÅÁDØF¸8 tÊ),ƒo‚
+HnDÃ)ô@€C&€Ã2dB8\Ã=YC81G=Ç)àâ)ƒü‘ŒÒ”x$5TœB$ì_ÅÍP~œÂ7ğG$w±€0ÃÏ …š¨ÍÀ`hÂ7Î †hÂp Cô@äNEM”¬Í.ô€h‚(bÈ5nÙh@<ö@ÚšÃ<¾”<hÀ7ÖŒdMA‰3h‚0ôZN‘Ñ‡hT†x#8ò@À7„Âÿà0@€‚$ÀHv×ˆ$l¬‰¦İÇô€'†Â0œÂP†µĞ†%@ş‘GÊœĞ)XU aÇ)\C˜"ˆA!Y¢›Ğ•8äâ+ÆÁ5p°b+&@L†Ã$iâ)¨Ã)¼Xù„pâ»]ÒèÙ\IáîØ(µŞ[¾^öÕ*ÏÀ5OğaÍRîíï=: C
+HKÄyOğ…ÅğıO¶Ó·¸E2qÙ2±óibô¥!nÓşìöıÏ'¤<…0x÷ÕÖ9Ÿ:)L¦pƒ( ôÀ@\ƒkÂ“@¼fmÈS4¨CdB"ô@&\CÄôÀé€7h¡‘Øÿsh$Bs~Á¢J£PxˆÁ)ì¤µE—x5LÔ=ÎÔaZÎ°€,x0H£HÈQZ‚pİ—|#FÉã6†B@€kvC(@(¨¶ãØchÂ|ã.d’‰Èã>jÂJ¹¥àÚ€&ÈãÙÌÈg*$‹ÔC=x:NÉ‚ˆòTziÉ|Î@(Íy¤Ì€<H‚„@‚0&Û™,ƒ~l„9›}$€&CœB+ôÀ2à‘IÕ0ÀµùQ¶YÕô@w\vhCÀ‚#L@8œ7
+¢„€!5%¹‡x5$\Ãÿ™‚C—ºA&ô@"0@€e¦¸¥ÀXZµÕWº[ÉFQ'ÍÛ'R«ÀÊG´¿õ_ù+İ„]æÜ^h(–“1Ö>DÄßdQ–Y\Z òÙ¡òÙ…ªK†œü(Æ™]Ó Ê±km&"ş€h~B
+ˆ&"‚†
+CM$À4©)RƒHğæ)TânDCğ@&'Ø†)z
+CU
+*¨¸Á2$ \¦ôÀf‚:ÄÁ*',CD«oô€6WÕbr…ht˜â)X‡'B€1Ì@8ÀP&Âğ 'dA
+%ÀNÃò@ˆ5œb“Šÿ#ô RB°@œB"ÈÇœü Áy"ËÎ(ˆzŠd„BĞ0k|ƒ Ì@ğ@ƒÀ¤BÀ×1ÂˆæG}#8 0k= Â7Á7Ä# è‰¸š3Xè=hp-Ú£&èÀ¤Á<d†úˆ†¦£”íÚÆc„V¨†jBÜÈØè.tQ…ÖÃ7¢ã.8ÃŒ‚­:ŠfÈÌ-@€CêT9š`-—œ£†¦Á7dd GÎ@$ˆ¦fä4Î £€ˆäœ¤AÌ(DÂ2xA“.Ã2´yfoòÀÈFÎ†€1ğIVîd€CÏ–l$@,,ÿL€X‡@ ,¬kt@8ôÁ)Š#C& "é+¹‡pbC&à¢pòYÆ|ï*F„ø>„1ğ „A˜b"D@ 7$ 0aì$jZæNF´F(áÛ(½Š¬ìU¶ÄKpa+ÑŞ‘%ÙE-™!ceO”ıW´¡µÀa•ÕCb¢ÅeßñmÙ¸Àª¬ò…hÅÏóUSÉ]¦½"7âÿtÅg†¦”ƒ&@€ä¨>Èë 5¸‚1x6ğ€´VD&,Xşéºª@¨C¨ ¸Al2€ nz˜ò ¦œk8èF4(@ˆ©\ƒ±´zb¡éÓ¢('J€©ÿ1ô ,'¸oÂ‚ ,d¥ £¯Ê$@ø1`éN€5PCÇfœbğ@à0,T¦íyÁx.3ÂÇÎƒïhğ'™||ƒ&ô€ Üç ²(k— ‚„#† ‚~ 9~c‡|& ¨<ègH‰‹ ó¾ˆ‚Î#:¤h òÚ®”†6s×¦A<îc†îc?êg…víÜ*-‡*¢ÈÃë<b¨0ps=(*6ó€HGØFÑò°éçäòŒÂ}†Bò°z&m$œ"|,ˆ¦€hBÃåZ£$t2lAIÎn(Ìî7d%ÿT±1L)y0ë5ôÀ|Aƒœ‚—Á)xTziÂ&ÂrFG—Æ´÷A.²5\™oh¬opÃ2,§6xXşgmŞŸÂ'`Ãî2 œÂT«CşêoŸ-jÿ®å½=ê]I*¥Ï¿YÀµ’¦ö„`ı„NOÂ%Ö²œ!cQÅ`V°Ä¡jeŸj–cŠdFæ6ß	—Ö™á*c¬ğ®RŸ!ş*+x¸æ(€ äê~À €¿:x€5ğ@%Ş†“«‡¢¿fV÷ù2€ùâbj«[8p$€‹¯pÆÁ2HÃhKu"çĞ)ÿW!
+d££pRCPÀÂ”o^@eñâ"ñUñ©vRƒLìx{çéŠ5ôÀ!ìhLÒ	Ê.ãÊº¦dÃ‘Á9²€z
+i$ô°‚Pn$Ì(#Ø°ÎzÁ~ƒØ°Ş8.d{AâÀÓjƒ3‡(ƒ<T-­ÍŒf¨Œ ²<|ã>¦AAFèT(6ChA¦£&¬Ø‚øŒmAvmŒ­Üˆå¦’ÀˆŞ(‚j‚Ş²s4tè4t‚;-™ÑŠ"¸‚;ÈˆŠfˆæP5H.{ xVt”ƒ)Èzcº.7¶~‡9´ê2é2ì(| ä ÿí.y4i,C–@¬tñR·uïKßk@wäékkƒ 'ÂTÿëè0
+ŠÇŸ‚4Üko»f"Ø†H€:ÌÓ£c€ƒdBWµüªşš¯
+œşju»EÒÛ'ıÎïè[)Å
+ÉåYc*óÜ¥°4ğÖ’ÂİR.	¦U˜ê”YË7U–ªbœÆÕaò}	÷Åh‘YaSSıèªb·°fögŠO3«ƒîˆ$@+ = @fBòã´â© 
+§Gµpª@qJ6Lµ¸*qo–Õ»& ,u„q°ûëÆÆb¢¤is,g8„Ã¡äitsúÃŸ4g·ÿujCòxL¬w7Ç×¹€CPÃ¿[nxgÁmS²2bÚ~t5FÂyŞgÊ×·JÀ€œ'™œ#d«²&DÂgòp„Ä§…Ì29v*Ï Ø²²&<¸Ôƒ>¨ÛHàHÑH…ö 2²3B³ŒïÖ;¨×k)€óØ¢2‹ÉgîBC—:‚mCGÑg–sè¸‡Šh×J6Œˆå˜GõŞä2G1Bıg}€U$}iÎß2È<4´0Pˆ¦~ˆä0à÷™C@ˆäìÆ.‚·yîºŒG³Œ'ÂğæI‹Ÿº>Ÿö9,\ÁIGG8äér6Çî›osĞâWe^ÿ" ê³ënÊ«êˆ47LRß†
+´f<j+?^úTÄW¦ú¨ÄÛC¨e«gDê…u^Ï™¥ná­{!ÁÖÁQO\[Ï> a`;VĞ?ú TÜ'»1µ*@8!å„`A‚k&\s!Ã!Şh&±YÅf¿*şÒ¸‘Æ/?†üxŒÆ1“&Ã°±"Ä„Äü13MV)„yE€…§4i¾8„…€˜BÊœ:ÇCœ8Ñ¢1èá†›pSgk"°aÅ¦T…ÕL2eZ/n¬õˆcu¬:Ø°y ËÔCß¾Øúxè¸OaÚ‚ô	Ò#QŸD=Â ä±ÿ6X’O%Hª9s™/ í±ìK‚Ôzdãe™éCbÄbA€À²,·³´Ê2¬Uoß­Š÷"L¸0X°˜Çâøì-,†G’ş@¨œŒ4A”3or²3ÆKš0a yé¡Iy4úV³ @i²Ÿ?gş	0À!4bˆ]Ø…=5Ñ <yvÑ`—	”P.LCƒñûÉÖÛ0?4ÄOÂüvÃ]¼ À‹Ä¯Òp†=(OÆz”‡¶4 Â>@¶ ½0¶8OÉá a$Œ¼ƒ‘ò¸».9¤#`‹¸ŒDËÙNéa¹ä„é!¸"æ)“…"ÿë€H H£Èb´P¼è­ˆaéóµ×`TŒùÂĞ¨ù"/‚§ŒNi´³ÊĞ˜!ˆ $»Ô‹kú8,Æ°9l°»ü*•©S÷R
+œeÒz,“SÚŠ,¬³ÌR¡ª2Q!­©Tèõ+lT@_‰-ÖØ^°UÙ¶’m+* Š6I¨­ÖIîÉVÛBî)…{PW\° ‹s± Gİu €wÈ%Ş\èÍEOîõ$™ddéWD ¸œQÅàQR@8áfXA'bV>©¸â>™Iã˜©ãeŠIä˜œpÀ “@(e…Z("ˆ&²(£‹6ª$ÿD©¤“PR‰¥–R™ ‘`%/nÊ	ïôéA˜V çPÊ1Mâ †›§ •f™[Uè€kÌ" m` TÔYŠ+´2á†ÕL$S Iì#n2Ñ:ëš*µ¯Bò¬°>ĞN,1N	â–Ea¹)H=EŒÌ>3Ô4p#, j„ááÔ€‡S¼Àm·Üxû­àŠ`­œÁLßç	Ï;9Ş”.(å8Zø’÷‚‘üYO<ñ˜á¼P I±Blœ!`@òëo¿ÿĞĞ…b†dOõæ×„Â…!Ã×Ãoön ‰ˆÿHC42Ñ…R!]Hò‚<äq´!<hA¨Çh„ÁoøÔ„†4¤"ÙI%”Rõ¤†ğQOG‹ÄÑä€¥HláMí “%‡L^˜Ç<‚““ ö Ô @Ú”än–;„³à'A	ÊE1”è´9Èæ=88.wŠÉõ < ,ú 	4¡Š}JÂák „ŒàNÕ”8Ü#oq8…:Àµpã+àÈÛB««´em¡R×T€exÀÆPã’u,M+“m±³˜hI"q¨–)ï!	h+[Üò
+^9.s¡ë\ëRW»à¯zÑ+_ÿğ%¿üõ¯€3æÂÖ°‰Iì³XÆ ¹1ildÕt )L†Ml
+eY™Bâ²ˆÄŒ"3«™Í<‚³œ‘„gÇHÉJ4´ ­&2™INnâ Qƒ íq×‰b”ÃÂÒØÔS¢’ˆ€M`±JØ&ÀÚĞm,Ã2Z`9uô@·Š¥/@`SØPG"üÂ—¼Ü…p‡3bSE‰Sg#ÄÎ¤Aô6õ¨4ˆ‹®Á©Ø¨15Zc6ŒÈÂépÃ›ÜüwÅ±*tøyÇK\Ò„ñfH ˆMÙ‘wğÓMÈa<=°Ş}PBötP=ıôÿ^]ÃPó¥O}Rk?å!@õ“Ÿ=ø…ÔÏ~êOlŒ[M4±´‡Kú;Š ¤Öº
+ÃClT .µ¨FôBòC> …°HIÒ^’–D Ãö@|¬ï aÄµ
+âJZÂ0¼ôì='9óp„Öœe 78Š0'Øiú°í)¢E@ÅFPAñ‚zNa9Œín¨k¤0£™Ç€1°¨"ì–QõH´1.*©ğ¨Ç¦ÄÅ)ËàA¸ÁƒlJ-^PkÎÒ–‹¶%c]†
+À(„ kQÒ €:6™ae!ë“ „´ BÊjø×be·ºKY–‹–µ´%.ÿu9¯zyÂ^¿f¿†ˆrè˜˜ÇTX2Sğ0‰1Ó™ÏŒæ4=öƒ)ydØ¼¦ÉLV²n²ŒeyÙCbfŒlùœQç:K²³“¼ógyˆĞJfÏ™|âa	C„,ŠwåBê*C° ‹Bìùe %×¤âÉOúŠVŸLK"Ay–»¥tJ&œâl\#}éA_øR*¼ÜÅ¥á‡â
+#†Dˆ!Ú°,`7h£­.«[ı zÆPÚ€Íñ1|‘pCŸpm""à ‡ìd×›ÚùæLgbÁ5’K9ğÏ‹5X V9 "1¼[Åƒ¥-CJã9ÒyÄ“ÿ¤ÖÚ§…ó±„$ó¯¯ªG=v‘†]<°³¢†!mHàÒÀ~²!…[hàšÁ'$xkB|àïíá‚ÂhŸ½=„oüGH!$ÒÉ_kÂ6ÉI[E(îÆK1¬ùÍ“ó>jóğ‡=?So–±ªê¦7¸qƒS‰-ÅíŞºØ28¨Ñ
+Ğ|!t
+jPıjp\—ºT"&£Ç\*0€¹K^VšÒÀEZ‘ş¨}67„£uï0„ÁA,ª(+Æ´†7Ù,Áƒ2*Ò‚Š)I¬Ês«[ß’e¸Zœ.[Ş2—ñ’1½|©/}ñëÍÂXi0dÿ&û`ÅÄšidŒeLšINrÈš,2)¤›Ş¤òBÄ	3‰”#9g:A’³0·Ó>‹§™çYÏ­ùôn~s2ô!¯vÑã\A€åK,‰H‹ònXÖİ;ìaDcÒF‹ Ñïö8`c.§œàĞŞR—ºÔëŠ¹ªñ¬ÃÚÕ±ö­% nŠü„ØMvxcÙ˜­Ù€¨çv‡¾$ÛÀJ:¼Íæ,Ğæ¦ÇI”ä<ÔíµL.„øCŞúƒ¯Ôgãú‚PĞßîá®]Ğn+NQpãÈ@êãHîŞä-H|Ğä:På”d<2m.xK†&09ÚcvMv'8€¨Ù€ÿCuã6®7’îO¦èÖvm×°sÊ §HÊQ°îóÕ¼nçÏ¥ê(0CíÚNı"ÒJ	nÀ)êNü2	ü¾ğYšåî¯ğ¢eÄ¨e•±•¸%\TL\XŒ–&Ï]Ü%Æv‰—2/<!˜rlÇ
+ÆÇF¯a†,bRÏÈXõZoÉêÁšDF›¤,ÊN†n÷®ËÊIË~#¾ÌÚ‰ÌÏÌ^bhD†ùÆ`ŞÌ—ôá]Ôå\‘[úBû¸&* ¬9”ÂOü--Ê/-Mı2ÁÀ!àpä¯g».±Nÿúï3\­sÂğP
+°O07v£08p§ç–ÿˆÖ„Ú¤#9"A‡·A.0æ207°„<å@Ğ÷Ê? ¤ŞlğS0V0B<òArá<²#g°;kãêM@,rŞì£ä€ğäJ¶6°!Ùêå !‘p	ò•C9~
+îv†®èÍ °½0ÅĞP®!>Öô/»Nrê¯ş
+ƒ0êÈìğËT0ÍÑ¯üIÑÈ=©,‘Ã 1ÃÌRüñğ¦ÅZo•qÏñ#±Å&Æri—1óô…fÇBï`öÈDqÙLõLš–d˜¬c›j/e¾	œroœn±÷~ïf‚oØiÌŒ¯÷\Í†qõnÂùdÿ!èE©¯\®¯®Å”Ê«qĞïŒü¶1,éíÄÑ/ĞN0ƒşìo%G*-£ÕøÏÿ”2u ıä60Ùhgèn‡Ñä{rçrµÍ&ÁÍ!7PİÄ>Fh„&rŞĞç"Dã22Q#áB$?’$áÓâ2RãúÊ"I®?~ğ%a’<g’&iîs2AÁŠ'µ
+§ğ:…ò7†avîQ»¤)›Sı¯ÿPíÔòïşª²0cşÎ81mí|Ò¾RÃ2Á\ÔÃÂïÓğúY®Ä@lZŞRûT	[ä’.Á\òğr+ïòê¥—şÒ_:±˜>QôD/™
+ÿs)¦È,cZOcVQÉÓš´	Ê†edñö¬ìÊ²Lfâi3Oø†g|±÷4Õ¬™Š‘˜d_Vs]ûÑ)D‰67lğ°qü­PŸ‚UÔíÖNp€Í±8AT*³û9ğ9»ğO¢s:°:©
+B4;y² Iu“ğJ¾ÍR90&Ë=‡DHæí|üƒGú*#$?+®#c°>_p$e0Eàóqµ?×“%÷ã=<e2…Š0ÜlN!q’·¼3ÛpL~òA¯s(ucBïq—®»n-ÿ¯R9TR©Ò8Ûğ*í(íNÔ)æ°¿2ğP,÷,uF5‰ÿÛRG¯ZRI.ç²ñ‘\f‰úò²cìòúRó‚ÉóŠ©˜3ƒbÓJ/ \š¸´šœLÊ‚ö¦¬2iñ2w¯%dÆ÷ºl=³CS‚1Í–cN“˜ÆX“_³) ñOmÔWïF™åEUY4ı|ó75Ó†sşŒ3%•Õ(ÕRóŠ26ì‘S£*­³ª²STÇä½3A¥u!ÃÓIXµU]ëä`5VeuÙS@†À=Mß6R>‹>}µ5àtõ$Qònu%âå\KÑmzj2roò&¥ƒZ—ğZ}²8¸µ[¿õ(Ãu\›³\İ±Õ¢ÿRRÓ‘Gtş c¥ÜE{sE·±P-7¯ñû¨Q_¥_—ÅÃOG±Ä„·Ä°Ïï.ÑÅHvÎ.±—4ñÆ$V0Coa
+Èf™JñJ“1™,dYñÉ¶	b[¦m±es‘#:“İtf¦f‰gëô£ï]¾ 5Å6³¯”„öïˆÅFõhÇ’E5v}ói9M0ÖÕ8ÑQ*Ï°Rİãqk55»èöq¥0;µÓlò s2†RUò!9pY•un+’ŞnWu•WYğo×áğ3‰ÕSÒ?gÕ%Y‹„ZË„Ù–&-p„©ÕrÇZ1×ç´5B%”(‹2»úÿdkE7¨®®t9ÔCÕp*x]ï+8óË€ëPiñus-u—hÑhs`Qñ.aéxgÉÅ^ly-¯y3qIqL`&v0£”ô¨4{U/K]ÏV1öd/›&s|ÉTeÏtfh8S$ØIÌzDóÌ„ÆÉn¶bÚŒ`Ê!5õA Ä  îwÕìÜ°ÊíZ/Z×øşP-`A—-ÃÔ^í—!øÿ2Ô‘rS+ô6&4›XOÄ(ğ‡x’‡JõlQ<-°!K˜Y· µºY"[RE?¾Á?F.%[W5Ro_†Îáä¹œ·@ë¹›ñ9Ÿõÿ¹›·y¶›%×š•š8 Ú-¡Ÿmw®!8ºŒ!8"zöd,ú¢Áa2z£­£¡£;ZÀA¤yí9mí¤ÅÀÔTz¥YZ<Í¥=-¦=­Â¦±!ğ§iy§yš–3~:¨Åx¨‰:¦À¨‘z
+z©§@”ú©¡:ª¥zª©ºª­ºªúoTŒ™^Õ`–‡ñÊÀ¬é¡Õè!UY•S¹Or¡OL¹”éZö¥ö%¯Ë!öº¯Ëá¯;°÷AF°aû°±K¯±Ñ3Œ2¤Éc·‘YñKI¡³=û³;››Ö€Fÿ!H›|Ãé"ü¡µ]ûµa;¶e{¶i»¶mû¶q;·u{·y»·}û·;¸…{¸‰»¸û¸‘;¹•{¹™»¹û¹¡;º¥;¸+ º­ûº±;»µ{»¹»»µû* ¼Á[Ä›¼ÉûĞ½Ï{½€¼EàŞ;¾á¾ã»¾é[ğ;¿õ{¿ù»¿ıû¿<À|À	¼ÀüÀ<Áœ¾¿Ü¾å;Âç[Â%Ü¼ß[½1¼½3œ½Ù[Ã=ü¼ÓÛ¼5\ÄI\Ã+€¼O\¼S|ÅQ\ÂûÄ_ÜÅÇ;Æ½»ÆmüÆq<Çu¼ºu züÇ}<È|È}üÇ¼È‘\\É“\ÉÿüÉ¡<Ê¥|Ê©¼Ê­üÊ±<Ë±|œœË½\¾<ÌÁ|ÌÅ¼ÌÉüÌÍÜÌµ|Êÿ¡ÍİüÍá<Îå|Îé¼ÎíüÎñ<Ïõ|Ïù¼ÏıüÏ=Ğ}Ğ	½ĞıĞ=Ñ}Ñ½ÑıÑ!=Ò%}Ò)½Ò-ıÒ1=Ó5}Ó9½Ó=ıÓA=ÔE}ÔI½ÔMıÔQ=ÕU}ÕY½Õ]ıÕa=Öe}Öi½ÖmıÖq=×u}×y½×}ı×=Ø…}Ø‰½ØıØ‘=Ù•}Ù™½ÙıÙ¡=Ú¥}Ú©½Ú­ıÚ±=Ûµ}Û¹½Û½ıÛÁ=ÜÅ}Ük}	ÌıÜ‘ tÀÏCÀÜóÜÜ'¡ÍÛ}	}ŞÏıÜgÿáØ+ İÇ Æ`	B }ŞßŞİÜà#İŞïİİ	ŞÎÓŞÜÓ=ŞÉ½â-~×ûİßãaã7ú<6>Ï7>ä=ä=2>åã¡Œä9şåÇ€äÿÜåß|äİÜæ^å5>şæŞä!^ç9>æ/¾è>Ö7àC  ã=~Ï}şÎq>êİå—şêÕ½Ø‘`ãÇ 	Jàë›~ã‘`æşpŞìãAæ!½®>é¯¾çË~Î©^Ó­şê‘`	8~ì~ïùŞÔÏş* ïãaİõ|îéç+àëë=î’ğİ\_ïùœêÏşë!ÒÿŞğã<ñY¾Ó¿2ÿ^íû¾ôM_Óÿşfaãã]Î=_àáçÿÁõ—>ßãç]ÿóá|–~d¿Î9?Îm?pÎ]?ßu`Ö}÷;ÿëe?ùÿêƒÿØ>(øoÎ1¿ÎK éç¼î~	ßÍûß<ñ·~åK`¾?¼>ß¡ßÍçß÷—¾úãüú)>öí âÅñ¯à¿ÿU("D	ƒu”xXpb…³†¸±£IgœUBdÄS"Œ—Rá=2a²£EŒc¶ÌbRËŸ@ƒ
+J´¨Ñ£H“*]Ê´©Ó§P£JjT ÁV&´)âÊ
+HŠ]BÑ`V­,!ÿ–#VàAW
+õ²í˜².aÖmÊ}µ.™ÄV,³
+³
+sÕ ß±1Ïş|9F'Q°mãİ5XsfÏñ–ü“Üµ®X$–+„P,Yg¼-%£%l¯Ü‚¥3£şkzq‰—¢>vkâí¿­;ÒÍ¼bî¶»m²ªõëØ³kßÎ½»÷ïLeÿÓ‘õ8çÀ+ë.Y2¦pãÑón•ï–½æ15UÎo‰í˜õ§·X_æU„hë†„ J–zfÅ÷yc0ƒTuıgÚU}Ö–h¤!h_h1a8Öˆ…Á–’l+1¸¡AÇÚˆKèÔŸfzÜƒnU DÀ	èb€ÿ– qÖgdqà5éä“PF)å”NŠ÷˜H?¾F_heı|W×Y0úûq¥YY&JˆÖ@gfy f&a&Pt‰iÆ[HÇÖ™ë½§f~DQÖX›e™bc–›V¦X*båæ›­¥Œó5ZĞ£Íâ›AvşWŸ~Æs¦~i¡G5çRˆ$:*mdæÅVpTöêë¯À+lwwNÄ„~©é’Uà_„aÎ·«eõéêgQVeq²˜æ?Z¢õ^bÙXr
+MdÔB­¤"eœ¶
+&´EZ¶«—D©PŞæë.}õvtoAìU–Ò£Á¡»P¥ ÿ®¶)ÿq‹›‡fĞÀj‰7ìÆwìñÇQz8mÃÇ³l¾M"Igİ–§ •ôÓJØb¤±B-´j²%ŸlY–^e3„eŞ$ë%­ô…ÅkÉ&)êfˆÖ&ùé¦-=Æ0½ñî<q´­ŞÉª¾(×ã?C=¶Ã}‰Z6¹Šİ‘ËlUúRÕ ç­÷Ş|÷Í/sH¼'§É$w÷U9§ÅîPî{ÓâhSW8ÏçN9Á¦ïb0ÇS¼……ß®•¾ØÎM­:Ì·±¥ÆO*[T¿±I#Ê·}5™äàÚÕy¼@u†å·İıõÚ§›Ş¼~7ïüóĞ÷z3ğÊN:â¶o¹çòÿZ½ûi~rÄk>RoxÏ%ÙL¦ƒ
+Ÿ‡m¡Îõ¼ÇÏ½ÕôáÎ~)»‰ÏO=ä@Ãú|D<á`€åÓXîà—™è9ğŒ T¦g½pé.%ä‰‡Oè·ÀW%eqL	[,t9ñY=O«©VCA¶G(u9u”WºñÍoQkC•«¶¦ÂËÕïv¬ÓŞçZ‚±‚¨Æ=3+ ³xÂŠ‘PB5"Á*ZñŠXláJõ/q¹êLıÃYÙ¨è*ıuNS,Ğíg¹^3ˆ‰;ºÊZ|CK$’¨ıà°‡SÅÈ'»ŸĞnEÙî:U¶1«!räİÚÆF5’-„ÿbZ×’‰x‹ ¥(?ÖB·	*EôÁrÎÆÁùP†PùäE(<kr¦¬X¿…BDd+_QêbÇ$¬w’4"Æ¤fÉf®-ƒéûÇ£
+Y;Á/Œôó4W¦¡¥&oÔ&©Zzä–Ù¤^äT™$òğŒçwZ¹\d9uÛcà¢ƒÕ›ybÌ=É™Äî5«.!€Ë¹yB«Ü“2»4h8ç··x1-iÓ&¡P/Ñ	"A‚HTóJufóÚLEf1MjúRœ\â$Û”P…°°G…Ëé
+ê¸I,h1ù¡©BoúÏE¶Ê–šÙFMy:õ©P
+=ÿó”™ºœ¬¥baç÷£©ÏäªŒ@¡*s¬iP±eNËÜõÈĞsV"ûªcD–fŞĞ¨IúŒÖşFÖj’L“YW6œ¬2éM’ëH¦Ã¹µ²1°ŒG1£JÙÊZ¶*eSÎ4Ç€„Ï£šé¬ù
+¤ƒŸ6–{B!iV«c½¥®Ö³Ma6C!‹2xXEÂÖ@ËY¯ÙU…€UKKÉ»Oš¯µØî
+MÃÙÌ‘¶‹±íµ²ºµº‹a-F/Å0í²à¯x›¢.¢Hä°G!	z™"ë¥¼ØQ/Tä{™Ié&ÛÔ£ÇÚ[
+	Š¾Øá¯TH2ŞøÀN°Sª…ÿœdşª.E«‹qLá
+[øÂŞÂVÚ¢õF) 5]13Lâ›øÄ(¦
+V³ê^*™:)±ŒgLã#Í.jğ0•JËİÖøÇ@²/»0‹$î²’—Ìä&;ùÉP²”§Lå*[9oÈr–P.kùË_ö2˜ÇLæ2k™Ëhî2š¹ü#¸Ymv³œãLg7ÿCGA›õœç>‹ Ï"´ ÿ!èBúĞˆN´¢ÍèF;úÑ´¤'MéJ[ÚĞ€ÎôŸ7íçNsúÓ5GıæRÏ§6õ›ÛŒj9»ZÎ­~µ¬+€ç.ÓÚÖiÎ5®w­3ûú×À¶°‡Mìbÿ—YYF¶²+°ìf3ûÙÊ6³¥­ƒhWûÚØÎ¶¶·Íín{ûÛà·¸ÇMîrÛèN·º×Íîv»ûİğ·¼çMïzÛûŞøÎ·¾÷Íï~ûûß ¸ÀNğ‚üàO¸ÂÎğ†;üá¸Ä'NñŠ[üâÏ¸Æ7Îñ{üã ¹ÈGNò’›üä(O¹ÊWÎò–»üå0¹ÌgNóšÛüæ8Ï¹ÎwÎóûüç@ºĞ‡Nô¢ıèHOºÒ—Îô¦;ıéPºÔ§Nõª[ıêXÏºÖ·Îõ®{ıë`»ØÇNö²›ıìhO»Ú×Îö¶»ıíp»ÜçN÷ºÛıîxÏ»Ş÷Î÷¾ûıï€¼àOøÂşğˆO¼âÏøÆ;şñ- ;_2http://www.davidco.com/forum/images/dac/header.gifÓOìGIF89a  ÷– îÿÒ›ë…–æœí‡“â~ïÿÔÜz ùŒd™VèÿÎ¡ñŠ¡ò‹—æ€ÛyÙxçÿÍ¨ı•îúí‹Úv¹É¶ôÿ×‡ÔqzÈb“ã½Ç¼éÿÎÈÜÅyËbáÿÇÕåÓéÿÌºŞ£øÿÚ‘µ‡îÿÑk·Xi²W•»‹ÜyãÿÉ‚ÚkÕäÓ¼ß²ùÿŞæöÍ‘à}Ô—äyÅfN‰@™é„©Ø’~Åg¾Ö¸µÉ°àzÚïÖ—ÀÅí¹”ã€uÂ^±Ğ¨ÕãÒ£ôëÿÓŞÿÂ«Ó˜”ê}÷ÿİ±ƒÎÜË”á~‡Òrï‰rÂ`’á{—çƒŠÖv×k×ãÖ•ğ—ç‚İxçÿÎ¨ÿ–óÿÚîŠœ¶óşòâîáåußÿÅr¹`³Í­—¼ŒêÿĞ“à}½Ú´òÿ×ñüñäÿÈ›ë‡ÉÙÆzÇb˜¼±Ú›ìÿÏóÿØ¡óôşôÌèÀôÿÙÑlïÿÒ„Ño”ä~ƒØlŠ×v°Ùïûî¼ß¦zÍfôˆ¥üâwŒ×vŸ¼–òşñ¤‡úÿàÊàÅ±Ù‚Ñlš¾‘€ÈoÜzîˆ‰Ôt›ñ„ì÷ì‰Òtšë…Öm•¹ŒÀÏ½™ÈˆĞçË¡¹›äÿÇ¥÷ÿÿÿ                                                                                                                                                                                                                                                                                                                           !ù  – ,       É -	H°`Á1~®˜1XĞ…3&@ò‘ÂÈ‚¶œà!2”@D"ˆE  
+<˜òåM“$	
+“ÆÎ !xÄ$  †-|†(Òs`•,ÖTñ áÎ™D0  ”ˆé`É!`H² ŒJPd±„cC¢@ôã‰<t	¤!§d”aÃÅœ6UX@RçP‹/¬rÂh`$HY2‡A£1ìR$Ä£Bh¼”ÈÃ×– ;_:http://www.davidco.com/forum/images/misc/navbits_start.gifÓOGIF89a  ÷˜    ÿÿÿŒ ò£÷‰ğòóş”¨ÿ’¦û†„ƒ£÷‡šê ñ–º²¸Ó—»‹ŸñŠ¡÷›°ÿ_e™³¼Ï[f•áÿÿ™æ‹ ô‡œğ…xª‡›ì¥úôÿÿKX†îîûj}Óíîû’§şÀÃÔ§şññü|á›š¢—ª²ÿ…šî¢õääî¤ø˜¼ªÿ{“íÚÛåwåº´²‰’¸‰’·ºÄØ###©©±‡œîµ´«ƒ˜ìÉÏáƒ{˜„{¦ïïù”§û°¯«pu˜FS“°®ìGT•“Š¼ïÿÿÒÒÚ®Åÿ£ş‚…•¹¹Á¿½± ¸ÿˆ›îòÿÿ’Ÿ°T_vl …›ôÅÉÕÊÍÛ‚—í­Äÿ…™ê‘¤ü~“äj{¿§¿ÿrŠßˆœìµÃÀ¾Ëûˆ‚–·¬Ó¾ÀÑÇÅÁÕÖà7M¹¤ötÿd|Ì»Äëƒ—é•ğgd“ºÑÓµÌà½ÃÓ©²ÄÉÈÄ±¶Äˆ›ï†›ÉËÚ›³ÿñÿÿÈÕì“§û{’ã¨­¿˜«ÿ¢ú­²Ä™½p}ÂliİİŞ‰ñŒŒ†šì•ªıÚŞô˜À§¢ÀÆØˆŸ¾Œ¢öŠğ¡¸ÿÄÈÈŠ”¹ ¶ÿ¨±ÄŠŸñÃÉÛõõÿ                                                                                                                                                                                                                                                                                                                     !ù  ˜ ,      @è 1	` Áƒ,ÈSÁ˜ŠTyÄbÃ>@"êqäÍ„,%ŒF
+9™’¥H…¾`I€( ’0äKL{8pd"À¡2V`€T(ÆE'”PDò¢¤„ :Öˆø‰Ë,	°`„„~p]Ëö'‰Jsğ`Â‘¤mÂôÀ‘  4Hˆ´åÑè’œq&œâ&jµá -!ø³DÈ2®ØUôÂĞ	¤IÔ‡*+ìbb£DÀ(ĞåƒÙÌp0‰† İi‚)  ;_>http://www.davidco.com/forum/images/misc/navbits_finallink.gifÓ
+O%F/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+
+ * vBulletin Usage: md5hash(input,output)
+ * Recommend: input = password input field; output = hidden field
+
+ */
+
+/*
+ * Configurable variables. You may need to tweak these to be compatible with
+ * the server-side, but the defaults work in most cases.
+ */
+var hexcase = 0;  /* hex output format. 0 - lowercase; 1 - uppercase        */
+var b64pad  = ""; /* base-64 pad character. "=" for strict RFC compliance   */
+var chrsz   = 8;  /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+/*
+ * These are the functions you'll usually want to call
+ * They take string arguments and return either hex or base-64 encoded strings
+ */
+function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
+function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
+function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
+function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
+function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
+function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
+
+/*
+ * Calculate the MD5 of an array of little-endian words, and a bit length
+ */
+function core_md5(x, len)
+{
+  /* append padding */
+  x[len >> 5] |= 0x80 << ((len) % 32);
+  x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+
+  for(var i = 0; i < x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+
+    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+    b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+  }
+  return Array(a, b, c, d);
+
+}
+
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */
+function md5_cmn(q, a, b, x, s, t)
+{
+  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+}
+function md5_ff(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+}
+function md5_gg(a, b, c, d, x, s, t)
+{
+  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+}
+function md5_hh(a, b, c, d, x, s, t)
+{
+  return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function md5_ii(a, b, c, d, x, s, t)
+{
+  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+}
+
+/*
+ * Calculate the HMAC-MD5, of a key and some data
+ */
+function core_hmac_md5(key, data)
+{
+  var bkey = str2binl(key);
+  if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);
+
+  var ipad = Array(16), opad = Array(16);
+  for(var i = 0; i < 16; i++)
+  {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+
+  var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
+  return core_md5(opad.concat(hash), 512 + 128);
+}
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+  return (msw << 16) | (lsw & 0xFFFF);
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function bit_rol(num, cnt)
+{
+  return (num << cnt) | (num >>> (32 - cnt));
+}
+
+/*
+ * Convert a string to an array of little-endian words
+ * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
+ */
+function str2binl(str)
+{
+  var bin = new Array();
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < str.length * chrsz; i += chrsz)
+    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);
+  return bin;
+}
+
+/*
+ * Convert an array of little-endian words to a string
+ */
+function binl2str(bin)
+{
+  var str = "";
+  var mask = (1 << chrsz) - 1;
+  for(var i = 0; i < bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);
+  return str;
+}
+
+/*
+ * Convert an array of little-endian words to a hex string.
+ */
+function binl2hex(binarray)
+{
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
+           hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);
+  }
+  return str;
+}
+
+/*
+ * Convert an array of little-endian words to a base-64 string
+ */
+function binl2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  var str = "";
+  for(var i = 0; i < binarray.length * 4; i += 3)
+  {
+    var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)
+                | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )
+                |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
+    for(var j = 0; j < 4; j++)
+    {
+      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+    }
+  }
+  return str;
+}
+
+function str_to_ent(str)
+{
+	var result = '';
+	var i;
+
+	for (i = 0; i < str.length; i++)
+	{
+		var c = str.charCodeAt(i);
+		var tmp = '';
+
+		if (c > 255)
+		{
+
+			while (c >= 1)
+			{
+				tmp = "0123456789" . charAt(c % 10) + tmp;
+				c = c / 10;
+			}
+
+			if (tmp == '')
+			{
+				tmp = "0";
+			}
+			tmp = "#" + tmp;
+			tmp = "&" + tmp;
+			tmp = tmp + ";";
+
+			result += tmp;
+		}
+		else
+		{
+			result += str.charAt(i);
+		}
+	}
+	return result;
+}
+
+function trim(s)
+{
+	while (s.substring(0, 1) == ' ')
+	{
+		s = s.substring(1, s.length);
+	}
+	while (s.substring(s.length-1, s.length) == ' ')
+	{
+		s = s.substring(0, s.length-1);
+	}
+	return s;
+}
+
+function md5hash(input, output_html, output_utf)
+{
+
+	if (navigator.userAgent.indexOf("Mozilla/") == 0 && parseInt(navigator.appVersion) >= 4)
+	{
+		var md5string = hex_md5(str_to_ent(trim(input.value)));
+		output_html.value = md5string;
+		if (output_utf)
+		{
+			md5string = hex_md5(trim(input.value));
+			output_utf.value = md5string;
+		}
+		input.value = '';
+	}
+
+	return true;
+}_:http://www.davidco.com/forum/clientscript/vbulletin_md5.jsÓ OGIF89a  Õ) ÿÿÿúÿÿu¿j{–‘®À»Éİ‡œÅ¤Ğóùÿ²ÉĞ`lpıÿÿñÿÿèïùÙäóz‹ª¯¼Ñpƒ£áêõ‰Ã¼Êß€˜©Ëóÿt¿Øıÿš±ÛQbv}’¸ºŞît–¡Ûÿÿv‰¬²ÀÖo~˜‚™Äd†Œ¦¾ÃÎß\qw¯Ôã¦¶És¿                                                                  !ù  ) ,       4ÀC‰R APR%’8ŸÏIsq<Ç$H‰$Ï€e´I™g ó0»'@"ä®ƒz ;_6http://www.davidco.com/forum/images/misc/menu_open.gifÓ"#OšGIF89an  ÷  \w{¡¯Y‰›Óİáy…Œïšb¥¿Ihtu¼ÖU†˜Øìè«¹¼†Êãw”¡h¬Å?o‚§¬ns©rmH{àäêZ¤Á†–šd”¦m­Å)Wje°ËU5ew\‘¥ëëë~Œ‘N~W‡šÁÈÊ›®¸Ïêë¸ÂÃn³Î¨¾ÅÊÕÛ²¹¼“©¯Ûíæ1bt¢µ¿s’¢ÉÎÏex~a‘¤iš¬H‰¡»}yÌÕÛNv…v³ËØÙÛ½ÂÃƒ¨£°ª¶‡¤±``ØâçÒÙÚİàá~ÂÜ¿ĞÓ¢«­Rƒ•´ÂÅY–¬ƒÃÛVms¹ÉÌª²³Œ ¨x¿Ù¤²¶QGG9gz‰Ëåo¡<Wa-]oŸŒÉäè´vo]¨ÃŠ«·o©¿ÀÃÆj¤º˜™Ï‹ÄÍÎg—©<mÇÊËDt†ÌÒÔFm}¬ÃÅ´¼½rmqÏÔÕhŸ²©ª­ç”…ÂÚÛÓìì\¦Áf¦¿p·Ñ¤­¬–¡£Fw‰P€“@jx@bnİ†›iiPr€u °g¡¶Z†—eš¯m‡’Z·]ŸbŸµtwyäååg¤¼2LT†‘”f£»Xci¹¼¿r¹ÓÀËÔN§R–°¥¯f†‘ÊÛÙz–¥{¼ÔÆĞØ;{’b§Âr¯Ça˜¬}¾Úf€Š±ÀÊ_ŒX›¶•¬¶®½Åq‚ˆb¬ÈÀÓÏ¤¸ÃÊsäìé^¡Xr|e ¶~›«c—ªàëçmeel¦¼hPP[¢½ÒåânŒ—X¦Ã‰{xEfrp™dœj²ÌY¡¼š¤¥Ûæâ›²»^‹›„ÈáfªÄåææ¿‚}hœ¯tŸ«"SeHZa„Y¥Á˜¨®·ÄÎééé6S]´¾¦me¥¨¨Ê…èëêj¨¿j±U’¨g¡·ˆ¥k µJt‚OekX »`‰™Ry‰\Œ] _©Å[‹œJo|ÅßİÜİË…zy¶Ît¯ˆÎè€À×!Qc¯—Š‡‚çæçéæç ²¸[NMaszz_d°¶¹¬´·Sš´X‚‘]•¬Y£ÀN–°›b[a›±2k~e‚6_ntŠ=_káåì!ù  ÿ ,    n  @ÿ ÿQ!éÈ&OæD £ËË‡ õ˜8Q‹E-<BÉšÄÃ‡ CŠä ¤É“øğI©²¥Ë–å^ÊœÙÒdÇOÌ8¥øÇ³'Ï
+íŞ-Qñá]ĞL±PKÒ¨QK–XW Ï³P%È”ªOŸVˆtCÀjÔ¼¢]ËV‹*?™¨u™KŠ—ØŸ8ˆXÕÅU_W€]mLxË‡€¾ıÛ¥Ï |õLsDƒ„*;ÿ½ƒˆ“¸>Q1b‘Z„‰ƒÆŠÅ™m20Èˆ¡6†ÃtÀq«-ÃÇáÃ0üùı!B-¿‘íù&cÀ5xèùş $Ò:â Fÿ ¢Öá×ÿÿpÈŒ#vBP¨AL”èHùìYÉÁl‡•	aÒO	TÑBhà&¨à‚6h`*8`41O&ŒĞÄ(òÁSO-ÁŠK½ñâz´Q
+à£HğË/à˜.<à£r0ÂD"àÄ‘š¡äá„ãË“0 Å”æTi¥9SN%O6©‰Œœ€Ë— K Ìse–øTA'wT°ÂÈñ:p±H<‹1‡UY‘Æ;Û|Æˆ&Š*y{|ò:|PÄ!µ€sÃaÅ@Ï-3cÃ9€ğÄa¨L2)¦sêbwxpÿğİaŠìpØ2‡µò!Ô…›üô2 ÊÌ€ñ\ĞbŒ30( €‰W\Â"Ğ­ à†+î7|cî¹Ü¤+ÈºÜÒÍ»§œo¼ï¾+Hºçz›@è…à¯zë‘AF{îEa°ÁNØBÄ ĞSñš$gqÆÅg €1
+ÛØ1'YxãM&PÀ“Ç‹Í âÈ%´ì2..Ç,sË¢Ô,²("ç¬s<óGÏ@ÿÇĞ@gñ³ÑCm=Lrá^´£†)M˜b‚1t¡Kº€€ÈR¬tòŠ|Í¤a† ƒ$âöÛpÇ‘ˆ!qĞÇİxG£÷dÿà·ß˜	„“c89”$~ÎâI<™ÄãŸ“898`’A©"™#”Q`	ÛrÀ |J¥h Á„
+E”±ÀE´RCÙgKp€³ÆîâáÀa€ÃK®GA5¸5á€3H3ª	TÜ ÄcÔÒ	`¨¡ ğÂ‹Ÿ¨ÁE'ô|G	|ó
+$ØòÍ*«Èà FX¦Á?ÉrÇ$ø€
+B“q°#?V0†«$±‹Mô"aÀ '†EÉâô`ÆÊ°ğà0‡@$´óGa½¨MRğEPá0j Âœ‚PŒDb7Ğ"já‡£<J	{àuÿ³Œm¼ëü
+: @ëïHAJX`è`c ¼Ğ§#á
+oXN¼ÆHÆ2’QæjW7îe.w­1\ßX»¸ñ|Ñ‘\"Ø—â<„à<ç±Czzp+¡#„V…‡ñu8À–ğª4€‹9X
+‰Xğ7,Àÿ
+ G	H#ìK"Hå·Âõ­T’_¥e()°DL‘K˜ÂY…^V@ B$|6 nH$ÜÀÌfº›†#<á‰@ä"°È ğŠÜ ˜G6ìac£œæ4çÒfaœÓ³8†;g1ØÓõ´@=÷IÿÏxÒÓJ›îÙOÀ¡Ÿõ<F6<QÀúÇ"‚ î(B),È(bÁÑXXK"€ê…¸m2J@x„ıHA*’‘DÓšÒôK6¥©L‰$$!¹TL<jÙ/Dq	¤e3jZÓ'æ£&|b`ğĞ¼à…xA¦àèµX@¸ƒlãÀŠZa†iÂ h5À%.·8àˆo}û›ßZz‰DJ%4‘¤Ç=ÉRÊ’`%_$a”@À	.g 4=â”¡%\à„\øÀ&vÁŠ2ì"œeRLÁŠ]´B_€"° ÁƒHÅ êA[Úÿæ#o3„Û¡[ŞÒÍÔHE*Ñ…hÌÅkøƒrÿ°†.p‚(7]LHC[œå¶C¤2›«Œ%ôñ°(¡§Š³XÇA«[€.LÖ†gÔÎ‚`.ï¶“<ˆàh×)ôû¬KßÍ¤a£l§Ûøƒ5
+,CXE†g³†Ã(a`®5ÖP›Lä#õğ€òwÊj&µ B AÀ†ê@‹XX¡²Y¥„0ƒÂ Œ"ù0 8À7u”B8K³súÀ`°€aŞ¨@£ ¡Î2Aé>€
+*Oª‡ñÇa°‘ƒÈãÿ Óñı0ĞüéÏ‰šÙÇ„0'"œj*ˆLÃ	#t@8ü 
+"êPUîó¸@?|ğ1 Î›=¼C!jTÄ)F-„¸¼ê¸ÅCáá=†ÕPÂ5N!ƒSpcÅ ‹¥™Ü¡¤XõeˆC…&„1ÑjĞÃ6Ğ®’y›  G‰€"  T´¹¢Ğ ÀS`€…”_ø b*h‚vè „}`6C/~
+<A üJ{ŞCŒjü¤wE#‚PˆĞb#àÒ0-˜ÀnxÃfÃñ÷‚ğ­gs
+?8@Ûÿ¸AÈµaY\c	øË/ÈnøŠÛà@òœßB€0Ã¨L€Zı‚¼Á5şx/,cé´Dd{ Tt@T3ÿØ6 ´y0`B¼Ğ gµ¦%  =îÅöt©ëín»ÜÕu/·×=îutû¹È.¼ÀÛ@z¿ V‡[DbüV°H 3V `ü  ³BÈA+Ø0`”¨WpÃÌ ËW¾R•©×ŞÓ5¯x‘ÜŒòZ£Ş½•Ç€û«–‰œ:„t9 _È÷ı‡î ˆe(8jÈÁ:HûôË¨BÄ@}Å/şúË¾ö·Ïıì_ÿûŒ¯şwÁÆŸË9^a½Ô 1¶Ñ
+¸¿ÿ t ‹÷ÆãKh„ş±„d$ƒœ 
+ˆH
+¤à.ÀÌ >ëCŸğ€	èÈ;°ª8	8	ğğ"(‚SP‚&x‚(8"è “ 
+>@ puó ;_5http://www.davidco.com/forum/images/buttons/reply.gifÓ%&O1GIF89a  æ  ÿÿÿPYŠQZˆ»ßâÏĞÓ¥Åä‚”¬€äPX‹{ˆŞ‚Š«R[‡ƒ›Çiv­ˆ›ùªËô‹—¸…ÉSa€ŒåhwˆÇïÿz‘¼|Šà†•àƒ–æ˜›Ÿtº„‘ïÂÄÌ‚³€ŒÙ†ÇŸÀØƒÜkw²³ÖøªÉ÷|ŠŞbq|nyÍo…¥w…Üw…Èš¸Ş¦©©¥«Ù‘¥ÿ¡ïWgƒ7AVÖÓÔÚ•›É¢Çà‘–È¢Áã†“Ş£ÅÛÅíø©Êå_h¾ÊËÎz—´¿äé‚”¨¤©½ÃãŒ”µ‚†©ºàñ•°ÖisÃÏĞÖª¬¬§Çä7?WEQo‚‰¹~äfz•~‡ÀrÖƒ“Ù¼Ø¶Ùÿ¤òŠ¥È¼ášŸÃ™Ê„ßÍÏÓ©ÅÌÂéÿ¤ÄäÎĞÓŠ˜æQZ‡†Ÿí¦ÄóÇÇÊÉñÿ‚•íŸ¸Ø´×ÿ=Fv˜ªÍ†›ê ¿ã¸İô„•íQYŒ™°üŠûƒ„Ÿ>F€ÉÙæ£§Ï|‹İÄìÿ’¡Ã“¶ß@La—«Ë   !ù     ,      @€w6<Ma8oZ,|@{0U>  5qi(- 
+2 \Q?BV$WkYR)jn~D“u4“.s*c9"]E=_;hz`p:!He'LFI%f 1}^P“GONK“SmXg““7t/T3+#bxy&	AJCl  @ rìl	 ;_8http://www.davidco.com/forum/images/buttons/firstnew.gifÓ Ó Ó Ó+,OGIF89a
+  æZ ÿÿ¨ÿ|Y–“aşç‘õˆ]õ‡]ÿó–şçøiûÇÿô–‡91ÿÿ£ıØˆûÆÿó•şäÿˆb†:1œ˜e™?4÷iù³tÿ–hÿÅ€—”aø³tÿî–‡80V++úÆ~‘aô‰]€nLúÃ~f,5AœŸi«R?ù´uÿğ˜œˆ]ÿÿ B3ÿÛŒÿÿÿÿ¹ÿÿ¦øŸiÿ¯u™fJÿÿ§ÿÿ°ûÕ‡ÿ®u÷œh]Cù³uù²tøiıØ‰ıÙ‰H&'€gH†80~S=ø±s|I6ÿ}Y‡9018:ÿÜÿ{YÿÆ€ÿ{X–’a—@4_`HüØˆ”†Vÿ‰b—YCÿÿ¥²®o›rP›~Vşè‘ô†\ÿ–f6<=C[Š                                                                                                               !ù  Z ,    
+  @n€M%K#$ZZQX WC)=<N5(!R
+
+YT'9:BI8LE@>S.3 Á4*FZ-V/OU,		"G?260;71A&PDèHJ+ ;_;http://www.davidco.com/forum/images/statusicon/post_new.gifÓ./OGIF89a  ÷± 7G”VbUrÏdn–_xÆmjveo”SOkA[±¬ª¡Xbˆ\YLFA5ww”­[yÎ\yÊª¥•CW’ÎËÀ@JnÑÑßÃÆÒ]zæQe»RpÊMhÅƒƒŠHb¸]vÑ††iilËËÑçêùëëòbkYwãèèòKf¶ææï~íOg©³µ¿Vo­³³¿ããìŸÁÿ‡¤äEL]nk––œ›ÌyyŠŸŸ¨‚€sAZ¥ƒ~~bbjÕÖê¿Ëí¶¹Ög‚ÒÖÖæÑÕæl†Ô­­Ã­­ºmj^ÈÈÒ_oÃ¢¢¼}Ÿÿ>Y·r—ÿ\aj¼¼Ì¦ÅûOlÊ¥¥©>GmSo×›­³€ª6F“CATÓÕéŞŞì††’ğğöYe‘Şã÷ÉÉÚPLiBZ±ÄÒòUaezÅC@CMjÇBHfÙÜîÜÜìr”ÿ±±Ã-*?¤Çÿ³³ÇééôTc•­ª£ssE]Ç™™®LiÁÚÙÙh‰Û””¡QlÊRd—†“´Yt¸Ng¸ ©ÅJgÁ5FÇÍèÔÔàF`Á²lÿ:O±–¶Vc‘yvi;R¦Ufšæé÷NkÆkju¤«ÔB[³ËÌ×60*ãèù—›«ÙÙŞ··¾QnÆŸ¦ÒÒÛWf•‘–µl†Î­?P•‹ŠŒĞĞÜ­¾ìWsÇHE9KX‚oo¢¨ÑºÅå¢4I¨ÈÄ¾ÌÓèHT{w}¡ie‚Zg™››«‘‘­HFR­­­ÔÕêõõÿ                                                                                                                                                                                                                                          !ù  ± ,      @ß c	øCÏA
+ÜÁ(@"œ*lQ§%L.ÅzQÊ@„WNdløÀ€B>û$2‘â%;+æüá¡pTœ7V)`Ó!H½äù2‹ˆ•XĞqÕ±€Ê‚ã
+©V€¤“fŠBUÍ¥ãëÀSx4@!qA€
+µd4ÀF¡!>2ƒ Q¬G˜ $	„¤r8"ĞÄO§.#L(±ÆÊV4\Áp‘*ÄM›(	9ÄH¦Ph¢ôğ‘˜„ˆ¡ŠËHÊ($f’'ê50  ;_?http://www.davidco.com/forum/images/statusicon/user_offline.gifÓ12OGIF89a  ÷• ÿÿÿöö÷ËÌÕÀÀÇÇÇĞÏĞ×ÎÓÙĞÔÜ|‚¤§§ÎÒÙÊËÓÖÙŞöööééëkop}‚ÚŞäşşı×ÛèÎÑßËÌÓ£§¦ÍÑÜÑÖâÁÃÈÃÃË‹‘255‰‹”VX]¿¿ÈöøøãäèÑÑÕÖÛãàáåììïáäë'))"%%æéêÌÑÙ×ØŞ¦¦¬çêìø÷ùHLMÄÇÔİİæËÍÍÅÈÈîîïÍÍÕÊËÔefmÎÏÚÊËÙ8:<ÏÒà±´ÀÒÒÚæçêìëğuyzóòôÓØŞãåãÍÍÒ??D×ÚÚØÚäËÌĞææíª­¸+,/®­¶¼¾ÈABGæééĞÔİÕÖÛÛßåoqxüıı’”ÅÅÌZ__ÏÑ×ğñôáâå×Øà¾¾ÆğğğÜÜßÍÒÛÍÍ×ÏÎ×ÊÊÑÈÈĞßâñBCGÒÓİšš ØÙàôòô¹¹Á?ABĞĞÒ£¥°àãòüüÿİİâŞÜãşışÆÈÕ¥¥ªĞÒÖÈÊÍ489ÒÓÖÓØäşşş¢¥¯¹¼ÈõõõÔÕÚÊÊÒÌËÖÖÙè "ÚßéàãçÿşÿÒÖÜıûü*+.ôôö†ˆ‘ÖÖÜîíîËÌØÑÖŞÎÏÔüüüáäó                                                                                                                                                                                                                                                                                                                              !ù  • ,       å +:d‚J„!FH’¢ÀL¥‡o ØÃL	 1bxXé
+ iî8i‘'‰Œ8öH Æ— k 1j€qG;…ˆ ˜C"„š@, 0À‘Ğ"@>0‰@1 p¬Å‚AE°h`£Š©  ğBÆG€2N­’@ŒVüÀÓÀÚ ¨0E€€'e„P†£Ÿ ÄÜÔÅ‡%âø 4‘tä à Fy4 ‰’-/$d‡ã’(«càÃ±ÉŒÕG<Ø'ÆT#A6ÀĞs‡#&¦ ;_3http://www.davidco.com/forum/images/icons/icon1.gifÓ45O†GIF89aF  ÷  u¼Ö¨®¡‰„K‰¢ÊÎÒ9k~}~^«ÉÔŠƒÙßç–—šo¬ÂL‚˜¾ÄÆªpi`˜®jlUˆ›ëëëÁÈÉœ¬´8hzÁÂÅN~b³kŠšÁƒ~Nw‡Üâé­¶·‹¤°0asºÅÎ¬°¶d²Ïv–£Rƒ•Gx‰lz*Wj@iu¸¼Â?okŒ€’˜ØÙÙÎĞÓY‰›FS}ÁÛe•§“¦¬¡¤zÀÜÈÊÍ¥©ªx—£V†˜g¥¼– ¤\ŒFo~I{‘i­Ç §¨9\hx¾Ø¹½½~„ˆßŞŞa‘¤âããq´Îƒ¢®ÄÉÊR—²g¡¶g‹Î†}ÅËÒ}¼Õi¯‘¡§5ew^€]yƒ]‘£ŠÎç¼ÀÁ-^o––ÒÓÕ’–ÒÕØcOQ¼¿ÅÑë“b¤¾€¢¯¶ˆU¥^…’¹¿ÃƒÃÜd¡·Xnu_¬ËWy†¬µ¿…˜¡‡Éã‚¢¯Dt…ÑÖÛ²¶¶;xÙÚŞv´Í“caƒª³rn•©´s‘ ääçZIK‹¡¨Zt~ß‘ƒ‰”©®¯¯·½|˜¦µ¼¿™£Nfnq¹Ôµ»ÂQoxˆ˜›…œ¦i…a}‡ĞÓÙ¦«ªÔÙÚIt]•©†Œ¸xm1cv²¸»HdlÇx¦¬±êæåq~„qŠ•„Çáp…š¨rºÔÑÑÑXœ¸³ºÂi™«Y—®h ´dŠ™´¸¼R†—X’¦µº¿M“®ö‘f¨ÂQ’³¹¾HagrdeåèååäåÜßŞ‡ «EkzNr~S„–U“©×Şælˆ“×Üä_¢×ÜåëèèŞãáÜÙİ6bsçèèåääy˜Z¡¼YªÇ×Š~‰š yºĞ!Ob²¿Éééè»yuêççÁ•·½Äº¿Ç½ÈĞÍÎÑYš¶l³Íl§¿½ÂÊÀÈÏİŞák–¦§±¸ ³½^£¼ÇÑÙay|c°Íd­ÎÏÓÏQbgCcjV–«r¯ÇèççR›´ÔØŞg†‘g²Š‰³·¾²³¼Rv„†¥°ÍÖŞ¥¯ã–î™4]lU†–ÖÚŞØÜã—}z¨½Åáåì!ù  ÿ ,    F  @ÿ ÿ	üEÇB:Eº„FHƒ~	ü—e”v&jÜÈ±£Ç}ğJW€S70KR¤Õ¡„	´ğ-ÓQ‰jt¨áÅ —½©äÔdQuHïÜiÆ4J³DIC5F”;ê`a8efÀ€:ÏşmX¥:	sªma`Ë$âJà„âÊ‘#À€­ª²D®„)*JPëBÂµ|ü@1Ï¯•c~eU£¢•4n‘0Š;ÄìëãwÜ—'¢9Às”ôè)™M;N%¶sÇ!Ã»·o2¶iÓÛ„Æ=^\¹ HÂ-/\ )Á@‘,ÉÂ]
+‰¾.4ÿ‘á+î¢¸vM‘……#(P‘ÀBûç%Á€±CB‡2 óÂTô ¨àqI3Ê4t2Ë~Îœğd¨á†Páa †h™‡^bâ‰(~ğ‰*~ …'Ì³Q;‘HĞ	
+(‚_q­Æ?˜ø¡É2–èa 	€¤ä’Õã
+(HàÅ&ß´’‚ò¨b"vĞ¢Gk 0		§ ‘ˆ(¢  ÀlÖPCnÆù&œpÆ9„š¢$’HÙ ,á„“)ì¸‚Ã? 0`%r0¸I„`BÀ( Ç+eô3‹W Ò*T×7´W>2‚xƒÃ”ÄÿrÈ3r>›H`ƒ8\p{üA%ï<@‰p†>èó	kHÀ5)l…]ì@Ã&4HÀH,¦È îëI€Â%ô'q=‚Â‚†;”®Øg
+3HÀ"<b…D‹*h!#.$è³ŠĞÈõÃKÀÅ£±¼ ±Æ<ğÃ$-È…CÇ<Øu×Àx¼J9ìBÂ%PFY*^B…Š/jñFsL i<òH€@†øá€ 
+¤ IFL6íô?üt+H$‚@Q‰ ªÁ`\Š`r‘«U²M”Mvh'ĞKÚiÓËÛpÇ½6ÛLwäÏ ºm·<ÿWË-B¢‰%ä2À"$.9Š“Cå°!ùä“`ùl\9æ” 6+L”
+®T )´‚IYB<ÕÀƒÇ+h¢Ç$fŒ‹Ÿ°ŒÎ@$‘DšlÆ`|ŸÀÌ‡á¼óÌcÇ'1  ØşÕ?Á0ÀË)*p„<6L€FµƒC÷<¡"rPòif4Â£«` : â©6ÚPÃĞ¨æ¬X€:Ğä¤	LG’up0@9%BĞ$`LãƒØ×vºÃƒÁCRˆÀâ’¸ŒàÌEÈä"	Oğh=Æ @\ÎÀª+¨ ó @ÁÿxHÀJKPn`‚Ì‡4&à)¦hŠXô¥>Â—hIÀ$X¼$À1_îY‚úÅ#ÄÂ‡±(Áz …f=§S7‚€-ØB.Dƒ¸d€—IÄÅV€×_Š°ÀìE\œà„¸ ãŒ-8â @ bKPÌTP€¸C,»ĞÇ.6)‰mìc	ÈÂı‚¬c»è.ÖÃ@ ãr˜‡/z€‚À¬¢¹p„#rQ‚U\ N´€‚@(€e>àk¤$ A>F—QüÀó‰:`‚Läâ»ØÅ*ríBUp„'6@cÏ¬b.#A,bqØ‹2¤.Ñ"½è'pÆ!6ÂB¡bèD'<Œ74Â°Hé\ä!¡Hi!VŠƒ–à¥|ˆiLW@Óš® 8Í©Nsº‚„bâ ;_5http://www.davidco.com/forum/images/buttons/quote.gifÓ"#Ó89O0GIF89a  ÷É ÿÿÿ¬º¿¥«º¿…„•”¨–•¨‚fdjËÇÇ¯¦§´µ½´´¾°ºÀvu~ˆ‰•Š‰”¢—˜­»ÁÂÉÎÁÈÍÓÍÍÀºÕÖÕØƒ‚µ­­ÔÑÒƒ‚‰áàå™±µ®¯ààáÍÊÊéçíœ±®»Àvv|¿»ºëåõîîñ¦¥¹¨µº©²¹ËÕÚóõö~†›”œ¢ìëî‘œÆ¾¾~}…Š‰‘äãéŒ—§¤¼µÃÈ†…”ışşh‰fø÷üx®¨©§±¸ˆˆáàç‘Œ¢¬»À{y…ut{ÈÄÄjlpmltÂÁËjhu˜Šœéíî«§ÁÇÆÏ¢™™½¼Î›š¦°§§}ˆ••¡»½Â´´»êçç²ª©hgr›™«klt””¦’‘˜Ÿ¨¬ØÖÖÉÁÂš ¥éíï|oŒÒÑ×_ó7’‘¢oÿ-……ŒÌÖÙŠ‰›‹ŠšÛİßÂ¼½¡©­°»Á‘šÒÎÎ€‹âàà°¯Èüııîíó×ÒÒ«ª¶èçï¢ µ §¦Œšõôø—Ÿ¥Ÿãäæ•ˆ“jir³³¾¸¬­èêìäâîÎÍÔ–™Ÿ§ÍÖÙŠš«¹¾Š€—ĞÉÊŸ§³ÀÅÑÑÓışı—Ğ×Û€vµa«¸¾ËÆÇëçæ‹Šœëêğ››ªÎÉÈ ©¯½¹»êêê÷÷öæææßßã¯¼Áåêëìëë”„¥êêí‰‡—’‘¡ÑÙÜÜáä·µÁ×ÕŞÜŞáˆ‡˜ «±êéğ¯¤¥±¿ÄŒ•|…åááşÿÿşşş´½Âfeläßß™ —™¡§«rq}ˆ‡‘ÖÓÔ€Ÿ™£¨êéï¬»À                                                                                                                                                                  !ù  É ,      @ÿ “	L&¡#K®Æ²³b Ã<-(Ä`€‹ºNÀA‹‡ŸR
+\DåO
+‘(òÚTÁT¤ ¨I  .N: Á”j	„a6´(Bâ‹H8 4Ê˜&)EªaŠ‚OxXĞäT E=&ÁJ’GJ•)
+æğA1c{„éAD¡^¸9Šú!‹‡ˆíÒ#ªÃX€	@ç¢-Ã3Q’“À#¢NE2¢Š62AÊuq”
+’şõêI™ª‚Ô@v§‡DW"y3pÀª3êXàS…Iq~İ¢‘È›.±auc‹™Ì™á 	‚# L=|AÄ%Z¸š•2  ;_7http://www.davidco.com/forum/images/buttons/printer.gifÓ;<OeGIF89a  ÷Í èêÿçèÿçéÿèéÿåèÿÚæÿÜæÿÒáüÙåÿäèÿæèÿÛæÿççÿáçÿééÿÎàûİæÿÒâü±¿Ä°¿Ä²ÁÆììÿÑáüÊàùâçÿàçÿö™ŒajtµÃÉ¹ÆË¿Òßòğÿ´ÃÈ²ÁÇæèıêêÿ±¿ÅìğÿÎÓèÉŞú¹ÅÊĞØÜÒÙŞÿR(ÌÕŞÏáûÖäÿËàùú{aÎáû‘™¨ÿO#ÇàúÄİòØßêÌàú×ÜíVX_´ÀÔÕİéÏàûÒÚäàæşÑÛçÒÙçGINìİîÈ×í@BG@CHÎÚå¡¨··ÍÛÁÌĞØäÿÉàú×âÿÈàùîîù^emıiF×ãÿ˜ ®ÆÕßîÉĞÔÚç¼Í×àäÿËÔÜ{‰éëÿÃİ÷åæşª®¾»ËÔÁÖæáã÷ÆÒêÍßûÛàæÍÛôÉÑÖÚâøs{‡KOUßæÿsz†Íàú¸ÅËÄßùÅßø®½ÂäçÿW[cÓâü¶ÄÉññşÈÒè[\cÎÖÜÍÔéïîÿÉÖâ¯¾ÃÁÜøÌØä¸ÈÏÍŞúÙæÿÃİôÂİøèèÿÇßúPRXÆàù¹ÇÍ´ÂÇÄØğçêÿßãêÄÓİëéÿÑİõÆßú›©ÁÑÚÔâıŸ¬½÷~ÏŞöcgpæéøÏÙğ·ÆÍjnwØŞãÂİùÉŞùêëÿèêòüpO¾¿ÏÖãÿéëóÓâı³ÁÇäåûïÇÎÙàëàæÿqyƒdhr¾ÊÑÃÜñ½ÈÎííÿÕãşĞáû¾ËáÛãÿÇÖßÂ×èãèÿµÄËãçÿş^7¬»Í±ÀÅÑ×ã¬»ÀËàúÑàşÀÒééêÿÇÒÚâåíäæúÃÎÖÑàıÉÒÖÃİõ´ÂÈÇØï¿ÓàÿM!¬»À                                                                                                                                                      !ù  Í ,      @ÿ ›	H°™I¥Ø´èÓÉ~dhÁ‘ š`ZP %Q~É­‚(Qb¹¤  0¡D¸t9 f.fTXœ0ÅX„•T=93	Ø‹&ÕXæg bp `P€«W0 5Fll @@ $À…ÁGƒTifH¡‚€­BG†¬,Äâñ o"ğua‰¡-­<dê•R "WeTŒ6Ê	y^Uğä@ˆ†S8ö( ˜¢™°gBYA‰—À¨fB²cª,V
+¸À¹"Làœi$°…ÁD—,9Šà1``VK :Çu¤XB*F©8$¡G”XrÈD° CÍkn\ Äg‚À=ŒˆÑBÊl K"4´L-V„€’´pâF _x±Ke ;_<http://www.davidco.com/forum/images/buttons/sendtofriend.gifÓ>?OaGIF89a  æ  ÿÿÿñôõóõö§¨©ııı•——şşşÁÁÿ‚‚Š‰ZZm”––¸¸ÿ``sµµÿYYjYYlaas„„‹ççèººÿ¹¹ÿ††èèé‚‚‹ôö÷ÂÂÿ„„[[oYYk‚‚ˆZZn¶¶şÇÇÿ¶¶ı‡‡‹ZZl½ÉÍ__v«««``t‰Š‹¨¨³‡‡‘yyççç©©ª¹ÄÈÀÀÛ¯¯¯øùú½½ÿ»»ş\\oĞÙÛ¨ªªrrzƒƒ‹¨©ª„„˜™š__q™š›rry}}‚´´´¸¸Å``rzz€ÀÀÿtt}¾¾ÿ®®¯’’•ÇÇâ±±¾ªª´ÃÃÿZZqWWh··ıYYo±±ÿ´´ÿnnØ\\qnnÕ½½Öããä»»ÿ€€ˆ……¿¿ÿµ¸¸ªª·‚‚‰ñóõaat……‡‡9=>ccvğòó¥§§©©¹®®®üüüƒƒŒmmÔ                                                      !ù     ,      @¾€%f…†‡26I=Ca(e&B ŸŸ›1J!M©E!3T›jW4P""  ¹GRm›Hb+c[l@F^› Î7kÔÕØØ`]._		Z,?LX#
+òUNiÍÏÎ›A0\(PÈR¡ƒƒ¦XÙÇ/Ô€	'<ìCsDp¨ £Å™'BB©€D(KIácË0càæE  ;_;http://www.davidco.com/forum/images/buttons/mode_linear.gifÓABOLGIF89a  æ  ÿÿÿñôõóõö§¨©ZZZııı•——şşşfffZZmµµÿ¸¸ÿ``s”––dddººÿ‰¶¶ıaasôö÷„„[[o‚‚Šèèé††ZZn¹¹ÿ¶¶şYYk……µ¸¸®®®aatƒƒŒ‡‡ñóõrryããäZZq‘‘‘¿¿ÿ}}‚¥§§ççè”””‚‚‹ĞÙÛ‡‡‘½ÉÍ``tªª·‡‡‹¾¾ÿ‚‚ˆ’’•‰Š‹€€ˆ¸¸Å__q9=>»»ÿtttÁÁÿ½½Ö©©¹nnÕ··ıªª´üüü´´´¨ªª……´´ÿğòó``rccv\\qtt}XXXÀÀÛ„„‹©©ªWWW‚‚‰øùúyy˜™š¨©ªmmÔ±±ÿ__v»»şˆˆˆ®®¯¹ÄÈ™š›                                                                                                !ù     ,      @©€0I…†‡T.6:J 1KZ9 ŸŸ› £›?[B
+¯4YX›]G/"!)M2¢¤£FDÉÊÍÍ#+Q5P-S8U$C%3	çL&@ÃÄ¡EO(<ü>HAğâuÕÃ	ƒJáàÊ(HDààD€7¾4Øh £GVTx	 ;_;http://www.davidco.com/forum/images/buttons/mode_hybrid.gifÓDEO2GIF89a  æ  ÿÿÿñôõóõö§¨©NNNZZZııı•——şşşAAAfff”––µµÿZZmZZn‚‚ŠYYk[[oddd‰¶¶şôö÷¶¶ı©©ªüüüµ¸¸®®®\\qğòóttt¥§§zzz‚‚‹½½Ö”””ˆˆˆ˜™š„„‹>>>ĞÙÛ€€ˆZZqwww===ªª´¨ªªLLLXXX9=>¾¾ÿ»»ş‘‘‘··ıããäWWW½ÉÍñóõ¹ÄÈyyrry©©¹KKKøùú™š›€€€ççè¨©ªmmÔjjj‚‚‰‰Š‹±±ÿ‡‡‹‚‚ˆ                                                                                                                                                                  !ù     ,      @€7…†‡>' +	’	&*Œ™š —›œ!24ª1GCD.²³³=@Ÿš-¾¿ÂÂ8AI% E(:;,5HÜ)<¸¹åæ éçŒ/ğññ6#B›"
+û
+30ŒüX@ğ€ÁƒHxÈ ;_=http://www.davidco.com/forum/images/buttons/mode_threaded.gifÓGHOAGIF89a  æ  stwghkcdghilååæxy{Z[^ops¶·¸‚…pqs¥¦§tuwXY[UVXdeh`adƒ„‡ÑÑÒîîîwxzüüü¾¿À±²³ÉÊË‘”oprôôôqrtêêê¤¥§–—šqruááâ„…‡]^aÂÃÄ²³´jknÀÁÂÜÜİÙÙÚäääš›­®¯®¯°«¬­klo¹º»ÅÆÇßßàz{}‡ˆ‹~‚ƒ…ııı ijm”•˜ijlš›œ€‚ääåkln¢£¤‡ˆŠmnp[\_QRTyz|rsuvwyjkm\]`vx{ÿÿÿ                                                                                                                                                            !ù     ,       €CGEG‚CCIH,2!E9I™B<	:1)@B#EJJK 875
+-«K¸ $
+G¬KD¹G	JIÃDI ¿Á ¸KÆGF'ÂÄK%FH=+ÍFAHF("/4.*Fvp˜qÁÇ0lp0À$BP(B‡? ;_>http://www.davidco.com/forum/images/buttons/collapse_thead.gifÔJKLMN_WebResourceTextEncodingNameUUTF-8Ol‘<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML dir="ltr" lang="en"><HEAD>
+        <TITLE>Public Forums: Getting Things Done - GTD tiddli wikki???????????</TITLE><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><META name="generator" content="vBulletin 3.0.7"><META name="keywords" content="davidco, GTD forum, GTD, Getting Things Done, David Allen, Online User Forums"><META name="description" content="Public Forums: Getting Things Done">
+
+<STYLE type="text/css">
+<!--
+/* vBulletin 3 CSS For Style 'Default Style' (styleid: 1) */
+body
+{
+        background-color: #FFFFFF;
+        color: #000000;
+        font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+}
+a:link
+{
+        color: #333333;
+}
+a:visited
+{
+        color: #666666;
+}
+a:hover, a:active
+{
+        color: #999999;
+}
+.page
+{
+        background-color: #FFFFFF;
+        color: #000000;
+}
+td, th, p, li
+{
+        font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+        background-color: #CCCCCC;
+        color: #000000;
+        border: 1px solid #0B198C;
+}
+.tcat
+{
+        background: #869BBF url(images/gradients/gradient_tcat.gif) repeat-x top left;
+        color: #FFFFFF;
+        font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link
+{
+        color: #ffffff;
+        text-decoration: none;
+}
+.tcat a:visited
+{
+        color: #ffffff;
+        text-decoration: none;
+}
+.tcat a:hover, .tcat a:active
+{
+        color: #FFFF66;
+        text-decoration: underline;
+}
+.thead
+{
+        background: #5C7099 url(images/gradients/gradient_thead.gif) repeat-x top left;
+        color: #FFFFFF;
+        font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link
+{
+        color: #FFFFFF;
+}
+.thead a:visited
+{
+        color: #FFFFFF;
+}
+.thead a:hover, .thead a:active
+{
+        color: #FFFF00;
+}
+.tfoot
+{
+        background-color: #595959;
+        color: #E0E0F6;
+}
+.tfoot a:link
+{
+        color: #E0E0F6;
+}
+.tfoot a:visited
+{
+        color: #E0E0F6;
+}
+.tfoot a:hover, .tfoot a:active
+{
+        color: #FFFF66;
+}
+.alt1, .alt1Active
+{
+        background-color: #FAFAFA;
+        color: #000000;
+}
+.alt2, .alt2Active
+{
+        background-color: #FFFFFF;
+        color: #000000;
+}
+.wysiwyg
+{
+        background-color: #FAFAFA;
+        color: #000000;
+        font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+        font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+        font-size: 11px;
+        font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+        color: #666686;
+}
+.navbar
+{
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+        color: #FF0000;
+        font-weight: bold;
+}
+.fjsel
+{
+        background-color: #666666;
+        color: #E0E0F6;
+}
+.fjdpth0
+{
+        background-color: #F7F7F7;
+        color: #000000;
+}
+.panel
+{
+        background: #E4E7F5 url(images/gradients/gradient_panel.gif) repeat-x top left;
+        color: #000000;
+        padding: 10px;
+        border: 2px outset;
+}
+.panelsurround
+{
+        background: #D5D8E5 url(images/gradients/gradient_panelsurround.gif) repeat-x top left;
+        color: #000000;
+}
+legend
+{
+        color: #22229C;
+        font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+        background-color: #999999;
+        color: #FFFFFF;
+        font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        padding: 3px 6px 3px 6px;
+        white-space: nowrap;
+}
+.vbmenu_control a:link
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.vbmenu_control a:visited
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active
+{
+        color: #FFFFFF;
+        text-decoration: underline;
+}
+.vbmenu_popup
+{
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+        background-color: #BBC7CE;
+        color: #000000;
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        white-space: nowrap;
+        cursor: pointer;
+}
+.vbmenu_option a:link
+{
+        color: #22229C;
+        text-decoration: none;
+}
+.vbmenu_option a:visited
+{
+        color: #22229C;
+        text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.vbmenu_hilite
+{
+        background-color: #999999;
+        color: #FFFFFF;
+        font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+        white-space: nowrap;
+        cursor: pointer;
+}
+.vbmenu_hilite a:link
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.vbmenu_hilite a:visited
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active
+{
+        color: #FFFFFF;
+        text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+-->
+</STYLE>
+
+<SCRIPT type="text/javascript">
+<!--
+var SESSIONURL = "";
+var IMGDIR_MISC = "images/misc";
+// -->
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="clientscript/vbulletin_global.js"></SCRIPT><SCRIPT type="text/javascript" src="clientscript/vbulletin_menu.js"></SCRIPT>
+
+</HEAD><BODY onload="if (is_ie || is_moz) { fetch_object('currentPost').scrollIntoView(!is_moz); }">
+<A name="top"></A>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0"><TBODY><TR><TD background="images/dac/bg_header.gif" align="center"><IMG src="images/dac/header.gif" border="0" usemap="#Maptp" alt="Public Forums: Getting Things Done" title="Public Forums: Getting Things Done"><MAP name="Maptp"> <AREA shape="rect" coords="509,74,572,95" href="rss.php" title="RSS" alt="RSS"> <AREA shape="rect" coords="449,74,509,95" href="login.php?do=logout&u=0" title="Log Out" alt="Log Out"> <AREA shape="rect" coords="369,74,451,95" href="usercp.php" title="Profile" alt="Profile"> <AREA shape="rect" coords="264,74,370,95" href="/guide.php" title="FAQ" alt="FAQ"> <AREA shape="rect" coords="178,74,266,95" href="faq.php" title="FAQ" alt="FAQ"> <AREA shape="rect" coords="105,74,179,95" href="/forum/" title="Forum" alt="Forum"> <AREA shape="rect" coords="9,74,106,95" href="/index.php" title="Home" alt="Home"> </MAP></TD><TD align="right">                Â 
+        </TD></TR></TBODY></TABLE>
+
+
+        <DIV align="center">                <DIV class="page" style="width:800px; text-align:left">                        <DIV style="padding:0px 15px 0px 15px">
+
+
+<SCRIPT type="text/javascript">
+<!--
+function log_out()
+{
+	ht = document.getElementsByTagName("html");
+	ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+	if (confirm('Are you sure you want to log out?'))
+	{
+		return true;
+	}
+	else
+	{
+		ht[0].style.filter = "";
+		return false;
+	}
+}
+//-->
+</SCRIPT>
+
+<BR>
+
+<TABLE class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<TBODY><TR><TD class="alt1" width="100%">                
+                        <TABLE cellpadding="0" cellspacing="0" border="0">                        <TBODY><TR valign="bottom"><TD><A href="#" onclick="history.back(1)"><IMG src="images/misc/navbits_start.gif" alt="Go Back" border="0" title="Go Back"></A></TD><TD>Â </TD><TD width="100%"><SPAN class="navbar"><A href="index.php?" accesskey="1">Public Forums: Getting Things Done</A></SPAN> 
+        <SPAN class="navbar">&gt; <A href="forumdisplay.php?f=4">The David Allen Company</A></SPAN>
+
+
+        <SPAN class="navbar">&gt; <A href="forumdisplay.php?f=5">Getting Things Done</A></SPAN>
+
+</TD></TR><TR><TD class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><A href="/forum/showthread.php?p=29804"><IMG class="inlineimg" src="images/misc/navbits_finallink.gif" alt="Reload this Page" border="0" title="Reload this Page"></A> <STRONG>       GTD tiddli wikki???????????
+
+</STRONG></TD></TR></TBODY></TABLE>                        
+                
+        </TD><TD class="alt2" nowrap="nowrap" style="padding:0px">                        
+                                <FORM action="login.php" method="post" onsubmit="md5hash(vb_login_password,vb_login_md5password,vb_login_md5password_utf)">                <SCRIPT type="text/javascript" src="clientscript/vbulletin_md5.js"></SCRIPT>                <TABLE cellpadding="0" cellspacing="3" border="0">                <TBODY><TR><TD class="smallfont">User Name</TD><TD><INPUT type="text" class="button" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="1" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';"></TD><TD class="smallfont" colspan="2" nowrap="nowrap"><LABEL for="cb_cookieuser_navbar"><INPUT type="checkbox" name="cookieuser" value="1" tabindex="3" id="cb_cookieuser_navbar" accesskey="c" checked="checked">Remember Me?</LABEL></TD></TR><TR><TD class="smallfont">Password</TD><TD><INPUT type="password" class="button" name="vb_login_password" size="10" accesskey="p" tabindex="2"></TD><TD><INPUT type="submit" class="button" value="Log in" tabindex="4" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s"></TD></TR></TBODY></TABLE>
+                <INPUT type="hidden" name="s" value="">
+                <INPUT type="hidden" name="do" value="login">
+                <INPUT type="hidden" name="forceredirect" value="1">                        
+                <INPUT type="hidden" name="vb_login_md5password">
+                <INPUT type="hidden" name="vb_login_md5password_utf">
+                </FORM>
+                                        
+                </TD></TR></TBODY></TABLE>
+
+<DIV align="center">
+        <TABLE class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center" style="border-top-width:0px">        <TBODY><TR align="center"><TD class="vbmenu_control"><A href="register.php?">Register</A></TD><TD class="vbmenu_control"><A href="faq.php?" accesskey="5">FAQ</A></TD><TD class="vbmenu_control"><A href="memberlist.php?">Members List</A></TD><TD class="vbmenu_control"><A href="search.php?do=getdaily" accesskey="2">Today's Posts</A></TD><TD id="navbar_search" class="vbmenu_control" style="cursor: pointer; "><A href="search.php?" accesskey="4">Search</A> <SCRIPT type="text/javascript"> vbmenu_register("navbar_search"); </SCRIPT><IMG src="images/misc/menu_open.gif" alt="" border="0"></TD></TR></TBODY></TABLE>
+</DIV>
+
+<BR>
+<BR>
+
+
+        
+        
+                <DIV class="vbmenu_popup" id="navbar_search_menu" style="display: none; position: absolute; left: 0px; top: 0px; ">                <TABLE cellpadding="4" cellspacing="1" border="0" width="">                <TBODY><TR><TD class="thead">Search Forums</TD></TR><TR><TD class="vbmenu_option" title="" style="cursor: default; ">                        <FORM action="search.php" method="post">                                <INPUT type="hidden" name="do" value="process">
+                                <INPUT type="hidden" name="showposts" value="0">
+                                <INPUT type="text" class="bginput" name="query" size="20">
+<INPUT type="submit" class="button" value="Go"><BR>
+                        </FORM>
+                        </TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="search.php?" accesskey="4">Advanced Search</A></TD></TR></TBODY></TABLE>
+        </DIV>
+                
+
+        
+
+
+
+
+<A name="poststop" id="poststop"></A>
+
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<TBODY><TR valign="bottom"><TD class="smallfont"><A href="newreply.php?do=newreply&noquote=1&p=29804"><IMG src="images/buttons/reply.gif" alt="Reply" border="0" title="Reply"></A></TD></TR></TBODY></TABLE>
+
+<TABLE class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<TBODY><TR><TD class="tcat" width="100%">                <DIV class="smallfont">                
+                        <A href="#post29804"><IMG class="inlineimg" src="images/buttons/firstnew.gif" alt="View First Unread" border="0" title="View First Unread"></A>
+                        <A href="#post29804"><STRONG>View First Unread</STRONG></A>
+                
+                Â 
+                </DIV>
+        </TD><TD class="vbmenu_control" id="threadtools" style="cursor: pointer; ">                <A href="#goto_threadtools">Thread Tools</A>
+                <SCRIPT type="text/javascript"> vbmenu_register("threadtools"); </SCRIPT><IMG src="images/misc/menu_open.gif" alt="" border="0">
+        </TD><TD class="vbmenu_control" id="threadsearch" style="cursor: pointer; ">                        <A href="#goto_threadsearch">Search this Thread</A>
+                        <SCRIPT type="text/javascript"> vbmenu_register("threadsearch"); </SCRIPT><IMG src="images/misc/menu_open.gif" alt="" border="0">
+                </TD><TD class="vbmenu_control" id="displaymodes" style="cursor: pointer; ">                <A href="#goto_displaymodes">Display Modes</A>
+                <SCRIPT type="text/javascript"> vbmenu_register("displaymodes"); </SCRIPT><IMG src="images/misc/menu_open.gif" alt="" border="0">
+        </TD></TR></TBODY></TABLE>
+
+
+                </DIV>        
+        </DIV>
+</DIV>
+
+
+
+
+
+<DIV id="posts">
+        
+        <DIV align="center">                <DIV class="page" style="width:800px; text-align:left">                        <DIV style="padding:0px 15px 0px 15px">
+        <DIV style="padding:0px 0px 6px 0px">                
+
+
+
+<TABLE class="tborder" id="post29804" cellpadding="6" cellspacing="1" border="0" width="100%" align="center"><TBODY><TR><TD class="thead" id="currentPost">                <DIV class="normal" style="float:right">                        Â 
+                        #<A href="showpost.php?p=29804&postcount=1" target="new"><STRONG>1</STRONG></A> Â 
+                        
+                        
+                        
+                </DIV>
+                
+                <DIV class="normal">                                                <A name="post29804"><IMG class="inlineimg" src="images/statusicon/post_new.gif" alt="Unread" border="0" title="Unread"></A>
+                        
+                                Today, 12:46 PM
+                        
+                        <A name="newpost"></A>
+                                        </DIV>
+        </TD></TR><TR><TD class="alt2" style="padding:0px">                                <TABLE cellpadding="0" cellspacing="6" border="0" width="100%">                <TBODY><TR><TD nowrap="nowrap">                        
+                                <DIV id="postmenu_29804" style="cursor: pointer; ">                                        
+                                        <A class="bigusername" href="member.php?u=2402">db45</A>
+                                        <IMG class="inlineimg" src="images/statusicon/user_offline.gif" alt="db45 is offline" border="0" title="db45 is offline">
+
+
+                                        <SCRIPT type="text/javascript"> vbmenu_register("postmenu_29804", true); </SCRIPT>
+                                        
+                                </DIV>
+                                
+                                
+                                
+                                
+                        </TD><TD width="100%">Â </TD><TD valign="top" nowrap="nowrap">                                
+                                <DIV class="smallfont">                                        <DIV>Join Date: Jun 2005</DIV>
+                                        
+                                        
+                                        <DIV>                                                Posts: 6
+                                        </DIV>
+                                        
+                                        <DIV>   </DIV>
+                                </DIV>
+                                
+                        </TD></TR></TBODY></TABLE>
+                        </TD></TR><TR><TD class="alt1">                
+                
+                                                <DIV class="smallfont">                                <IMG class="inlineimg" src="images/icons/icon1.gif" alt="Default" border="0" title="Default">
+                                <STRONG>GTD tiddli wikki???????????</STRONG>
+                        </DIV>
+                        <HR size="1" style="color:#CCCCCC">
+                                        
+                
+                                <DIV><A href="http://shared.snapgrid.com/gtd_tiddlywiki.html" target="_blank">http://shared.snapgrid.com/gtd_tiddlywiki.html</A><BR>
+<BR>
+just downloaded this, is it safe? is my info safe? it looks great and really handy is there any catches???</DIV>
+                        
+                
+                
+                
+                
+                
+        
+                <DIV align="right">                                                
+                        
+                        
+                                <A href="newreply.php?do=newreply&p=29804"><IMG src="images/buttons/quote.gif" alt="Reply With Quote" border="0" title="Reply With Quote"></A>
+                        
+                        
+                                        </DIV>
+                
+                
+        </TD></TR></TBODY></TABLE>
+
+<DIV class="vbmenu_popup" id="postmenu_29804_menu" style="display: none; position: absolute; left: 0px; top: 0px; ">
+        <TABLE cellpadding="4" cellspacing="1" border="0" width="">        <TBODY><TR><TD class="thead">db45</TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="member.php?userid=2402">View Public Profile</A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="private.php?do=newpm&userid=2402">Send a private message to db45</A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="search.php?do=finduser&userid=2402">Find all posts by db45</A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="profile.php?do=addlist&userlist=buddy&u=2402">Add db45 to Your Buddy List</A></TD></TR></TBODY></TABLE>
+</DIV>
+
+
+
+
+
+        </DIV>
+        
+                </DIV>        
+        </DIV>
+</DIV>
+
+
+</DIV>
+
+
+
+        <DIV align="center">                <DIV class="page" style="width:800px; text-align:left">                        <DIV style="padding:0px 15px 0px 15px">
+
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%">
+<TBODY><TR valign="top"><TD class="smallfont"><A href="newreply.php?do=newreply&noquote=1&p=29804"><IMG src="images/buttons/reply.gif" alt="Reply" border="0" title="Reply"></A></TD></TR></TBODY></TABLE>
+
+<BR>
+
+<DIV class="smallfont" align="center">        <STRONG>Â«</STRONG>
+                <A href="showthread.php?t=4188&goto=nextoldest">Previous Thread</A>
+                |
+                <A href="showthread.php?t=4188&goto=nextnewest">Next Thread</A>
+        <STRONG>Â»</STRONG>
+</DIV>
+
+<BR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR>
+
+<DIV class="vbmenu_popup" id="threadtools_menu" style="display: none; position: absolute; left: 0px; top: 0px; ">
+<FORM action="postings.php" method="post" name="threadadminform">        <TABLE cellpadding="4" cellspacing="1" border="0" width="">        <TBODY><TR><TD class="thead">Thread Tools<A name="goto_threadtools"></A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><IMG class="inlineimg" src="images/buttons/printer.gif" alt="Show Printable Version" title="Show Printable Version"> <A href="printthread.php?t=4188" accesskey="3">Show Printable Version</A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><IMG class="inlineimg" src="images/buttons/sendtofriend.gif" alt="Email this Page" title="Email this Page"> <A href="sendmessage.php?do=sendtofriend&t=4188">Email this Page</A></TD></TR></TBODY></TABLE>
+</FORM>
+</DIV>
+
+
+<DIV class="vbmenu_popup" id="displaymodes_menu" style="display: none; position: absolute; left: 0px; top: 0px; ">
+        <TABLE cellpadding="4" cellspacing="1" border="0" width="">        <TBODY><TR><TD class="thead">Display Modes<A name="goto_displaymodes"></A></TD></TR><TR><TD class="vbmenu_option" title="" style="cursor: default; "><IMG class="inlineimg" src="images/buttons/mode_linear.gif" alt="Linear Mode" title="Linear Mode"> <STRONG>Linear Mode</STRONG></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><IMG class="inlineimg" src="images/buttons/mode_hybrid.gif" alt="Hybrid Mode" title="Hybrid Mode"> <A href="showthread.php?mode=hybrid&t=4188">Switch to Hybrid Mode</A></TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><IMG class="inlineimg" src="images/buttons/mode_threaded.gif" alt="Threaded Mode" title="Threaded Mode"> <A href="showthread.php?p=29804&mode=threaded#post29804">Switch to Threaded Mode</A></TD></TR></TBODY></TABLE>
+</DIV>
+
+
+
+<DIV class="vbmenu_popup" id="threadsearch_menu" style="display: none; position: absolute; left: 0px; top: 0px; ">
+<FORM action="search.php" method="post">        <TABLE cellpadding="4" cellspacing="1" border="0" width="">        <TBODY><TR><TD class="thead">Search this Thread<A name="goto_threadsearch"></A></TD></TR><TR><TD class="vbmenu_option" title="" style="cursor: default; ">                        <INPUT type="hidden" name="s" value="">
+                        <INPUT type="hidden" name="do" value="process">
+                        <INPUT type="hidden" name="searchthread" value="1">
+                        <INPUT type="hidden" name="showposts" value="1">
+                        <INPUT type="hidden" name="searchthreadid" value="4188">
+                        <INPUT type="text" class="bginput" name="query" size="20">
+<INPUT type="submit" class="button" value="Go"><BR>
+                </TD></TR><TR><TD class="vbmenu_option" style="cursor: default; "><A href="search.php?">Advanced Search</A></TD></TR></TBODY></TABLE>
+</FORM>
+</DIV>
+
+
+
+<DIV class="vbmenu_popup" id="threadrating_menu" style="display:none">
+<FORM action="threadrate.php" method="post">        <TABLE cellpadding="4" cellspacing="1" border="0">        <TBODY><TR><TD class="thead">Rate This Thread<A name="goto_threadrating"></A></TD></TR><TR><TD>You have already rated this thread</TD></TR></TBODY></TABLE>
+</FORM>
+</DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<TBODY><TR valign="bottom"><TD class="smallfont" align="left">                <TABLE class="tborder" cellpadding="6" cellspacing="1" border="0" width="180"><THEAD><TR><TD class="thead">                <A style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><IMG id="collapseimg_forumrules" src="images/buttons/collapse_thead.gif" alt="" border="0"></A>
+                Posting Rules
+        </TD></TR></THEAD>
+<TBODY id="collapseobj_forumrules" style=""><TR><TD class="alt1" nowrap="nowrap"><DIV class="smallfont">                
+                <DIV>You <STRONG>may not</STRONG> post new threads</DIV>
+                <DIV>You <STRONG>may not</STRONG> post replies</DIV>
+                <DIV>You <STRONG>may not</STRONG> post attachments</DIV>
+                <DIV>You <STRONG>may not</STRONG> edit your posts</DIV>
+                <HR>
+                
+                <DIV><A href="misc.php?do=bbcode" target="_blank">vB code</A> is <STRONG>On</STRONG></DIV>
+                <DIV><A href="misc.php?do=showsmilies" target="_blank">Smilies</A> are <STRONG>On</STRONG></DIV>
+                <DIV><A href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</A> code is <STRONG>On</STRONG></DIV>
+                <DIV>HTML code is <STRONG>Off</STRONG></DIV>
+        </DIV></TD></TR></TBODY>
+</TABLE>
+        </TD><TD class="smallfont" align="right">                <TABLE cellpadding="0" cellspacing="0" border="0">                
+                <TBODY><TR><TD>                        <DIV class="smallfont" style="text-align:left; white-space:nowrap">        <FORM action="forumdisplay.php" method="get">        <INPUT type="hidden" name="s" value="">
+        <INPUT type="hidden" name="daysprune" value="">
+        <STRONG>Forum Jump</STRONG><BR>
+        <SELECT name="f" onchange="this.form.submit();"><OPTGROUP label="Site Areas"><OPTION value="-1">Please select one</OPTION><OPTION value="cp">User Control Panel</OPTION><OPTION value="pm">Private Messages</OPTION><OPTION value="subs">Subscriptions</OPTION><OPTION value="wol">Who's Online</OPTION><OPTION value="search">Search Forums</OPTION><OPTION value="home">Forums Home</OPTION><OPTION value="-1">--------------------</OPTION></OPTGROUP><OPTGROUP label="Forums"><OPTION value="4" class="fjdpth0"> The David Allen Company</OPTION><OPTION value="5" class="fjsel" selected="selected">Â  Â  Getting Things Done</OPTION><OPTION value="6" class="fjdpth1">Â  Â  Gear, Gadgets, Software, and Toys</OPTION></OPTGROUP></SELECT>
+<INPUT type="submit" class="button" value="Go">
+        </FORM>
+</DIV>
+                        </TD></TR></TBODY></TABLE>
+        </TD></TR></TBODY></TABLE>
+
+<BR>
+
+
+
+<BR>
+
+<BR>
+<DIV class="smallfont" align="center">All times are GMT -8. The time now is <SPAN class="time">03:59 PM</SPAN>.</DIV>
+<BR>
+
+
+                </DIV>        
+        </DIV>
+</DIV>
+
+
+
+<FORM action="index.php" method="get">        
+<TABLE cellpadding="6" cellspacing="0" border="0" width="800" class="page" align="center"><TBODY><TR><TD class="tfoot" align="right">                <DIV class="smallfont">                        <STRONG>                                <A href="sendmessage.php">Contact Us</A> -
+                                <A href="http://www.davidco.com">Getting Things Done Forum</A> -
+                                
+                                
+                                <A href="archive/index.php">Archive</A> -
+                                
+                                <A href="#top" onclick="self.scrollTo(0, 0); return false;">Top</A>
+                        </STRONG>
+                </DIV>
+        </TD></TR></TBODY></TABLE>
+
+<BR>
+
+</FORM>
+
+
+<SCRIPT type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+
+	// Initialize 'Active' Table Cells
+	//activecells_init();
+//-->
+</SCRIPT>
+
+<DIV style="display:none">
+                
+                
+        
+        </DIV>
+
+
+</BODY></HTML>_=http://www.davidco.com/forum/showthread.php?p=29804#post29804Ytext/html        1  L  S  e  t  Š HP H H« H² | |Û |â ~, ~d ~n ~u3¶3ë3ò7â88&<5<v<}aÇbbc&c_cfpp<pCrxr³rºrÁrÈrÏtäu"u)y/yqyx}„}º}Á†K†ƒ†Š†‘ŠÅŠÿ‹o®µ’’X’_”¯”í”ô—*—j—q™¶™÷š šš$¹ù             O             

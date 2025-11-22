@@ -1,0 +1,1172 @@
+bplist00Ó#_WebSubresources_WebMainResource_WebSubframeArchives¦Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO%/*  
+Theme Name: MTsix
+Theme URI: http://mtsix.org/
+Description: A varied theme from the original layout of <a href="http://mtsix.com">mtsix.com</a>.
+Version: 1.5
+Author: Oliver Zheng
+Author URI: http://mtsix.com/
+*/
+
+/* LAYOUT */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background: #EEEEEE url(./images/background/page.png) repeat-x 0px 0px;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+#wrapper {
+	width: 820px;
+	margin: 0px auto;
+	text-align: left;
+}
+#header {
+	height: 55px;
+	padding: 25px 0px 10px 65px;
+	background: url(./images/background/header_logo.png) no-repeat 3px 22px;
+}
+#main {
+	background: url(./images/background/slashes_grey.gif) repeat;
+	width: 600px;
+	float: left;
+}
+#content {
+	background: #EEEEEE;
+	margin: 0px 3px;
+	padding: 10px 25px;
+	overflow: visible;
+}
+#content_top {
+	background: url(./images/background/content_top.gif) no-repeat 0px 0px;
+	width: 600px;
+	height: 0px;
+	padding-top: 10px;
+	overflow: hidden;
+	margin: 0px;
+}
+#content_bottom {
+	background: url(./images/background/content_bottom.gif) no-repeat 0px 0px;
+	width: 600px;
+	height: 0px;
+	padding-top: 10px;
+	overflow: hidden;
+	margin: 0px;
+}
+#sidebar {
+	width: 200px;
+	float: right;
+	line-height: 1.1em;
+}
+#sidebar ul {
+	margin: 0px;
+	padding: 0px;
+}
+#sidebar ul li.sidebar {
+	list-style-type: none;
+	background: url(./images/background/slashes_grey.gif) repeat;
+	margin-bottom: 20px;
+	padding: 3px;
+}
+#sidebar ul li.sidebar .sidebar_box {
+	padding: 5px 10px 2px 10px;
+	background: #EEEEEE;
+}
+#sidebar ul li.sidebar #search_box {
+	background-image: url();
+}
+#sidebar ul li.sidebar ul li {
+	margin: 7px 0px;
+	list-style-type: none;
+}
+#sidebar #pagenav {
+	margin: 0px;
+}
+#sidebar .links li#linkcat-1 {
+	margin: 0px;
+}
+#sidebar ul li ul {
+	margin: 0px;
+}
+#sidebar p.description {
+	margin: 0px;
+	margin-bottom: 3px;
+	font-size: 10px;
+	color: #333333;
+}
+ol.commentlist li {
+	border-bottom: 1px solid #999999;
+	margin-bottom: 10px;
+}
+#footer {
+	clear: both;
+	padding: 10px 0px;
+}
+#footer div {
+	border: 1px solid #999999;
+	padding: 2px;
+	background: url(./images/background/slashes_grey.gif) repeat;
+}
+#footer div p {
+	margin: 0px;
+	background: #EEEEEE;
+	text-align: center;
+}
+
+
+/* COMMON ELEMENTS */
+h2.the_date {
+	color: #AAAAAA;
+	background: #E6E6E6;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+h2.pagetitle {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 10px;
+}
+hr.hide {
+	display: none;
+}
+.post p, div#comments_div p {
+	margin: 10px 0px;
+}
+.post .entry dl {
+	margin: 10px 0px;
+}
+.post .entry dl dd {
+	margin-left: 20px;
+}
+.post .entry pre {
+	margin: 10px 20px;
+	background: #F8F8F8;
+	border: 1px dashed #666666;
+	padding: 0px 4px;
+}
+.post .entry ol {
+	margin: 10px 0px;
+	padding: 0px 30px;
+}
+.post .entry ul {
+	margin: 10px 30px 10px 15px;
+	padding: 0px;
+}
+.post .entry ul li {
+	list-style-type: none;
+	margin: 0px;
+	background: url(./images/bullets/main_li_icon.gif) no-repeat 0px 7px;
+	padding-left: 15px;
+}
+acronym, abbr {
+	cursor: help;
+	border-bottom: 1px dashed #999;
+}
+
+.post blockquote {
+	margin: 10px 20px;
+	padding-left: 20px;
+	border-left: 5px solid #DDDDDD;
+}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+}
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: block;
+	float: right;
+}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: block;
+	float: left;
+}
+
+
+/* TYPOGRAPHY */
+#header h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	margin: 0px;
+}
+#header h1 a {
+	color: #000000;
+	text-decoration: none;
+}
+#header h1 a:hover {
+	color: #000000;
+}
+#header p {
+	margin: 10px 0px 0px 0px;
+	color: #666666;
+}
+
+#sidebar h2 {
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0px;
+	color: #333366;
+	border-bottom: 1px solid #CCCCCC;
+	background: url(./images/background/sidebar_h2.png) no-repeat 155px 0px;
+}
+#sidebar ul li.sidebar ul li {
+	color: #333333;
+}
+#sidebar ul li.sidebar ul li a {
+	padding: 2px 4px 2px 15px;
+	background: url(./images/bullets/submenu_main_other.gif) no-repeat 3px -5px;
+	text-decoration: none;
+}
+#sidebar ul li.sidebar ul li#pagenav a {
+	background-image: url(./images/bullets/submenu_main.gif);
+}
+#sidebar ul li.sidebar ul li a:link {
+	color: #333333;
+}
+#sidebar ul li.sidebar ul li a:active {
+	color: #333333;
+}
+#sidebar ul li.sidebar ul li a:visited {
+	color: #333333;
+}
+#sidebar ul li.sidebar ul li a:hover {
+	color: #000000;
+	background-color: #FFFFFF;
+	background-position: 3px 8px;
+}
+/*#sidebar a:link {
+	color: #333333;
+	text-decoration: none;
+}
+#sidebar a:active {
+	color: #333333;
+	text-decoration: none;
+}
+#sidebar a:visited {
+	color: #333333;
+	text-decoration: none;
+}*/
+
+.entry a:link, .div a:link, #sidebar p a:link, .postmetadata a:link {
+	color: #003366;
+	text-decoration: none;
+}
+.entry a:visited, .div a:visited, #sidebar p a:visited, .postmetadata a:visited {
+	text-decoration: none;
+	color: #003366;
+}
+.entry a:hover, .div a:hover, #sidebar p a:hover, .postmetadata a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+.entry a:active, .div a:active, #sidebar p a:active, .postmetadata p a:active {
+	text-decoration: none;
+	color: #FF6600;
+}
+
+.entry #leftimg {
+	float: left;
+}
+
+.adbody {
+	float: left;
+}
+
+h2,h3,h4,h5,h6 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 0px;
+	color: #660000;
+}
+h2 a:link,h3 a:link,h4 a:link,h5 a:link,h6 a:link {
+	color: #660000;
+	text-decoration: none;
+}
+h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited {
+	text-decoration: none;
+	color: #660000;
+}
+h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover {
+	text-decoration: none;
+	color: #990000;
+}
+h2 a:active,h3 a:active,h4 a:active,h5 a:active,h6 a:active {
+	text-decoration: none;
+	color: #990000;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
+p {
+	line-height: 1.5em;
+}
+#footer p {
+	color: #CCCCCC;
+}
+#footer p a {
+	text-decoration: none;
+	color: #000000;
+}
+#footer p a:hover {
+	text-decoration: underline;
+	color: #000033;
+}
+
+
+/* CONTENT */
+.entry {
+	overflow: auto;
+}
+.post {
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.post h2 {
+	margin: 0px 0px 5px 0px;
+}
+.post small {
+	font-size: 10px;
+	color: #666666;
+}
+
+.post .postmeta {
+	margin: 0px;
+	padding: 10px 0px 0px 0px;
+}
+.post .postmeta li {
+	color: #666666;
+	display: inline;
+	list-style-type: none;
+	margin: 0px;
+}
+.post .postmeta li.date {
+	padding-right: 5px;
+}
+.post .postmeta li.comments {
+	padding-left: 10px;
+	border-left: 1px solid #CCCCCC;
+}
+.post .postmeta li.all {
+	margin: 0px;
+	padding: 0px 5px 0px 10px;
+	border-left: 1px solid #CCCCCC;
+}
+.post .postmeta li a {
+	text-decoration: none;
+}
+.post .postmeta li a:hover {
+	text-decoration: underline;
+}
+.post .postmeta li.date a {
+	background: url(./images/bullets/perm_link_icon.gif) no-repeat;
+	padding-left: 20px;
+	color: #666666;
+	background-position: 0px 0px;
+}
+.post .postmeta li.date a:hover {
+	background-position: 0px -16px;
+	color: #000000;
+}
+.post .postmeta li.all a {
+	color: #003366;
+}
+.post .postmeta li.all a:hover {
+	color: #000000;
+}
+.post .postmeta li.comments a {
+	background: url(./images/bullets/comment_icon.gif) no-repeat;
+	padding-left: 20px;
+	color: #003366;
+	background-position: 0px 0px;
+}
+.post .postmeta li.comments a:hover {
+	color: #000000;
+	background-position: 0px -16px;
+}
+
+
+
+
+.post p.postmetadata {
+	padding: 10px 10px 0px 10px;
+	border-top: 1px solid #CCCCCC;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+
+
+/* STUPID FORMS */
+form input, textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#sidebar form {
+	margin: 0px;
+	padding: 0px 0px 3px 0px;
+	display: block;
+	overflow: auto;
+}
+#sidebar form #s {
+	margin: 0px;
+	padding: 0px;
+	width: 110px;
+	float: left;
+}
+#sidebar form #searchsubmit {
+	margin: 0px 0px 0px 7px;
+	padding: 0px;
+	height: 20px;
+	width: 50px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+#commentform {
+	margin: 0px;
+}
+#commentform .text {
+	width: 160px;
+}
+#commentform #comment {
+	width: 500px;
+	height: 160px;
+	padding: 2px;
+	font-size: 12px;
+}
+/*
+MTsix theme for WordPress 1.5
+Copyright (C) 2005 Oliver Zheng (mtsix.com)
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+*/
+
+/* An ever loving smiling red fruit. */
+_9http://www.lifehack.org/wp-content/themes/mtsix/style.cssXtext/cssÔ_WebResourceTextEncodingNameUutf-8O
+<!--
+/////////////////////////////////////// START FUNCTIONS ///////////////////////////////////////////
+function cs_isExternalLink(url){
+  if(!url){ return false; }
+  if(typeof(url) != 'string'){ return true; }
+  url = url.toLowerCase();
+
+  /* what else is missing from the protocol list below? */
+  if(url.indexOf('https://') == 0){ url = url.substring(8); }
+  else if(url.indexOf('http://') == 0){ url = url.substring(7); }
+  else if(url.indexOf('ftp://') == 0){ url = url.substring(6); }
+  else if(url.indexOf('ssl://') == 0){ url = url.substring(6); }
+  else if(url.indexOf('mailto:') == 0){ return true; }
+  else{ return false; }
+
+  if(url.indexOf('www.') == 0){ url = url.substring(4); }
+  var hn = document.location.hostname.toLowerCase();
+  if(hn.indexOf('www.') == 0){ hn = hn.substring(4); }
+
+  if(url.indexOf(hn) != 0){ return true; }
+  return false;
+}
+function cs_getParentClickable(obj, flag){
+  for(var j=0; j<=5; j++){
+    if(flag == 1){ if(obj && obj.nodeName.toUpperCase() == 'A'){ return obj; } } //look for <A> tag
+    if(flag == 2){ if(obj && obj.nodeName.toUpperCase() != 'BODY' && obj.onclick){ return obj; } } //look onclick tag
+    obj = obj.parentNode;
+  }
+  return null;
+}
+function cs_context_click(e){//right click on link
+  var tg = null;
+  if(e){ tg = e.target; }
+  else{ tg = window.event.srcElement; }
+  cs_do_track(tg, false);
+}
+function cs_on_click(e){//left click
+  var tg = null;
+  if(e){ tg = e.target; }
+  else{ tg = window.event.srcElement; }
+  cs_do_track(tg, true);
+}
+function cs_do_track(tg, delay){
+  var url = null;
+  var text = null;
+  try{
+    if(tg){
+      tgP = cs_getParentClickable(tg, 1);
+      if(tgP && tgP.nodeName.toUpperCase() == 'A'){ tg = tgP; }
+
+      if(tg.nodeName.toUpperCase() == 'A'){//A tag - most popular case
+        url = tg.href;
+        if(tg.innerHTML){ text = tg.innerHTML; } //most browsers
+        else if(tg.innerText){ text = tg.innerText; } //ie only
+        else if(tg.text){ text = tg.text; } //mozilla only
+        else{}
+      }else if(tg.nodeName.toUpperCase() == 'INPUT' && tg.type.toUpperCase() == 'SUBMIT'){//form submit button
+        url = tg.form.action;
+        text = tg.value;
+      }else{
+       /* this eliminates all other onclick events */
+
+      }
+      if(url == null || text == null){ return true; } //both url and text must not be NULL 
+
+      if(cs_isExternalLink(url)){
+        if(cs_mbl_isAOL_V8 && (tg.target == '_new' || tg.target == '_blank')){ return true; }
+        url = escape(url);
+        text = escape(text);
+        cs_track_oc(text, url, delay);
+      }
+    }
+  }catch(err){ }
+}
+// THIS FUNCTION TRACKS EXTERNAL URL CLICKS //
+function cs_track_oc(text, url, delay){      
+  try{
+    var now = new Date();
+    var trackURL = cs_url_trker + '?t=2&u=' + url + '&te=' + text + '&i=' + cs_mblID + '&now=' + now.valueOf(); 
+    var x = new Image();
+    x.src = trackURL;
+    if(delay){ cs_pause(900); }
+  }catch(err){ }
+}
+
+// THIS FUNCTION RECORDS APACHE-LIKE LOG INFO ON EVERY PAGE LOAD //
+function cs_track_onload(){
+  try{
+    url = escape(document.location.href);
+    var trackURL = cs_url_trker + '?i=' + cs_mblID + '&t=1&u=' + url + '&a=' + escape(navigator.userAgent);
+    var x = new Image();
+    x.src = trackURL;
+  }catch(err){ }
+}
+function cs_pause(numberMillis) {
+  var now = new Date();
+  var exitTime = now.getTime() + numberMillis;
+  while(true){
+    now = new Date();
+    if(now.getTime() > exitTime){ return; }
+  }
+}
+
+/////////////////////////////////////// END FUNCTIONS ///////////////////////////////////////////
+var cs_mbl_isAOL_V8 = false;
+if(navigator.userAgent.indexOf('AOL 8.0') > 0){ cs_mbl_isAOL_V8 = true; }
+
+var cs_mblID = '2005051505404390';
+var cs_url_trker = 'http://track.mybloglog.com/tr/urltrk.php';
+if(document.body){//if the script is inside the body tag - which it should be
+  document.body.onclick = cs_on_click;
+  document.body.oncontextmenu = cs_context_click;
+}else if(document){//script is outside the body tag - works in some browsers
+  document.onclick = cs_on_click;
+  document.oncontextmenu = cs_context_click;  
+}else{}
+cs_track_onload();
+
+// -->
+_4http://track.mybloglog.com/js?mblID=2005051505404390Ytext/htmlÔO&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓOMê‰PNG
+
+   IHDR   È   ‰   æ>à     IDATxœì½yÔ%ÇU'ø»‘™oïÛ×ÚKµ¨ª´ZZ°lÉò†MaÜ {cz8}Àg¦ghšñ hŸ>fÚ4¦››­l©Ûd—,KB%Y›KUªRU©ê«¯¾}}{fÆ?bÉxïå÷U•$PYaù«x‘7nFFÜ¸÷woDFÒı÷ßÃ7  Kœ÷Lx0IJÉÌB"†QøèLRJ Ììy[Ç±çyqÛê*13 À-KRE¾ßqCŸTˆcéy"¥2À ™[§\ñ)Ã……… †‡‡UÉÚÚ !D±X4ãV«Õ¾¾>!Ò»±ÙŒr¹Q¨V«óóó»víR?gff Q¥RÉçóQ>}ºÙlŒŒ ğ<†!€Õ&ıÕÉL»%>è…[¤ªÿÍo|mxpÌ/×kõráô¹£ƒ•¾¾~ö‚m“ãŠæ©'ëˆcÎ<ºe{>›Qå‡¿şw{öœŸ.åØ¹uL•Ÿ8ñ²ùy?E~nëä¸™WOŸ$/—ÉÉbrBó?õÊ©¹ùÙ‚Ÿé·j+õV©X(eëöè–mY_ X¸pnµŞj¶eÿ@¥º8Q°wßşŒŸŞqWpZXXxá…¤”ããã‡ğÜsÏÕjµÉÉÉññq O=õT¥RYZZÚ¾};€™Ú2À±”D4Yª×£/}éøşàŞ••æ¶m ÌüÄOÄq¼uëVu—Ã‡ÏÍÍ	!>ò‘ø¾âÄ‰¹¹¹b±øÜsÏİzë­ù|Ş'"¥Z!-ÎsTCm4â~­‚ [)§ÏÎ´„·¶<Çì=ztdlüÆ[n³Š¤Ü?˜¨Ç|ê•“¥Á±\&  °ïù³ss`„‘dÑ²ôGd§¦§2ùJÔ¨	!¶NŒ©kRòÚò\$üŒçMŒkADToµÚåRyy½VÎúKKËëf†s³a;·lß®8K–…Bşô«'Ûq´×—êb²Ş
+Ê¹ïúHşKRJ"*‹aª	‚ —Ë)®Jˆ¨¯¯¯V«©Ÿ¥õ˜9YJ.:µT=}ü¯ş¢Iºıö-+&KKKŠ93ïØ±cttÔó<ffæ«®ºŠ™§§§oºé¦\.ÇÌôÀ(îÌøæKq½Å·ìƒå”‰ÎÌŠiºƒ±C—œRYmÆ_€h32f[õ†Ê…Ìe´æJI­VkjjÊó¼mÛ¶)aªV«Ììû~>ŸW4kkkkkk[¶lIíÃéÇ¾=úõ¯>'FŠ·ß¼ı7˜Êf³Šfuuµ¯¯¯Ùl‘*”R...*;€†o¹‡ˆXA‚„ 	 jèˆÈ bõmkZ]D CeD ˜@  –`†”Ì’ôÔaˆÎ_éâä¯ +
+	"OP HEÕZÕ(b-ä°j¥Îk5•Ôo	ÀÒ–):fb°”ÜeËˆ;.!¹‰º'H1‘ “ ÉdcsgÓ¤îÄÌîì´-î"WM`>´uh(ëg²YÁ’=ß#Õ[ğ|OÍzÍ‚8Œ¼L@€”Òó<€¤ŒUóâ(Êæò <Ï…Ã=sz(»ÕÑ,÷£l	Dä	>„ ²œ‰‰	DÌÒJL€8¹»mNÒ*aeÊô¾dKÄ1dœ4F	ˆH=(A(Q#F°<-PåÊø¯hˆ¡ HHËw›B3Àœˆ‰Êj
+03$s(9â8I²!¶2’°&@2ÿàPåÃ•| ŸlSÕÛ9"=C”¤‰?ZiüİjƒŒÜiÃ?hEQ«µ&™|±Y«¹œ Qéï³½Ûj·Â(bÚ­0’Ù¬ßnË ãsƒ%‹@gE€„ç©áOÌîB¬ÕÕRN¦—½JƒïúçBÀóHxäy¤$FÛÁò#­  Iæ&¬‡  ¬eÁh |˜2‚ŒÁPª„ÉJ’RWBı	yFr)±#È"ë{™dúÂÑRZ¡I„Áj)Ç¬%O;·‰¨13+Áj†²EKÉ0jËh/ÛûŒÑfã?7©Şèÿğ}Ù=»7©h~qñ‹âşÈ#6"S)œ^şÓÿe³÷—'jAfÎ33Ì2f–ªíÉ\FÇ|7åZG)•FßAYßËú'„P
+Dwˆ6A+“ Õ.Áˆí,f0³OäyDì	ò|ò|²BbJI’/"ÓtAÊà)=b	•<±j–0œdc–ˆ%+íÄRI­ ){F‚ˆ„ÒIB?¹²ĞJ	m(É#ò<áûÂ#¡DÍÕ”Š/%l‹˜36M2ˆuß%
+ŒUM¥2€'™¥<§ËVÅV=^^-½÷ŞÉ_şß‰(\Y]öYW	e''Šû÷hşà=ï,íß§ÊkÇ·.Ì8€Ê7ø}}ŠyØn/}áOŠ™z¶¤úÔİYF2c)c†,ıxfÖ“2jP´!•Ä H¥ˆ<…J<V¸F+q2W1 ”éQM “€ˆ•¨)ñ†/	ò<x	!„`İƒ²ˆ„±¯df‚„r>id¥%A 1$z•ğT^QıìÚò	­³ ”0ªO+-ƒÇH$„G	 œÑO¦wô¼";ÁŒÕ³2áI0 ºK>‚b&°OˆL?Û?¤g­Ë¨Şà±1U}éÔé'ÿ¯ßTÑ '®ı±¾{ß^ Ø¹Ã¶òÔ×¾şÒ_~IEd²™;?óÿôW*ú¡¶LFõ3È€ÆvV€5JÔò¤1®ÒÊ‚°×ô€<‚4}ª°®êÑ Äj.±éU’‚‰˜c¥Cb°`m	`4–°ˆF¥,´L°+"‚$òªs¡…ªK])]&XÃ0-xìA†ü ˆAÒªheòXá+¡¦•,¹(ÁBhPæJ¢Uğ¬{UMPVÍdHöj³‚Ö,4 ·r¢ ˆÁLB0	X¬†ŠµR6³š<H€!›-EªA£7^ÿÁ¯şn€×¶UJi= û~î“{~æ0É¥À±ŒmR> xjF$„ fbIóv06Du¶[¤oR²"´â"2Îk $@cfV~1˜’uï+é ÁNfAğt+-Å¶%×ÛR2°-™	¤Æ‡	ÄD¹è˜i;ÀèáVd” ¥WTjæ˜Q'3—lª+zÒÁdm4=pß•´s©µ5Û¶jÖ’‚–Õ!¨é&YÖZÜ»„É½Ö”±4® D_ş2Z-ÿÃæsçÂ/~QÎÎz×]üØ¡P Àa,k-0«g«“Ô,#¨Ùhm³%v»Ùşefb$“‚ô&3JI‚êqiš­¬–ıÉI†õxwö¥¯ÌÛ®şÂP!C$Œ/Úİİv¹ç‚yN—°ÃKtúÕàw–pšL­ÄŒûœÀ7âAB¯Ğ™•~²ŠÇ}|âD‚tßK$e&ô@eì	vÏ6¢®ÇGò¤¬{Ã(hãp\kq¡Ñh}úÓŞwz×_Ï‹‹Şu×¹]@j–kĞJñ‹/6>şq±w¯8t¨öÎwbuårø¹Ïµ?ÿùâßı‹IYo¥m‚œĞ:Å˜-rÛéÌP'qÏ/f2¬t;“ÉN$	–ô)-¡,˜N&@šÖÁWL'r^cæB†Ã£k+³+Ë‹#ã“‚„”±çùj¹°İn	Ïã¨İj•*}­fƒˆr…R£^õü€ˆ¤”RÆÙl~ia6_,åò…F½¦º —+¬¯-ç
+EÅqTªôÇQæjuÕóüv«982`me©V]S·S G‚Òf”Pª_g@$ˆ¥„Î0Ãáp9¬&¶ìXZœ“q¼gïn3@ì‡ÒıÄé+ÙÒfIGÅB†DÊcÇhr2zøaïmo×^Û1¬İˆøÉ'Û¿şëÑ7¾Áµ€öoş&VVòõWş=÷4áÂÿüŸ£‡ö?üa†”5Ä€Qº`!6“-i¥s/Ç i­LG~H«o­C­Nôô=LãÇÆ`(r_›X”,<_2ÇR‚¨İjEQ´´0[®ôÇqÔ70¼4?KÂ+•+C#ëë+q,W–æó…¢ğ¼v«504²¼8¯2…r˜××ÖÖW—ÁÜÌ43BDQ(<Ïókµêz³Q(Û}ıƒÂúÚÊòâ¤T8-yÀƒ)·–©çÕÓ®3s¹¬FÆ¶6ëõf³Ñ96¸SŞ´ ü^Éçä#âúëÅÜlZ“çÈ–d–¼º*ÅÕWËo İpC09é½÷½,mİ
+€óyf–±Á˜ÚVkEb<2ÑÛ1ì°*`ƒ­3cİ5-ö	~T³Å”­è1XÙ¬ "ßÀ…xßî¾0ó1:Ğ¶ó¹\!#ÿêQÓb´·d3ÑÇ†Ê €A RJ½H¾½Øn·Jz½İîwË›«Õ`lÈËŒ0Ub Ã}Ûe¼…Á‚„šÖD:cÄ&j""i2©rs¹¬2¤œY4.¬,01ÊäÕÿ¬"õ`ÎfåÚš¨T@ÄÏ<ÃQıÑyşpü·ëÿğGög2W`fqï½ù{ïåÅÅúÎ`~îç DO<ÑşÅ_”ßş¶÷c?æ½ë]Jİª¸Ÿ kç!„#^:ÈJP‚É¬¦Rwà±Lõä‹{XQ˜ieô¥Rqä
+³Ñ‚Ì¾†,ç­Ïù×k> ¢X´êˆcn!S.6W«Â÷€C °ŞjUë…Á¾°Ñ$!êK«C»·Ö—×„2ŠP)É(ÎUŠQ;ëÍVµ.|/W)Õ§×*ãC‹§Îìİşíÿúª·¿mèª­DÈd	h)EÃÃƒx =zp$#j¶[Õ:y^k½Vâ8n®×³¥¼}Ğ¸5VÖŠÃÌÜ®ÖÛµFÿ¶ñæzMøPšÜ÷s•bFa£Ù^«!d¹\¹È¾ "Û[HÄ‡¡‚#[ÚÅ€d–qşÆoğò2ÏÍÅ?­[Û¿ñ™;£‡_xa(où>)Ùî8RwÑ?K%:tçÎÅ_ùJôØcâ®»bæH“0^ˆ!‰IûÑ²á”l#è.Í<©¤‹‰‰E²T¥$X²• ×*¬¦cGªLËt—o”8“­j}ùÜLÍ‚hpÇøÒ«âV¸õ¦õå5ÇÙb¾¹Zcæíã škÕv­ABDí°¶¸²>³˜)æe³d–2ÃÚÂ
+€8Œ dŠy…cÂF²ÍA·Hëİ¤Ø%°ùõSìç2^à7×kõåµæz-ß_–QÜ\«æûJåuÊãÃ¹J©¹VeÉÍµªšÕùåL!'Ÿ¥ô³™8+ëq;”±WÉtî³x–­<iw¬Ãî<€ˆ™YJ:p ~â	”J48ıÑ‰~0üÂ‚óoZ÷Ş›}òIùõÃ&VVá«V+üìgi|Üû‘	şÃû·áıPø¹ÏeŞşvÉ[±2N2IfıC{ôÒxüÆ$²¡•'JÃEëÆ¨_6tG XGÍÔ1úL/N¨g¶Ù3`¾ Œî›í‰~6P<*åB¾¿ \Üíg|%%q;ÌóèLa£5¹sÂÏ%»	X2]µ@»Şğ2¾Œ¥ç{wİ à¶}w¾¿’)dñ†¤áÊä®	•Ú‘jªŒeXofË….Ú¨ò®ÉÀ¹5K&A ¢f›A>ĞJMKKæ$~ ''²e¼*Ò‚KÉG{÷Òöíò/ş‚§¦¼_ú%ùë¿.3Úµ‹K%)e,¥VQê/QôÛ¿)q÷İ40 çæ@Ä™Œ”Òh,q’µö X[$ÌâX7ÈUVö),jÒ‘fK)™cÖ“D‰#†4ÓŠ))ÕÏQ
+gùæ¦œÍe3Ù¬kh²£êZ&cÖ³2ò¶?m‹ƒÀ
+¨Ñ¿ÆfAĞ»×fdç$3ly/ô6¬´f[eIì]Luå6ë–0rùl/+§©İ¬2™À²Rµ$3KDjO†‰´ÂèWr:€d‚ÕXBxüÇªƒ¼\éï¯ÿšïK_’RJfiKõfĞ'>Á¿şëáwĞÁƒüo ›¥ŸüIEA‡Ä‡ŒõnØ–°Z¶ƒ…	Fu¤c9=£PHr)¢˜|Æİ±²N¤‡%3HZ1M,iâYú®<»
+³+¬×Iƒ®‹ÔÍÄ‰ûR:3·<	zYF(¡³UN÷/¥æ_'«˜9f¥lÇRÊÄc3—]€¬j1›ëëqÎDîrÖâ¸¾¸Öêq? x>ğlÛ†õ¯0<Œ¿ú+šÂûŞG?ó3|ë­q7VV"½ÔdV˜Á’¤TËv:L	|2(ZOœDƒ%±¶¬½‹%‡QÀó<‘ w²Bå('VK8HÄ®µøìh=®±PßaÂvªô¨KlutøÇh;ÀH,Œm'i\ÁÆ'3¬¶‰\š›¾FVÌcJJ¥dµ$íYC’t›µ~ˆÁ§şü¿–î~ÇØ×Sêræ•3¯¾ğ[Ÿ™şûGnø?>•)—àÓŸ€ÙY¼÷½xï{âéé¥ã/Ÿø½ß÷ÁÄ±±½­MBÚ>Wnˆ$³`°Ù<§Œ´ú©æ/méTH01G3KOÊ7lÊ@H­È›•0¶ÂÇPÛ™Œ~M×Xä¤_íÑÄ©º¡Sw³í¼—½K7+·V[—ò²YIp#ÖÆJ‰ô¬†kL’ø ‰0Æ@nmıÉÿé£5Ñ¸‰€0 Z?}æá¿|0N£qS(b€YBÆz³4¡Û•f ú§Ş”ÉÆ_”è {¥:Aä Ôv¥Y%6**Qu	)”U´ıgL"áû‚ d•ëáR…áêzş†>Q9®Js4šnå„dA×‰÷v²r’£™æN3ôC¼nV’eºpX=$lbâÕ\~…h€1¨B|†ØÉtèÔ3;iÜéN^¢ÍHµ_AAf¡÷‡@+Õ
+ğ!Q3ÖşyÚ˜'B@;Q‡ÂÑ*I±‘V[9XÊQa‰¡sÕ™Ÿ	|0{/h%ë<^wq—NêºÜÅÎÅ`½©µº
+{H\J;TÉ°½nV ¡Ã¯jú’ÚJ*q$‹·´ëNõRåOöì¿yú\ íríëJª)mÏ;²}
+ÅŒğÔÚ¾qçÔ'œÇcW°ŒHH#dÌj\FÌB"„ÚlfÍ#&c…¡ÔZ…¹§3˜¥ÓÌ ¿”ñ™áµuÊ“;ãÙ ÙÖ3İ{g[Bì´ a555ôè©×ÕñßµTmˆ¹õ8fffÉ‰zvÆ/	áØ'ç8^
+[Ïõ÷u£u'Ñ¥‰>Oz” &@Ïo×3¯Bï°İwJvZ1’ı’X1V‹Ê’cVKÈ	99÷0A1¶Š™?ş±çóùf³ñğpˆvP ĞÏø>XzÂúØÌéÎK2Î>HL‰‹u¸Ù­f‘"˜ijjö«_}b£x+ı“M?÷‘P’ÿ÷W~©ëR~ÇÕÊ—'<!¨Ó.tÚ;·\_µ°×Jó×™qDN]ôL×ôÙûVú'¢(zúé§yc­†/„Ş(¦JÔ¿úFã‰ìÒá¨ÛBËÇà—!¦7ôõõ‹Å•••z½ŞÛÂƒ¾òÊ+­VË–
+…;wÎÎÎPo´©«™LfiiIå}ßÏd2F£T*­¯¯—J%!D©TŠ¢hnnˆŠÅbµZÜ¨
+ìOø§tÚáÜ®ËŠzÄorVQİ}÷İ‹‹‹]lUVe„³³WIƒêSİ³ÌLÄ=oeD¯ñ©¼v4´ÿÁ\UôJ˜:$ı—ù—ïºë®O}êSùÈG„ö@J¥âûşüÀÙ7-·mÛöÀlÙ²åöÛo?pàÀÏşìÏşôOÿôşıûxàïÿşïàn¿ıv ÙlöSŸúÔÁƒ?÷¹ÏÜÿıo{ÛÛ®¿şúAÉd®5¤zœ=y6’*·J/M¯Çàş½bXAğÌ3Ï¸Gl$UL°ÌW15Çİ´ÒÇ‰ŸÚ	Ì]Ê.sæÇJ}SMŸHªjĞƒ>†áç?ÿùãÇßqÇç½ôÒKwŞyçŸÿùŸ!>şñïß¿ÿãÿ8€øÃÿñ?şÇ£GªFöõõEQôøãÿèşèûoÿíË_şòoıÖo=şøãõz½\.ßtÓMFãíoûc=öÑ~ôÑGÿÅ_üÅßıİß}Ç;ŞñÄOt>oG³»&tªbK•®tE²ò<oddDEP»)õ{jƒ½LİÕ)Ñ›æz'´‹··¡µ.Üù·£İ¾ï7›Í-[¶T«Õ±±±çŸ¾R©ìŞ½›™ÿ÷_m İn‹E ¿ôK°Qİ¦P(¬¯¯«ûÍÏÏïİ»÷ùçŸï{ß{üøq¥?ùÉO>øàƒÌì²²Ñ¼ìè›TÙ(]‘¬?ÿ÷/ÖÏNMoLI>Ao­wµ‹u-»J6Éwú†Ü¤5è%nµZ?û³?[.—ï÷~ïCúĞüüüğğğäääéÓ§·nİÚl6¥”FCÿÙŸıÙ¯ıÚ¯İpÃ»víEQE ‚ øùŸÿùáááßùßQ”>úèûŞ÷¾o~ó›»wïVÂ0üô§?ı‰O|â³Ÿıl³ÙÜ¤ãŞJ›§/|½^ßqãù§ş>í¢Uïş¿Èq¼£èØº×{”aWÔørSwEf~ê©£ù—#õ
+Çqö¼®T,ëõúf^É[é»™~î·¿Ù}Cvö<ğ/~´ëRÿR¦Í@¬·dœ¬SĞYËbğMâªz²6â¬%ü6‡ö¥Í(Š6ò\”ÿxYxi¸!“É\ıõ—Âä­¤ÒúúúK/½K^oJŠµ=u›VğM@ÁS‡8)'o¬so6jjêÂâtã¿[²‹¤M$ïrÓ&¬FGG¿õ­o¹‹¤i¦És	6¿cWØ¢&¿yY>|øŞ{ï%Bà‘'R|L;À>%ãœmŠú×¶À—²³PWÕëê¥ó1   ıcX´:pÂyÌ.LÙÕ¿^pGJ	—[—Ûue°òe³¤Åi¼5òÍé$ ºEÇ¥FBÃö]T]Õ{Ö†;X©3À=qÀÏdd‘qY¹\Ôl&AU{'ó“:7§´™Eà¤ï»c·hs­y):õğ›‚E17ë²¦UdV/éûz`¨CZ»0–1ˆV‹r²ªŸ0T—´¢²s 38’ØS3s@Ëí{ßûÖ¦§wŞyç+<R"!òııËgÎäÃzıô£&ms²§Ä½ÔŸİ¨¿ìTvÍÒ¦ï¥§.‹óšùüÓdE„ŒO©Ç»’Q'êì]ÔK¤2Öê™Q/~·XÊ†µl2Ï`íc‡Ò"¨S°«TN>\Ù²%S,Î;ÖZ_·Z~®ãÑ.İƒå§p“¤u¶y¨p}]d2D$2–ríäIfîß¿ Çq}v6Ó×‹.‡•ãÇû÷ï¯NMeüB!uŞ×¦§ƒrYo½„ÔeªzÛ|‰|¾{¬ˆÈ”Íï¥1!Ò¾F²/ï:]í »y!5ÄĞÅ
+D1×ëG~8n·Áìg³Q»}·óu'—;3ËvûÈ¯üÊØí·gúúÚ««#7ß|ü¿üE>ùÉù§»ãgşí¿Íô÷ïüĞ‡jÓÓ[ßóßøÆĞu×½ğïÿı–»ïn¯®FÍæ¶÷¿õØ±ìà`¦¯oõÄ‰¾}ûÖOŸÎŸüâ÷}ìcƒÎÙ—Ô¼ÿ5¨™ï«(æf=®„@šòSêÂG2øî&÷Ô”z•Ò®&ÊÎ´	fÑZ`è€Z-a29âîH.îTm­MM->ûlP*ÕÎŸÍš÷‹Ÿıìö÷½ïìW¾RÙ³gğškæiÎÏ…Âì·¾•0ÿÌ3ÅÉÉş«¯~æWµ²wocffÛûŞwâ‹_ÜöŞ÷<xì÷äæ›qÉê¡k¥¥7>réjæ»Ç
+€ ÊøB™ÂG/úŒdóšQE–®«ÖïëtV³[×¶™;¶#«*p^ùÒÜc€ˆÆ¯½VÆ±ŸÍVggó2Šš++ë33•­[…ç5WW‡öìY9{¶<6Ö®ÕÚµš,eaddùÔ©æú:ºœÏ´ÉáJÇ ÏÛóã?ŞwÕU2/>ÜõÕ™¾>ãüèèâsÏm{ÿû_ùÓ?­MOOŞ}÷ìã{…ÂĞõ×ƒhë»ßíe2~±¸úòË×üË¹øÜsƒ‡EµÚØw&&*W]µåî»kçÏ+ì';$îÀ»~;.aìÿ±X	/İ‘0‡,©ÃA-Ì‚k¼LµtIïô›`¼ÂÍœ)ê&Ñ¬s•ÊØ¡C™RéÕÇ¿öÚşíÛçÜ½ûä×¾vÍ}÷­MOgËåµš++•ÉÉ]»–NŸ½úê/¼P[­Ö±c›ëX¸q6ù]·‚hì=ïQù«öíP:tHı¬Üx#€ı¿ğêç®ıûm­>“é¿õV Åƒİ[30ş¨|ê 7QRÛTˆ¢H6jq_ªW¨cÕ|¤h,XŒ¥üÁŞ0º½‡åqÊmäİKİfH¯`7×ÖÎ?ıôÊÙ³~6»|ú42½ ˆÛí§ÿğÃFC5·ÛÕÙÙWy„¥|õ±Çâv[x^†]Šª÷Y7;«Û…(¨#Îzækoáæ]O{Å°ê0…‚r¼TFŞ    IDATo ‚OÉh“«±>äJ7¯Ô0)jÌ"•fÑ}ÇÓ.¼ü2€°Ù´-ˆ£@kmf7>ÖêµªU˜Â„Oo;ÒR/Ùúúú“O>988¸wï^ Ùl¶^¯g³Ù\.×n·}ß¯µø©—Wl/	"OàÔLıº]•™å–ÖÂ¡JÏxÃ}™Å…ùr¹,¥TûWWW'&&Æ…êõú„Aœ>}zqq1›ÍîÛ·ïüùó¾ï?öØc{÷î	‚ ãF£±²²²uëÖùùù“'O^ıõù|>ã“'Of2™;vH)ƒ `æ8Ï=»sçÎ³gÏnÙ²%“É¨/ I)óù|Brµƒ;À½Á&l,”BP6C^ºWu¸ïøiçM,vÒ(ÛšÑTW»P”º}¢Éº–ŞMQ®¯/l4ÊÍÕÕÆÊŠµVJoÁPÿÖ­«SS¶>~.6›*ª
+]¥•ªÀ,s{÷r¹ÁÌÌÌñãÇ'&&šÍæÊÊÊÛŞö¶Ó§OW«ÕwŞ}w1çyyuj±9Ú—9·Ğ<¿Øš_mWÑÁí¥Ç._³£|÷õƒ_øÂvïŞEÑØØØÙ³ggffn¹å–;v<ôĞCcccGùà?xâÄ‰|>ßn·/\¸Ğjµ=ºk×® ÎŸ?øğá………k®¹¦ÙlîÜ¹óÄ‰a>ôĞC¾ï—Ëåùùù•••;vÔjµ8‹Åb£Ñ˜ı©Ÿú©ééé‡zHÉâşıûÆ»ßınkÂ\ápöJUoHÏ^Rm
+Û@ğÁ¬úÎ«sÔ9ön4ìø}© ŒœÈ;;rI]!{‚Ba×]w†‡}å+£_{íì‹/fËå°^/¯OOìÜyâk_;xpåìÙ[>ñ‰ùãÇeçûú2åruf&××·vşüèÁƒKgÎDÍæù#G\æİÍî)QéÆo$¢v»†a>Ÿ÷<oyy¹¿¿ëÖ­¾ï3ãº]å(æÙ•v6ßˆNL×ßÓ±ä[÷õ«9vÿı÷‹ÅÅÅÅááá-[¶ôõõÕëõÑÑÑO~ò“QÍÌÌ(}vçw.--©oµÛmõå#Õ€f³yÇwø¾?88Øn·ƒ BLOOß{ï½µZ-µÙZ5µP(´Z­©©©B¡pã7Õëõ|àsssıııÍfÓ
+V¯c˜q¸hBi¬\ ‚4EF |“Rån\À	S)]Ñ%ê,ìÀòÌ.Yó"PÒ­c¤d`ú™gwî¬ÎÌœo·…çÕËËíZ­¾¸¸ıöÛ«33­µµ‰nxõñÇs•Jyb¢6?¿tú´—É ¨//_xá…ÂÀ€ß×ÇfÖ¤:‰.xwQE¥Ré2¥R	Àää¤*,d="ê+êçø@Ö>I)§kMLLXVårÀĞĞ™¯Íªº¹\®Ïœán¿N£Jî¹çô¬}ûöQå}}}]dæJ¥R©TTÉ;6Yì2[¨8o.^BP&C~êwûŒ¿ç3'§gqòÒ¬X¸5(9é@	MªhóÜÃzô‰Ú@»Ù|á¡‡8õÓœê~Ùpş3Ÿ‰V½~â[ß <¥ì}x]¾a‡$É}±}#Ov#¨‘æí¦P^‘¬T^™B´“rÃ)ìŸuåÀ-‡gç" \š^?Ñ”÷òéØÅ¥øA z±#Şôƒ(êø¹ñæLœÔèÑXèÑ›8MnÚ¨zSpyó²‚òáP×+‹>›7^Ó®vÔ±Òzµ§ÖE
+µŒm€„Øvë­2e7––@”)[ëëÙryíüù]»ËËq»‡aun¸¥ôŞLjzÍkx“[mHùæe%eüd?\ÛjÎuö™;p9'kÌZÖ:½S¶àÉŒõ ’B£œl,>…•;K²årßöíA.7üøè¡C#ûö{ê©‘ıûóƒƒkçÏ÷oßŞZ[›ÍWş¾{“5wâ§Ô«Ø@İNYZZzõÕW}ßX]]^XX 0::º²²Òn·+•Êêê* )e¡PÃğå—_SşââbEõzİ÷ı£G^{íµëëëaîØ±ãùçŸ_ZZºé¦›¢(B<ùä“;vìj·Û§OŸ.
+ƒƒƒù|>—Ë5)eµZõ<oxx¸ÙlÆq,¥|ñÅ¯¾úêF£!„h4}}}ív@†“““gÎœÉårêû¼SSS«««»víò}¿ÕÒgsª£s¶mÛÖl6¿öµ¯•J¥C‡µZ­|>_*•æææòù|«ÕÊd2¾ï·Ûí8'''S…,Šd£S;Eò¬ğ‰õW`Ì8™`Ô…ºÒhºªwHºñÍÕÕsO>¹vş¼Œc0ÿÊW dŠEÂZ-Edz[°i¢˜”Ïç=:::úÕ¯~õĞ¡CO<ñÄ»Şõ®óçÏ¯¬¬¼ãï8|øp¡Pˆ¢HyXO?ıôÕW_İßßşüùW^yåĞ¡C[·n}úé§?¾}ûvõ=ÜãÇ8pà;ßùÎË/¿ü±}laaavvöóŸÿüwÜ±k×®L&ó­o}+—Ëù¾_©T92<<\©Tæçç=Ï›œœœššºùæ›Oœ8EQÇ/¿üòÍ7ßüĞC
+":{öìääd>ŸB,--İÿı<òHÇ¾ï‡aøö·¿ıÈ‘#kkkÏ>ûìşıûK¥ÒÊÊJ±X<vìØ‡>ô¡;w–Ëå(Š}öYõ9Ìr¹üì³Ï=ùä“·İvÛã?~Ûm·­¬¬Üwß}]ßçVÉägDà'€Áµ•Úyºç'¥ÜYmrôŒE÷Ğô„©ÒÉqŠ¯ûÌ3Çÿîo¾ù?W«›5¸Ñ3“é%¸ôB KÀ-—'·lyé¥—`>¾Éd”ÎÌ¹\@£Ñ¨T*õz=Š"Ïó”`Õëu¥Z­Öòò²ú‚m³ÙlµZê•ëV«Õn·Â0”Rf³ÙF£¡¾r†a±X\ZZªT*FCÉt†azçû¾z{»V«•J¥3gÎLLLd2™jµZ,[­–ïûAÔj5åKÆq¬^RêïïW/2©O»·Ûíl6E‘õ:›Í¦ú$¸º£Ruª=BˆL&£TiµZõ}Ÿ™óù|½^Wî§;‚ßøÆ7~ğğùôÃ™]×ççÿö3ÿÛÇººrû€„ö
+“ï‘™;m™«ÌtÔÔ¦¬YpÃWû®‘U9ÅÑÑv­Ö¿mÛÂ‰l0¸ˆ Ÿo7’ı{Å6ÕrÏÏ.‰¨1{×h4Êå²ZØQOÔh4ÔÏB¡ğê«¯nß¾]µWÅ ¨¨’Ê—J%›W¢©N<911Q*•O%¯ÃÃÃjDUH"p>Y¨úûûìÙ³GÕRKuÌE‘ïûıııŠÿ…&&&Ô·ŸsÎ®5ûâ¸M™L†ˆÔ˜Ù¶0›ÍªŒúÎÍÀÀ€­b"IíE²Şi
+m§ô)­~ÌRªÏ;²¾J ‹+f5&qñìOçöª¼CØŒÍaãfRò?-•¶ßv[y|ü¥¿ù›«î¾Då‰‰Ù_»æšÚìl®¿¿±¼LB¼üßÿ;6ĞIöç¥'ëÑÔÔÔ—¿üå±±±ååeyêïïß¶mÛ±cÇT‡‹E…lZúéŸşé?şã?‹ãX­ŞÜzë­>ú¨”R<‡††ÖÖÖVVV‚ PK:³³³Ùl¶R©´Z­ÕÕÕL&³mÛ¶ÕÕÕÕÕÕl6ûÃ?üÃ>ø Zğaf!Ä»Şõ®/}éK###j}Æó¼¥¥¥f³©Ùîİ»ÆôôôÂÂÂØØX.—Û½{÷={RTV>.%ÖàVÙÈ{³"ã§Ä)4€ûêP^îİØI)3<‰U$ ©ûî©q£_ÒÿÄí¶ÃSßøÆàîİ‹'OŠ X¿p!jµÎ9ÒX^Îõ÷‡õz t‰ËtãÌ&ùÔ466vóÍ7­­­e³Ùb±¨VKöíÛW¯×Ëår«Õ
+ÃpçÎ×\s€o¼QÙ"š™™»îºë˜yvv¶V«íİ»wfffxxXi—¡¡¡}ûö½øâ‹;vì¨×ëûöí\__ß½{÷…şáşˆÊåò®]»˜ùÜ¹s{÷îÍår×_½çyADQ$¥Ü²eK»İ|ä‘G2™L__ŸR™Û·o¯V«ÕjUÙAW Ü%Â®’KÉoÄŠˆD§Whî¢iü8–,“Hk—3hn —CWt‡Í.+Eå8ƒú*`«XGR9E@Ônçá‡àøñ”a¿páb‚qÙ‰ ‚[n¹=3{ppĞ>6îŞ­?È{ĞÙ$£Djÿşı öïß¯ªïÜ¹#ªêÚ°eË–›o¾À{Ì¾½{÷*‚«¯¾º««ÁOüÄO¨¼µÎ½
+©ûy7‘Tì«2›pÓ¦Ğy›¸Cÿ)¯°©)tDñ{Wœ {·İ5W“øªCÀ„–Ìˆğ}DàòRïj„]Ğè*é"KâH†^3qe°""ÏÅ¬Èø”ÂAC,ò«­™C)Õ'Q8Vz‰x¹	ÚéÚÓ%Ûf42‹ áy»îº‹ˆrııó/½6›q«åe³^xA@BôïØqúğáÖÚš•S×CìrİÂTr¾ïØ•Ü©Q°’šßˆò¢o"VDğ=rOë³ÉNM¿†ÄqÇ±Ê0c:Q¼}±“,oQztv9$-¶ŠÖò)s}}^&æ­·Şºzî\ap°U«õmİ:ûÂ¹şşÚü|ÿ¶m³ßùNòü]wBzÚ]©–/..nLòVêNÊS‰"Y¯Å"í`!H ğãX’Ù®®%vªÓD0ï‚Y;Ö~ÒÑÑTEØZ[›:r¤:3ã¾­ªÓ£rlÆSm”6
+k©4??ÿ®w½kãÚo¥îT,•),åD¦–¦±ü@xï³t5‰«cØœò  m=ÉÖttÆÜKİ…&oT.°65µ‘Ş»ÄäòåÎòTVDÇñ¹sç6±6Jç^…{İ0ŞFæ£·Ö›š "x"1…n-ò}€à›gÚK6×1i£C]%VÎLu÷R7«¥ <9ÉRú™LØlª•f•‚b±í¬êôMNÆQT››³R(<¯00P[Xè6äHIİRÛƒ¥R±m‡Ë“vi#»Q­7;+åZSè^õ<ŸÆÀ*¡;mhdºğ{‡pvœ¬o¯Â™&Æ‘@¶\Ş~ÛmíZ-n·'®»nùÌ™l¥æÖúzaxx}f¦21±vşüÜ±cc‡5VVvßuWunnğª«ÂZ­İhäÎ=ñ„Ú5N©J•0²İáz=oÏutÄÅÂ<›W¹ÂXy(åE¶¦æ3ûæ«wéNĞ&©S¥]äªu6Sø a£ÑXYY;^FÑÒ+¯ßÏ‚9[©\xî¹ÖÚZÿå‰‰åÓ§ãv;S,.¾ü²‚úÒRm~>?8(Ã°±¼l¹Ù¿Ø4ÎÛüñ/:¿7Î+ŒÜ/™¸d‚@ ø,á~‰®3" «u‚' ñøHŞIéV!$ç+S—b "â(êŞÓ¹‰´¶´„oÀêùó¶På×gg/¥ãz¥uùåÎ®M*^Á¬”)ôÒ¼Bõ™mbò;- h¢ÎÏÊ¹"âºuV\:7‰é|UÚH’m¥vºTU'/y;èkN¯¹—¿Ç“ï‰lŞ³¦ĞM$ÌÛS€ùÜSdr}„Ä¶FÖst0“}=±ƒR³Kj±Q`ÄúKéÄ€çû{î½WÆqX¯çûûNÜıÎw9|xîØ1Wî7L½AÑKIÔ{ÀWÚVÄ7*½ÿñYˆ6Ğ &n€£\£lr®õu‘]¢ºzmy/Æ"¢.15DÏ{AĞ®Õ2Åbn` Èç›++•-[OŠoRt4%­6\¥WìÄ¶¤7$}é`¥+õÂ¸+€UlLaÏ “™®ä+`ÇÒB¥®ef·Z3²Õ³>èâ3¸<¼”(4××Ï=õT}a!6/ML?ûlBçÖÙøiíUîÌ£§0yœÎŸ©ùJ.1]‘¬<_”ó^.õ<
+‚ I°¯ÆÚÔÃ<å^<:hÜ@C×ÕN@ö2Õ™ôè•®€;:uR¯¢ò©¬ğ:æ­„+w«®öÍ—]E•›BŒlÜpŞìé\Ééò-¥¦õ'#İ¿c±”ë332…ïË(" ûöµ©)µ~xÿş¸İ^›Ã°4:Ú\]ÃPšCAº¤­K’zícâ§8)Õ"¤†ã7!¸âYÅ×ëq¥8ÖJQÀ'°–jÍç^ñ H–‚Äe¬¤(v]ÙMâ|çÑê0š^Ò´ÙJeûm·©m¢ûŞÿşÖÚZP(a­GQîŞ{×/\˜{é¥á½{G¼ğüó•‰	)e»Z­lÙòäç>§wØ´U)L¦6 ·ğ
+fåùT)xÙFG¡©(”vñÁ„—fVÎ¬(wĞj³4=ı½öNÒ?Ì?L°ÿS]gIÂZÙ]¹Xõ‰ ´kµå3gÖgfXÊ¥S§ªssB/—# S.‘ŸË-½òJuvöÜ“Oú¹\mnnåìÙ P #GTT"§j/Wc%ú¬§ÓİŸYÌ€A
+ñ•ÇŠ¹±:”   _BšïÆ °ù5Ô¯ä‹İ“q²K:ª„‚VŸ-VëÜD “s&)ëM¥6qŸ}òÉ^[Öe¿ÚÕj»Ze`åìY÷ù;0øB–®½ŞÂX¯)Å×q¥b,’f’€dH&fR_ ¶òÈ€ş°bú#ÓJ–ô7®“oN«ËjhUJÁ+¥:¾{Ã¿KÂÒP6‹T±KÈ.‘Õ[é²’2…¹Ô³bÍ7©õëˆLDV,ˆÔ¼—Ì¤>A§äC‰„1&º².b0%»i¬©ášÄª$Ò‘w/“Ùÿş÷g+ ‹'N´ªÕ-7ß<óüó¥ÑÑõXÊ/¼àµgI—§‹šBŞ/+Š³9ˆù^`F×8	™éauT1³RAL,•>ÚÁ³2€Ä°Æê?VB©U›r2:`ûssÔQDs/½$ãØÏå*[¶4––d5VVÊ}Û¶]:OM©Ë€=¿df¯¯\I¬â˜«ÙŠz© – Yè§¡ 3$,<®õ I-²lğ›¥2Ø	š‘Ë³®í–ÌDp·‘2ĞªVO}ıë­juÊ93M¥L±Ø¥p1#Èi…©µ6ïnë*öw¦î9¹‚YiSØ€W—Ô¤€¾e±”"cÕ¤ò÷`‹\«Æ0‚¤…É¾Kh² $Ãèh8ÕÕ^HÄÎÙ›5N#èŠc¥ø›Ä©®¢{)õç&ôW+c
+»˜XÀ ?ˆA¦ŸÍx(Î*õÖ˜4Şf2ÈIq„®ë4G+«®”A,AÂaïÛ—)£V«¹²Ò®×‰¨0<¼xâDÊ3;yUw#Œçé|^ìxm”W «Újk}¡9YO­BJçğ0³ĞA,§´¸hídÃWLZÈ”ä©8‚‚ÂF“Y#i5—ª®+“Ğ×tCr}}[n¾YFÑğ=k.4––ÂFcüÚkıwÿ®c­Ñ4µK!¥Ê‚×Ÿ.£\”ò
+`UÂò¹W¿ãª”'b	‚„ş„*ì  ‚56’ á»zá91c
+”–LZyh{)”XY°*ÔÎ€Q¤´Ö×g_|qéôé“¾5›Ù¾¾ÖêêÔSO¹ iºó×–¤Æ,hÛA›k¬&q/(¹(šÙäoFVÿìûÿÏÍÎÎşßi§8&ø˜ ö“ 1à1$“pÌ£Á÷|)bb­¡˜ŒW?5º2^* ´-¤v € )å…çŸ·Ã¯Î–	ÍÆ{‘{rÚHc¹Zí¢º­7m4)QÁ‹¡™K¿Å›‚™Ow÷^RZÃßÀkR_‰`C¤ƒ	ÎÀ(½£¬Ÿ:+ #¨)I‡&tÖù”ö 2ù¼ŸÏ!õ·Pğ2™ PP^¡Bx^P(d‹EûH—.%Ü)dnm]7‰Ş1ëıÛKyÅ°ÚˆfÇz)Hw5ú‰q$ ÎQ¡y±1ƒ’–L’XEÑaƒÚÌİµöÓZ6ü\îÿú_Ï;}ø°Œ"Ç£,81{ôè¶[oıÎ—¾´ı¶ÛJããa½)_úò—»vÿmÖAi…]yéši£«oxÃe+UÚ ?A°¶uR¬“-¤••fÒ²fbbÁZÚ¬,)DevĞ)UòLD€Œã#ÿé?•'&Hò<æk×j2Šf^xÌ~.·òê«$ÄâÉ“Q«µy—¸W7Ãõ=[“_[J‚ß³¬X'û˜t>fxDÌ,M	3˜CzõZ¾ö¢W²¥1Ib¡(´ù4#HNÂ´ˆ8ÎœY8s&¥¥³³ ^î9Ööu&kˆßnoŸ7«Ë¨ñ5|ôÑ+Ê4jt€¡e‹@	Š, 'kéÖP¡u-[Ì¬÷ÏÀî`6€JE6tÓVŞ¨§¿œÔêÔXäx7]³ÓõwĞC¿åFµ®VH•*"&á1¤ú––*8n„ÅS›,ÒRZÁê;Ò,0³Ñ[0gPg11xl”šŠ:h¦BÒéÆ9uUõuvåùb¬ººÆæ7‚ó-Ù„ç÷+f	¯´—pš±çÄ>31qò 	 Tj $ `à<	a´«`„v,9¬I$ë^"lê"ë­»e
+]$µyêİ8°y¬h“«o^VîO7°DÌ¾0ëvlÎz„†è¤L¤ H&b‚`†b3<µ¤õP"£Ö¨=-NFS™ØWsÕWq©ßwC“»0¿I t“!éÕp—îE^Á¬ÔTWá;oÉv¦òàL¤q½òÁl‚ /æ¬7%3
+f‘$µÎÇ ÒÒ”äd+÷À>›ì+ÑêØVÛí°‰äy2{Ma÷“;…ÂÁX¯-ÜğVJMl‚à¾5æ|l°›09k\/L Ki8Á 1yÉ
+£^ÎQËƒæ½UFkIêüÊ~.wè¾ûª33,eØl‡‡WÎ¼êª¸İ^ŸØµkñäÉ;ÛÕjcuUø~¾¿?j6k‹‹ù¾>Âó¢V+S(4××ç­/,`SØ[HİGt€ÜTZj8Ğ#W+·÷z®Jf°¯õ•]7«³B‘ì‹ĞÂ$íÚŸ£T4L˜˜‚Úè®†+q5à¹K{`@Æñ©GÚ³§¹ºZ_Zj,-•''ë‹‹Í••°ÑX9{6S*ù¹ÜâÉ“a³™-—«ssåå;Ãz½:?Ÿ«TÈó–_}@®RQgem¢±º4ûFht#Z~‰†ãJb•Z…ãˆI0›İ r†‚íV<Ö0ŸÈD¤:r˜ô
+"²kìØ9»ÉAÕ"†$µ^¨WGëìÙ÷	ç¸Q ^&ÃQ$eÇ™´³i›j.1%-ëñŸ/
+ZİÀDêÌş^`eS7«8fH	øÂŠˆÙp`å¤G_?=é9fx£°4
+ |ZwÔ ŠÌÊ4 @GçUkT DD—t÷o¾ædÚŸtMå›\–Â¸òX!‰ˆ˜}³%ÁŠ‘òÖ@äF5-S uôK…¤Ôò"!<S	Í‰AB¿È5D\uÏ=Ë§O‡ÆĞ=³/¾æ¾íÛeGFæÚ³gáÄ‰­7İ4uäˆŒ"?›­-,DÍ¦}Â®¨Õ&…*É´½Äôšø+†•Í÷’	hïÊ`,q “ÑÓY))6/ÇëjÖê	°$X ’ AÂ53H±[$(FmÏË‹‡î»ïìOä®ºçşíÛ§¿ıíÚü|Ôhì~ç;…ïgŠÅ]»rııq»½tú´UÉ§öÂ%öåå¤ÍGè²„õÊc•ó…²Q>A¯ˆ‰H×³U‡„Z´Ù¿nvgÁ„ÎM†@, &AI¬J*':È¥CeJGÍæ‰¯~õ¥¿şkáûÌ¬–¢£fSÅÎıÃ?xÙ,ÇñÉ¯}M~É0„£Rë›½® é[	iB–¤Oê‹D !H° »jøÍvOb6Ò`_LµÚ‹-™‘²*wê››RET-ĞiU« âÎSüì¡~qç7¡É¨"îÌcÓBtæÉ¼W˜º(æ"úÍ	6OW<«îŠ „T‚¥„`OPrfìÔWçÔ.,e×˜ 4ĞÒ±	‡·0vÒ¼Í“OIzÿ fcZƒ¾­[«óó[bˆ‚|^ÆqÜj1P	òùêÜœ—É¨#nkæ£´rrgS*íÄ”êŒo¥:M.}—ÕU÷
+cÕÛuöª¢ ‚o
+	Âó@P¯ß›dÖ«Ì$u}@Y=Š¥Š kUFÑÆ5TMPL¨—í÷UÔõüÀ@qd¤ÇâÈHmn®4> n·û¶m‹Ûí°Vk®­­MO“Û¾ïûÂF£08X_Z*-:uúğá®ÓJ{eh£©w‰`b#§iâ‹úYovV]dIôæNŸŒºb!H/ÀØ9MI ÂlA÷¢
+99…½¬çHÂy–ˆ˜U<ËFêuj®®ú¹\m~¾¾´äAxú4	ÑXYY<q¢8:ºröìĞUW-Ÿ9ãg³A>ÖëQ³¹rîÜÚôt}aÁı«M›X@›é5…—b^ƒ°U®TVİœ’à;r  ™IDATR¢%¤³$ 6T@ˆÔv+µfH€)“ØÆ¬X‡&Ô~T¡‹ÕJ‘ú`´S @Ê?ŞÌãÇÌpñµ¾İ•”0öÎãÍ'ë&4›§ËÒo"V½”jTÙ,Bô+u.Å,…Ô©ÑAvi¶Í=§õàìÀbÃ×R¨â^ÊP*…ñ²»¡·¼Â7 õ
+–³Vh½3mĞˆb")˜¥~Å’/ë%Â^8Ì~‘´oz+³KÉ¬÷HhJ¢àÁ®w¼ƒ¥\>sÆËfeîŞ·ÛkçÏ3sÔl¶kµúÒ’µ¿îízá”{Õ%v¿ëGÈO'f†¯vÛ©…cè¸Ic	É[I= J{±±ƒºD…H½Ì#ÍÇT$à™w¢Ù„À’¥F€<oüÚk—_}uï{ŞÖë«SSƒ»vUçæ¶ÜtÓÙÇŞ»·¹ºúâƒ^
+rêºÚûÓ&g.½•Ş°¤G•È‡–2gÆ¨ÿkÃ&5‡ıä¥ÚcœEP C:€)ôùJ·©Ìú¨#ËI„Q³ùèg>£4§BîPÎ<öm ™Ü•ë ¦æ{ŞkÀ%o%7¥w  ß½dÁ2ƒaÃãZoÅ:è‹NBït×—ÌA‘0—>a&ÙËÅ S*Üù«Ÿ|ãŸøbiamõñ‡Ÿ—›ª¬ÔİH]ù‹ş¼t¶o"V6ßë2»£È7±2š­»ˆY)³í›ëÍ?Ê2j<f‚Æì)xå4 Pº-(ä¾ÿıÛDã ë«ĞÎz
+É> ã6kÖ—Âjjê<ıoômèî^ÛÄs¼\—ê
+f¥ÂU t“”í3ôJÎTu2¦Qï¬p™Sş’@YïPKÑ¤m€ŞFÜI¡;¢¸Í}çTs¥ÚZ«EVsµ6÷â©vµ!ÃHG9lCÈ>—Ûphìç3ºjQ/«Í;´·p£>İ<yå±ºøU6[“MLÀ–'I›¨PBe4ë¼3U›dLxTÇ$‘02g·O ­œ~õğ·Gí^<q®<1²õ¥Õ-·ô:to‡rJnË@ÇÇ…»Uj$i=ş–l]–l¥Ju,‘Ÿào‡¡±Xùç1È3«:èòÎœ¡4 l±½fHŒÖ²VküÆıo»ZøbøÀ® m­Õrıe§ÑJQßÜ¥¢«V'«Íúº+m´—²Óì~Ï±JƒeÄL á[×½”«B›öLGaMM¤CèNã&lùt\wÌ[#	
+sK×lJdòíz õ´#T;“Ôß_0pJ=°‹Ì`Şl³ËQİırÑtÉóõ{”•C ÃÎê´ağpÔØî…EólçÓôö$—æ-1'L¤¸šÅ ¿0_^m·ı¡¡»ìùD—›Ö×€Sî¤°Mî2}VcÓÎê5š›”oD|³º¸œÁœóN`– O_è ;fM3·ru“63É‘·êrÏ‘h5­H<OT*Ïó:h6v€m¡zH)íW]˜úìäNŸ‹É–{ßÍİõÔ¶¹Óı¢Ïò¦cÕUn·åÀÈ„&î(B°dƒŒcvÙ|°Ş]ÉF.[%AÌúÖ©÷×“uâĞ;WÜ’ækOSx-âä]8691ø—b(zmÁ%Ú—.²×cªşi²J­”Ø¯ØÇv‡±‰˜»˜[‚„Y„VAS6r&ÇPI-`O0yï²–á5Á÷ã••g/¸)ŠZAàÎ	vçÒ¦=óïøVR)µU+SÈl-"W)q¸Õ~“H<´¾"óö¬ĞjÑ¢|s©©ÆæÒo¶’çñú…—ıLê³ê„q»İ^¯ç‡ú7~4È÷­Æ‚cíìEZI§tuÍF6÷¢"ØKsÅ³Bº`)ˆ¤^Xe¶²ÖV±!" àğÔF@ê‘bÑÉJ"TfÕÙ„Q“İ0?Í;XÜX®Öç–£vØxê(™RŞÏgûwLœ}ì9á‰ıÿì.çñŒÜxÅ%±ÀIék_Ğè*ì
+‰¹…›°í"¾bXY†*£ûbŸôØ«cbŒ— -`ÄLÒJ™Umí'½ôÓ¡Ş¦wğAÌÈV
+Q+ÌVXr~°Ò^«õmÍÒøP®¿ì´Ûr1ZÏÉ;÷0ï9Ï¼‘´Q&•l#Ê×YëMÊjÃ«ÄÌÂg¶‡*°äzeDšmívdÈª17ìé6°{L{¶…–T@[Cò¼­ßwÀĞŞm.yÿ‰g@—‹‘F 3.«TÊ·0ÖëLi¨‘Œò
+õĞDÇ°{Š­!×hŠÍˆ±.ôjƒÎâNQèD<Ì,£øÂ3Ç³•B®¯$¥BdûJDÔX^ç8–Qœí/ùÙLXkD­°0Ü¿xâla¨Ÿˆdß
+¹¨Ù–a¢òäpG3ÒT¸“›Bû·ÒkI¦ÀG‡É`b½Ë3Ç²³e¯ƒ ×:®"w"Gm5J4RQ£ÖçŸ::´wÛÒ+S£×\ä³2ŒÛõFXmÄQ7Ûã7ìÛac¥ÚXZk,­Í½ğJ~°/ÃÕ³³}ÛÇ¼ XyõÂøu{Ê“Ã—è2¿mE›†{‰±1Ly³³J£$‚	7À†‰±q
+Ù1z%1%G^uÌıNÈcƒ`QÕ"er9S.l½íšá«wä‡úv¼ãF/ğÕƒÇíàêìRPÈåúË$ô—Ô›9äy2Œ„ï13˜e,½ŒúègzŸôº‡¯Ç^nİ×~ü'Ë*Ãf³Ùjµz=k›óÕ0›WèíÉ)C‰šy«¢K”LSeX+bs4’Y!tkÀQ³]éz á{$Dÿ‰n´ä	Õ ?—IÊL+-Æw«¸kˆªÜAcçõ s6Sg„ÚM—è^¥VyS³ªV«Ç¢¨—¿ª"ßâ%†õú+êÄc+,FÙ»{×$]ûPscş‰ØqÜj?ıù/•'‡‡önÃhmjnü†}ëÔtˆš-?›½fwadÀÜAûÌÜ)¤îC&Ş¤! û”êçæ^áæ®âk«ue°Ú·o_©Tj·Û°% ~ÒıÌ”ìµRïÓû˜('í= eëvìQIPçüH"¯m%"ç]÷ãï[;?_$AÂ÷¢F3[.€áe?›Yš-÷w:zêÌ@²í2ŠªkÃ%7NÔÊ»ÕÓ÷Š¤Îr».¶‰2ë¥´%W +fşÓ?ıÓûî»/]2ƒàÁ‘‚…Æ[FÌl¤Šİ!ãN,oExp9°ÖQh›Õ³¼À¯l­lU—ú¶Ã1^ †¯ŞÑÛAi–İÍ§ºs+Qu›Oî®uÅ¥xR™¿©Y1óG?úÑµµµ´êzx}ó Kõæ²êoiÔ‹>‹uUÕÙ)îàg
+ô»ôêÆZš”˜²³¤[É±¼ğíã…¡¾ k®¬gûJ^&ˆ[mò¼âè éMz«‡¬–B²#¹£ŒH%ñc¥ÎÅËÅ¿¥+˜•çyç	!\VÌ @øê<‚”’ˆÀPÔ¬?ğe»4"›àº	4(a¢íÉ–“gfR*¬ü¶5D B«ÖˆÛáñ¿ùæè5»e,×§^(Œô×WK£ƒ»ï½E¾£“;œNÍƒuÊÜ!:ªÜ>‰Á)DÂëJW0+)åşáşĞı[X(ˆ¨­_Ïb_u¹Ò[üÿ—wíÈN1°[».Š¢ xE	Á¹— ñıÏàˆ·»jıÆGöØëÕJ}zF–X˜™bBç«÷º&´HL"lª¼ŒÈ,3ÕOr8ÜÑeĞ rIçÓ×¯_¾ûøò™u7»~vÛËM¨®ÚÅ³èh»Ğ™W!ã:u¼Fşß9üŸ¾ã¸ßïÇ£Gö}'éîÇ•<øòó×‡}ıâc—{!Ô,Vg Je€äÓ¤¤=h’k‘®pÀU‚†·	ª`Fô%ø†ÅÊíÓªt{7îÛ¶oÛfÜp:¾a¡dĞÚÖq\;Ï6²\8\§_—Ã½ú6å½º^õ¬¬ö©p!>°~VÏ?öÛvç«+ÔDg?kPe«Øø½”ÙX›†t·<eé+ßŒ+@™®F‚dÛÄ¡¶Çö˜dµãÎ«}”)üa¢‰1z¢Hò¸˜£ÄxEAS¥¯%È	\oÇ·ÛH%ßAyaÑªSËÔh0œ¤nv’4#ç§×ä¢+‰¼s5CfG‡EU’äÕ±"6&îÏ=F±¿ƒ£VZº¸¦
+±Ô§¢)Ä¢ ïS‘ÎŠj©Û(r™êKä[2ÄÌ»Òc¨b(Oz•ú3Êüâ¸®Ó›ƒiO¨
+hÎ7çzz	 yÉ{™™¥5ol¤(¡Ñ$I¨Ñç!÷lk8Ì¹F˜ŸÆË˜`+—kB®9Z…U«&è®'rfbàÊS91º»
+kòXõşC×I(fV`PK¦Í¹¢c#iE‚èUùÊ4Ñh1OæÛlk×­©ÃœÔ=ŸcÉ|’†€äaFØÆH åªTŞGiR‘*©’«úÿTH#B¹/¤MKó4Æ-”/JA1 àF ë²¢t    IEND®B`‚_Shttp://www.lifehack.org/wp-content/thumb-20050518MacOSXTigerTiddlyWikiDashboard.pngYimage/pngÓO®GIF89a  ³ ÿê EEE   ÿÎ ÿÉ ÿ´ ş ÿş“ÿıÿÿÿÿÿÇ333ÿÿëÿå       !ù   ,       [ĞIjØU¦ÎpœƒLA''ğ¦«v˜qj
+Ÿ?‚*pÆ‚…Ê!Ç’Ó¢	X<+Ùk»®YAb<všÁ Á5ÓXj‚\ş
+øÂ0Ã²Ô& ;_8http://www.lifehack.org/wp-images/smilies/icon_smile.gifYimage/gifÔÔ !"UUTF-8O.­<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<TITLE>lifehack.org  Â» Blog Archive   Â» GTDTiddlyWiki plugins for Mac OS X Tiger</TITLE>
+        
+<META name="generator" content="WordPress 1.5.1">
+
+<LINK rel="stylesheet" href="http://www.lifehack.org/wp-content/themes/mtsix/style.css" type="text/css" media="screen"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.lifehack.org/feed/"><LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.lifehack.org/feed/rss/"><LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.lifehack.org/feed/atom/"><LINK rel="pingback" href="http://www.lifehack.org/xmlrpc.php">
+
+        <LINK rel="archives" title="May 2005" href="http://www.lifehack.org/articles/2005/05/">
+
+
+</HEAD><BODY>
+<SCRIPT type="text/javascript" src="http://track.mybloglog.com/js?mblID=2005051505404390"></SCRIPT>
+<DIV id="wrapper">
+        <DIV id="header">                <H1><A href="http://www.lifehack.org" title="lifehack.org - home">lifehack.org</A></H1>
+                <P>Speed up your life</P>
+        </DIV>
+
+        <DIV id="main">                <H2 id="content_top">Posts</H2>
+                        <DIV id="content">                                
+                                
+                                <DIV class="post">                                        <H2 id="post-29"><A href="http://www.lifehack.org/articles/lifehack/gtdtiddlywiki-plugins-for-mac-os-x-tiger.html" rel="bookmark" title="Permanent Link to GTDTiddlyWiki plugins for Mac OS X Tiger">GTDTiddlyWiki plugins for Mac OS X Tiger</A></H2>
+                                                
+                                        <DIV class="entry">                                                <SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3370869682461195";
+google_ad_width = 234;
+google_ad_height = 60;
+google_ad_format = "234x60_as";
+google_ad_type = "text";
+google_ad_channel ="1845980329";
+google_color_border = "EEEEEE";
+google_color_bg = "EEEEEE";
+google_color_link = "003366";
+google_color_url = "000000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="234" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3370869682461195&dt=1116441577322&format=234x60_as&output=html&channel=1845980329&url=http%3A%2F%2Fwww.lifehack.org%2Farticles%2Flifehack%2Fgtdtiddlywiki-plugins-for-mac-os-x-tiger.html&color_bg=EEEEEE&color_text=000000&color_link=003366&color_url=000000&color_border=EEEEEE&ad_type=text&cc=26&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>                                                        <P>Jonathan has posted up some plugins for MacOSX Tiger:</P>
+        <UL>        <LI>Save-in-Safari for GTDTiddlyWiki: â€œThis is a small Internet Plug-In for Safari to allow TiddlyWikis to save themselves.â€</LI>
+        <LI>GTD TiddlyWiki Dashboard Hack: â€œThis is a quick hack to get the GTDTiddlyWiki into the Dashboard in Mac OS X Tiger.â€</LI>
+        </UL>
+        <P><IMG src="/wp-content/thumb-20050518MacOSXTigerTiddlyWikiDashboard.png" alt="Mac OS X Tiger GTD Tiddly Wiki DashBoard"></P>
+        <P>The Dashboard hack looks pretty neat but I havenâ€™t got Tiger to test it on (I am thinking to get one really soon!!) <IMG src="http://www.lifehack.org/wp-images/smilies/icon_smile.gif" alt=":)" class="wp-smiley"> </P>
+        <P>In the meantime, go to <A href="http://www.dcs.gla.ac.uk/~jp/tiddlywiki/">Jonathanâ€™s TiddlyWiki Things</A> for download and instructions and let us know how it goes.</P>
+                                                <SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3370869682461195";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_ad_channel ="9940713274";
+google_color_border = "EEEEEE";
+google_color_bg = "EEEEEE";
+google_color_link = "003366";
+google_color_url = "000000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="336" height="280" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3370869682461195&dt=1116441577385&prev_fmts=234x60_as&format=336x280_as&output=html&channel=9940713274&url=http%3A%2F%2Fwww.lifehack.org%2Farticles%2Flifehack%2Fgtdtiddlywiki-plugins-for-mac-os-x-tiger.html&color_bg=EEEEEE&color_text=000000&color_link=003366&color_url=000000&color_border=EEEEEE&ad_type=text&cc=63&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>                        
+                                                                        
+                                        </DIV>
+                                                <P class="postmetadata">                                                        <SMALL>                                                                This entry was posted
+                                                                 
+                                                                on Wednesday, May 18th, 2005 at 10:14 pm                                                         and is filed under <A href="http://www.lifehack.org/tags/lifehack/" title="View all posts in Lifehack" rel="category tag">Lifehack</A>,  <A href="http://www.lifehack.org/tags/lifehacks/" title="View all posts in Lifehacks" rel="category tag">Lifehacks</A>,  <A href="http://www.lifehack.org/tags/gtd/" title="View all posts in GTD" rel="category tag">GTD</A>,  <A href="http://www.lifehack.org/tags/software/" title="View all posts in Software" rel="category tag">Software</A>.
+                                                                You can follow any responses to this entry through the <A href="http://www.lifehack.org/articles/lifehack/gtdtiddlywiki-plugins-for-mac-os-x-tiger.html/feed/">RSS 2.0</A> feed. 
+                                                                
+                                                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.lifehack.org/articles/lifehack/gtdtiddlywiki-plugins-for-mac-os-x-tiger.html/trackback/">trackback</A> from your own site.
+                                                                
+                                                                                                                                
+                                                        </SMALL>
+                                                </P>
+                                </DIV>
+                        
+<DIV class="div" id="comments_div">
+
+
+                 
+                                
+                
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://www.lifehack.org/wp-comments-post.php" method="post" id="commentform">
+
+<P><LABEL for="author">Name (required)</LABEL><BR>
+<INPUT type="text" name="author" id="author" value="" tabindex="1" class="text"></P>
+
+<P><LABEL for="email">Mail (required) (will not be published)</LABEL><BR>
+<INPUT type="text" name="email" id="email" value="" tabindex="2" class="text"></P>
+
+<P><LABEL for="url">Website</LABEL><BR>
+<INPUT type="text" name="url" id="url" value="" tabindex="3" class="text"></P>
+
+
+
+<P><LABEL for="comment">Comment</LABEL><BR>
+<TEXTAREA name="comment" id="comment" rows="20" cols="100" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="29">
+</P>
+
+</FORM>
+
+</DIV>
+                                
+                </DIV>
+                
+                <H2 id="content_bottom">Archives and Links</H2>
+        </DIV>
+
+                
+        <DIV id="sidebar">                <UL>                        <LI class="sidebar"><DIV class="sidebar_box" id="search_box">                                <FORM method="get" id="searchform" action="/index.php"><DIV><INPUT type="text" value="" name="s" id="s">
+<INPUT type="submit" name="searchsubmit" id="searchsubmit" value="Search">
+</DIV>
+</FORM>                                </DIV>
+                        </LI>
+                                                
+                        <LI class="sidebar"><DIV class="sidebar_box"><UL>                                
+<LI class="pagenav"><H2>Pages</H2><UL><LI class="page_item"><A href="http://www.lifehack.org/about/" title="About">About</A></LI>
+</UL></LI>                                </UL></DIV>
+                        </LI>
+                        <LI class="sidebar"><DIV class="sidebar_box"><H2>Archives</H2>
+                                <UL>                                        <LI><A href="http://www.lifehack.org/articles/2005/05/" title="May 2005">May 2005</A></LI>
+                                </UL></DIV>
+                        </LI>
+                        <LI class="sidebar"><DIV class="sidebar_box"><H2>Tags</H2>
+                                <UL>                                                                        <LI><A href="http://www.lifehack.org/tags/lifehack/" title="View all posts filed under Lifehack">Lifehack</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/studying/" title="View all posts filed under Studying">Studying</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/productivity/" title="View all posts filed under Productivity">Productivity</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/tips/" title="View all posts filed under Tips">Tips</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/lifehacks/" title="View all posts filed under Lifehacks">Lifehacks</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/gtd/" title="View all posts filed under GTD">GTD</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/software/" title="View all posts filed under Software">Software</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/template/" title="View all posts filed under Template">Template</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/procrastination/" title="View all posts filed under Procrastination">Procrastination</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/writing/" title="View all posts filed under Writing">Writing</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/communication/" title="View all posts filed under Communication">Communication</A>
+</LI>
+        <LI><A href="http://www.lifehack.org/tags/money/" title="View all posts filed under Money">Money</A>
+</LI>
+                                </UL></DIV>
+                        </LI>
+                                        </UL>
+        </DIV>
+
+        <HR class="hide">
+        
+        <DIV id="footer">                <DIV>                        <P>                        <A href="http://www.lifehack.org/feed/">Entries (RSS)</A> |
+                        <A href="http://www.lifehack.org/comments/feed/">Comments (RSS)</A> |
+                        <A href="http://www.wordpress.org">Powered by WordPress</A> |
+                        <A href="http://www.mtsix.com">Skin by MTsix</A>
+                        </P>
+                </DIV>
+                        </DIV>
+        
+</DIV>
+
+
+
+</BODY></HTML>_Whttp://www.lifehack.org/articles/lifehack/gtdtiddlywiki-plugins-for-mac-os-x-tiger.html¢$*Ñ%Õ&' ()_WebResourceFrameNameO8<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #003366 }a.ad:visited { color: #003366 }a.ad:hover { color: #003366 }a.ad:active { color: #003366 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="234" height="60" cellspacing="1" cellpadding="0" border="0" bgcolor="#eeeeee"><TBODY><TR><TD><TABLE width="232" height="58" cellspacing="0" cellpadding="1" border="0" bgcolor="#eeeeee"><TBODY><TR><TD colspan="2" width="" height=""><TABLE width="230" height="" cellspacing="0" cellpadding="2" border="0"><TBODY><TR><TD id="taw0" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('go to www.mosquitomagnet.com','aw0')" onmouseover="ss('go to www.mosquitomagnet.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.mosquitomagnet.com&sa=l&ai=B5n9r2IuLQp2hOYn4wQG3oowOytOTBp6MmZYBwI23AZDPUxABGAEg75aNA0CKFkiMOaAB9sWH_wOqAQoxODQ1OTgwMzI5sgEQd3d3LmxpZmVoYWNrLm9yZ7oBCTIzNHg2MF9hc8gBAdoBV2h0dHA6Ly93d3cubGlmZWhhY2sub3JnL2FydGljbGVzL2xpZmVoYWNrL2d0ZHRpZGRseXdpa2ktcGx1Z2lucy1mb3ItbWFjLW9zLXgtdGlnZXIuaHRtbOgBAQ&num=1&client=ca-pub-3370869682461195" onfocus="ss('go to www.mosquitomagnet.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.mosquitomagnet.com','aw0')" onmouseout="cs()"><B>Got Asian Tiger Mosquito?</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#000000; line-height:12px;">Mosquito Magnet Lurex specially designed for Asian Tiger Mosquito </FONT></TD></TR></TBODY></TABLE></TD></TR><TR><TD nowrap="" width="99%" height="11" align="right" bgcolor="#eeeeee"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.lifehack.org/articles/lifehack/gtdtiddlywiki-plugins-for-mac-os-x-tiger.html&hl=en&client=ca-pub-3370869682461195&adU=www.mosquitomagnet.com&adT=Got+Asian+Tiger+Mosquito%3F&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; line-height:11px;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_Áhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3370869682461195&dt=1116441577322&format=234x60_as&output=html&channel=1845980329&url=http%3A%2F%2Fwww.lifehack.org%2Farticles%2Flifehack%2Fgtdtiddlywiki-plugins-for-mac-os-x-tiger.html&color_bg=EEEEEE&color_text=000000&color_link=003366&color_url=000000&color_border=EEEEEE&ad_type=text&cc=26&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123Ñ+Õ&, -.Oa<HTML><BODY style="background-color: transparent" marginwidth="0" marginheight="0"></BODY></HTML>_ <!--framePath //<!--frame1-->-->_Öhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3370869682461195&dt=1116441577385&prev_fmts=234x60_as&format=336x280_as&output=html&channel=9940713274&url=http%3A%2F%2Fwww.lifehack.org%2Farticles%2Flifehack%2Fgtdtiddlywiki-plugins-for-mac-os-x-tiger.html&color_bg=EEEEEE&color_text=000000&color_link=003366&color_url=000000&color_border=EEEEEE&ad_type=text&cc=63&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I P W i x %—%Ó%Ü%å&&	66L6V6_]]T]f]m«[«±«»«Â¬s¬®¬¸¬Á¬Ê¬ĞÛÛÛÛŞÛáÛìÜê?êRììì%ì‰ì¬             /              î†

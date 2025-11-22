@@ -1,0 +1,32 @@
+I have just found an amazing site. Jeremy, who works in technology in
+London, has created something entirely new, a Tiddlywiki.
+
+Using this, you can create wikis quite easily for using keyword links to
+edit/view sites. I tried it myself, and Japanese also works great. Isn't
+this a great application for taking personal memos and the like? 
+
+And you will know if you actually use it, but it uses Web technology
+with a good sense, and it provides an elegant interface. 
+Moreover, it is quite amazing that the system is comprised of a single
+HTML file. 
+
+To use this system on your own, simply edit the TiddlyWiki on your own
+and click the Save All link on the top right, and follow the subsequent
+instructions to create your own Wiki page. 
+
+In the past, to create a Wiki, one had to deal with cumbersome
+installations, but with this, all you maintain is a single file.
+
+Maintaining a single file only, is a great system; I hope it's extended
+to others. 
+
+After editing: This is good. 
+
+For people who don't have a server, you can create it locally as a memo
+application. 
+
+The sample site I created is below.
+
+Try it out! 
+
+It may be good to write novels and manuals with this system. 

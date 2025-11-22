@@ -1,0 +1,1996 @@
+bplist00“._WebSubresources_WebMainResource¨"%(+”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO*./*** Layout.css last revised 2/12/04 by Sara Lever***/
+/*** changes commented ***/
+/*** answer a - added to shrink those long urls ***/
+/*** on commentitems h4 made display inline to stop comment headers wrapping, doesnt seem to affect body comments */
+/*** on commentitems h4 margin-left:12px; taken out because it affected H4 when used in the body of comments */
+/*** h1-h6 sizes changed ***/
+/*** comment blockquote and pre styles added different colour base ***/
+/*** changes made to fix the page with images load problem IE6***/
+/*** also change to entry footer to eliminate big gaps clear:both changed to clear:right ***/
+
+body
+{
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 75%;
+background-color:white;
+}
+
+abbr, acronym, .help {
+	border-bottom: 1px dotted;     
+	cursor: help;
+}
+
+cite {
+font-size: 90%;
+font-weight: bold;
+font-style: italic;
+}
+
+* html blockquote {
+border: 1px dashed white;
+font-size: 88%;
+padding: 0px 23px 0 23px;
+background: url(quotemarks.gif) no-repeat 0 3px;
+}
+
+pre {
+border: 1px solid white;
+background: url(quotemarks.gif) no-repeat 0 3px;
+}
+
+.commentItem * html blockquote {
+border: 1px dashed black; /* most styles have comments on a light background */
+background: url(quotemarks.gif) no-repeat 0 3px;
+}
+
+.commentItem pre {
+border: 1px solid black; /* most styles have comments on a light background */
+}
+
+
+/* Added 21/10/04 */
+/* Hides from IE5-mac \*/
+* html #mainContent {
+	height: 1%; 
+	position:relative;
+}
+/* End hide from IE5-mac */
+
+table, td, th {
+font-size: 100%;
+}
+
+.notbold {
+	font-weight:normal;
+}
+
+h1 {
+	font-size: 170%;
+	line-height: 1.3em;
+	margin-bottom: 0.4em;
+	margin-top: 0.8em;
+}
+h2 {
+	font-size: 150%;
+	line-height: 1.3em;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+}
+
+h3 {
+	font-size: 140%;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+}
+
+h3.entryHeader {
+	font-size:120%;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 130%;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+}
+
+.commentItem h4 {
+	padding:0px;
+	margin:0px;
+	color: black; /* needed because in most cases to avoid white on white */
+	display:inline; /* needed for heading but not needed for the comment body */
+}
+
+h4.commentauthor {  /* h4 heading for comments */
+	font-size: 100%;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 120%;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+}
+
+h6 {
+	font-size: 110%;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+}
+
+a img {
+	border: 0px;	
+}
+
+/* to shrink long urls in writing about web page*/
+.answer a{
+font-size: 80%;
+}
+
+p.answer {
+	word-wrap: break-word;
+}
+
+
+#sideContent {
+	float: left;
+	width: 220px;
+	padding: 0px;
+	word-wrap: break-word;
+}
+
+
+#sideContent .sideContentItem {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 0px;
+  	width: 210px;
+  	font-size: 90%;
+}
+
+#sideContent .sideContentItem h2 {
+  	font-size: 120%;
+}
+
+#centreContent {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	min-height:800px;
+}
+
+/* Added 21/10/04 */
+/* Hides from IE5-mac \*/
+* html #centreContent {
+height: 1%;
+position: relative;
+}
+/* End hide from IE5-mac */
+
+
+#centreContent .day {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 140%;
+	margin-bottom:10px;	
+	/* height:1%;  removed and hidden from browsers other than IE6 using css below 21/10/04*/
+}
+
+/* Added 21/10/04 */
+/* Hides from IE5-mac \*/
+* html #centreContent .day {
+height: 1%;
+}
+/* End hide from IE5-mac */
+
+
+#centreContent .entry {
+	margin-bottom: 10px;
+}
+
+/* Added 21/10/04 */
+/* Hides from IE5-mac \*/
+* html #centreContent .entry {
+height: 1%;
+}
+/* End hide from IE5-mac */
+
+
+.entry .entryfooter {
+/* Changed 21/10/10 */
+/*	clear:both;     */
+ clear:right; 
+}
+
+.content table {
+	border-collapse:collapse;
+	border-spacing: 0px;
+}
+
+.content .padright {
+	padding-right:30px;
+}
+
+.sideHeader {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.hidden {
+	display: none;
+}
+.displayed {
+	display: block;
+}
+
+/* Warwick footer */
+
+#warwickBar {
+	color: white; 
+	height: 30px;
+	background-color: #003399;
+	border: none;
+}
+
+img.logo {
+	border: none;
+	padding-left: 2px;
+}
+
+/* Top Bar */
+
+#topBar {
+	height: 10px;
+}
+
+/* Tool Bar */
+#utilityBar {
+	padding-top: 2px;
+	color: white;
+	text-align: right;
+	height: 18px;
+	font-size: 80%; 
+	font-weight: bold;
+}
+
+#utilityBar a {
+	color: white;
+}
+
+#utilityBar img {
+	vertical-align:middle;
+}
+
+#utilityBar a {	color: white; text-decoration: none;}
+#utilityBar a:link { color: white; }
+#utilityBar a:visited {	color: white; }
+#utilityBar a:active { color: #76B2C5; }
+#utilityBar a:hover { color: #76B2C5; }
+
+#utilityBar #bloglinks {
+	float: left;
+}
+
+#utilityBar #adminlinks {
+	margin-right: 4px;
+}
+
+#sideContent div#signincopyrightfooter {
+	font-size: 80%;
+}
+
+#question {
+	width: 400px;
+	margin-left: 20px;
+	padding: 10px;
+	border: 1px solid black;
+	background-color: #E5E5E5;
+}
+
+.reviewimage {
+
+}
+
+.reviewdata {
+	border-bottom: 2px solid #E9E9E9;
+	border-top: 2px solid #E9E9E9;
+	width:100%;
+}
+
+.reviewcontent {
+
+}
+
+.bookReview {
+
+}
+.bookReview td {
+	padding: 0px 3px 0px 3px;
+}
+
+.musicReview {
+
+}
+.musicReview td {
+	padding: 0px 3px 0px 3px;
+}
+
+.dvdReview {
+
+}
+.dvdReview td {
+	padding: 0px 3px 0px 3px;
+}
+
+div#trackbacks {
+	margin-top: 10px;
+}
+
+div.trackback {
+	margin-top: 7px;
+}
+
+
+
+#adminImages .image {
+	margin:10px;
+	margin-bottom:15px;
+	padding:5px;
+	border-bottom: 1px solid gray;
+}
+
+#adminImages .image img {
+	border: 2px solid black;
+}
+
+#adminImages .gallery {
+	margin:10px;
+	padding:5px;
+	border: 1px solid #1A516A;
+}
+
+/* Added 21/10/04 */
+/* Hides from IE5-mac \*/
+* html #gallery {
+	height: 1%; 
+	position:relative;
+}
+/* End hide from IE5-mac */
+
+
+#gallery div.image {
+	padding: 5px;
+	margin:5px;
+	border: 2px solid gray;
+	float:left;
+	width: 210px;
+	height: 230px;
+	text-align:center;
+}
+
+#gallery div.imagesmall {
+	width: 95px;
+	height: 110px;
+}
+#gallery div.imagemedium {
+	width: 170px;
+	height: 190px;
+}
+#gallery div.imagelarge {
+	width: 270px;
+	height: 290px;
+}
+
+#gallery h3 {
+	font-size: 100%;
+}
+
+#gallerydetail div.image {
+	text-align:center;
+}
+
+#gallerydetail div#next {
+	float:right;
+	margin:10px;
+	
+}
+#gallerydetail div#previous {
+	float:left;
+	margin:10px;
+}
+
+
+dl dt {
+	float:left;
+	margin-right: 1em;
+	width:4em;
+	font-weight:bold;
+	margin-bottom:3px;
+}
+
+dl dd {
+	margin-left: 5em;
+	margin-bottom:3px;
+}
+
+
+
+/* Drop down menus */
+
+#nav, #nav ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+}
+
+#nav {
+	margin-top:2px;
+}
+
+#nav a {
+	display: block;
+	width: auto;
+}
+
+#nav li { /* all list items */
+	float: left;
+	width: auto; /* width needed or else Opera goes nuts */
+	margin-left:1px;
+	padding:0px;
+}
+
+#nav li ul li {
+	padding:4px 0px 4px 0px;
+	clear:left;
+}
+
+#nav li ul li a {
+	width: 17em;
+}
+
+#nav li ul { /* second-level lists */
+	position: absolute;
+	width: 17em;
+	text-align:left;
+	border: 1px solid white;
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+}
+
+#nav li:hover ul, #nav li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+#adminlinks {
+	position:absolute;
+	right:0px;
+	
+}
+
+
+p.commentfooter {
+	text-align:right;
+	font-size: 75%;
+}
+
+
+.commentsList {
+	margin-left:0px;
+	padding-left:0px;
+}
+
+.commentItem {
+	border: 1px solid gray;
+	padding:2px;
+	margin: 12px 0px 12px 2px;
+	list-style-position:inside;
+}
+
+/* Comments */
+.commentItem .caps {
+font-variant: small-caps;
+}
+
+.commentItem ul li {
+	list-style-position: outside;
+	list-style-type: disc;
+	padding: 0 0 4px 10px;
+	line-height: 1.3em;
+}
+
+.commentItem ol li {
+	list-style-position: outside;
+	padding: 0 0 4px 10px;
+	line-height: 1.3em;
+}
+
+
+
+#commentRuler {
+	margin-top:7px;
+}
+
+.authorComment {
+	background-color: #EAEAEA;
+ 	background-image: url(../images/logged-in-author.gif);
+	background-repeat: no-repeat;
+	background-position:top right;
+ }
+ 
+ .nonLoggedInComment {
+	background-color: #F7F7F7;
+	background-image: url(../images/logged-out.gif);
+	background-repeat: no-repeat;
+	background-position:top right;
+ }
+ 
+ .loggedInComment {
+ 	background-color: #F7F7F7;
+	background-image: url(../images/logged-in.gif);
+	background-repeat: no-repeat;
+	background-position:top right;
+ }
+
+textarea {
+	font-family: Tahoma;
+	font-size: 12px;
+	border: 1px solid #C4C4B8;
+	padding: 3px;
+	background-color: #F7F7F7;
+}
+input {
+	font-family: Tahoma;
+	font-size: 12px;
+	border: 1px solid #C4C4B8;
+	background-color: #F7F7F7;
+}
+
+#blogSearch input{
+	vertical-align: middle;
+	border: 0px solid Black;
+	background-color: transparent;
+	margin-top: -25px;
+}
+
+html>body #blogSearch input{
+	vertical-align: text-bottom;
+	border: 0px solid Black;
+}
+
+#blogSearch #searchText{
+	border: 1px solid #ACA899;
+	background-color: #F7F7F7;
+	width: 150px;
+	color: #234551;
+	font-weight: bold;
+}
+
+
+div#nextprevlinks {
+	text-align:center;
+	margin:5px;
+}
+
+
+/* March 15th 2005 - modified favourites listing to use background
+   instead of list style for the bullet image allows better
+   positioning and browser consistancy - Andrew Ingram */
+
+div#sidefavourites ul {
+	margin-left:0px;
+	padding-left:2px;
+	list-style:none;
+}
+
+/*div#sidefavourites li.folder {
+	list-style-image:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/subscriptions/folder-open.gif);
+}*/
+
+div#sidefavourites li.folder {
+	margin-left:0px;
+	list-style:none;
+	list-style-image:none;
+	padding-left:19px;
+	background:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/subscriptions/folder-open.gif) no-repeat 0 2px;
+}
+
+div#sidefavourites a.foldername {
+	font-weight:bold;
+}
+
+div#sidefavourites ul li ul {
+	padding-left:0px;
+	margin-top:4px;
+}
+
+div#sidefavourites ul li ul li{
+	list-style:none;
+}
+
+/*div#sidefavourites li.group {
+	list-style-image:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/twopeopleicon.gif);
+}*/
+
+/*div#sidefavourites li.blog {
+	list-style-image:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/peopleicon.gif);
+}*/
+
+/*div#sidefavourites li.url {
+	list-style-image:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/globe.gif);
+}*/
+
+div#sidefavourites li.group {
+	margin-left:0px;
+	list-style:none;
+	list-style-image:none;
+	background:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/twopeopleicon.gif) no-repeat 0 2px;
+	padding-left:17px;
+}
+
+div#sidefavourites li.blog {
+	margin-left:0px;
+	list-style:none;
+	list-style-image:none;
+	background:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/peopleicon.gif) no-repeat 0 2px;
+	padding-left:17px;
+}
+
+div#sidefavourites li.url {
+	margin-left:0px;
+	list-style:none;
+	list-style-image:none;
+	background:url(http://blogs.warwick.ac.uk/blogbuilder/media/images/admin/globe.gif) no-repeat 0 2px;
+	padding-left:17px;
+}_;http://blogs.warwick.ac.uk/blogbuilder/media/css/layout.cssXtext/css”
+OŒhtml {margin: 0; padding: 0;}
+body {margin: 0; padding: 0; border: 0;	color: #003399; background-color: white;
+}
+
+/* Accessibility style for skip-tos <a class="access-info" name="top_anchor" id="top_anchor">Skip to</a> <a class="access-info" href="#content_anchor" accesskey="2">main content</a> <a class="access-info" href="#navigation">navigation</a> 
+*/
+.access-info {
+	display:none;
+}
+
+a {	color: #003399; }
+a:link { color: #003399; }
+a:visited {	color: #003399; }
+a:active { color: #C63A77; }
+a:hover { color: #C63A77;}
+
+
+h1, h2, h3, h4, h5, h6, .commentItem h4 {
+	color: #003399;
+}
+
+
+/* h3 is used for entry headings */
+/* inherit from a*/
+
+
+#mainContent {
+margin: 0 0px 0 0px;
+}
+
+/************** top banner ****************/
+
+#siteLogoBar {
+	background-color: #1344BD;
+	background-image:url(images/extlogo.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	color: white;
+	border-top: 0px solid white;
+	white-space: nowrap;
+	text-align:left;
+	vertical-align:middle;
+	font-size: 200%;
+	padding: 0 10px 0 10px;
+	height: 48px;	
+	line-height:48px;
+	z-index: 1;
+}
+
+#siteLogoBar a {
+	color: white;
+	text-decoration:none;
+}
+#siteLogoBar a:hover {
+	color: white;
+	text-decoration:underline;
+}
+
+#banner {
+
+}
+
+#topBar {
+	display:none;
+}
+
+/*********** top banner - utilities ****************/
+
+#utilityBar { 
+	background-color: #B2C3DB;
+	padding-left: 10px;
+	color: white;
+	z-index: 100;
+	border-top: 1px solid white;
+ }
+ 
+#utilityBar a {	color: #003399;}
+#utilityBar a:link {color: #003399;}
+#utilityBar a:visited {	color: #003399;}
+#utilityBar a:active {	color: #003399;}
+#utilityBar a:hover {	color: #003399;}
+
+/* the larger the z-index the nearer the number comes to you!*/
+#nav, #nav ul {
+	background-color: #B2C3DB;
+	z-index: 200;
+}
+
+#nav, #nav ul a {	color: #003399;}
+#nav, #nav ul a:link {color: #003399;}
+#nav, #nav ul a:visited {color: #003399;}
+#nav, #nav ul a:active {color: #003399;}
+#nav, #nav ul a:hover {	color: #003399;}
+
+#utilityBar #adminlinks {
+	padding-right: 5px;
+}
+
+/************** left side container *****************/
+
+#sideContent {
+	background-color: #B2C3DB;
+	background-image: url(images/bottom.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	color: #314563;
+	padding: 2px 0 0 0px;
+	width: 220px;
+	z-index: 4;
+}
+
+#sideContent a {
+color: #003399;
+}
+
+
+#sideContent .sideContentItem {
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 200px;
+}
+
+#sideContent .sideContentItem h2 {
+	padding: 0px 0px 2px 2px;
+	margin: 0px 2px 0px 0px;
+	color: #314563;
+}
+
+#sideContent .sideContentItem h2 a {
+	text-decoration: none;
+}
+
+#sideContent .sideContentItem h2 a:hover {
+	text-decoration: underline;
+}
+
+
+/******** left side content - fancy bullets ********/
+
+#sideContent ul {
+	margin: 1em 0 1em 0;
+	padding-left: 3px;
+	}
+
+#sideContent ul li {
+	list-style:none;
+	padding: 0 0 4px 0px;
+	line-height: 1.3em;
+}
+
+/*********** left side content  *******/
+
+#calendar {
+	padding:  20px 0px 20px 0;
+	margin: 0px 0px 5px 3px;
+	background-color: white;
+	z-index: 4;
+	border: 1px solid #003399;
+}
+
+#calendar a{
+	color: #314563;
+}
+#calendar table.calendar {
+	width: 200px;
+}
+
+#calendar table th{
+	background-color:transparent;
+	text-align:left;
+}
+
+.calendar td,.calendar th{
+	font-size: 85%;
+	color: #003399;
+}
+
+.calendar td {
+	text-align: right;
+}
+
+.calendar td.calendarcontrols {
+	text-align: center;
+}
+
+
+.calendar td.calendarcontrols a {
+	color: #003399;
+}
+
+.calendar .calendarday {
+	width: 25px;
+	padding: 2px;
+}
+
+.calendar .calendarday a:visited{
+	color: #003399;
+}
+
+.calendar .today {
+	font-weight: bold;
+	background-color: white;
+	color: black;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.60;
+	opacity: .6;
+	-khtml-opacity: .6;
+}
+
+.calendar .today a{
+	color: #a9b419; 
+}
+
+.calendar .calendardayheader {
+	font-weight: bold;
+	width: 25px;
+	padding: 3px;
+}
+/******** left side content  ********/
+
+#signincopyrightfooter {
+	color: white;
+
+}
+#signincopyrightfooter  a {
+	color: white;
+}
+
+
+
+#warwickBar {
+	margin-top: 10px;
+	width: 220px;
+}
+
+/********** centre content ************/
+
+#centreContent {
+	margin: 10px 10px 10px 232px;
+	padding: 10px 10px 10px 20px;
+	z-index:-1; /* needed to keep drop-down menu on top tested in IE6 */
+	background-color: white;
+	color: #314563;
+}
+
+/* fix to favourites page in Mozilla */
+/* the following selector is NOT seen by Opera 6 (and below) or by IE6/win */
+head:first-child+body #centreContent {
+	z-index: 1;
+}
+
+
+h2.dateheader {
+	color: #003399;
+	margin: 0px 0px 7px 0px;
+	font-size: 140%;
+}
+
+.entry {
+	background-color: transparent;
+}
+
+p.answer {
+	color: #003399;
+	font-weight: bold;
+}
+
+
+p.smallcopy {
+	color: #003399;
+}
+p.smallcopy a{
+	font-weight: bold;
+}
+
+p.entryfooter {
+	text-align:right;
+	font-size: 75%;
+	padding-bottom: 5px;
+	border-bottom: solid 1px #003399;
+}
+
+p.sideHeader {
+	color: #003399;
+}
+
+blockquote:before {
+	content: url(images/openquote.gif);
+}
+blockquote:after {
+	content: url(images/closequote.gif);
+}
+
+* html blockquote {
+         border: 1px dashed #003399;
+         padding: 4px;
+}
+blockquote {
+background-color: white;
+}
+
+
+pre {
+	margin-left: 40px;
+	margin-right: 40px;
+	border: 1px solid #003399;
+	padding: 5px;
+	font-size: 110%;
+}
+
+* html pre {
+            font-size: 100%;
+}
+
+#gallery .image {
+	background-color:white;
+}
+
+/* Profile CSS colours, could also be used elsewhere*/
+.backcolour1 {
+    color: #003399;
+	background-color:B2C3DB;
+}
+.backcolour2 {
+    color: #003399;
+	background-color:B2C3DB;
+}
+.backcolour3 {
+    color: #003399;
+	background-color:B2C3DB;
+}
+
+.border1 {
+	border: #003399;
+}
+.blockheader {
+	color:white;
+	background-color: #003399;
+	border: #003399;
+}
+}_Ehttp://blogs.warwick.ac.uk/blogbuilder/media/styles/warwick/style.css”
+Otbody {
+	BACKGROUND: white
+}
+
+html body {
+ font: 1em Verdana, Arial, Geneva, Helvetica, sans-serif; padding: 0; border-width: 0; width: 100%; 
+ left: 0px; top: 0px; margin:0px;
+}
+
+#sideContent {
+	display:none;
+}
+
+#banner {
+	display:none;
+}
+
+#utilityBar {
+	display:none;
+}
+
+#centreContent {
+	margin-left:5px;
+}
+
+#commentform {
+	display:none;
+}
+
+_:http://blogs.warwick.ac.uk/blogbuilder/media/css/print.css”Oy/*
+
+This file contains only functions necessary for the article features
+The full library code and enhanced versions of the functions present
+here can be found at http://v2studio.com/k/code/lib/
+
+
+ARRAY EXTENSIONS
+
+push(item [,...,item])
+    Mimics standard push for IE5, which doesn't implement it.
+
+
+find(value [, start])
+    searches array for value starting at start (if start is not provided,
+    searches from the beginning). returns value index if found, otherwise
+    returns -1;
+
+
+has(value)
+    returns true if value is found in array, otherwise false;
+
+
+FUNCTIONAL
+
+map(list, func)
+    traverses list, applying func to list, returning an array of values returned
+    by func
+
+    if func is not provided, the array item is returned itself. this is an easy
+    way to transform fake arrays (e.g. the arguments object of a function or
+    nodeList objects) into real javascript arrays.
+
+    map also provides a safe way for traversing only an array's indexed items,
+    ignoring its other properties. (as opposed to how for-in works)
+
+    this is a simplified version of python's map. parameter order is different,
+    only a single list (array) is accepted, and the parameters passed to func
+    are different:
+    func takes the current item, then, optionally, the current index and a
+    reference to the list (so that func can modify list)
+
+
+filter(list, func)
+    returns an array of values in list for which func is true
+
+    if func is not specified the values are evaluated themselves, that is,
+    filter will return an array of the values in list which evaluate to true
+
+    this is a similar to python's filter, but parameter order is inverted
+
+
+DOM
+
+getElem(elem)
+    returns an element in document. elem can be the id of such element or the
+    element itself (in which case the function does nothing, merely returning
+    it)
+
+    this function is useful to enable other functions to take either an    element
+    directly or an element id as parameter.
+
+    if elem is string and there's no element with such id, it throws an error.
+    if elem is an object but not an Element, it's returned anyway
+
+
+hasClass(elem, className)
+    Checks the class list of element elem or element of id elem for className,
+    if found, returns true, otherwise false.
+
+    The tested element can have multiple space-separated classes. className must
+    be a single class (i.e. can't be a list).
+
+
+getElementsByClass(className [, tagName [, parentNode]])
+    Returns elements having class className, optionally being a tag tagName
+    (otherwise any tag), optionally being a descendant of parentNode (otherwise
+    the whole document is searched)
+
+
+DOM EVENTS
+
+listen(event,elem,func)
+    x-browser function to add event listeners
+
+    listens for event on elem with func
+    event is string denoting the event name without the on- prefix. e.g. 'click'
+    elem is either the element object or the element's id
+    func is the function to call when the event is triggered
+
+    in IE, func is wrapped and this wrapper passes in a W3CDOM_Event (a faux
+    simplified Event object)
+
+
+mlisten(event, elem_list, func)
+    same as listen but takes an element list (a NodeList, Array, etc) instead of
+    an element.
+
+
+W3CDOM_Event(currentTarget)
+    is a faux Event constructor. it should be passed in IE when a function
+    expects a real Event object. For now it only implements the currentTarget
+    property and the preventDefault method.
+
+    The currentTarget value must be passed as a paremeter at the moment    of
+    construction.
+
+
+MISC CLEANING-AFTER-MICROSOFT STUFF
+
+isUndefined(v)
+    returns true if [v] is not defined, false otherwise
+
+    IE 5.0 does not support the undefined keyword, so we cannot do a direct
+    comparison such as v===undefined.
+*/
+
+// ARRAY EXTENSIONS
+
+if (!Array.prototype.push) Array.prototype.push = function() {
+    for (var i=0; i<arguments.length; i++) this[this.length] = arguments[i];
+    return this.length;
+}
+
+Array.prototype.find = function(value, start) {
+    start = start || 0;
+    for (var i=start; i<this.length; i++)
+        if (this[i]==value)
+            return i;
+    return -1;
+}
+
+Array.prototype.has = function(value) {
+    return this.find(value)!==-1;
+}
+
+// FUNCTIONAL
+
+function map(list, func) {
+    var result = [];
+    func = func || function(v) {return v};
+    for (var i=0; i < list.length; i++) result.push(func(list[i], i, list));
+    return result;
+}
+
+function filter(list, func) {
+    var result = [];
+    func = func || function(v) {return v};
+    map(list, function(v) { if (func(v)) result.push(v) } );
+    return result;
+}
+
+
+// DOM
+
+function getElem(elem) {
+    if (document.getElementById) {
+        if (typeof elem == "string") {
+            elem = document.getElementById(elem);
+            if (elem===null) throw 'cannot get element: element does not exist';
+        } else if (typeof elem != "object") {
+            throw 'cannot get element: invalid datatype';
+        }
+    } else throw 'cannot get element: unsupported DOM';
+    return elem;
+}
+
+function hasClass(elem, className) {
+    return getElem(elem).className.split(' ').has(className);
+}
+
+function getElementsByClass(className, tagName, parentNode) {
+    parentNode = !isUndefined(parentNode)? getElem(parentNode) : document;
+    if (isUndefined(tagName)) tagName = '*';
+    return filter(parentNode.getElementsByTagName(tagName),
+        function(elem) { return hasClass(elem, className) });
+}
+
+
+// DOM EVENTS
+
+function listen(event, elem, func) {
+    elem = getElem(elem);
+    if (elem.addEventListener)  // W3C DOM
+        elem.addEventListener(event,func,false);
+    else if (elem.attachEvent)  // IE DOM
+        elem.attachEvent('on'+event, function(){ func(new W3CDOM_Event(elem)) } );
+        // for IE we use a wrapper function that passes in a simplified faux Event object.
+    else throw 'cannot add event listener';
+}
+
+function mlisten(event, elem_list, func) {
+    map(elem_list, function(elem) { listen(event, elem, func) } );
+}
+
+function W3CDOM_Event(currentTarget) {
+    this.currentTarget  = currentTarget;
+    this.preventDefault = function() { window.event.returnValue = false }
+    return this;
+}
+
+
+// MISC CLEANING-AFTER-MICROSOFT STUFF
+
+function isUndefined(v) {
+    var undef;
+    return v===undef;
+}
+
+_;http://blogs.warwick.ac.uk/blogbuilder/media/js/popuplib.js_application/x-javascript”Oª// the functions in this file require the supplementary library lib.js
+
+// These defaults should be changed the way it best fits your site
+var _POPUP_FEATURES = '';
+
+function raw_popup(url, target, features) {
+    // pops up a window containing url optionally named target, optionally having features
+    if (isUndefined(features)) features = _POPUP_FEATURES;
+    if (isUndefined(target  )) target   = '_blank';
+    var theWindow = window.open(url, target, features);
+    theWindow.focus();
+    return theWindow;
+}
+
+function link_popup(src, features) {
+    // to be used in an html event handler as in: <a href="..." onclick="link_popup(this,...)" ...
+    // pops up a window grabbing the url from the event source's href
+    return raw_popup(src.getAttribute('href'), src.getAttribute('target') || '_blank', features);
+}
+
+function event_popup(e) {
+    // to be passed as an event listener
+    // pops up a window grabbing the url from the event source's href
+    link_popup(e.currentTarget);
+    e.preventDefault();
+}
+
+function event_popup_features(features) {
+    // generates an event listener similar to event_popup, but allowing window features
+    return function(e) { link_popup(e.currentTarget, features); e.preventDefault() }
+}
+
+
+window.onload = function(){
+
+listen('load', window, function() {
+	mlisten('click',getElementsByClass('help','a'),event_popup_features('scrollbars=yes,resizable=yes,location=0,statusbar=0,menubar=0,width=450,height=550') );
+});
+}_<http://blogs.warwick.ac.uk/blogbuilder/media/js/helppopup.js”OgGIF89a  ’  «Üï‹≥Ω€≤º¯Ú˙Ùıﬂª√ñ9ù,F´J`≥[o“ü´—ú®î6ì3¥]r¬}çØRhßAYò"=´JaŒï¢ﬁ∏¡˙Ùˆ˛˝˝≥[pÕì°˝˘˚˝¸¸ö%@≠Nd≠OeŒñ£˙ıˆ¸˘˙˚ˆ˜πi{Ò·Â’§∞¿xâ„√ ≤Zn§;Tˇˇˇè,ˇˇˇ                                                         !˘  , ,       Ñ@ñP(P(√$Î√X9WååÒ¨ÆCHuD©BX'*p§V£S Up¨™Je2©P%íC≤J© v#$+*N)$''&+h*|e  (+$]y	+%*°*#se)	~é™o+,c°%ØOCVOJUJCHIA ;_Hhttp://blogs.warwick.ac.uk/blogbuilder/media/styles/system/images/go.gifYimage/gif”OîGIF89a  ˜  SSSxxx}}}áááäääåååëëëíííîîîñññòòòôôôúúú°°°¢¢¢£££®®®™™™≠≠≠±±±π∏∏ªªª¡¡¡√√√»»»ŒŒŒ–––”””÷÷÷ÿÿÿ€€€ﬁﬁﬁ‡‡‡···„„„ÊÊÊÈÈÈÎÎÎÓÓÓÒÒÒÙÙÙˆˆˆ˛˛˛ˇˇˇÓ`   ÎË›tuÔ@êÓê˚xˇˇˇê˚q›u!    $   ›u, Zx   $Ó`  @      Ó®Óh                       @Ó¨êÓ        $Ó` $ëp!f!eË      Ïê  èÏêÓÏ¿‘πL © ©Ï‘‘∏Ó±”P ©   ÏÏ‘π≤±”P◊=Ä@Ì◊MØÄa◊M„ÄÌ   ë» òàÌ‡ëQ®ëmÓ8   Ì<   ë»ZpÓëQHÌX   ë»ZpÓ$ëQHëmÓh     ÊÑD      0    òê‘ã±˝‡   0    Îòê˚l      ZxÓ8       ™         êÁºê’ÜÓê˚lê˚qê’ÜêÁº  Ì‰êÁ»ÓåêÓê˚xˇˇ  Ìh   ÓåêÓëpˇˇˇëmë	º     ZxÓHë	íZx   Óú›Ì›Ì b¶» ‹b¶‘               ÓhÓÏhPhPÓ†Ê¸#√•.∆†Óÿ¬¬Õ  ¬¬„c hP  `}≈“‡` Ó‘Ó§ˇˇˇÔ@√\î¡ pˇˇˇ¬¬„Dï’hPc†c†Eµ  c Çª       ÍÜ‘ÍÜ‘ÍÜ‘ÍÜ‘ xÔ$›ltÔ,Çª Çª Ê‡£  	ÊÇ∞  ,       y !Hê‡+*\®‡
+&4HÅ‚Ñâ$Fàp®†,RIÑCVúxp1£ BBå$)xpò¢¿Ö
+\¬Ù–¡°Ñù ëìÉC.à `hé`p@ Åàb’∞†¨Ÿ≥h ;_Chttp://blogs.warwick.ac.uk/blogbuilder/media/images/tiny_author.gif” !OâGIF89a  ˜  fˇ ®®®ˇˇˇôôô€€€‚‚‚¯¯¯ŸŸŸ’’’ÎÎÎ˝˝˝ËËË„„„ÚÚÚﬁﬁﬁÌÌÌ˚˚˚ˆˆˆııı‹‹‹˙˙˙˘˘˘›››ÒÒÒ”””ÃÃÃ‡‡‡˜˜˜ÈÈÈÂÂÂÓÓÓ⁄⁄⁄ÏÏÏ‘‘‘◊◊◊ÿÿÿ‰‰‰———–––ﬂﬂﬂ÷÷÷ÁÁÁÛÛÛÔÔÔÙÙÙ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         !˘    ,       f †`ÄÅ¿P¿ÄÑ6T °‡CÖÿ»ÒbD
+y0bëS:å8%Ö08Ä‡b !l¿Åƒ	dXhÄEÇ&`∫0Lhz$8†™U´ ;_Chttp://blogs.warwick.ac.uk/blogbuilder/media/images/tiny_folder.gif”#$OuGIF89a 
+ ˜  fˇ ôôô®®®π∏∏ÃÃÃÕÕÕŒŒŒœœœ–––———“““”””’’’÷÷÷◊◊◊€€€‹‹‹···‚‚‚ÁÁÁËËËÈÈÈÏÏÏÌÌÌÒÒÒÚÚÚÙÙÙ˜˜˜˙˙˙ˇˇˇH  !˚Î®˘D®Ì˙àı8pˇˇˇ˘D®ı}pıä:Ó<Óx   Ó<Î‡›'=      Ód˘9ﬁ˘9„      ÓdÏ›'=Ô8˙àı8`ˇˇˇ˘9„›'œ          ¸ ¿$xGàGï†Gï®$xÙ  Î¿  ÇÏ®GÄ         ˆîVˆîq¸E‡  Ω Ä"Ä G–˝‡ Ïê$  Ï˙àÏ¯˙àıàˇˇˇıê7‘YP © ©‘Y≥x ©   ‘Y…≥x ©    ©◊D˙$U∞,P‘z•      Ì|◊DΩÌÏ   ˘DÀ!∞ıãÕ®ıê7Ó<   ı≠~Ó   ˘DÀ!˚ıãÕHÓ,   ˘DÀ!˚ıãÕHıê7Óx   <ÌË‘®˛Gà    0‘;OÌ¥‘;3" "!∏  ÓÄ   ˘DÀI≈ıãÕ$8ıê7GpI≈¯  ıµ»ı√®   ˘9ﬁ˘9„ıµ»ı√®   Ì‰ı√¥     ı8`ˇˇˇ˘9„7!  Ìp  Óå˙àıàˇˇˇıê7˜…˝     !˚ı≠ë!˚       »Gp <  <$  Ìƒ   Ó∏˙àıàˇˇˇıê7¬´.$     ¬´3GpI≈¯  ˇˇˇÓ¿›çdI≈¯ÓîÓÃÔ8√>∞¡ 0ˇˇˇ¬´3›8ÄI≈¯Dï’I≈¯c†c†EµG  GpMoÿ      ÍXÍXÍXÍX x xÔ8›YÔ$›Ω∑   ››  !˘    ,     
+  R H∞†¿* †á#2H¿∞√Ü(HÄ‡`¡Åä"FDP†""<h†¿ Å  »îY!Å0Ë‹)†B…ù@uˆÃîgŒÄ  ;_Dhttp://blogs.warwick.ac.uk/blogbuilder/media/images/tiny_comment.gif”&'OÜGIF89a  ˜  fˇ ôôô›››®®®ˇˇˇÈÈÈÂÂÂ‚‚‚ÏÏÏÙÙÙﬂﬂﬂÌÌÌ◊◊◊’’’ŸŸŸ‹‹‹ÿÿÿﬁﬁﬁÍÍÍ¸¸¸–––ÚÚÚııı˚˚˚¯¯¯⁄⁄⁄€€€ÊÊÊ‰‰‰“““ÓÓÓÒÒÒ˘˘˘ÁÁÁ˜˜˜‘‘‘···                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              !˘    ,       c 8 ¿¿É"\8Ä É	† 1bC!FTL¯p@Çç3¿`H /åDP d√F0p`cC&Ã<††b√íFñê∞!ƒÜ,9†°Åà¢Jù@@  ;_Bhttp://blogs.warwick.ac.uk/blogbuilder/media/images/tiny_pling.gif”)*OGIF89a  ’? ÕÕ˛{{õÆÆ€ŸŸˇ——ı¥¥›››ˇõõ¬îîª  ˝ƒƒÌ∂∂‡CCa..Gııˇ≈≈˘††√ºº€ÍÍˇ©©◊÷÷ı÷÷ˇììƒÂÂ˛˙˙ˇ¿¿·≠≠Ã»»Ëåå¥ÓÓˇÒÒˇ‚‚ˇßß»……Òππ“˛˛ˇ∆∆ı––ˇ''?öö »»Ù¬¬ı∫∫Á∏∏È
+µµËÕÕˆ””ˇ≈≈ÚΩΩËﬁﬁ˘2øøÛººÓ∞∞·””¯œœ¸ŸŸ˜¢¢—__~∆∆ﬂ◊◊˙ππÏˇˇˇ!˘  ? ,       ˇ¿üG)b±Õp…∫dáGb¿≠M¶ÉÒÏŒ´Ù–eÖ∆!	Ä≥ ãúa#ˆ«0ÿôJ	7'g
+#{7;3s)9g1|,ç (=ëY=|!Å$2:"g?6/,8=96!.(!M%%{!-T(6L>/*  -k&&∞%5K' BŸ€r	L6v/Ë&cÅ!‡K?8:#ÁA
+ŒÑ†ƒg¿Çs–ÿ∞/ãQ/X∞D!+!*^ç—î¢GÖ‡£∆ä0†LπÑ«!8–lA¿Çô;á8°3ËLÇ  ;_Hhttp://blogs.warwick.ac.uk/blogbuilder/media/images/commenticonlarge.gif”,-O~GIF89a
+  ≥  Ö¢ÆÕ⁄‡~ù™‘‡‰ËÔÚ¨¡…⁄‰È∆’€ãß≥ÓÙˆºÀÕ¶º≈˚˛ˇ         !˘     ,    
+   +ê©Ißd8„• @∞uåë$¬®1)√er®X!“ëdo=§ïÀµ(å ;_Ihttp://blogs.warwick.ac.uk/blogbuilder/media/images/admin/qmark_white.gif‘/0123_WebResourceTextEncodingNameUUTF-8OY÷<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        
+        
+        <TITLE>TiddlyWiki ‚Äì a natural way to edit web pages, 09/04/05, E-learning Advisor Team</TITLE>        
+        <META name="description" content="This is the journal of the University of Warwick E-learning Advisor Team, part of the elab group of IT Services. We use this to record our work in developing the use of IT withing academic activities in the University.">
+        
+        
+
+
+        <LINK rel="stylesheet" href="/blogbuilder/media/css/layout.css" type="text/css" media="screen">
+        <LINK rel="stylesheet" href="/blogbuilder/media/styles/warwick/style.css" type="text/css" media="screen">
+                
+        
+        
+        
+        <LINK rel="stylesheet" href="/blogbuilder/media/css/print.css" type="text/css" media="print">
+                
+<SCRIPT type="text/javascript" src="/blogbuilder/media/js/popuplib.js"></SCRIPT><SCRIPT type="text/javascript" src="/blogbuilder/media/js/helppopup.js"></SCRIPT>                
+
+        
+
+
+
+
+
+
+<SCRIPT type="text/javascript">
+var mytarget = "http://blogs.warwick.ac.uk/e-learning/entry/tiddlywiki_a_natural/";
+
+function showLoginWindow(url,focusHere) {
+	window.open(url,"warwickLogin","height=180,width=310");
+	if (focusHere == 'true') {
+		window.focus();	
+	}
+}
+function showWindow(url,focusHere,height, width,title) {
+	window.open(url,title,"height=" + height + ",width=" + width + ",resizable=yes,scrollbars=yes,status=yes");
+	if (focusHere == 'true') {
+		window.focus();	
+	}
+}
+
+function showLogin() {
+	
+			
+		
+			showLoginWindow('https://www2.warwick.ac.uk/contentstore/signOn.do?forward=login&target=http://blogs.warwick.ac.uk/blogbuilder/jsp/loginCloser.jsp','false');
+		
+	
+}
+function showLogout() {
+	
+			
+		
+			showLoginWindow('https://www2.warwick.ac.uk/contentstore/signOn.do?forward=logout&target=http://blogs.warwick.ac.uk/blogbuilder/jsp/logoutCloser.jsp','true');
+		
+	
+	
+}
+</SCRIPT>
+
+<SCRIPT type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() {
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></SCRIPT>
+
+
+
+</HEAD><BODY>
+
+<DIV id="leftshading"><DIV id="rightshading">
+
+<DIV id="mainContent">        
+        
+        
+                <DIV id="entries-page">        
+
+                
+
+<DIV id="banner">        <DIV id="bannerImageRight"></DIV>
+        <DIV id="bannerImageLeft"></DIV>
+        <DIV id="topBar"></DIV>        
+        
+        <DIV id="siteLogoBar">                <A title="This is the journal of the University of Warwick E-learning Advisor Team, part of the elab group of IT Services. We use this to record our work in developing the use of IT withing academic activities in the University." href="/e-learning/">E-learning Advisor Team</A>
+        </DIV>
+        
+        <DIV id="utilityBar">
+        <DIV id="bloglinks">                <A href="/showall">Warwick Blogs</A>
+                <SPAN class="spacer">|</SPAN>
+        
+                <A href="/e-learning/contact/">Contact me</A>
+                <SPAN class="spacer">|</SPAN>
+        
+        
+        
+        
+        
+        
+        
+
+        </DIV>
+        
+        <DIV id="adminlinks">                
+        
+<UL id="nav">        
+                
+        
+                        
+                        
+                                <LI><A href="javascript:showLogin();">| Sign in</A></LI>
+                        
+                        </UL>
+
+                
+                </DIV>
+        
+        
+        
+        </DIV>
+
+</DIV>
+        
+                <DIV class="content" id="sideContent">        
+
+
+
+<DIV class="noindex">
+
+
+
+
+
+
+
+
+
+
+                
+
+
+<DIV id="calendar" class="sideContentItem">        <H2><A href="/e-learning/monthly/0405/">April 2005</A></H2>
+        <TABLE class="calendar">                <TBODY><TR><TD class="calendardayheader">Mo</TD><TD class="calendardayheader">Tu</TD><TD class="calendardayheader">We</TD><TD class="calendardayheader">Th</TD><TD class="calendardayheader">Fr</TD><TD class="calendardayheader">Sa</TD><TD class="calendardayheader">Su</TD></TR><TR><TD class="calendarday ">¬†¬†</TD><TD class="calendarday ">¬†¬†</TD><TD class="calendarday ">¬†¬†</TD><TD class="calendarday ">¬†¬†</TD><TD class="calendarday ">1</TD><TD class="calendarday ">2</TD><TD class="calendarday ">3</TD></TR><TR><TD class="calendarday ">4</TD><TD class="calendarday ">5</TD><TD class="calendarday ">6</TD><TD class="calendarday ">7</TD><TD class="calendarday ">8</TD><TD class="calendarday "><A title="1 entry on 09 April 2005" href="/e-learning/daily/090405/">9</A></TD><TD class="calendarday ">10</TD></TR><TR><TD class="calendarday ">11</TD><TD class="calendarday ">12</TD><TD class="calendarday ">13</TD><TD class="calendarday "><A title="2 entries on 14 April 2005" href="/e-learning/daily/140405/">14</A></TD><TD class="calendarday ">15</TD><TD class="calendarday ">16</TD><TD class="calendarday ">17</TD></TR><TR><TD class="calendarday ">18</TD><TD class="calendarday ">19</TD><TD class="calendarday ">20</TD><TD class="calendarday ">21</TD><TD class="calendarday ">22</TD><TD class="calendarday ">23</TD><TD class="calendarday ">24</TD></TR><TR><TD class="calendarday "><A title="1 entry on 25 April 2005" href="/e-learning/daily/250405/">25</A></TD><TD class="calendarday ">26</TD><TD class="calendarday ">27</TD><TD class="calendarday ">28</TD><TD class="calendarday ">29</TD><TD class="calendarday ">30</TD></TR><TR><TD class="calendarcontrols" colspan="2">                        
+                                <A href="/e-learning/monthly/0305/">Mar</A>
+                        
+                </TD><TD class="calendarcontrols" colspan="3">                        | ¬†<A href="/e-learning/newentries/">Today</A>¬† |
+                </TD><TD class="calendarcontrols" colspan="2">                        
+                                <A href="/e-learning/monthly/0505/">May</A>
+                        
+                </TD></TR></TBODY></TABLE>
+</DIV>
+
+<DIV class="nofollow sideContentItem">
+
+        <H2>Search this blog</H2>
+        
+
+
+
+
+
+
+<DIV id="blogSearch">
+<FORM action="http://search.atomz.com/search/" method="get"> 
+<P><INPUT id="searchText" name="sp-q" size="15" title="Type a word or phrase, then click Search"> 
+<INPUT type="image" value="Go" src="/blogbuilder/media/styles/system/images/go.gif" alt="Search Warwick Blogs">
+
+
+        <INPUT name="sp-q-1" type="hidden" value="url:blogs.warwick.ac.uk/e-learning">
+
+<INPUT name="sp-a" type="hidden" value="sp10033135"> 
+<INPUT name="sp-p" type="hidden" value="all"> 
+<INPUT name="sp-f" type="hidden" value="ISO-8859-1"> 
+</P>
+</FORM> 
+
+</DIV>
+</DIV>
+
+
+<DIV class="nofollow">
+
+
+
+
+
+
+
+<DIV id="categories" class="sideContentItem"><H2>Categories</H2>
+<UL>
+<LI><A title="" href="/e-learning/category/arts_faculty/">Arts Faculty</A></LI>
+
+<LI><A title="" href="/e-learning/category/centre_for_lifelong_learning/">Centre for Lifelong Learning</A></LI>
+
+<LI><A title="" href="/e-learning/category/emerging_requirements/">Emerging requirements</A></LI>
+
+<LI><A title="General category" href="/e-learning/category/general/">General</A></LI>
+
+<LI><A title="" href="/e-learning/category/learning_grid/">Learning Grid</A></LI>
+
+<LI><A title="" href="/e-learning/category/medical_school/">Medical School</A></LI>
+
+<LI><A title="" href="/e-learning/category/modern_languages/">Modern Languages</A></LI>
+
+<LI><A title="" href="/e-learning/category/pdp/">PDP</A></LI>
+
+<LI><A title="" href="/e-learning/category/pdp_project/">PDP project</A></LI>
+
+<LI><A title="" href="/e-learning/category/plagiarism_and_collusion/">Plagiarism and Collusion</A></LI>
+
+<LI><A title="" href="/e-learning/category/research_networks_project/">Research Networks Project</A></LI>
+
+<LI><A title="" href="/e-learning/category/science_and_engineering/">Science and Engineering</A></LI>
+
+<LI><A title="" href="/e-learning/category/skills_certificate/">Skills Certificate</A></LI>
+
+<LI><A title="" href="/e-learning/category/social_studies/">Social Studies</A></LI>
+
+<LI><A title="" href="/e-learning/category/technology_reviews/">Technology reviews</A></LI>
+
+<LI><A title="" href="/e-learning/category/website/">Website</A></LI>
+
+<LI><A title="" href="/e-learning/category/eportfolios/">eportfolios</A></LI>
+
+</UL>
+</DIV>
+
+
+</DIV>
+
+<DIV class="nofollow">
+
+
+
+
+
+</DIV>
+
+
+        
+        
+
+
+<DIV id="galleries" class="sideContentItem"><H2>Galleries</H2>
+<UL>
+
+
+<LI><STRONG><A href="/e-learning/slideshow/">Slideshow of all galleries</A></STRONG></LI>
+
+
+        
+
+
+        
+
+        <LI><A href="/e-learning/gallery/lob_designs/">LOb designs</A> (2 images)</LI>
+
+
+        
+
+        <LI><A href="/e-learning/gallery/medical_-misc/">Medical -misc</A> (2 images)</LI>
+
+
+        
+
+        <LI><A href="/e-learning/gallery/screenshots/">Screenshots</A> (2 images)</LI>
+
+
+        
+
+        <LI><A href="/e-learning/gallery/training_sessions/">Training sessions</A> (2 images)</LI>
+
+
+
+
+</UL>
+</DIV>
+
+
+
+
+<DIV class="nofollow">
+
+
+
+
+
+
+
+<DIV id="mostrecentcomments" class="sideContentItem"><H2>Most recent comments</H2>
+<UL>
+<LI>                I dont really like it because you cant get to the muther fuckin thing by 
+        
+                John Owen
+        
+        
+        on this <A title="Citation machine" href="/e-learning/entry/citation_machine/">entry</A></LI>
+
+<LI>                Shameless advertising
+TiddlyWiki on steroids link‚Ä¶ by 
+        
+        
+        <A href="http://www.kevembuangga.com/hwk/">Kevembuangga</A>
+        
+        on this <A title="TiddlyWiki ‚Äì a natural way to edit web pages" href="/e-learning/entry/tiddlywiki_a_natural/">entry</A></LI>
+
+<LI>                PRS would be one idea‚Ä¶ by 
+        
+        
+        <A href="http://blogs.warwick.ac.uk/stevencarpenter/">Steven Carpenter</A>
+        
+        on this <A title="WTC Workshops; Plagiarism Prevention and Detection" href="/e-learning/entry/wtc_workshops_plagiarism/">entry</A></LI>
+
+<LI>                Yes, for academic work, the editing (or commenting) process needs t‚Ä¶ by 
+        
+        
+        <A href="http://blogs.warwick.ac.uk/robertotoole/">Robert O'Toole</A>
+        
+        on this <A title="TiddlyWiki ‚Äì a natural way to edit web pages" href="/e-learning/entry/tiddlywiki_a_natural/">entry</A></LI>
+
+<LI>                This is nice ‚Äì MediaWiki has been able to edit on a per-paragraph b‚Ä¶ by 
+        
+        
+        <A href="http://blogs.warwick.ac.uk/maxhammond/">Max Hammond</A>
+        
+        on this <A title="TiddlyWiki ‚Äì a natural way to edit web pages" href="/e-learning/entry/tiddlywiki_a_natural/">entry</A></LI>
+
+</UL>
+</DIV>
+
+</DIV>
+
+<DIV class="nofollow">
+
+
+
+
+
+<DIV id="mostrecententries" class="sideContentItem"><H2>Most recent entries</H2>
+<UL>
+<LI><A href="/e-learning/entry/concept_mapping_tools/">Concept mapping tools</A></LI>
+
+<LI><A href="/e-learning/entry/introduction_to_e-learning/">Introduction to E-learning Presentation to the English Department</A></LI>
+
+<LI><A href="/e-learning/entry/learning_design_blog/">Learning Design blog created</A></LI>
+
+<LI><A href="/e-learning/entry/wtc_workshops_plagiarism/">WTC Workshops; Plagiarism Prevention and Detection</A></LI>
+
+<LI><A href="/e-learning/entry/eorientation_day_slides/">eOrientation day slides online</A></LI>
+
+<LI><A href="/e-learning/entry/tiddlywiki_a_natural/">TiddlyWiki ‚Äì a natural way to edit web pages</A></LI>
+
+</UL>
+</DIV>
+</DIV>
+
+<DIV class="nofollow">
+
+
+
+
+<DIV id="entrytypes" class="sideContentItem"><H2>Types of entry</H2>
+<UL>
+
+        <LI><A href="/e-learning/entrytype/book/">Book reviews</A></LI>
+        <LI><A href="/e-learning/entrytype/dvd/">DVD reviews</A></LI>
+        <LI><A href="/e-learning/entrytype/music/">Music reviews</A></LI>
+        <LI><A href="/e-learning/entrytype/answer/">Prompt responses</A></LI>
+
+</UL>
+</DIV>
+</DIV>
+
+<DIV class="nofollow">
+
+        
+
+
+</DIV>
+
+<DIV id="signincopyrightfooter" class="sideContentItem">
+
+        Not signed in<BR>
+        <A href="javascript:showLogin();">Sign in</A>
+
+<BR><BR>
+Powered by <A href="/showall" title="BlogBuilder home page">BlogBuilder</A> 
+<BR>
+<A href="http://www2.warwick.ac.uk/services/its/elab/services/webtools/blogs/terms/" title="Copyright and privacy statement">¬© MMV</A> 
+
+</DIV>
+
+</DIV>
+
+
+        </DIV>
+
+                
+        <DIV class="content" id="centreContent">        
+        
+
+
+
+
+
+
+
+<DIV class="day">
+<H2 class="dateheader">April 09, 2005</H2>              
+<DIV class="entry">
+
+        
+
+
+
+
+
+        
+
+                
+                        
+                                
+                                
+
+
+
+
+
+
+
+
+        
+        <H3 class="entryHeader">                
+                
+                
+                        
+                                
+                                        TiddlyWiki ‚Äì a natural way to edit web pages
+                                
+                                
+                        
+                                                
+                
+                
+                
+        </H3>
+        
+                
+                
+                
+                
+                        <P class="answer">Writing about web page <A href="http://www.tiddlywiki.com/" title="Related external link: http://www.tiddlywiki.com/">http://www.tiddlywiki.com/</A></P>
+                
+                
+                
+                
+                
+                
+                
+
+<H6>Overview</H6>
+
+        <P>A short note about a client-side javascript wiki tool, used for writing and editing document online. The interesting aspect is the way in which it supports editing a web page in the same context in which it will be read, which may be educationally valuable.</P>
+
+        <H6>Main text</H6>
+
+        <P>TiddlyWiki is a nice client-side JavaScript app that allows you to write and edit a web page in a very natural way. Each paragraph has a set of links at the end of it that allow the paragrah to be edited (or deleted). On clicking the link, the paragraph is replaced by a text entry box containg the paragraph's text. You can modify the text and save it. I assume that the changes are stored as a cookie.</P>
+
+        <P>It's a very intuitive approach, allowing you to keep the whole document in context as it is being editied, rather than going of into a html editor to make changed. It is also much faster than loading a web editor. I remember using a similar approach a few years ago to write a system that would take any web page and insert a link at the end of every paragraph for adding a comment to the paragraph. Clicking the link would open a text entry box under the paragraph to which the reader could add a comment. There was also a link to read the comments left by others. </P>
+
+        <P>In-context editing and commenting is <STRONG>very useful</STRONG> for education. Modifying a text occurs during reading and considering it closely. Having tp go off into a seperate editor programme breaks that concentration.</P>
+
+        <P>I know that there are other similar editors being developed that use the editing extensions that are part of the latesr browsers (but not standard). These approaches actually allow text to be types in directly to the page without using a text box. As the extensions aren't yet standard or properly supported, this text box approach is the best approach yet.</P>
+
+
+
+                        
+                
+
+                <BR>
+
+                <P class="smallcopy entryfooter">                <IMG src="/blogbuilder/media/images/tiny_author.gif" title="Staff: Information Technology Services" alt=""> 
+                                Robert O'Toole       :
+                
+
+                
+                        <A href="/e-learning/daily/090405/" title="Read all entries written on this date">09 Apr 2005</A> 20:19
+                
+                        
+                
+                        
+
+                        
+                                |¬†<IMG src="/blogbuilder/media/images/tiny_folder.gif" alt="">¬†<A href="/e-learning/category/technology_reviews/" title="Read all entries in this category">Technology reviews</A>
+                        
+                
+                
+                |¬†<IMG src="/blogbuilder/media/images/tiny_comment.gif" alt=""> <A href="javascript:showWindow('/blogbuilder/admin/comments/view.spr?entryId=094d739902ff6e1c0103286692bc2e3b&blog=094d4021fca2d6b200fca30785cd0010','false',450,400,'viewComments');" title="Read or add comments">Comments¬†(3)</A>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                |¬†<IMG src="/blogbuilder/media/images/tiny_pling.gif" alt="">¬†<A href="/blogbuilder/admin/reportAbuse.spr?blog=094d4021fca2d6b200fca30785cd0010&entryId=094d739902ff6e1c0103286692bc2e3b" title="Tell the University if you think there may be a problem with this entry">Report¬†a¬†problem</A>
+                
+                
+                </P>
+
+        <DIV id="comments">        <A name="comments"></A>
+        
+        
+        
+        
+        
+        
+        
+        <H3 class="commentsHeader"><IMG src="/blogbuilder/media/images/commenticonlarge.gif"> Comments</H3>       
+        
+
+
+
+
+<OL class="commentsList">        
+         
+        
+        
+                
+                
+                        <LI class="commentItem loggedInComment" title="Comment by a logged in user">        
+                
+        
+        
+                <A name="comment1"></A>
+        
+        
+                <H4 class="commentauthor"><A target="_blank" href="http://blogs.warwick.ac.uk/maxhammond/">Max Hammond</A></H4>
+        
+        
+        
+        
+                <P>This is nice ‚Äì MediaWiki has been able to edit on a per-paragraph basis for some time, but you lose the context around it, which is as you say crucial ‚Äì not just for education, but for editing any substantial document.</P>
+        
+        
+        
+        
+        
+        
+        <P class="smallcopy commentfooter">09 April 2005, 22:34
+         
+        
+        
+        </P>
+        </LI>
+         
+        
+        
+                
+                        <LI class="commentItem authorComment" title="Comment by the author of this entry">                
+                
+        
+        
+                <A name="comment2"></A>
+        
+        
+                <H4 class="commentauthor"><A target="_blank" href="http://blogs.warwick.ac.uk/robertotoole/">Robert O'Toole</A></H4>
+        
+        
+        
+        
+                <P>Yes, for academic work, the editing (or commenting) process needs to be as natural as possible, not interrupting the flow of thought. I'm sure that there must be some research on this somewhere.</P>
+        
+        
+        
+        
+        
+        
+        <P class="smallcopy commentfooter">10 April 2005, 12:30
+         
+        
+        
+        </P>
+        </LI>
+         
+        
+        
+        
+                <LI class="commentItem nonLoggedInComment" title="Comment by a non-logged in user">        
+        
+                <A name="comment3"></A>
+        
+        
+                <H4 class="commentauthor"><A target="_blank" href="http://www.kevembuangga.com/hwk/">Kevembuangga</A></H4>
+        
+        
+        
+        
+        
+                <P>Shameless advertising<BR>
+TiddlyWiki on steroids <A href="http://www.kevembuangga.com/hwk/">link</A><BR>
+Still Beta and FireFox only<BR>
+Any comments will be appreciated</P>
+        
+        
+        
+        
+        
+        <P class="smallcopy commentfooter">22 April 2005, 05:26
+         
+        
+        
+        </P>
+        </LI>
+        
+        </OL>
+
+        <DIV id="commentform">        <HR id="commentRuler">
+        <H4>Add a comment</H4>
+        
+                
+                        <SCRIPT>
+			function checkComment(form) {
+				if (form.name.value.length <= 0) {
+					alert("Please provide a name");
+					return false;
+				}
+				if (form.content.value.length <= 0) {
+					alert("You must write a comment");
+					return false;
+				}
+				if (form.content.value.length > 4000) {
+					alert("Your comment is too long, must be 4000 characters at most, it is currently " + form.content.value.length + "characters");
+					return false;
+				}
+				return true;
+			}
+			</SCRIPT>
+                                                <DIV style="width:90%;">                <FORM onsubmit="javascript:return checkComment(this);" method="POST" action="/blogbuilder/admin/comments/post.spr?entryId=094d739902ff6e1c0103286692bc2e3b&blog=094d4021fca2d6b200fca30785cd0010">                
+                
+                        <DL>                        
+                
+                        <DT>Name</DT><DD><INPUT type="text" name="name" value=""></DD>
+                        <DT>Email</DT><DD><INPUT type="text" name="email" value=""></DD>
+                
+                
+                
+                
+                        
+                                <DT>Url</DT><DD><INPUT type="text" name="url" size="45" value=""></DD>
+                        
+                        
+                
+                
+                        <DT>Comment</DT>
+                        </DL>
+                        <BR>
+                        <TEXTAREA style="width:95%;" name="content" rows="8" cols="40"></TEXTAREA>                        <BR>
+                        
+                        You can not use HTML, but if you were logged in, you could use our special markup 
+                        <A title="Click here for help" class="help" target="_blank" href="http://www2.warwick.ac.uk/services/its/elab/services/webtools/blogs/faqs/entry/textile/?xdoplain=true"><IMG src="/blogbuilder/media/images/admin/qmark_white.gif"></A>
+                        
+                        
+                        <P>                        <INPUT type="hidden" name="doSmall" value="false">
+                        
+                                <INPUT type="submit" name="preview" value="Preview"> <INPUT type="submit" value="Add comment">
+                        </P>
+                        </FORM>
+                        </DIV>        
+        
+        
+        </DIV>
+        
+        
+
+                
+                
+        
+        </DIV>
+        
+        
+        
+        
+        </DIV>
+
+</DIV>
+        </DIV>
+        
+                
+
+
+        <DIV id="footer">¬†</DIV>
+        
+        
+                </DIV>
+        
+
+</DIV>
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_Ahttp://blogs.warwick.ac.uk/e-learning/entry/tiddlywiki_a_natural/Ytext/html    1 > E W f |*Æ*Ï*ı*¸@ŒAABïB“BŸ[V[î[Ø[∂aua¥aªc&cqc{cÇgg`ggjÙk:kAn∫oorír◊rﬁt“uu$u•uÒu˙vvœ¯–<             4              –F

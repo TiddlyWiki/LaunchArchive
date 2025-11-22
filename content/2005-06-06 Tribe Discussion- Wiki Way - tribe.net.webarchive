@@ -1,0 +1,1351 @@
+bplist00Ó05_WebSubresources_WebMainResource_WebSubframeArchives­ #&'-Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOÊ/* NN4 stylesheet - use <link rel>                         */
+/* This is the only stylesheet for the following browsers: */
+/* Netscape 4.x                                            */
+/* Win IE 3                                                */
+/* Win IE 4                                                */
+/* Mac IE 4.01                                             */
+/* Mac IE 4.5                                              */
+/* Konqueror 2.1.2                                         */
+/* Credit to http://www.thenoodleincident.com/tutorials/typography/css/nn4.css */
+
+/* Globals */
+
+
+/*simple styles for simple browsers. primarily nn4. make darn sure everything in here is overridden in the real css*/
+
+_)http://louvre.tribe.net/tribe/css/nn4.cssXtext/cssÓO<ş/*******************************************************************************
+ *
+ *  Ye OIde Tribe Javascripte Librarie
+ *
+ *  $Id: Utils.js,v 1.39.2.3 2005/04/12 22:45:17 victor Exp $
+ *
+ ******************************************************************************/
+
+// Simple form submission method
+function submitForm(myNextUrl) {
+  // alert(myNextUrl);
+  document.main.nextUrl.value = myNextUrl;
+  document.main.submit(); 
+}
+
+// Small pop-up window
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=400,height=400');");
+}
+
+// Flexible window opening function
+function openWin(url,name,width,height,winoptions) {
+
+  var attributes = new Array();
+  if (!url) return;
+  if (!name) { name = "popup"; }
+  if (width) { attributes[attributes.length] = "width=" + width; }        
+  if (height) { attributes[attributes.length] = "height=" + height; }
+  if (winoptions == "none") {
+    attributes[attributes.length] = "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no";
+  } else if (winoptions == "simple") {
+    attributes[attributes.length] = "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes";
+  } else if (winoptions) {
+          attributes[attributes.length] = winoptions;
+  } else {
+          attributes[attributes.length] = "toolbar=yes,location=yes,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes";  
+  }
+  features = attributes.join(",");
+  
+  newWin = window.open(url,name,features);
+  if (!newWin.opener) {
+    // set reference to this window in the child
+      newWin.opener = self;
+      
+  }
+  if (window.focus) { newWin.focus(); }
+  return false;  
+}
+
+
+// Close window
+function closeWin() {
+        window.close();
+}
+
+
+// returns to previous page
+function goBack() {
+	history.go(-1);
+}
+
+// redirects to a given URL
+function redirect(URL) {
+	window.location.href = URL;
+}
+
+// Opens a popup window with a link to maps.yahoo.com
+// Just give it a street address and city, state or zip
+function checkMap(streetAddress, citystatezip) {
+  query = "country=US&addr=" + escape(streetAddress) + "&csz=" + escape(citystatezip);
+  maplink = "http://maps.yahoo.com/maps_result?" + query;
+  openWin(maplink,'map',800,600,'');
+}
+
+
+// checks all checkboxes on the given form                                                                                                                         
+function checkAll(formname) {
+  for(var i=0;i<document.forms[formname].elements.length;i++) {
+    if(document.forms[formname].elements[i].type == "checkbox") {
+       document.forms[formname].elements[i].checked = true;
+    }
+  }
+}
+
+// checks all checkboxes in a certain divId
+// HACK! v through z allow you to embed your checkboxes in a table.
+// much better to do this recursively
+function checkGroup(formname, divId) {
+  for(var i=0;i<document.forms[formname].elements.length;i++) {
+    if(document.forms[formname].elements[i].type == "checkbox") {
+      v = document.forms[formname].elements[i].parentNode;
+      w = v.parentNode;
+      x = w.parentNode;
+      y = x.parentNode;
+      z = y.parentNode;
+      if ((document.getElementById(divId) == v) || (document.getElementById(divId) == w) || (document.getElementById(divId) == x) || (document.getElementById(divId) == y) || (document.getElementById(divId) == z)) {
+	    document.forms[formname].elements[i].checked = true;
+      }
+    }
+  }
+}
+
+// unchecks all checkboxes on the given form                                                                                                                          
+function uncheckAll(formname) {
+  for(var i=0;i<document.forms[formname].elements.length;i++) {
+    if(document.forms[formname].elements[i].type == "checkbox") {
+       document.forms[formname].elements[i].checked = false;
+    }
+  }
+}
+
+// unchecks all checkboxes in a certain divId
+// HACK! v through z allow you to embed your checkboxes in a table.
+// much better to do this recursively
+function uncheckGroup(formname, divId) {
+  for(var i=0;i<document.forms[formname].elements.length;i++) {
+    if(document.forms[formname].elements[i].type == "checkbox") {
+      v = document.forms[formname].elements[i].parentNode;
+      w = v.parentNode;
+      x = w.parentNode;
+      y = x.parentNode;
+      z = y.parentNode;
+      if ((document.getElementById(divId) == v) || (document.getElementById(divId) == w) || (document.getElementById(divId) == x) || (document.getElementById(divId) == y) || (document.getElementById(divId) == z)) {
+	    document.forms[formname].elements[i].checked = false;
+      }
+    }
+  }
+}
+
+
+
+
+//toggle visibility of a div
+function toggleVisibility(divId) {
+  myDiv = document.getElementById(divId);
+  if (myDiv.style.display == "none") {
+    myDiv.style.display = "";
+  } else {
+    myDiv.style.display = "none";
+  }
+  return false;
+}
+
+// disable form elements
+//
+// usage: onClick="toggleFormElements('thisID','element1','element2'...)
+//
+// where: thisID = ID of this checkbox
+//        element(n) = elements you want this to show/hide
+//
+function toggleFormElements() {
+	var toggler = arguments[0];
+	if (document.getElementById(toggler).checked == true) {
+		for (var i=1; i<arguments.length; i++) {
+			document.getElementById(arguments[i]).disabled = true
+		}
+	}
+	else if (document.getElementById(toggler).checked == false) {
+		for (var i=1; i<arguments.length; i++) {
+			document.getElementById(arguments[i]).disabled = false
+		}
+	}
+}
+
+
+// toggle visibility of a div and its image if available
+//
+// usage: <a href="javascript:toggleDisplay('divId')">
+//
+// where: fieldname = id of div to toggle
+//        fieldnameDIV = id of hidden form element
+//        fieldnameIMG = id of toggle image (optional)
+//        fieldnameMOD = module to toggle
+// 
+// note: show() and hide() are used in ListingFieldsHead.vm's $bodyArgs
+// to set the proper state when the page is (re)loaded
+
+function toggleDisplay(id) {
+  var myElement = document.getElementById(id);
+  if (myElement) {
+    if( myElement.style.display == "none") {
+      show(id);
+    } 
+    else {
+      hide(id);
+    }
+  }
+}
+
+function show(id) {
+  if(document.getElementById(id)) {
+    document.getElementById(id).style.display = "block";
+    // toggle hidden form element if it exists
+    if( document.getElementById(id + 'DIV') ) {
+      document.getElementById(id + 'DIV').value = "show";
+    }
+    // toggle image if it exists
+    if( document.getElementById(id + 'IMG') ) {
+      document.getElementById(id + 'IMG').src = "/tribe/images/redesign/form_expanded.gif";
+    }
+    // toggle header image if it exists
+    if( document.getElementById(id + 'HDR') ) {
+      document.getElementById(id + 'HDR').src = "/tribe/images/redesign/hdr_expanded.gif";
+    }
+    // toggle header image if it exists
+    if( document.getElementById(id + 'MOD') ) {
+      document.getElementById(id + 'MOD').className = "moduleExpanded";
+    }
+  }
+}
+
+function hide(id) {
+  if(document.getElementById(id)) {
+    document.getElementById(id).style.display = "none"; 
+    // toggle hidden form element if it exists
+    if( document.getElementById(id + 'DIV') ) {
+      document.getElementById(id + 'DIV').value = "hide";
+    }
+    // toggle image if it exists
+    if( document.getElementById(id + 'IMG') ) {
+      document.getElementById(id + 'IMG').src = "/tribe/images/redesign/form_collapsed.gif";
+    }
+    // toggle header image if it exists
+    if( document.getElementById(id + 'HDR') ) {
+      document.getElementById(id + 'HDR').src = "/tribe/images/redesign/hdr_collapsed.gif";
+    }
+    // toggle header image if it exists
+    if( document.getElementById(id + 'MOD') ) {
+      document.getElementById(id + 'MOD').className = "moduleCollapsed";
+    }
+  }
+}
+
+
+// Backtrack widget controls
+// We set a cookie everytime you open/close the backtrack widget
+// We call setBackTrack() in $bodyArgs
+
+function showBacktrack() {
+	document.getElementById('subnavLinks').style.display = "none";
+	document.getElementById('backtrackOff').style.display = "none";
+	document.getElementById('backtrackOn').style.display = "block";
+	createCookie('backtrack','open');
+}
+
+function hideBacktrack() {
+	document.getElementById('subnavLinks').style.display = "block";
+	document.getElementById('backtrackOff').style.display = "block";
+	document.getElementById('backtrackOn').style.display = "none";
+	createCookie('backtrack','closed');
+}
+
+function setBackTrack() {
+	var cookieState = readCookie('backtrack');
+	if (cookieState == 'open') {
+	 showBacktrack();
+	}
+	else {
+		hideBacktrack();
+	}
+}
+
+
+// Generic function to read a cookie and toggle the corresponding div. This is used onLoad().
+function setToggleCookie(divId,cookieName) {
+	var cookieState = readCookie(cookieName);
+	if(cookieState) {
+    if (cookieState == 'open') {
+       show(divId);
+       createCookie(cookieName,'open');
+    } else {
+       hide(divId);
+       createCookie(cookieName,'closed');
+    }
+  }
+}
+
+// Generic function to toggle div and cookie state. Triggered by user action.
+function toggleCookie(divId,cookieName) {
+  toggleDisplay(divId);
+  if( document.getElementById(divId).style.display == "none" ) {
+    createCookie(cookieName,'closed');
+  } else {
+    createCookie(cookieName,'open');
+  }    
+}
+
+// Generic Set/Read/Hide Cookies functions
+function createCookie(name,value,days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else 
+    var expires = "";
+    var dom = document.domain;
+    // Need to rejigger the cookie domain to subtract out any possible region info.
+    var domArray = dom.split(".");
+    var cookieDomain = "." + domArray[domArray.length-2] + "." + domArray[domArray.length-1];
+    document.cookie = name+"="+value+expires+"; path=/; domain="+cookieDomain;
+}
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+
+
+// =====================================================
+// Javascript Tabs
+// Use the following markup structure:
+//
+//	<div class="tabs" id="profileTABS">
+//		<div class="tab current" id="basicsTAB">
+//			<a href="javascript: tab('basics', 'profile');">basics</a>
+//		</div>
+//		<div class="tab" id="personalTAB">
+//			<a href="javascript: tab('personal', 'profile');">personal</a>
+//		</div>
+//	</div>
+//
+//	<div class="tabbed-content" id="profileDIVS">
+//		<div id="basicsDIV" class="current">
+//			here's the basic stuff
+//		</div>
+//		<div id="personalDIV" class="hidden">
+//			here's the personal stuff
+//	</div>
+
+function tab(idToShow, group) {
+	// reset tabs
+	var x = document.getElementById(group + 'TABS').childNodes;
+	for (var i=0;i<x.length;i++) {
+		if (x[i].className == "tab current") {
+			x[i].className = "tab";
+		}
+	}
+	// hide all divs in group 
+	var y = document.getElementById(group + 'DIVS').childNodes;
+	for (var i=0;i<y.length;i++) {
+		if (y[i].className == "current") {
+			y[i].className = "hidden";
+		}
+	}
+	// set class on current tab
+	document.getElementById(idToShow + 'TAB').className = "tab current"; 
+	// show current content
+	document.getElementById(idToShow + 'DIV').className = "current"; 
+}
+
+
+// End Javascript Tabs
+// ======================================================
+
+
+
+
+
+// This method attaches a hover class to LI elements for the 
+// suckerfish dropdown.  Used on pub,reg,Register.vm
+// Swiped from www.htmldog.com
+function sfHover() {
+	var sfEls = document.getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+
+// strip out MS Word control characters from <textarea>
+function stringFilter(input) {
+	s = input.value;
+	filteredValues = "1234567890";     // Characters stripped out
+	var i;
+	var returnString = "";
+	for (i = 0; i < s.length; i++) { 
+		var c = s.charAt(i);
+		if (filteredValues.indexOf(c) == -1) returnString += c;
+	}
+	input.value = returnString;
+}
+
+
+
+// replace characters in form fields (from MS Word paste)
+//
+// When pasting from MS Word into a textarea inIE6 on a multipart form, IE6
+// mangles the POST if it runs into a control character greater than 255. 
+// The solution is to replace the character with its html equivalent. 
+//
+// Be sure and run stringReplace BEFORE you submit a form like this.
+//
+// Currently used on:
+//
+// Manage.vm
+// blog/ManageEntry.vm
+//
+// A list of likely characters and their replacements can be found at:
+// http://intertwingly.net/stories/2004/04/14/i18n.html
+//
+
+function stringReplace(input) {
+	var s = input.value;
+	for(var i=0;i<s.length;i++) {		
+		c = s.charCodeAt(i);
+		if(c>255) {
+			var re = new RegExp(s.charAt(i));
+// uncomment the following line to see which characters are getting replaced
+//			alert(re + '= ' + c);
+			s = s.replace(re, "&#"+c+";");
+		}
+	}
+	
+	// replacement string definitions
+	s = s.replace(/&#8217;/gi, "&rsquo;"); // right single quote
+	s = s.replace(/&#8216;/gi, "&lsquo;"); // left single quote
+	s = s.replace(/&#8230;/gi, "&hellip;'"); // ...
+	
+	input.value = s;
+}
+
+
+// Popup a little javascript confirmation dialog for moderators
+// who are deleting a listing, event, or post
+function deleteConfirm(type) {
+  return confirm("You are about to remove this " + type + " from your tribe. Proceed?")
+}
+
+
+// Fade effect for new postings
+// First seen at http://basecamphq.com
+
+var Color= new Array();
+Color[1] = "ff";
+Color[2] = "ee";
+Color[3] = "dd";
+Color[4] = "cc";
+Color[5] = "bb";
+Color[6] = "aa";
+Color[7] = "99";
+
+function waittofade() {
+	if (document.getElementById('fade')) {
+    setTimeout("fadeIn(7)", 10);
+	 }
+}
+
+function fadeIn(where) {
+    if (where >= 1) {
+        document.getElementById('fade').style.backgroundColor = "#ffff" + Color[where];
+		  if (where > 1) {
+			  where -= 1;
+			  setTimeout("fadeIn("+where+")", 200);
+			} else {
+			  where -= 1;
+			  setTimeout("fadeIn("+where+")", 200);
+			  document.getElementById('fade').style.backgroundColor = "transparent";
+			}
+    }
+}
+
+// Resize an image to fit it's container
+function fitImage(imageId, containerId, nativeWidth) {
+  var myDiv = document.getElementById(containerId);
+  var myImage = document.getElementById(imageId);
+  
+  if(myDiv) {
+
+    // take the smaller of offsetwidth and scrollwidth
+    if (myDiv.offsetWidth < myDiv.scrollWidth) {
+      containerWidth = myDiv.offsetWidth
+    } else {
+      containerWidth = myDiv.scrollWidth    
+    }
+
+    // if the image has been upscaled, reset it to it's native size    
+    if(nativeWidth < myImage.offsetWidth) {
+      //alert('containerWidth = ' + containerWidth + '\n nativewidth = ' + nativeWidth + '\nimageOffset = ' + myImage.offsetWidth);      
+      myImage.style.width = nativeWidth + 'px';
+    }
+    
+  }
+}
+
+// sets the onclick action of the toggle div to also call functionName after the toggleDisplay function has been called.
+function setToggleAction(toggleId,functionName) {
+  var myToggle = document.getElementById('TOG'+toggleId);
+  if(myToggle) {    
+    var myElement = document.getElementById(toggleId);
+    myToggle.onclick = function() { toggleDisplay(toggleId); if (myElement.style.display == "block") { eval(functionName); }  return false; }
+  }
+}
+  
+_)http://louvre.tribe.net/tribe/js/Utils.js_application/x-javascriptÓO+GIF89a  €  ÿÿÿ   !ù    ,       D ;_8http://louvre.tribe.net/tribe/images/redesign/spacer.gifYimage/gifÓOGIF89aˆ * ¢  í¢âm
+ÿşşê¯„ÔFº-õÙÂÚwP!ù     ,    ˆ *  ÿ(ºÜş0¾£œ±•`(di2FV ƒ |Š‡ÇQ´g®ï|È¡À,R@€P„õĞ¨h (­ÊRÈ,r¤à°t#\”ÂÇP i_±|^Ø´‚¾k-Óhqt„8a LBh6V‡…„@5wNQA\]-)AAVX––@J/a5vW§ Tœ©`VU5»OgDŒ/‡V6LÍ¼—Œ’FavÀE›‡AŒ®ÅÒPJ¯eV—›¯VKÛ•äQxC¦B5…ãÚ]WEê±ã`ÀHŠNÎ•a¢!‚Q•2 ƒ‘,N2şKb¡ÿ&Nt±jÅ/@$QĞ°6@Ò°Ï»øXà`cƒ…;1ˆ›wP ‡7ñn í¨”€Q–m¤(˜Íg™Mù±ª‘$s,ª(YÀÂ«°T6.-¶ÈØ
+7Ì0\‘±JÆg4 a1£<|x9´0"î=BdşıteÈ™5Dj¼ÁGˆ© ;éùÃb¹É¯Â=ã’ïOG3x"ÛòÆTç'†ì©…”>[6œâ+Èì–FolÖ3Æ,I»‰&"	ˆÒ]-]·½‚ˆk Esd·˜ñ–º’v$š—hm5ft×{hõŒÉ‡Ó…‚ätğI›É;NDäOÿùxr¿„×›o²-„,/M†E4€FÃ¾1‚ `wsD;È•aJ&[÷ŠıIĞÒhß1!”EQxi4 >Û-Ñ*®pAÊKİùØÀ
+i5ÖÆ«Dß^"½HI şñ$áyRwO:×„8µ2ÕúÄ¸#>6â×ŠKÍ ŞâŒ4Š3¯tV¢C˜ĞŠÃP’vT·Û*QµÄ]–]$ÊÖÎTˆ"×††1ˆèÉHôIæÆğà
+ãø_ æ,zĞ!E,"cXÇ.^QŸØ€Q\-Få¨}ùåØa"­b:¼.@×¯ù”XJ<#w@ÿôUê÷éFS;‰šckÕ´ÖÎlTÁœ9m8¤b Ö…Ú©uÈås¹¸Tñ€°~²Á@Œ²hù¼aC°,™³˜k†e¨Ù¸‘x³*HãÜg¦•yØŠ{¬ò"üÕ‡GZ5"q1±Ì]±Á^íÑ‚B‰ø-;ìĞ‚ãhD²[›s†òxBÓÅ¯h”ØÎÙ&N­L<¢UA*TĞ…N|y¬^³= ±%¨µ<¦†¸bô¤aŞŒŒSÃ‡f‘[)édÛ™#’ó-8(Ó¶ï¶1áÏ§°Ds¦4à‹½Rz„•£ƒ"¦dë“eÃŒ"ÿe2[A,x'NÆ5|ó)uëÈ\M5´h)>fÇg™‹á#eœƒˆµ6p<š‡pd3İÒá¥aï”PpCA²‚$Mìh²`×Äp™VÆ4nf4=>‹d^N¬W6¹ä_‹t•¢F0wd™Ï€tŒOb¼ÚÈ|iÂ||Š{@¼ü²£A…éa¿€ŸcVE¼ğ(i]øÌxÖ#”údç&ğ˜áÄUã3È>LD¨ÆğÎ(°Rò$•é„Vª†d4ŒZ0‰G¤‰e —‘øâlí2Õ­æ#sH€uQÑ/˜¤«pTÌsñr›¡óxGLáØ‹Ú¼ tÏ!ÉW½V½b^8.zV%
+1F/6CÖõ.*âdÆ;wÚ8œŒ€ø¢iÒ²3,§XG@l`”e“ÉHQ¦ŒÆèÎwHtÆ¾,×·ŞPÃ/zAJ ıÈÕ	5•¹KÒÌ‘v,?¢X2°¹R,hI :bSEAéÌÔQb2´²
+Zq<%à“;`&\Î¢D–‰ÊîÙòÊTäi„u2•P z¿,ã2EQj hôˆÆn¢Áúìàqá¬\é6'’`	  ;_@http://louvre.tribe.net/tribe/images/redesign/header/logo_sm.gifÓO+GIF89a  €  ÿÿÿÿÿÿ!ù   ,       D ;_/http://louvre.tribe.net/tribe/images/onepix.gifÓÓÓOÿØÿà JFIF  H H  ÿÛ C 	!"$"$ÿÛ CÿÀ  1 A" ÿÄ              	ÿÄ < 		       !1"AQa±#B2346Rqrt‘$57bs²ÂÿÄ              ÿÄ *          !"1A4aq‘23DQÿÚ   ? ËÒŸGoğ(V–Ã·°<¡\ds‡ Û—¯@ÈŞ,GƒüCº)­T)6ó†QÑ–}Ô2é ‘ã>[víÉ-F­NÒ¥e“#<¶&’ÙPDÖ–Ğ¤…3¨ïŒdvFØ·z?W¶4 ŒV5ÖŒ†@Ìù¿Y.ˆá|î¾ø}xY+k÷–ˆü“o6öBÚQîI#>â2“ŒúWÄ
+%âµçhÕ©d¿%4ÙBÁ$ö(ÂàÇÎKí
+ä¨QXS’S`¨{Á' üFÆ.:wf/	»löïü\‘“>Èñ| <pì1Õ&À%árTk0A¼·¸G]ve~ŒßàP²v„eˆ5¿¸<¡MC8Õ˜$Ğß@!\DÛgƒSôêL×AV
+zdFTâHêïŞËº.NŞõg¸I8õB¬ê'd¨K³L‰m(ÊB·"G1¾q¶{c-ØkI¯6Ò¦ÑXêBJYŞ5_®iæÃ”ÉÉ™fÚÔ–(ëŒ`„‚ÎıĞ’êøMK˜íW=×ò<)Ä2H	`ºpVúº/;Æ äÔã¯Reeı³ó@)ÇOTuÎ	Ò€0äóŠ÷uÚeNİU´ĞB¥96ONäËƒYt8zÅ!J ãJyEéuILÊ§ÕöØ–”ŸœW²éÂR„}¥–Ğ7Àïç°ŒÁÆ{jæ·o%ªèœ	‰ätÍÎ¤a/$up»§ÓÙ´]tTqÕÔº`îÑ—kCˆ9rm¸CæŠ…vÉŒÃºz©ÚKÅ îHî†=U@Ì)
+ãA	ë‚0ÁeÓiÒ¦?´yC™9i‰É¦eeXqù‡–i¶ÒT¥¨ò v˜e.=’>áW¢}2Vgˆ‹©Í„ ÆXÕØâöÏÀgõuUwÒRÎv{)-¯ÀêÓr§pÊ\Ìƒû$¾rÀÎä»”[ü¢Ş†Q–«-±&Øh!.–Ğ©€œrÕî)ÌTTİ!å´®·šcßp,¤ §Äi;CtŞÍÑ¨¡Õ·™¶Ø	-ƒ•ã wBcÄŠê”ê¿Â²‚Š{^Ùn”¹-Y–ïª1£­iiÁ8âÈÔÚN:Ç¼<¼b²ôáE<Qm=±6™™”¤{İ„gá¨ºhE4ŠõZ¬É/8’ôÃ™Î6Î‘Ş{"ô…"ì³&ê‹i$Ã™m Œ¤“Ÿ±é:†Rb1òùP%…ó¥«-M§T6^tí'Js0T@ñ†ÍqÔB†à.'ë)£ÄA~Â§º{Mù˜¼½ŸLşÔAµşÙx-7PúáNü»~JˆŸ¾‚¯ó#ÌA/İ÷ ÙHx…õbWãåéı;ªşAëaCâÙê¡ò²üÏÌˆf`‚SnU6\ ‚(KÿÙ_]http://louvre.tribe.net/tribe/upload/photo/100/29a/10029a21-db00-4a62-b37a-f96408b76129.thumbZimage/jpegÓ!"O\GIF89a
+  ¢ ÓÓÓÄÄÄØØØÍÍÍÀÀÀÿÿÿ      !ù   ,    
+   !XºÜ^b„0Ä$k µ'Ñ§Ib6•…V¨…}œMÕc?	 ;_5http://louvre.tribe.net/tribe/images/icon_offline.gifÓ$%OzGIF89a  ³  ÿ«tÿäÒÿ¹‹ÿcÿœ[ÿÍ¬ÿ\ ÿÿÿÿ’Lÿîãÿùõÿtÿz$ÿCÿüúÿ‡7!ù     ,       'ğ ÒqÈpÓÍqSˆBXÊ3ÄÕhñh§4,ÖEp"I@ ;_6http://louvre.tribe.net/tribe/images/icon_degree_1.gifÓÔ()*+,_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓ./Odocument.write('<!-- START AtlasDMT -->\n<IFRAME SRC=\'http://view.atdmt.com/REP/iview/trblno2s0780000133rep/direct/01/389512245?click=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/\' WIDTH=\'120\' HEIGHT=\'600\' FRAMEBORDER=\'0\' SCROLLING=\'no\' MARGINHEIGHT=\'0\' MARGINWIDTH=\'0\' TOPMARGIN=\'0\' LEFTMARGIN=\'0\' ALLOWTRANSPARENCY=\'true\' >\n<SCRIPT LANGUAGE=\'JavaScript\' TYPE=\'text/javascript\' >\ndocument.write(\'<a href="http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/REP/go/trblno2s0780000133rep/direct/01/389512245/" target="_blank"><img src="http://view.atdmt.com/REP/view/trblno2s0780000133rep/direct/01/389512245/" /></a>\');</SCRIPT>\n<NOSCRIPT>\n<A HREF=\'http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/REP/go/trblno2s0780000133rep/direct/01/389512245/\' TARGET=\'_blank\' >\n<IMG SRC=\'http://view.atdmt.com/REP/view/trblno2s0780000133rep/direct/01/389512245/\' BORDER=\'0\' >\n</A>\n</NOSCRIPT>\n</IFRAME>\n<!-- END AtlasDMT -->\n');
+_|http://a.tribalfusion.com/j.ad?site=Tribenet&adSpace=ROS&size=160x600&type=var&noAd=1&requestID=13475183510.3834156507548949Ô(1234UUTF-8O?E<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><HEAD>
+
+  <TITLE>Tribe Discussion: Wiki Way - tribe.net</TITLE>
+  
+
+  
+  <LINK rel="stylesheet" href="http://louvre.tribe.net/tribe/css/nn4.css" type="text/css" media="screen">
+  
+  <STYLE type="text/css" media="screen">@import url("http://louvre.tribe.net/tribe/css/main.css");</STYLE>
+  <STYLE type="text/css" media="screen">@import url("http://louvre.tribe.net/tribe/css/branding-default.css");</STYLE>
+  <STYLE type="text/css" media="screen">@import url("http://louvre.tribe.net/tribe/css/masthead.css");</STYLE>
+  
+  <META http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <META name="MSSmartTagsPreventParsing" content="TRUE">
+  <META http-equiv="expires" content="-1">
+  <META content="no-cache" http-equiv="Pragma">
+  <META content="no-cache" http-equiv="Pragma-directive">
+  <META content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control">
+  <META content="post-check=0, pre-check=0" http-equiv="Cache-Control">
+  <META name="keyword" content="conversation, groups, bulletin boards, online community, clubs, chat, computers, ecommerce, e-business, internet, apple, Macintosh, software, web services, www, world wide web, microsoft, open source, linux, hardware, PC, social networking, bloggers, engineers, peer to peer, P2P, file sharing, download, tech, geeks, broadband, cable modem, dsl, hackers, warez, ">
+  <META name="description" content="A forum for wiki users, administrators, and enthusiasts.">
+
+  <SCRIPT language="Javascript" type="text/javascript" src="http://louvre.tribe.net/tribe/js/Utils.js"></SCRIPT>
+    
+      
+  
+<STYLE type="text/css">
+
+/* OUTER CONTAINER TO SET PAGE MIN WIDTH */
+#outerContainer {
+        min-width: 760px;
+}
+
+.subtitle {
+ font-weight: bold;
+}
+
+.module {
+        width: 100%;
+        margin-bottom: 1px;
+}
+
+.module td, .module th {
+border: solid 1px #c0c0c0;
+text-align: left;
+}
+
+.module th {
+padding: 3px 5px;
+font-size: 12px;
+color: #00000;
+text-transform: capitalize;
+}
+
+table.listings td {
+border: none;
+font-size: 11px;
+}
+
+.maxDepth {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+}
+/* IE5 hack - width 100% blows up so we use width: auto instead */
+table.thread { width: auto; }
+
+i{content:"\"/*"}
+
+/* IE5 hack - this is the real value that will get used by all other browsers */
+table.thread { width: 100%; }
+
+.content_box {
+ background-color: #fff;
+}
+
+</STYLE></HEAD><BODY onload=" setBackTrack();">
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%"><TBODY><TR valign="top"><TD class="us">      <IMG src="http://louvre.tribe.net/tribe/images/redesign/spacer.gif" width="760" height="1" alt="">
+  
+<DIV id="outerContainer">  
+    <A name="top"></A>
+  
+    
+
+
+
+
+
+
+
+
+
+                
+
+<DIV id="masthead">
+  <DIV id="logo">
+    
+          <A href="http://www.tribe.net/local"><IMG src="http://louvre.tribe.net/tribe/images/redesign/header/logo_sm.gif" width="136" height="42" alt="tribe.net"></A>
+      </DIV>
+
+
+    
+    <DIV id="location"></DIV>
+  
+        <DIV id="changeLocation"><A href="http://www.tribe.net/template/pub%2CChangeLocation.vm">change location</A> Â»</DIV>
+  
+    <DIV id="globalNav">          <DIV class="buttons">        <DIV class="button secondary"><A href="http://www.tribe.net/template/pub%2CLogin.vm?overidereferer=%2Ftribe%2Fservlet%2Ftemplate%2FHome.vm">Join or Login</A></DIV>      </DIV>
+    
+  </DIV>
+  
+
+</DIV>
+
+
+
+  
+    
+
+<DIV id="subnav">
+  <FORM name="backtrackForm" method="post" action="" enctype="multipart/form-data">    <INPUT type="hidden" name="backtrackDIV" id="backtrackDIV" value="hide">
+  </FORM>
+
+  <UL id="subnavLinks" style="display: block; ">    <LI><A href="http://www.tribe.net/events">events</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/3000">local favorites</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/3300">services</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/3600">misc</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/1000">community</A> |</LI>
+    <LI><A href="http://www.tribe.net/people">people</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/7000">for sale</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/6000">housing</A> |</LI>
+    <LI><A href="http://www.tribe.net/listing/category/9000">jobs</A> |</LI>
+    <LI><A href="http://www.tribe.net/tribes;jsessionid=BF6BC757FEABB6809DD07B246EA495D3">tribes</A></LI>
+  </UL>
+
+    <DIV id="backtrackOff" style="display: block; "></DIV>
+  <DIV id="backtrackOn" style="display: none; "></DIV>
+ 
+
+</DIV>
+  
+    
+
+
+      
+        <DIV id="breadcrumbs">
+        <DIV class="left" style="text-transform: capitalize;">    <H2>    <A href="http://www.tribe.net/local">Home</A>
+      Â»
+      <A href="http://www.tribe.net/tribes;jsessionid=BF6BC757FEABB6809DD07B246EA495D3">Tribes</A>
+      Â»
+     <A href="http://www.tribe.net/tribe/category;jsessionid=BF6BC757FEABB6809DD07B246EA495D3?showcat=Computers+%26amp%3B+Internet">Computers &amp; Internet</A>
+      Â»
+                    View Tribe
+          </H2>
+  </DIV>
+  
+    
+                  
+
+
+
+  
+  <DIV class="right buttons centered">  <TABLE class="inline">  <TBODY><TR><TD align="center" style="width: 15em">      <DIV class="button primary"><A href="http://www.tribe.net/template/pub%2CPost.vm?tribeid=d7403fc4-2030-4fa9-9bab-68dc75566cc8">postÂ toÂ tribe.net</A></DIV>  <DIV class="subtitle nowrap"></DIV>
+  </TD></TR></TBODY></TABLE>
+  </DIV>
+  
+  <DIV class="spacer"></DIV>
+
+
+
+</DIV>
+  
+  <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">    <TBODY><TR><TD colspan="3"><IMG src="http://louvre.tribe.net/tribe/images/onepix.gif" width="1" height="16" border="0" alt=""></TD><TD rowspan="2" valign="top" align="right">  
+        
+                          </TD></TR><TR><TD><IMG src="http://louvre.tribe.net/tribe/images/onepix.gif" width="12" height="1" border="0" alt=""></TD><TD valign="top" align="left">        
+
+
+                                                                                
+        
+          
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE width="100%" cellpadding="0" cellspacing="0"><TBODY><TR valign="top"><TD>
+    <DIV class="content_box floatholder">    <H4 class="left" style="padding: 0px 6px;">      Tribe Discussion: Wiki Way
+                  </H4>
+
+    <DIV class="right">                              <SPAN class="title-link"><A href="http://www.tribe.net/tribe/d7403fc4-2030-4fa9-9bab-68dc75566cc8;jsessionid=BF6BC757FEABB6809DD07B246EA495D3">back to Wiki Way</A> Â»</SPAN>
+          </DIV>
+ 
+    <DIV class="clear"></DIV>
+  </DIV>
+
+
+
+
+<DIV class="content_box padded-6">  
+                                <DIV><IMG src="http://louvre.tribe.net/tribe/images/onepix.gif" width="1" height="1" border="0"></DIV>
+        <A name="topic.id"></A>
+        <TABLE class="thread" cellpadding="0" cellspacing="10" border="0">            <TBODY><TR><TD width="86" align="left" valign="top">                       
+ <TABLE class="lined minicardlink" border="0" cellspacing="0" cellpadding="1">  <TBODY><TR><TD colspan="2" width="71" height="86" align="center" valign="middle" class="boxgray" bgcolor="#ffffff">   
+         <A href="http://www.tribe.net/person/05f53286-2012-4a40-92f9-51ab3385a201?_click_path=Application%5Btribe%5D.Person%5B05f53286-2012-4a40-92f9-51ab3385a201%5D">       <IMG src="http://louvre.tribe.net/tribe/upload/photo/100/29a/10029a21-db00-4a62-b37a-f96408b76129.thumb" border="0" alt="">     </A>
+    
+     </TD></TR><TR><TD class="body small" colspan="2" height="18" align="center" valign="middle" bgcolor="#ffffff">                                    
+        <A href="http://www.tribe.net/person/05f53286-2012-4a40-92f9-51ab3385a201?_click_path=Application%5Btribe%5D.Person%5B05f53286-2012-4a40-92f9-51ab3385a201%5D" title="the Otherâ„¢">the Otherâ„¢</A>          </TD></TR><TR><TD width="50%" class="body small lined-top lined-right" height="18" align="center" valign="middle" bgcolor="#ffffff">  <IMG align="absmiddle" hspace="3" alt="online status" title="user is offline" src="http://louvre.tribe.net/tribe/images/icon_offline.gif">  </TD><TD width="50%" class="body small lined-top" height="18" align="center" valign="middle" bgcolor="#ffffff">  <NOBR>    <A href="http://www.tribe.net/template/ViewFriends.vm?personid=05f53286-2012-4a40-92f9-51ab3385a201" alt="view this person's friends" title="view this person's friends">104</A>
+  <A href="http://www.tribe.net/template/pub%2CPop.vm?content=Friends" onclick="popUp('http://www.tribe.net/template/pub%2CPop.vm?content=Friends'); return false;"><IMG src="http://louvre.tribe.net/tribe/images/icon_degree_1.gif" align="absmiddle" hspace="2" border="0" alt="friends"></A>
+  </NOBR>
+  </TD></TR></TBODY></TABLE>
+                </TD><TD align="left" valign="top">                          <SPAN class="body post-stale">    June 02, 2005 - 01:11 PM</SPAN>
+                      <SPAN class="subtitle">                        <BR>
+                        <A href="http://www.tribe.net/thread/3f9b825c-cf8e-45bb-a837-80db1f5f4e49?tribeid=d7403fc4-2030-4fa9-9bab-68dc75566cc8&threads=true#e096809d-9111-48fb-a46e-229c99fd0a40" style="color: #000; text-decoration: underline;">Tiddly wiki</A>
+                        <BR>
+                    </SPAN>
+                        <SPAN class="body">                        <BR>
+                        <A href="http://tiddlywiki.com/">tiddlywiki.com/</A>  - standalone (somewhat) wiki that's uses the browser -- ie, save the webpage locally, and the java-script updates itself. no database, no directory of files, etc.
+<BR>
+<BR>The GettingThignsDone adaption <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">shared.snapgrid.com/gtd_tiddlywiki.html</A> has brought this to my attention. 
+<BR>
+<BR>Haven't played around with it yet. Interesting. But the zooming-flashy stuff irritates me. But I suppose you could customize that....
+
+                    </SPAN>
+                </TD></TR><TR><TD></TD><TD>                    <DIV style="float: right;">                                                                                                            <DIV class="buttons" style="width: 15em">                                <DIV class="left" style="margin: 2px;"><DIV class="button quaternary"><A href="http://www.tribe.net/template/JoinTribe.vm?tribeid=d7403fc4-2030-4fa9-9bab-68dc75566cc8&nextpage=http%3A%2F%2Fwww.tribe.net%2Ftemplate%2Fpub%252Ctribes%252CViewThread.vm%3Ftribeid%3Dd7403fc4-2030-4fa9-9bab-68dc75566cc8%26amp%3Bthreadid%3D3f9b825c-cf8e-45bb-a837-80db1f5f4e49">join this tribe to post</A></DIV></DIV>
+                                <DIV class="clear"></DIV>
+                            </DIV>    
+                                            </DIV>          
+                </TD></TR></TBODY></TABLE>    
+
+            
+
+                                                                </DIV>
+
+<DIV class="content_box padded-6" style="text-align: right">
+    <SPAN class="nowrap title-link">        ^ <A href="#top">top of page</A> | <A href="http://www.tribe.net/tribe/d7403fc4-2030-4fa9-9bab-68dc75566cc8;jsessionid=BF6BC757FEABB6809DD07B246EA495D3">back to Wiki Way</A> Â»
+    </SPAN>
+</DIV>
+
+
+
+<BR><BR>
+
+
+<DIV class="content_box floatholder">  <H4 class="left" style="padding: 0px 6px;">TrackBacks</H4>
+  <DIV class="clear"></DIV>
+</DIV>
+
+<DIV class="content_box padded-6 floatholder">  TrackBack URL for this entry:
+  <BR>
+  <BR>http://www.tribe.net/action/Trackback/threadId/3f9b825c-cf8e-45bb-a837-80db1f5f4e49
+  <BR>
+    
+</DIV>
+
+
+</TD><TD width="10">Â </TD><TD width="170">
+
+
+
+     
+       
+  <DIV class="module">    <DIV class="content_box">                               <P>Join this tribe to see your listings posted next to discussion topics.</P>
+      <DIV class="buttons" style="width: 13em; margin: auto;">        <DIV class="button secondary"><A href="http://www.tribe.net/template/JoinTribe.vm?tribeid=d7403fc4-2030-4fa9-9bab-68dc75566cc8&nextpage=http%3A%2F%2Fwww.tribe.net%2Ftemplate%2Fpub%252Ctribes%252CViewThread.vm%3Ftribeid%3Dd7403fc4-2030-4fa9-9bab-68dc75566cc8%26amp%3Bthreadid%3D3f9b825c-cf8e-45bb-a837-80db1f5f4e49">Join This Tribe</A></DIV>      </DIV> 
+    </DIV>
+  </DIV>
+</TD></TR></TBODY></TABLE>
+
+<BR>
+<BR>
+  
+
+          
+                    </TD><TD><IMG src="http://louvre.tribe.net/tribe/images/onepix.gif" width="12" height="1" border="0" alt=""></TD></TR></TBODY></TABLE>
+
+  
+
+<DIV id="footer">  <DIV class="footerContent">  
+    
+      <A href="http://boston.tribe.net/local" class="">Boston</A>
+ |
+      <A href="http://chicago.tribe.net/local" class="">Chicago</A>
+ |
+      <A href="http://losangeles.tribe.net/local" class="">Los Angeles</A>
+ |
+      <A href="http://miami.tribe.net/local" class="">Miami</A>
+ |
+      <A href="http://newyork.tribe.net/local" class="">New York City</A>
+ |
+      <A href="http://philly.tribe.net/local" class="">Philadelphia</A>
+ |
+      <A href="http://sandiego.tribe.net/local" class="">San Diego</A>
+ |
+      <A href="http://sanfrancisco.tribe.net/local" class="">SF Bay Area</A>
+ |
+      <A href="http://seattle.tribe.net/local" class="">Seattle</A>
+ |
+  <A href="http://www.tribe.net/template/pub%2CChangeLocation.vm">more cities</A> Â»
+  
+  <BR>
+  <A href="http://www.tribe.net/home">my tribe.net</A> | 
+  <A href="http://www.tribe.net/template/pub%2CAbout.vm">about tribe.net</A> |
+  <A href="http://www.tribe.net/template/pub%2CWhyTribe.vm">why join tribe.net?</A> |
+  <A href="mailto:advertising@tribe.net">advertise</A> |
+  <A href="http://www.tribe.net/template/pub%2CTerms.vm">terms of use</A> |
+  <A href="http://www.tribe.net/template/pub%2CPrivacy.vm">your privacy</A> |
+  <A href="http://www.tribe.net/template/pub%2CAbout.vm?section=AboutContact">contact us</A> | 
+  <A href="http://www.tribe.net/template/pub%2CAbout.vm?section=AboutFAQ">FAQ</A>
+  
+  </DIV>
+</DIV>
+
+
+</DIV>
+
+</TD><TD class="them">
+
+<CENTER> 
+    
+        <DIV class="googleAd">                <SCRIPT type="text/javascript"><!--
+	google_ad_client = "pub-0284989884927524";
+	google_ad_width = 120;
+	google_ad_height = 240;
+	google_ad_format = "120x240_as";
+	google_ad_channel ="";
+	google_color_border = "E6E6E6";
+	google_color_bg = "FFFFFF";
+	google_color_link = "FF6600";
+	google_color_url = "FF6600";
+	google_color_text = "000000";
+	//--></SCRIPT>
+        <SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</SCRIPT><IFRAME name="google_ads_frame" width="120" height="240" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0284989884927524&dt=1118039015271&format=120x240_as&output=html&url=http%3A%2F%2Fwww.tribe.net%2Ftemplate%2Fpub%2Ctribes%2CViewThread.vm%2Fthreadid%2F3f9b825c-cf8e-45bb-a837-80db1f5f4e49%2Ftribeid%2Fd7403fc4-2030-4fa9-9bab-68dc75566cc8%2Fid%2Fe096809d-9111-48fb-a46e-229c99fd0a40&color_bg=FFFFFF&color_text=000000&color_link=FF6600&color_url=FF6600&color_border=E6E6E6&cc=91&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+                </DIV>
+
+<BR>
+
+
+<SCRIPT language="javascript"><!--
+document.write('<scr'+'ipt language=javascript src="http://a.tribalfusion.com/j.ad?site=Tribenet&adSpace=ROS&size=160x600&type=var&noAd=1&requestID='+((new Date()).getTime() % 2147483648) + Math.random()+'"></scr'+'ipt>');
+//-->
+</SCRIPT><SCRIPT language="javascript" src="http://a.tribalfusion.com/j.ad?site=Tribenet&adSpace=ROS&size=160x600&type=var&noAd=1&requestID=13475183510.3834156507548949"></SCRIPT>
+<IFRAME src="http://view.atdmt.com/REP/iview/trblno2s0780000133rep/direct/01/389512245?click=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/" width="120" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true"></IFRAME>
+
+
+
+
+</CENTER></TD></TR></TBODY></TABLE>
+
+
+</BODY></HTML>_½http://www.tribe.net/template/pub%2Ctribes%2CViewThread.vm/threadid/3f9b825c-cf8e-45bb-a837-80db1f5f4e49/tribeid/d7403fc4-2030-4fa9-9bab-68dc75566cc8/id/e096809d-9111-48fb-a46e-229c99fd0a40Ytext/html¢6<Ñ7Õ(8491:;_WebResourceFrameNameOq<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#ff6600" alink="#ff6600" vlink="#ff6600" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="240" cellspacing="1" cellpadding="0" border="0" bgcolor="#e6e6e6"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://www.tribe.net/template/pub,tribes,ViewThread.vm/threadid/3f9b825c-cf8e-45bb-a837-80db1f5f4e49/tribeid/d7403fc4-2030-4fa9-9bab-68dc75566cc8/id/e096809d-9111-48fb-a46e-229c99fd0a40&hl=en&client=ca-pub-0284989884927524&adU=www.firstpeoplesgallery.com&adT=From+the+Arctic+to+Africa&adU=medicinemangallery.com&adT=Native+Indian+Art+Gallery&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Goooooogle</FONT></A></TD></TR><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to www.firstpeoplesgallery.com','aw0')" onmouseover="ss('go to www.firstpeoplesgallery.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#ff6600"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BDuMkxOujQvTFDsu6SdWphWnm0uoHqKLelQHAjbcB4LYNEAEYASDWhfcBKAJAihZIkjmyAQ13d3cudHJpYmUubmV0ugEKMTIweDI0MF9hc8gBAdoBuQFodHRwOi8vd3d3LnRyaWJlLm5ldC90ZW1wbGF0ZS9wdWIsdHJpYmVzLFZpZXdUaHJlYWQudm0vdGhyZWFkaWQvM2Y5YjgyNWMtY2Y4ZS00NWJiLWE4MzctODBkYjFmNWY0ZTQ5L3RyaWJlaWQvZDc0MDNmYzQtMjAzMC00ZmE5LTliYWItNjhkYzc1NTY2Y2M4L2lkL2UwOTY4MDlkLTkxMTEtNDhmYi1hNDZlLTIyOWM5OWZkMGE0MOgBAQ&num=1&adurl=http://www.firstpeoplesgallery.com&client=ca-pub-0284989884927524" onfocus="ss('go to www.firstpeoplesgallery.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.firstpeoplesgallery.com','aw0')" onmouseout="cs()"><B>From the Arctic to Africa</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Fine Art. Inuit, African, Iroquois Mohawk pottery, NW Indian, and more<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#ff6600">www.firstpeoplesgallery.com</FONT></DIV></TD></TR><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to medicinemangallery.com','aw1')" onmouseover="ss('go to medicinemangallery.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#ff6600"><A id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BSr1UxOujQvTFDsu6SdWphWmEpIwCqMrQBsCNtwGw2wYQAhgCINaF9wEoAkCKFkiHObIBDXd3dy50cmliZS5uZXS6AQoxMjB4MjQwX2FzyAEB2gG5AWh0dHA6Ly93d3cudHJpYmUubmV0L3RlbXBsYXRlL3B1Yix0cmliZXMsVmlld1RocmVhZC52bS90aHJlYWRpZC8zZjliODI1Yy1jZjhlLTQ1YmItYTgzNy04MGRiMWY1ZjRlNDkvdHJpYmVpZC9kNzQwM2ZjNC0yMDMwLTRmYTktOWJhYi02OGRjNzU1NjZjYzgvaWQvZTA5NjgwOWQtOTExMS00OGZiLWE0NmUtMjI5Yzk5ZmQwYTQw6AEB&num=2&adurl=http://medicinemangallery.com&client=ca-pub-0284989884927524" onfocus="ss('go to medicinemangallery.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to medicinemangallery.com','aw1')" onmouseout="cs()"><B>Native Indian Art Gallery</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Pawn, navajo rugs, pottery, baskets Authentic Native American Indian<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#ff6600">medicinemangallery.com</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0284989884927524&dt=1118039015271&format=120x240_as&output=html&url=http%3A%2F%2Fwww.tribe.net%2Ftemplate%2Fpub%2Ctribes%2CViewThread.vm%2Fthreadid%2F3f9b825c-cf8e-45bb-a837-80db1f5f4e49%2Ftribeid%2Fd7403fc4-2030-4fa9-9bab-68dc75566cc8%2Fid%2Fe096809d-9111-48fb-a46e-229c99fd0a40&color_bg=FFFFFF&color_text=000000&color_link=FF6600&color_url=FF6600&color_border=E6E6E6&cc=91&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123Ò=B¡>Ó?@AO5MCWSOH  xœí{y8•İ×ğ¾32Ë™2gv¤á(!óXÆBÆCDir'	‘Y¦rJ„Ì³C”D)óPÑ<)M*‘ï>=ç×ï}¿÷»Şïûã»Şs.·{í5ìµ÷^{íµ×Şç€äà €ÿ0´T3ZÀZ  (%ıf¸¢Tä)ì<Eë
+wµE³e™O;İÈ“IX=Áõ³twŒ.‘šµ‘	´€­+
+„å‰:\ÅCì7®³Ö}½nãŒÅ¹VLl>W}pêAI ¯[Àº X;kB=Mİ[ƒ½Àü%ä±HÀbQˆ˜²·àÛP 0€Ë>‰Ñ^5hàÑ½°…şh¡?Âèˆ, eÖ.éx¢·%‘6öÈ1{é	9V¹Ì[ïkbòë¾·™X€ªßE”±wØ“ğâiåÛ²Ü²:2ñSÎÂjîSy»øÈ@&hÒ/ø8~©÷Côƒ<n*8PXŞÏUß¿^r°Íûú§¤üÚBƒz sÆU»³KF@w|ş³Ê7e¹å‹’xûó(y†;‡ÌÚQ¨4úDå€ë‡…’.½ÌG—aæÜÜ÷Yş7ÄuÅAÆÒpÇ}˜èÄ,Õ+ömÅx±[?Dó(ckßèğ6Xız]ÇJ;%DøD‘Š
+Øaèüo¦¦†Æ°UmWƒ•­õœ1àn§B¶r¬ÜêÌ¥Ûûm¿[Á˜#fÑû—[È1×îF2¸ÒÿİÏ¢=d‡‰[ñ~èã
+›wµªÜ¾8™Zw9ˆXÀ¶®×rsÛGÃVw»å;•]ìà(æepÕU%”
+çÑg .WáRñuœ)0dŸR¢^bø,ô]"„ÚŠÄ£û¹ıdŸÔ[æ¥T µka¿ò|v~áy¡qk­7/ëÒ_×šE>N>gDA"Ú÷òı…ªqTŸŞûëN²lsˆ™wó]© _&öØ½ºôª9D#+éNÑõ³7ÇOWØœ••zfªº½°È•|+C/°¡o¼¿–Z øa¼s<(”Ï›ÔC-u!ãí€'°ÔBÇÜ~ÜBS2Şé”pj=ª^øSPô\6©L»2ºˆÑ–…<¢à KM»[ãö h× «ú1s˜o?\Œ¾-ÑVÄı…ûlÑìuË®¤S@Á¾™Aïœ£MñY^"¯P{/İ˜–]¯¯~=.p‹Å fÜÙ£ªÂÚÆ¶`zƒ6nWvîó‚èö‹Ì‡uõ¼>g¤ÃæLNô°c³ÔØ2µÓVE½¶Ëk‚'H1T´ÏÄ)òZ}­Ã²º
+H¿Íì)ŞÍ]®uuáëşüánPšjºªè:~àñ;‡ñ”}°²EêÌ$X®Æ /nSÍÌö²,«ŒKŞ–&³=)±>tçæİ'[d«p¿õŞq>†åÍõTßÖ/kªB©”+¦`¦´ó†®O³*Î«xß¼¶!NŞ{o˜áØkÿNPIÆbY‘­>¯;ØÄÖaÀA“RÄÆá¥ŠynHY0ušÑˆ·_ë›Zğë:, D€ÇĞñ À^Š÷^k} ”†`+ÅÅÏd"$ ‹eCx:I,ÄŒ0ã€¶°ìEˆp qêğötUWµô÷uñC¼š.ĞÖÀqSCÀ¢B·!)”;ê(ª%ÁäËt‹	 ÃÑ×ĞèohÆs3‹qÀFc_bÅq{p¡¸<ÜÏôÛ6—‡áïü®ÏÈÀì¬DªpúÔéMç¢zœf6Dá{µNÄ9Fè¥B?f÷‡©Ù ùUúºI‘22áƒ3ñøÙˆÒ
+Y¬7éƒÒg”™÷E¡» Z%ˆ8uCë‚4¾¤& {ªäÁªÎ0}À¨Ğóš#nçjŸïöß5®Áûcçîvz¥º%ş#ÅıA*ÒP˜nY |JÿµÂÈ_MIĞgk^¥âˆB‹u£ÍµÒŸİwÁQ'e*/°½Ï‡û1Ö8MÌÚNÙÎeMcã‘²râÖ}ËŒÙTDZër3æóÑÅª•–Á§”0×w¾=š&*€´Û³(sÆ†¤pl![ı+¸æ§*@­ëôÌ}€4tÑdß^¨6ë¥.²wÁœÓ`İ¾(İN+˜Ì?vwC¾«4÷P±cdß ÃıĞ«³X	¤!Ìğ{ŸúÂ$ËxåŸo<¯®wõL»ôdÇUWÿîÊñ…Oû†‘Åˆu»°f:ÔÿPeïWOsÂy°êM¾VˆMGÉñŞ¥ë§	—Áú›& ¤2÷5¹JÓª‚Î}º=~=Ğ¢tS`åm\õše`=°Éš›“5@ñ½›]?İú¶Ç¥²äJÜ¤ñ}‚OË~©ş¤UXyÈZŞ¥O>!3Pe$¹zü+µ2¿´™3¹fè¦˜€K»õŞ Ö»cM×à³3©¤wÆH)Pq9Òùl;ìİ_H½{ôD?=Ë8»Ã7{˜òò6ïîçŸsÜ*æ~rîo¤›XÄØØ7'Y'9­)‡ÏÕ {p¯¸9vjğf/7«sÅŠòèNöü§¤^­Õè~š€`»Øe™æ©¬y2ÍÚÎœ§{n4BµMìoTò·BV™o­ú2DçrŒk!­Ï*çeSĞ4t£e~-ŠTí‘¹2'm$g=Áe{›ä 9J¨:Å/»&F$Şå½ãµ¡¶áéÌøI^Èg¯zIÚÆşzg²ÄèFàsTĞÁeXdÆÇ3â<„®¡Şş Xß{ßIGÉ°=rÓ™&\ ±Ù¬ãç$ã/UœÑ7Äùcc-¤-tü‡m€\£[“L;mˆbıô°Œ=4!èşiÂìõ#ºŠ2ì¸HİáS#•ÃG.*¡Ø":Hï`Şğß³Â¸jú¾ÊÜ¿ÓŞ‹›-Õäp;çÇûÙ•>²^á?íÙ¯)_uåQ‚µ&LÛãĞÌ)kÃg]‰Gv¶å¹Şô22ªn'¥>¹WNUE6‘‡N¹k˜ô¢³iœú;UE­IÀ8X®—Mz>è‹ª¶ÃìØâ®‚‡<(¡0o°ñuë©ˆ¦@êØÖ¹1OQ‚J46İ…#Ékì¡òmÔî`Ë	Hu5t¢ÿ&N”µI¦¶Çú\	ƒÛœ}M¦ROÀ¶öáÈ,GÊ„£§é3ƒ¶ÆaªüFWxíºVÛK
+YœGT²X©+D>÷÷º£É~dòîqéı†§geK{´_d¦StÑ4ÖÑzQº¨šÊåm‡ĞÅ@ZUö¤¤]—«cRQ1úsK•;V˜.üÉ5§aLûP§ı˜‚jC5!**¸ªBç†[Jñmàë%ô³ gr@&¦şäšXT© ±òŠÌá3Ÿohp©€ÕÂÆÎ`¬-‹bğÈ
+˜½¾s)[”ËP„MÊ€[×>çĞİç±oé(a©nWõaÂy˜3Yj‡1M‡îlö±şŞK¸DS xÔT‚XÄu*ëL}•]>E¡oÓ0õV\Ïm7´÷j¢Fšd=z*àiµO–f¸NI©–´øwŠHDæñ&N¥ªsİCÅEºHİàCú9ö(ôU`ŞrpàÒ=‘k†s0¦Ï?+aÂØ(c¶!4.{ØçBOµ¸¨„²[ÛÔ!M€¹ÄaîİİÛÎBşá¿]S™+cÿºÊ0G%A`7Î}LvÔã¥q‹Éq¨:Hãv'Óš·u®G;ËëúğCJÌZû‡Ñ©$&G÷må˜XıéÇñ <Õ}Ï~¯I0;«_ÛÛÃ[ü¯å_¬¹óQæÚ¡¶HcLWùh¥¿*€ÄœÑïÂoWÅ( ‘ù;GY¿Ógû¥Ÿ!VuŠãÒï¨¼¼ª2AxšÑg£J¡O©œS@²ğ™ê)©‡Üox¾ÛN¡hSnL¹L>4öƒS$Ô|gÇšÊµ4su&²É('N#’„ÎaMEÌì´1 )9È¤–‘/ ‹8e=%ôÌ;mz'{şı¢ËS!xïÒcßÈR	³ö¤´ÕdvV_±Ÿ¡_Sx*ÖŞ
+Mªÿ`RÛ~zsÅ±ZúxÖsœkL‡÷?Ñ©2àßæré›"\ô‘ƒ®êÌ¬ÑÌŞåp7Å7²çëé{œ“ÃÑÃ2>´¨†ˆ#zŠí|é¥–¢û`"°„÷yÂeWŠÔ¿´Ş2¨OŒã4´vyy¯·z<fÓÓ>·jSà5²	±Q°(% T:0fÀ‰v°¸à	¼€7ğàü€?   Á ‡@(h¸aé
+æO/Cx…X!AÆchDù¢úPFLÉL,èuhC´ºım‰©Ã|Æˆ`é!ÅNşMàñÓ+/÷‘y¢i<'Îò*ë‚óº`­ĞK~1šF<jìõİ&Ğ
+YutUCÑŸ#µ&˜S&˜ÏåWŒşB32Ææõıˆ¤¢L ¼¼eÜï¶ï"ûúÛüû,ÛÙÚ¹î÷à¬™Êı(&7ê'…çìQÆ‘¢†6ÊÊæ(Ú*®uªo;êv¸¬Á}¶æŞ!©>Y”Ï¶)7|*=–çyıšl~±ÒQè
+.99x™÷R†5¼ıº=l—‚‘x~ã¦3!Ÿ¬¤¯DFªİêëóÕ+Ä–öş`äààËgwi© a@2Û=£’ßáø°£"%ÕÂ´»äÛC4É£TÆ™ $	I…x×\ó‡5†NLÕ°µ"âöi—·ónŸi‹¸ç ÜÔûUÑˆjD»>m­:½àëN}¤Õ2‘•ynCÊ»—E‚¿<ÌŒçÖMø¯Lû†šŠËÆè³ïŒ´pÓÀOP=CÅÊO`fDk6[_ÜöÀÅğøfŞ.²4¦ìŒ³°¤H½Õ•%"…,óÃˆ‰~€C½Ë˜>^;=QQg™MĞ{#>üĞ"@º±à¸Ñìo|3‚¯×´Çç#øw“úß¤ÉË8T¡ª(ôÃ­ÓC”™æ<·]€NT¯¾ÿ-”ÿTƒÖã¡–[ú=ŠV`Ÿí¤^4¹ø¸CÏÀš\…«×+ËÆQÆT™5â¾c/#ş–eJã[%°@¶İo°|ÄhuYgÛt&+1GZŒz¦3s¥Q[ñµ”Ğ®Mjx”=Ù¼ ›?fz¬¦EĞ'ÜıòFT!ÌÌsóåV"Ó¤V+,´ˆªŞh˜ÙÆ\ÀDÉ¹;r6–n¢^sà ìì‚ùĞì³º‘]ëÂ?ÒL¬¡sRé
+³;3HlºøîÄ¥ ßÎ>o)%³VOZöóPòo*n:â¸éÅ~ £œ¡ôê«&0ÛN•ñ°yÕ˜¥¢É’n`¾ĞÜÒö=÷®Šì*®(&ÊÉˆÆ</ı:8×ûé^]ÛZh´’QTy3e— İIÆ
+ı¤œ¯}¢M9q¥	¨‰şò“Œ™ÀÌ•ÕdWToƒ¥v‚kèöã}ıëw§Paşç±òÙr0¶öCmrî!Ù‡5¶göM[¿!TO®Pİ9Ëõ
+b€	ôúj`êÑiìúŸE†›€á+ÔçÊ²¡i½²¬$YÍ2~òÆg­:áÔ(ôNw}/ô²ÉíÃ<OAÚ!–è¼Î¦bzÇ&Ö8Õ×?ßÚ˜ïÔyå÷F$0±1tÜ¹÷äP/ì“—§î<ÊJğS©»ÿ(Û8âtà¶[¾×IzÏ…¹í!„ÛY0^äğßı$×=ÆªÒîYú½D<j—3OFªİ¥É-êg½í<BP½¨ª×Ñ&@¸Şª¤këiÂÏOF’TÎ(Õx<O”ØX*Ü¥Ï(¯4j‘Là¼»¢œôÇ:<˜ÜøÏÜ|$ë‡ˆÈy%Ì­],×†!ù€Õı&– äÚäx.â•Ëù/Lƒ÷ëú¦ ßk$t¾>xó>8Ïd“<å“Éxu‡â1ÅOt?VÒÑõE<_Šx¾ñ,Î‰+ìè
+²Ë.M[¤ÏtŠ“j?ÅÓWÌĞoáe–y¢å;h…ğÚz(oXÓ_Û#mòİ×ÌÏÎ¨ZgbõyşõAX£‚iÊnõãOd£äSÆ|7ÕÜàDÃ—iL¯ÚTUYWEuŸµJL¬Ñ”a‰$ª û¯™ş†§ôîúúÃ¼ôù^Ã¾/²³Ôü¾£¼XŠ	Õûi2$“{DŒŠTÎ»W É%à|ºµÊ!›F‘qG¤é²½¸Çæ#±kÄª öİTMÁ¦íµLQ%d?ù†¯ır²OûÌÆC#™­‘õG‰±òlCv¤Û‘=©%°b¬=[u‚õæ X@ù!{]ğ‚¹:™WîïÈF™£ï¤Bò"Hg*UšÛW»GÛİ»3xĞ	`ÂãÛÑÈ¸êÕ|tŒ©Q8@† `w€~&fRå*©Òí(Lv6Bí¶í”£ºíô$©²Yå{îÉİp,ƒ­	v	¶:“üÉ Ñ Õ|­¹èDŸÛ¡SJÒõ]Æ~´ûh;q8­j[üf0XSEâèØÍQ9º$N›T:ˆ·Ñou6ôTZú€e|h~S	÷õÄ^~£Ñ*Ö‹“´e|z ¥½@^Ä{Y	°&½Ş/ãï]zy_ûûÀ^xïN±s`=ıZà7şü•¬ıc¿ÄĞØ©Æÿ®–:o®ıQİš¶ˆÇ8Ÿ0m.V ’A/ü]¶Ğyuêœ‹ûİ¦rDµÿÎïr5w'–UªŸ?¢=7P¸¤’!Æò„IrÆAò2~ÿ»úÁ¦v©ËØl;ÏZò@ÿw“eŸ¤î'ñt´ÅÉkğDST~Ïòxİª¸U>Í§µˆU¼pÎL3êCÎ2Vë¼VöD#Ÿ÷¢%ø}õûòáiÒä¶yg©øÉêİ^ìbjkĞ6ñ§8b¿…€×ñÿd±‘©Jæpşm¾òóe–®ÔmWª¤EÛy!¦Ë]É‚|İˆ0«m;½œ‚˜6@(tÛÛC™<7bÀÇö!,Lul`˜~1p´P¥èÀêöÕíKæ®ŠLyHƒL‰vév²1Õ|@w@i¸¤ °hî,‹å,‡F´m8<ğÖ”½ğX2¿óuŒF-vÈª«&· W¤yÌÀ92û±¿h º3º;·ÿK½"×Ö6¤u"X³‰­pl¶OóÆ*ˆÑ®Ïè ¾­RÊ<l¬Ûğf÷†úÖsÙ-³µ¿ì|p¼°_õÂ!-W¿0¿}±*~SöY´ÉqZVƒTÓ‘æaÊ‘èGÃ0 °0¼0†x"‡Ça‰x<™Hdf[ÍÎÆÊÊ&ÌÃË±Z\DRBLDl­”œæz)5™µbJ:ÊjZÚ›7o–TÔİ±m£æ¦ÍÚt!‘™™•Mˆ]H[ZLZû¿üYh" @ˆñKÅ„Æ`qx‘!¨a(ˆ‰	…fÂ`Ğh{Á4†s­²–ËÂ'¶Ÿ[åDâE¼øÖŠVËûÓª®á"/ßj~I©uÒ2²jêš$­Ût·ëéì0´²¶Ù¹ËÖÎ~¯›»‡§—÷¾ Á!…>q*òtTtLRrJjÚ¹ôŒÌK¹—óò¯UVU×ÔÖÕ7\k»ÑŞqóVçí®}ıƒCÃ#£“O>{şâå«×o>~úüåëÌ·ï?féí‚ ´üùc»8v¡Ğh&4Ş.uNÀÆ¬UÆrêXà\ös‰©œÀsoM¼XÑJWµœæq¼Oä•P›”üHo£eÿ{ÿ?jÙï†ıÕ®ÄzÒPo‡ 7‹~¢h€€$P´0
+X˜ `â [À—=‚NFŞ“F7Xâ»®Û“Ä7§>ÿ0éË6:¨ÿÓ3#àjª~¢µòœÏıãâ[ÎMêûÏîÛ’XÊ{krËÌİ,ß‚8ÃA‘½Ê)¨qÕÛ÷Ô÷‡èq™tŞù)•à¸>YZèÀ!üÜÜèı¾&åÜÇk/ìlwñÜÚ­Üıì›Ä\ãŒ/±'Xe©}¾R×j&#`6uÄªš+¾21;ŒVTÚ˜ÜùSø\M¾R|OÅî¡ÚşªZÓqî­Ó¦ ¼»Ê+M;­1±UsyŠI F¡ªµR„®hŞtZ	×w¿#ëÃÕ65ùU|>é ßáş0ğÌ0ùWãúOjVyÆßLjî·(¨$;ÜFŸ8uóĞí›a{öv0JT—9ûAllgM2n‹¼mn¶ÿÓöùÀê!‹|i—äE®y9˜‘7íîö«7üÙ;´¼EüqÉîk ~GËÛ¬0Ù¤xíïJcÕNäÃ¦-C—weÎqkİ¯áZ fL?våY¥=»1I
+;£ò´ÍCäƒrXgØ×·úm=…WN}É©uhÒ»)¯]ÁrÜ¢Ãí¨­¨W‘-çUîˆ_í?Ë1Ïk)&”VÆÕ8‹İv6çA¡Ü%Ç©cÌOe'Üg³£îêiÙ(>¶šŸ=sˆõ:›PkĞÇ·»·Íç^NŸ¿¼qnLê^Ø¬÷‡Ù;¯»¢~óÕ×ù­˜±“,:Ïf[&õE˜‰×—¾_6Ôh–sgíÎØí;}˜¤w>H²qK’GŠôşÏ{åb]î¿x±¢mÎÊüÑš¹ägškšNÎËuÎ‰íº X]}~œ¾{k×ÔÉº“sW‡~I5Jeø]dvãP9›g;ñ+²)ièFf;»ú£¬½’·csÄŒ]ºßÿåi}+¶H*ğá…˜YëKR	Ş;A\»nPÓÄÓŸÍoÃ?v+|¿ çìeiĞ{‡Û¿îÅËl¶l×ê§ƒM†	§’î9¨ÄÊˆY\ÈNLys¸ç³S¿‚{cÓƒ—g'@IS#Éz·êèáY¶_ÖŸ,¬Û–ºë 3a]½pñËá‰ã|×Jj:.­µ©Ùl+±÷ qÇœÑ®cvÍ=ôfZßšÙ^(qâEvâ—2qÍƒ‡­=t…–\T6¶º~øEó™'Æ³hÅ\I÷b>šèy;˜¹öÜìUÚÑIzµé”uˆjN»ßº˜&“İ-cš­]I³ÎSÅ`J{Şõ¡{ÿzÅÒèÛíÉÊ_,lŒk;Güˆˆ‹À³Îå”î;0bw`xæêfáŠ!æ¾>á°<‹j¦õGÖŸ5réG™;ó‹çUMëÑuÑÉ;š‡|ÔrECŠ<híyïËkÆg§ş"rÌê`ÊäğŞl-½¿x^hîaY¿}¸?²3ñ¿¨¥O65|™{Ø£¹ø@qœeÛ’q­àéµ[]S_0\ ÌMfÏ¢,Èğ¯À÷7Ã:¯´Nß±¨®S'¼›ˆSmÒ—9˜âIFÍz>jæßë”q'ì±^õ—‡›´ß#6ÎÖ©ïZ—öÜë}ïÊ+£Ò;3º³‹|ò9œ}Øj«eeÅÂHPôCeg—œ–}ëa”ÎÂÂ`2°øFTš"QÿÇûœµn«nØ›œ˜Iy±ÛïYæ	K1ï-Ëß1o‰N	y¢u×ĞbÄsŠ'bâéG ìß ÂR<|èèrø%d}V–$]3³~µV*TÊO¼å_d]–‚eâßÁ²íµb'’ff1²ëX£/HÒ@ÚGçıHX¥ÿ
+¥Ïv¼%	]Œ;ì…JØHÊÏzÉ‹Ü+AÂr ıh×ø–¹c»ozİ®Ğ¹W‚„å0|ò¯0|Pñ-‰Û}™»VoLœ$qzIó• áAúÔ¾™ÇÀ×Å ¾c0ê­.IFÍwIó• á!üOÇùR»ú2÷TÒÌmÒºËKu¯	ÿàáFg'ºÍW’¤.›/1®	ÿ£èäB\RÎQtJÆÛï¦à?ÿFc	hdIfg²^¿ Š[€;2ØCU©Şÿ(T}ú+¿êhyPzOq™’ş¦rÙ?ŒpÍcA¥yO¯ÄÊ¶˜O
+{yÂ²)€‡Ş¿¦ÕÂv½âêYs§%„ÏœG6ŒH´Ê¶Ø¸•j¡À?Ô‚¬[m/ «èj½ô_OşÔz<Ì”ÍwÆ®*xÃ$Ç£ç•Tû·6”¥”ÿ´¯RŸÜŸ'r¬ˆÉ¯qÁfÊùI/ë`Î&ı¯ÇO;Úúñ%5(‘]6Š­úƒb x%ÀĞì]ìÕØ§–X¹ğ…>/Ä},í]¬·Şö'Özî}fLf–O©•'«‘mqƒã“.¬8³üê$Şãæ¤Jj%ävò2ÔÏ„õjë*xzF>>V1Xzb	ÄÌLü¿6”?-şFÄdI6âø’Å¯ñ ã¦ÊS~’æ©÷ğâ°}³sC\aÛoîÓø$Åş²¥iºD¸c]o*“´¾~€WøjÅcò2·alI•{^ä^	"Ü–)…†¤îÓäEG¹ º qßûı23ûi<IÓcÉ;­æÕí±®¤ÍÁ"óß6ÀˆGÎ•Ì•˜xoÃ²è‘W@xĞÚ<Õün=tk‘ÓØ#_UÓïnï2§¬‚¬üÄBjï"ç
+á4414d;wgq9y!üBèÃáDòg³ë¾ö¾ˆ­öÖÎ•4—ìµ¿á²‡´È©ê®ê6±š«b‰³¦õı*’Ağ Ìà\	áAC¬2çÚcìÎlÇQ8,ò‡Gşˆy'"æÍ<ƒ5€`!™‡ş½5G3Ì›U¢ÒÜ.€±ı^ÍØ”o<êv”TI¢oÏB0Š™‚@G©”£t
+zöØ)ÑqÕÈÖœE¢R©’WV\Î+™ÛÑa+aıa‹ÀôÍ=]=ƒåvÔÀ±™gdŸ8@³®@”jÄ6'¯¿]™Y±ß>°½â;ïãÙ©+õ°İ°íÄäàşÙ©«±|Ú>’j^X‘Z±âºVú’Ö»ûÿ-=µbMMÙÚµ–$WãD^™Z±j6²<Œ$I˜ÒV¦§V¬‹#ï²HR§¶“zßşÍ•$ñUûß¥§~VÎÄŸkÿœâèÊü¿›úOœ¢âu–ÇX’tªÉRÎ2Êúküˆytõu’BªÇRDBõ™ä[²üæß q“¤’¶4BÃıïöi|–ı±<¼Ó.ÓÎx÷,b+ì4MXÛ—±”PÊ¡‰O¼m‹n%%ÒP»ï€8¼œ¯º/~i[ÄjÇ”EË1~müjJ¶]Â6$åå¸xş{6kµ™,œÀ+<Åƒ©Bp?ÿk¶HÆlY´iº¯´n¼Ø »»š‘’%°lôQó‘§’Ú«î€Á "İäqˆì»O6ö¸cÔ-,JD ¸ Âêz»P€Ğ`'hÏÀVè&ôZÒ@]F½Ga™L˜Ş0í@ç£	LæfÃŠ=€­ÆrâBq…8uü|~ÏKØIxL G0S…3J"¥ùF'ĞÜÖgCÇYßy”«¤ÙQ»œyW§zŸ¼ê!,Ï®“¾@µ(\—YVÆùJJe# äÁJSëÆ½—<;û—¦	µ8TöJ<løUSİ&ˆ{¢¼ÊÉFxLmògL)ıÚ†Ñ44œÿ¼>ğñ¥¹Ê{ƒ"UV*»_ß¥”®[}±àmj ıŒ‰k Ä¦~mCØŒ¥UJoúM¬gè“âP}HÃœ³Ä1m ,ÕFÖe¹eC|¾"Õ­VëF¬DÜªq?8|Pùc/ª‰Êëg£ø<ø\OñÍyµ.ANù™é’bû†.·".[æé£Ëhò…ÊTÌuí®
+…˜i²O¸œ—ÍÙƒØ]d>×ÔQö<hÃÁÿqÊÎYñbÖÓ#Ì¾šmj·ìú„_ÊÁ†ÓLâ–Uj¾nùi°»4æGßŒO>‹NZml°Ä+1aXR¹ÌóŞqŒèç5öúå7Új÷;È˜´¯T–yB­ÍJgÓ|(X»v(x¾b3Fˆê“^È%l~ ñğòGGÃïÌûq]u!Ò”Ç›wf„È†~º³¶+[CFˆit‰·»i—ÙN”7"Të´^ş<Ñ• !MCÆ7U32Tö@6÷\Î„2w¬‡…’Ü®ôGèš3v^=ºzPÎ(¿T
+2İPöÍMíË¨)‚×M“­¬ª`öˆ@Jçë8˜K¹«?+Z«»{n‰kĞĞxXîåíü<EÃhà—«ôi1Sş¸Ôò”ü<·k#FŠ`ÔóN—ÿûefQ¦Àè¶TŠYø¥6x|q0kTÖ{…ESe¼[ÏÌ\›ÊŸ¿@¥Ñ¯º™CÏË¦2/è©,k`{n>Æ¸[âÕ–8³ú}4,ØĞëñR§E&s.ßåÀ<u»ì[èzgM v2M!	…W£Ï¸‹Õ¸dØ¤Ey”£¦MÓ˜±H;DŒñ·°´À"İ¼Ëz¶„" œ 4§`’l%%á÷·M}wŒí;Òsİãü¨ZÊô˜ªßÇİÀ{0©pûîhü=}ÍÃVçì}ÓûjØQndTÁ†]ÚÃ2-9J¼RùQ‰é•2÷EóÄMÛ×Ëç(LÀ…çšóïq_`s•””ôÊÎÈgâ„Úó»Õ 92ñ@Wîm•ø6”b	ı®L Îµ*-ñB µOh\6lGµ%]•–¸Â‘à)ƒ%›]BĞî<sØD:ç^AŒö¹ëŒùx©!&Ñ’,9Ä|&Kåƒô¡{iÕ¯h’1¨«;jŒi«èÓÀxæØh%ŸfÌ™ËÃ‘Á¢\;à=÷šÇáõAÀ†íq·|°UypVİ5},˜†+ğ-d;—]¬åŞš–N(êÆƒÊÀ;*¾|Ó5-J°‡õÃ]M¦³ÆéŞÅxiÎÒÚ|E,Í#îoıäÙ‰¯ay½/ZÔ¥ãQ;gjªòÖW$ÿó§Jm+l‰QÌœ±®UZ6•è'šæéWÈ¨gÂ&ÊˆIÊ–WÎrn‡® ‘*L_½Æ¯iyV†2|ªæÚïv¼×4Ö÷Áëuª;k{h\ê@Lâî6	À)`šŒºšÆ×mïÉ‰â?Æ+|•“7E_ò¿úÈäuMĞz ª,¬1ã(§÷³èšÕ÷\oy¼uÙ²S—*Iì‘+î:iU.hƒ
+ùqÅçÜ{û	Í¤s¡ì,ê¶ïTßåRŒ§¹éf‹§ÏÜòš¶“İa~4H®œØmXŞ ®Jà†×	r«GĞø²Z>½!®Nr
+²-:Vãædx;”è758;f<4xkí5dNlÅ)LÛ?ßzdQ2™!™ŞôK§H=cå+ÏÉdÉV^ÙfÎÙÒ»cWÙ)ÏJ£oO`Ü“yxÂtI÷œz
+Uòà}©/V))Oñœ¯Ú˜•è(“ß¡Éj&Ï¬0ºÊ=Á9
+Á—ë‰ûÍ4•PfÄuÆ`¹šÜÊåÅ«b’²á’l†æc:;IÖ¾1~3æœGÜ“í<Úßƒ4%âkA	à1iPKWS‡çC6D‘ñóØŞá
+2ê!177÷æÿnú¼í
+…",•rÖƒİådë->U^şn{·HHe5äGéÈ rqÓ7&W²Cê¯°)£‘Î,Œ†zi	ïd(—ºBÚL’ò{Ñ06"H€#NÔXJ¨xîq-‰ÀÎíxt5ÍiL¡çÚşi*Ò¡©×ó‡¬rªŸ³ä!Èñ52_$=@Ö`c¾œEåzW÷ù§É‹wE+óıE¡O à,Mïñìğwe@»(#cäùü	é·ƒk:}™aæÛw/åâh®¶¬x<Ùğ;ôîÓ…»¨/ğ6õÏ!³3=Ú÷j*œ0ªüÎ¬_ÛÆµõyRê“s¥ıíöÀ»mÉI©ø(?Ó5zs}“ÊÓ>%t9ì.'ÑÁbvx?›2ç{tŠÇ0ı„Õ§´ÍĞ*ïE®;F¤bQ.cà¾¯'õêS;úrc ï2*S;-f7¡ò1ÉQı‚ÿî â/Am×Ÿˆq3‡ü¬ñ‘*¯©Œ«0iËê‚”,ö'úl<Kè›§ß™0ĞHeaŸ5Ê^TŞ/íúT†ûÈ¹èc/ ÁÈºaûÉ/€†?ÅPÕİdA&XÃú¥Ö™·¦k >G>e//²ƒfUÀåh472ÏéKüôæÚı@æºxMhyÃ½¬‹›bèÆ-ëŒËqBğMÛ­ïyıL»[Q,/¹¼±İÌD#®ÊwMÆ…‘Ff¡Ù\Ã—Ú:~]ÿ©øfİßH`ııkv×ºª—Oå½Öˆ{ôZ¬ôè£ŠÒGÁd“Ëã#ì×sÜì¶Ù“ğlœY¸]å•]Dq½á TªéHç×S7£äù9ÖDÛIc¬¾Sr
+{ÄrSHÖ÷ Oª4.Tãl¡‘A~ÀèKìĞ®ãlSuÍ×^Íyñ+ì¯‹™zT”i­úBìhzÄÛ>ÓSÛFi’8ÒSöì5,Åµßcó[áŞuí­b(©|ğ=Úï]ícHæã4ò]‚gWÒ/¤© U`L€éÒ¥4à\Á^àÆ¸˜F¿–öçKi¡ ÙÏí† àÎ›[Ø”Ø› –ÏµxÒJÕ€C¾::ñâ“ÛwÈ,q**nn—P^â¢ØíkXUÈöÀí¤4°†VË·&‰Ÿ”è‰U *« ÔéÈŒU
+$´èâÍ'ÇÂˆ r’àQüvË,0K–Â7Rçˆ×§¾m–!~iiçÎ†(i›KÜ*À/àÆ¨§	Åk'O½$~*én¯PqîLè„<tX`–4#%7ÇÎ‰ÛªâîT=2|r#`â[‹NüÂÎ$Î¾mà_cHMlMŞvÃøtZ6¿¢=¢‚Ø¥(5æ';šWruBóÚ$)½Ót]7Ú©uR/Zèäo‹‰á@T7@8.N0‰ÃHdhÍimN½èV~kÁ¸ÑA)2Ö˜ŸOEVÎÄwÒ#u<ÒÅŒHs2à_Ï‡é‰#úNÙ>à@³×¾Ş¾“T'çÅ==zìğ‡ä2´r|åø2qkçĞbæ€=¶ÿL'/Òú×øWOä§Ù,Ò2 ›CÏş™?^¤í	î90ÉHLã— Ò]Jã@OvÌ]¿õR¾†J¿Ê#äºÇ/m!qğ¨-‘3@‘íÏÈJ#äA»ÊHøç\K)È/ùü§0B~ió}¨ş¼$r~Jù"ä÷×¼Š×şÑ·”©¢ƒ$–{ğŸr¼8úí
+;zª„˜ì—5^±_^ÀË£àé(°|ÈNõ;{È[]D½>½°0=>>½ğ_øĞÙ‹ª«§ü—¸şñùŸCöÿoÙÀ¿;d<ç}Ó‹LxQÌŞúšÌSç=I‚‰ÓCdmÜÛAØÂÈ¡Ñ½Î0“””VÎ8uê¿§ôİ›w[ïŞl‹Ul½uã¶¸´øÍ»áR­m÷ä$J9}åºoÜŒm]+*[ö^MaçÎ(æí\ª‚9éEfŸßûÚé„xD(Jí\£¬~e.o—ŸÚ†7]ÓAåJ­=OÒÌ+¯nø2÷sÌd‡é5T¶¹Œ¯é~É§¯XË/,ÌX9¥Ÿ(Åµ+z„¸x;•İ½óøb­oçª'¶<Jév6:t*õá¶æ?EĞÇ7Ÿº(Õv»†N™L«.Ôş2Ëgûd¡%§N[!ïmXì¨rBÕôú,”öıóü;¬*RŒ)Î¸tıJ®òåË3ÌúßÖŸ±xæéé‚i_{q*©ùEkÙBØ÷¯ºcCvMîõ<AŠßnŞWèõxlK‹Ÿ)¾BÓ:™gŠÔê7k¸ğoK“vŠgn‰¨bû»]mDV<ÕÚ`á¬p³Îè±6!QCÊ‹´õ"µ½>VæŞ’åª»œ”y‰¤™v™ÖŞ%#Ú§šo¶)!vz
+z¾øs7^`t Ä ¥G$âê×2)ùıyLÿå!ëğğ¨R%ù£–’sxdªòÌÿq8ÿãpş/9îïp¢ö6+îúY]X==°.­š&¦†_ÙÖ³İ ›)MEÅHSW-¹HÊƒ—W
+{€&{ÙËkêıÛçÎ—$º#%îæñ;öoğ¾{ÉıÌKc?âĞóÈ·‚ËF¼šøÕÜxğÃpeğ|R©.oy„î¯Ow™úgj6æVåz¾¹ôUW³ş3JrõBhSE‰öze)•*RkêŠ<ï?¸@6¥¦U0¿µ:æ+ß­Ck}´I­îàñ8¦“»Ç²İ¬ÄÅ|˜mV0QØ6›‘|>="eüÑÒúºZMeU]]ÚÀĞƒÊ˜,Í-	©·ßì¢ÁåÀ_Š»S^±ûëÿ¤ÎNİ	·Í(ÎQ;6[|»¯tìúŞ;E¡ÉöYW>ljéŒËĞÉÿ’{:^äaã·ï_O›‰<j>ğôæ¼ç¹u«•”¦=}|šÿöáqË¯¹Ÿß‰¶0û1Ğ¿BºwÛáMWÍ¡	m´œx¾+ö'ÛÒ6¼©¸•sü×)üÂÏÏO{òNMf'€`_ûàOïßŞ{6?ûu¾ïÃÏ+Û§·LÙ.Sò~ÆjèÃ¦ú#Síiü’!Å½³û¶ø¼ï¾^DRåğH©ßû$¥·º\mˆû¥3k.&^ßğ]¼±ì¡(†+°şíFß’"ÔŠÑ€(û}ÖñsO#éÉÃ`ÀĞğ#¶‰ÅBˆ ÄE!fDFHi2–BĞ4@¾Ê…Æ8uN_$‘D‚I–y“‚z®İqÀ?ĞÛÓÛÏ…²Ç•âïº$m©^ˆAú yË‡¾Ûàg›èTA€ş«º	P‰øÅ¨$"óõöÛàîî|]-½í	ô÷? öºûØãìêJqg ¥„R¼}½ FÅ:.¡Œ×=nŞ‹¥Kb¼ÿ¡äC`O(Úë‚HCª8àrÀÛß)]*	]üoârÀºø¹ùû‚=!ŞAŞôÊÓp pˆÎ@˜ş
+ápŒW²aJcx&ì²+5£ãÑ8éeRNw~aA8à±¿‰ğ82£ÿ/%„¿— ¢‰¿K6Òë#
+ÑŸh!Îó(°JÃ<3‹ë#µÑÁé$út"¬Ğ,R™­,6¥—³Ğñ€#"òYşÍŠÇü“	in…Jt>~äEÿˆÒ«~+­ô¯BÙW€È?6Sº n:í?%!Äÿ	1~¹‘ì‹ãóWÿq20\–,tºÍ13ËÌ 5£WID°æÂ(pö½”™ÑÜdO¯à3İraÀ˜×_&¹h_¡Ë¦ùÛnVX#b}+ÌôoVÆ0÷C{¼ıö‚  —ƒ~ÿbú˜#ô^7Àh´hë¡%ëd }Çdºh:tü[ğw<ÒD2û—B¦?ÉÀ.1ÿ+îï8Ó¿F	)ÒOã¦k=±üm¬–Å’>TôNşkÌXô—Æ y²0Ÿ>õXWZÊb»ë”F ØÉÃ—·á.Õ×7C†‘çOMŒ¡¦0†úú¯¿ªaeˆXÖÑ[`y’0¬½\şüe!lKìl¦æf	c3]9Ï292xl+\Æoõ–yÓ·hçË53ÿ;:¦?Ña…ş©Ã*Æ;»Ğâ;óßì¹ÿYôÍşjëïş°0cÑ½|Öy"h!Ğš‘‘‘>ù1éƒ´èÔéôâAüü¢U/Ú³‹¯°ß°4Xºj¹á€Ñ(lFFÃ–LDârUôÛdŠechĞQ¥2’A:ây›¼|§gù‹Â1ÿ?;ÿÏ¿İÙjZ	Z	¨­¼C5½Xyo	åµX@ã+ô•€õJ€}å-¨î•@ÔJ@÷—¥ ø_Ÿä‰é_Ôhttp://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.swf?ver=1&clickTag1=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01&clickTag=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01_application/x-shockwave-flashÕ(84C1DEOó<HTML><HEAD><TITLE>samsungD500_mins_120x600_live1</TITLE><META http-equiv="expires" content="0"><META http-equiv="Pragma" content="no-cache"><SCRIPT language="JavaScript" type="text/javascript"> 
+var _nRequiredVersion = 6; 
+var flash2Installed = false; 
+var flash3Installed = false; 
+var flash4Installed = false; 
+var flash5Installed = false; 
+var flash6Installed = false; 
+var flash7Installed = false; 
+var _nMaxVersion = 7;	
+var _nActualVersion = 0;	
+var _bIsRightVersion = false;	
+var isIE = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false; 
+var isWin = (navigator.appVersion.indexOf("Windows") != -1) ? true : false; 
+if(isIE && isWin){
+document.writeln('<SCR' + 'IPT LANGUAGE=VBScript\>');
+document.writeln('on error resume next');
+document.writeln('flash2Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.2")))');
+document.writeln('flash3Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.3")))');
+document.writeln('flash4Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.4")))');
+document.writeln('flash5Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.5")))'); 
+document.writeln('flash6Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.6")))'); 
+document.writeln('flash7Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.7")))'); 
+document.writeln('</SCR' + 'IPT\>'); 
+}
+function detectFlashO2S1112718192329() 
+{ 
+if (navigator.plugins) 
+{
+if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) 
+{
+var isVersion2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+var flashDescription = navigator.plugins["Shockwave Flash" + isVersion2].description;
+var flashVersion = parseInt(flashDescription.charAt(flashDescription.indexOf(".") - 1));
+flash2Installed = flashVersion == 2; 
+flash3Installed = flashVersion == 3;
+flash4Installed = flashVersion == 4;
+flash5Installed = flashVersion == 5;
+flash6Installed = flashVersion == 6;
+flash7Installed = flashVersion >= 7;
+}
+}
+for (var i = 2; i <= _nMaxVersion; i++) 
+{ 
+if (eval("flash" + i + "Installed") == true) _nActualVersion = i;
+}
+if(navigator.userAgent.indexOf("WebTV") != -1) _nActualVersion = 3; 
+
+if (_nActualVersion >= _nRequiredVersion) 
+{
+_bIsRightVersion = true; 
+} 
+}
+detectFlashO2S1112718192329(); 
+ </SCRIPT></HEAD><BODY style="border-width:0px;margin:0px;" bgcolor="White" marginwidth="0" marginheight="0">
+<SCRIPT language="JavaScript" type="text/javascript"> 
+var _strContentO2S1112718192329 = '';
+if(_bIsRightVersion) 
+{ 
+_strContentO2S1112718192329 = '' + '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="120" height="600">'
++ '<param name="movie" value="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.swf?ver=1&clickTag1=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01&clickTag=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01" />'
++ '<param name="base" value="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/" />'
++ '<param name="quality" value="high" />'
++ '<param name="salign" value="lt" />'
++ '<param name="loop" value="true" />'
++ '<param name="wmode" value="opaque" />'
++ '<embed quality="high" salign="LT" loop="true" type="application/x-shockwave-flash" pluginspace="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" base="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/" wmode="opaque" src="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.swf?ver=1&clickTag1=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01&clickTag=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01" width="120" height="600" />'
++ '</object>'
++ '';
+} 
+else 
+{ 
+_strContentO2S1112718192329 = '<a target="_blank" href="http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01"><img border="0" src="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.gif?ver=1" width="120" height="600" /></a>';
+}
+document.write(_strContentO2S1112718192329); 
+ </SCRIPT><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" width="120" height="600"><PARAM name="movie" value="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.swf?ver=1&clickTag1=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01&clickTag=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01"><PARAM name="base" value="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/"><PARAM name="quality" value="high"><PARAM name="salign" value="lt"><PARAM name="loop" value="true"><PARAM name="wmode" value="opaque"><EMBED quality="high" salign="LT" loop="true" type="application/x-shockwave-flash" pluginspace="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" base="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/" wmode="opaque" src="http://spe.atdmt.com/ds/ARREPO2UKO2S/Q1_mob_2005/samsungD500_mins_120x600_live1.swf?ver=1&clickTag1=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01&clickTag=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/http://clk.atdmt.com/go/trblno2s0780000133rep/direct;ai.7420931;ct.1/01" width="120" height="600"></EMBED></OBJECT>
+
+
+</BODY></HTML>_ <!--framePath //<!--frame1-->-->_¼http://view.atdmt.com/REP/iview/trblno2s0780000133rep/direct/01/389512245?click=http://a.tribalfusion.com/h.click/DUJUGVLHEJPHQJGHMLMQUNCPETIMPWQGTOXKCPOGQRWQNPHCMGLOPNGPDBAKPWTJNLPLDONCP/      !  3  I  W  ^  p    • c  ˜ Ÿ @¡ @Í @è @ï A AX Ab Ai G‚ GÅ GÌ Gú H, H3 H: HA MÔ N4 N? NF N¥ Nİ Nä Oa Oš O¡ Oª OÈ OÎ v‰ vÃ vÕ vÜ {~ {ı | | »U ¼ ¼ ¼" ¼% ¼0 ¼G Ï¼ ÏÏ Ñå Ñê Ñì ÑóD		<	G">"a             F             # 

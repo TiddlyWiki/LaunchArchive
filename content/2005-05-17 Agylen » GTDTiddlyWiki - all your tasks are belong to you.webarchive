@@ -1,0 +1,1550 @@
+bplist00”#'_WebSubresources_WebMainResource_WebSubframeArchives®”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOQCvar iYQIndx = 1;
+var oYQObject;
+var sYQBGColor = "";
+var oYQTimeout;
+var boolYQerr=false;
+var boolYQreq=false;
+var boolYQinline=false;
+
+//if ( document.domain.indexOf('yahoo.com')!='-1' ){
+	//assembleBeacon('load');
+//}
+
+if (typeof(HTMLElement)!="undefined") {
+      HTMLElement.prototype.__defineGetter__("currentStyle", function() { return document.defaultView.getComputedStyle(this, null); });
+}
+
+function activateYQinl(poEl){
+	boolYQinline=true;
+	activateYQ(poEl);
+}
+
+function activateYQ(poEl) {
+		//var oYQRS=document.getElementById('yschyqrs');
+		//if (oYQRS) return false;
+		if(boolYQreq) return false;
+		// beacon turning Y!Q on
+		assembleBeacon('turnon');
+
+		// just submit if not supported
+  		if (!document.getElementById) return true;
+		if (navigator.appVersion.indexOf('MSIE 5')!='-1' && navigator.appVersion.indexOf('Macintosh')!='-1') return true; // MSIE 5
+		if (navigator.appVersion.indexOf('Linux')!='-1' || navigator.appVersion.indexOf('X11')!='-1') return true; // Linux 
+		if (navigator.appVersion.indexOf('Safari')!='-1' && document.domain.indexOf('yahoo.com')=='-1') return true; // Safari
+		
+		var oForm;
+		if(boolYQinline){
+			oForm = poEl.parentNode.getElementsByTagName("form").item(0)
+		}else{
+			oForm = poEl.form;
+		}
+
+
+		
+		// kill any open results
+		yqRemoveOpenResults();
+		// set default form values
+		yqSetFormDefaults(oForm);
+					
+		// set z-index of all other YQ form elements
+		yqSetZIndex(oForm);
+				
+		// populate embedded results
+		yqFetchResults(oForm);
+
+
+		
+		// color the context background
+		// (go get parentNode until its yqresult)
+		oParent = oForm.parentNode;
+		while (oParent && (oParent.className!="yqcontext" && oParent.className!="yqlink")  && oParent.tagName.toUpperCase()!="BODY") {
+			oParent = oParent.parentNode;
+		}
+		if (oParent && (oParent.className=='yqcontext' || oParent.className=='yqlink')) {
+			sYQBGColor = oParent.currentStyle.backgroundColor;
+			oParent.style.background = "#FFFDE6";
+		}
+
+		// increment counter
+		iYQIndx++;
+		// set inline back to false in case of mixed elements on page.
+		boolYQinline=false;
+		return false;
+	}
+
+	function yqFetchResults(poForm) {
+
+		// make and populate div for iframe
+		var oResult			= document.createElement('div');
+		oResult.id			= 'yschyqresult';
+		oResult.className	= 'yschyqresult';
+		if(boolYQinline){
+			oResult.className +=' yschyqresultinl';
+		}
+		poForm.appendChild(oResult);
+		
+		// add inner div
+		var oResultIn		= document.createElement('div');
+		oResultIn.id		= 'yschyqresultin';
+		oResultIn.className	= 'yschyqresultin';
+		//oResult.appendChild(oResultIn);
+
+		// prevent bubbling up of body event handlers to this div
+		modifyEventListener("add","onmouseup",oResult,yqStopEventBubble);
+
+		// define div text
+		
+		var sTitle			= '<h3  id=yschyqresulthead class=drag>Related Search Results</h3>\n';
+		var sIcon			= '<img src="http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/yq_corner_nws.gif" width="58" height="30" alt="" border="0" id=yschyqresulticon class=drag>\n';
+		
+		//use partner code to define close button image.
+		var sCloseBtnURL 	= 'http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/close.gif';
+		if(document.sYQPartnerCode){
+			switch(document.sYQPartnerCode){
+				case 'news':
+					sCloseBtnURL = 'http://us.i1.yimg.com/us.yimg.com/i/us/nws/gl/closewin_yq.gif';
+					break;
+				default:
+					sCloseBtnURL 	= 'http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/close.gif';
+			}
+		}
+		var sCloseBtn		= '<div id=yschyqresultclose><a href="http://help.yahoo.com/help/us/ysearch/yq/index.html" class="help">Help</a> <a href="" onclick="yqRemoveOpenResults(); boolYQreq=false;  return false"><img src="'+sCloseBtnURL+'" height=14 width=14 border=0></a></div>\n';
+		var sLoading		= '<div id=yschyqloading class=yschyqloading><p>Searching . . .</p></div>\n';
+		var sIFrame			= '<iframe id=yschyqif class=yschyqif name=yschyqif scrolling="no" frameBorder=0 allowtransparency="true"></iframe>\n';
+	  	var sResults		= '<div id=yschyqresults class=yschyqresults></div>\n';
+		var sFeedback		= '<div id=yschyqfeedback class=yschyqfeedback><p><a href="http://add.yahoo.com/fast/help/us/next/cgi_yq">Got feedback?</a></p></div>\n';
+
+		// use iFrame or ScripNode version
+		// depending on Int/Ext placement of YQ
+		//if ( (document.domain.indexOf('yahoo.com')=='-1') || (document.domain.indexOf('yahoo.com.')!='-1') || ((navigator.userAgent.indexOf('Gecko')!='-1') && (navigator.userAgent.indexOf('Safari')=='-1')) ) { // EXTERNAL
+		if(navigator.userAgent.indexOf('Safari')=='-1'){
+			// populate embedded results
+			oResultIn.innerHTML	= sTitle + sCloseBtn + sIcon + sLoading + sResults + sFeedback;
+			oResult.appendChild(oResultIn);
+			
+			// go get JS Results
+			var oJSResults = document.createElement('script');
+			oJSResults.setAttribute("language","JavaScript");
+			oJSResults.setAttribute("src", yqAssembleQuery(poForm));
+			//var oYQRS=document.getElementById('yschyqrs');
+			//if (oYQRS) return false; 
+			if (boolYQreq) return false;
+			//oYQRS = document.getElementsByTagName("head").item(0).appendChild(oJSResults);
+			document.getElementsByTagName("head").item(0).appendChild(oJSResults);
+            //oYQRS.id='yschyqrs';
+			boolYQreq = !boolYQreq;
+		} else { // INTERNAL
+			// set domain as generic as possible
+			document.domain = 'yahoo.com';
+			// populate embedded results
+			oResultIn.innerHTML	= sTitle + sCloseBtn + sIcon + sLoading + sIFrame + sFeedback;
+			oResult.appendChild(oResultIn);
+
+			
+			// populate iframe with Embedded results
+			var oIFrame		= document.getElementById('yschyqif');
+			poForm.target	= oIFrame.id;
+			poForm.action	= "http://yq.search.yahoo.com/yq/search";
+			poForm.method = "post";
+			poForm.submit();
+		}
+
+		
+		// move icon to front if not there (moz)
+		var oIcon = document.getElementById('yschyqresulticon');
+		var oTitle = document.getElementById('yschyqresulthead');
+		if (oIcon && oTitle) 
+			oIcon.style.zIndex = oTitle.style.zIndex + 1;
+
+		// add moveability to open objects
+		var oTitle = document.getElementById('yschyqresulthead');
+		var oIcon = document.getElementById('yschyqresulticon');
+		modifyEventListener("add","onmousedown",oTitle,yqDoOnMouseDown);
+		modifyEventListener("add","onmousedown",oIcon,yqDoOnMouseDown);
+		modifyEventListener("add","onmouseup",oTitle,yqDoOnMouseUp);
+		modifyEventListener("add","onmouseup",oIcon,yqDoOnMouseUp);
+		
+		// following one prevents text selection in dragged objects
+		modifyEventListener("add","onselectstart",document,returnFalse);
+
+		// set timeout for getting results...
+		oYQObject = oIFrame;
+		oYQTimeout = setTimeout('yqCheckForResults()',20000);
+
+		return false;
+	}
+
+	function yqSetFormDefaults(poForm) {
+		var aHidden = new Array();
+		var i = 0;
+
+                if (!poForm.ei) {
+                  aHidden[i] = document.createElement('input');
+                  aHidden[i].name = 'ei';
+                  aHidden[i].id = 'ei';
+                  aHidden[i].value = 'UTF-8';
+                  i++;
+                }
+	
+       		//format sourceURL
+        	var url = document.location;
+        	if (url.toString().length > 125) {
+            	  url = "http://" + document.domain;
+        	}
+
+        	if (!poForm.sourceURL) {
+           	  aHidden[i] = document.createElement('input');
+           	  aHidden[i].name = 'sourceURL';
+           	  aHidden[i].id = 'sourceURL';
+           	  aHidden[i].value = url;
+           	  i++;
+        	}else{
+           		poForm.sourceURL.value = url;
+        	}
+	
+		// append above values to poForm
+		for (i=0;i<aHidden.length;i++) {
+			aHidden[i].type='hidden';
+			poForm.appendChild(aHidden[i]);
+		}
+
+   }
+	
+
+	function yqRemoveOpenResults() {
+		// remove any open Results
+		var oOpenResults = document.getElementById('yschyqresult');
+		if (oOpenResults) {
+			assembleBeacon('turnoff');
+			var oOpenForm = oOpenResults.parentNode;
+			var oOpenContext = oOpenForm.parentNode;
+			oOpenForm.removeChild(oOpenResults);
+			if (sYQBGColor!="") {
+				oOpenContext.style.backgroundColor = sYQBGColor;
+			}
+			window.clearTimeout(oYQTimeout);
+			
+		}
+		// remove the lock on preventing a user from selection in dragged objects
+		modifyEventListener("remove","onselectstart",document,returnFalse);
+	}
+
+	// checks to see if "loading..." text still there
+	// after 10 seconds (indicative of failed load...)
+	function yqCheckForResults() {
+		var oLoading = document.getElementById('yschyqloading');
+		if (oLoading) {
+			boolYQerr=true;
+			//var oYQRS=document.getElementById('yschyqrs');
+            //if (oYQRS) oYQRS.parentNode.removeChild(oYQRS);
+            boolYQreq = !boolYQreq;
+			assembleBeacon('timeout');
+			// close results 
+			if (oYQObject)
+				oYQObject.parentNode.removeChild(oYQObject);
+			// display error message
+			oLoading.innerHTML = '<p class=error><img src="http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/alertbubble.gif" align=left width=23 height=19>Request timed out, please <a href="" onclick="yqRemoveOpenResults(); boolYQreq=false; return false;" >close this window</a> to try again.</p>';
+		}
+	}
+	
+	
+	// set the zIndex of all YQ forms so there's no overlap.
+	function yqSetZIndex(poForm) {
+		var aYQForms;	// array of YQ forms
+		var i=0;		// counter
+		
+		// set zIndex of all YQ forms 
+		aYQForms = document.getElementsByTagName('form');
+		for (i=0; i < aYQForms.length; i++) {
+			if (aYQForms[i].className=="yq") {
+				aYQForms[i].style.zIndex = 999 + iYQIndx;
+			}
+		}
+		
+		// bring active YQ form zIndex to front
+		poForm.style.zIndex = 1000 + iYQIndx;
+	}
+
+	// submit the "more" button from the External embedded results
+
+	function submitXSRP(Url) {
+		var oForm = document.getElementById('yschspmore');
+		if (oForm) {
+			beacon(Url);
+			addyqrsX('rs_out',oForm);
+			oForm.submit();
+			return false;
+		}
+	}
+
+	function addyqrsX(type,oForm)
+	{
+                //var yqrs =  document.getElementById('yq_rs');
+                // check for hidden form (create if necessary)
+                //if(yqrs)
+                //{
+                        //yqrs.value="";
+                        //oForm.removeChild(yqrs);
+                //}
+        	var yqrs = document.createElement('input');
+        	yqrs.type = "hidden";
+        	yqrs.name = "yq_rs";
+		yqrs.id = "yq_rs";
+        	yqrs.value = type;
+		oForm.appendChild(yqrs);
+	}
+
+	
+	// assemble query STRING to GET external results
+	function yqAssembleQuery(poForm) {
+                boolYQerr=false;
+		var aInputs = poForm.getElementsByTagName('input');
+		var sArgs='?';
+		for (var i=0; i<aInputs.length; i++) {
+                     if (aInputs[i].name.toLowerCase()=="context") {
+                        queryValue = yqEncodeString(aInputs[i].value);
+                        queryValue = queryValue.substring(0,1810);
+                        sArgs += aInputs[i].name +'='+ queryValue;
+	            } else {
+                        sArgs += aInputs[i].name +'='+ yqEncodeString(aInputs[i].value);
+	            }
+		    if (i!=aInputs.length-1) sArgs += '&';
+		}
+		return "http://yq.search.yahoo.com/yq/results" +sArgs;
+	}
+
+	function URLencode(sStr) {
+    		return escape(sStr).replace(/\+/g, '%2C').replace(/\"/g,'%22').replace(/\'/g, '%27');
+  	}
+
+	function beacon(Url)
+	{
+        	if(Url != '')
+        	{
+			Url = URLencode(Url);
+			Url = 'http://yq.search.yahoo.com/web/beacon?rds=' + Url;
+                	var oImg= new Image(); 
+                	oImg.src=Url;
+        	}
+	}
+
+	function assembleBeacon(Type) {
+		var url = "";
+		var sDomain = document.domain;
+		var sNetwork = (document.domain.indexOf('yahoo.com')=='-1') ? "O" : "I";
+		var sSpaceID = (document.domain.indexOf('yahoo.com')=='-1') ? "96900539" : "96900535";
+		
+		switch (Type) {
+			case 'load':
+				url = 'http://rds.yahoo.com/S=' + sSpaceID + '/l=YQ' + sNetwork + '/URL='+ sDomain +'/*-http://yq.search.yahoo.com/blank.html';
+				break;
+			case 'turnon' :
+				url = 'http://rds.yahoo.com/S=' + sSpaceID + '/l=SR' + sNetwork + '/URL='+ sDomain +'/*-http://yq.search.yahoo.com/blank.html';
+				break;
+			case 'turnoff' :
+				url = 'http://rds.yahoo.com/S=' + sSpaceID + '/l=OC' + sNetwork + '/URL='+ sDomain +'/*-http://yq.search.yahoo.com/blank.html';
+				break;
+			case 'timeout' :
+				url = 'http://rds.yahoo.com/S=' + sSpaceID + '/l=OT' + sNetwork + '/URL='+ sDomain +'/*-http://yq.search.yahoo.com/blank.html';
+				break;
+			default :
+				url = 'http://rds.yahoo.com/S=' + sSpaceID + '/l=SR' + sNetwork + '/URL='+ sDomain +'/*-http://yq.search.yahoo.com/blank.html';
+		}
+
+		beacon(url);
+	}
+
+	
+	// encode form values appropriately for GET form submission
+	function yqEncodeString(psValue) {
+		sNewValue = escape(psValue); // escape characters
+		return sNewValue;
+	}
+
+	// prevent users from selecting text in the main document when 
+	// a SP window is open (as it hinders moveability)
+	function yqStopEventBubble(evt) {
+		var evt = (evt) ? evt : ((window.event) ? window.event : "");
+		evt.cancelBubble=true;
+	}
+
+	// adds tooltips to searchspot actuators
+	function spAddTips() {
+		sTitle='Y!Q allows to you conveniently search in context of the current article';
+		for (i=0;i<document.forms.length;i++) {
+			if (document.forms[i].className=='yq') {
+				for (j=0;j<document.forms[i].elements.length;j++) {
+					if (document.forms[i].elements[j].className=='yqbt')
+						document.forms[i].elements[j].title=sTitle;
+				}
+			}
+		}
+	}
+   
+	if (window.addEventListener) // DOM 2
+		window.addEventListener('load', spAddTips, false);
+	else if (window.attachEvent) // IE
+		window.attachEvent('onload', spAddTips);
+   
+   
+   // DRAG FUNCTIONALITY
+    var draggedElem=null; // only move elem initially mouse-downed on.
+    var x,y; // keep track of where elem is during drag
+
+    function spDoOnMouseMove(evt){
+        evt = getEventObject(evt);
+        if ( evt && draggedElem ) {
+            draggedElem.style.marginLeft=0 + "px";
+            draggedElem.style.marginTop=0 + "px";
+            draggedElem.style.left=(temp1+evt.clientX-x)+"px"; // move it to new place
+            draggedElem.style.top=(temp2+evt.clientY-y)+"px";
+            return false;
+        }
+    }
+
+
+    function yqDoOnMouseDown(evt){
+        evt = getEventObject(evt);
+        var elem = getEventObjectsElement(evt);
+		elem = getEventObjectsElement(evt);
+		
+		// go get parentNode until its yqresult
+		while ((elem.className!="yschyqresult" && elem.className!="yschyqresult yschyqresultinl") && (elem.className.indexOf("yq")!="-1" || elem.className.indexOf("drag")!="-1") ) {
+			elem = elem.parentNode;
+		}
+		
+		if ( elem && (elem.className=="yschyqresult" || elem.className=="yschyqresult yschyqresultinl")  && evt.button!=2 ) {
+            draggedElem=elem; // since while moving can go over other elems.
+		
+            // store where it was
+            temp1=(elem.offsetLeft); //pixelLeft is IE only, left starts out as '' not 0 // where it was
+            temp2=(elem.offsetTop); // pixelTop;
+
+            x=evt.clientX; // where it is going
+            y=evt.clientY;
+
+            // register move function with onmousemove event
+            modifyEventListener("add","onmousemove",document,spDoOnMouseMove);
+
+        }
+    }
+
+    function yqDoOnMouseUp(){
+        //window.status = "doOnMouseUp";
+        if ( draggedElem ) {
+            draggedElem=null;
+            modifyEventListener("remove","onmousemove",document,spDoOnMouseMove);
+        }
+    }
+
+    function returnFalse() {
+        return false;
+    }
+	
+	
+ 
+function modifyEventListener(psAction, psEventName, poElement, poFunction){
+    var isAdd = ((psAction == "add")||(psAction == "attach"))?true:false;
+    psEventName = psEventName.toLowerCase(); // just in case
+    if (psEventName.substring(0,2) != "on") {
+        psEventName = "on"+psEventName; // in case they gave click instead of onclick
+    }
+    if ( document.getElementById ) { // crappola pre-IE5 or NS6 browsers
+        if ( poElement.captureEvents ) { // if NS4 must reg then bind
+            var sFunc = (isAdd)?"captureEvents":"releaseEvents";
+            // event should strip off 'on' and then uppercase
+            eval("poElement."+sFunc+"(Event."+psEventName.substr(2).toUpperCase()+");");
+        }
+        //if add need the name of the function to use in the eval
+        var sFunc = (isAdd)?(poFunction.toString().split(' ')[1].split('(')[0]):"null";
+        eval("poElement."+psEventName+" = "+sFunc+";");
+        return true;
+    } else if ( poElement.attachEvent ) { // IE5+
+        if (isAdd) {
+            poElement.attachEvent(psEventName,poFunction);
+        } else {
+            poElement.detachEvent(psEventName,poFunction);
+        }
+        return true;
+    } else if ( poElement.addEventListener ) { // W3C DOM2
+        if (isAdd) {
+            // strip the 'on' off the front of the event name
+            poElement.addEventListener(psEventName.substr(2),poFunction,false);
+        } else {
+            poElement.removeEventListener(psEventName.substr(2),poFunction,false);
+        }
+        return true;
+    }
+    return false; // none of the above so no event attached, return false
+}
+
+
+
+function getEventObject(evt) {
+    return (evt) ? evt : ((window.event) ? event : null);
+}
+
+
+function getEventObjectsElement (evt) {
+    evt = (evt) ? evt : ((window.event) ? event : null);
+    if ( evt ) {
+        var elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+        // if element contains a text node then need to pop up one
+        while ( elem.nodeType == 3 ) {
+            elem = elem.parentNode;
+        }
+        return elem;
+    }
+    return null;
+}
+
+function resolveTheme(sTheme){
+	var sRetTheme = "";
+	if(sTheme.indexOf("http:")=='-1'){	
+		//named themes
+		switch (sTheme) {
+			case 'news':
+				sRetTheme = "http://yq.search.yahoo.com/javascript/newsTheme.css";
+				break;
+			default :
+				sRetTheme = "http://yq.search.yahoo.com/javascript/defaultTheme.css";
+			}
+	}else{
+		//user defined theme http://someurl/foo.css
+		sRetTheme = sTheme;
+	}
+	return sRetTheme;
+	
+}
+
+	// css for embedded results
+	if(document.sYQTheme){
+		document.write('<link rel="STYLESHEET" type="text/css" href="'+resolveTheme(document.sYQTheme)+'" id="yschyqtheme">');
+	}else{
+		document.write('<link rel="STYLESHEET" type="text/css" href="http://yq.search.yahoo.com/javascript/defaultTheme.css" id="yschyqtheme">');
+	}
+	document.write('<style>');
+
+
+	// form & actuator button
+	document.write('.yqcontext { background:transparent; }');
+	document.write('.yq, {clear:both; text-align:left; position:relative}');
+	document.write('.yq .drag, .yqin .drag {cursor: move; position: relative } ');
+	
+	//fix for wrapping issue	
+
+	if((navigator.userAgent.indexOf('Gecko')!='-1') && (navigator.userAgent.indexOf('Safari')=='-1')){		
+		document.write('.yqlink {white-space:nowrap;}');
+	}else{
+		document.write('.yqlink {display:inline-block;}');
+	}
+	document.write('#yschyqresult {white-space:normal !important; }');
+	
+	
+	
+	//partnercode for inline icon and 
+
+		switch(document.sYQPartnerCode){
+			case 'news':
+				document.write('.yqact { background: url(http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/yq_small.gif) 5px 2px no-repeat #FFFDE6; height: 1.6em; text-align: left}');
+				document.write('.yqact input { cursor: pointer; cursor: hand; width: 11em; background: transparent; color: #940894; font: bold 12px arial,helvetica,sans-serif; text-decoration: underline; padding: 0px; margin-top: 3px; margin-left: 25px; border: none; }');
+				document.write('.yqact input:hover { border: none; }');	
+				//inlined overrides
+				document.write('.yqin {display:inline; height:0px; width:0px; position:absolute; text-align:left;}');
+				document.write('.yqimgins {background: url(http://us.i1.yimg.com/us.yimg.com/i/us/nws/gl/12_yq_bsc.gif); background-repeat: no-repeat; background-position: right; padding-right:15px; margin-right: 2px; font: bold 12px arial, helvetica, sans-serif; border-bottom: 1px dotted #0066CC; cursor: pointer; cursor: hand;}');
+				break;
+			default :
+				document.write('.yqact { background: url(http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/yq_small.gif) 5px 2px no-repeat #FFFDE6; height: 1.6em; text-align: left}');
+				document.write('.yqact input { cursor: pointer; cursor: hand; width: 11em; background: transparent; color: #940894; font: bold 12px arial,helvetica,sans-serif; text-decoration: underline; padding: 0px; margin-top: 3px; margin-left: 25px; border: none; }');
+				document.write('.yqact input:hover { border: none; }');
+				//inlined overrides
+				document.write('.yqin {display:inline; height:0px; width:0px; position:absolute; text-align:left;}');
+				document.write('.yqimgins {background: url(http://us.i1.yimg.com/us.yimg.com/i/us/sch/b/yq_smaller.gif); background-repeat: no-repeat; background-position: right; padding-right:22px; margin-right: 2px; font: bold 12px arial, helvetica, sans-serif; border-bottom: 1px dotted #C09A3E; cursor: pointer; cursor: hand;}');
+		}
+
+	
+	
+	document.write('</style>');	
+
+_+http://yq.search.yahoo.com/javascript/yq.js_application/x-javascript”Ok/** overlay **/
+#yschyqresult { font: 1em/1.0em arial; }
+#yschyqresult { position:absolute; margin:-60px 0 0 150px;  width:320px; height:auto; border-top: 2px solid white; border-left: 2px solid white; background: #07357B; font-size:12px; font-family:verdana,arial,helvetica, sans-serif !important; z-index:999999999}
+#yschyqresult { filter:alpha(opacity=96); -moz-opacity:0.96 }
+#yschyqresult img { float:none; margin:0; padding:0; border:none; }
+#yschyqresultin { position:relative; top:-2px; left:-2px; height:auto; border:1px solid #5D8EE8; background:white; text-align:left; margin:0 !important; overflow:hidden}
+#yschyqresultin h3 { background: #D8E6FA; height: auto; padding:4px 0 4px 60px !important; margin: 0 !important; color:#7A3E7B !important;  font:normal bold 105%/1.2em arial,helvetica,sans-serif !important; letter-spacing:0}
+#yschyqresultclose { position: absolute; right: 0px; top: 0px;  margin: 5px;}
+#yschyqresultclose a.help { color:#3B6FD0; position:relative;top:-4px; margin-right:2px; font-size:90%}
+#yschyqresulticon { top: 0; position: absolute; }
+* html #yschyqresulticon { top: 1px }
+
+/**overlay inlined overrides **/
+.yschyqresultinl {position:absolute; margin:0px 0 0 0px !important; top:20px; left:5px}
+	
+/** results **/
+#yschyqloading { background: white; height: auto; margin:1em .5em; padding: 0; border-top: 1px solid white; }
+#yschyqloading p { margin:0; font-weight: bold; color: #940894; line-height:1.2em !important; letter-spacing:0 !important; font-size:small}
+#yschyqfeedback {background:#FCECC8; text-align:center !important; padding:1px 0 3px 0 !important; margin:0 5px 5px 5px !important; }
+#yschyqfeedback p { margin:0 !important; padding:0 !important; font-weight:bold; letter-spacing:0 !important; line-height:1.2em !important; font-size:xx-small !important; text-align:center !important; }
+#yschyqfeedback p a { color:blue !important; text-decoration:underline}
+#yschyqfeedback p a:visited { color:#6C6C6C  !important; }
+#yschyqresults { background: white; height: auto; margin: 3px 0 0 0; padding: 0 0 3px 0; border-top: 1px solid white; }
+#yschyqif { width:316px; height:0em; background:white; }
+
+
+
+
+/** styles for results **/
+
+#yschweb, #yschyqframe div, #yschweb div {margin:0; border:none; font-size:x-small !important; font:xx-small !important}
+
+
+
+.sp1IYResult {margin:0;padding:0;}
+.sp1IYResult p {margin:0;padding:0;}
+.sp1IYResult p div.yschttl  {margin:0;padding:0;}
+
+#yschyqframe { width: 300px; margin: 5px 5px 0 5px; padding:0 !important;  border:1px solid white !important;}
+#yschyqframe form { height:auto}
+#yschweb {clear:both; margin:0 !important; padding:0 !important}
+#yschweb ol {margin: 0 0 5px 0 !important; padding:0 !important;}
+#yschweb li {margin:3px 0 0 23px !important; line-height:1.2em !important; color:black !important; font-size:x-small !important; font:xx-small !important; font-family:verdana, arial, helvetica, sans-serif !important; letter-spacing:0 !important; }
+#yschmarker {margin:0px;padding:0px; height: 0px; width: 0px;}
+#yschsp {width: 100px;}
+
+#yschyqsearchbox {margin:5px 0!important; height:auto; min-height:1.8em !important}
+#yschyqsearchbox form {margin:0 !important; padding:0 !important }
+#yschyqsearchbox input {font-size: 1em; margin-left: 2px;}
+* html #yschyqsearchbox input.yschyqbt {width:10em;}
+#yschyqsearchbox input#yschsp {width:70px; margin-right:1px }
+
+#yschyqframe a {color:#0A0ADE !important; font-weight:normal !important; text-decoration:underline !important;}
+#yschyqframe a:visited {color:#6C6C6C !important}
+#yschyqframe p.more {border: 0; margin: 10px 0 10px 22px; padding: 0px; font-weight:bold !important; font-family:arial,helvetica, sans-serif !important; font-size:x-small !important; font:xx-small !important}
+#yschspmore, #yschspmore p, #yschspmore form { line-height:1.2em !important; letter-spacing:0 !important}
+
+
+#yschyqframe p.err {padding:0 0 0 22px; margin:1em 0 0 0; line-height:1.2em; background:url('http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/alertbubble.gif') top left no-repeat  }
+#yschyqframe p.err img {display:none}
+
+#yschloading { background:#fff; height:3.5em; margin:0; padding:0}
+#yschloading p { margin:15px 0 0 5px !important; font:normal x-small/1.2em verdana,arial,helvetica !important; }
+
+#yschyqframe .yschspns {margin:0; padding:0;}
+#yschyqframe .yschspns h2 {font-size:100%; color:#6B6B6C; padding:0; margin:0 0 0 23px; font:normal 100%/1.2em verdana,arial,helvetical,sans-serif}
+#yschyqframe .yschspns ul { background:#fff !important; list-style:none !important; margin:0 !important; padding:0 !important}
+#yschyqframe .yschspns ul li { cursor:default; margin:0 0 0 23px !important; list-style:none !important; padding:0 !important; font:normal x-small/1.2em verdana,arial,helvetical,sans-serif !important; color:black !important}
+#yschyqframe .yschspns ul li a { display:block !important; font-size: 95%; color:blue !important }
+#yschyqframe .yschspns ul li address { display:block !important; color:#12840A !important; margin:0 !important; padding:0 !important; font-style:normal !important}
+
+#yschyqframe .yschspns, #yschyqframe #yschiy, #yschyqframe #yschweb, #yschyqframe #yschyqsearchbox
+    { margin:10px 0 0 0 !important; }
+#yschyqframe .yschspns, #yschyqframe #yschiy, #yschyqframe #yschweb, #yschyqframe #yschyqsearchbox
+    { margin-top:10px !important}
+
+#yschiy {letter-spacing:0; color:black; line-height:1.2em; }
+#yschiy ul li { list-style:none !important;}
+#yschiy p div.yschttl a {letter-spacing:0}
+
+#yschiy p, #yschiy p div,  #yschiy div, #yschiy ul, #yschiy li, #yschiy address { line-height:1.32em !important; letter-spacing:0 !important; margin:0 !important; padding:0 !important; font-size:x-small !important; letter-spacing:0 !important; font-family:verdana, arial, helvetica !important}
+
+/* catx */
+#yschiy {background:url(http://us.i1.yimg.com/us.yimg.com/i/redy.1.1.gif) no-repeat 0 .3em;padding:0 0 0 28px;margin:0 0 17px 9px;}
+* html #yschiy/*IE5 hide*/{height:100%;} /* IE: fix extra bg img bug */ 
+#yschiy address a, #iynws, #iyfn, #yschna {color:#666;}
+
+#yschiy .yschttl {color:#000;line-height:1.1em;} #yschiy a.yschttl, #yschiy .yschttl a {color:#0000de;line-height:1.1em;}
+#yschiy p, #yschiy ul, #yschiy li, #yschiy dl, #yschiy dt, #yschiy dd {margin:0;padding:0;} #yschiy ul {list-style:none;line-height:1.3em;}
+#yschiy p img {float:left;margin:0 5px 0 0;} #yschiy dt {float:left;} #yschiy dt:after {content:':';visibility:hidden;} /* nonIE: hold space between float dt and dd */ #yschiy q:before, #yschiy q:after {content:'';} #yschiy address {display:block;color:#088000;font-style:normal;}
+
+/* catx specific */
+#yschiy p#iywthr img {margin-top:3px;}
+#iyfn {border-collapse:collapse;padding:0;border-spacing:0;}
+#iyfn td {padding-right:10px;}
+#iyfn strong {color:#000;}
+#iyfn .yschdn {color:red;}
+#iyfn .yschup {color:#008800}
+#iymap em {margin-left:15px;}
+p#iymap img {border:1px solid #999;margin-top:6px;float:none;} #iysprt table {text-align:left; padding:0;margin-left:-.6em;} #iysprt table table {margin:0;} #iysprt table small {font:100%/1.3em arial;}
+* html #iysprt table {vertical-align:text-top;} /* TODO: make this work for gecko */ #iysprt td {padding:0 10px 0 0;} #iysprt td td {padding:0;} #iysprt em {color:#666;margin-left:10px;} #yschiy caption {text-align:left;color:#666;padding:0;}
+
+/* mods for YQ */
+#yschiy {padding:0 0 0 22px;margin:0 0 17px 0px;}
+
+
+#yschiy cite , #yschiy ul#iynws li, #yschiy address , #yschiy .yschttl 
+    {font:normal 100%/1.3em verdana,arial,helvetica,sans-serif !important}
+
+
+/** IE font hacks **/
+#yschiy ul#iynws li {font:75% !important;}
+#yschyqframe .yschspns ul li {font:100% !important}
+
+/* defensive css */
+#example #yschiy p { font-size:0px !important; padding-bottom: 0px !important; }
+
+#yschyqfeedback {background:#FCECC8 !important;}
+_6http://yq.search.yahoo.com/javascript/defaultTheme.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascript‘”O!öGIF89ax < ˜ˇ F∫÷¿Í˚:∂‘î6äÄ’¯©ÃŸÒ˜„„„Ï¯¸!™À"õ∫≈ÍÙˇ≈ñ°Pô¥„ÔÑ—‰”Î•˘¸ÚÙÙÙˇs˙˘˙óœ*´Õ’å(Ç[¬⁄öBë±Â˙ õ√ıÎÙ’’’ú⁄Èˇ◊∂«˚‚ ‡⁄⁄⁄˙˝•÷HÀÏı˙ı˘”Ò˙z≈◊¯Ú˜Q≈ıÀÁïW®ª≤Ò∆ÂãÎˆ÷ÂÛ…ÀÀÀ·Ù˘≠f¶v¥√ˇµyH¬Ùˇâ)∑y±¢›Î—Óıê⁄¯æÖ∏ﬁﬁﬁˇúKÆ·ÌË˜˙´∏∏∏Âı˘ÒÒÒ0∫Ûv“˜` ˆÏ‹Íµ›hˇi ˛˛˛–––ñŸÈâ”‰RæÿïÂ˘ µÚÃ°»áª»‹Ú¯ˇ·…ˇÎ⁄ºÎ˘–®ÃsÀ‡bƒ‹ÌÌÌªÂ¬åº
+≠ÒÖ«ë’ÊπÈˆˇıÌˇ§Z‡ı˝˘˝ˇƒƒƒ≈ì¿®®®™ÿQ»Ì˚†∆ŸÌ±ˆ˚Ï’ÊÍÒ˘‚ËËËˇ¸˙ õ≈ˇì;{Œ‚ˇ¨g∂Î˙€ºÿÇ ‹{—Êˇæà∞k©Ë‘ÊœÔ˚’ˆ´„˙ïÃ⁄≈ÂÏn…ﬂÒ‰Ô˚˙˚ˇ|˝¸˝´‰Ú¥ÊÚiÕˆhµ«¥r≠ª‡uˇ›¡h«›ò›˘ò√Õ®]°ˇÃ¢÷≤“jÀ‚H©¡£‡˙+∏ÛÿÚ˝ÍÒÛ•…éŸÏ€Ú¯‡∆ﬁ0≤—8ΩÛÊÚıˇÒÊ©ﬂÏ˚˛ˇç÷ÁˇÂ–ˆ¸˛gº—ˇÇﬁ¡€›ı¸ﬁªÊ˜˝≤È¯ÚÁÒY»ıˇ“≠Ê–‰$Æœ‰¯˝ˇË’©È˙6°Ω⁄π÷˛¸˛‰ÔÒüË˙Û˚˛˛ˇ˝ì◊ÁﬁÔÚÄ–„≠Ëˆ¡ËÒ∆›„ﬁÛ¯ö“‡ˆÓı	°∆◊Ù¸d≠æ9ØÃˇé1ÿ∂‘‘Æ–ˇÓ‡†”=û¿Z«·Ô·ÌáŸÌ¨ÿ„˜˜˜ß‚±›Ë•ŸÂı˜Ø⁄\¡‚Ä+ØœﬂÛ¯ŸÙ˙á’Ë–Èü¯˚¸Û˛ˇæÔ˚M¥ÕØÒ@øÙ†ﬂ˘pœ˜ê.Ü€Û˝ˇ˝˚È◊Á«ó¬˝˛˙Û˜¯ˇ˘Ù&∂Úé√œ∫÷‹›ÍÓZ∫—ï◊ÊûÿÊtæ–˙˝ˆ˝˝˝óóóf¬ÿü÷‰ ™ˇˇˇˇˇˇ!ˇNETSCAPE2.0   !˘Ùˇ ,    x <  ˇ ˝	H∞†¡É*\»∞°√á#JúH±¢≈ã3j‹»±£«è CäI≤§…ì(S™\…≤•Àó0c úIS 5	‘nR´…S !	p:Ì ¢®¢D(Ù|IhK—àÏ,HçHè£p¶.=IË “|%x!Ac6⁄≤•…∆¬õ≠∑tÄ∂!jKJà!Ñà≈⁄úë`Ùmõoå≤πxQ≠FYÁ„&W	-§ßG!p∂ƒ8pÙ2úâmßÅ–∆‡ãIÿ4T˜°ŒçBr∫·£X¥ƒ`Ã'¬å8f$î=òÔ ﬂ-{ôt0”aKﬁ%"∂D\%ò>Öo¥}ˇkß∞ ò	JîL(Ñ
+w˙ÙP)+EBŸΩ:ÔCƒCT≈–ü˛‹%P^Q√Ñf±Q#≠1‘Œ
+ﬂ §NÖ§ßLî“L)0Pá7†ﬂ54büÖ¡!Ñ=‹‘Å?P∞Z‘¡r-‘ôCT∞D¯∏ √Aí†áJ+§N(ç‘0GÜ'÷°á$∞|†Â5¯PÉ…EÑX"!èü˘%êX˛H`À)tC´TPaDm¨·@U0‡e3ΩSä>†Úûzπ%äﬁ∞ÿ$ÇRkbF å-—Dƒ‡§Q¿ßΩ·å≠≤
+AP“¬¿;©cs†ˇí¢≥ŒÒÅ:ıp⁄@˘˘gfP
+—è	1í/µy˛®”HüUXÙ-∞0 ‚ RÉp≈0„@ôˆ@„Ç!«`D®+∏Ç?´ê¿E¨	ÙN#’"H–ïI$…(DH8D!õë#T˘8ëØ˛¥ABB™ìÕêµ√lÉÔ˙”å™—
+TJ#â¡‰@qË—L#$$Üº±jpv‚¥EÕ>â ›t10±+CÜ7–DG C¿{§?o0í4AØ}gß˙cEü¥TCˆ˙êµ@Õ•	ïR‚ı∞ËÎO>L®ôÎDà@=0¡Ñu%ˇ§ ÅiC™?Ÿh#–iÃ+–7ÏIKãaE•hÕµ?q¯ ¶@V‹@KcƒÌÅ5(ÅJìºñ•6∏sátdëu¿e
+˚ìBû‚<PŸ,ù∆m$.PÑﬂê∞Ò„U”¢Í◊Í¯0F!z^≈*+3yV:∆äÍÃ°ƒ2dwõ‚J–?t {UN;…%îvy•ª@/$Ò]ih√aŒà¿úQÅ$(ã»zA«Å•YÅ ì:Íê(ıàçD hÜ2˙41ƒJ ¿Ê|†eåéW`1ÑPÏá8≠©S1ƒ¡|"¸àÄ
+⁄	z¿∂Óq§ä@6ˇæ@D":CTpÅ3¥/|0ÓàYA«ﬁ!π¨—∆>êDÙÙÄä90`	s–‚!60@∏Z¬L∑9ÒÖ	BË¿πx%∑ÇH öqx‰èPgF¯a+6ê XÖ*§#πÄ0 „98|¨Ä1qE3$±¢1Ël^‘V3‚0Ü:–‚UP∆j∞$≠±1m‚”G\ÿ&A⁄å:W…!ò &4È»
+™F∏;¡¿0®¿`íàg0bT_hú?^≥±giQ 5hÊÒI8/UÄ≈; Ü*¯Äz˝Úá^Y[öÅ	ø˙÷AöH AD M>|IˇZ˙c≤HlÜw§H:c‰˘˘Ã!±!†ˆ™¬´Ñ#ÜÑäIß@÷â
+@µ≥ L¬‡p.OÕë {âÅ\gBË ãA
+≥;©‰xIZ⁄Äm,P  +Ö$NHë“ô– ∂Ùá∑é¢Ø¢4•n≥›ú‚G»¥ lÄ¿E–Ç,ÇtÛ7í¿UEƒ†%Ñ©v¡¶≤ÑºÈ± *<©ÂhêUÆ"mH¬“
+
+0@Kç‘”(§ŒQj"¡‚§≈∫MW	YÇsb*R§H.Ë™AhAË’!¥0¯bOÇT•" A‡4ê]Z!Å4BÉölˇX∂læaÄBˆ+xØåŸ#AF?€Au∏=8◊Ç%◊5ë¶∏yA6◊êv$Ax±¬¶Ñä1ê¨!∏Åz$·∑∂°Ù[˘hA®ÒC‚!©	ÚVT	Úç€6$åêóC‚¿ Ò™g®B3ƒ Üè5¢™B–Sm&§¥	çÌ‘€Œ]¡¡n}35Ñê£É$Ü∫9⁄t#"Ü3ö(>ÿBÖ¨p#+ı¯Ä∑	Ó@z`π@◊`ÄåAáb©:"§Å˘ÜM¬ã0‚AéÉH(˛uõC!j7æiD`20QCm7Là“U0ÖÙ®!º(	V Éù∂·ÕF“@LãÄ≥ïZz®¡ï>â†fnJÓB:ì÷ü
+…Sú!B∆8ùI∫¸Åü#‰&¡˝Çè¨â|¡ê{Br‰(pÒ‚ñë]N:‘ÈÙ£,Ú∫`¢ö#ó9¿ér#Oø:$]9 fMï◊!ˆ÷&©€PÑ¢+∫-aÀƒ4∞óÕÏf;˚Ÿ–é∂¥ßMÌj[˚⁄ÿ¶v@  !˘Ùˇ ,   v 8  ˇ ˝	H∞†¡ÉUf´j\—†!Lü
+3j‹»±£«Ç£L!`ÖIçs;úK§¬FπOEä¿+R.—#2sÍ‹Ÿ±Uj˛Ï0r‰ïÀK-»y	§ü”ßOÉ¥P±CC∫eFÒ‹ u„®]È48b„º^“2m
+µ≠€ ‰Z\≤ëh«ü dviÌ óÁ®}˘≈ã€√à˜[ÎÖ<F˛`BP¶ØeÖ√PQò≠‚œ†ﬂzÅW.Úâ]óSèb`Û%rLCÀû˝VÓëGÈˆ¶ÊπKÅrùiUÍßsPÔ˛8¢U¢KKg”$NΩxê(G4åX≤\„à0œÀˇ>“g†ÜÍmœùÎGÜ‹ÏØ4 ‡ﬁ›`ô>äàó]ƒﬂøÅT–è?Â7ï%¨‘GÊî„ûpÂ¯#‡ÄnpÇƒM•År›ëA@‘ù„è9 N®Ç;êSNdÙSå:uNÎıEÇ˝Ï∞√ÅÂA∆è¬¡cD:›•sŒ~√A–zN¶TŒ¯U^ÿèìÊ∏GÄ@^à‡9dê8ú6∞[:â‘H\ÖA>u¢S˙≥CvBEÜ9NEa!~[∆à9ˇQƒ'–«+∏˘&áOÍ‘Á8§ñ˝\¥C`C˙Á¢?˝∞∏•ïÜaân[ÌÚ<¬	’àO≠ˇÿá
+ÂòCÜ
+OQ‡°é∞√|˛®¬;‰Y]ó<‚NKÙaÜtB˚Yf≈Ø[˘ ™¥‹võXè`¥ì*0i≠l‰8
+Uµﬁ∫Ó≤=Yr	zÌA’ènÌP≠Xâëq·∞–ñìc[üÑÅ*GˇµÄ§2Zà¯˙√+bêÓ` Ü\‹ñâ`íõÊ"∆.T´ *h‰8‹9Ê® Æ˘mh'âlé)-°∆+L≤´A,˚s´SŸ d?µñß#TG‡⁄ß≈Ví£èQhPû@}ƒºCé‰TÖÎ8uIÆ‰êXuô˝hò“[dz4J6Ï≈ôÆá‡óÁ¸JéâRéˇ†BdîGN Gp^ ÊKËj™–2•Pı'cj
+§Ø’ ˙9+G ◊tX·ïœY\ö+TÜqìlé?¯yÂè~æbl⁄ ∂gÚÇŸ«-;YD Ê`Ä£§¶ÌèJˇ˘„¥ìNôcé®≈(‡jn}2TóòØÍ¨3Yey}Ù—#∞{8ÙNíwûâ# fÂÊ¯IÄ9}∞¿mAÄ˘˙“SR÷á◊a«Â1Zãï±π
+*-  :bä≠Îx≈"[∆Œ·û=•º™RΩ“F+_ı√düÛèÄÆ%¢∂¥∆)Cö?∫ïrú$A{#úSä 5ï#N¬T?ˇ8÷ éå" <ìñ≥ƒ–êcb¥ö ˙±∑∑ºBYª∂H‡4^xN(ÿ(.ö±O°ù—>”#å±#(ÇgŒË-àq´¿ôGN–&:nëaRÅ«>RÜ8*hhtä∫Ñ3≤Ÿê#c∞;¬"Ö”==~$Gòc[¯•ÛÅXTƒ"sË¥⁄ähaÎ·ûx°/ïëZì≥⁄@⁄SºAzM<LŒQƒúÏBü–‰S»√ûJ¡N#∞!ü¸eÓ)xÂ19G(ˇîg‘Ç„˙1^`=)ãI3@©"Pi,≤±Å≤•/ƒJo0_›^ÿ√/ïíN…;›˙!ˇΩˆ	ÑL;Äú,D®A xÉ€ßl
+ñ∫Kr1_˙Q44ÇÆ…ÔY(“?ıÆjFÉ]èá@¬'r^Ù˙0ºP¯jKlÜ ‰DQ·c»∆£ÏòC@è‘Ä”dˆ*ƒëHô1’ÄÄ
+˜:ã≠ÁñıÉ&ëX∏(öËûOiA"‘––ùÙ!!´–$∑HÄY´âEÿ¡,∫ LúCaPqúô¶–na'‚⁄Õ•Êz»≠Ö)éqÿ *Ÿ@ò|≈9ä`º¢pPÖM‰SÙ¡€J,¥ıà>®Ç¯eó¿
+!
+à’,mÇPé0P÷+¨¯√+
+£Z≈ˇƒFdè∞‰k3€‘÷-‰∞¡9T∞HéMp∑”¿9 ◊⁄"Îj@¿^e::‰z§7Â_•Úä?ÙrÑ3◊ﬁzi›çòÇ5˝D÷≤E©ÿ`H*i!!œ¥ ∑Â˝».†K¿(ØâÜºpâWÏ ì5»(0±ÉO‘HW˘ΩÈ(FÅÄ>à%Ø(Rî"”€ T. 4údÕãòÈUä0O 0L@(0ÜU–óî√çulÁPï>∞B∑)&Ã1€~¿#\*Ê WFBÜt8˘…òHGî”AV∞X· Ta	\BW rí«úì2ê¡$}3ô◊Ïë2‡Ù# !˘Ùˇ ,  h 9  ˇ ˝	H∞†¡ÉÊ3dàê	WH÷Ö∏ÖÖ;)rx‡‡—•ã,ÀñuB¬!°Ñ(S™\…“ﬂíÜ˘LbácFÉ.Ë‹…≥':t4ÿsÊV,-ì*eπÑBäb|ñIYÑùŒü"-¬·≥I∑¬.õÑ±èEë2XΩ 4fÎñ ïk(≈†NRp4]Ü=]∞‹â5®X
+
+∏.YúØ1.ÜÑ(8ÖÎÕV˝Œ8sßÿ‹œ	qà≈GÜ´"Ò`ÜƒËÇKpMF≤åGùAyÑ†zÆ°—Rˆ‰ºêö«§hΩY÷Â–Èf‚ë&yNæífãr»∞HJà‘ó.ˇ°∆ºÀmtÿ!	èêπs‚x‹îè˝Î—òÕ–Ÿ@ä+˚πíJvdÄC*”ò!Æ‹±[`quÆL≤rûÜqH]>L	q3—[Ö^		*Ö√ qî¬ !tG$ ‚ä95ê gÉXH"ãü1s¡ã˙¬Ì±áÇ˛PÀà`±©\àŒ∑Ä⁄¯”AR4@Pg îÇó†π“qR$∆g‰	3lÇ6 ˛Ë%–{dÂO
+¡]ê¶A<0ÄJ.zá\)`°®ï+uB•H%∑NO˛)ìF≤'°!îöÇë´]0»;1#r¯ˇı(J&`°÷"5Ü«ßÖhß‹q£¢r⁄ÑÄé˛d¿ÃàŒêgK)ÏI¶”PR¥ò‹^1¢Y'3Ò5âƒHêëzÖ)™íÜŒ5»É] TÃÆÃj_∞ErF
+∑ôŸË∞=ÀÉÜg∏ÍO$Ãä¬M±tØä&B)„@I2ÌJv}Üã<Iê	¨6†Æ≈(∂ŒMÎÑzß,≥\˜£@!dêA'ü⁄:<H¡®å¶e04îÜH L}≈,Ç•s%⁄©5,ê®•ãÚ2ã∫6… ãò∞Tí…˘K–í
+{H6uTOí`Úúí´)ƒ≈Ãi|b¸"xu2ˇöQ˛‹°Ô:I.êë–)|˜ë¬√'+π1JIgÒ {àç“í),;àäw8[⁄¬Œ‘ì#™®”£#
+…:gàås»Á˙Ûy$°√ı◊GÁ|Iq`ow†π“ â
+=Ä@8‡p∆ÎZ˜I\õ÷y‰Á6yçÑPfA(,ÛÀ^0≠jË&Kπ˛`·Jª0»ÌÆ…ÁN6¿Ã wä„ªËZ÷àp¨%ƒlçSQ˝úc‰ÂD|)©÷ Zf+®°$Ø√ŸpP#a˘„y¸†Pí0¨rBa’ç“<Çú!oa x∏äI*Y¬◊ZËèe§gf@\J>ˇ:ëÅhNIÏ¢SÇãN9âF†é∏ƒ*ƒ©–Yƒdtt»≠ägà‹@:wìC±áíj¿∞Mhâ{8ZA^î51Ç∆±ö¡“π|—ä©^„ÿ31P± MLMÀ∆÷§˘•≈ëD•†Ø?Ÿp àKç¬§0Ä4q“å-!ˆ√é7"ƒªöì2àÂÈœ›
+å≤‚,VÈƒU!∏_»ñá±#ôçjëÿC¡§îbÏ/ì`… F¥áE∂‰w*˙‹ÁBK-ÃP{I¡Û–æÇm Ò´¯◊Ñ‡ARk…:ò´ñ¥Yfj ‚‚ñÔºkIgpŒÁòAˇ66™mºC\§¿√ÉXß8È¬‰RÇÑE»[(Yfµ¯•,g≠√4R(·¬"—∆SÅ)I¡q·À‘ÄXÛ Ü@;N√—œD:¡A'\£†éıÊ;!D4‹W vr)Ñ∫M∫öR)&XGôà√Éòı&¶AVê∞Ñ£¢ë· ÓpÜ”ÏÈè‘!D*^Ñ,9‡‘™°¿:òQΩËƒ@ÌTê	î-cïV\B1¿≤üùd¿_kLô	ttDÇgeè!÷qúÑ†J$∫êÿ ‚"ÊyÎ"‰–âhÊé—H≈{∫∞é…ëÃPZE¬O´xù®B'hÉâFIL@Ü‚4D2&xJ1\!ë[t√ŸNHkC‹‚H´µ™9ßÚ‚¸uÉ<8;‰ á3t¡∫Õ[ƒ“2∂h}ç^Ûa≠Iò¡õ®•'ıI≤Ç)tBl=óº¥WËÃéË%.äÅÑN0Éq“f∞á;i+<¯»`\ÒŸ1ﬁÇ@»kY>x4SX%o[”öäQ⁄R†™„©ä∞ÄúN†c{¸ëÄPùÃÄ{ZÖe¨ƒNË≈nÄ3yƒb`a?Åj$Kd%r g†Ä$!⁄‰ ¶†>P
+ !˘ºˇ ,  h 9  ˇ ˝	H∞†¡É*\»∞°√á#JúH±¢≈ã3j‹»±£«è CäI≤§…ì(S™\…≤•»%%ö8y‡¡ÄÀõ¡Âp"Íá(YÄ√È2á.í:¯ë'ﬁíá£ÄË¥¿¢9=ˆ„GRü¥k∏+ûq…lm≥U	èéQX#˙Ù©cƒàFõ.APÇó@
+Rq4Äa x≤• œ’∏	óå¬mò9~ÿ±Kò<ßúh¡0˙	Ü_~ñ†˜‰∞ ƒâ+ÁÚ.MÍy(1Ñ©ø~—$™â(#êãzêÂâ£,Ç9*Äã≠øéÕ]A•⁄˛ûˇä?'NÆ
+L∞Lç\dˆ9”COü?õê Å†ˇàtd›t¯Dk¶apòv€q'Ä»p·ƒ=(5
+ß$†¿3rhÀ=:‰c¿Yï†êöE¡lå_JâbTMÙ∆o ·_YHW⁄ÅŸµ¶†k‹y‰6œ(ê@EûÇ¬3	»‚dPÃ
+‹ìÃ∆CÂ4A«H-Â¢Û˝DäptÄa£ç`8b 9 ßjáÅ ài±ObB>1 €l„	ëM “§ ¶‡	îœ”dhÚå-cMîC\t5¶~ÿòT”ã N a*Nòf∏Q`údˇQß~à=2Ärç Zp1å2¯ë√≤∫M±ÇpJ7√ËêP
+‘/O<† =Äﬂã%pñú]˛! 
+CúöÍÅ  Ï2PÑ(öƒo/p#√C∞2œú Ä/ª@p#à,«Vá ˜12p“D€<P›§<S	Ex\ÍA`8 .g¶⁄µf√(Ñ	hÚ¿¿IÀPQB¨±Ü1¡„2-Î†É©2 }ØO$ @0ıÅç¡Ë √	}”À6é@«$¿∆˜Bä~ÏÇ`dAá‹òÇ¿.`î†≥l‡H√!
+0ÀDÕˇ¿…ÀCº‹27:Tç¡˝É,M 0Ãæ8rÏ6YÙQÇ 8¢I§Ò&	E”–—ÀL»p.êÜÅêêÌâTp"É'¥[∑¨¡7u;¡w,ÀÄîŒT¯˜X÷¨Y¿'†Ï%§öB  T≥M§¿6!∞è7h–T‘Ä1k Ø…€¯Ò2'N¿n¿0¡»Ç|@8Ô ˚k ÀÄêÖ»†n®ôÕ‡Á*¨<Ü5 e((…‚W∞É†UÄd∞`	Ë è=/v:‡B=±‰≈ègúœxÊ	æm√eúÉ˛4±Äa»Œ¢8‡ˇ°@õ≠·‹ÉN†É>Ë¿ΩÿÑ7·o¬≠∞Éda1w\d	ß±¿ÖŒeïÇñÄ¬,oø(‚ÑàÅæÒ¨7∆¢ÙVDõÅ°Yñªˆ˙–‚–`°ë cÿ1≈84±¿–A˝ÇŒbÑ`` Ç0[òÀd†Öﬂ±lMÿ ÃÁàÃqèu4¢ÕHqå,‡z∏¬!6—Ñ)nB¿î%†‰HT$Ù(¢˚ QË _-ìA	¸ 3*4¡m˜”A◊p√.† Aå]éx@ Qñk»A 5Ñ!‚»¬ÕÊ	@Y¿ëπ¿
+åXˇ A–£}5” pFûé®]4πæt≤åéX 'Äê@rÓ—≤‹Ä,ÆêK, ãaxD˚2™	‰Œí™Ñ/2Md…ì¡C=7 Ä∫¨eã[ YV∑_¥O,£¬t–Ø:âJ‘ håÄ‡
+aX %Ä—
+™Bù≤  §ë2M$ …D2∂  Åã*¿6r∞∞ÇrÉ
+Oÿú'J–Æ hÓuoï¡Ø∏±®8ÄL<ÅTCäß⁄!{ÿÑj¡ÿ<  –ÄÇdkÅÅcU‚sbË¨˛¬:có¸ ,R
+jÇ`W–J†ƒï?Ñê—Bˇ÷jáa≈qÇ  v–Ö.j!\(ËB≤P ^Û=ç¯ÇÿA‹¡lt∞!¨	µ3ï9ÙÅOÄ¸≈.¸¬0O@‘NÄà ú@‚∏Çnè!±÷h∏ƒEÆqk:àò’»4ë#'p*aãOÅ`*.åFuZ@⁄<P APAµ~pi¬pú Y@DN–·0‰Å4Zç#6qE;$≤’ÿÑ ¥‡A∞ÄâáH†´Åat√©± Aä≤ò¿–…¬ËÜ.∞B¨p í≥ÜBˆ·5~¿å~¡dyô¿y®¢$ :xÉ˘Ï8 Üjx‡ˇkh
+Œ/ ÚáŒxéúÔºÄYtÉò3ùØpHD˙Œxv˘æF∫<?¿	2aÅ1=bÅx8 òÈZ/ö∞±{– ËÖ®G=Í&pa®™8Ü*VjBÎ6Ω®åf›ÑêÇ4∏G≠_ƒÈT£	ß†¯Dí	HLa\Fêb‹c
+µë·¢KY€¡ò≈,R}åYp¡⁄óí/|Ø`Ìj‚ø>2@ËÜ)(ı∏PÄLz$ÿê$‚1Ö~[ Õô∆DD|•+}Êˆ,N–§tE‹ÎÙ
+1AÉäOA…∑±ß 	yd2…Døâ!
+¯≈/~´òf—áì'€/¡ËÉN s@ƒ˘ 9E∞!@%Ü–∞ °˝äò¬	å^Ù`Õ:œH<t`K¢/¿ñ%H·ÑànPΩ% ±",ıåÄb
+d‡ƒ◊¡~Ç–¿ã¬†¡4J∞N~ „eœà/¶‡ãpÑ€∂2 NTúêvﬁ3ÇpS@<!O˘ [˛ÚòœºÊ7œ˘Œ{˛Û†ΩËY ;_-http://www.lduhtrp.net/image-1702246-10386447Yimage/gif‘”O®var sc_width=screen.width;		
+var sc_referer = ""+document.referrer;
+// var sc_referer = parent.document.referrer;
+var sc_title = "";
+var sc_url = "";
+var sc_unique = 0;
+var sc_returning = 0;
+var sc_returns = 0;
+var sc_agent = navigator.appName+' '+navigator.appVersion;
+var sc_base_dir;
+var sc_error=0;
+var sc_remove=0;
+var sc_http_url="http";
+var sc_link_back_start = "";
+var sc_link_back_end = "";
+var sc_security_code = "";
+
+
+if(window.sc_https) {
+	if(sc_https==1) {
+		sc_doc_loc = ''+document.location;
+		myRE = new RegExp("^https", "i")
+		if(sc_doc_loc.match(myRE)) {
+			sc_http_url = "https";
+		}
+		else {
+			sc_http_url = "http";
+		}
+	}
+	else
+		sc_http_url = "http";
+}
+
+
+if(window.sc_partition) {
+	if(sc_partition==1)
+		sc_base_dir = sc_http_url+"://c2.statcounter.com/";
+	else if(sc_partition==2)
+		sc_base_dir = sc_http_url+"://c3.statcounter.com/";
+	else if(sc_partition==3)
+		sc_base_dir = sc_http_url+"://c4.statcounter.com/";
+	else if(sc_partition==4)
+		sc_base_dir = sc_http_url+"://c5.statcounter.com/";
+	else if(sc_partition==5)
+		sc_base_dir = sc_http_url+"://c6.statcounter.com/";
+	else
+		sc_base_dir = sc_http_url+"://c1.statcounter.com/";
+}
+else {
+	sc_base_dir = sc_http_url+"://c1.statcounter.com/";
+	var sc_partition=0;
+}
+
+if(window.sc_text)
+	sc_base_dir += "text.php?";
+else
+	sc_base_dir += "t.php?";
+
+if(window.sc_project) {
+	sc_base_dir += "sc_project="+sc_project;
+	if(sc_project=="610695")
+		sc_remove=1;
+}
+else if(window.usr) {
+	sc_base_dir += "usr="+usr;
+}
+else {
+	sc_error = 1;
+}
+
+if(window.sc_remove_link) {
+	sc_link_back_start = "";
+	sc_link_back_end = "";
+}
+else {
+	sc_link_back_start = "<a href=\"http://www.StatCounter.com\" target=\"_blank\">";
+	sc_link_back_end = "<\/a>";
+}
+
+sc_date = new Date();
+sc_time = sc_date.getTime();
+sc_agent = sc_agent.toUpperCase();
+
+sc_time_difference = 60*60*1000;
+
+sc_title = ""+document.title;
+sc_url = ""+document.location;
+sc_referer = sc_referer.substring(0, 150);
+sc_title = sc_title.substring(0, 150);
+sc_url = sc_url.substring(0, 150);
+sc_referer = escape(sc_referer);
+sc_title = escape(sc_title);
+sc_url = escape(sc_url);
+
+if (window.sc_security) {
+	sc_security_code = sc_security;
+}
+
+var sc_tracking_url = sc_base_dir+"&resolution="+sc_width+"&camefrom="+sc_referer+"&u="+sc_url+"&t="+sc_title+"&java=1&security="+sc_security_code+"&sc_random="+Math.random();
+
+// if no usr or project set then display visibile
+
+// if usr=="someuser" then display visibile
+
+if(sc_error==1) {
+		document.writeln("Code corrupted. Insert fresh copy.");
+}
+else if(sc_remove==1) {
+		document.writeln("<b>StatCounter cannot track a high volume website like yours for free. This was stated several times during the sign up process. Please remove the code ASAP.</b>");
+}
+//else if(sc_partition==3) {
+	// down at the moment
+//}
+else if (window.sc_text) {
+	document.writeln('<scr' + 'ipt language="JavaScript"' + ' src=' + sc_tracking_url + '></scr' + 'ipt>');
+}
+else if (window.sc_invisible) {
+	if(window.sc_invisible==1) {
+	sc_img = new Image();
+	sc_img.src = sc_tracking_url;
+	}
+	else {
+		document.writeln(sc_link_back_start+"<IMG SRC=\""+sc_tracking_url+"\" ALT=\"StatCounter - Free Web Tracker and Counter\" BORDER=\"0\">"+sc_link_back_end);
+	}
+}
+else {
+	document.writeln(sc_link_back_start+"<IMG SRC=\""+sc_tracking_url+"\" ALT=\"StatCounter - Free Web Tracker and Counter\" BORDER=\"0\">"+sc_link_back_end);
+}
+_-http://www.statcounter.com/counter/counter.js‘ !"O
+<!--
+/////////////////////////////////////// START FUNCTIONS ///////////////////////////////////////////
+function cs_isExternalLink(url){
+  if(!url){ return false; }
+  if(typeof(url) != 'string'){ return true; }
+  url = url.toLowerCase();
+
+  /* what else is missing from the protocol list below? */
+  if(url.indexOf('https://') == 0){ url = url.substring(8); }
+  else if(url.indexOf('http://') == 0){ url = url.substring(7); }
+  else if(url.indexOf('ftp://') == 0){ url = url.substring(6); }
+  else if(url.indexOf('ssl://') == 0){ url = url.substring(6); }
+  else if(url.indexOf('mailto:') == 0){ return true; }
+  else{ return false; }
+
+  if(url.indexOf('www.') == 0){ url = url.substring(4); }
+  var hn = document.location.hostname.toLowerCase();
+  if(hn.indexOf('www.') == 0){ hn = hn.substring(4); }
+
+  if(url.indexOf(hn) != 0){ return true; }
+  return false;
+}
+function cs_getParentClickable(obj, flag){
+  for(var j=0; j<=5; j++){
+    if(flag == 1){ if(obj && obj.nodeName.toUpperCase() == 'A'){ return obj; } } //look for <A> tag
+    if(flag == 2){ if(obj && obj.nodeName.toUpperCase() != 'BODY' && obj.onclick){ return obj; } } //look onclick tag
+    obj = obj.parentNode;
+  }
+  return null;
+}
+function cs_context_click(e){//right click on link
+  var tg = null;
+  if(e){ tg = e.target; }
+  else{ tg = window.event.srcElement; }
+  cs_do_track(tg, false);
+}
+function cs_on_click(e){//left click
+  var tg = null;
+  if(e){ tg = e.target; }
+  else{ tg = window.event.srcElement; }
+  cs_do_track(tg, true);
+}
+function cs_do_track(tg, delay){
+  var url = null;
+  var text = null;
+  try{
+    if(tg){
+      tgP = cs_getParentClickable(tg, 1);
+      if(tgP && tgP.nodeName.toUpperCase() == 'A'){ tg = tgP; }
+
+      if(tg.nodeName.toUpperCase() == 'A'){//A tag - most popular case
+        url = tg.href;
+        if(tg.innerHTML){ text = tg.innerHTML; } //most browsers
+        else if(tg.innerText){ text = tg.innerText; } //ie only
+        else if(tg.text){ text = tg.text; } //mozilla only
+        else{}
+      }else if(tg.nodeName.toUpperCase() == 'INPUT' && tg.type.toUpperCase() == 'SUBMIT'){//form submit button
+        url = tg.form.action;
+        text = tg.value;
+      }else{
+       /* this eliminates all other onclick events */
+
+      }
+      if(url == null || text == null){ return true; } //both url and text must not be NULL 
+
+      if(cs_isExternalLink(url)){
+        if(cs_mbl_isAOL_V8 && (tg.target == '_new' || tg.target == '_blank')){ return true; }
+        url = escape(url);
+        text = escape(text);
+        cs_track_oc(text, url, delay);
+      }
+    }
+  }catch(err){ }
+}
+// THIS FUNCTION TRACKS EXTERNAL URL CLICKS //
+function cs_track_oc(text, url, delay){      
+  try{
+    var now = new Date();
+    var trackURL = cs_url_trker + '?t=2&u=' + url + '&te=' + text + '&i=' + cs_mblID + '&now=' + now.valueOf(); 
+    var x = new Image();
+    x.src = trackURL;
+    if(delay){ cs_pause(900); }
+  }catch(err){ }
+}
+
+// THIS FUNCTION RECORDS APACHE-LIKE LOG INFO ON EVERY PAGE LOAD //
+function cs_track_onload(){
+  try{
+    url = escape(document.location.href);
+    var trackURL = cs_url_trker + '?i=' + cs_mblID + '&t=1&u=' + url + '&a=' + escape(navigator.userAgent);
+    var x = new Image();
+    x.src = trackURL;
+  }catch(err){ }
+}
+function cs_pause(numberMillis) {
+  var now = new Date();
+  var exitTime = now.getTime() + numberMillis;
+  while(true){
+    now = new Date();
+    if(now.getTime() > exitTime){ return; }
+  }
+}
+
+/////////////////////////////////////// END FUNCTIONS ///////////////////////////////////////////
+var cs_mbl_isAOL_V8 = false;
+if(navigator.userAgent.indexOf('AOL 8.0') > 0){ cs_mbl_isAOL_V8 = true; }
+
+var cs_mblID = '2005030403235056';
+var cs_url_trker = 'http://track.mybloglog.com/tr/urltrk.php';
+if(document.body){//if the script is inside the body tag - which it should be
+  document.body.onclick = cs_on_click;
+  document.body.oncontextmenu = cs_context_click;
+}else if(document){//script is outside the body tag - works in some browsers
+  document.onclick = cs_on_click;
+  document.oncontextmenu = cs_context_click;  
+}else{}
+cs_track_onload();
+
+// -->
+_4http://track.mybloglog.com/js?mblID=2005030403235056Ytext/html‘$%&"UUTF-8O1Z<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1">
+        <TITLE>Agylen ¬ª GTDTiddlyWiki - all your tasks are belong to you</TITLE>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <META name="generator" content="WordPress 1.5.1">
+        <STYLE type="text/css" media="screen">
+                @import url( http://agylen.com/wp-content/themes/connections/style.css );
+        </STYLE>
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://agylen.com/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://agylen.com/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://agylen.com/feed/atom/">
+        <LINK rel="pingback" href="http://agylen.com/xmlrpc.php">
+        <LINK rel="archives" title="May 2005" href="http://agylen.com/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://agylen.com/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://agylen.com/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://agylen.com/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://agylen.com/2005/01/">
+        <SCRIPT language="javascript" src="http://yq.search.yahoo.com/javascript/yq.js"></SCRIPT><LINK rel="STYLESHEET" type="text/css" href="http://yq.search.yahoo.com/javascript/defaultTheme.css" id="yschyqtheme"><STYLE>.yqcontext { background:transparent; }.yq, {clear:both; text-align:left; position:relative}.yq .drag, .yqin .drag {cursor: move; position: relative } .yqlink {display:inline-block;}#yschyqresult {white-space:normal !important; }.yqact { background: url(http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/yq_small.gif) 5px 2px no-repeat #FFFDE6; height: 1.6em; text-align: left}.yqact input { cursor: pointer; cursor: hand; width: 11em; background: transparent; color: #940894; font: bold 12px arial,helvetica,sans-serif; text-decoration: underline; padding: 0px; margin-top: 3px; margin-left: 25px; border: none; }.yqact input:hover { border: none; }.yqin {display:inline; height:0px; width:0px; position:absolute; text-align:left;}.yqimgins {background: url(http://us.i1.yimg.com/us.yimg.com/i/us/sch/b/yq_smaller.gif); background-repeat: no-repeat; background-position: right; padding-right:22px; margin-right: 2px; font: bold 12px arial, helvetica, sans-serif; border-bottom: 1px dotted #C09A3E; cursor: pointer; cursor: hand;}</STYLE></HEAD><BODY>
+<DIV id="rap"><DIV style="text-align:center;background-color:#F5F4ED">
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-9957201491923486";
+google_alternate_ad_url = "http://agylen.com/wp-content/skypead.html";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="5635560569";
+google_color_border = "F5F4ED";
+google_color_bg = "F5F4ED";
+google_color_link = "676E04";
+google_color_url = "676E04";
+google_color_text = "29303B";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329506989&alternate_ad_url=http%3A%2F%2Fagylen.com%2Fwp-content%2Fskypead.html&format=728x90_as&output=html&channel=5635560569&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F5F4ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F5F4ED&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+        <DIV id="header">        <UL id="topnav">                <LI><A href="http://agylen.com" id="navHome" title="Posted Recently" accesskey="h">Home |</A></LI>
+                <LI><A href="/about/" id="navAbout" title="About the Author" accesskey="a">About |</A></LI>
+                <LI><A href="/category/books" id="navBooks" title="Book reviews" accesskey="l">Book reviews |</A></LI>
+                <LI><A href="mailto:ugo@agylen.com" id="navContact" title="Contact the Author" accesskey="c">Contact </A></LI>
+        </UL>
+        <H1><A href="http://agylen.com" title="Agylen">Agylen</A></H1>                
+        <DIV id="desc">Ugo Cei‚Äôs Weblog</DIV>
+
+</DIV>
+        
+        <DIV id="main">        <DIV id="content">                                                <DIV class="post">                                <P class="post-date">Sat 14 May 2005</P>
+<DIV class="post-info"><H2 class="post-title"><A href="http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/" rel="bookmark" title="Permanent Link: GTDTiddlyWiki - all your tasks are belong to you">GTDTiddlyWiki - all your tasks are belong to you</A></H2>
+Posted by ugo under <A href="http://agylen.com/category/devel/" title="View all posts in devel" rel="category tag">devel</A><BR>¬†</DIV>
+<DIV class="post-content">                <P>GTDTiddlyWiki is an incredibly cool wiki application that runs in your browser. It‚Äôs not Ajax, since it does not talk to a server. Everything is local: Installation is as easy as dropping <A href="http://shared.snapgrid.com/empty.html">this file</A> on your desktop, then opening it whenever you want to edit your to-do lists.</P>
+        <BLOCKQUOTE><P><A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTDTiddlyWiki - all your tasks are belong to you</A>: ‚ÄúGTD Tiddly Wiki is a GettingThingsDone adaptation by NathanBowers of JeremyRuston‚Äôs Open Source TiddlyWiki. The purpose of GTD Tiddly Wiki is to give users a single repository for their GTD lists and support materials so they can create/edit lists, and then print directly to 3√ó5 cards for use with the HipsterPDA.‚Äù</P></BLOCKQUOTE>
+        <P>This is interesting to me as a sample of clever DHTML techniques, like <A href="http://www.37signals.com/svn/archives/000558.php">yellow fade</A>, but I don‚Äôt think I‚Äôm going to stop using my own <A href="http://agylen.com/2005/01/23/getting-things-done/">Hipster PDA</A> any time soon.</P>
+        <P class="post-info">                                                                                                        
+        </P>
+
+<FORM class="yq" action="http://yq.search.yahoo.com/search" method="post">        <INPUT type="hidden" name="context" value="GTDTiddlyWiki - all your tasks are belong to you">
+        <INPUT type="hidden" name="fr" value="yqm43">
+        <DIV class="yqact">            <INPUT class="yqbt" type="submit" value="Search Related Info" onclick="return activateYQ(this)" title="Y!Q allows to you conveniently search in context of the current article">
+        </DIV>
+</FORM>
+
+                <DIV class="post-footer">¬†</DIV>
+</DIV>                                
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://agylen.com/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="615">
+</P>
+
+</FORM>
+
+
+                        </DIV>
+                                        <P align="center"></P>                
+        </DIV>
+        <DIV id="sidebar">
+                <H2>Recent Posts</H2>
+                <UL><LI>05/17/2005: <A href="http://agylen.com/2005/05/17/the-daily-show/" title="View post The Daily Show">The Daily Show</A></LI>
+<LI>05/16/2005: <A href="http://agylen.com/2005/05/16/seths-new-ebook-is-ready/" title="View post Seth&#8217;s New eBook is ready">Seth‚Äôs New eBook is ready</A></LI>
+<LI>05/16/2005: <A href="http://agylen.com/2005/05/16/captcha-validator-for-cocoon-forms/" title="View post CAPTCHA validator for Cocoon Forms">CAPTCHA validator for Cocoon Forms</A></LI>
+</UL>
+
+                <H2>Ads</H2>
+                <UL><LI><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-9957201491923486";
+google_alternate_ad_url = "http://agylen.com/wp-content/osad.html";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_channel ="1183191989";
+google_color_border = "F3F6ED";
+google_color_bg = "F3F6ED";
+google_color_link = "676E04";
+google_color_url = "676E04";
+google_color_text = "29303B";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="160" height="600" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507022&alternate_ad_url=http%3A%2F%2Fagylen.com%2Fwp-content%2Fosad.html&prev_fmts=728x90_as&format=160x600_as&output=html&channel=1183191989&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F3F6ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F3F6ED&cc=26&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</LI><LI style="text-align:center">
+<A href="http://www.jdoqocy.com/click-1702246-10386447" target="_top"><IMG src="http://www.lduhtrp.net/image-1702246-10386447" width="120" height="60" alt="" border="0"></A>
+</LI><LI>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-9957201491923486";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al";
+google_ad_channel ="7905004018";
+google_color_border = "F3F6ED";
+google_color_bg = "F3F6ED";
+google_color_link = "676E04";
+google_color_url = "676E04";
+google_color_text = "29303B";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="160" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=728x90_as%2C160x600_as&format=160x90_0ads_al&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F3F6ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F3F6ED&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</LI></UL>
+
+                <H2>Archived Entry</H2>
+        <UL>        <LI><STRONG>Post Date :</STRONG></LI>
+        <LI>Saturday, May 14th, 2005 at 2:45 pm</LI>
+        <LI><STRONG>Category :</STRONG></LI>
+        <LI><A href="http://agylen.com/category/devel/" title="View all posts in devel" rel="category tag">devel</A></LI>
+        <LI><STRONG>Do More :</STRONG></LI>
+        <LI>                                                        You can <A href="#respond">leave a response</A>, or <A href="http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/trackback/">trackback</A> from your own site.
+                                                
+                                                </LI>
+        </UL>
+                </DIV>
+<P id="footer">Design Downloaded from <A href="http://wpthemes.info" title="WP Themes.Info">WPThemes.Info</A></P>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+var sc_project=517188;
+var sc_partition=3;
+var sc_invisible=1;
+//-->
+</SCRIPT>
+
+<SCRIPT type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="http://track.mybloglog.com/js?mblID=2005030403235056"></SCRIPT>
+<IFRAME src="http://www.blogkits.com/btracker.php?BlogID=600" frameborder="0" height="1" width="1"></IFRAME></DIV></DIV></BODY></HTML>_Lhttp://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/§(.38—)’*"+$,-_WebResourceFrameNameO <HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #676e04 }a.ad:visited { color: #676e04 }a.ad:hover { color: #676e04 }a.ad:active { color: #676e04 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  }function ca(a) {  top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#f5f4ed"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#f5f4ed"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#f5f4ed"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f5f4ed" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.openwebsolution.com','aw0')" onmouseover="ss('go to www.openwebsolution.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BxJVDEtaJQv-hMpKKSND9jVqZ974I693NoQHAjbcBkNYnEAEYASDUyvcCKARAihZImjmqAQo1NjM1NTYwNTY5sgEKYWd5bGVuLmNvbboBCTcyOHg5MF9hc8gBAdoBTGh0dHA6Ly9hZ3lsZW4uY29tLzIwMDUvMDUvMTQvZ3RkdGlkZGx5d2lraS1hbGwteW91ci10YXNrcy1hcmUtYmVsb25nLXRvLXlvdS_oAQE&num=1&adurl=http://www.openwebsolution.com&client=ca-pub-9957201491923486" onfocus="ss('go to www.openwebsolution.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.openwebsolution.com','aw0')" onmouseout="cs()"><B>Dynamic websites</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#29303b">High impact content rich websites Build your brand. </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f5f4ed" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to http://allwebco-templates.com','aw1')" onmouseover="ss('go to http://allwebco-templates.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BV4l-EtaJQv-hMpKKSND9jVqjrpEC5L-3jQHAjbcB8NccEAIYAiDUyvcCKARAihZIjzmqAQo1NjM1NTYwNTY5sgEKYWd5bGVuLmNvbboBCTcyOHg5MF9hc8gBAdoBTGh0dHA6Ly9hZ3lsZW4uY29tLzIwMDUvMDUvMTQvZ3RkdGlkZGx5d2lraS1hbGwteW91ci10YXNrcy1hcmUtYmVsb25nLXRvLXlvdS_oAQE&num=2&adurl=http://allwebco-templates.com&client=ca-pub-9957201491923486" onfocus="ss('go to http://allwebco-templates.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to http://allwebco-templates.com','aw1')" onmouseout="cs()"><B>AllWebCo Web Templates</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#29303b">Complete Website Templates Multiple Pages, Basic HTML </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f5f4ed" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.OpenLogic.com','aw2')" onmouseover="ss('go to www.OpenLogic.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?adurl=http://www.OpenLogic.com&sa=l&ai=BsCPmEtaJQv-hMpKKSND9jVrwirMK0Ir8pQHAjbcB4IkcEAMYAyDUyvcCKARAihZIkTmgAfyk2P4DqgEKNTYzNTU2MDU2ObIBCmFneWxlbi5jb226AQk3Mjh4OTBfYXPIAQHaAUxodHRwOi8vYWd5bGVuLmNvbS8yMDA1LzA1LzE0L2d0ZHRpZGRseXdpa2ktYWxsLXlvdXItdGFza3MtYXJlLWJlbG9uZy10by15b3Uv6AEB&num=3&client=ca-pub-9957201491923486" onfocus="ss('go to www.OpenLogic.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.OpenLogic.com','aw2')" onmouseout="cs()"><B>Open Source</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#29303b">Free Download: Automated install &amp; integration of open source projects </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f5f4ed" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.wsi-web-designers.co.uk','aw3')" onmouseover="ss('go to www.wsi-web-designers.co.uk','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.wsi-web-designers.co.uk&sa=l&ai=B3vgaEtaJQv-hMpKKSND9jVql9cEKkcnntAHAjbcB4L40EAQYBCDUyvcCKARAihZIlDmgAdGZif4DqgEKNTYzNTU2MDU2ObIBCmFneWxlbi5jb226AQk3Mjh4OTBfYXPIAQHaAUxodHRwOi8vYWd5bGVuLmNvbS8yMDA1LzA1LzE0L2d0ZHRpZGRseXdpa2ktYWxsLXlvdXItdGFza3MtYXJlLWJlbG9uZy10by15b3Uv6AEB&num=4&client=ca-pub-9957201491923486" onfocus="ss('go to www.wsi-web-designers.co.uk','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.wsi-web-designers.co.uk','aw3')" onmouseout="cs()"><B>Web design</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#29303b">We don't just build web sites. We develop Internet solutions. </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#f5f4ed"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/&hl=en&client=ca-pub-9957201491923486&adU=www.openwebsolution.com&adT=Dynamic+websites&adU=http://allwebco-templates.com&adT=AllWebCo+Web+Templates&adU=www.OpenLogic.com&adT=Open+Source&adU=www.wsi-web-designers.co.uk&adT=Web+design&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_Ïhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329506989&alternate_ad_url=http%3A%2F%2Fagylen.com%2Fwp-content%2Fskypead.html&format=728x90_as&output=html&channel=5635560569&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F5F4ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F5F4ED&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123—/’*"0$12O$Ç<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  }function ca(a) {  top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#676e04" alink="#676e04" vlink="#676e04" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="160" height="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD width="158" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/&hl=en&client=ca-pub-9957201491923486&adU=digg.com&adT=Need+Blog+Content%3F&adU=www.businesslink.gov.uk&adT=Business+Software+Ideas&adU=www.squarespace.com/&adT=Blogging+Evolved&adU=zestcity.com&adT=Experts+in+website+design&adU=www.idnet.net&adT=Web+Design+UK&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Goooooogle</FONT></A></TD></TR><TR><TD width="158" height="" align="" valign="top"><TABLE width="158" height="" cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD id="taw0" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to digg.com','aw0')" onmouseover="ss('go to digg.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#676e04"><A id="aw0" target="_top" href="/pagead/iclk?adurl=http://digg.com&sa=l&ai=BJBY4E9aJQu6KG72oSN63gUTi7Y4K_obqpAHAjbcB4KcSEAEYBSDUyvcCKAVAihZIkTmYAaxLoAG4-47_A6oBCjExODMxOTE5ODmyAQphZ3lsZW4uY29tugEKMTYweDYwMF9hc8gBAdoBTGh0dHA6Ly9hZ3lsZW4uY29tLzIwMDUvMDUvMTQvZ3RkdGlkZGx5d2lraS1hbGwteW91ci10YXNrcy1hcmUtYmVsb25nLXRvLXlvdS_gAQLoAQE&num=5&client=ca-pub-9957201491923486" onfocus="ss('go to digg.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to digg.com','aw0')" onmouseout="cs()"><B>Need Blog Content?</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#29303b">Post tech news to your blog It's easy, and free!<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#676e04">digg.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD id="taw1" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.businesslink.gov.uk','aw1')" onmouseover="ss('go to www.businesslink.gov.uk','aw1')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#676e04"><A id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BIZx6E9aJQu6KG72oSN63gUThiaALtdv7qAHAjbcBoP9dEAIYBiDUyvcCKAVAihZIizmYAaxLqgEKMTE4MzE5MTk4ObIBCmFneWxlbi5jb226AQoxNjB4NjAwX2FzyAEB2gFMaHR0cDovL2FneWxlbi5jb20vMjAwNS8wNS8xNC9ndGR0aWRkbHl3aWtpLWFsbC15b3VyLXRhc2tzLWFyZS1iZWxvbmctdG8teW91L-ABAugBAQ&num=6&adurl=http://www.businesslink.gov.uk/bdotg/action/layer%3FtopicId%3D1073866265%26tc%3D000KW021523728&client=ca-pub-9957201491923486" onfocus="ss('go to www.businesslink.gov.uk','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.businesslink.gov.uk','aw1')" onmouseout="cs()"><B>Business Software Ideas</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#29303b">Find expert &amp; impartial guidance on software that will suit your needs.<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#676e04">www.businesslink.gov.uk</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD id="taw2" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.squarespace.com/','aw2')" onmouseover="ss('go to www.squarespace.com/','aw2')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#676e04"><A id="aw2" target="_top" href="/pagead/iclk?adurl=http://www.squarespace.com/%3FpartnerTag%3Dgoogle%26planTag%3Dblgnetwork&sa=l&ai=B4B40E9aJQu6KG72oSN63gUTQm9kJtNr9lQHAjbcBwIsREAMYByDUyvcCKAVAihZIljmYAaxLoAGf1_r-A6oBCjExODMxOTE5ODmyAQphZ3lsZW4uY29tugEKMTYweDYwMF9hc8gBAdoBTGh0dHA6Ly9hZ3lsZW4uY29tLzIwMDUvMDUvMTQvZ3RkdGlkZGx5d2lraS1hbGwteW91ci10YXNrcy1hcmUtYmVsb25nLXRvLXlvdS_gAQLoAQE&num=7&client=ca-pub-9957201491923486" onfocus="ss('go to www.squarespace.com/','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.squarespace.com/','aw2')" onmouseout="cs()"><B>Blogging Evolved</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#29303b">Elegant. Powerful. Professional. The better way to put a blog online<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#676e04">www.squarespace.com/</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD id="taw3" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to zestcity.com','aw3')" onmouseover="ss('go to zestcity.com','aw3')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#676e04"><A id="aw3" target="_top" href="/pagead/iclk?sa=l&ai=BRlB2E9aJQu6KG72oSN63gUS6j8UHxv-qkwHAjbcB4IkcEAQYCCDUyvcCKAVAihZIjTmYAaxLqgEKMTE4MzE5MTk4ObIBCmFneWxlbi5jb226AQoxNjB4NjAwX2FzyAEB2gFMaHR0cDovL2FneWxlbi5jb20vMjAwNS8wNS8xNC9ndGR0aWRkbHl3aWtpLWFsbC15b3VyLXRhc2tzLWFyZS1iZWxvbmctdG8teW91L-ABAugBAQ&num=8&adurl=http://www.zestcity.com/website_production.htm%3Flocaladw4&client=ca-pub-9957201491923486" onfocus="ss('go to zestcity.com','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to zestcity.com','aw3')" onmouseout="cs()"><B>Experts in website design</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#29303b">Web design services in Essex. Professional &amp; affordable websites<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#676e04">zestcity.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#f3f6ed"><TBODY><TR><TD id="taw4" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.idnet.net','aw4')" onmouseover="ss('go to www.idnet.net','aw4')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#676e04"><A id="aw4" target="_top" href="/pagead/iclk?adurl=http://www.idnet.net.uk/contact.html&sa=l&ai=Bite4E9aJQu6KG72oSN63gUTn9rQHj4CBkQHAjbcB4JgXEAUYCSDUyvcCKAVAihZIkzmYAaxLoAHDgJD_A6oBCjExODMxOTE5ODmyAQphZ3lsZW4uY29tugEKMTYweDYwMF9hc8gBAdoBTGh0dHA6Ly9hZ3lsZW4uY29tLzIwMDUvMDUvMTQvZ3RkdGlkZGx5d2lraS1hbGwteW91ci10YXNrcy1hcmUtYmVsb25nLXRvLXlvdS_gAQLoAQE&num=9&client=ca-pub-9957201491923486" onfocus="ss('go to www.idnet.net','aw4')" onclick="ha('aw4')" onmouseover="return ss('go to www.idnet.net','aw4')" onmouseout="cs()"><B>Web Design UK</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#29303b">Professional web site design All inclusive deals - 0800 0267 237<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#676e04">www.idnet.net</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame1-->-->_http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507022&alternate_ad_url=http%3A%2F%2Fagylen.com%2Fwp-content%2Fosad.html&prev_fmts=728x90_as&format=160x600_as&output=html&channel=1183191989&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F3F6ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F3F6ED&cc=26&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123—4’*"5$67O≈<HTML><HEAD><STYLE><!--
+#abg{font-family:arial,sans-serif;font-size:12px;color:#000000;padding:0px 1px;white-space:nowrap;font-weight:bold;}.sep{height:2px;width:100%;}.bb{overflow:hidden;width:160px;}.al{font-family:arial,sans-serif;font-size:12px;width:160px;overflow:hidden;line-height:16px;}.al .alt, .al a{color:#676e04;font-weight:normal;text-decoration:underline;white-space:nowrap;}//--></STYLE><SCRIPT><!--
+c=0;aa=new Object();na=new Array();qs=location.search.substring(1);pa=qs.split('&');for(i=0;i<pa.length;++i){pn=pa[i].indexOf('=');if(pn==-1)continue;an=pa[i].substring(0,pn);v=pa[i].substring(pn+1);aa[an]=v;na[na.length]=an;}if(!aa['kw_type'])na[na.length]='kw_type';if(!aa['prev_fmts'])na[na.length]='prev_fmts';aa['prev_fmts']=aa['format'];aa['format']='fp_al_lp';aa['random']=(new Date()).getTime();aa['kw_type']='broad';aa['color_bg']=aa['color_link']=aa['color_url']=aa['color_text']=aa['color_border']=aa['alternate_ad_url']='';function gurl(rl,kw){if(!aa['kw'])na[na.length]='kw';if(!aa['rt'])na[na.length]='rt';if(!aa['hl']){na[na.length]='hl';aa['hl']='en';}aa['kw']=kw;aa['rt']=rl;qs='?';for(i=0;i<na.length;++i)if(aa[na[i]]!='')qs+=na[i]+'='+aa[na[i]]+'&';qs=qs.slice(0,-1);return location.pathname+qs;}function ss(wi){window.status=sl[wi];return true;}function cs(){window.status='';}var sl=new Array();//--></SCRIPT></HEAD><BODY bgcolor="#f3f6ed" text="#29303b" marginwidth="0" marginheight="0"><TABLE bgcolor="#f3f6ed" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><TBODY><TR><TD height="18" bgcolor="#f3f6ed" valign="middle"><DIV class="bb"><SCRIPT><!--
+i=0;adu='';adt=new Array();adt[i++]="Easy+Weblog";adt[i++]="Personal+Weblog";adt[i++]="Weblog+Hosting";adt[i++]="Blogging";document.write('<a href="http://services.google.com/feedback/abg?url=http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/&hl=en&client=ca-pub-9957201491923486&done=1');for(i=0;i<adt.length;++i)document.write('&adU='+(adu+='+')+'&adT='+adt[i]);document.write('" target=_blank id=abg>Ads by Google</a>');//--></SCRIPT><A href="http://services.google.com/feedback/abg?url=http://agylen.com/2005/05/14/gtdtiddlywiki-all-your-tasks-are-belong-to-you/&hl=en&client=ca-pub-9957201491923486&done=1&adU=+&adT=Easy+Weblog&adU=++&adT=Personal+Weblog&adU=+++&adT=Weblog+Hosting&adU=++++&adT=Blogging" target="_blank" id="abg">Ads by Google</A></DIV></TD></TR><TR><TD valign="top"><DIV class="al" style="padding:0px 0px"><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCidYTAAkQ4AoSUCI1Lj7sEgtFYXN5IFdlYmxvZxoI_k6fLkjffmk','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Easy Weblog';//--></SCRIPT>¬†¬†<A href="/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=160x90_0ads_al&format=fp_al_lp&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&rt=ChBCidYTAAkQ4AoSUCI1Lj7sEgtFYXN5IFdlYmxvZxoI_k6fLkjffmk&hl=en" onmouseover="return ss(0)" onmouseout="cs()" class="alt" target="_top">Easy Weblog</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCidYTAAkRFAoSUCI1Lj7sEg9QZXJzb25hbCBXZWJsb2caCPfUZIHDyH0i','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Personal Weblog';//--></SCRIPT>¬†¬†<A href="/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=160x90_0ads_al&format=fp_al_lp&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&rt=ChBCidYTAAkRFAoSUCI1Lj7sEg9QZXJzb25hbCBXZWJsb2caCPfUZIHDyH0i&hl=en" onmouseover="return ss(1)" onmouseout="cs()" class="alt" target="_top">Personal Weblog</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCidYTAAkRRQoSUCI1Lj7sEg5XZWJsb2cgSG9zdGluZxoIZ_NFIqk_28c','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Weblog Hosting';//--></SCRIPT>¬†¬†<A href="/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=160x90_0ads_al&format=fp_al_lp&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&rt=ChBCidYTAAkRRQoSUCI1Lj7sEg5XZWJsb2cgSG9zdGluZxoIZ_NFIqk_28c&hl=en" onmouseover="return ss(2)" onmouseout="cs()" class="alt" target="_top">Weblog Hosting</A><DIV class="sep"><IMG height="1" width="1" alt=""></DIV><SCRIPT><!--
+document.write('&nbsp;&nbsp;<a href="'+gurl('ChBCidYTAAkRdgoSUCI1Lj7sEghCbG9nZ2luZxoIjmavp9PdtMI','')+'" onMouseOver="return ss('+sl.length+')" onMouseOut="cs()" class=alt target=_top>');sl[sl.length]='View ads about Blogging';//--></SCRIPT>¬†¬†<A href="/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=160x90_0ads_al&format=fp_al_lp&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123&kw_type=broad&rt=ChBCidYTAAkRdgoSUCI1Lj7sEghCbG9nZ2luZxoIjmavp9PdtMI&hl=en" onmouseover="return ss(3)" onmouseout="cs()" class="alt" target="_top">Blogging</A></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame2-->-->_”http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9957201491923486&dt=1116329507888&prev_fmts=728x90_as%2C160x600_as&format=160x90_0ads_al&output=html&channel=7905004018&url=http%3A%2F%2Fagylen.com%2F2005%2F05%2F14%2Fgtdtiddlywiki-all-your-tasks-are-belong-to-you%2F&color_bg=F3F6ED&color_text=29303B&color_link=676E04&color_url=676E04&color_border=F3F6ED&cc=23&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123—9’*":$;<Oﬁ<html><body>[Edit]
+Edge=80
+[Options]
+Font=Courier New
+Highlight=1
+SaveSession=1
+DialogFont=Tahoma
+ExternPath=http://sourceforge.org/dev-php/
+LocalPath=C:\
+LocalPort=8080
+FTPcfname=0
+FTPPassive=0
+FTPHost=
+FTPPort=21
+FTPUser=anonymous
+FTPServerPath=
+Parameters=-q
+FindText=
+ReplaceText=
+BrowserPath=http://devphp.sourceforge.net/
+[Registry]
+css=0
+html=0
+js=0
+sql=0
+php=1
+[Documentation]
+Lang=en
+[UPDATE]
+Version=2.0.6
+Download=
+Description=
+[History]
+Last=19
+1=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+2=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+3=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\inc\lib.php
+4=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+5=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\inc\lib.php
+6=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+7=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\inc\lib.php
+8=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\hazel-doc\index.php
+9=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+10=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\inc\lib.php
+11=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\hazel-doc\index.php
+12=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\links.php
+13=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\news.php
+14=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\events.php
+15=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\theband.php
+16=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\discs.php
+17=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\press.php
+18=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\files.php
+19=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\contact.php
+[Session]
+Last=11
+1=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\index.php
+2=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\inc\lib.php
+3=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\hazel-doc\index.php
+4=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\links.php
+5=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\news.php
+6=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\events.php
+7=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\theband.php
+8=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\discs.php
+9=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\press.php
+10=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\files.php
+11=C:\Documents and Settings\Owner\Desktop\Antithesis\PHPSite\public_html\contact.php</body></html>_ <!--framePath //<!--frame3-->-->_/http://www.blogkits.com/btracker.php?BlogID=600      !  3  I  R  Y  k  z  ê Q◊ R R  R' pñ pœ pÿ p· pˇ q ó¿ ó˙ ò ò ò π∫ πÍ πÙ π˝ ∫ «∞ «‡ «È ◊ı ÿ, ÿ6 ÿ? ÿE	£	Ú	˜	˙
+
+'@'S)C)F)QM◊M˙PPPfŸf¸h”h÷h·t√tÊ             =             u

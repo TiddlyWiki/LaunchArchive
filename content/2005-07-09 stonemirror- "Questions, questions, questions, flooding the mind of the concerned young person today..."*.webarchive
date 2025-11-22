@@ -1,0 +1,2043 @@
+bplist00Òj_WebSubresources_WebMainResource¯1"&),/2567:;<?@ADEFIJKLMNQRSTUVYZ[^_`abcfgÓ	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO¬body {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+    margin: 0; padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    font-weight: bold;
+    color: #036; background-color: transparent;
+}
+h1 a {
+    font-weight: normal;
+    font-size: 80%;
+}
+h2 {
+    font-weight: normal;
+    color: #036; background-color: transparent;
+}
+h3 {
+    color: #024; background-color: transparent;
+}
+.hide {
+    display: none;
+}
+hr {
+    border: 0;
+    width: 80%;
+    color: #369; background-color: #369;
+    height: 2px;
+}
+table.choices {
+    margin-left: 1.5em;
+    margin-right: -1.5em;
+    margin-top: 1em;
+}
+table.edged {
+    border: 2px solid #c5dff9;
+}
+table.edged td {
+    border: 1px solid #8fc3f7;;
+}
+.standout {
+    text-align: center;
+}
+.standout .container {
+    color: #000; background-color: #c5dff9;
+    border: 1px solid #8fc3f7;
+    padding: 3px;
+    /* margin shorthand isn't recognized by IE5/Mac */
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.errorbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFEEEE;
+    background-repeat: repeat-x;
+    border: 1px solid #FF9999;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.warningbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFFFDD;
+    background-repeat: repeat-x;
+    border: 1px solid #FFCC33;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+
+/* layout */
+
+#Userpic {
+    position: absolute;
+    width: 100%; height: 100px;
+    top: 0px; right: 0; 
+    text-align: right;
+}
+#Userpic img {
+    display: inline;
+    border: 1px solid #FFF;
+}
+.talk-comment {
+    margin-top: 1em;
+    margin-bottom: 0px;
+}
+#Logo {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 68px;
+    margin: 0; padding: 0;
+    color: #FFF; background-color:#69C;
+}
+#Logo img {
+    border: 0;
+}
+#Greeting {
+    position: absolute;
+    left: 300px; top: 25px; right: 112px;
+    width: auto; text-align: right;
+    color: #FFF; background-color: #69C;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Setlang {
+    position: absolute;
+    left: 300px; right: 112px; top: 45px;
+    width: auto; text-align: right;
+}
+#Setlang a {
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+/* Fix IE5 Horizontal scroll */
+* html div#Content { width: 100%; w\idth: auto; }
+
+#Content pre {
+   line-height: 1em; 
+}
+.talk-comment {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+#Upgrade {
+    position: absolute;
+    top: 60px; left: 70px;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#Upgrade a {
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    border: 0;
+}
+
+/* Forms */
+
+#Search {
+    position: absolute;
+    left: 300px; top: 103px; right: 40px;
+    width: auto; height: 20px;
+    margin: 5px 0 5px 5px; padding: 0; border: 0;
+    text-align: right;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    clear: both;
+}
+#commenttext { width: 100%; }
+
+/* Navigate */ 
+
+#NavMenuList {
+    color: #000; background-color: transparent;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    padding: 3px; margin-left: 40px;
+}
+.NavSubMenuList li {
+    display: inline;
+    list-style: none;
+}
+#NavMenuListTitle {
+    display: block; margin-left: 40px;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+#FooterNav {
+    margin: 0px; padding: 0 100px 0 70px;
+    border: 1px solid #69C;
+    color: #FFF; background-color: #69C;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+    color: #FFF; background-color: #69C;
+}
+#FooterNav a {
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+/* Form Items */
+.formitem {
+    color: #343434;
+    font-size: 1em;
+}
+
+.formnumber {
+    font-weight: bold;
+    margin-top: 1.8em;
+    font-size: .9em;
+}
+
+.formitemName {
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 1.8em;
+}
+
+.formitemDesc {
+    margin-top: .4em;
+    margin-bottom: .4em;
+    color: #505050;
+}
+
+.formitemNote {
+    color: #da6320;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.formitemFlag {
+    color: #CE0000;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.borderedtable {
+    border: solid 1px black;
+}
+
+/* the top of the borderedtable, use th tags for header columns */
+.borderedtable th {
+    background-color: #dddddd;
+    border-bottom: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+_(http://stat.livejournal.com/xc/basic.cssXtext/cssÓ
+OÁ/* The 90% width keeps the menubar from wrapping prematurely, 
+but overlays the upgrade button in some browsers. Still
+looking for a good fix. 
+100% stretches the bar and creates a horizontal scroll. Suckage. */
+#NavMenuList {
+    position: absolute;
+    left: 60px; top: 60px;
+    height: 40px; width: 90%;
+    margin: 0; padding: 0;
+    display: inline; white-space: nowrap;
+    clear: both;
+}
+#NavMenuList li {
+    display: inline;
+    list-style: none; white-space: nowrap;
+}
+#NavMenuList a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; display: block;
+    border-top: 1px solid #FFF;
+}
+#NavMenuList a.preextra {
+    padding: 2px 1px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#NavMenuList a.extra {
+    padding: 2px 10px 1px 1px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+    font-weight: bold;
+}
+#NavMenuList a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuList .NavSubMenuList {
+    visibility: hidden;
+    left: 0; top: 20px;
+    position: absolute; height: 20px;
+    width: 100%; display: inline; white-space: nowrap;
+    margin: 0; padding: 0; border: 0px;
+}
+#NavMenuList .NavSubMenuList li a {
+    color: #FFF;
+    background-color: #69C;
+    float: left;
+}
+#NavMenuList .NavSubMenuList li a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuListTitle {
+    display: none;
+}_.http://stat.livejournal.com/xc/menu-normal.cssÓ
+O”body, dd, dt, th, td, p, div, li, pre, code, kbd { font-size: small; }
+h3 { font-size: medium; }
+h2 { font-size: large; }
+h1 { font-size: x-large; }_/http://stat.livejournal.com/xc/normal-fonts.cssÓ
+OËbody {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    margin: 0 0 0.5em 0; padding: 0;
+}
+h2 {
+    margin: 0.3em 0 0.1em 0; padding: 0;
+}
+/* h2+p {
+    margin: 0;
+} */
+h3 {
+    font-style: italic;
+    margin: 0.2em 0 0.2em 0; padding: 0;
+}
+p {
+    margin: 0.75em 0;
+}
+.hide {
+    display: none;
+}
+div.centered {
+    text-align: center;
+    width: 100%;
+}
+.lesstop {
+    margin-top: 2px;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+/* layout */
+
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 20px;
+}
+#Content pre {
+   line-height: 1.1em; 
+   font-size: 1.1em;
+}
+#Logo {
+    color: #FFF; background-color: transparent;
+}
+#Setlang {
+    position: absolute;
+    left: auto; right: 5px; top: 0px;
+    width: 250px; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right; white-space: nowrap;
+}
+#Setlang a {
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    color: #FFF; background-color: #69C;
+    text-decoration: none;
+}
+#Greeting {
+    position: absolute;
+    left: auto; right: 112px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Greeting.nopic {
+    right: 50px;
+}
+#Greeting a {
+    color: #FFF; background-color: #69C;
+    font-weight: normal;
+}
+#Greeting a b {
+    font-weight: normal;
+}
+#Greeting #Logout {
+    font: 9px Arial, Geneva, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+#LoginBox {
+    position: absolute;
+    left: auto; right: 20px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+#NotLoggedInDiv a {
+    color: #FFF;
+}
+
+#Upgrade {
+    position: absolute;
+    left: auto;
+    right: 142px; top: 59px;
+    width: 180px; height: 20px;
+    padding-top: 2px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, sans-serif;
+    display: block; float: left;
+}
+#Upgrade a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; white-space: nowrap;
+    display: block; text-align: right;
+}
+#Upgrade a:hover {
+    color: #000; background-color: #FFF;
+}
+#Userpic {
+    display: block;
+    position: absolute;
+    left: auto; right: 0; top: 0;
+    width: 101px; height: 100px;
+    color: #FFF; background-color: transparent;
+    text-align: right;
+}
+#Userpic img {
+    color: #000; background-color: #FFF;
+    border: 0;
+    border-left: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+#menu-tos {
+    margin-left: 60px;
+}
+#FooterNav {
+    width: 100%; height: 20px;
+    color: #FFF; background-color: #69C;
+    margin: 0; padding: 0; border: 0;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+}
+#FooterNav a {
+    padding: 3px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+#Search {
+    float: left;
+    position: absolute;
+    left: auto; right: 40px; top: 103px;
+    width: auto; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+#Comments q {
+    font-style: italic;
+}
+
+_+http://stat.livejournal.com/xc/extended.cssÓOvar xcol_cur_menu = null;
+var xcol_cur_submenu = null;
+
+function show(id)
+{
+    if (!isDOMcompliant()) { return; }
+    var menu = document.getElementById("Menu" + id);
+    var menus = document.getElementById("NavMenuList");
+    if (!menus) return;
+
+    var submenu = menus.getElementsByTagName("ul").item(id);
+    if (xcol_cur_submenu == null) {
+        submenu.style.visibility = "visible";
+    } else {
+        xcol_cur_submenu.style.visibility = "hidden";
+        submenu.style.visibility = "visible";
+    }
+    if (xcol_cur_menu == null) {
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    } else {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    }
+    xcol_cur_menu = menu;
+    xcol_cur_submenu = submenu;
+}
+
+function unshow()
+{
+    if (!isDOMcompliant()) { return; }
+    if (xcol_cur_submenu != null) {
+        xcol_cur_submenu.style.visibility = "hidden";
+    }
+    if (xcol_cur_menu != null) {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+    }
+    xcol_cur_submenu = null;
+    xcol_cur_menu = null;
+}
+
+function isDOMcompliant()
+{
+    return document.getElementById && document.getElementsByTagName;
+}
+
+function xcShowLoginDiv () {
+    if (!document.getElementById) return true;
+    var notloge = document.getElementById("NotLoggedInDiv");
+    var logboxe = document.getElementById("LoginBox");
+    var xcusere = document.getElementById("xc_user");
+    if (!notloge || !logboxe || ! xcusere) return true;
+    notloge.style.display = 'none';
+    logboxe.style.display = 'block';
+    xcusere.focus();
+    return false;
+}
+
+var showNothing = function () { show(0) };
+if (window.attachEvent)
+    window.attachEvent("onload", showNothing);
+if (window.addEventListener)
+    window.addEventListener("load", showNothing, false);
+_(http://stat.livejournal.com/xc/layout.js_application/x-javascriptÓO't/*
+ *  md5.jvs 1.0b 27/06/96
+ *
+ * Javascript implementation of the RSA Data Security, Inc. MD5
+ * Message-Digest Algorithm.
+ *
+ * Copyright (c) 1996 Henri Torgemane. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for any purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. 
+ *
+ * Of course, this soft is provided "as is" without express or implied
+ * warranty of any kind.
+ */
+
+
+
+function array(n) {
+  for(i=0;i<n;i++) this[i]=0;
+  this.length=n;
+}
+
+/* Some basic logical functions had to be rewritten because of a bug in
+ * Javascript.. Just try to compute 0xffffffff >> 4 with it..
+ * Of course, these functions are slower than the original would be, but
+ * at least, they work!
+ */
+
+function integer(n) { return n%(0xffffffff+1); }
+
+function shr(a,b) {
+  a=integer(a);
+  b=integer(b);
+  if (a-0x80000000>=0) {
+    a=a%0x80000000;
+    a>>=b;
+    a+=0x40000000>>(b-1);
+  } else
+    a>>=b;
+  return a;
+}
+
+function shl1(a) {
+  a=a%0x80000000;
+  if (a&0x40000000==0x40000000)
+  {
+    a-=0x40000000;  
+    a*=2;
+    a+=0x80000000;
+  } else
+    a*=2;
+  return a;
+}
+
+function shl(a,b) {
+  a=integer(a);
+  b=integer(b);
+  for (var i=0;i<b;i++) a=shl1(a);
+  return a;
+}
+
+function and(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1&t2)+0x80000000);
+    else
+      return (t1&b);
+  else
+    if (t2>=0)
+      return (a&t2);
+    else
+      return (a&b);  
+}
+
+function or(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1|t2)+0x80000000);
+    else
+      return ((t1|b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a|t2)+0x80000000);
+    else
+      return (a|b);  
+}
+
+function xor(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return (t1^t2);
+    else
+      return ((t1^b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a^t2)+0x80000000);
+    else
+      return (a^b);  
+}
+
+function not(a) {
+  a=integer(a);
+  return (0xffffffff-a);
+}
+
+/* Here begin the real algorithm */
+
+    var state = new array(4); 
+    var count = new array(2);
+	count[0] = 0;
+	count[1] = 0;                     
+    var buffer = new array(64); 
+    var transformBuffer = new array(16); 
+    var digestBits = new array(16);
+
+    var S11 = 7;
+    var S12 = 12;
+    var S13 = 17;
+    var S14 = 22;
+    var S21 = 5;
+    var S22 = 9;
+    var S23 = 14;
+    var S24 = 20;
+    var S31 = 4;
+    var S32 = 11;
+    var S33 = 16;
+    var S34 = 23;
+    var S41 = 6;
+    var S42 = 10;
+    var S43 = 15;
+    var S44 = 21;
+
+    function F(x,y,z) {
+	return or(and(x,y),and(not(x),z));
+    }
+
+    function G(x,y,z) {
+	return or(and(x,z),and(y,not(z)));
+    }
+
+    function H(x,y,z) {
+	return xor(xor(x,y),z);
+    }
+
+    function I(x,y,z) {
+	return xor(y ,or(x , not(z)));
+    }
+
+    function rotateLeft(a,n) {
+	return or(shl(a, n),(shr(a,(32 - n))));
+    }
+
+    function FF(a,b,c,d,x,s,ac) {
+        a = a+F(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function GG(a,b,c,d,x,s,ac) {
+	a = a+G(b, c, d) +x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function HH(a,b,c,d,x,s,ac) {
+	a = a+H(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function II(a,b,c,d,x,s,ac) {
+	a = a+I(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function transform(buf,offset) { 
+	var a=0, b=0, c=0, d=0; 
+	var x = transformBuffer;
+	
+	a = state[0];
+	b = state[1];
+	c = state[2];
+	d = state[3];
+	
+	for (i = 0; i < 16; i++) {
+	    x[i] = and(buf[i*4+offset],0xff);
+	    for (j = 1; j < 4; j++) {
+		x[i]+=shl(and(buf[i*4+j+offset] ,0xff), j * 8);
+	    }
+	}
+
+	/* Round 1 */
+	a = FF ( a, b, c, d, x[ 0], S11, 0xd76aa478); /* 1 */
+	d = FF ( d, a, b, c, x[ 1], S12, 0xe8c7b756); /* 2 */
+	c = FF ( c, d, a, b, x[ 2], S13, 0x242070db); /* 3 */
+	b = FF ( b, c, d, a, x[ 3], S14, 0xc1bdceee); /* 4 */
+	a = FF ( a, b, c, d, x[ 4], S11, 0xf57c0faf); /* 5 */
+	d = FF ( d, a, b, c, x[ 5], S12, 0x4787c62a); /* 6 */
+	c = FF ( c, d, a, b, x[ 6], S13, 0xa8304613); /* 7 */
+	b = FF ( b, c, d, a, x[ 7], S14, 0xfd469501); /* 8 */
+	a = FF ( a, b, c, d, x[ 8], S11, 0x698098d8); /* 9 */
+	d = FF ( d, a, b, c, x[ 9], S12, 0x8b44f7af); /* 10 */
+	c = FF ( c, d, a, b, x[10], S13, 0xffff5bb1); /* 11 */
+	b = FF ( b, c, d, a, x[11], S14, 0x895cd7be); /* 12 */
+	a = FF ( a, b, c, d, x[12], S11, 0x6b901122); /* 13 */
+	d = FF ( d, a, b, c, x[13], S12, 0xfd987193); /* 14 */
+	c = FF ( c, d, a, b, x[14], S13, 0xa679438e); /* 15 */
+	b = FF ( b, c, d, a, x[15], S14, 0x49b40821); /* 16 */
+
+	/* Round 2 */
+	a = GG ( a, b, c, d, x[ 1], S21, 0xf61e2562); /* 17 */
+	d = GG ( d, a, b, c, x[ 6], S22, 0xc040b340); /* 18 */
+	c = GG ( c, d, a, b, x[11], S23, 0x265e5a51); /* 19 */
+	b = GG ( b, c, d, a, x[ 0], S24, 0xe9b6c7aa); /* 20 */
+	a = GG ( a, b, c, d, x[ 5], S21, 0xd62f105d); /* 21 */
+	d = GG ( d, a, b, c, x[10], S22,  0x2441453); /* 22 */
+	c = GG ( c, d, a, b, x[15], S23, 0xd8a1e681); /* 23 */
+	b = GG ( b, c, d, a, x[ 4], S24, 0xe7d3fbc8); /* 24 */
+	a = GG ( a, b, c, d, x[ 9], S21, 0x21e1cde6); /* 25 */
+	d = GG ( d, a, b, c, x[14], S22, 0xc33707d6); /* 26 */
+	c = GG ( c, d, a, b, x[ 3], S23, 0xf4d50d87); /* 27 */
+	b = GG ( b, c, d, a, x[ 8], S24, 0x455a14ed); /* 28 */
+	a = GG ( a, b, c, d, x[13], S21, 0xa9e3e905); /* 29 */
+	d = GG ( d, a, b, c, x[ 2], S22, 0xfcefa3f8); /* 30 */
+	c = GG ( c, d, a, b, x[ 7], S23, 0x676f02d9); /* 31 */
+	b = GG ( b, c, d, a, x[12], S24, 0x8d2a4c8a); /* 32 */
+
+	/* Round 3 */
+	a = HH ( a, b, c, d, x[ 5], S31, 0xfffa3942); /* 33 */
+	d = HH ( d, a, b, c, x[ 8], S32, 0x8771f681); /* 34 */
+	c = HH ( c, d, a, b, x[11], S33, 0x6d9d6122); /* 35 */
+	b = HH ( b, c, d, a, x[14], S34, 0xfde5380c); /* 36 */
+	a = HH ( a, b, c, d, x[ 1], S31, 0xa4beea44); /* 37 */
+	d = HH ( d, a, b, c, x[ 4], S32, 0x4bdecfa9); /* 38 */
+	c = HH ( c, d, a, b, x[ 7], S33, 0xf6bb4b60); /* 39 */
+	b = HH ( b, c, d, a, x[10], S34, 0xbebfbc70); /* 40 */
+	a = HH ( a, b, c, d, x[13], S31, 0x289b7ec6); /* 41 */
+	d = HH ( d, a, b, c, x[ 0], S32, 0xeaa127fa); /* 42 */
+	c = HH ( c, d, a, b, x[ 3], S33, 0xd4ef3085); /* 43 */
+	b = HH ( b, c, d, a, x[ 6], S34,  0x4881d05); /* 44 */
+	a = HH ( a, b, c, d, x[ 9], S31, 0xd9d4d039); /* 45 */
+	d = HH ( d, a, b, c, x[12], S32, 0xe6db99e5); /* 46 */
+	c = HH ( c, d, a, b, x[15], S33, 0x1fa27cf8); /* 47 */
+	b = HH ( b, c, d, a, x[ 2], S34, 0xc4ac5665); /* 48 */
+
+	/* Round 4 */
+	a = II ( a, b, c, d, x[ 0], S41, 0xf4292244); /* 49 */
+	d = II ( d, a, b, c, x[ 7], S42, 0x432aff97); /* 50 */
+	c = II ( c, d, a, b, x[14], S43, 0xab9423a7); /* 51 */
+	b = II ( b, c, d, a, x[ 5], S44, 0xfc93a039); /* 52 */
+	a = II ( a, b, c, d, x[12], S41, 0x655b59c3); /* 53 */
+	d = II ( d, a, b, c, x[ 3], S42, 0x8f0ccc92); /* 54 */
+	c = II ( c, d, a, b, x[10], S43, 0xffeff47d); /* 55 */
+	b = II ( b, c, d, a, x[ 1], S44, 0x85845dd1); /* 56 */
+	a = II ( a, b, c, d, x[ 8], S41, 0x6fa87e4f); /* 57 */
+	d = II ( d, a, b, c, x[15], S42, 0xfe2ce6e0); /* 58 */
+	c = II ( c, d, a, b, x[ 6], S43, 0xa3014314); /* 59 */
+	b = II ( b, c, d, a, x[13], S44, 0x4e0811a1); /* 60 */
+	a = II ( a, b, c, d, x[ 4], S41, 0xf7537e82); /* 61 */
+	d = II ( d, a, b, c, x[11], S42, 0xbd3af235); /* 62 */
+	c = II ( c, d, a, b, x[ 2], S43, 0x2ad7d2bb); /* 63 */
+	b = II ( b, c, d, a, x[ 9], S44, 0xeb86d391); /* 64 */
+
+	state[0] +=a;
+	state[1] +=b;
+	state[2] +=c;
+	state[3] +=d;
+
+    }
+
+    function init() {
+	count[0]=count[1] = 0;
+	state[0] = 0x67452301;
+	state[1] = 0xefcdab89;
+	state[2] = 0x98badcfe;
+	state[3] = 0x10325476;
+	for (i = 0; i < digestBits.length; i++)
+	    digestBits[i] = 0;
+    }
+
+    function update(b) { 
+	var index,i;
+	
+	index = and(shr(count[0],3) , 0x3f);
+	if (count[0]<0xffffffff-7) 
+	  count[0] += 8;
+        else {
+	  count[1]++;
+	  count[0]-=0xffffffff+1;
+          count[0]+=8;
+        }
+	buffer[index] = and(b,0xff);
+	if (index  >= 63) {
+	    transform(buffer, 0);
+	}
+    }
+
+    function finish() {
+	var bits = new array(8);
+	var	padding; 
+	var	i=0, index=0, padLen=0;
+
+	for (i = 0; i < 4; i++) {
+	    bits[i] = and(shr(count[0],(i * 8)), 0xff);
+	}
+        for (i = 0; i < 4; i++) {
+	    bits[i+4]=and(shr(count[1],(i * 8)), 0xff);
+	}
+	index = and(shr(count[0], 3) ,0x3f);
+	padLen = (index < 56) ? (56 - index) : (120 - index);
+	padding = new array(64); 
+	padding[0] = 0x80;
+        for (i=0;i<padLen;i++)
+	  update(padding[i]);
+        for (i=0;i<8;i++) 
+	  update(bits[i]);
+
+	for (i = 0; i < 4; i++) {
+	    for (j = 0; j < 4; j++) {
+		digestBits[i*4+j] = and(shr(state[i], (j * 8)) , 0xff);
+	    }
+	} 
+    }
+
+/* End of the MD5 algorithm */
+
+function hexa(n) {
+ var hexa_h = "0123456789abcdef";
+ var hexa_c=""; 
+ var hexa_m=n;
+ for (hexa_i=0;hexa_i<8;hexa_i++) {
+   hexa_c=hexa_h.charAt(Math.abs(hexa_m)%16)+hexa_c;
+   hexa_m=Math.floor(hexa_m/16);
+ }
+ return hexa_c;
+}
+
+
+var ascii="01234567890123456789012345678901" +
+          " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
+          "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+
+function MD5(entree) 
+{
+ var l,s,k,ka,kb,kc,kd;
+
+ init();
+ for (k=0;k<entree.length;k++) {
+   l=entree.charAt(k);
+   update(ascii.lastIndexOf(l));
+ }
+ finish();
+ ka=kb=kc=kd=0;
+ for (i=0;i<4;i++) ka+=shl(digestBits[15-i], (i*8));
+ for (i=4;i<8;i++) kb+=shl(digestBits[15-i], ((i-4)*8));
+ for (i=8;i<12;i++) kc+=shl(digestBits[15-i], ((i-8)*8));
+ for (i=12;i<16;i++) kd+=shl(digestBits[15-i], ((i-12)*8));
+ s=hexa(kd)+hexa(kc)+hexa(kb)+hexa(ka);
+ return s; 
+}
+
+/* This implement the MD5 test suite */
+var testOk=false;
+function teste() {
+ if (testOk) return;
+ document.test.o1.value=MD5(document.test.i1.value);
+ document.test.o2.value=MD5(document.test.i2.value);
+ document.test.o3.value=MD5(document.test.i3.value);
+ document.test.o4.value=MD5(document.test.i4.value);
+ document.test.o5.value=MD5(document.test.i5.value);
+ document.test.o6.value=MD5(document.test.i6.value);
+ document.test.o7.value=MD5(document.test.i7.value);
+ testOk=true;
+}
+_$http://www.livejournal.com/js/md5.jsÓOBZvar LJVAR;
+if (! LJVAR) LJVAR = new Object();
+
+// called by S2:
+function setStyle (did, attr, val) {
+    if (! document.getElementById) return;
+    var de = document.getElementById(did);
+    if (! de) return;
+    if (de.style)
+        de.style[attr] = val
+}
+
+// called by S2:
+function setInner (did, val) {
+    if (! document.getElementById) return;
+    var de = document.getElementById(did);
+    if (! de) return;
+    de.innerHTML = val;
+}
+
+// called by S2:
+function hideElement (did) {
+    if (! document.getElementById) return;
+    var de = document.getElementById(did);
+    if (! de) return;
+    de.style.display = 'none';
+}
+
+// called by S2:
+function setAttr (did, attr, classname) {
+    if (! document.getElementById) return;
+    var de = document.getElementById(did);
+    if (! de) return;
+    de.setAttribute(attr, classname);
+}
+
+function getXTR () {
+    var xtr;
+    var ex;
+
+    if (typeof(XMLHttpRequest) != "undefined") {
+        xtr = new XMLHttpRequest();
+    } else {
+        try {
+            xtr = new ActiveXObject("Msxml2.XMLHTTP.4.0");
+        } catch (ex) {
+            try {
+                xtr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (ex) {
+            }
+        }
+    }
+
+    // let me explain this.  Opera 8 does XMLHttpRequest, but not setRequestHeader.
+    // no problem, we thought:  we'll test for setRequestHeader and if it's not present
+    // then fall back to the old behavior (treat it as not working).  BUT --- IE6 won't
+    // let you even test for setRequestHeader without throwing an exception (you need
+    // to call .open on the .xtr first or something)
+    try {
+        if (xtr && ! xtr.setRequestHeader)
+            xtr = null;
+    } catch (ex) { }
+
+    return xtr;
+}
+
+// push new element 'ne' after sibling 'oe' old element
+function addAfter (oe, ne) {
+    if (oe.nextSibling) {
+        oe.parentNode.insertBefore(ne, oe.nextSibling);
+    } else {
+        oe.parentNode.appendChild(ne);
+    }
+}
+
+// hsv to rgb
+// h, s, v = [0, 1), [0, 1], [0, 1]
+// r, g, b = [0, 255], [0, 255], [0, 255]
+function hsv_to_rgb (h, s, v)
+{
+    if (s == 0) {
+	v *= 255;
+	return [v,v,v];
+    }
+
+    h *= 6;
+    var i = Math.floor(h);
+    var f = h - i;
+    var p = v * (1 - s);
+    var q = v * (1 - s * f);
+    var t = v * (1 - s * (1 - f));
+
+    v = Math.floor(v * 255 + 0.5);
+    t = Math.floor(t * 255 + 0.5);
+    p = Math.floor(p * 255 + 0.5);
+    q = Math.floor(q * 255 + 0.5);
+
+    if (i == 0) return [v,t,p];
+    if (i == 1) return [q,v,p];
+    if (i == 2) return [p,v,t];
+    if (i == 3) return [p,q,v];
+    if (i == 4) return [t,p,v];
+    return [v,p,q];
+}
+
+// stops the bubble
+function stopBubble (e) {
+    if (e.stopPropagation)
+        e.stopPropagation();
+    if ("cancelBubble" in e)
+        e.cancelBubble = true;
+}
+
+// stops the bubble, as well as the default action
+function stopEvent (e) {
+    stopBubble(e);
+    if (e.preventDefault)
+        e.preventDefault();
+    if ("returnValue" in e)
+        e.returnValue = false;
+    return false;
+}
+
+function scrollTop () {
+    if (window.innerHeight)
+        return window.pageYOffset;
+    if (document.documentElement && document.documentElement.scrollTop)
+        return document.documentElement.scrollTop;
+    if (document.body)
+        return document.body.scrollTop;
+}
+
+function scrollLeft () {
+    if (window.innerWidth)
+        return window.pageXOffset;
+    if (document.documentElement && document.documentElement.scrollLeft)
+        return document.documentElement.scrollLeft;
+    if (document.body)
+        return document.body.scrollLeft;
+}
+
+function getElementPos (obj)
+{
+    var pos = new Object();
+    if (!obj)
+        return null;
+
+    var it;
+
+    it = obj;
+    pos.x = 0;
+    if (it.offsetParent) {
+	while (it.offsetParent) {
+	    pos.x += it.offsetLeft;
+	    it = it.offsetParent;
+	}
+    }
+    else if (it.x)
+	pos.x += it.x;
+
+    it = obj;
+    pos.y = 0;
+    if (it.offsetParent) {
+	while (it.offsetParent) {
+	    pos.y += it.offsetTop;
+	    it = it.offsetParent;
+	}
+    }
+    else if (it.y)
+	pos.y += it.y;
+
+    return pos;
+}
+
+// returns the mouse position of the event, or failing that, the top-left
+// of the event's target element.  (or the fallBack element, which takes
+// precendence over the event's target element if specified)
+function getEventPos (e, fallBack)
+{
+    var pos = { x:0, y:0 };
+
+    if (!e) var e = window.event;
+    if (e.pageX && e.pageY) {
+        // useful case (relative to document)
+        pos.x = e.pageX;
+        pos.y = e.pageY;
+    }
+    else if (e.clientX && e.clientY) {
+        // IE case (relative to viewport, so need scroll info)
+        pos.x = e.clientX + scrollLeft();
+        pos.y = e.clientY + scrollTop();
+    } else {
+	var targ = fallBack || getTarget(e);
+	var pos = getElementPos(targ);
+	return pos;
+    }
+    return pos;
+}
+
+var curPopup = null;
+var curPopup_id = 0;
+
+function killPopup () {
+    if (!curPopup)
+        return true;
+
+    var popup = curPopup;
+    curPopup = null;
+
+    var opp = 1.0;
+
+    var fade = function () {
+        opp -= 0.15;
+
+        if (opp <= 0.1) {
+            popup.parentNode.removeChild(popup);
+        } else {
+            popup.style.filter = "alpha(opacity=" + Math.floor(opp * 100) + ")";
+            popup.style.opacity = opp;
+            window.setTimeout(fade, 20);
+        }
+    };
+    fade();
+
+    return true;
+}
+
+var pendingReqs = new Object ();
+
+function deleteComment (ditemid) {
+
+    var hasopt = function (opt) {
+        var el = document.getElementById("ljpopdel" + ditemid + opt);
+        if (!el) return false;
+        if (el.checked) return true;
+        return false;
+    };
+    var opt_delthread = hasopt("thread");
+    var opt_ban = hasopt("ban");
+    var opt_spam = hasopt("spam");
+
+    killPopup();
+
+    var todel = document.getElementById("ljcmt" + ditemid);
+
+    var col = 0;
+    var pulse = 0;
+    var is_deleted = 0;
+    var is_error = 0;
+
+    var xtr = getXTR();
+    if (! xtr) {
+        alert("JS_ASSERT: no xtr now, but earlier?");
+        return false;
+    }
+    pendingReqs[ditemid] = xtr;
+
+    var state_callback = function () {
+        if (xtr.readyState != 4)
+             return;
+
+        if (xtr.status == 200) {
+            var val = eval(xtr.responseText);
+            is_deleted = val;
+            if (! is_deleted) is_error = 1;
+        } else {
+            alert("Error contacting server to delete comment.");
+            is_error = 1;
+        }
+    };
+
+    var error_callback = function () {
+        alert("Error deleting " + ditemid);
+        is_error = 1;
+    };
+
+    xtr.onreadystatechange = state_callback;
+    xtr.open("POST", "/delcomment.bml?mode=js&journal=" + LJ_cmtinfo.journal + "&id=" + ditemid, true);
+    var postdata = "confirm=1";
+    if (opt_ban) postdata += "&ban=1";
+    if (opt_spam) postdata += "&spam=1";
+    if (opt_delthread) postdata += "&delthread=1";
+
+    xtr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xtr.send(postdata);
+
+    var flash = function () {
+        var rgb = hsv_to_rgb(0, Math.cos((pulse + 1) / 2), 1);
+        pulse += 3.14159 / 5;
+        var color = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
+
+        todel.style.border = "2px solid " + color;
+        if (is_error) {
+            todel.style.border = "";
+            // and let timer expire
+        } else if (is_deleted) {
+            removeComment(ditemid, opt_delthread);
+        } else {
+            window.setTimeout(flash, 50);
+        }
+    };
+
+    window.setTimeout(flash, 5);
+}
+
+function removeComment (ditemid, killChildren) {
+    var todel = document.getElementById("ljcmt" + ditemid);
+    if (todel) {
+        todel.style.display = 'none';
+
+        var userhook = window["userhook_delete_comment_ARG"];
+        if (userhook)
+            userhook(ditemid);
+    }
+    if (killChildren) {
+        var com = LJ_cmtinfo ? LJ_cmtinfo[ditemid] : null;
+        for (var i = 0; i < com.rc.length; i++) {
+            removeComment(com.rc[i], true);
+        }
+    }
+}
+
+function docClicked (e) {
+    if (!curPopup)
+	return true;
+    killPopup();
+    return true;
+}
+
+function createDeleteFunction (ae, dItemid) {
+    return function (e) {
+        if (!e) e = window.event;
+        var FS = arguments.callee;
+
+        var finalHeight = 100;
+
+        if (e.shiftKey || (curPopup && curPopup_id != dItemid)) {
+            killPopup();
+        }
+
+        var doIT = 0;
+        // immediately delete on shift key
+        if (e.shiftKey) {
+            doIT = 1;
+        } else {
+            if (! LJ_cmtinfo)
+                return true;
+
+            var com = LJ_cmtinfo[dItemid];
+            var remoteUser = LJ_cmtinfo["remote"];
+            if (!com || !remoteUser)
+                return true;
+            var canAdmin = LJ_cmtinfo["canAdmin"];
+
+            var clickTarget = getTarget(e);
+            var used_keyboard = clickTarget.nodeName == "A";
+
+            var pos = used_keyboard ? getElementPos(ae) : getEventPos(e);
+            var lx = pos.x + 5 - 250;
+            if (lx < 5) lx = 5;
+            var de;
+
+            if (curPopup && curPopup_id == dItemid) {
+                de = curPopup;
+                de.style.left = lx + "px";
+                de.style.top = (pos.y + 5) + "px";
+                return stopEvent(e);
+            }
+
+            de = document.createElement("div");
+            de.style.textAlign = "left";
+	    de.className = 'ljcmtmanage';
+	    de.style.height = "10px";
+            de.style.overflow = "hidden";
+            de.style.position = "absolute";
+            de.style.left = lx + "px";
+            de.style.top = (pos.y + 5) + "px";
+            de.style.width = "250px";
+  	    regEvent(de, "click", function (e) {
+		e = e || window.event;
+                stopBubble(e);
+		return true;
+	    });
+
+            var inHTML = "<form style='display: inline' id='ljdelopts" + dItemid + "'><span style='font-face: Arial; font-size: 8pt'><b>Delete comment?</b><br />";
+            var lbl;
+            if (remoteUser != "" && com.u != "" && com.u != remoteUser && canAdmin) {
+                lbl = "ljpopdel" + dItemid + "ban";
+                inHTML += "<input type='checkbox' value='ban' id='" + lbl + "'> <label for='" + lbl + "'>Ban <b>" + com.u + "</b> from commenting</label><br />";
+            } else {
+                finalHeight -= 15;
+            }
+
+            if (remoteUser != com.u && canAdmin) {
+                lbl = "ljpopdel" + dItemid + "spam";
+                inHTML += "<input type='checkbox' value='spam' id='" + lbl + "'> <label for='" + lbl + "'>Mark this comment as spam</label><br />";
+            } else {
+                finalHeight -= 15;
+            }
+
+            if (com.rc && com.rc.length && canAdmin) {
+                lbl = "ljpopdel" + dItemid + "thread";
+                inHTML += "<input type='checkbox' value='thread' id='" + lbl + "'> <label for='" + lbl + "'>Delete thread (all subcomments)</label><br />";
+            } else {
+                finalHeight -= 15;
+            }
+            inHTML += "<input type='button' value='Delete' onclick='deleteComment(" + dItemid + ");' /> <input type='button' value='Cancel' onclick='killPopup()' /></span><br /><span style='font-face: Arial; font-size: 8pt'><i>shift-click to delete without options</i></span></form>";
+            de.innerHTML = inHTML;
+
+            // we do this so keyboard tab order is correct:
+            addAfter(ae, de);
+
+            curPopup = de;
+            curPopup_id = dItemid;
+
+            var height = 10;
+            var grow = function () {
+                height += 7;
+                if (height > finalHeight) {
+                    de.style.height = null;
+                    de.style.filter = "";
+                    de.style.opacity = 1.0;
+                } else {
+                    de.style.height = height + "px";
+                    window.setTimeout(grow, 20);
+                }
+            };
+            grow();
+
+        }
+
+        if (doIT) {
+            deleteComment(dItemid);
+        }
+
+        return stopEvent(e);
+    }
+}
+
+function poofAt (pos) {
+    var de = document.createElement("div");
+    de.style.position = "absolute";
+    de.style.background = "#FFF";
+    de.style.overflow = "hidden";
+    var opp = 1.0;
+
+    var top = pos.y;
+    var left = pos.x;
+    var width = 5;
+    var height = 5;
+    document.body.appendChild(de);
+
+    var fade = function () {
+        opp -= 0.15;
+        width += 10;
+        height += 10;
+        top -= 5;
+        left -= 5;
+
+        if (opp <= 0.1) {
+            de.parentNode.removeChild(de);
+        } else {
+            de.style.left = left + "px";
+            de.style.top = top + "px";
+            de.style.height = height + "px";
+            de.style.width = width + "px";
+            de.style.filter = "alpha(opacity=" + Math.floor(opp * 100) + ")";
+            de.style.opacity = opp;
+            window.setTimeout(fade, 20);
+        }
+    };
+    fade();
+}
+
+function getTarget (ev) {
+    var target;
+    if (ev.target)
+        target = ev.target;
+    else if (ev.srcElement)
+        target = ev.srcElement;
+
+    // Safari bug:
+    if (target && target.nodeType == 3)
+        target = target.parentNode;
+
+    return target;
+}
+
+function updateLink (ae, resObj, clickTarget) {
+    ae.href = resObj.newurl;
+    var userhook = window["userhook_" + resObj.mode + "_comment_ARG"];
+    var did_something = 0;
+
+    if (clickTarget && clickTarget.src && clickTarget.src == resObj.oldimage) {
+        clickTarget.src = resObj.newimage;
+        did_something = 1;
+    }
+
+    if (userhook) {
+        userhook(resObj.id);
+        did_something = 1;
+    }
+
+    // if all else fails, at least remove the link so they're not as confused
+    if (! did_something) {
+        if (ae && ae.style)
+            ae.style.display = 'none';
+        if (clickTarget && clickTarget.style)
+            clickTarget.style.dispay = 'none';
+    }
+
+}
+
+var tsInProg = new Object();  // dict of { ditemid => 1 }
+function createModerationFunction (ae, dItemid) {
+    return function (e) {
+        if (!e) e = window.event;
+
+        if (tsInProg[dItemid])
+            return stopEvent(e);
+        tsInProg[dItemid] = 1;
+
+        var clickTarget = getTarget(e);
+
+        var used_keyboard = clickTarget.nodeName == "A";
+
+        var imgTarget;
+        var imgs = ae.getElementsByTagName("img");
+        if (imgs.length)
+            imgTarget = imgs[0]
+
+        if (! clickTarget || typeof(clickTarget) != "object")
+            return true;
+
+        var clickPos = used_keyboard ? getElementPos(imgTarget || ae) : getEventPos(e);
+
+        var de = document.createElement("img");
+        de.style.position = "absolute";
+        de.width = 17;
+        de.height = 17;
+        de.src = LJVAR.imgprefix + "/hourglass.gif";
+        de.style.top = (clickPos.y - 8) + "px";
+        de.style.left = (clickPos.x - 8) + "px";
+        document.body.appendChild(de);
+
+        var xtr = getXTR();
+        var state_callback = function () {
+            if (xtr.readyState != 4) return;
+
+            document.body.removeChild(de);
+            var rpcRes;
+
+            if (xtr.status == 200) {
+                var resObj = eval(xtr.responseText);
+                if (resObj) {
+                    poofAt(clickPos);
+                    updateLink(ae, resObj, imgTarget);
+                    tsInProg[dItemid] = 0;
+                } else {
+                    tsInProg[dItemid] = 0;
+                }
+
+            } else {
+                alert("Error contacting server.");
+                tsInProg[dItemid] = 0;
+            }
+        };
+
+        xtr.onreadystatechange = state_callback;
+
+        var postUrl = ae.href.replace(/http:\/\/.+?\//, "/");
+        xtr.open("POST", postUrl + "&jsmode=1", true);
+
+        var postdata = "confirm=Y";
+
+        xtr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xtr.send(postdata);
+
+        return stopEvent(e);
+    };
+}
+
+function setupAjax () {
+    var ct = document.links.length;
+    for (var i=0; i<ct; i++) {
+        var ae = document.links[i];
+        if (ae.href.indexOf("talkscreen.bml") != -1) {
+            ae.onclick = createModerationFunction(ae, dItemid);
+
+        } else if (ae.href.indexOf("delcomment.bml") != -1) {
+
+            var findIDre = /id=(\d+)/;
+            var reMatch = findIDre.exec(ae.href);
+            if (! reMatch) return true;
+
+            var dItemid = reMatch[1];
+            var todel = document.getElementById("ljcmt" + dItemid);
+            if (! todel) return true;
+
+            ae.onclick = createDeleteFunction(ae, dItemid);
+        }
+
+    }
+}
+
+function regEvent (target, evt, func) {
+    if (! target) return;
+    if (target.attachEvent)
+        target.attachEvent("on"+evt, func);
+    if (target.addEventListener)
+        target.addEventListener(evt, func, false);
+}
+
+if (document.getElementById && getXTR()) {
+	regEvent(window, "load", setupAjax);
+	regEvent(document, "click", docClicked);
+        document.write("<style> div.ljcmtmanage { color: #000; background: #e0e0e0; border: 2px solid #000; padding: 3px; }</style>");
+}
+_.http://www.livejournal.com/js/commentmanage.jsÓ !OÌGIF87ad d ÷  Î7AÇ5?+$-b»1;~!(n#S÷úıJ^js’¤BT^~ ³0>EeVnz?@@ïğğıÿı110ºº¹°°¯vc)õÌUîÅRÜ·LüÑXâ¼OÉ§F·™@¦‹:w2œ8é×¯ì°Fõ·Kï³Ií±Iù»M[E3'	ó³Iı»Mù·Lí¯Ié­Gà¦EÚ¡C½Œ:©~4Ÿv1™r/’l-…c)æªGÒœAÈ”>J7iN!cJxY&æ­K‘n4à¬Xõ¾cç´aøÉ|ûÒ‘ÿá²hT5Í¦j¶”`óÓ¥zjSk]I›‡jóÕ¨^RA÷İ¸úèÍ ıöì…h?ùÕ¦ù×©öÕ§õÓ¦óÑ¥Î²ŒïÎ£ëË Û½•ıÛ­÷Ö©äÅœÂ¨…¬•v‰w^SH9vX2ğìçÿû÷§¦¥£_/}I$e;ôHÁq9(''jiiÈÇÇŒŒıııøøøôôôçççŞŞŞÔÔÔ{{{[[[HHH999         ´ ¶ Ø$ ßwøwÑüwÄwøwÈ ¨ T¸         8ú Û€ûwˆxøwÿÿÿÿHú        ¸ @¸     Ğüw°ù €ú €ú Û€ûwˆ®øwÿÿÿÿú °èw          òÍáw        àı(¶     @¸     $  Tú     °ÿ ıêwÈèwÿÿÿÿˆ®øwÜMC @¸            äçı{2	Â †ª$   æL|2	Â    _3        barr"    ¹@ ” ” 4û Û€ûwx®øwÿÿÿÿDû Iéw       òÍáw                ÄÀD ç" ¬2 ë" tH ÿÿÿÿ" .ÁD ç" !ù     ,    d d @ÿ ÿH° Áƒ*\È°áÂ
+#FÄG`
+6dXğÁdÇŠ8|À Ä‚„'şôùS†ÏŠ
+yX´xaÇŸ=sêÜÉ³§Ï
+wÊy£h>N]ê"†:vÌ\!òÅŸ,f´¨aˆ:´¾øÑÔF'|øùÉ¶mÄ 9íğ²Æ
+3XÀH#…5b¸h¡ãDa>~ü¨±ÂVgÔ¨‘BFÅ…SÀháC…=ZØĞQ¤È
+nSÃÍÙBEQ3[@á‚@z±±B…•¡ıÙªÙuØÔQcÇ.[ÈHİ‚€6.(‘ráÌ„8e¸$ÿù3¦E3kRK\±Î'»¨b#.TÔøc™Æ
+,èğ‡,ü€a´ 6èàƒ\4Ñ `øñ‡Í1u1zëY¤ÓæY0Œö‚5ø0gŒÁ`fXhN@AÆalácZĞx†6˜…[	aÙ˜{:­ñ‡S¢PEx~aF’baArôdtvñDat•~x± ’cüA@ tÖY'7©åNTşÑ…P¼©ä „>¸…^8‘E]°Á Ô)€”V
+@|ü´§“:ñ ¤•€üğ‡4¬ğ‡¡ÿ€@ë­¬ÅÓ¦;éñG~ø±‡”kÄ!Á”Ù­ÑÂ@qDàÀ³¬De7zk—şAÂÈym¨ü‘N¼J´Ç@-ôYĞ±d€»]à IµõF0%
+d"|ÀA“bû‡d¹Å`|AFœ @¤áj*¢[çÆÇJ}¬”,LïN8‡à;¥hFHhI,{@¤ßZzšOåş”§<÷¬çÅO*«TQ|•ÂY)ìÃ1ÌàB
+>¸€B 5µÑ6@Uôá³Ï›ZğBTv}VQPõ•‚dAœğB£MÂ:ä`-¸ ƒ6àÿ ƒgY Ã^ES}ó×8ıV
+…£‚A¸Cm7¤€C(H–CSsÏpBAÌô-TÁA°pÂ
+)´ F_4(!Df9%†ˆ¥8DÕ×|ñ CR1ÃSiñàÃ=ÀğUÌ„U¬Ú>¤jeR$á`g´1d‘Z<!fqFÌ<oúÇ^J÷ ˜H‚Õ—xCd”±–ƒb™² $1”
+©ŠQf§$&áÎIåÊƒ‚ÇƒŒ°`	ÈÂ‚Öô‡'$aMØÂX'dg%PÉÎÀ%)¸ ”¤…3LÊ 	øÃÚ·;‰H`Oè‚ÿ²ÃÀB±P[“¤ …$X` €U 
+`«k}j\ûÏ0m!	IPb’Ğ0”¡fp‚P5˜ g NÌÀp@s’ØèT€šQŠ UHœSSìL'(€ ²“)ıê'K•@èt©nıa ø€&; WÉ‰fûüh§``W=ÔI.“iŒÏb úD­5ìA]±@Øõ°Ê`«6°Ø‘vúÔª€Ë€ Ğ„¦%ÿ‚ÄäJ%Oäp“ğAqX–@Ğ ”±df C³p(Ìî‹ø€ş€a
+ƒ–åÿÇÃ¡r¹¨@A”3löJzÈ "2?”€°ÀNğÀ,ôk›ºCÌ Tá=ĞkzÀ¹­@S3ŠŒò4à¨€tA€jĞäé¢?¨¹j@«IíjEyh°÷ìÍ/¨Bï„ÇÄô.P9)\ÀâÉ`yuÀ© wÈ¼§(: 
+
+v˜à`ªBJx ÃÜ 0óB<c´€JËÓhÀ¬ü!«Z‘N!b‡	ìej'°AS0g¸¬˜£rà=¸bğğà8HKÔ †<0J‚ ’ÀîIW0Aá43Áÿ,ï.Ğfª°5‘lnnWá)Vºüa4@İ^À‚Áà«c€ “şMƒEœû†fè 2H®|ƒ’ÖÀ4`~ ƒ¤­ 0°€
+‚ƒËşA@9a>G$2œĞÂ|À8¼<3º@ª 3Ä‡ÙÊÓbØ¢À€.«£Á}d0™¨r)ºL ğ z˜ì
+îË–€Z¨XÂ%0ŸZ KvÁİ¹‡»A ÊêR°‚éıF8E¦
+Ş+YØ UØÁ¢à…1)HOxPÊğ‡(4¨O ’	v¬.äÓŸíáû–ÌÔ ÿŒó^PƒÂ0Æò}‚8ô 2¨³Pe –ª‡4€¡v"Ã‡8µ©ğÀƒ¹AHsÛ”èE½
+á'lšA7.RÜ3^Q‹»STğifhl*Î´¡l`Ãgj 6
+Là3˜„hÅ©‡„°Oğp•Ä°À`°r„Îp1hp¢›1Ô¸Ø ƒü×@~R*\|0¨j´Y´ të“€Ï…Å®AZ@ƒ˜Ä3H÷.ƒ†§<`±"À_İ’3>¼Ø<OÔ§'Îé	 i<ğ€@' ”×ú[r¶«'ø›â†ÿjÂ  ˜\``«@ÅqR&sá=!9§Üc-;%`Up‚÷"Ô„&„!N@è e3 <ä5ûÃ)ÿyÑ5ÀÊr ­¢i  `‘yúÄÆ>±J…Ë[6ÿ”Fw¢s‰àa•ú`skcÃÖÀ`€Jr8Ö`|@©€¤   [uä€0±ÄÛœNÈÛÙ‘ı CE3@‡ƒ	$€e, Üd™¸™*X• 9üƒb4 ‚*€ °&ãI	 …óX°m‘¤" ôt˜}Ö`oÒıWâ—$ÿèK "Ğ ÿ•0€`ñ”¬ØIÌ¥Ó˜Æ,&jì'q"YÈ.€Ë@‹’´t°q@Náa .NP IÃÄµòf0tFk¾G)Ÿ’E©áH± 1k T'ÃFNpRÀ@Pğ'âADÇ dJÔ b@#P P÷-h–MÖà„2twàÄ©²Çbhâ#ã$MôŞ– EW…[ `]wy6“EÑ…^ø…`†?Xd¨]÷Ç{°P±uq|qjX†ŒÆnp!çò+s@~ {ğ5Ğ¨Ál3 E`;”u  xv0tÿ˜f?h¥g=ğY‡Vñ­‘(R1°5|¡ûqrÀ©ƒT¬5u¸U:Ay@>ğ(ÑJiFSFQc3P4.0LCa?ĞI±ÕŠ›at`¼Á]@õh¥4°ô^Á8Só4)PRm58'ÀZ^£ŒoÑC{à;}ñ@U'ĞY*€„Á5ƒÓU€:J…=7°9ïø+°Äq(p0‡¸)ğ‹ğõ‰¬¦R|Ñ^1`'PˆQ7ğD2 bÓ;? ?ûÁ+ğ4Ì!,&­¸)—e†14ÌŠêu±8P‰<p1ÿ T77Í'à7é6`¡[Kq•xjv3À‰@R¢T,Ğf2NÓĞ‰«“‘É$É:-0æU@†a«£y®ÕCAp^DcY1VF!TVS9 ¿È‰€Q@`7=@V>`Á˜ZÖ£[vZÔŒI56‰S{B{ …ƒ¨åWà2°ÏÅ4Íá+ğfé’T= €–_ëõ<0#RÊc—6 '`WĞc Qµ)- ]K ­¶Mã4=z©-F5ˆÁ’¶X- ?/° … I;yE‡€e t‚·ÙCQ¹•ÿ7p4µD¦7½sêù6`A`[5p+piö³6 áA$³;d ‡ÆY@M‚{€ÊF.Ğ˜“¬“"”ñ‘6À\/€)e´áJ—OÖY eã¥\ÀDã1I”Ëô*únp&b O`2cÈäòX0 ?1o¶? 6 ’øñ'"¨˜=ƒáÆè66¥T4p[Ğ~0CL-`=Rt>r(’Àe¦ ÈvåAP ( ºñ]œé9 ¦,à]3`;€$a9¦Å‰†ZprĞqO  Æ0ggÀm9ÿÅv¾£5‚!Œ4õšĞuÆ3Wº‘=°¨£ùce@5°!6ÆÌÄg°_ĞráäiÚ- ‡Wé‹HUÓólÃ59 :ÀZqU6°H0;Etr[†%ZÀ?[*}Psà/ÈNŒ=–]îß5gú8† '¥Ö'µ;PÍ
+nGÔ¢úMÂP]P­Y²hÙê¨oékC; œ“%T;ğÁ£VDgğÂ¦e†”Ux O`mEÒ~€­cJ.3€‰„a?r	_u0P0qZfö2T(;4'¥ÖCt —<ğ'`¦<ÿÀ8¾abf@ß£jD]@„âoMp,ƒÂe`“Jš85dE<ˆQZA Ö]0`l ¢pÀm°<,RÀ.UƒM°#\0îÄ` ¨²¨²vª¥·RG‘)°^@ Tê
+3€U€#N /a,y€EÒe ª`0^V$bğFº·
+a%9µƒ¢#;;bài`*U€;sĞ8q"ª;lR€€;#`P0tr :T‡3Z~ğ>@6 @bp]œ‹0–È¨Á³ø6pMpƒèUp¨/$Š.gˆ|9FI` = ´,‹oP@--°
+Uvÿ@¼ÃvoR’PbĞºß†v·ò)°n3Š R0-—º(ç2F‰K%«>Ö èw+ Çn×PàDfĞºùkDc0g hbñ´4ó¼ß2 q n9Çy,FÌûÀWt-÷  5'*;+²;rgh0r@HÂ›D	x2eqÀ ‹gpZX»m—tôi!´7H@jÒ/A'Áä¶§ƒZH'³ûÁµûzĞ€KA~P ` U XJ$Y°F~Ğ[]0ZÄÔh :Øs¤4£G¬w  °k'
+7è#‹RÿàKÄô	 uŸr)Zls ¦>ˆS“" @+  °"`GîÀğqïû*¯ryCuê¡	Êz`+ °w.(“2’¤ƒd‡{S’Ë‘ YX'á‚p6' ¬h_,|à)ÓkØà|`„úW@%t°´H-0!ğ€#@¦Ê`x6… ‘ò)èG	`ÉÒëîñ  N!$.ĞÀ T)Ó ²Ô ß÷*e+ »¤”gy—G öªÌn!ÍlBÔbÑc|#ràyz Kàzs,r`!-L3GIq  ÃçGŸb›Ã¿ÿRQkĞ/KĞ ìù×'ÀS"yèL¡"pÎÂÄĞs	°<¶rĞï x²<åÏ>qğË/qÀŞK}ñ"bÜÌíBzø"ĞÔÆÔ¤¼k‚ìL+LIÊÅÄ*n-z­×ãó—É|_Ür0Ûç/Ô,B=%'³ cÑCĞ;­#ÇÉc×x ÏD) Èâ/Ì”Ë}B~héÊ>á„-.ÜlÑøÌwÙá/}À BU@-îæÏ² Ğ e@FWÄKıB3+ƒ"cP×ÉF|†u{ĞÎ/ó² 'c zJ©%ĞğÔ¶dà=T¼€Ú~vÄĞİ²>$-7×øÜËkĞ1¨r,ê¢Tç¢Ø¦çd@çB+jgF ‹”¾	Ëeír¨áÅz² ±äàz©b°'% fü\egDÅıƒ($²J…ÊEüà¨-Ï°hµ/æ4%|{°Ø$ã] `D@Ô±N@±ßæóÒ—·‚$†J¾äLÎ ;_1http://www.livejournal.com/userpic/1822747/575765Ytext/htmlÓ#$%OGIF89a  Ä      k ” ŞcïÿÆ÷R!!!)))11111­99ÎBBBRRŒZZ¥{{{„„„¥œœÎÆ½ÖÎÆçŞÎ÷ïŞÿ„               !ÿNETSCAPE2.0   !ù
+  ,       là&diŠLÊœ%c]Y¶²SYq<Ÿ6ï¦^NFşŠ·!°•Œ]–%,sĞPf-
+ 8- Ã€<0€Åh!pÜëf?8È7tn	 ˆe€
+ •–ŒW&!  ;_,http://stat.livejournal.com/img/userinfo.gifYimage/gifÓ'(%OXGIF89a  æ  ÌÌÌ„„„ÿÿÿ³³³²²²¹¹¹' ¯¯¯333™™™V  ±±±vzpñ÷è. (CQ† 3f 'B fffN XYWäïÔˆˆˆxxx$ ÆÜ¦‰Š† µµµwj2T BD@ SŠ 33 f™3Ft °°°åïÖÙêÀ‡‡‡% –¼^ÖàÆ0P * Hw - yyyUVT‰‰‰½½½óøì¼¼¼’¼Tn|Wfœ¸¸¸2 MNL·ÔŒªªªCL6Ôæ¸L~ Ïå¬~{™Ìf€k"f™                                                                                                                                                                !ù     ,       µ€‚ƒ„…† Š‹Œˆ‘‘’•Š”–	‰•*:Œ˜E-;A¦Œ	47(G.°‹˜8	 ,C2œ¾²'HD)B?9%J0Ë±‹&
+
+#ÚÍŒ5$1+è—²‹@/ õ œâ– Ä‚=:ğÚ&‰Á#D `ÀP’>’PàQ±Ò€:Y²4p¤© (Sª\É2@  ;_,http://stat.livejournal.com/img/btn_prev.gifÓ*+%OªGIF89a  Õ  ÌÌÌÿÿÿ„„„   FFF»»»DDD}}}ººº···fff    ¬  ™  BBBf  |||µµµ  ÿææÿÌÌN      IIIï··3  Ç!!ÚPPì·ÈEEO  ©©©‡  Ìff©  ™™™¸ŞmmÀIIµ--Š  µáïwwïuu¡ÑCC®®  ßww¯--  R  L  Ì33                  !ù     ,       ÇÀ€pH, `0P:ŸP%RÉŒZH¦¶y…f·Ü.6¹'"Š€8("	)¹Ê6(¯Œ(s§ÖSO	v1B-) N$, ”0#J
+.('2*5«
+  
+93«·«¯d‘·%¸¬Ÿ½JƒÁ	° 7Ê·ÍÆNÔ+ÌÛrWÔ8!æÜèé6ïOÒOk÷ŞQ$˜E€Áƒ*4 ;_*http://stat.livejournal.com/img/memadd.gifÓ-.%O\GIF89a  æ  ÌÌÌ„„„ÿÿÿ³³³²²²¹¹¹# ±±±" R[E™™™¯¯¯i£™Ìf‚¹.ff3Œ¸K¼P f™ ¿J•ÄO‡‡‡ˆˆˆM[8BC@Q[Bfffµµµ­Ì~yyyU[L‘¾Nªªª 3f ~­8n $¼¼¼ÌÌ™QZC2S KT<‰‰‰¿ŞM€ xxxuª&ˆ½8U ’ÀMWl833 ¹Û„Œ‘„¸¸¸™™fQYD°°°% $ ½½½‚¶6AJ4éõØ4V ‰Œ…NOLMQGO„ 0 333•ÆJ$.JY3agV  ‡º:)E S\D                                                                                                                                       !ù     ,       ¹€‚ƒ„…† Š‹Œˆ‘‘’•Š”‹
+–—‰‹D7N–˜ B'4’¨(6,G/
+¨K9A
+&‹¿R310$%H#;ÍŸŠ	 PÒ-).ÛŒŞ@2#IJ+Œ¿:Q=<!|qK¥‚A"2(H'Ñ&Cñp *˜QğãÔ@ Äê„ªÓ£&›XÉ²¥Ë— ;_,http://stat.livejournal.com/img/btn_next.gifÓ01%O'GIF89a  ÷  ÿ„ ÿŒÿŒÿ”ÿœ!ÿœ)ÿ¥1ÿ­Bÿ­JÿµRÿµZÿ½cÿÆkÿÆ{ÿÎ„ÿÖŒÿÖ”ÿŞœÿç¥ÿç­ÿï½ÿ÷Æÿ÷ÎÿÿŞÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ!ù   ,        / ;_'http://stat.livejournal.com/img/dot.gifÓ34!OÖÿØÿà JFIF      ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  d F" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ö}'JÓ›G±fÓíI6ñ’L+ÏÊ=ªçöF›ÿ @ëOûğ¿áF‘ÿ  [ú÷ÿ Ar€)ÿ di¿ô´ÿ ¿ş•¨Ï¡Ø1ˆiö’ÍÓjÀ§Ğñ×üñ]8ñø×+Šo5K»™	çsô¯c¥ÙKh’M§Zoq»BğAÓÒ¬di¿ô´ÿ ¿şº½…¤*Q"…ØAítÏ¶sY³x¶İIE¿ÜÇ±ĞĞ¿öF›ÿ @ëOûğ¿áGöF›ÿ @ëOûğ¿áXö!º¿¾Ş;emßxƒ€£¹=k¤ KÆ]‚iì-”ùã‘áoA\Wö}¯üúAÿ |ÿ õ«Ğ<fq£ÃÓş>Sájá·û¯ıõ^®4]?EşFr½ô=?Hÿ -‡ı{Çÿ  Š/®'
+À¡p»w,kÜãøÎ#ş@¶õïş‚+Å­)]2ù›!§ ?Ïò¯(Ğ»Ÿksww*÷LFSÏ;‰'Ÿtuì1\Õì8Ôd"—‘£VFòÔÕAè½€Wek“kJÕÆqè85Æøoèâ’	|Ëå¨˜3)Üy'iÆ{Ï­ G½¥iÚî#+ÆÁVgAxêGÏâjYéí$ëŸ)`¤1¨TwdçõëÏ&Ÿ&£u¤ß-Ú+‚¹‰Œ+w ãÜã=8©"¼¶KiÚÙã”Må:—ÜÅÎääœœõÏ­ iéš<zlÓJ­¹¤ÀêÖ´ê#—ìÊ$ù%#@©€ÇROÖ€9ïçûgş>O÷Z¸o›ı¯Ò»ŸŒèğôÿ ÔgøZ¸mËÿ |×­ƒŒİ-/÷™Ê×="Îy-¼=c,p<Û`‹r'ŞÛ´dßqX’i—ÒjMwÊ3ù©$‰Çû*Êpq€¯àŠ¼úºi^Ó@§šİjzp€’}¿ÄTš}”·<·sHşnNÖ<N0:tÇJòM–÷û>Ò8RÙ]m‘RMìwGÀ ãœƒë‘ŸZ¡öcv'K‘pIùÓLaˆè¹<gÓƒD¬®d(	»²ËàËX,˜ï2¨úÕ©ôğ·¶wÚ{£Í"”ğ#‘õ EWLÓZHA$²©æIÁ'=ÎzÖw…;˜n.÷÷,`/ ŸNüªç‹$xfíØàáTt%€õ¬è“V·Ñ­­4Û`b2—P2yÇĞ{
+ êƒ©m Ã¨ïN¯2½ñè×Ä³yÈømî {ïµÓøÅún±û¸®w9l(“‡?Q€?,ÿ Z “Æg<8ÿ ŸÛ?ÂÕÃn>¿øé®çÆò‡ş¾|W‘ê?ï³^®v§¿çúËsrêå¼ûœíQg Ï^7g˜ÍuÚ=Í¼–(#;qÉRzf¹ÙK‹¤ë0ÀÓ,6±Ç:¨É´|wÁÈ#¸b+>-Dy;ÖmÑ¨PÒ.vôÇ®sĞã­yF‡_¯ßÚÙI¡Ğ´°#\ä#?6=:ş&®iP‹OØEtDn¦Cqµ±œ~ùW³Åö¸ç(n,—!êÆ®qŒäqê+GSñSH¢Kh@`å‰Ââ9#ó@º¥¥İÜAeš1lÌ	s·v9§9çúU™ï"¶-àÚÎ±p uõ5ÎÃ*İˆdÔVY"‘Ê»ƒÛ?N”ßAp<qr“3ˆmíØªgåpûõ4´|§Ü!{½ò\:îOCqÅy~µ£¿‡<NV)T!³ÈÉõæ½?Pñ¦Ÿ§‚SHüí
+=óı+Î§ºŸÄšô—N€yŒ N¸‡>Â€;}bæKÏÙK!Ã€Èï…jåöŸïÒº­vÏì>³€&Ö)` vµr7û_¥{&•-ŸÈÎ[›¥¢É¡Y#¨ekdÁEr øv.&kÍéìîIÉPåA¢»#ş@¶õïş‚+?QÔ–I§´,ˆ…B:N§t™åY{mOô=+Ç4<æïÃş/·bIn[n[%‰ù8TZ†<P.Ì³	fŒq"K!9údğFÿ ª½c©’D’ÁçÈŒp¶Xa²=0½N=ù©ù‚­¡i¥–/ŞKövR^N­¸	ç·øPzZ\[@ÖwhÂ"CE+…l	rIüû×Gg$W1É"Ç±Ëm—ŒÃ½ë 3Şì‰çœµÔÊ¯ƒaE@`vÎ?íuéO‰Ç¨ÚM<öÑ«+ÚB—fo½‚È ÷ô ¯|gy;Iæº†m#w^¿çÚ­é^Óô‡ó!BÒ}»uÿ Zêw(8##¡íK@ïŒÿ äı|Ùş®Ğß»¿èñ×qßı–®h÷üÍzØ:NT®’üLäõ=7Hÿ -‡ı{Çÿ  ŠË»IåOse7I¢Şâ7É¸
+3(Á<dzúÖ¦‘ÿ  [ú÷ÿ AÙ¬§¸Ép7«1ˆ *ÆFy#ßÔ×’hcÛ‹|V5ImnaGi%åÈm<ôÆÔŸ|T’˜\¬2kWhgv(ªí™ˆÚXä7pê*ô1\i–’%º‰]ŸÊi.‘†v®ß1±Ãp@ã)ék#|ùbºò¦.Ì¨çÈÁeİƒ}Nv÷€.•m‰!›hXR/"Ü$F00RI€=}°)—7±Y¤w1¢iÈ‚9ìÛÌa–ş
+sÏ×ÕØL±["¦.ñ'IÜÊrO@FzÃ§J…ÿ µä²I--ìRcrFÓ3FbÏ,æ#ÆIäõ ö©(Šİ$»-4IûÁóƒĞ°#=ºñßéW)ªŠ¼íŞ u§P;ã3Ÿñğ:œW¿İïªî|gŸìxqŸøø?İjá¾oö¿Jõ°rš¥¥şã9Zæ®ŸãMF-6Ö5†×	
+(Ê7`?Ú«ğ›ê_óÂÓşøoş*¹KOøòƒş¹¯ò©«É4:_øMµ"Aû=¦GO‘¿øª‚o\Îûä²²gãŒ¨°h |g~¥ŠÛYß{Üÿ ãÔøÆúŞ%ŠK£_º‰(€jçh —ş}KşxZßÿ ÅQÿ 	¾¥ÿ <-?ï†ÿ â«š¢€.x—Å×÷zlqÉ°`Ü#zS\·öí×üóƒşøÿ ëÕ½oş<“şºäk©NKDÀÿÙ_2http://www.livejournal.com/userpic/7667198/1137433Ó#$%Ó01%Ó89!O
+gÿØÿà JFIF  H H  ÿá Exif  MM *         ÿÛ C 	!"$"$ÿÀ  d d" ÿÄ             	ÿÄ ?      !1A"Qaq#2‘±$¡Á%Rbğ356BScrtÑáÿÚ   ? Ìvüzğ6Î®Õµ:¤e¼Ò­±¸òUjƒ¾ûTÛ|^-kå,‘Èé]àñŠ°ñ™ÅÛøI;¸´~o`jÛÂô=e,jM3¾¶T…x¬!DmïZÏÂşjK›]§×Î£á²¡õŞ©:×€š´µşØx(†İm²ß¡ÿ åUõÃ>!üÆ_N[[©æVlmEJüŠŞO´vëAÜ¦‹ÅâÁbó
+ÓO¤”­+h¥I#¬ƒÒ 1§°N/lU¿_îíSÆ—ÓÉi?Ùv²£İ:3§9’"Ê×ÉCî)c±¶:œ[ãí[·d[ ” @æ•Iı©«%”á-‡9ÃéJEÉC@ƒ¿qïSp÷­6·ë~'—ò“ŞjÛ¤ó–·
+s“äM»³æå=¢¦ä4se.İa³6×+op`&jg¸£©4uéş!òÂ›WQÓmÇµi-Æ¼µû›$Ùfåñ(­>UÄƒ=·¢Ö’]¹Ç¦&[ò©D‚Ih)ñOÓ×M6ó,6ÆX…).$@z
+|ª÷ô‘YÂÔ4—V—RPâO)J¶ƒO\<´®@îÆµQqÎs©íB*/ŸUÿ A o=Í+¤œ	P\}*œ!â{ªCJ‚{t¥!Å ÊTDÕ§Bj%â3M]s)! …Aêj'eğ8-eŒ{1ŠJÚ¿R¼Ì1Y;÷ª†ŸÃgpºšÒ-ŸKÈ¸O$ îB»VãÒMæYÒ¨º»iK¸q ã„i"v÷Ş²‡ÄV¬ºÉê§ì–‡˜‹RV˜Wn£·I¡ãWæé ¥,—P P=T;~”¦qn¤åë¨íëv¬”‚J”7 ïB­~ê×
+’?=¹¤²÷.%–Ó™;ÿ :iÜŞIšÑ%°UÖ½Né~´¤-h_2L >´Dá"µ~_P±†ÒŒ¸õÒù–’ €­E[Ö·_ô¶ÒÒç.½Ë )á%ToÊ6ï;š¾†NÔãÿ ±šæÎç+ŒH¶ÔM·øN)Èmó´%sò€}÷Ú±Mî>ï¨npÙF7,8¦AƒúW#ÿ §ƒß·éRyV¤©Åho<Öÿ í®Óá	Y4›tƒ`Ñ@éM))Q*µI‘;u¯H3Dşğ‹'Ä|’®YµÂ²¢‡î‡9P ò¤Aßq¹Ú·7¸¦t&'ì:~Ä1ÌŒê‰Sª ’£ò˜=ªêÊÂP£ÿ )OùvjmáçTt5‹ş6±VØş bòL¶õı±ñÕıâ‚ ?¡if3„ŸéÒ§[“É¾ş•F×b3b?ä§÷4Í¸şÏdÒeGëRˆåGtíHD-rIÍno…ìî›Åğï‰&~ÒØZœm(Q2¥Oa½îufÁ€»›Â„å¥ê§a³ØœÃexëÖŸ¯/j•»jÆÕw I½pßÔÎE^"ÍM[ )oNÃ×Ë5ş/µU¶¢Ôø–™	ş•ş#dyˆ#¬ÔZNÉSÕ2ÍNx|¦	Á;Õ+\,/4ŸõIıÍ.Ø`Óç^[9ùSê Ì}k¥¦0—™üÃ8¼{*q÷&‘Ò“Fk[Í]Ã„[Ù»ö ÁTGiP?âíE¬u>eVø7´†«;”ó×*è$ ³±Q1ëÖ¯œ9ÑWºOQ4êSÌ]2•)&‚¸2‰zÑG1h«œzÚ‚Qî(!ĞºŸ=¬Û¹mFŞ5NşE¹ÈÛ#¼B¡^Â=(%ñu†´Áëœf:ÑjW…@QTs(Ê„˜ïB›U!Cp+ Ó<£˜ciŠ¡ë”òçˆü$ÿ ZöÕskc²#÷¤´ac`~”ã¼Å $•A›Š)|;ßãñz¹7iHYJ°6Ò¶İ†/MêLZycitÚ„ş#a_½NÂè/‹u7¸«vÔƒ)W†|‡jêßÜ´ÍÃ)% ‡µu[p*İ*è6¥)hCjRJFÕƒ~+²ÈÉñ“"`QdÛvã¾ü ŸæHúPºÕaP£ …u­Ÿ;òí‰š¢ëåg¹RÊs^[œkG¬£°÷¤7<ÀçÒjBÉæ$Lï¿jŸ†»rÊı·ÛYIÁŠÙœÖbóÓo\¥KLÕ'Öy4\4 ƒé¾Ô%â'1gS=c¨şÑnµ*Ì„ª&J¤öúQGGê,Vou½fá·Iò+pbL÷çPõÎ¥µÀ`oò+E³*ryº6çÖ¿>5®IyİGÌ>é.]Ü-ÕOi2ĞW>Í¥­ ˆéó®ş*ÁÇ—çI=ê‘ÄÛBÆ¥@ÛÀIşf£Ú÷uºc~NµáğÛ>ÿ 9¯‚Cr"FÆiëUÃo4Fàö­œëM\¼ëLªD…t£õ‡1Ús(›[Ë{ëÆÎèqU¦şÆ¸¼QâŸõ£#!§ò··V¿ø%w…LU·€:ËwkuŒÓ:iû+fye×–?1nò`zÔ_‰{–ÓmµÄÜ9q%w+e%J0S ØVN¾³~ÚëÃ}·ZU+I=t0‰oÄ%pgµ[±î²˜˜ zô/âÿ ûØŸüd~ê®mºãÉt u§m›/£‘#çè7§ØjJL^hÚb–ÚV\Iéµ_t3ö9µ£t›eÁqgm£j6i¾b²Kfòÿ Q!æ`D7$±Í4hÒz_¥m™ÆâÌOrgæJ#Ø«ğÚ»&>tøÂÆè»=,İõíˆÛ§J-\eA*;nT't‡N¿ZÉv®r.ycßÒº©ºåJT•”ôª'.”æ}µü::üÕQ-Â¾ï`¤n¼´«2¢á…ÌwŠèºÉq3iƒÚ’ÒŠö ¯^I-“‹[{…¾È!`ìEi>ÙfÙÇ¶‹¬“Ğ¥'•´ G¥hı+ŒM£ZÇ3„s)Dô5n·„3$€$’Ï½`ß‰MX­MÅ,˜KÅV–.›[tí #bGÌ‚hh"w˜©¬ºbS zU7[»âæ¨ˆe#§¹©6 }Õj{òÿ S^²eiÿ »úÕÙ†şÎTA1ïïL¾Úè oí£(p€©‰è*É…±·eä”$ÌÆç¥iN
+Ù²ï*Ö	);oíFìj$úW?ŠW¯â¸q¿³PKícİZIÜO/¥~r\-O]¼ó§™Å8TT{“Ö›“ÍâåO±æPIè7Y×Í¥¼ËA=íÒOÎU_ÿÙ_2http://www.livejournal.com/userpic/30847390/428921Ó#$%Ó01%Ó=>!ORGIF89aa d ÷  µµqôú ëõçÇÍ•zÆvoÅ 7®ÑÑn¯ß çêÖéğ™ŒÎY¿å `¿Àä¼Ëı#ÿÿ£ÿÿÇÌ ëò6oÅ4ËVÿÖÕÿww9Ñ9Øe¿äŒ`¿ÌéÊÿ»ºŞâÙôõòışùZ»÷ùE–Ó’ÕÙÊşşR£´äåÉ«^¾%TÕIŠ¼oşsÄkÿÿìñôî…ÆƒÙİÕWêTÃÇ¥a¾5ÿ)(Zº5ÅÌ·vºjÏë ÿOO×Ù¹ğ÷¡ş™™ÿ¯şşş®Şx ×œÉhU¹J×†úúødúbŸ×r‡ºM¥§‚ ÿÿãêõØ{ÆN½Â—M¶µ»®«İ¦Ïé™a½C‘·‡oÄDÎÓÈO¸ìîß½ÂˆÍè¶èé·ÖÖZö÷õîùµÍÓ´P·#°Ï0şşÙşş¼½Åµìîë€Ì}½Â«F´Bßò˜Â‰üüûÿÿúÕØ£O2M¸4²´—ÎêˆµŞ±ëïÈÅå¨ÿÿ°nÄTñòæÿÿÒøùög’WÛâ¨–Ÿmÿÿòßè”ŞñÛÿÿõ¿ä}ŸØ ¬ÜkÑhÌĞ¦°±„ÇÌÁ¤Èša÷_ÖéÎ©µV_ñ[5¬&ª!úÍ(¾ÔçêåÊ.²Ö©˜Ğbxgp³SPÊ@¼àªÚ)À(ÖŞŒ›Ãäæ¢—Àtµ[=¦§™ëëVŞá¾eÀbÏ‰­:*s¼Iòôİ2¬/ãæáS‰P…µ e–1¯È‹àê4Ï©…ğôÓ_¼T“ĞzµÙv÷ùñ|¿ZT¢Fïô¾b«EK•
+°Ş‹Ì–T­Æ¨­»~KäKnÄøùë?¨/¨¾™=±2ààcÒŞĞÛ;i®Pü¾»ÓlŞğ¹–É{­Z—™ƒãò«Ò ïö®?°¾…SûûúX°6XßNßò Ïß€ïñC:$K¯0e¨¼Àz÷ùÚ³å+]¢Q›[áòÇ¨ÏjöùÊÿïïö÷ãàñ‹¡ÀüüôR¥oÅß2+ııüı`_K­C¿ÁÃ`¤LLëÌA¿ñÔì$ßÀ®ıä<ş@@†£>ß«™øù®ö÷ºfÿfÿÿÿ!ù     ,    a d  ÿ ÿ	H° Áƒ*\È°¡Ã‡#JœH±âÁîÖht÷Ã¢Ç1~ ñáE­Zk:‚\ÉòâšpÀ9‘àJ•-szüñ²È8¡J”€³ã–ZE2V«ÆQ§S†×8 5Êƒ‡,BK#jôEr"}È³ÆİÓ³1
+ˆb&Š ˆH@9 4I’g_Nx ğÂ™^tIú'Z«)ñ×N•^Pp¹ê€]q®Íhä‡¿_Ã]ÂğáÌÈ!ÄÌA9®hU‰Ê™p‰› M„!d;°@ Ì¬La8–§ôi‰?ªı‰•Í(`m dÏŠJ‹ Èÿ“çŠwo.zp´:af‚Àìa–yš>_˜Øïˆ! À€4!D ÒL|„Ò[o"ˆÊ3†l#<™@#IäM ¨d"DVÖ~U³k-¤ 69¼q0P ­!IÈ”„òèV‰.Ì0c 1!0@IØ@ÈVÆ`ú¡è#bFxHÃØ4 ì˜B	Ø ÇNÀaƒ˜£+ë0“oĞ¢ %)DÃá³ÑÂ$bUcZ?1ÂSÂ 0UQE`Â€ág6 ãD!…ÀÁ£8òL`j|xB5Fsä´ÿ€M—‚¤ğÍj$¼PÄ¡O¹ã@ÿ€ñ„€1&0àHÙm°€ü4Á£<\pQ©øØ†>«¬cŠ2U°#àäğD”<‘ß`E*]˜õÜK°áÂ8WwéOä€PBÉOâË"F˜ğ1¬¬¢Ë*`Ã |~ˆ€2úÑO9rprH‰kìçÎAÈÄ6LA‰-!8Ú@´P L€Æ°Š=DX‚;— Ë£Œ5Àä È¥ØP´ W8b-œññ¼:õCÀ€³LQn4)Ü'/Â
+¸âJoY•€3&t‹„
+4€Í‹P@Kº°ÿ€dXIU;UÍX!Œ£Ò„¸Ú-GÀ˜€ÎöhÓö|lÓ.CÌ4 3´¦  !ÓäâÄV”XŠÿüPDq…<4QÀ€4D
+5s‹	9ˆ€³æZ%¡Ï6&°r 94t€@ÀC”V°€/Ÿ’àÁ”…÷ZÄX|1‹Ñ PA  #H­ÄaM7&à¼¶Å$±+ª0A7¬AÄ!;*0`£¶pÂDqÂ=#9Ô@&3Ãï
+P…@d O‚XÇ*Â <mô |Xş	f„@HÁ ˆ—ƒ¢ HÇÿHp””\¤0å[ˆ;¢ğ‡t)‡RÇ&…X€¨@*Àù…Í¬À†©ìÃg„A("@OŒÁ 0Äi¨‚`ƒ&H°D 8ˆ;ó‡<*$A–äP†ü1-yÎ8¢Ğˆl%¬:`‚ àLâH‚6\‘•4ş¦†FÛÀÒ ¿¬`;œi~Ğ@‘xÁ!!²R8àÈR¡²†Œ@¹03¶ Ô¡}‚$ê!!=T"®àY	,s€¸ÁÖ¨B4Ç,¶b1eA~ğ°äá A*>2ˆ¸#5W¸‚‚Ğ¨rœ]P)2Áÿ
+7PB<àÇ"0„ã‚á1´aº   tÑ$ºa
+t¯ ¨€)œğ…ta•y  9À‰”aW´<6ª ‹!Xã	¸òHj”ã>Ä±‰Nà¢ßC9¶ =£ö(O	ñPCĞ…Û€0Lğ HGpfÉ†¶Ü0ÕXCÜµNy5ä/0ƒ‹v¡QH  “¨	YpÂJ“ÙÂnxF¶0‡sãspB(Š€LÀ¡`* ¼aˆ ” 	ÍP¡ÑØÁµBç é0?TÌÂN¬=M:;‡øjÚƒ¬h€)Œ(‚¢íÊ@ -ÿ4 <*
+ÎqÀøx„p“AO|‚YğFV’p€dÃ3ó5Ú0‡`”Æ¤Ã‘ƒ€¡Z¸Ãà®H|Ô!Õ  A)ÌØÀÑì0
+Àˆ7)Õø "è@)´ E°pjøàÀÉH0/JQŠxÄ£ÉÀG	ë6øtà†'°XX·A¸Ä`‡ Fé)È ²³*b-@a<¡
+ÀÆ£Ğ Õ¬³ØË)æ°Q xí`Á<!áå.Ö  Ç#Ì d¡¢€…´°‚OàÃ_äG‡D@²b@H1¨Áÿ\ÈZ€€»ã	@ !x."   Ãş¢ˆ2D‚Š8,Npy”¢ûğí`yd.$Áp(éÑ`j´á~%Â0fğ…*Œ‚ ¨Eì°Òà!“Òq|Ğğ±˜!?à€#PA<¶¨€4øQ‡1ŒaFÛÀ,fƒIÜ êFXĞ €b;¼±Ø0Ömcê'âÑ˜ƒ¼P@D,Jô¡Zø¡"°Ô¯3@4p@D”&ÄVÔNÑ€N’°Ã¤0†4@7 ¢@€QÔâ,xÇ 
+(|TÈBL„R™¬pÛÊ¯ÿH²(®š?l BÃ\°V BÀF
+x@	chD^¨–ÛµÀåŠï4hQ½ÁHÀ8B
+D@}¨0ŞÜaaX„¶±[,(+†Ğô4™š…ì@ù`8à6ô!çDÌ bä`c€†ãàŞ6`ç—½CiõÈ ,ğ“|Áp‚2ÆPï#Œ. ×SãGä¢–¸„
+Ğ Œ0  ¡ÌŠ!šÁŠf¬§yÀ¸şÁ|WŒo †  Œ¡
+¨B?V‹Ha3/I! ˆ!ç ƒdm‡4S
+^Ğ@ÿ6 1ˆÁÓî®1ÀF\£a°ƒ)P< ¨„!´qg8C¥'  ?P5`? .sW@	Ğ’ğr4€a˜pØĞüP7àpká+ÄP}K°‚@Ùà€Ìh4`|fFĞğyK`,p€Œ`F2 Í`@ˆ¬ n 	àpo z2à`, ¼×°ğkÙsLi ğØĞk‚RĞ˜À	$P‹Gî09ĞK `,)`B} °„|x~ù€‰à„˜î§–ö‡Hğ¦ÿ z á„*À‰`2€Ğ,Ğk €B€EÅff vplW >du^iQ± …Ë°W0@0|6E3+D€K°œØhğ„Hˆ;è~×0È`
+npÜğHğ HÍÀ—pKhş‰/ğ5À{€P‚@®¦³ ucàòğ°ç0Z/ĞNñ ¬VvP  ü BĞ%Wu Gğ‚PÂØ5 ˜ŒÉ¸ƒ*PzÄĞ²p	oğÈp·z „9HˆĞ4Ø¼çDÀ WàËĞ )Ğyc°Gpx{ÿu V€{†±f  ã … ¥ãyc `À!H™”^ Œœh-€Œé¿€± (¹à— z]ùƒÈ@· 
+¨P‰—Hˆ(pqãÈåè@B0+UØ åG@'py`ScVäD °4€Â`
+pEñƒ"Gàjx ç'ÿ€
+Ui•¨ğburà¿p y—`	ÈğÎ 
+• ìw–š 4huçt03•çCR˜0 ¶`FQQPRh˜]ÀZÒĞ¾Ğ5ò!GP vàj3ç€À*‰—‰/Pk-À~íÿÇ2p*p	¨ Î 
+Ï ×`‰ViÿP@K —°PU°RĞŠà+0	«õtR*1[1@œNà3`€0Gyø<puîÆ¯ùÚI‘@ Qîà:¸ƒ†xˆé8@— 9øòyù ö2›öVl@p¶° :
+œ dp¤…b	‰c_ 
+¢€æ¶ĞÌ2+¹€ Óö€U‰@ Şè:xš  2  
+áğ‰ £EÀ‰6
+o ÓP<	-`Üğ ­Ğm°$`‡`&ÕøÿX;ßù‘ ‘€wp
+˜€	m°	Nà	/Ep°}À4ú 	_
+,a( ¿Ğª¦(€‰¢š( lÊ­ù¯)€p—„° ¶À	gp…ğv' X€©
+‘0%F4NkP]€ê çPsp¢ğqé`C ßàlõùšŒ¿0
+ÿğ¨à¥W9hAÀ`ª':§JÀ¦0š( ™ÿĞ‰h@+Ğ
+NP¤_@4q
+~¥yàDsU8HT  €Áp§ 'm3à	-`®
+ƒH‘Jà Ä@•€a¢Êh¦882€
+MÑ‰ÿ (œğ 3p$“zµ ½w]UòlÀ– à°w€'@_@00
+íp®áY•2 ¦„ø¨ğ1•U‰2 ƒ‰ 	APÿº£ P@¤7 >±äGî@S-±Y¶$
+Z"µ ²ÿ0‘V‹š‰`f@•Éˆ¿ ƒ3­ø§m;`Od¶OA
+ïÑ £ äú:ğ1
+^z™€0
+á ­Ñù¥^j(à 8°q!0“@©µ`(q´ˆ¡¤ J@ Â¢Z£á¡Œp™É(¿€Ìëª„›µ^ª	¤@Qi£¿6+Ü@
+5Q•} ¼ÿ)q]k°f00U zÿ°¥1¦%‹¼—©	Ïk•¯Ê®¿ÿ €D`,òu—;	ìæn °a‚ùXS!/€¤ğrĞ¨p€äRù©}Ğ« ô»—ùJĞñÄÛ¿4R@9İÕ Ó +oPçğJñD X«ÁDà¨hc€ º¸"äç5 ’bêŸ;ÂşÀ¯ +ŸñàQğ2À„`‚€B€	LÔ„”ùH^r€ğh€
+‚ &8 w)‚0ìõ©€pãXà»P¦Èûªõ¦ÿQ½lğàè{7)–G#ñÄ0K ;9>ÑÊJ¤p°°234‚Ç0 12 Jƒ`(`¡«­J‘™x¼_{:@¼À€Z€	¾È 2i€Ü“0ßô$8qv5rĞ@B W ¾Ó °ìÑÀb|XW®+<–IˆŒ€'ŒôŒJ`ªUÉC`´Ì{À ’ñ„aaü"`“= Í³ -8æ…¤‘0
+`#€ Ñ O°uĞ\èPüÅX£ ÂÉ¨	£ÀµĞøü¥A`h£Aÿv  	M<` @Äì0Ó`4h dp†³ä^a ®òg€q° 0)  ƒà‹qæ@AÅ&¹ª±Š¼üÊµû°¼gPÀ ĞÖ‘’UÀ4` E¼	4°ÇwÄNˆ¤Ä€ (ğŒQ”ã(‚@# 		· Êÿ …R8:¿R\¸V<4x®i½Ömı>PªX@WğäĞ	¹AÑgkp¤ À  Ğ ÊJP Ñ€cUPŠíƒÀ@ 
+$]ƒa`]Ù3[æ`€ÑU° mmğÙª¸ ü™6€Ú¸0¾0DwÿĞ¨#úgPO`  YX•Sy-À¹éG¨p¿ôË¯@Ë}€ÍM
+ÔÖ’0İŞ³Öu€Ç@[°8p_à
+XàVĞÓÚGè` À° ì ŸuPP ŒİaÆ'ÙïŠÜNH`€|à çd£ÿLiì€Ó ŠĞE`){	œpÔªG/Ù@›ÓğÔàáWğCY=SP °A€ Ó–»÷0`KÖM¸ßÁ‰H
+jÀ ìP < “„À ‚g0bQó—¸V6/4Ğu0¸ÿÀP"å@B°Ã fÀ/NÜá CpÏ†»¼šàf`Öÿ`qw]Í0 Ã ¤À. Ñ4€ Sğ!YQ.&–0Ö\8Õp
+³pp›MÀáOPLè )’0ç@:œà ½·æp,ĞÄ]ébfóêâWµ<©^¤d -à@íEÇgÑQ¾ y@Y0De ŞÁAZ@xÒÑĞ-C€á"y	$­Õ à î¾æ€qQØãÎß ÈÙîÄÑ1‰ˆŠœÂpv€ O^9àÓğ@~ Ú	@tE—HP ì  Àÿ°ÙPÙØP:`+à	„J90y³ÀúØ= ,ô,ğ‡5 ô5ğ_>Gä…“Ğ¬à´­°±pÑRWç"ß ~@	BÔoI¤Ô“Ğ‚€hÃÖĞm7 m°[€[0¨Ó]ÒIêØ£Ş=p„ß_;4^.@
+€”º´ûÜÀ 0JË÷!4  Tk
+lWƒCP+Ær7O`	ŞĞv…°Ws ßğã „à"wóDĞğb:½Á}R B@è;'ğêPè“ ;ĞNĞ
+B°ZbBà	°sOÑKA +Ğÿ<Í`et/
+ÉÚ°} ³Ğ>’“c7‡¹àû# ˜½ß(JĞ ~”³zIµî$µã§Q‚RHkâäFŒkşM¤X±â.Š„Ì"¤€’§,…DÍ9Ll@äy‚( áQ6`Z–ôa#€À° ÿ‘b Lƒ
+4’ FÂ€9ç@L¡.Ø¹pBGÊŠ3VRuù!ÔìÄ5eH+‡IÈŠ$°˜LIÑ]A¤¥©Ğ€ ÒĞÈq¥ÜQ¨@iQ‹ÍãlR0 $E…*W”HP‚ÀÖ–Sê(ş¨šçRt¾F&F™jgÏºë"ÇŒÿ5ÃÂ&¨å®lEuC°!h ¸Î‘Ñrà&¡YÉPgæ‹>€¢ Ø0¦Nƒ”Pb`’6°Ôı]$’5fp9”êƒ;Ùf)3é}+<x¡ö&úá¢¡Á/	hĞ 8$$#rh ›$à†› rP%Ì@ˆ1Æ¨"®0 Š&(˜f€‚™Ê¢5>HÅŠè{­ˆó³«‹H<ˆ!†HÊÈ?‹@›iÒàal
+6€ ÂhRxÃ—Z™bƒ°d
+Ğ@A …
+(ˆ’l¬%4¡~¨æƒ cğ ’.ôÑ¢Öè¢Œ2^è‚À:_ÿ!‡˜h¤ ( l*¨#… ªHÃ–¶˜ƒ!*Ø CÀğkƒ+bb”†$ ¦9d¬s<>xá…ı³Î@×X£GA‚8B¢Œi€ˆ¦ ÒˆF‚4Hg†8e!¼¦l )€FBÇ l™s=ıÜYÃßv•÷"wªé ØÉ ‚H'mÀ lª€`Š Rà§‡<¸Cs&¢Á2`à	 @GÉaXƒ)"ŞyK–í‡ZF	bÀ„8Áøj Aáb 4ğ„+"É„"ÌÈp
+eÈ¸	Ù€Ò'2ˆr!F¸£‹_M¶ÿÚ"wäpà‰+ˆÙˆ*
+h4
+S€@ƒˆ°Ã!ˆ\ƒlh‚(+¨"šš+(à5™fbh„ ²Ï«ÿg3j¡A‚§i¢Š—$2¨Ãf…/ ë˜h ZŞv,-Q¤'Ïš]y-6ÃMşƒ Øpa™X$ òi(I¡€x#‚rx"KvÀ‚]6Ô±›€a Ã2–â‰7€$ (¡BpiA¬<€­=¿580#
+&Æ™L‚<n`šüàŸrÄc[8A$çMdÔ¡±c
+)ÀF#€Ñ 0`Ã’˜B€A‰'ÀGhÁ<pÿŸõÍË6êĞĞ€h€†a ;hÀ³ø&8á„jÉŠ*ÁÀÄ ‘bã_hÀ&:±	nIÎ ¦HÇñA?…ĞG?ÈCb`2à@»F?$ Ô¯v`@æĞ(Ü€cE¢wŠLo!¨B6BÀ€&t¢	b“À4,á,Ìà!|Š¢Ù7¨TÀ
+3à„ˆ0„,€G8Â
+€ b cüÀŒ(‚(¤@<Üğƒ(€(@)h€0V ÈbÀB®ÔgÈ:ÕëXHÅ	¬pˆ^à Èê.æ@ƒ L€D$R Ağ0Lalÿ4¶X¼Ëœ /8Ò-qÙ.{İ!H$8ÄÔ "Ìa59 Æ21DBWÿØ0‘	;°Ãc9(À<á„3r¢HÀ8ÕQµsZ-Pµ*Cbğ… ‚ ¤À„®Ğ4ö,}£Éƒä †rHƒA.²à„X´¼C-FfÎˆîêî(BÔéE’A-ØÅ.V@†|îÓN‘  ˆĞOã¥øBP¨<¬Á“9a Šğ2¤âŠ7àDzqgÒè#øÉÈ0ƒ/„35%N¹Z¸Úëë´‚LùÔ#*F"‡è«U±pZìó®wèÂšŠH|à/™XÃS* k¨"€À®‹ÅåN{Ú…rê§yèháµYÎæt§?0'kO›ZØÆöœ ;_2http://www.livejournal.com/userpic/32005060/575765Ó#$%Ó01%ÓBC!O~ÿØÿà JFIF  H H  ÿáÌExif  II*          ’       ²       Ê              Ø       à   (       1    è   2    ğ          i‡      f  OLYMPUS DIGITAL CAMERA          OLYMPUS OPTICAL CO.,LTD C3100Z,C3020Z H      H      v374-73 0000:00:00 00:00:00  š‚    *  ‚    2  "ˆ       'ˆ    d        0210    :      N  ‘     ‘    b  ’
+    j  ’    r  ’       ’        	’        
+’    z  |’ I  ‚  †’ }   Ë        0100                         £       £            H      
+   ,     
+   0000:00:00 00:00:00 0000:00:00 00:00:00           
+      
+   B   
+   OLYMP         L                             X      `      h      t   4   y  	     ­                                             ş   Í              d   d   €"  è  ¨şÄıÆıÉş şFşSX374[pictureInfo] Resolution=1 [Camera Info] Type=SX374 OLYMPUS DIGITAL CAMERA          	 €6    ÿ     T]!    \   $÷  \T  (]  (] t           u    ("    @       9  Ae2,c 		   á    ÿğv        H‘2,c 		   á    ÿğv        H‘"  @‰ ªª    L– u XŞ] d à4C!              A  !                                                                                                                                                       R98      0100                ´      ¼  (           Ä             H      H      ÿØÿà JFIF      ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  d d" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ¡ñ*DÆ6ºœG1_ÚÁt‡ˆÇşËú×²øfş9¥XËşúk(§*zãOæExgŠe:Ão	jØğ‰¬¦qÛk~íOü]?†¼c›mc¨\—iã±kfP¸ş ÊzöÅUìÁE´r×Èñ–¤ñ¢B¹¹*	ıs^kå³¸E5Ñx¯\:Şµsr»¶É+0äŒ×Qğ¿ÁÄzŸr§ìá¤>¾‚“wcŒz¾“áMGSBa´’Op¹³kğûU†ê6’ÒQÏ kéû=*ÒÆÙa¶…#F¨©´cøFiXÚ<ˆùÓÄïe°[Ä‡ç} Çÿ ®¼ÇRÒ®,$+$l¼÷öuÕ¢I!Qƒ^kã/A…c±Ô
+s^HÕÛF|ÎkCG™£¼@nãŒš›[Ñ§Ò®Ş)Œ:Ö\LR@i5trë	j}à«SnÓ<—QO#Ærqú×]­Ü­¯†5	‰ÿ –,¿‰Î¼ÏáÎı9×?6üş€Weã™ÚÈ‰ŒÍ"§'ß?Ò”t5º˜×÷³Ç›7“ÂÆª•İŸÖŠæo|Am,±ìÜ!Š<6?…ŸÔ+’¥ZÜï•»A†Âà]óÚöWõ2tù.SÃI¤M7™n.MÖÍƒ‰
+…Îzğ3ùšŠî)>Í.ÓÛ 
+éôï^ß0[ky$õ p?‚â¯Ï è^\¼k#6ÔŒœûŸÂºowvxi(«Ko=ÎÃ×u}[ğãC7…m‘“lÓ/šş¼ôı+æ,õhA.À~µö,ğÅD™ÇÒ´Ff\ âŠ|©÷€¥Yƒöæ˜¬2U¬«èĞ†èEi\LI5Ëë¢«ÍÜ6àƒ†•‚ÿ :©£Î> èöÓ@Å£R{r+Ão­ZÎí£nÜ¥{î·£¾¥*µ¦¤—$‘¹Q÷~•æ¿t§\@ûpÄTëslDc(s-Ñ«ğ»QÏ5»‚¿Zô?,·Z5­º3´Œ\*Œÿ ^¼WÁ—Oiª#)ëÅ}0´ğ•İñ
+dHq“ÎÖn3úş•Q3±ÉÍh£Ç“ÂÍ&ï6úäƒsí>„¨#>ÔW¨ø[Lµ°Ğ`[€Yzsß8ÇéŠ)¬5I+¤K®“³fN·ñ’ÎÚ+C°ÈÃ’ã
+Ş¸@sŒz‘ô¯8Ö<W}â]>O·Ü—%†ÑÂ¨êN â¹	‹™ÜÈø"PÌ3ĞH2j+·0ÛÃ’6˜{ÒjÑ×{š|3k¡G˜.¥á`?\×ÙŠwÚ.Ó‚W‚;WÄ:T¥n”û×ÙÔ×Sğİ…ÖrÏ
+îÿ {ş¹¡µD—š$7¸<xø?^¿\ÕèÃ(`px‚¬äŸaPNáHQÔÓ)v2u‰Ù%„)Âç‘Yz®ƒoªYÆ%Pì¹Ã©
+Xdr!¸’6Y¢ö­-9…ÖŸëœ0éB}‰SJ	³“‡D«_
+   'Ozó?‹W«=Õº€2wå^Í¯HĞÚ0QÅ|éãëÖ¹×JòÄ›´>ãª”i_¹£Ì¶÷hİ÷kİ5M.|-¡Y´›äûånÁïüÿ 
+ùå&ò¥Rvê×º„VbINËxÊF£€NhŒ’Nçœ´G ø“Ä‚maşÁ2›XÔ$eFŠæ­t=Jò40;¡8ÍÙÂ¼"£¢òD¼56îÑÀÉ$o,ù +©Pzå•÷ĞŠ©q™I#¡æ–İFZ |Ì0Á±'ôi¡ò£9ëÓÅQŞM÷föºVìŒØXÇ"·½}'ğ_^[ÍM5ß÷¶í¹=Tÿ õóù×Ís|­ÇL×[àoÍáİbÈÉ*§¹ûÊzŠI‘gcëâáV }§œk/K×lµ½:;›Y–Häàş‡Ş¬?™¸4OèFEU‹QÔ©­[Fñ†ØósOÒ$Œ[ˆQpƒ§úİJŒˆS¾ßñ5_M„ÙI¾I¿rOJ±³ø-qş$HãÓ¥–BUI$öòˆî~×©Ï8ş7$}+Û>-xÃÊ³m.Õ¾gÿ ZÃ°ôükÀeŸÍ”çš$úT›iD‚1’+Ô>h‘ë÷Œ•Ï–N7{Wœ[Dn¯LøkrbÕ|•loëÖ””’d«¥sØ ´À‘˜|½£Bp(­8gqÃcêh®ŸfÅí|“­‘c €8¥¾®Wi>½«©ğŞ€ÓÊ×3'î¡ ¼Ç ı]Ôü1-áfòãĞ\3}NÊt›æ®J’:Šd16TÖÖ£¢\ØÈÉ,}:Å‘
+6ÅT]ÎYÁÅêtºŒ5`ö·/ÎJçå?Q^ëá‰zİ²C;¬WxÁB~÷¸¯˜º*Ì7’ÀÀ«G¥Rv*8ïª>µº¿ŒFe äœTV—ğİÆÎ“+ıÓ_0Kâ]Fh„rŞNè:+HHü«£ğÏŒ.-vÒ§¨Ï?…W::cV5.ÇCã}*]Fæöâ<Ÿœùb¼–Dh¤e<q_@i¯­g'!‹¶Aÿ >õæ~5ğÄº^¯#ˆ†Sæ!Ç×õ§%¥Ñ5éÙs#–‹+o»¿ô®“Ã·FŞê"¤†'·jç\Ä¨FĞ‡š»¦Ül¹Y1òY-¨´X¯ÛJ…®dS!ù“$z+?Ã>(µ»ĞmŞy@•FÆ8ê@ëEt©2\<†xwÂ©• ÏÏŒw>µ¼tHBmòÔ¥tA€*	¤:V6Fª¬¶Gø—Âv—6îÈê:æ¼Äš+i·rEÕAà×ÓZÆ¡q0+Ú¼SÆËã3(Á¬$Òz\®¤5<©“9«FUˆ#¥WèkTÏ9«1j{g1Ê8¨” cò§•(~½(£¹ë®ç,b‘ƒF@*GcEzôÚ5­¦˜/-’hÈèÃ¡õµ|ùàMM­õ±Ö¾”ÑÜËf‡‘ØÕB]¹K÷jÇÍş;ğÓèzœ‘D‡È-”> v®v+7[EÀ!·ƒşîŸ´¡&“öŸ4LrG¡ä…xÍ¨&ÒDl‚$j™+3;&ÎÓA‚ôiiåÉ°g¡ğÔxRİ¤Ğ wœQ]ôéAÅ6sÊ¤“ĞövéY—„…4Q\fÜâuæ!Z¼³Ä
+q=y¢Šå–ç©€à¯{Ös¨Æ}è¢®[q®GjybÑœœí Š(­MŸ1[ä#ûÂ¾£ğlÏ%‚£œ€£“ÖŠ)Gâ:ğ=~ÊŞïH'Œ:”#WÍ–ñÇ¨K®Jxüh¢NKág»ørŞ/ìR¯AEW >[³ÿÙÿÛ C 	!"$"$ÿÛ CÿÀ  d d" ÿÄ              	ÿÄ >      !1"AQq2a‘B¡ÁÑ±#b$3Rr‚¢ÂÃáâğÿÄ              ÿÄ ,        !1A"2Qa¡#34BÁÑÿÚ   ? Ó|J<Ó\Q·ê(ê
+z·D¸²@Æ@Oı¼ûÑGÃ;´yRÂ‰•i, Èİ$ùu"„n)>«Ïxo©°•»J´ÊpuO"òÊüGŞ§ü6âL;,Eòà^\¶-‚â1·:Vƒ¹ß;Ñ4+ùÎT,0|JÓâ½±Š—×c„¾¤e#ó!
+Pûæ¨’ÊÜt4Ìs¿Ö¦¼VÕJÕ®}Á¾p‡ä-H
+9 ççŠ°~8X5¦ üUÁ
+èØ[ç§1ğ@?_éUfò2õ×ée}¤¸¾´L[d‡ÿ Ì–ÉU)¶p{RÆ¸2·í’’y†”÷ßj?¬Ú~×j‚ÜHËc	J€)Ñ„ÈÉN}*ıf”5/Á0!âîò,íİ‰‡úÖ’®İj‚Ôš~u¥õ"CldÆ+©7K{O0¶”ÚJT1ŒmTO8e
+ïå6ÂB°NB|jwDÔi¯’	47­Ö’ã7VÒ—{>u’vç[i©v›‘¤6¤€O)#¨¨üU–ßJ¼A2-ûÕ?~Ä7ø+P×%×®1¦¼ám*S$œ'8?^õY:Öj púõ)GŠ´õPåª…Pßs{KÈæÊË¥D{$~ÕgñÊ[‘øRûM)öÛÜùoújµŒšn>@ó#ëœÆaØ£ÅºÌˆ–ìñyÒ°’¥#Ÿ>½áJ Wao‘%Ä¸ÔHì °Ëm!Û)&•+¿•Ê0Bszëéÿ Mú9âÖnñòÁº{ÜïæFôóÓÚĞ-éyRûhi¸eÙ$€ñl +$g`BxíÓîì?ø	µ“€7©öĞ·{¢Â-ğ$H#©Jp‘êzsY8©£¦é-ıÖàë¼·m2•s(:“ÓÃëL4±Ó<bª¢àƒ|«vàP<İ¦Şº+ğã¥S¦¸s§É’€ûÃÇ*éŸlP¥Á—©b¤¤eÕ¤¾+§p[v4f[ĞPå®ÀGú3f”6¯*°v²[Áq#b½·%.½ZWÃ)J^â¡ÖÔ•ˆûVö| Ò¥mUö¯¾¶…–Us‹(-õ„ùºûTä×Çtœ”wÄš&#…Æ¥~U¸4$_`.Ûs\uŒcqõdk]6íîJWlÔÜTTĞÓ¡C¯ˆÍQ?ZIVi±(åZ’¤¨zcÿ 4=Í\ôK*óÇï$_·”32L%ŸHõøş•uñÑnVÑn„Ë­÷èB'dÿ íB¯'»oÔM¸…c›»<íüÑ»~”-ü4¸ŞJ_jf9#<‹Y	Ï¶GÚˆ•ù’"Ï´
+€˜1³ VèQ“x„ÃÉQJÚO;…È”úf•|,±[­:6+s‚Q"GúB¹º 0~ÀR«/ç•z0mÍU8Lko‰kT(¿‡ÑÖP¡‡‡¦a	I@ÉÃH9Æ:G¥QºÇˆqexŞî
+t©ÁÙ€‰8HÀğÕi4ºf:©ò‘!+Xæè—“’1ôéM®Î*<ÑĞ¢;4qä£×ø¨a•áîCåÚÀöÜèéEù‡SâÒœú(ê;Gµ¶¤6¢’¤Ôm\›ÒÒwşjê
+¯¨¾è;=È(-nÄl¬öù@WêB ×ïf{¾–‰qv4‡{DºÇ(*I$«9Îzødæ¶Ñƒ…ànâs¸´û*WCLç8!	=ãVÙeÒrG5„§‘(^UŞuÕZJúØÊd :ãyÃ­‚´’ù
+ÁÛ¨Çˆéµ|â·ØZFá8­æZ'ÙX˜`œ‘ä|A©VÂV0z ©I•Ì-,-:‰w”¡-¡  ”“€AŸ¡¾-.Ê¸BB@
+<çoj)5ëËmP@>4qöæ¹ºÅL“İŒ×'¹ÉıÅsÙ?2Ü•	ÆßÏ©ÑòQäÓ!`çß4]këSxw¤-NHì“t›ÚIXÉ	e¼ó¨ùàocAK2{	RUãªÌ‰¨n×ˆö´È’KP™-0„ì *Q$ù÷ÛÕº¨mùO‰|]<IÖÈ•ª]Ih6ö[K,)”))ñÁ¥PK^•¿Ü¢	Qa:ëj8
+­*mW×9• D8®‡şJ7†:GrœëÈ”Buµ ¼Î!Şp3şéµ·_QRFÄ“í^­èN\•ş#•ÁÈR°¤£¿¢iû‘ûI'½ŒÒ{ÛÊÆcì’f°¡”ëí×üš(jS/¡cl;>5kw-&õçGo	}£`­«ËÑYûŠ¥åe?.sŠ²8¯ehÍQèÊŠ…r¼Ø?;gæ¿¨U8`«![é‚œJQ¹ğ¦ò+½€Tj?¦5]£TXØŸm–ÛÌ¼ Aßêğ>b¼_Œè	ñILï!U8f·ZBaÆ°ÚV`Ÿ
+Ë¤^`AZG+iùv¦wä\d4¶YS!'ª¹7ıI¦Zj2­ov¯¼§]'u(ô°®#ÖtÓ„ìÍÄ–˜fÅ"CêCh*R@ É5Î"ÎşĞÔ&#?âº¥Lì>ÔVüZq Gµ«NÛœ=£Ø2VÊ¡>§ÇéëA¬©]¼…so“]ctÇ}Å”!øXJß5ü>éf5"rúĞDlÄœzgÀUnùu|ü6MT}F"¡`S½q¿íU¥Uì
+ŞŒêš…nLh0¨½"@ìÓR­ô)Né	süÇzU¿ìù•ş'ôœä·4†RPÇï^¯©u¤$)ŠVÛøzÕƒÃ} ¹rW>[Y ¤üë?*qìOµmµ6…‘qRÜ0ÕÌ®…)¤öœÃÑÆ-Q"Pï( ‘²’|ü+O)‡9›$oš”ê=/>ÔòÚÁè@Æj-!¢ÚùT’*èÀÅ·TÈ{w x}ÓÒí¶{Ì‚´w1Eß	8ÙkÕ‰5æã\yp¦ÉÙgÍ>~Gë@ Øäéô+”ˆ‹·’Ä*¶NªòÆ‰Ò+¥Ù„²©	t ’¢p+¦ïàÊŞjSnÓ•Y JÖ÷é1ÒÄ‹¤ÇšOD-õ)#ØšœğÏˆóíùaÇÔ¶ÎÛ¨ş*ÆĞäa_"»›Ã2M8Û§ä^gİ&³’À¶ô¡ºCKaõ¡C­ÚmÈú†Ôö
+V\_2Uç°ëïT/ô$›¦}ÁI‹$öÌ¨éÏQìjÖ(ñò\Ş8Qä%{AÎOØ
+pîy‰q¤,¥ÂFàî=>Õu.˜Í²SÈ'˜ãÂ¶šjge9·È=˜P	ßò?¥fŞæuêtFG½«NÅ]Áô”{Íå@``´«KÃ-yn¸èØOM’‘!	¸yqÌ@Ò¦!Û:0f O©‹‡š¸Ö(ÂC dvœ¤xŸíŠ˜/KÄrv”ùrÔÍĞÒBBvTÖcÈi'»YJòô%#ÄÛ&Át*7¼ˆ4qL9d¹=ç@9J¼EÚÆîÃQÜIFv¡OhrZÜm)K äc­c°„n£/³7Ò|‡pyq%$×œóSÉŒ)((n)UhbR§C®ôòÜébBT“ŠÀ„—¹éŠö¤•1‘]ï©ÊJ“øt¸LRÌwÜJÙRB›#Àää¯½Ó4Í«QXL;¬e0¡UÒ|Áê¥Ü
+¾®î;JYkÀßoJ;4{¥û[J)çcš%OÑ«¸4)`3Çmî–ÔÆŒÒ¿¥•4¬õH$b¡1m®¢ÚTátî6ıè¹ø¬ÓéM‚ZÃ‘ÜVTåVàıÆ(\µ…*ÚûN•%àR–?ûïC°cuâ¤ÿ ©ih8·q§›ì$SÍºJs’ ş”ªÁáT'Ñqu8*'x`~ù¥O(ãTkRI‹Şû!JçCZÁ!µOJT©Aš*÷*xâƒnoãCŞ¿m+çQÎwéJ•.³ñOKWôå;wm'¿âkFêSËœxÒ¥F¦yşXûÓã$‚H$¸¬ÊZ–Ê¹y"•*4É$ü9qH»´¤ãçÖº	Á¹.½gKN«˜%õéJ•EŒÆûi¿×Ö¸73-™‘Ğê*(g#İáÇfõ!–Ñ„&B€ãù¥J§‘ş28İÖaÃˆq¿¹–â–’œ·œ$`R¥JQ“ägÿÙ_2http://www.livejournal.com/userpic/27114657/428921Ó#$%Ó01%ÓGH!OÃÿØÿà JFIF  H H  ÿş Created with The GIMPÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  d a" ÿÄ               ÿÄ <      !1"AQ2aq‘#B“¡ÁÑğRSU±’á3Tb”ñÿÄ              ÿÄ *         !1"AQRq¡ağBb‘ÑÿÚ   ? Í dˆÉØFeRÊºĞ“ìsœ€¥7në4†7šFtpPÇş´D÷ïU–XØ¼jIìõ“ü¹ÃøøÑ¶vn®ì!:	r2IÉçÕãÊ¼ôzs"òvÈâW·u‚ì£]³Áñãï£&²ƒggÖ]™rŞ‰¦Ñô¹"‰$d˜d•ó£"°š\.‚Aä·…NòMËÈÎI`¿VÈ¨Îß*cH®”lğŞ‰êMo+ZX¢„MLd“ã½uÒ:·R[èã¸ƒÒ!6ĞyçËßA;ubÛn®zğ<e†¢€N~4¢N“5²÷PêáA(ûîµÔ'º}d;îœweÔæÂÏ™"<«~ù©½hÅĞm¼-áË¥q+im<…ıï]Hí»)DQÂ¥XîKcåŸÂ´W)™‹D'¬öÕMÒ§šA'cßÆ2VšKs
+›Fbiª´®Z5P †­Øp1í«®mV(áw Æ…µöŠŒã·8À£:‡M)İYIÕáÏ8ğŞ¨–¬¥xúŒ"Ç©±¶Y³’Ãî?Å+Å$Z.ÀÔİGúë÷úT«ş’èŸÈßyÿ 5(øpô|oÔ&7qÊ vÚXiÃ‘ö‰Ç$|MÓÌ—ú¥|:È$ s¿8¥6P¦&ÜJPÆ4ª	S€ Ø9ã5©éĞ2¯gàUZKÜ„»46c}AÎø8¤]Fi¤’5ghŒ‹•ÎÜÓÈŞHtu˜Á*NÒn«o)>‘olÀ/|ÆPã#}ËÚŒã'$Ğ[[FqZÃ¡|àoÆäÒém®Ìönf·it)‡Ç ÁŸ´V‹1ukx")õrF² @:vsI§èö%£¥ä1j 1î‚Nv~ÕEáí¹r†Ò“„” éŞ
+£¸³’E”·UŒÈÍ…wÜğ:Ÿ¢ÇèÂDÆÈ äR«>“ÓË-Ñ¨eÆ8a†Íi©D`=¡n)u‹÷a}Mîç¸¤´©wp#lh}9>áš$Òz;çº75°¹ââYÕ]#w,.ÿ cÔŒV¬Djª0sï¡ èÑÔJ4%¾˜i._§;çÏÆ_Ës#¬P‹e4Rf— î£“±ÿ T’Ü\ßÛÇ§¹¨HÇ ’;ÜåUô›VüÉwq-Ìñè#8Iõ²Ão–ßšOtûú=ç÷AşÃúT¥ßJ^ÿ rµù­J>Êuôè-£°È5¢~Ì9$—tV¦ÂÜÈF‡Ìû+/Ğ§aˆVÜÆêtº‘‚˜'bÊ¶ö$¬2`ÏÆ™§tÎy+tSp-™H’3‘¾<k3}6J×R‚9Sù­t“Ù1Öİ¤mÁÂƒt{û9'‘{ia«,wÛŞ)MäÖ§ø{¨Èl.Q™³¨ÈñÏ06krÇº}›Ò;è¥r“€Åê
+<€¦½;¬ÁÔä6¥sˆ»È#ãSÖÒS{àd»ôÙD`C'Q·DX[½émqGŞ*Iö|x¥ÒDÈúÇc^\Ï›pä ~ßJåL´³róè˜×ê¥LŒ‚Ë…Eu;õi{([1(çšeÓÑ/,M¼›³G”>9ŸšÒå	Í»#fº­K(‹´¨¥×\«+¯lúU•°Øñ÷}QuqO•âK4nÍFÌû(l±l‰:&F”¡FŒŒã#œR¾¨Ä…SY}o*1¼µQG¦Åüéşæ©L;K_î¿!úT«ŸĞnC°CqJkŒ0;ysã½l­WUœˆ¸*N|³Xî'fN5ã¶ÿ È
+×Ú`#Q¨0Á©pÄn¥bŞ±k'e®`|sêãßà}ôŠÊ™$$RD“ß\jğÅÖnÔ]µ´³Ä­†p2} gcï£öÆsnmc1«/x¸<`üOR)EÉšR·g­xˆÀÈŠÎßÚ<‰m–EÜ`á‡¸øehosÔœclP2Î&C*L¾=åøsQÓ”£;F´Ğº×ø£¸F¥İvÈğlSd¸´‘¾®âÕÌeÔ³ò¤3Û§nabƒséğöÓ(,"H¶\‘]3”º4&×#khä¶tªmãu<{<ò*æ¹”õf]µ¤¨ß‘ø{Óì&)™f öãŠSÕ¯·[Y³ĞèjbFŞìIÅ7€¶ë¨»Â¬Yc]#r«ŸÄÖO¨~g`p´ŠiÔ/Ì¶"C§~ÈÀÀñùÖ~+e–dK¥Ã÷ãËß'ñ«ZäÜË?E?÷û³úÔ§GIısÿ ºZ”¿Q÷+³îuÒãh¤íX‰{S’Àì6Ø|i5¼}&íâÙû,x±?,Ö/¤^êT¬Hâ3±ıùšÔÚİ´ÒvlÅ"”9<ŒS5šd$² ¶â+"‘9ãâÆ–ÀÓYO úrJU¶õsêœûÃV™a‚ïr|iOP¶fV lvöq\qÕVã/ajÆæ.ŞØ*çÅ	ÇÈÒÛRAfŒùJ¤|ˆæ‰ƒª˜t™SÜdß•07Ï¨ÄaO‡hÛÿ š¤ ë«˜÷3ÙÎ®“$ˆÊ±öÓË9Áƒ2§ÃuOV’ …~¬ç`¨	ÏÄïò¬ôpßÄ¬¬Ïö™D@ØÜ¶ã?:éğ÷Çš¡;Ù¶Ÿª¢[ãX ³‡Â³¬[©u1tÀöjÀ"
+1ïÍsÓºd÷L­q#8ò'Ø¦pÀ˜ g?:ä”–•Ó¶6d{Ô"Õr2ÚauÏb”<rG&»Y;.Åj(0œ`óû4Û©–í4¨Ş8ÚŠÚh–Y‘Ì‘3äWBÄw¶# àşÑ»Ì´"sş¤oûû¹ÿ š”/¥Ùÿ F?»j•¼8ú_ÀöuJÅ¡\ƒ!l`´¶¾)¼F9WãB“Öò‚ŠK÷[#¼Ï<P‘Le$!X’90Ä€»·¸áNŞÊuÙjÙ¶‹©U{Ãí
+-š)¶¨mŠÉÇv9)ßÈãö(LFnæWÛŒ~éFO¨š´4“¥´Ñ>"`¼1Hñ¯$²$0©±¦6'¼Nw$Ğ¬¼.AÓ½Y'ZYZ(²ÄzÄä
+ªé!œ¯’Ën™Æ	i21ãİåEO`Æ Ï€9Àó4,}iÃi@ÀóÊÔËI’’8¨½97™ÉvAÖÈ@ÇRäì ;×àV’N~Î<èêª¢#gÀnh[î¡¢ã²2§Ö. íàŒyø|é# Ô­³.n.I~«P39 ’<(e·š+‹iQœÊÃJAÎrvyø Î†Ü2È²É$ààó°ØSMc¨D‹i	.Z@§N6=ĞG·ŸşÕ[qÉh¢¯Aéİî¥ô÷›|‡ëRµ~÷ñşoÈMØÎ¿v’»õ¦(ö 6ç5uÍÈ·SÁ$¸gÎ¬’`ìwõ5*WLù±/Ô[Ó®îZİˆÑÂÛó«ã¸£§lĞ‚Pøş÷©R’`eh½!İ¤nË:\är|>}¼í4ÙPe5aF‘œáR¥ò/s›yÚk…‡;Öº–âD’wR2¨mXÿ *P¬ŒËmØµè‰‰*ö¦S¹Èm¿**Ùı Â²ª¸ĞNêÚ#ê•*z¼¸,ğÈıQZ$>ŠÑ4d¨<óŸ1¾*ßâ	Âúe¶ú±&´8'!pÌÔ©SYÔIşpR\o§oÿ ¬ßîoÖ¥J•Ù²>DmŸÿÙ_2http://www.livejournal.com/userpic/14499928/819592Ó#$%Ó01%Ó=>!Ó#$%Ó01%ÓOP!OàÿØÿà JFIF  ` `  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  d `" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? åéB–4(É­+¹‘UT’kí›±÷mÛr{7•€šë4ÜŞJ_R+¨Ğ¼1k§ZíE–8Ôd–à
+Vñ§®‡Ãp%¥„|I¨\p¿ğŞ¼ê˜©IµO¦íìyÕqr“jŸMÛÙCàİ/O}õÄh]Ä
+cŞx"Ôì{ërG¡²eÓ´(Ò5îõ©{Ë<T?†zşª·‹|=iM–…FàÈFA tü­ùW,çmg7ø/ø'ëÁ;N£oÊËş	ĞÆş¿;!¾·{6óÀ–—Q™,¥G¦Şk	üAáëÃ²çIÑ§ÿ ®OåŸÀã§­Oii¦™Ch½ÖtOËÓn…Ï 9Å\y­Í	;yê¿ §ˆ„©Ôwó³üµü[Â·6îŒã×ÍÍlÈpEzì>#’…Ò¼Yd¶Ó?Ü¯1Iô=«+ÄŞ¡¸µ£<ñ]4±M5v}¡èRÅ4ÔjuÙô~‡—A¢®][4NALŒïNç Ë6°™ +Ôü# Ãml×÷{V4²İ…q¾ÓõäK·#ƒ]×‰¼ËûË	X¹A0ó.İxÙëù×.£mSNİßdyØºµI;w}—R…ÅÀñd¨_´ørÙöCğ×oôô¬øÖE‚0€ˆ L4:6S9è88¥ñ‰"·[{=9YşâÉ#BŞZti6I=°	Àã­cYÙ*úáîo­`hÙmCË+9æ,
+í,Ñ•F88) ±>&7*V…=-øÁîx•ñ
+OÙÇD¿¯øvaêÚN§$·úÊ4jÎ»¥mˆ  ©»Œç¾1ĞãéÚ»5±7(‘DQÊî›ØHà>Í›°ÛHİŒ¨Hˆ«wN›mMmÒÊmŸìBG•ˆ±ÜY²¬IàmvªS²ñ&¦u,[åÿ }$ğ€â7ä\37ïnİ21Æ<¹ÔHûÛÿ _×SÎçP¨ÒØÀ>ŠÔ­ÜÖöñÍ!K;érí!¶œ&Ò(r@“`ÀÖ7ú’E{¨À«…n#S½piÛœ~YxÚ1µ:ù‹]Ú‹Iü@³G-Ük$(élû\ó;¬kĞÀÚÀƒ‚är¥ƒV1Å{§Ş]Éw½ÌM%Ãğ"œ#.^D!rÅÙó´¯–É“ºãZ­(Ú/`RŒçy+~†‡âøÈi^ ‹íZs®ÁŞÛãoâLädwS]•}'‡o!Ñõµéƒ6„äcû¤×›ëzTÑ¿ˆ&‚%sÙ¹jÌQw2È­Œs„ƒ”ŒV¿‚58uı2Oß¹òçËØÈzÃ(ç ö¨ükÓÁb•x8Ôùÿ šó_‰êP¬Ÿî§ª×Ş¿¸Ûñ—‡>É)š%[sÅyäÑìcÇJö-åüAáÉì/ÇüLlXÃ0=Iÿ ónÌÚÜÈ„c½¼%IkN{£ÛÂU“½9îAøsd«kö§0søT7=®µ­´›%ÔnE”ùg?3 Éü+GÃmö?‡ó\µ?ğç5¥øÃÁ¢¡Š[‰# ù `€A9Éã#5Ã^vu'òû“giëR~vû•ÎrÄG©kj±ÛÈLgË·—
+ëå` £¨ÁÎìsÈ«t­BÂm&âöâÖ{©TûLŒ0Ê¼w"’(ÚNĞÇ',V²H ŠòO6Y­£}»ÊCÉó1ó]dFû¬¡›•D‰œ¯|õÕ¬îï.oucˆŠÆŠêËÜ*!-œîÉQŸ˜äqšù…'9JR<LB¹WÌÔ—K¸°ÓE½õ“ÜêR [ ¯šç!Aé0¯¼îã¦Œ–’ê7¶B+›»&
+ˆ—®åœ) ~íÙ°~URO€¹gÂæ¥ªK¥YÈÚ”r¥ÕœËiªÊ` !9?1R‡x$mB7dôz5•…Ÿş¡$ŞmÄŒë%İÂo(œùş^%av€Ÿš_=k¨;YoçÖÇ=I{“Zïò9‘o4úEgve·‡l¤Ã•@Å)…ˆàÂÂŒ’MëÍ95»[[‹‹
+ê$w¹ B»<Œ‡W
+¸Âíg
+IÅmjğ@šUÕæVRY–5ûZÆC.Ù@‡*rX‘“òó‰¨Ieö»ö¿“ìP³4m'IT/·'s)
+O)É/óSœéÏ–zßm	„ÕEuĞrjjÓ5Ö˜·pGqŒ¬‰–ò#EıÙxfVB§'ºR®jkoìÍFÙ­¢–Úï;á ¹BGLc¶®W#ï“‚t´ã˜Ä–hmîâB –psÆ91ıöş<¬>^)ÚåÄ+»Å“ı²¥Š=°‡8Ã&ŞªYÈáXÄÿ ×íeN¢qéı~¿ƒ:hIE^úÿ —ü½µ¾iº¬-¦½h‡o0çÍ`üA°û=äÓ-g/àOŞçç³ÔŒ@ÿ ²OOÖ·~%Æ˜—”&¾®„­RuM}Û~ĞĞ•ªA®©¯»oÀµ¤)›á¤ñ¯Şû ÿ Ğk“ñS¼ğä‘.òÖ’"Œ–N2xÖø
+EºĞ›sº¸ÿ €×;"9ğ$‘nd¸Ñ/˜3.wFÀaxÈ?…a^-ª‘óüÓ_™…hßÚGÏóM~gm)û$0JŞhÑÂ—šÉ\e
+;UWïƒ#-+;ÿ _Ë+Ë2(c¢x§·¹a½\.í™ÎA™šasc3Z»ˆüègıÚñ'.ªÊ&T1,nãÀ979î®Úyï­ítäÚnn[(ËÚJåÊ£•ÙRJçæW/7¿m?àlxØ˜F-5¿ùÜ´×¡«HgšÖöÂ!…Â—‘2JğÈUİ·3d?0 b»;Y,õ­ØÅrJ²Go1GG
+:Då@!°œ—< ©<D‘Í5š\Úi÷YÛI¹Ló,ŒĞ«d‡ùv)c°aWË`9È1Ãv-¡sX@æ&w‰«Ë+¢‚Õ-¹]‡û9çÓ©*3”Ôn§\2¬’VMië¦ÿ ×c·Öõ8´à,àºI&¸”÷Æ¬¸eÆŞC±~[¡#$¨År·w‰¢iÂUc{‰.SÍo5” Iİ#…a¿Âj«çHnöÎ—IjËbì,@]™0¬s–Ã` I
+yÏXæ$µÓµé%a‚ÎöŞQ+G.Ì6ä^YXÎI9S—p·R¢¨Ö‹T*tı”Zêôôş¿àêY“^Öïe»{¥º°æ'ˆD3ĞFŒËµ²26k+^Púlúw›ºM:W•ãc bîªKÜ9  }Ö$—8±sé…Ür4rÛ>\©O€¢DÀÚÍºUÀÚÀp0xZÉÔ<Ú\ÇqCnÜ4îáJ¶2ÌX*œ€>R»È#¨¬To+G¯n¿×å¹ÕF	«õğÇacô¨ÿ Š}W+ï†ÿ ëWIñ)€Ó;ìªĞé¦+ø{5¬FîáºÇ×ñ& ø“v$•¢¢šúê+÷”×«ı?Cè¨G÷”ãÚïô_‘SÀš§Ù.bBØ@ı+¢ÔàƒIñc5Âƒ¤ë‘yç¢¿cøæ¼ÏLºky#`qŒW«Zı—Å¾}>á€“#Ê·b+LT9'í:=ùü1PäŸ´{=ùüÖ­5ø‰íånb‚MÍë¾9—±*xù‡jÅİÂİ½ğ·¹6‹4‹4oY‘Â¿ïw0\‘› .FŞAîõ)¼UftmH¬#ÓÔ¬7Ê.£ô÷ş†¼Êá5+P}ñùVÊï-Ã°eedÜpà Áœİ<~©sÁzÛóôğ­fÚ–Ïúû»Löúœz~•2KñˆÁ«“h¹LÀ	9P?…¸àV•õÜ+â9
+Cäéö$@-Â•QJy'%Xg63¸ƒšÍöÊíZËSÕ5µ7mw;8Ê…R<3®ï¿Û3[kitŸiUòu&>m¹¶o©mÛdçjã€'ƒÏ5æËÚ%y_oOëo‘ËÉz–‹Vûÿ _ò-i¦;½3Vµ‡Ê–K]·¶±Êãjª4Şi	;q Ç'yy¬h!YôÉQ32$Œ˜bEÔb<ã³e†	 ŒóW¯fĞ¤IôûO´Ûé«#¤ÒÄâA€B¡‡ ª®q¸†³ŒŒÍKPúâim&0ÄÏ,6‚d,S•Æ|œ1ä’MZrš¼oı}û™¨òÊÒhÖ»Õd±½¾·Xbìâk9§–Ø1iw2—œáŠ#sXdÊÕŸé/âı³Q‘ÒÈ	îæñÊ®}Èü…ahú>§âmdAh¯5Ä‡.[•Œgï9è1í€{
+õm*#OhnÏioÕ/‡ü´oîæ½L¿	È¹ç£ïÙwûöîwaè)ÏŸd¿¯¹tóù›>v½¹ÔüUt»EÉÙlŒtüëÏ|U¨ËÙ[9šïüWªÁ¦éé§YíTEÚ ô¯$¼˜ÊìI¯wfêµkíè¶=Ü9¤êµkíè¶àjétnK…en3È®Qf9
+‘Šíœ•™Û8)+3Ù.­l<ae‹1·Ô!æ)Ğá”×;¬Çow²ËÆ–orƒlµ²ğGû_ızæ4½n{)#‘ø× iş.³ÔmşÏ¨Ä¬0Có^dèÎ–ÊñüW§ùU\<©®[sGñ^Ÿäyıÿ Ã­YO¥½¾­jy[8Gºçùå¯<9ªD­ºMì{ZÕˆ9¯Œóõç¨¯iÿ „KGšO´húŒútÎ!“ùTãFñt<AâXåOúk&¹ê{*«–vùİ?Âç›õ<:—4eËëuú4x´×µ&
+º^£pÅ™òğ°ù‰$’Ä’I$šé->Ëm¸ñ.£o¥[J+‡™½‡aú×¢>ƒâ{•ÅïŠ<´î!Œ-G‡<;¥Iö«Ùşàs¾á÷sJ
+Œ,?ßâìTp´9¹›æ~Zş‰~^•k-ı™Òü-dÚV×_J?{7ĞØ¹»Ó|'¤ıƒO |Íœ–>¦¨k6DˆÁf¡q^¨j’İHYÜ“]Tğò©ñ«G·ù•,<ª|JÑíşbêú›İÌÎÍ’k	›q§Ë!v¨ëÔŒl¬zĞŠŠ°Z‘OQTÆÉˆ«1LêÃŠ(¨d3^×Rº‹%"¶"×5 ƒ÷Ç­VŠ{£'÷C.5Ëö_õÆ±®ïîd?4„ÑEŠ[1KdeI+±95RW9ÅWB5ätQEQgÿÙ_2http://www.livejournal.com/userpic/12284831/313258Ó#$%Ó01%Ó=>!Ó#$%Ó01%ÓWX!OËGIF89aQ d ÷ÿ {{{ŒŒŒ”””œœœ¥¥¥­¥¥”ŒŒœ””¥œœŒ„„{ssskk„{{½­­µ¥¥­œœœŒŒ¥”””„„Œ{{„ssscckZZcRR”{{ZJJŒss„kk{ccsZZZBBR99Z99R11J))BRk9{1){JBk91s91c1)Z!JB”kc„ZRc91Z1)R)!R!B9ŒcZkB9J!”skŒkc{ZRsRJkJBZ91R1)J)!s1!91{B1B!¥Œ„”{sŒsk„kcsZRkRJcJBR91J1)ŒZJB)!„RB{J9sB1k9)c1!Z)R!{cZZB9„ZJ{RB9!c9)Z1!”kZŒcRkB1„J1R)J!­œ”¥”ŒŒ{s„skkZRcRJ”scJ91B1){ZJŒZBR1!){B)k9!9½­¥œŒ„{kcZJBŒkZ„cR9)!kJ9”cJcB1„R9{J1sB)J)B!c1µ¥œ”„{scZ„ZB1!c9!­”„”{kŒscsZJkRBŒcJR9){R9J1!sJ1kB)„kZ{cRcJ9{ZBB)Z9!9!”sZ„cJsR9kJ1„Z9cB)R1ŒcB{R1Æ½µ¥œ”„{scZR¥”„Œ{kkZJ”{csZBR9!½µ­µ­¥œ”Œ”Œ„{skskcœŒ{{kZscRŒsZZJ9{cJŒkJ„cBcJ1{Z9ZB)kJ)­¥œŒ„{kcZŒ{ckZBŒsRJ9!¥”{„sZ„{kœ”„{scZRBµ­œ­¥””Œ{Œ„skcRJB1„{cŒ„kœœ”¥¥œŒŒ„{{s„„{””„ŒŒ{{{kŒ”Œ„Œ„{„{„ŒŒ{„„{ŒŒ{„Œ„„Œ{{„”Œ”Œ„Œ{s{„{„Œ{„                                                      !ù  X ,    Q d @ÿ  (@   vâØ8g@» 	°!Àn€Cd†àÀ u0 À »R ’$6‘ì]rØ½p äHØÀv &¶YBiKÀ )E¦Lš2ç7nìÈikÇ--¡ÚÌûR[ uB„À2@Ì"{>4 .ImÚ”,IWİœ#íHSO ©6( P«ğ†Æµ”à©•*áZ<ğ xEå%Jgéñ†•W¿ğ{ô¨ Z5j;Î!İ„±c‡]ÍÎÀL—+Áµ0\
+ pS €Á’ç–4ÉaÄM7Dºô±†ç/H>^Aÿú“Š tW+[NÃŒ-„XÙauÈÎlİÀõó×¯{ Mh%µP°ÎPÀ@c (0   j|Ğ…ÁH²	,£à²\*¶,ñæqƒ0
+3T&N‰Ü0 1Ä0 #}	±ÃN8Láå6ê$
+I\¢‡i,¦à¹ØòÈ(ş‘ÉdäğÃ_|1Ê(™„òK&¶Ø‚I*è•˜
+hÌ\e&•]e-"t7Ó°ÉŒÄt›8â0ÅÎˆ:°’Jz€¶M*†G.¯,QÁ# òÈ+¯€
+“
+SI(•„c1 ±”1—(ÁŒ-rJª|ÔIçœ0¦ŠÕUlÊÿ7g‰&¦¨G¡†Æ iTÆk* €¶h½îqÉ'¾€™U*¬8¢ÇJÄ)_ÄB‹µg4CË,ÜrÛŒ6]±ãÍ*wÜÊÒ²Ô«u2€ I$‘ÊiğZY\² En“†‹µ¦èÈ4¢Pá„‰#ş)‘È‰XS'7\ÑÒÌÍ¨¶-·¨0*9B0Ë@ 	`åMÊH` Ceñ¦Â€%n@ (q	ÁÉ¬Dez°Ab¬×D¢p":ß „# ¦B"X›€6´xu*¨|ŒÊf bÆWŸqD¹ÄÔGÌ¡*
+&\à‡&S¼QËS‚BhµÉk
+ƒÿaªº¼†‘ìÀ€#I¬è'šI8’
+µKİqÆ†@#Ëå²ã[ÇÜ1–ç`Ÿ!”ÌÊ¡c¢zê¥‘†ã'©K .+Åh°"ªê±ËóŸ±'Ñ1Ğr-œ*†È2Ë0²Ø!ËÖÜP›WÑ²-*{(&¸0±3À‚,\áTğ9Ü 'ÎR²2¢³Ixãœ©Äî+HHPg3_;ƒ¢q l¸&³0„Ìà—©ÕGe«O^‘ad-(ØFO¶6Äƒe¹Ooòr (¨ÑZB¢Ä à  Oğ…†pqË
+”Ø¨&0È/ÿŞp‰md!…¹Dd0‘¢Æl€iÀÄà&ˆJğéŠ6ˆ±³Ğ%1Ù~Öâ‘¨F- !‰IÀA—p¤q¡‹PLæHŒdœ¸)€ÛÀƒj‰Z c	’
+˜‘< }€&°BªÍ"e%Ê‹[z nŒ/ê‰`xN®& JP hğ°Be!gnãARáƒ*@â1Xƒñ&0!MPC*ğ€·ZØ À„|ä#&_±‚¥’ŒR&ƒÀGaãj’r +}Ü†¶q Ã0‡ˆ`Ç€`(ˆà€¤F¨ñ„dT¨Ä˜VÄÿ§•è âP›Ø€‰!Ät‡˜À4&p‡÷$Ä!áx(YÑˆFŒH^iØC!ÁGuà9°Eúğˆ>˜t– …%Fa‰P€¢˜ÀIN¦áˆ:î¡=-ºÊ4œ+nLÀL¯’ÓfÇ*Õ§E¬ĞAn–†P ºÙ0m–…-˜ĞÄ±4Q‰JpAí€8ĞĞˆ$ ah8Z§„²¥KÚ"-¤A-p¡G>×R
+Sêt×W%A–á•T·g¨WäTv0Ø^Y&	`†ô0Ô„ü	±Ë/!Ÿ²Á¨ÊhÆ*°ö1ŠÌ U[Ê*VÑŒYÜá‡ĞÆ!ØA*ÿ !^)2ĞÌ€•ŠKàQ
+oØC-êÅHzñÊl`Ãl±¢8À
+¾]ÄD1*I³\ZÌØZÓ1™aÙBí,š±2³.Ü@Œ¿jQœA¹mÛÀ‰ogœ4ğC-Õd÷à‹0|"¬`¦7ë—VÀˆ+ƒÀWJˆ
+Ë#Xûš×¼ÖÑ^¬jµ¸&tö‰E¢ƒûò8wÅ4.È€]Œ–2b8BcÒšXÁ11#	i (Ú!×r¹vÌ³Ã0’¯!¥!ğËÈæh 0 X¬È	éØG+€1C	ñÚBbåÓÚù‡oÖ˜ƒHô'VÄËSí …@'h@ÿ(±ˆóbñ¼äE>x±‘ P—ıD4?ByˆpÌe“?9@V˜œÄ-¢¬Ç‘ öP @É :"L¯f(04@6êÓ¡ˆÅ îšõP6Ç†&Àcõ™EP|óÅ†ì%5á c ‚i<Ä×>€:²Á— à%é`#IÖÁSš!;œÁ¶7—oà0DL w
+Sà.Ø‘£ÆÚ$H¹Yà¸š—xZl‡§q—´ØÆ-l´Ho( —† À ËG©Eñ…@@jË@S*Ø–÷hrÔujî£Ad-û64DÙÁÆŠò•ÿwÆ&ó ­ÜP¼]4S‹%ô R¸`d#y€íGDë§^¡E™Œš <T!04ÉéRòLÓ%$AiN ª3‡Aª…r80N!¢	_È%âğŠ+¨¤MğÁ#&¢N1ƒÓpHé(ô¼hÃĞiTwŸë25àx% ª®Ä- < "¾Ğ/ä Nx‚6„(>ÃÄ# Ñ&hDçáÆŠ*ÃHftj)à’O2µÔ¼z5†®	7Îá¢î¤ò3S×c İÖœ¼qCëƒÜÆ$KdâÌÈzˆø²ipQeT—Šœ–ê§ÄğBl„<×a~q‹ÿ6®<ÎÊ(ÛØcŞ’ƒ•6Ô!AÈ"ŠñJPâ’p.“a%ƒŸì ;0z&BPÖ''tBw2óñC6A	0(©pxèà/•¡ =ğ
+ğ_ÀCPq 
+k@­  K°[²_	¢g€‘U,ÒLh^°"#é"Ï§V wĞ²BõYÏÂ0Ä²pxğKĞ
+`ˆ`L¶	^ğæ
+Wğœp£@R<0qè@Ó°ŸàTl&h"èqĞW69†´Ò¤Br·'#RQ¬ğQTH˜À|¹ˆĞ
+Ëç(€¡€H–@)Â@b 
+í§§3Ëÿ u"+î2ü4P©"+óSr€WA*Ü `"±£+—@:â4 ‡Y€Rô
+•0	“P	’")‚°ÿ×…#‚H€fe	 #©"àâYC-¿XI`T'ìCT%3¿¢{°^Ç/À¢Jàt/Jàù¢Ÿ`
+c ç  8ASz`Q¥’PÓ$£HÑP®†¥’ ·p1w ‘ØY6$ˆ£:¾u/¼" ‡qe&B,2ÃH¼r	º@â`:9¦zĞìB[Ò°
+·°ZCZçb  gÂs«€ÖBI+æ.ÓG/iP Ò§:ìc­ó#€ÆĞVXÁ ºàÆÿĞ[[°{ +ÔÂÒpÊ= 6Ñà1³@5yÑĞg@·pÓä†/ƒÿ¢:ˆá[xô˜@Lä„"8¦là¿c#Ü 0pğˆi ‰÷Ssr·@«àƒyÒE™5BPaw îHW˜ H0"î’"õ"3ÛJşALÆÒT¡Q ¬ 45©aP
+pP
+{Ğ{€]fŒÒpvGİP”f€”Ñ@]ó5äb=ÄÜ 4"3$öM€¤s’ıø3(“es¬ P°—º€™91P6‡p2¢šÚd¢¦5³ğ aWÿ#9« @yÕ+‚(À’‚š`GJ ‹xÀ+&`ÀX#	Ğ|óŸaĞ%q¹“ŒÖC^3Ğ†<²P#ƒ5`3_£-ƒDJÀHƒ[0uˆÇJ0 É’;`4|ã	*Õ²08Ü zÀN£h/Ï”2î!9XÉcĞ0d1Ü İà9Øà9H‘a©°"VHc2N¿Ò0'~h€* ˜µ4%æ8&""Ó;Ó@E¦#3àfÎ3dÊsdâu Bwd³º q835v:¨“?úƒì“eS`€ÚƒÌr™iP;i<´ÿ0¡ <%$§ğ<YÓ1Ú0=¯‡_a ow3}"ã0ÜÊê•IåQMç##ò'©
+`"’~Âˆc`‡€ó5fP ¨À<ğ«`r¦+ã@ßWìøxA " 4àp à9@#@Cà3—^œ‚ğLl`&R`øÕ‚Íâ;HPÜp²‰
+#Q©‰H`7’#'„¶}bu#KFØğz$W0Ù€›v O7á ò¦=’f>4á0 ‹ajC=«15	[²C1"q<Ç6òZ7‚#uÁÿ‘,akHwFŸd6r$1á±Ø%DsA+=±5Ğ1d€Ù`›j š#é–H+o; $á:Äw"$w7˜öF,q ÙĞDÑ?;u1rƒjÜb=_D—sX#ïmOç°t|Ñqñ7Ro’& l”Ú€°.´˜–u±Cë©ÅåÖ¦	ÙöÀem—0E—ÀåpüÚšuA#‘w«˜VB"!o$†&iv-]4JD’¡š ÀÁmG”<€z›U^ÉR	ß`õ‘2O×Ëº£Ë#ª¡F"!Cÿk±‚¼JµÀ "
+"Hz„ w„“`m‚€	€`45hr„´kq àp§´ép©¾ñi6‚jvÁR†¤ Èq’Au±rƒ4˜Ápt0feÂ¨Õ~áEf{qôja ãÀ €«7=aÀmÜüGLN¤ ‚ƒ¤pšÁ‚@È‘1DÀF<%üj¾!¸öæ& öF½Ğk$g±à6æ6—ÁJLLÉAÉQƒ×„
+Ğ>p	 g(Ò—À&0’¥³`ŞPÚÔœ$#ñ@¡¦FÚ=$Gÿ€D
+ xşE¼²ä4(yãPµÀˆğ
+ `[àyã60Ê‚á…€@#²Òâ×nÑ¯& ÊZQçà©°ŠU7÷r~¤6°x°LğA |@–	ÃÄŠ£ÜœWí3P¬ :X´}	€Lq²x­‹jqË˜¶¾—PŸAL"Ì±@LĞ
+L	ğQğ]À]às ü£<Ê Ğ>4H+Œ„™Ó„£â {7mRüÍâfËù‚Â^¡D…±<ğ
+x Ue ?ğğ‘·	MPcµ`X Vè2j~ìÿá)
+•ñ€6RHkJWò˜Ääƒ…¡˜€n“n£xÀ¶  À°¯€Ñ2“Ğ
+Û ¥§ì!'À¸ZŒ'²òC¯¦¿7’gFM(`‰pÉÑH.‚aäTN ›Áğ™P"ƒ‚(¹€¦'¼ÉH0ØS¬â*‘ĞğáS“$ŒÃj“~ZÇ  µÀ ë°Ü0 NP@ ?°	›’	x˜p±SÕ×LÕwg+ëBà 
+Mv—á 6êÑÙÀ2–,7HYÀ ’Ğ	mPá˜	’ 	Éğ?p"Z_ÿÍ 3TzZÍWA[•¢âZ5ËÄ¸¹Óµ¡»b •áG ì^²£ y0ñRò Mø÷|¨h€¶SuÛm]­‚c
+‡z¦Ö5ñ#ƒ’PŠoğx 	V€ZĞqƒ@2Ğà$­	~Øß0(-£ì!Pl’&ìƒ°‚‘*© ¢¨WQ«³‰7J}DxP$Å¹° €¾ô‹0¤^€%_pòµ@eÓÀË°è%3-b"¢e&j
+ÓàSè9êıC-‚“l X’±mGè(Ç€K`µ° KĞ=P£ğ(ÿ%£À	b)Š¸Œ`XUº=Õ);&hX6¢Çˆ°‚È¸.ìĞ‰Y£(Â†¡ç²~Kp¶Ğğ
+UP	=`	¶^	‚  æ "’
+Ë€	ÙsÛ9A²†t}å†¢—ãj9Å¨ºØ:°¥ ÁnÃpˆps°¯€
+Œ"‚)B`)•e½SJğˆOSìœR“ÏÇ*\}¸Ş!RŞÄP`:0®,ƒ—–qD™ñGts> ‹“2]
+‚Àáhh[Íb&#s‰¬2'´9>åY¯Ö”D"5Ê0)a"ßÀTJMHÀñ¯ğ“ÿ \À”å#Â?»È‹ø•€‡`«L[Ó‰ÄÀÖ’}j(ŞÜ`£ÿbÁßèÇ ©$ĞHKY¦0˜`¯‚Æà£îªÂÒšåtseŒe“'ÊpÁ³šş*W!q¾ÒN…½Â/}O,”q	{ p€°šÀÿ€à,Æ04@^-©Ù¨w` İĞ”Æ&¡€GÀ-w }@ÅÑW•I -:ƒxCëq3 ¥(b‚ßÜÀ>À‰`Pº0†*tb-äÂ-ìhd
+‡X•­u•«ÓÂ)ÇÉ’ ñæd?’•=óü•ªÆÀ‡8W¦{oÿNI]Q‘¬Å1Ş™”øªN©-õH[Ú#2“¨,©:†‘’ä,‹eà»™"–ñl Ëä˜)Iåˆ`¢-Ë¦M Ç˜„[«V™…
+ªgÌÌ2` œ6ZÍš@‹Öiì¼%p˜*šT;’¤Q’&K¸Rm€Ç%
+iR1`*hÁ0®qcÀÎ˜£K©j]ú”èS*vÄ¸qcwòÎ™;ÜDˆÆñŒ´$Ğ6rÖ”¸& Æ.º$(èM•fÃ6
+—²d¹¤ 
+ ˜ºt™ÆHL`@lO˜=3•¼I$*	S®ÄˆİY•€–vÚÆVD5KH‘Íîx¥Ë25ÿ6.“¸¤€.UÍYŞ~ƒ‰‚¸¢A1K•ä…®C•é†G’=€:[›ÀnWi'µ±ckàÌyt;ú¤ì­, ÑÀ*IÑÆèW‚'Ë=ğØ£¦4ôH£(Gvp¤$´bGêàãª>ù„)Êˆi‡Z8Ô¦<6ªÈ¬h4Ze–YÀºC‚•`	€©¯İ è€m68ğ’d†4vJ¦iÈ©Œ="ã“0–Ñ»eØáf4<¥µTKïT0ê23¢1cÌîM­ºÑ¡Êİ((J	 Jüâq4(ĞÃ%0dBƒ¼3&’Kàˆ$Œ&wÿmJVè:DÓh!Ï<3(z ¢15:ï€Y”iÆ¶nvKÂM¶éKÛ©ÎZ”Øb¾ÂXNÁ?%†•0"‰ŠOvĞ%  GX™F.v XË ZT›PiKDåŒU””–ŸŒJEÇ4pÁä.4ÁDTØƒ‹tmJQ6ĞØjbĞĞ#IDK	ƒäˆbÅ¥bÙÔ´YhérY‘E–hÓË´Kl9ãSÜM]<&™¢Š˜ŞĞ— J}W0"A#8¤‘0ôè%dàü×.İXa.«Hg1aC‰%aº1o,5mæhm¹¿7ŞÈbLPxÿƒ\6@·Õ{ñ#æî$Àà6ôĞEVtq„XA¦4’`†ï²	CX†érlPTOğÖ8bFÀOjÁãLœ@	8·±i§ l:Ñ0ĞÈêĞÀU]F˜Šb¥Ø$V ¤Ù ÈfCìe y Š:r6Ei™%ÂÜM¹4lœœ‚¾ »D$rMÊE‡&`e4“»¹¡ŠšÉ¾FV–f6¸fÑ[á…&ÇcÅÒû={ K¬±¾˜±©ò¾ÎÖEoØÉªŞ$äE(iĞÅnt#”¼ë8É*hq€!¬ ¨€†,ì0-lñ³P‘ÿ„Å(Œ
+3ìg”ÅMp„.¸2/bLÀöRMŠRº$„’€!pT#Ú(@,Ö%T<©QKy(â
+OÈÊ%Á
+aœ€…< Ì„…Æx!Û¶ò6f8bg{‰¿úâˆ·‹¦	—ÄàÈğ!ò¼fR ‘vˆC1èÖ6È,rØˆÌH ”¤Ä”¤‘ºØC…C4ì…H€\hq3Ã@Â†‹Xã	‡w\¤Ç®ÌB	<Q;Æ¡á*˜Cê0¢ˆd9ˆÁ9Ï±‚fsD½âÄ˜ü‡@Hƒ-.¨-œÂÆ*h‡Y°e‰ÜøP8i’8” ) Â@ …Làà?B±‰N´ } R ĞÑ2Ñ¼: ¡ç(3%vœîH æZ&²Š r¤›ÀFz²¢3¼Fâ$g–rP˜`#Â´ˆÀC Âl…Lpy!n¥Ph‚0u[‘Q±XÁP–´£×RM7g T¬YÌb¢w´±Æ²#  ;_3http://www.livejournal.com/userpic/29832430/3537768Ó#$%Ó01%Ó\]!O
+yÿØÿà JFIF  ` `  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  d d" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? Êøyà_k~°¼ÔôÑ=ÄÉ!wóä]Ø•”p¬@;øk¤Ág§Ãá­+Ë½¹ºòøFÊí=w1Àã9ª¿õÙ-tM.Ê5wv"*÷&V8®óÇ~"‹ÂZvm±µk¥ùÎy‰qÈöôÏÖ€<Öÿ ÁŞĞ4Ï"êQ}|>iç2¤_ì¨ŸÆ¸ZM:IU4ë1
+§{1>MhŞKy®jcOµ&c$½Wøøëô¯MĞ~ÿ gÙ½f?ŞíÜ… x†Â>òõ«±ı:o¶ˆnZõ­MŠñPBŒ€×q§øDñf—5¹´…$á'EÃ+v ï,mLfâÍ›`ûÑ7${ƒéT<µÇ>•ºtùtvëK¾ù$†V†E=2dÏn`¸xÿ ºØÍ Aå(ëüéë
+Òœq·µ/Eô ˆŠx·‹<¯ëNP éÚ=8 
+3(Y˜/AE,ÿ ë›( gøSeŸáïøJõ-o`²y	Ğ<™?Ë?ççúçˆ$×5©¯.Õ¤7BÄœzgµhêZäñü5ğÖ‘ŒysË2©ûìgı röpù’©n›¹ ¡~øËJÒ‹µ8À¹¸RöñòD1úã»ğ¬ï|N¾ƒ[6qÅ…¸Hß(Øõ9ì–ñÁáëX`SqÛ E#p¼q^Suà»øÇ7÷8¤1/$Ù Zæá	[›´û>õİµëÓ¾İØ\«5¥Ônå~xÕ³\¯ÄÏIyá©.4H÷9Ä;CdˆÕvñëÍrß<1â{bÃUŠ.ÛÍÙ!FÁÛßpî(â…´0|OÖã ‘¼Ğ}¨jæ×E»ÖŠ\YÄÏò0/cWş&\<¿5§fÈ%8öş•»ğõµt¹šÒT
+dî¡¿ sCÁÓ}Ë7?…#ø#Äj¼i³8İ¯\7:Ô‹•œ¨ÆxAş¬†½ŸŸCŠ ñ­6öÁöŞYÍoŞ!Z¬O<V±ªjW—Ó%ıÜÓ˜Ü®³ŒqY¨û²z ¥p1;fŠ[gsÅ©w.4=(Ò7şş5m|8ÓàÕ~ èöWÊN7#ß›+.îîÊoèöñïû\	'›Ÿ»Ì¬GéŠ§¦ê—Z^±m©ÛI¶æÖU–6ÆpÊr>´öî¯<ºEÔ×.ÉFK•8ö¯—^µ±‚êòÚ[‹{ÇSäÇ)’Ü‚2Üg§JöUµñw„á½Ú\B‘ÿ q»Šğï_ßêZ˜´Y`š8[b#`Pİ½Ş¶Ú2Å|—)s1¸’;¶òC Aär>•ÜmZøcÀ×´Š¨V"@=Û¢Ä×—hÖWZf­av¶ïd¡g…OîØÀv'Š¥ñKÄıa¤‰Ii$óY;^ë@aw6¡{=ÔÍºYİ¤äœšîşëö¥Ëê†O ”F»yä ÈqÔ5hÜÂööNB°ù}è×ßâŸ…âû–—²Û
+*ÇÅİ5wmØv2Oä+Çú§¥ò mkQ´Õuº¶²[=ä—DrÀ¶zóY˜Pz~tåQŠn	=h¥Ïü|7NßÊŠKõíÍ ¶hÚDwò|Şh÷xçò­¯xXñ´÷)¥¤{-T4­#môß¯åQøOGŸWš8MÃEjOÏ´õÁï^Åğ§P·Ğüw !Ì7©Y?½2Øÿ ¾K~TÖhšeŞ`Ö>Ò‘t#Û¸¯ñ^“s§jSIn[k1nNv×Ôwº|ÈD•ñ…‘Ï½x~§¤¶³ã³áá©Yğy¸ƒşÎ?¿Ûühµñ\ÓéÑ[Ü¤²y@¼Õæş$Õå×5™n¦A>EAÑtõ³¦øwáßï/ZÙd™"Ø²?2I!àsõ¯“%•¦•änY‰&€%µ“É™H+Vââ­ü™•„ä!õSÍa¡ ‚jÁ”¿ñç&€ 	Æ(ïÇån9Ï¸¤#1@
+(' `Aä8=¨œÿ ëšŠ'ÎlQ@?†o–ÂÙ¦ÎYG$äş•«¦x‚M;XµÕ"§‚ánûMœ‘ô#"¸ûiB[ {Şõ*ÜdúĞ×3ñbişšdëö½F –¾\}ÿ Àıq^#¬ÍŸsÌ.VæöÁ^&c“N	ÏÍ¸~:öªÕ'Ö.ìm/.ÒÉÖ8UùÚ…·`{u«ŸÖ6òÂÖß
+[3ñÕYÙ˜~´ ¿¼||Gà½&Îgÿ Ìÿ JPx;Şÿ dÎ¼ˆx«šè½–«€‘>íÔşµD°ÏP¿x}}(Q‚¦äœSÃ6qŸ­ H$u]¡¸şUcbÉneyz¨éŠ­‡"®YüêÈÜnR(:{ÓÛPúŠ{(=:ĞmÇúö¢–äbá±ÏNŞÔP‘ "iÉÈ÷4Ø¹‰G½=N3œP›MVãJºó­[c”Ù‘Ô{ıjÖ¥¨½ó´’9e(¨»p `ÈV$œ¾zf‘X…#<P{R;~Şôî=hÉœ8§…'æîj4¶{T™Ë/·¥ J20Z·Êò1š§œ*ea·¦€-ÜÃ²RG*ØqøÕw?™Éò!ë‘‘ÏÖ£sÆh6~&j)n?×·áü¨ ÷c4ï5ÀÆx¢Š nO­(bÆŠ(3ü¨ÏJ( q=èAÎh¢€Ìo_ÒçHzµP{pÊªdázp)Ÿh”ƒ–ıPlÅ›'­Q@ÿÙ_3http://www.livejournal.com/userpic/32018971/4173821Ó#$%Ó01%Ó=>!Ó#$%Ó01%Óde!O­ÿØÿà JFIF  H H  ÿí Photoshop 3.0 8BIMí      H     H    8BIMó            8BIM
+       8BIM'     
+        8BIMõ     H /ff  lff       /ff  ¡™š       2    Z         5    -        8BIM        8BIM          €   `  €     û  ÿØÿà JFIF  H H  ÿş 'File written by Adobe Photoshop¨ 4.0 ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  ` €" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? óá'@‘•!3ä™Äğ¤`FfT€)	Snïš6¦$¦Æ™ãT¡Ã²3í$h’WcLkÊiSkO‚›+qp wI :øXïô¾1ùıª·UÕ1¾­D°@ËKìµÚÍÌn„ptP™jÛŒ=e:‘CÇ.—#d«?)µVßw'€’'_%…L‚
+×Ëª×êÚÈ™moiÔB’ì5¤ÉE¬
+†¨”“B+ÿĞàÁLJ™„Ä	O®ÄF$ƒFˆÍ>(¤#Û=‘êd§c'EnšDâa+\6×ír‹S@p>+€ñ±–5­äŸâ…®W[9ÏlpAqğ[5–5Á r9˜–ccŠÙÄêuªÅo°VÖ»R2Ş…Ğ´Qá’D±-²¢ÍöG”­^°¨qí+«ÔÈ¤±ç@éãÉóKZA‘šÇ7ÛGp4Y9N’tZvÒê«,hæI×²Ï½ W¤Õ‘=Zd¢Ru:(˜E¦ ”îŒoÿÑá 'Ñ4&´şmÃ5P­¡Z¡¡ß$”ÊšuÑ_¦Z£UMİÇ!hS$iä…¦,¸JÕé8_§¡MP Oá¢è: .µÑÀ³cõj£A³Û«ßˆk—ËeõŠõˆT2½[Z4f’NŠ")»`¸¹µ)xãB1Š6Şæw€½ ôÊI ˜×UË¿¤Õ	©»™°g@d#5c¬Hròê‘Ä…X¼—YŸx\·Q€÷5:,…6
+ÃØBc[¹X!½“šïÿÒáöø"5º¤ĞˆÆLO5ÒWX +˜õ
+˜tÕhcWÆº¤¢[xô‡=†‹Rš„JtZ´c—‘Ù4¦ØÑ@.hë£èìmt8÷qïä³1ñıÀx­œzı:ƒGšèË†z•ZÂó
+µ”°ºÂ5÷ú@hL÷
+¹ííûÓu-‘”ml:{)°ÔâÒÑ (‡8>7©<«™™äúér°›nûÌ{tÒQÒéÊYõ+DL÷\†s…—?ÂWAÖj¬q<|×:ö“$”ø†¾l–iZE vPÚg•(>)ÇÉ…ÿÓãÒS8Ad«”7‰Oè×MMDÂÓÄ§¹ù*ôW BÖÃÇ'²µ¹A<ss§ã’Ñ=åRÃÆtèş<5ºpšN©•V)Z!­ÂP•3B$jÔ±¢5Y÷40“Èğ[¬8p³ò© ;NÈ&È;¼şs/  ¹Ü‰®Íıÿ ¹t}A\¹ÌÖ—;N‘ÙdäK•cïvãÛûÕ6%_¹+F…9Éİ¬àeGTïÒ…)ÿÔã+çUv™©0r™ÓTşŒ¦,è·ğåş+ŸÄÇÅt==¦cıyM(z^Ÿ×k¿‚ÖcD ©ôÚ‹A?ëÂ¾h¿oR $“Ù–(4ïaU„!¼§SÇp{†«ËÇ Ì/I²Š­XÙÌ…›•õo#‚úÏÿ ªDhÄqKÍóŠà,ËšàJô.£õ#nì\†Ùü—4ƒÏò7®'©àdâZú¯c˜æÎiõA¨ñ-á#w"Í'TâkLò«8Pÿ ÿÙ 8BIM          ÿş 'File written by Adobe Photoshop¨ 4.0 ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  K d" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? óp
+gJ˜ošbÓ<§°° ©m?Ş¤ÖkÊ—¦|QJ˜ÂŠS×W‚0§X”•N‡IÆ}•’;•xáØÑî½ƒ¤_éØLÁ-ñ„__éH/ñåE¹Ä<F)" ÕdåĞöL®³2¶Vò9>7ÖlxhìĞŒJÌ°§p ¦ÕXÈ¥¬::P6ù§µŠM¦OdÊI!ÿĞó½º¤ÙJv)á…v0rˆÚÁø©6½ªi×„’µq(ãNŠŞ>8ì|Î<?‡uÑ¿NÃuTºÛçOM½¿”¶©È&¶ÚBÓ¯ôm«g 	ù eazâ!E-N®Œ1˜Djò}fçU˜İ$±òZókŸcéÁÿ SôV÷Ö: c-Š¢ú÷Ğ×Ç#”F€5re!~/9se²yê¼¡ŸXlªMh.HòĞ²Ú6BH°AkÿÑóİ¦°g„şŒ)© ‘¦‹O \İ9äª˜ì“ [x4N°‚-.>7’Úéx®KFxû‚>9˜šŞèøå¶5ÑôA2…²c˜ãÒÈ©µê9Y—Òë®Ù-ÒÑ:y­{KO¹æ§uõ0—HÓ²eÛ~9Sƒõƒ§[Šigó®ÓU‘‚ÌlZë$Ö‰#Å_ë—Öı–`‚²²²Şìq è5Hç#{ÓÌuRö…F¨“¢±•a¶×;·d˜*ZiHÙ,¤O	&”CÿÒàš
+µK	*½|…¡ŒĞJwFÙÄ¤’<;®‡
+‡@òYØûˆ]7NÂq#D	XK¾€HÕkââš› SÂÇôØ	%n²c&ÚY5à‡6^5LÜF„]#ë÷Y=GµÑ-™8ˆ:¼WU­›v²~%bfåØqÅùŸ%¿ÕšD€¹¼šõ3Êjå#eËsN¨&U›‡*«¾)*JJÒAOÿÓàê‰ZÅ²³ëåhcrº0—¡éq!w]¶¹€‘ÂáúWæğ»şüÈãšd–ibûº`'H$+£j5Z)'\ÂŞı‘Ò@×TO†½O#Ôş®f»s«g¨?’dıËê>ügmngõ×•>«ıßÑâ?í_ó4EÖŒ$C¤¾×Ã²X%P°…Ó}dô~ÒïOìsùßcõvìÇ·şÚ\İ½øGU ‘)%ß²I%ÿÙ_3http://www.livejournal.com/userpic/31611544/2413698Ó#$%Óhi%O¼GIF89aD æ Œ³ÙÙåò³Ìæ›ÊáõÍ4f`“ÆYŒ¿L²@s¦6iœ¼ÒéS†¹c–É\ÂâìõpŸÏFy¬ƒ¬Öõùü ¿ß9lŸy¦Ò=p£ÅÙììòù–¹Ü9lM€ÏßïPƒ¶'M€Q€²Cv©V‰¼I|¯-`“ÌÌÌ
+<n©Æâ7i1c–&YŒ@sO~Fy S†+YŒa‘³&Py<f™Dv~®ÊAs:l¿ÂÆ™“‰Duœ¸§%Pƒ#M€k›»`YyGy=j0Fp\m{‘ÁÙd€›:l”M€³ K{Fs¦ˆ·Ò-]AnŸ=lŸ³Æ™¦³Ï†åìò³¹¿=Zt:m V†¹[Œ¿éëìFmÖº—{€‚æÃ›¨=pï“–,T†7`“.Pqüüü‰œ¯)\©Æ@Msp‰£fŒ³¯y‰lƒkvMlŒÂÆÉòõùŸs†N¤'S†ßŒ“¿€Œ)V‰ßæìïòõÒÒÒ @lp`|õõõ@c†3f™ 3fÿÿÿf™Ìÿÿÿ!ù   ,    D  ÿ€~‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÉ$||	Î×Ø ÒÓİ|{Ùáâ•$Şæ|ãêë‰-İ>hOxAİ!	
+{ÿ{Dğ€Á]î¦y§Ì9jŠ0°¢Å	ÜhK…Â.iºib…“iàˆ`±B‚F$Hp1`A8[!˜v§‹i+šôjÅI·tƒĞÄèA#"*TT "§UUÜäüä#J¡}êˆ‰1í¥ÿ.0hğˆT€Uÿ¯Êu@¡›ikn”°†‘s(î‰à`R–ÿF´ €ã•(8v¡†É$’Œy2äE0kVDáØ@‹zòèB­1c8QQì a^ 3E·_ë§Ï ã‰vòñ‚«Ş%Ìt3‘†‰i"Ü$Ô@‚™	F pJÈÀ‰€°ˆJ_ Û'7!ôk@Ÿ>{Şô¦õ×ÇúÉà ó% ‚ö1Áo‡48T„Ğ·Èş)baf8œqC)¢\sLDİdñaÄØÃQ…àÁ5¤€v„ ¶ˆ¨7Ô‰ØPÀ‘K2ÿXŸ’XÂ_„D&òaˆ†a”ˆ\Éà‚Fb…ıé§¡"ZJè!˜"G"r‰lĞ+¶ÈÂ1æ™CY ˜	 ĞÔúDğÖ
+ 9{TäzŠPqä‘^Ò”„X@_j…Li`•]²¹™˜`qæ˜‚xyjÚ…n–¨ˆX)êp¸’¸Hİ8]‹.˜@Cy²€RU€Àbˆ õOIÄ¬n­9i’…œß Üê‡§} ® °Úê "O‚Õ ø5A¨ç¦ê­úAà™…|xàqÄ™K_¹ùÎ;I9|ÌpÃ_|XÃÁÄÄuÔD@#"øóãÿ ‚!Uˆ– ‚„‘l'ˆ¦`ÙçG»jJ‰¯#ªûÑg2!-·Ló™x«oµÆ
+ç!Úö×ä©X^òzœ¤‚ lPDÃÌ8Æ8àlù!F‡p|Iº}4	6†*÷ûˆÍ1ƒÕ³½K3Ñ_Æë²¬>M¯œ®lé§ş¢šÉrò9ˆ|ÀØğ|˜ÉÖ{h|u×Õ"‚„”WqÊ\B@ß	‡€	Ú‚hÉå ¢“)7èw÷«¹ÜqÓ—Áˆt’n `÷m·%¼NCB!{µ±EB“£‚,ù‹|0)‡h°­ójw  Ô'ïP·ƒıvÚ±·î7êõúÑ­ÿÙ7Õvšé©ºZŞ:ö¼‚ÈãIìÃ(EÂxÖüs|+„òÄ<C¬n(¹áĞP^'½¹¯|ğ3Ä¦:¥¾÷}o^W¢ÀùFÁ ´2ôÂ…2Î™.‚œ8šjä4¨I‘ğ‡Sú—’Eî,@Á*È°j{t #P7A¢nòb÷4³Ö ]ï
+¡ø*OÑˆ¬à¦A¼ÁjˆSœ#hâ”ø/K74DwÄ}ÉàQDïÙ­f$ÕĞ:h¡ş¬¬ÀˆÄNL¡ŠDï†Õ0àq ,)ãmˆ<E¬ñz ÚV”Å$¢0ÿC¥²ŒÎØ>1	gnìIÊşÊ¡@àCÖó¤ß6á€
+x„ó+Dı†¿o<¢NaÜÿHˆK"â|Tä`Y	 %Â.\Ë<áiÁù‹=Sš «0ùÌÛ¡Î¸€FTÈÂ§5ì…TSMøa&oy‰¸ÔB	G)bòv¬"Û ¨ÈL<RóC`#æûØC2	‘úØL5GNˆG[äCA8Ã+Œ"CD?1‚Á¸Ó’ğDÄøúÉhBuZ"¤ X¥LY†¨”¥¢ÏÚP:!BbÒgC5q ôâÓH¤ z÷FÒ GKX#ö‚AĞÄM„1QP{zî¤óÿ×kªzEYšĞ‚Ş”)}öèDAŒô ƒ8_„ŞUHL„ó&V^.	ñ!à ‹0c"ı‘Q?x¤TØ.¤ˆ«>‚Ÿ·Ë”jƒÓúP•>ÛC¬4ı€Ó	Är ‚€€Z™YU1ÍÔ¥›@ Õ.€„ğa…„à€t€ƒ-è€ ÀÂ4–¶ˆ`MhÔ£"ÄPALõüìÃW7Ùv`P«ûÒ”Ú¹.B@rCX¯³Ì“DZ%3ÏŠ™7ÎÍ¦•0€Oa|0 pU-l×[ì0bGƒ0Ïv‹75†~<b"â˜FÒE¨ojâ}HUÉS	bƒ'$’bÑ:ÅÈ¬;cğÿ#$6(@c	@ä 6ö®¸\öpM‹Z¼µo`ôÜÂŠI i
+Y	\È*Â›íÏ)½'ˆUîØBUì!~ˆb ºÊ‹0€5Ûâ–¹d ^ëaHa‹¨ ´˜¦[úö§·~øíÿººÌyù@—¥q„f›KHÀ<öÃ‚ûĞU "hİ{&C»D$+‚Â\ªL»B\¡Ê°ÍÂ4&V(à&ı4!(0®JÀn“«oÆÕI Xz\×ÄeÓPSµ1Ù1" @L¦´¹q¥÷3®áÔ™šu!,Pé™J ÒÖãõ§ÅE‰4•É
+8ÄyuÿÇ š w…á!paBTÀÉsÉv'H4N£İ ‚­ƒi,Ù!¯FœNm»ûçöCÿú*ˆ[òjÀB•µ€×F?ÚÚØ~·À)a€-¢ê6„\`Õzx¶†°Z\1b¨üâ“ğÀÄskqE€›†¶ m ¸—;‰BùD1ÎòFÜæ9q;°o\ÁäeáÎæKˆ2ºå@GÕh"	0ü!ƒçËı[ıé %>ò 2½D8+5¨{Ş>6Ái~”T@Ò,‘ù××~–ocÂè|Cd^q¶Ûfl·/ĞõAävéw_{ŞGa5ÿ¾>ğfû'
+ß÷Ã~	ç„ÕãxÄÿ£ñš˜¼Ú+ïõHšçüáqùKŒØğ¢¼yö0qLt4˜O½¶ÿ@ûÚÛŞöPøÇÚpûŞû¾÷P8ÃÈğûâÿøÈO¾ò—Ïüæ;ÿùĞ¾ô£‡(Ò?B
+R0ƒé{ÿûà¿øÇOşòÛ)°>ö_%ìá60¿üçOÿúÛÿş¶ç@¸Ïü¼`)pø7€X€x€µ÷é÷/ğë÷{5°$ğ<ğ€x˜È|\0ñ<À5P3À;ğÿ;Ø‚.ø‚-È˜# 1ƒ8˜ƒ:8€3p‚‘/°3`;X„Fx„ ;_/http://stat.livejournal.com/xc/logocombined.gifÔklmn!_WebResourceTextEncodingNameUUTF-8Ont<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><HEAD>  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>stonemirror: "Questions, questions, questions, flooding the mind of the concerned young person today..."*</TITLE>
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/basic.css">
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/menu-normal.css">
+
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/normal-fonts.css">
+
+ 
+  
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/extended.css"> 
+  <LINK rel="home" title="Home" href="/">
+  <LINK rel="contents" title="Site Map" href="/site/">
+  <LINK rel="help" title="Technical Support" href="/support/">
+  <SCRIPT type="text/javascript" src="http://stat.livejournal.com/xc/layout.js"></SCRIPT>  
+<SCRIPT type="text/javascript" src="http://www.livejournal.com/js/md5.js"></SCRIPT><SCRIPT language="JavaScript" type="text/javascript">
+    <!--
+function sendForm (formid, checkuser)
+{
+    if (formid == null) formid = 'login';
+    // 'checkuser' is the element id name of the username textfield.
+    // only use it if you care to verify a username exists before hashing.
+
+    if (! document.getElementById) return true;
+    var loginform = document.getElementById(formid);
+    if (! loginform) return true;
+    
+    // Avoid accessing the password field if there is no username.
+    // This works around Opera < 7 complaints when commenting.
+    if (checkuser) {
+        var username = null;
+        for (var i = 0; username == null && i < loginform.elements.length; i++) {
+            if (loginform.elements[i].id == checkuser) username = loginform.elements[i];
+        }
+        if (username != null && username.value == "") return true;
+    }
+
+    if (! loginform.password || ! loginform.login_chal || ! loginform.login_response) return true;
+    var pass = loginform.password.value;
+    var chal = loginform.login_chal.value;
+    var res = MD5(chal + MD5(pass));
+    loginform.login_response.value = res;
+    loginform.password.value = "";  // dont send clear-text password!
+    return true;
+}
+// -->
+</SCRIPT>
+
+  <LINK href="/go.bml?journal=stonemirror&itemid=909709&dir=prev" rel="Previous"><LINK href="/go.bml?journal=stonemirror&itemid=909709&dir=next" rel="Next"><SCRIPT src="http://www.livejournal.com/js/commentmanage.js"></SCRIPT><STYLE> div.ljcmtmanage { color: #000; background: #e0e0e0; border: 2px solid #000; padding: 3px; }</STYLE><SCRIPT>var LJ_cmtinfo = {8613261: {u: "niamh04",rc: []},8611469: {u: "iblis_kukl",rc: [8611981]},8613517: {u: "stonemirror",rc: []},8611725: {u: "stonemirror",rc: [8613005]},remote: "",8612749: {u: "likeasuicide",rc: [8613517]},8611213: {u: "adityanath",rc: [8612237]},8611981: {u: "stonemirror",rc: []},8612493: {u: "surf_sidhe",rc: []},8610701: {u: "lucyfyre",rc: []},8613005: {u: "anthologie",rc: []},8610957: {u: "anthologie",rc: [8611725]},journal: "stonemirror",canAdmin: 0,8612237: {u: "stonemirror",rc: []}};
+function userhook_screen_comment_ARG (dIid) { setStyle('cmtbar'+dIid, 'background', "#cccccc"); }
+function userhook_unscreen_comment_ARG (dIid) { setStyle('cmtbar'+dIid, 'background', "#bbddff"); }
+var LJVAR; if (!LJVAR) LJVAR = new Object(); LJVAR.imgprefix = "http://stat.livejournal.com/img";
+</SCRIPT>
+
+</HEAD><BODY class="home">
+  
+
+
+  <DIV id="Content" onclick="unshow();">    
+    <H1></H1>
+
+        <P><TABLE><TBODY><TR valign="middle"><TD><IMG src="http://www.livejournal.com/userpic/1822747/575765" width="100" height="100" align="absmiddle" hspace="3" title="×¢=×: barry" alt=""></TD><TD>×¢=× (<SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=stonemirror"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/stonemirror/"><B>stonemirror</B></A></SPAN>) wrote,<BR><FONT size="-1">@ <A href="http://www.livejournal.com/users/stonemirror/2005/">2005</A>-<A href="http://www.livejournal.com/users/stonemirror/2005/07/">07</A>-<A href="http://www.livejournal.com/users/stonemirror/2005/07/08/">08</A> 10:22:00</FONT></TD></TR></TBODY></TABLE></P><DIV class="standout"><TABLE class="container"><TBODY><TR><TD>
+<TABLE><TBODY><TR><TD valign="middle"><A href="/go.bml?journal=stonemirror&itemid=909709&dir=prev"><IMG src="http://stat.livejournal.com/img/btn_prev.gif" width="22" height="20" alt="Previous Entry" title="Previous Entry" border="0" align="absmiddle"></A>Â Â <A href="/tools/memadd.bml?journal=stonemirror&itemid=909709"><IMG src="http://stat.livejournal.com/img/memadd.gif" width="22" height="20" alt="Add to memories!" title="Add to memories!" border="0" align="absmiddle"></A>Â Â <A href="/go.bml?journal=stonemirror&itemid=909709&dir=next"><IMG src="http://stat.livejournal.com/img/btn_next.gif" width="22" height="20" alt="Next Entry" title="Next Entry" border="0" align="absmiddle"></A></TD></TR></TBODY></TABLE>
+</TD></TR></TBODY></TABLE></DIV>
+<DIV style="margin-left: 30px"><FONT face="Arial,Helvetica" size="+1"><I><B>"Questions, questions, questions, flooding the mind of the concerned young person today..."*</B></I></FONT><BR>
+People sometimes ask me, "Lefty, how is it that you're so awesomely efficient, and yet able to waste so much time on things like Livejournal and samurai movies?"<BR><BR>Part of the answer, I suppose, is things that are difficult to pass on: I don't need a ton of sleep, and I'm generally happy on five or six hours, with the occasional cat nap here and there; I'm a bright enough guy, but, more importantly, I've got a pretty keen sense of where the "tipping points" lie.<BR><BR>At least as importantly, though, I've got a good set of tools to work with. The big challenge I find is keeping track of shit and not letting stuff fall through the cracks.<BR><BR>A really good approach to sorting out the stuff you need to do is the one which <A href="http://www.davidco.com">David Allen</A> described in his book <I><A href="http://www.amazon.com/exec/obidos/tg/detail/-/0142000280/">Getting Things Done</A>, </I>which I'd recommend to anybody.<BR><BR>A really helpful aid which I recently came across is a version of <A href="http://tiddlywiki.com/">TiddlyWiki</A> prettied up and arranged to work with the <I>Getting Things Done </I>approach. It's called <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTDTiddlyWiki</A>, and it essentially gives you a little teensy wiki in a local file you can use to track all the stuff you need to be looking after.<BR><BR>Good stuff. Check it out.<BR><BR>* <FONT size="-2">Frank Zappa and the Mothers of Invention, <I>Call Any Vegetable</I></FONT></DIV><BR clear="all"><HR width="100%" size="2" align="center"><DIV id="Comments"><A name="comments"></A><FORM style="display: inline" method="post" action="/talkmulti.bml" name="multiform" id="multiform"><P class="lesstop" align="center"><B>(<A href="http://www.livejournal.com/users/stonemirror/909709.html?mode=reply">Post a new comment</A>)</B></P><INPUT type="hidden" name="ditemid" value="909709"><INPUT type="hidden" name="journal" value="stonemirror"><A name="t8610701"></A><TABLE id="ljcmt8610701" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8610701" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/7667198/1137433" width="70" title="Dream Slut" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=lucyfyre"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/lucyfyre/"><B>lucyfyre</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 19:28</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8610701#t8610701">link</A>)</FONT> </TD></TR><TR><TD>Ha! I read your review of Getting things done on Amazon, just the other day. Wanted to congratulate you on what you wrote about the S.Flowers book too. :) <BR><BR>Now, where did I put my coffee...<BR><BR> <P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8610701">Reply to this</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8610957"></A><TABLE id="ljcmt8610957" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8610957" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/30847390/428921" width="100" title="a collection of modern verse: Anais" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=anthologie"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/anthologie/"><B>anthologie</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 19:31</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8610957#t8610957">link</A>)</FONT> </TD></TR><TR><TD>Speaking of things on your to-do list:<BR><BR><A href="http://www.livejournal.com/users/anthologie/796295.html">http://www.livejournal.com/users/anthol<WBR>ogie/796295.html</WBR></A><BR><BR>:)<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8610957">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8610957#t8610957">Thread</A>)</FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8611725"></A><TABLE id="ljcmt8611725" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="25"></TD><TD id="cmtbar8611725" bgcolor="#aaccee" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/32005060/575765" width="97" title="×¢=×" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=stonemirror"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/stonemirror/"><B>stonemirror</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 20:48</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611725#t8611725">link</A>)</FONT> </TD></TR><TR><TD>Only <I>ten, </I>huh?<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8611725">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8610957#t8610957">Parent</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611725#t8611725">Thread</A>)</FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8613005"></A><TABLE id="ljcmt8613005" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="50"></TD><TD id="cmtbar8613005" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/27114657/428921" width="100" title="a collection of modern verse" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=anthologie"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/anthologie/"><B>anthologie</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 21:09</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8613005#t8613005">link</A>)</FONT> </TD></TR><TR><TD>C'mon, you're a man of efficiency. You can boil it down. :)<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8613005">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611725#t8611725">Parent</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8611213"></A><TABLE id="ljcmt8611213" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8611213" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/14499928/819592" width="97" title="Aditya Ramachandran" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=adityanath"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/adityanath/"><B>adityanath</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 19:39</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611213#t8611213">link</A>)</FONT> </TD></TR><TR><TD>Ha! I've been thinking about getting a Palm, but your post made me realize that a <A href="http://merlin.blogs.com/43folders/2004/09/introducing_the.html">Hipster PDA</A> is much cheaper...<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8611213">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611213#t8611213">Thread</A>)</FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8612237"></A><TABLE id="ljcmt8612237" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="25"></TD><TD id="cmtbar8612237" bgcolor="#aaccee" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/32005060/575765" width="97" title="×¢=×" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=stonemirror"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/stonemirror/"><B>stonemirror</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 20:49</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8612237#t8612237">link</A>)</FONT> </TD></TR><TR><TD>Yeah, but if you buy the Palm, <I>I </I>get a quarter.<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8612237">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611213#t8611213">Parent</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8611469"></A><TABLE id="ljcmt8611469" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8611469" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/12284831/313258" width="96" title="Eliazar The Ultraviolet" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=iblis_kukl"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/iblis_kukl/"><B>iblis_kukl</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 20:23</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611469#t8611469">link</A>)</FONT> </TD></TR><TR><TD><FONT color="purple">My answer to that would've been something along the lines of "who says either of those has to be a waste of time??"  But that's me.</FONT><BR><BR><FONT color="magenta">eliazar }()+</FONT><P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8611469">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611469#t8611469">Thread</A>)</FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8611981"></A><TABLE id="ljcmt8611981" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="25"></TD><TD id="cmtbar8611981" bgcolor="#aaccee" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/32005060/575765" width="97" title="×¢=×" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=stonemirror"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/stonemirror/"><B>stonemirror</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 20:48</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611981#t8611981">link</A>)</FONT> </TD></TR><TR><TD>I don't actually consider 'em a waste of time, or I wouldn't do 'em.<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8611981">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8611469#t8611469">Parent</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8612493"></A><TABLE id="ljcmt8612493" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8612493" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/29832430/3537768" width="81" title="The Surfin' Sidhe" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=surf_sidhe"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/surf_sidhe/"><B>surf_sidhe</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 20:51</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8612493#t8612493">link</A>)</FONT> </TD></TR><TR><TD>Damn -- only five or six hours of sleep?  I'm generally a bitch to deal with if I don't get at least eight.<BR><BR>Which explains this reputation of mine, I think ...<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8612493">Reply to this</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8612749"></A><TABLE id="ljcmt8612749" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8612749" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/32018971/4173821" width="100" title="likeasuicide" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=likeasuicide"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/likeasuicide/"><B>likeasuicide</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 21:02</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8612749#t8612749">link</A>)</FONT> </TD></TR><TR><TD>i'd like to add you, would that be ok?<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8612749">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8612749#t8612749">Thread</A>)</FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8613517"></A><TABLE id="ljcmt8613517" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="25"></TD><TD id="cmtbar8613517" bgcolor="#aaccee" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/32005060/575765" width="97" title="×¢=×" alt="" height="100"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=stonemirror"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/stonemirror/"><B>stonemirror</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 21:57</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8613517#t8613517">link</A>)</FONT> </TD></TR><TR><TD>Nyet problema.<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8613517">Reply to this</A>) (<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8612749#t8612749">Parent</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<A name="t8613261"></A><TABLE id="ljcmt8613261" width="100%" class="talk-comment"><TBODY><TR><TD rowspan="2"><IMG src="http://stat.livejournal.com/img/dot.gif" height="1" width="0"></TD><TD id="cmtbar8613261" bgcolor="#bbddff" width="100%"><IMG align="left" hspace="3" src="http://www.livejournal.com/userpic/31611544/2413698" width="100" title="niamh04" alt="" height="75"><FONT size="+1" face="Arial,Helvetica"><B></B></FONT> <BR><SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=niamh04"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/niamh04/"><B>niamh04</B></A></SPAN>
+<BR><FONT size="-1">2005-07-08 21:33</FONT>
+ <FONT size="-1">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?thread=8613261#t8613261">link</A>)</FONT> </TD></TR><TR><TD>You stay on LJ cause you love us! Admit it -- you do! *grins*<P style="margin: 0.7em 0 0.2em 0"><FONT size="-2">(<A href="http://www.livejournal.com/users/stonemirror/909709.html?replyto=8613261">Reply to this</A>) </FONT></P></TD></TR></TBODY></TABLE>
+<HR><P class="lesstop" align="center"><B></B></P></FORM><P><A name="comments"></A></P></DIV>
+
+    
+  </DIV>
+  <DIV id="Logo" onclick="unshow();"><A href="/"><IMG src="http://stat.livejournal.com/xc/logocombined.gif" alt="LiveJournal" border="0"></A></DIV>
+  <DIV id="NotLoggedInDiv" style="position: absolute; left: auto; right: 50px; top: 15px; width: auto; height: 20px; text-align: right; color: #FFF; background-color: transparent; font: 14px Arial, Helvetica, sans-serif;"><I>Not <A href="/login.bml" onclick="return xcShowLoginDiv();">logged in</A>.</I><DIV style="font-size: 12px; margin-top: 0.2em"><I>(<A href="/create.bml">Create</A> account.)</I></DIV></DIV>  <DIV id="LoginBox" class="nopic" style="display:none"><FORM id="login" action="/login.bml" method="post">  <INPUT type="hidden" name="mode" value="login">
+  <INPUT type="hidden" name="chal" id="login_chal" value="c0:1120863600:2176:300:ZtMgMdUrhUWcovSltdC9:2b1d2c1911b0355e6ec2d63cb5237407">
+  <INPUT type="hidden" name="response" id="login_response" value="">
+  <LABEL for="xc_user">Username:</LABEL> <INPUT type="text" name="user" size="15" maxlength="15" tabindex="1" id="xc_user" value="" style="background: url(http://stat.livejournal.com/img/userinfo.gif) no-repeat; background-color: #fff; background-position: 0px 1px; padding-left: 18px; color: #00C; font-weight: bold;">
+  <LABEL for="xc_password">Password:</LABEL> <INPUT type="password" name="password" size="10" tabindex="2" id="xc_password">
+<INPUT type="submit" onclick="return sendForm()" value="Login?" tabindex="3"></FORM></DIV>
+  <FORM id="Search" action="/multisearch.bml" method="post">    <LABEL for="SearchTerm">Search:</LABEL>    <INPUT id="SearchTerm" type="text" name="q" size="15" value="">
+    <LABEL for="SearchType">Category:</LABEL> <SELECT id="SearchType" name="type"><OPTION value="user" selected="selected">Username</OPTION><OPTION value="email">E-mail</OPTION><OPTION value="region">Region</OPTION><OPTION value="int">Interest</OPTION><OPTION value="aolim">AOL IM</OPTION><OPTION value="icq">ICQ Number</OPTION><OPTION value="yahoo">Yahoo! ID</OPTION><OPTION value="msn">MSN Username</OPTION><OPTION value="jabber">Jabber</OPTION></SELECT>
+    <INPUT type="submit" value="Search">
+  </FORM>   <H2 id="NavMenuListTitle">Navigate:</H2>
+
+  <UL id="NavMenuList">    <LI><A href="/doc/tour/" onmouseover="javascript:show(0)" onfocus="javascript:show(0)" id="Menu0" style="background-color: rgb(0, 51, 102); color: rgb(255, 255, 255); ">Welcome</A>
+      <UL class="NavSubMenuList" style="visibility: hidden; ">        <LI><A href="/login.bml">Login</A></LI>
+        <LI><A href="/create.bml">Create an Account</A></LI>
+        <LI><A href="/update.bml">Update Your Journal</A></LI>
+        <LI><A href="/manage/siteopts.bml" id="Setlang">English â€¢ EspaÃ±ol â€¢ Deutsch â€¢ Ğ ÑƒÑÑĞºĞ¸Ğ¹ â€¢ â†’</A></LI>
+    </UL></LI>
+    <LI><A href="/site/search.bml" onmouseover="javascript:show(1)" onfocus="javascript:show(1)" id="Menu1">Search</A>
+      <UL class="NavSubMenuList">        <LI><A href="/random.bml">Random</A></LI>
+        <LI><A href="/directory.bml">Region</A></LI>
+        <LI><A href="/interests.bml">Interests</A></LI>
+        <LI><A href="/directorysearch.bml">Advanced</A></LI>
+    </UL></LI>
+    <LI><A href="/support/" onmouseover="javascript:show(2)" onfocus="javascript:show(2)" id="Menu2">Help</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/">Ask a Question</A></LI>
+        <LI><A href="/lostinfo.bml">Lost Password</A></LI>
+        <LI><A href="/support/faq.bml"><ABBR title="Frequently Asked Questions">FAQ</ABBR></A></LI>
+        <LI><A href="/site/">Site Map</A></LI>
+        <LI><A href="/manage/siteopts.bml">Browse Options</A></LI>
+        <LI><A href="/press/staff.bml">ContactÂ Info</A></LI>
+    </UL></LI>
+    <LI><A href="/site/about.bml" onmouseover="javascript:show(3)" onfocus="javascript:show(3)" id="Menu3">About</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/faqbrowse.bml?faqcat=about">General Info</A></LI>
+        <LI><A href="/press/">Press</A></LI>
+        <LI><A href="/download/">Download</A></LI>
+        <LI><A href="/news.bml">Site News</A></LI>
+        <LI><A href="/paidaccounts/">Paid Accounts</A></LI>
+    </UL></LI>
+  </UL>
+
+  <UL id="FooterNav">    <LI><A id="menu-tos" href="/legal/tos.bml">Terms of Service</A></LI>
+    <LI><A id="menu-privacy" href="/legal/privacy.bml">Privacy Policy</A></LI>
+    <LI><A id="menu-legal" href="/legal/">Legal Information</A></LI>
+    <LI><A id="menu-sitemap" href="/site/">Site Map</A></LI>
+    <LI><A id="menu-siteopts" href="/manage/siteopts.bml">Browse Options</A></LI>
+  </UL>
+
+
+
+
+</BODY></HTML>_8http://www.livejournal.com/users/stonemirror/909709.html        1  e  l  ~    £ S ~ ‡  S „ ‹ " T [ .* .X ._ 6  6+ 6F 6M ]Å ]ì ]ó  Q  ‚  ‰ ¶Y ¶ ¶— ¶ ·¤ ·Ó ·İ ·ä º@ ºo ºv ¼$ ¼Q ¼X ¾¸ ¾ç ¾î Â ÂC ÂJ Î$ ÎY Î` Îg În ØÙ Ù Ù Ù Ù# ÷y ÷® ÷µ ÷¼ ÷ÃEzˆ$V$‹$’$™$ $§$®$µ6™6Î6Õ6Ü6ã6ê6ñ6øTÇTıUUU__Å_Ì_Ó_Ú_á_è_ïm mÖmİmäy¤yÖyßyızè{             o             è¶

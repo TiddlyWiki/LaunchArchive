@@ -1,0 +1,538 @@
+bplist00“_WebSubresources_WebMainResource•”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO¬/**
+	Stylesheet for Brian Lamb's blog
+	Aug. 17/2004
+	Written by Michelle Chua, michelle.chua@ubc.ca
+	
+	NB: Fluid layout
+	
+**/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff; /*#4C7899;*/
+}
+a, a:link {
+	text-decoration: none;
+	color: #0066B2;
+	background: transparent;
+}
+
+a:visited {
+	color: #999;
+}
+a:active, a:hover {
+	color: #AB1411;
+	background: transparent;
+}
+
+h1, h2, h3 {
+	padding: 0;
+	margin: 0;
+}
+
+#banner {
+	background: #fff url(table.gif) bottom left no-repeat;
+	height: 170px;
+	/*padding: 0 35px;*/
+	padding-left: 180px;
+	margin: 0;
+	text-align: left; /*right;*/
+}
+
+#banner h1 {
+	padding: 35px 0 0 0;
+}
+#banner a,
+	#banner a:link,
+	#banner a:visited,
+	#banner a:active,
+	#banner a:hover {
+	text-decoration: none;
+	font: normal 1.2em/1.25em "Lucida Grande", "Lucida Sans", "Trebuchet MS", verdana, arial, helvetica, sans-serif; 
+	letter-spacing: 3px;
+	text-transform: lowercase;
+	color: #0066B2; /*#879FAD;*/
+}
+
+.description {
+	font: normal 0.85em "Lucida Grande", "Trebuchet MS", verdana, arial, helvetica, sans-serif;
+	padding: 15px 0 0 0;
+	display: block;
+}
+			
+#content {
+	/*border: 2px solid #A6C3D4;*/
+	background: #fff; 
+	width: 68%;
+	margin: 26px 0 0 0;
+	float: left;
+	border-right: 1px dotted #999;
+}
+
+#container {
+}
+
+#links {
+	margin: 26px 0 0 2px;
+	padding-left: 15px;
+	background: #fff;
+	height: 100%;
+	color: #333;
+	float: left;
+	width: 18%;
+}
+	
+.blog {
+	padding: 5px 0 0 10px;
+}
+
+.blogbody {
+	font: 0.8em "Lucida Grande", "Trebuchet MS", verdana, arial, helvetica, sans-serif;
+	padding-right: 10px;
+}
+
+.blogbody a,
+.blogbody a:link,
+.blogbody a:visited,
+.blogbody a:active,
+.blogbody a:hover {
+	text-decoration: underline;
+}
+
+.title {
+	color: #D11815;
+	background: #fff;
+	font: bold 1.2em verdana, arial, helvetica, sans-serif;
+}			
+
+#menu {
+	font: 0.8em verdana, arial, helvetica, sans-serif;
+	text-align: center;
+}		
+
+.date { 
+	text-align: left;
+	font: bold 0.8em "Lucida Grande", "Lucida Sans", "Trebuchet MS", verdana, arial, helvetica, sans-serif;
+	text-transform: lowercase;
+	color: #0066B2;
+	background: #fff url(pen.gif) center left no-repeat;
+	border-bottom: 1px dotted #999;
+	padding: 5px 0 4px 40px;
+}			
+	
+.posted	{
+	margin-bottom: 15px;
+}
+	
+	
+.calendar {
+}
+
+.calendarhead {	
+
+}	
+
+.side {
+	font: 0.7em verdana, arial, helvetica, sans-serif;
+	padding: 5px 10px;
+}	
+	
+.sidetitle {
+	font: bold 0.7em verdana, arial, helvetica, sans-serif;
+	text-transform: lowercase;
+	color: #D11815;
+	background: transparent;
+	padding: 8px 0 5px 0;
+	border-bottom: 1px dotted #ccc;
+}		
+
+.syndicate {
+	margin: 10px 0;
+	text-align: center;
+	font: bold 0.7em verdana, arial, helvetica, sans-serif;
+}	
+	
+.powered {
+	font: bold 0.8em verdana, arial, helvetica, sans-serif;
+	text-align: center;
+}	
+	
+
+.comments-body {
+	font: normal 0.9em "Lucida Grande", "Trebuchet MS", verdana, arial, helvetica, sans-serif;
+	padding-bottom: 25px;
+}
+
+.comments-body p {
+	margin-left: 15px;
+}
+
+.comments-post {
+	font: normal 0.7em verdana, arial, helvetica, sans-serif;
+}	
+		
+
+.trackback-url {
+}
+
+
+.trackback-body {
+}		
+
+.trackback-post {
+	font-family:verdana, arial, sans-serif;
+	color:#666;
+	font-size:x-small;
+	font-weight:normal;
+	background:#FFF;		
+}	
+
+	
+.comments-head	{
+	font: bold 0.7em verdana, arial, helvetica, sans-serif;
+	padding: 12px 0;
+	color: #D11815;
+	background: #fff;
+}		
+
+#banner-commentspop { 
+	background: #eee;
+	margin: 0;
+	padding: 15px 10px;
+	text-align: left;
+	font: bold 1.2em "Lucida Grande", "Lucida Sans", "Trebuchet MS", verdana, arial, helvetica, sans-serif; 
+	letter-spacing: 3px;
+	text-transform: lowercase;
+	color: #0066B2;
+}
+
+/************************ css for additional html ******************************/
+#allcontainer {
+	padding: 2em 3.5em;
+	min-width: 15em;
+}
+
+blockquote {
+	padding: 15px 0;
+	height: 100%;
+	background: transparent url(quotes.gif) center center no-repeat;
+}_;http://careo.elearning.ubc.ca/weblogs/brian/styles-site.cssXtext/css”O  
+function write_ref() {
+   document.write("<script language='Javascript' src='http://commons.ucalgary.ca/cgi-bin/referrers.cgi?in=" + document.referrer + "&out=" + document.location + "'>");
+   document.write("</");
+   document.write("script>");
+}
+write_ref();_/http://commons.ucalgary.ca/weblogs/referrers.js_application/x-javascript”O±function referrals() {
+   document.write("<p class=rhead>Documents referring to this site within the last 96 hours (minimum 1 references):</p><p class=rlist>");
+   document.write("<span class=rname><a href='http:\/\/www.bloglines.com\/myblogs_display'>Bloglines | Log In</a> </span><span class=rnum>[2]<br /></span>");
+   document.write("<span class=rname><a href='http:\/\/us.f318.mail.yahoo.com\/ym\/ShowLetter'>Yahoo! Mail</a> </span><span class=rnum>[1]<br /></span>");
+   document.write("</p><p class=rcredit><p class=rcredits>List referrers to your own site with a single Javascript command (free!): <a href='http://www.downes.ca/referrers.htm'>click here</a>.</p>");
+}
+referrals();
+_yhttp://commons.ucalgary.ca/cgi-bin/referrers.cgi?in=&out=http://careo.elearning.ubc.ca/weblogs/brian/archives/012634.html_text/javascript”O"// Copyright (c)2005 Site Meter, Inc. 
+// <![CDATA[
+// codename: sm7objectlearning
+
+var g_date=new Date();
+var g_hours=0;
+var g_minutes=0;
+var g_tzo = (typeof(g_date.getTimezoneOffset)!="undefined") ? g_date.getTimezoneOffset() : "";
+var g_width=window.screen.width; 
+var g_height=window.screen.height;
+var g_colorDepth=window.screen.colorDepth;
+var g_r="";
+var g_page=escape(document.location);
+var g_rtype="0";
+var g_server="67.19.21.130";
+var g_language = navigator.language ? navigator.language : navigator.userLanguage;
+var g_ip="86.135.122.118";
+
+// Get the User Agent Name
+var g_agent = navigator.appName;
+
+// if g_frames is true then try getting the framed referral (with out error checking)
+if (typeof(g_frames) != "undefined")
+	if (g_frames)
+		g_r=top.document.referrer;
+
+// Get the referral for non-multi-domained-framed sites using a Netscape browser
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["parent"] != null) 
+		if (parent["document"] != null) // ACCESS ERROR HERE!
+			if (parent.document["referrer"] != null) 
+				if (typeof(parent.document) == "object")
+				{
+					g_rtype="1";
+					g_r=parent.document.referrer; 
+				}
+
+// Get the referral for the current document if a framed referral wasn't found
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["referrer"] != null) 
+	{
+		g_rtype="4";
+		g_r = document.referrer;
+	}
+
+// Get the hours
+if (g_date)
+	g_hours=g_date.getHours();
+
+// Get the minutes
+if (g_date)
+	g_minutes=g_date.getMinutes();
+
+// Convert all the 'unknown's into blank
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	g_r = "";
+
+// Create the image url and write it into the page. 
+var g_bImage=1;
+if (typeof(g_sLastCodeName) != "undefined")
+	if (g_sLastCodeName == site)
+	    g_bImage = 0;
+if (g_bImage == 1)
+{
+document.write("<a href=\"http://www.sitemeter.com/");
+document.write("stats.asp?site="+site+"\" target=\"_top\">");
+document.write("<img src=\"http://" + g_server + "/");
+document.write("meter.asp?site="+site); 
+document.write("&refer="+escape(g_r));
+if (g_ip != "")
+	document.write("&ip="+g_ip);
+document.write("&hours="+g_hours);
+document.write("&minutes="+g_minutes);
+document.write("&rtype="+g_rtype);
+document.write("&w="+g_width);
+document.write("&h="+g_height);
+document.write("&clr="+g_colorDepth);
+document.write("&tzo="+g_tzo);
+document.write("&lang="+escape(g_language));
+if (typeof(g_security) != "undefined")
+	document.write("&security="+escape(g_security));
+document.write("&pg="+g_page);
+document.write("&js=1&rnd="+Math.random());
+document.write("\" border=\"0\" alt=\"Site Meter\"/></a>");
+}
+
+var g_sLastCodeName = site;
+
+// ]]>
+_=http://sm7.sitemeter.com/js/counter.js?site=sm7objectlearning”O]GIF87a  ˜     3  f  ô  Ã  ˇ   3 33 f3 ô3 Ã3 ˇ3  f 3f ff ôf Ãf ˇf  ô 3ô fô ôô Ãô ˇô  Ã 3Ã fÃ ôÃ ÃÃ ˇÃ  ˇ 3ˇ fˇ ôˇ Ãˇ ˇˇ   33 3f 3ô 3Ã 3ˇ 3 33333f33ô33Ã33ˇ33 f33f3ff3ôf3Ãf3ˇf3 ô33ô3fô3ôô3Ãô3ˇô3 Ã33Ã3fÃ3ôÃ3ÃÃ3ˇÃ3 ˇ33ˇ3fˇ3ôˇ3Ãˇ3ˇˇ3  f3 ff fô fÃ fˇ f 3f33ff3fô3fÃ3fˇ3f ff3fffffôffÃffˇff ôf3ôffôfôôfÃôfˇôf Ãf3ÃffÃfôÃfÃÃfˇÃf ˇf3ˇffˇfôˇfÃˇfˇˇf  ô3 ôf ôô ôÃ ôˇ ô 3ô33ôf3ôô3ôÃ3ôˇ3ô fô3fôffôôfôÃfôˇfô ôô3ôôfôôôôôÃôôˇôô Ãô3ÃôfÃôôÃôÃÃôˇÃô ˇô3ˇôfˇôôˇôÃˇôˇˇô  Ã3 Ãf Ãô ÃÃ Ãˇ Ã 3Ã33Ãf3Ãô3ÃÃ3Ãˇ3Ã fÃ3fÃffÃôfÃÃfÃˇfÃ ôÃ3ôÃfôÃôôÃÃôÃˇôÃ ÃÃ3ÃÃfÃÃôÃÃÃÃÃˇÃÃ ˇÃ3ˇÃfˇÃôˇÃÃˇÃˇˇÃ  ˇ3 ˇf ˇô ˇÃ ˇˇ ˇ 3ˇ33ˇf3ˇô3ˇÃ3ˇˇ3ˇ fˇ3fˇffˇôfˇÃfˇˇfˇ ôˇ3ôˇfôˇôôˇÃôˇˇôˇ Ãˇ3ÃˇfÃˇôÃˇÃÃˇˇÃˇ ˇˇ3ˇˇfˇˇôˇˇÃˇˇˇˇˇ                                                                                                                        !˘     ,       ˇ Y	H∞†A:º(Ù"H"á¨±2Ö»+ ¨t ÒBÜ"èàB∂BDPF (Åt‰(àL Dáz„
+4T–@°gO@0` #|hò‡É¬7nƒê#∆
+å=|Ñ√ıêòC3¡bÖhï)åa
+â1$¨£C≤b\T®ê!Cvë2Ëﬂ∞5Y°å Oa?àµ¯°¬òä
+EâÚ#Ÿ'ƒx2„a¨¬	dVù:ëÚD™t©”•ô5+c∞NûHBΩ™¥R1b⁄ÌÈÈÿ•ˆ§>(5∆I»%MrÛ∆çsÁIî$)ë$ FJô(Ωô¥ΩŒõ:Jö+:ë^ÇFMv@©Ác
+î©˜¶$ZlÕJä>|Òi((˛ƒ‹¨L!bÅ¸“êÇÅ‡‡ÉFa@ ;_Ìhttp://67.19.21.130/meter.asp?site=sm7objectlearning&refer=&ip=86.135.122.118&hours=0&minutes=1&rtype=4&w=1280&h=854&clr=32&tzo=-60&lang=en&pg=http%3A//careo.elearning.ubc.ca/weblogs/brian/archives/012634.html&js=1&rnd=0.9543537096839183Yimage/gif‘_WebResourceTextEncodingNameUUTF-8O-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>Abject Learning: Is it a wiki? A floor wax?  A dessert topping?</TITLE>
+
+<LINK rel="stylesheet" href="http://careo.elearning.ubc.ca/weblogs/brian/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://careo.elearning.ubc.ca/weblogs/brian/index.rdf">
+
+<LINK rel="start" href="http://careo.elearning.ubc.ca/weblogs/brian/" title="Home"><LINK rel="prev" href="http://careo.elearning.ubc.ca/weblogs/brian/archives/012614.html" title="Inspirational prose from Franz Kafka">
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'careo.elearning.ubc.ca';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+
+</HEAD><BODY><DIV id="allcontainer">
+<DIV id="banner"><H1><A href="http://careo.elearning.ubc.ca/weblogs/brian/" accesskey="1">Abject Learning</A></H1>
+<SPAN class="description">Reusable media, personal publishing, and petty battles with rivals over power and money...</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://careo.elearning.ubc.ca/weblogs/brian/archives/012614.html">¬´ Inspirational prose from Franz Kafka</A> |
+
+<A href="http://careo.elearning.ubc.ca/weblogs/brian/">Main</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">June 28, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">Is it a wiki? A floor wax?  A dessert topping?</H3>
+
+<P>Yet another application to keep me tantalized and humbled all at once...</P>
+
+<P>I've been spotting <A title="TiddlyWiki - a reusable non-linear personal web notebook" href="http://www.tiddlywiki.com/">TiddlyWiki</A> in my peripheral vision for some time now, but only over the past couple days have I fixed my gaze on it.  So far my reaction has been a jumble of impulses ranging from "wow!" to "huh?"</P>
+
+<P>As usual, someone I work with here at OLT is way ahead of me.  Alison Wong was exploring the utility of <A href="http://careo.elearning.ubc.ca/weblogs/alison/archives/012116.php">TiddlyWiki as an ePortfolio tool weeks ago</A>:<BR>
+</P><BLOCKQUOTE><P></P>
+
+<P>The good thing about the system is that it does not require any server side support (no database, no php and no perl scripting). The entire tool is contained in one html file using HTML, CSS and JavaScript. Which makes the wiki very portable, and can be run in any modern browser. As suggested on the website, I also installed it and PortableFirefox on my USB thumb drive. This would make updating/showing the e-portfolio very portable as well. However, to save the changes of the wiki page, it requires Firefox or Internet Explorer, plus save capabilities (write access) to a server.</P>
+
+<P>Hence, I envision end-users working on a local copy of the wiki file in a folder on their computers. Then upload the final version and all associated files (contents in the folder) to a server.<BR>
+</P></BLOCKQUOTE><P></P>
+
+<P>You read that right: no database.  That hits home when you click the DownloadSoftware link on the site, only to learn that since "TiddlyWiki is a single HTML file, you've actually already downloaded the entire software just by viewing this site."  See what I mean about "wow!" and "huh?"</P>
+
+<P>More Wow! - the interface is very smooth and sleek, and loaded with nifty JavaScript tricks that allow the page to reshape itself without reloading.  I know that in a year these JavaScript/Ajax tricks will be overused, and we'll all be tired of them, but right now I confess I'm a total sucker for the effect. </P>
+
+<P>And there's that word <A href="http://www.technorati.com/tag/microcontent">microcontent</A> again...</P>
+
+<P>More Huh? - because there is no database, when you access TiddlyWiki on the web the experience is unusual.  You can click "edit" or "delete" links all over the place, and make whatever changes you like.  But unless you save a copy to your own machine (and maybe upload it again to the server), your changes will not stick.  Nobody else will see your changes, and hitting "refresh" on the browser will take you back to the page's original state.  </P>
+
+<P>So I'm inclined to agree with Alison when she suggests that <A href="http://careo.elearning.ubc.ca/weblogs/alison/archives/012157.php">"calling TiddlyWiki a wiki system could be a little misleading."</A>  (The site's description, "a reusable non-linear personal web notebook" is more accurate, but not so catchy.)</P>
+
+<P>So after an hour or so of confused meanderings, where have I gotten with this thing?  I'm definitely intrigued, even excited, but at this point I am unsure how TiddlyWiki can be properly exploited.  Alison thinks it might work well as an HTML-based composition tool that newbies can use, perhaps in tandem with a CMS.  I'd like to do more comprehensive reworkings of the page to see how effectively templates can be constructed.  And I haven't tested how the RSS outputs can be manipulated.</P>
+
+<P>And I've only begun to explore the examples of TiddlyWiki in action (like <A href="http://espringer.web.wesleyan.edu/">this</A>) and the adaptations (like <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">this</A> and <A href="http://www.digitaldimsum.co.uk/">this</A>).  More head-scratching to come...</P>
+
+<P>Has anybody else got thoughts?  Really... do you?  Please?  </P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by blamb at June 28, 2005 01:02 PM
+| <A href="http://careo.elearning.ubc.ca/cgi-bin/movabletype/mt-tb.cgi?__mode=view&entry_id=12634" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+
+<BR></SPAN>
+
+</DIV>
+
+
+<DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+<DIV class="comments-body"><P>yeah. played with tiddly before leaving. Sounds cool, but it's a bit restrictive - it's a single HTML file, and has to be on your local drive so you have to republish it. I guess for an eportfolio or something, that could be a big benefit, though...</P>
+<SPAN class="comments-post">Posted by: <A href="http://www.darcynorman.net">D'Arcy Norman</A> at June 28, 2005 01:29 PM</SPAN>
+</DIV>
+
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="http://careo.elearning.ubc.ca/cgi-bin/movabletype/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="12634">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="submit" name="preview" value="¬†Preview¬†">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="¬†Post¬†"><BR><BR>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+</DIV>
+
+
+</DIV>
+</DIV>
+</DIV>
+
+<DIV class="side"><SCRIPT language="Javascript" src="http://commons.ucalgary.ca/weblogs/referrers.js"></SCRIPT><SCRIPT language="Javascript" src="http://commons.ucalgary.ca/cgi-bin/referrers.cgi?in=&out=http://careo.elearning.ubc.ca/weblogs/brian/archives/012634.html"></SCRIPT><P class="rhead">Documents referring to this site within the last 96 hours (minimum 1 references):</P><P class="rlist"><SPAN class="rname"><A href="http://www.bloglines.com/myblogs_display">Bloglines | Log In</A> </SPAN><SPAN class="rnum">[2]<BR></SPAN><SPAN class="rname"><A href="http://us.f318.mail.yahoo.com/ym/ShowLetter">Yahoo! Mail</A> </SPAN><SPAN class="rnum">[1]<BR></SPAN></P><P class="rcredit"></P><P class="rcredits">List referrers to your own site with a single Javascript command (free!): <A href="http://www.downes.ca/referrers.htm">click here</A>.</P> 
+
+<SCRIPT type="text/javascript" language="JavaScript">var site="sm7objectlearning"</SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript1.2" src="http://sm7.sitemeter.com/js/counter.js?site=sm7objectlearning">
+</SCRIPT><A href="http://www.sitemeter.com/stats.asp?site=sm7objectlearning" target="_top"><IMG src="http://67.19.21.130/meter.asp?site=sm7objectlearning&refer=&ip=86.135.122.118&hours=0&minutes=1&rtype=4&w=1280&h=854&clr=32&tzo=-60&lang=en&pg=http%3A//careo.elearning.ubc.ca/weblogs/brian/archives/012634.html&js=1&rnd=0.9543537096839183" border="0" alt="Site Meter"></A>
+
+
+</DIV>
+
+
+
+
+
+</BODY></HTML>_@http://careo.elearning.ubc.ca/weblogs/brian/archives/012634.htmlYtext/html    1 7 > P _ u;yÇâôÀÊÌ¢07 ] ù §%%ı%ˇ&&&&,S?SÇ                            Så

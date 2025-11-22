@@ -1,0 +1,415 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO	body {
+		margin:10px 10px 10px 10px;
+		background:#FFFFFF;
+		}
+
+	A 	{ color: #003366; text-decoration: none; font-weight:bold; }
+	A:link	{ color: #003366; text-decoration: none; }
+	A:visited{ color: #003366; text-decoration: none; }
+	A:active{ color: #FFCC66;  }
+	A:hover	{ color: #FFCC66;  }
+
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:x-large;
+		font-weight:bold;
+		border-left:1px solid #FFF;
+		border-right:1px solid #FFF;
+		border-top:1px solid #FFF;
+  		background:#66CC66;
+  		padding:15px;
+		}
+
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:georgia, verdana, arial, sans-serif;
+		font-size: x-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#66CC66;
+  		text-transform:none;
+		}
+				
+	#content {
+		float:left;
+		position:relative;
+		width:70%;
+		background:#FFF;
+		margin-right:15px;
+		margin-bottom:20px;
+		border:1px solid #FFF;	
+		}
+
+	#container {
+		background:#FFF;
+		border:1px solid #FFF;		
+		}
+
+	#links {
+		background:#66CC66;
+		padding:15px;				
+		border:1px solid #FFF;			
+		}
+		
+	.blog {
+  		padding:15px;
+		background:#FFF; 
+		}
+
+	.blogbody {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#000;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:150%;
+		}
+
+	.blogbody a,
+	.blogbody a:link,
+	.blogbody a:visited,
+	.blogbody a:active,
+	.blogbody a:hover {
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	.title	{
+		font-family: verdana, arial, sans-serif;
+		font-size:12px;
+		color: #000000;
+		text-transform:uppercase;
+		}			
+
+	#menu {
+  		margin-bottom:15px;
+		background:#FFF;
+		text-align:center;
+		}		
+
+	.date	{ 
+		font-family:georgia, verdana, arial, sans-serif; 
+		font-size: small; 
+		color: #666; 
+		border-bottom:1px solid #999;
+		margin-bottom:10px;
+		font-weight:bold;
+		}			
+		
+	.posted	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: x-small; 
+		color: #000000; 
+		margin-bottom:25px;
+		}
+		
+		
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#66CC66;
+  		line-height:140%;
+  		padding:2px;
+  		text-align:center;	
+		}
+	
+	.calendarhead {	
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#66CC66;
+  		line-height:140%;
+  		padding:2px;					
+		}	
+	
+	.side {
+		font-family:verdana, arial, sans-serif;
+		color:#333;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#66CC66;
+  		line-height:140%;
+  		padding:2px;				
+		}	
+		
+	.sidetitle {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+  		margin-top:10px;
+		letter-spacing: .1em;
+		border-bottom:1px dotted #FFF;
+		text-align:center;
+  		background:#66CC66;
+		}		
+	
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:xx-small;
+		font-weight:bold;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:10px;
+  		text-align:center;
+  		background:#CCC;  		
+ 		}	
+		
+	.powered {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:xx-small;
+		font-weight:bold;
+  		border:1px dotted #999;			
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing: .2em;					
+  		background:#FFF;		
+		}	
+		
+	
+	.comments-body {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:11px;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+			
+	
+	.trackback-url {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding:5px;		
+ 		border:1px dotted #999; 					
+		}
+
+
+	.trackback-body {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;		
+		}	
+
+		
+	.comments-head	{ 
+		font-family:georgia, verdana, arial, sans-serif; 
+		font-size:small; 
+		color: #666; 
+		border-bottom:1px solid #999;
+		margin-top:20px;
+		font-weight:bold;
+  		background:#FFF;		
+		}		
+
+	#banner-commentspop {
+		font-family:georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-left:1px solid #FFF;	
+		border-right:1px solid #FFF;  		
+		border-top:1px solid #FFF;  		
+  		background:#66CC66;
+  		padding-left:15px;
+  		padding-right:15px;
+  		padding-top:5px;
+  		padding-bottom:5px;  		  		  			 
+		}
+
+	.codeblock {
+	        font: 10px monaco, "andale mono", courier, "courier new";
+/*		background-color: #e8e8a6;  */
+		border: 1px dotted rgb(91,91,91);
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-left: 10px;
+	}
+_=http://rover.cs.northwestern.edu/~surana/blog/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>Green Hat Journal: TiddlyWiki</TITLE>
+
+<LINK rel="stylesheet" href="http://rover.cs.northwestern.edu/~surana/blog/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://rover.cs.northwestern.edu/~surana/blog/index.rdf">
+
+<LINK rel="start" href="http://rover.cs.northwestern.edu/~surana/blog/" title="Home"><LINK rel="prev" href="http://rover.cs.northwestern.edu/~surana/blog/past/000241.html" title="Abstract">
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'rover.cs.northwestern.edu';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://rover.cs.northwestern.edu/~surana/blog/" accesskey="1">Green Hat Journal</A></H1>
+<SPAN class="description">a brain dump of random ideas</SPAN>
+</DIV>
+
+<DIV id="content">
+<DIV class="blog">
+<DIV id="menu"><A href="http://rover.cs.northwestern.edu/~surana/blog/past/000241.html">Â« Abstract</A> |
+
+<A href="http://rover.cs.northwestern.edu/~surana/blog/">Main</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 26, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">TiddlyWiki</H3>
+
+<P><A href="http://tiddlywiki.com">This</A> is the most amazing Javascript web app ever. You must try it.</P>
+
+<P>It seems like browsers+javascript will become an amazing platform like emacs+elisp.<BR>
+</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by surana at May 26, 2005 07:03 PM
+
+<BR></SPAN>
+
+</DIV>
+
+
+</DIV>
+</DIV>
+
+<DIV id="links">
+<DIV class="sidetitle">Google Results
+</DIV>
+
+<DIV class="side">
+</DIV>
+
+</DIV>
+
+<BR clear="all">
+
+
+</BODY></HTML>_>http://rover.cs.northwestern.edu/~surana/blog/past/000242.htmlYtext/html    1 3 : L [ q’ÒÛä% %a                           %k

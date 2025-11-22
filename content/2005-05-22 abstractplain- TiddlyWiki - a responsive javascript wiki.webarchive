@@ -1,0 +1,396 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOebody {
+	font-family: verdana, arial, sans-serif;
+        background-color: white;
+        background-image: url("images/repeatslice.gif");
+        background-repeat: repeat-x;
+        background-position: 0px 0px;
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+}
+
+A {
+	color: #CC6633;
+	text-decoration: none;
+}
+
+A:link {
+	color: #CC6633;
+	text-decoration: none;
+}
+
+A:visited {
+	color: #CC6633;
+	text-decoration: none;
+}
+
+A:active {
+	color: #FF9966;
+}
+
+A:hover {
+	color: #FF9966;
+}
+
+#rightheader {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+}
+
+#leftheader {
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       z-index: -1;
+}
+
+#banner {
+        background-image: url("images/leftheader.jpg");
+        background-repeat: no-repeat;
+        height: 100px;
+        margin: 0px;
+}
+
+#banner h1 {
+        font-size: normal;
+	font-weight: normal;
+	letter-spacing: 2px;
+        padding-top: 30px;
+        padding-left: 50px;
+        margin: 0px;
+}
+
+#banner .description {
+	font-size: x-small;
+	text-transform: uppercase;
+        padding-left: 50px;
+        letter-spacing: 5px;
+}
+
+#banner a, #banner a:link, #banner a:visited, #banner a:active, #banner a:hover {
+        color: #333;
+	text-decoration: none;
+}
+
+#content {
+        background:#fff;
+        margin-left: 230px;
+        margin-right: 100px;
+        margin-top: 20px;
+        border:1px solid #fff;
+        padding: 10px;
+}
+
+.blog {
+	padding: 15px;
+	background: #FFF;
+}
+
+.blogbody {
+	color: #333;
+	font-size: small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 200%;
+}
+
+.date {
+	font-size: large;
+	color: #333;
+	border-bottom: 1px solid #999;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.posted {
+	font-size: x-small;
+	color: #000000;
+	margin-bottom: 25px;
+        text-transform: uppercase;
+}
+
+#links {
+	position: absolute;
+        left:10px;
+	top:108px;
+	width:200px;
+	background:#fff;
+	border-right: 1px solid #999;
+        padding: 10px;
+
+}
+
+#container {
+	background: #FFF;
+	border: 1px solid #FFF;
+}
+
+.blogbody a, .blogbody a:link, .blogbody a:visited, .blogbody a:active, .blogbody a:hover {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.title {
+	font-size: medium;
+	color: #666;
+}
+
+#menu {
+	margin-bottom: 15px;
+	background: #FFF;
+	text-align: center;
+}
+
+
+
+
+
+.calendar {
+	color: #666;
+	font-size: x-small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 140%;
+	padding: 2px;
+	text-align: left;
+}
+
+.calendarhead {
+	color: #666600;
+	font-size: small;
+	font-weight: normal;
+	padding: 2px;
+	letter-spacing: .3em;
+	background: #FFF;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.side {
+	color: #333;
+	font-size: x-small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 140%;
+	padding: 2px;
+}
+
+.sidetitle {
+	color: #666600;
+	font-size: small;
+	font-weight: normal;
+	padding: 2px;
+	margin-top: 30px;
+	letter-spacing: .3em;
+	background: #FFF;
+	text-transform: uppercase;
+}
+
+.syndicate {
+	font-size: xx-small;
+	line-height: 140%;
+	padding: 2px;
+	margin-top: 15px;
+	background: #FFF;
+}
+
+.powered {
+	color: #666;
+	font-size: x-small;
+	line-height: 140%;
+	text-transform: uppercase;
+	padding: 2px;
+	margin-top: 50px;
+	letter-spacing: .2em;
+	background: #FFF;
+}
+
+.comments-body {
+	color: #666;
+	font-size: small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 140%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px dotted #999;
+}
+
+.comments-post {
+	color: #666;
+	font-size: x-small;
+	font-weight: normal;
+	background: #FFF;
+}
+
+.trackback-url {
+	color: #666;
+	font-size: small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 140%;
+	padding: 5px;
+	border: 1px dotted #999;
+}
+
+.trackback-body {
+	color: #666;
+	font-size: small;
+	font-weight: normal;
+	background: #FFF;
+	line-height: 140%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px dotted #999;
+}
+
+.trackback-post {
+	color: #666;
+	font-size: x-small;
+	font-weight: normal;
+	background: #FFF;
+}
+
+.comments-head {
+	font-size: small;
+	color: #666;
+	border-bottom: 1px solid #999;
+	margin-top: 20px;
+	font-weight: bold;
+	background: #FFF;
+}
+
+#banner-commentspop {
+	color: #333;
+	font-size: large;
+	font-weight: bold;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	background: #cccc99;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+#rightcontent {
+position: absolute;
+right:10px;
+top:108px;
+width:200px;
+background:#fff;
+border:1px solid #000;
+	}_,http://www.abstractplain.net/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>abstractplain: TiddlyWiki - a responsive javascript wiki</TITLE>
+
+<LINK rel="stylesheet" href="http://www.abstractplain.net/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.abstractplain.net/index.rdf">
+
+<LINK rel="start" href="http://www.abstractplain.net/" title="Home"><LINK rel="prev" href="http://www.abstractplain.net/mt-archives/000729.html" title="28 courses">
+
+<LINK rel="next" href="http://www.abstractplain.net/mt-archives/000731.html" title="Monotone - distributed version control">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.abstractplain.net';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://www.abstractplain.net/" accesskey="1">abstractplain</A></H1>
+<SPAN class="description">Ahead of me go my rapiders of how thiefly brilliand.</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://www.abstractplain.net/mt-archives/000729.html">Â« 28 courses</A> |
+
+<A href="http://www.abstractplain.net/">Main</A>
+| <A href="http://www.abstractplain.net/mt-archives/000731.html">Monotone - distributed version control Â»</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 13, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">TiddlyWiki - a responsive javascript wiki</H3>
+
+<P><A title="GTDTiddlyWiki - all your tasks are belong to you" href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTDTiddlyWiki </A>.  Sam says it in a nutshell: <A href="http://sma.mulube.com/">Pretty neat but not sure how useful it would actually be</A>.</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by neillzero at May 13, 2005 12:14 PM
+<BR></SPAN>
+
+</DIV>
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_4http://www.abstractplain.net/mt-archives/000730.htmlYtext/html    1 3 : L [ qÚ	9?!R!‰                           !“

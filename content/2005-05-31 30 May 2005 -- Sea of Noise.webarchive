@@ -1,0 +1,463 @@
+bplist00Ó_WebSubresources_WebMainResource_WebSubframeArchives¤Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOÚh1		{
+		font-size: 18pt;
+		}
+h2		{
+		font-size: 16pt;
+		}
+blockquote	{
+		text-align: justify;
+		font-size: smaller;
+		}
+.menubar	{
+		text-align: center;
+		)
+.note		{
+		font-size: smaller;
+		}
+.legal		{
+		font-size: smaller;
+		}
+
+/* Blosxom section */
+
+.moreentries	{
+		text-align: center;
+		font-size: larger;
+		font-weight: 800;
+		}
+
+/* Hide stuff when printing */
+
+@media print	(
+	.ad	{
+		display: none;
+	}
+	.search	{
+		display: none;
+	}
+	.menubar	{
+		display: none;
+	}
+}
+_http://seaofnoise.com/son.cssXtext/cssÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓOGGIF89aK   ÷Ø   „ l ¹ › 	r £ Ç ¶ © x 'Ä -Ï (¹ —"s,;qt{• 1× .Ç (©9¸2‹:£@N{`jŠ«³Í(Fš3JHYŒv‡µ‡•¼‚‹£²¸Ê8¾E±(R·@aµYs±dÁTiŸhz¨o{š¢­È“š¬ÎØğ­²¿
+JÔu‘ÏªâáäëXæ1bÉJwÎk“çd‡ÑkØ¿ÅÑâèô¶¸¼ùûÿàáãy›Ø‡¤Û‚›È›²Û²½ÑÆÎÜZ‰Öt£ñ’­Ú«½ÜµÈæÉÕé×Üä½ÎåİáåòõøüışİŞßëñõúıÿåèêéíïöøùÔÛİòööüÿÿÏÑÑùşûª´¬¦°¨ f  ` mH?‡?6^6ÆÃœÓœe~e‘¨‘ÁÜÁ‰˜‰Ÿ©ŸéöéØäØ÷ù÷ñòñîïî`¼_€ÈˆÉ…’Ëäæáÿÿùşşûúú÷ÿÿÿööôÛÛÙúúùôòèòÖdÚÊ‰ç¶
+ğÄ(ğÜö¿	ğ»ã²ßÜÒä¦ ŒmË¨@Ê³p ‘eØÎ±¿¹¨³¯£ú² Î• »Š†h¾º°øöñ¢ptPìêæŞÜØ[ îìééäİ¯¥™ù÷õ×ÕÓÇÆÅæÓÉöóòâ«›ÚĞÍäÜÚÜ´¬â{iÙÉÆÛO;éYEĞoaè”‡æ±©ÔÖ)ËZKÅ‰‚èÀ»É­ª¯ ÂÉ6'¸6)¶QH²\U¯nhÒ”ğÏÌÔ ˆ72B<‡JF×¢Ö»¹Ç „l~LJŒ`^Ñ¬«²—–½¥¤×  Ô ¼ ²  §  “ u  X  ŒhxÆ··ÙÓÓıùùêééììì                                                                                                                        !ù  Ø ,    K    ÿ ±	H° Áƒ*\È°¡Ã‡#JœH±¢Å‹3jÜˆÊ”&®1#ç5§¡A‚Äˆ7Ü	iK1nÈ`T"E’™z‚XXĞ@Mƒcºœ¹xdˆƒ´9Z0éÒŠIB|@ˆCÕ‚rº ±8$‡›T¥J5j“Á=€â*òZğ	*N¨aMÎ–±_­}%P‡a<t\ââÂÃR´\ır%‹,‚})R„È Eíô0ÑÁ…r`‹³E‹ÀO­n»¥‹ÖlŠ4ƒÃP±BtLÙ4}íH¨P¡NØî9!Ğ	ƒN²vm%ö@\Ì†áÿ¯˜ ¾V1µ« «dÒ°Íñ£© ¢F°)	qeàa®½ÂŒeÒŠ0Æ,Ôƒ4Ê*Ä$Š.ÎÄ ˆ#‘DH#—´ADĞ	´„ÇY`C
+4×¼‚Š-Ç1D	ìaĞH$±wŒxİÁJ4Óğñ#AÈ%œÔ  ¡!à€-ÒÌ1¾ˆò °A9ÜP.h€*Éc)ÑPÃ‡#‰ô%•!@l$D Ùa-¶²L}™`@–6?@å(È@CEA³<ƒMø4%u@G(1…Ñ6¸ Ì£}ÿbÁÄ`PP‰M-ËôB&Ğ4È„#K”É$‹dMh©]-²¡Œ2¶4ÓBQ$P€FÔC éU4¸D‹¯)2É$™tÇ#uäCôWÓÌ2³x‚M.¸TÓ0À6ø Ãp€ju½8c‹+µÜ‚A‹2	"™!b>  	S`£Ç^€QÆÅÆDã4Íğ’D˜´ğ
+¨ ÄµµñË/’ ”‰"ô9PEP‚8`€utÇYAM)^~%Ch`«@ÖX0À
+ZÓÄy$Eé•½4ZPd»½‘	p°[gÙ$­‘ 0Á@ a	×ø)ppBA(.ùä”Wnùå4 ;_*http://www.google.com/logos/Logo_25wht.gifYimage/gifÓÔUUTF-8O<HTML><HEAD><TITLE>30 May 2005  :: Sea of Noise</TITLE><LINK rel="stylesheet" type="text/css" href="http://seaofnoise.com/son.css"><LINK rel="prefetch" href="http://seaofnoise.com/blosxom"><META name="feedsteridentity" content="cbvh8s6w0xla"></HEAD><BODY bgcolor="#ffffff">
+
+<DIV class="ad" align="center">
+
+
+
+
+
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0747808285852372";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="9212387480";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0747808285852372&dt=1117523528592&format=728x90_as&output=html&channel=9212387480&url=http%3A%2F%2Fseaofnoise.com%2Fblosxom%2F2005%2F05%2F30%23tiddlywiki&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=008000&color_border=336699&cc=98&u_h=854&u_w=1280&u_ah=790&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+
+</DIV>
+
+<H1 align="center">Sea of Noise</H1>
+<P class="menubar" align="center"><A href="http://seaofnoise.com/">Sea of Noise Home</A> | <A href="http://seaofnoise.com/blosxom" rel="Start" title="Latest blog entries">Sea of Noise Blog</A></P>
+<P class="menubar" align="center"><A href="http://seaofnoise.com/blosxom/admin">Admin</A> | <A href="http://seaofnoise.com/blosxom/art">Art</A> | <A href="http://seaofnoise.com/blosxom/books">Books</A> | <A href="http://seaofnoise.com/blosxom/economics">Economics</A> | <A href="http://seaofnoise.com/blosxom/energy">Energy</A> | <A href="http://seaofnoise.com/blosxom/film">Film</A> | <A href="http://seaofnoise.com/blosxom/fun">Fun</A> | <A href="http://seaofnoise.com/blosxom/info">Information</A> | <A href="http://seaofnoise.com/blosxom/intellectualproperty">Intellectual Property</A> | <A href="http://seaofnoise.com/blosxom/internet">Internet</A> | <A href="http://seaofnoise.com/blosxom/it">IT</A> | <A href="http://seaofnoise.com/blosxom/life">Life</A> | <A href="http://seaofnoise.com/blosxom/magick">Magick</A> | <A href="http://seaofnoise.com/blosxom/media">Media</A> | <A href="http://seaofnoise.com/blosxom/music">Music</A> | <A href="http://seaofnoise.com/blosxom/people">People</A> | <A href="http://seaofnoise.com/blosxom/politics">Politics</A> | <A href="http://seaofnoise.com/blosxom/privacy">Privacy</A> | <A href="http://seaofnoise.com/blosxom/science">Science</A> | <A href="http://seaofnoise.com/blosxom/sex">Sex</A> | <A href="http://seaofnoise.com/blosxom/sources">Sources</A> | <A href="http://seaofnoise.com/blosxom/systems">Systems</A> | <A href="http://seaofnoise.com/blosxom/writing">Writing</A></P>
+
+<DIV class="search" align="center">
+<FORM method="get" action="http://www.google.com/custom"><TABLE bgcolor="#FFFFFF">
+<TBODY><TR><TD nowrap="nowrap" valign="top" align="center" height="32"><A href="http://www.google.com/">
+<IMG src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google"></A>
+</TD><TD><INPUT type="hidden" name="domains" value="seaofnoise.com"><INPUT type="text" name="q" size="31" maxlength="255" value="">
+<INPUT type="submit" name="sa" value="Search">
+</TD></TR><TR><TD>Â </TD><TD><FONT size="-1">
+<INPUT type="radio" name="sitesearch" value=""> Web
+<INPUT type="radio" name="sitesearch" value="seaofnoise.com" checked="">seaofnoise.com
+<BR>
+</FONT>
+
+<INPUT type="hidden" name="client" value="pub-0747808285852372">
+<INPUT type="hidden" name="forid" value="1">
+<INPUT type="hidden" name="ie" value="UTF-8">
+<INPUT type="hidden" name="oe" value="UTF-8">
+<INPUT type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:000000;LC:000000;T:0000FF;GFNT:0000FF;GIMP:0000FF;FORID:1;">
+<INPUT type="hidden" name="hl" value="en">
+
+</TD></TR></TBODY></TABLE>
+</FORM>
+</DIV>
+
+<HR size="1" width="75%" noshade="">
+<H3>Mon, 30 May 2005</H3>
+<H2><A name="tiddlywiki">TiddlyWiki</A></H2>
+<P>There's no question about it, <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> is a damn cool idea: download a file with HTML, CSS, and Javascript code and you're in business with a fun little wiki on your personal machine!</P>
+<P>The one danger, I suspect, is that it's so easy to get up and running with it that you won't realize you might have been better off with a different solution until it's too late. On the other hand, it stores the content of the entries in DIV elements, one to a line, so really how hard would it be to convert a TiddlyWiki to a <A href="http://seaofnoise.com/blosxom/info/meta/blogs/blosxom.html">Blosxom</A>-based blog?</P>
+
+<P align="right"><I>[<A href="http://seaofnoise.com/blosxom/info/meta/blogs">/info/meta/blogs</A>] 
+<A href="http://seaofnoise.com/blosxom/info/meta/blogs/tiddlywiki.html">permanent link</A></I>
+</P>
+
+
+<HR size="1" width="75%" noshade="">
+
+<DIV class="search" align="center">
+<FORM method="get" action="http://www.google.com/custom"><TABLE bgcolor="#FFFFFF">
+<TBODY><TR><TD nowrap="nowrap" valign="top" align="center" height="32"><A href="http://www.google.com/">
+<IMG src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google"></A>
+</TD><TD><INPUT type="hidden" name="domains" value="seaofnoise.com"><INPUT type="text" name="q" size="31" maxlength="255" value="">
+<INPUT type="submit" name="sa" value="Search">
+</TD></TR><TR><TD>Â </TD><TD><FONT size="-1">
+<INPUT type="radio" name="sitesearch" value=""> Web
+<INPUT type="radio" name="sitesearch" value="seaofnoise.com" checked="">seaofnoise.com
+<BR>
+</FONT>
+
+<INPUT type="hidden" name="client" value="pub-0747808285852372">
+<INPUT type="hidden" name="forid" value="1">
+<INPUT type="hidden" name="ie" value="UTF-8">
+<INPUT type="hidden" name="oe" value="UTF-8">
+<INPUT type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:000000;LC:000000;T:0000FF;GFNT:0000FF;GIMP:0000FF;FORID:1;">
+<INPUT type="hidden" name="hl" value="en">
+
+</TD></TR></TBODY></TABLE>
+</FORM>
+</DIV>
+
+<P class="menubar" align="center"><A href="http://seaofnoise.com/">Sea of Noise Home</A> | <A href="http://seaofnoise.com/blosxom">Sea of Noise Blog</A></P>
+<P class="legal" align="center">Copyright 2003-2004 Robert Szarka</P>
+<P align="center"><A href="http://seaofnoise.com/blosxom/admin/syndicateme.html">Syndicate Me</A>!</P>
+<P align="center"><A href="http://www.technorati.com/profile/szarka/951559/b35e23a878eb8f2d39aaab5b64fc2018">Technorati Profile</A></P>
+<P align="center">Powered by <A href="http://seaofnoise.com/blosxom/info/meta/blogs/blosxom.html">Blosxom</A>!</P>
+</BODY></HTML>_3http://seaofnoise.com/blosxom/2005/05/30#tiddlywikiYtext/html¡ÑÕ !"_WebResourceFrameNameOq<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #0000ff }a.ad:visited { color: #0000ff }a.ad:hover { color: #0000ff }a.ad:active { color: #0000ff }a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }a.attribution:link { color: #ffffff }a.attribution:visited { color: #ffffff }a.attribution:hover { color: #ffffff }a.attribution:active { color: #ffffff }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#336699"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.squarespace.com/','aw0')" onmouseover="ss('go to www.squarespace.com/','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.squarespace.com/%3FpartnerTag%3Dgoogle%26planTag%3Dblgnetwork&sa=l&ai=BER07Kg6cQoajK5bQaPWH7YUG0JvZCbTa_ZUBwI23AbC9EBABGAEgx_qBAigEQIoWSJY5oAGf1_r-A6oBCjkyMTIzODc0ODCyAQ5zZWFvZm5vaXNlLmNvbboBCTcyOHg5MF9hc8gBAdoBKGh0dHA6Ly9zZWFvZm5vaXNlLmNvbS9ibG9zeG9tLzIwMDUvMDUvMzDoAQE&num=1&client=ca-pub-0747808285852372" onfocus="ss('go to www.squarespace.com/','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.squarespace.com/','aw0')" onmouseout="cs()"><B>Blogging Evolved</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Elegant. Powerful. Professional. The better way to put a blog online </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to pixelenvy.co.uk','aw1')" onmouseover="ss('go to pixelenvy.co.uk','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BZJUUKg6cQoajK5bQaPWH7YUGjYzWCp3M3LgBwI23AZCwChACGAIgx_qBAigEQIoWSI05qgEKOTIxMjM4NzQ4MLIBDnNlYW9mbm9pc2UuY29tugEJNzI4eDkwX2FzyAEB2gEoaHR0cDovL3NlYW9mbm9pc2UuY29tL2Jsb3N4b20vMjAwNS8wNS8zMOgBAQ&num=2&adurl=http://pixelenvy.co.uk%3Fchm%3DWvol&client=ca-pub-0747808285852372" onfocus="ss('go to pixelenvy.co.uk','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to pixelenvy.co.uk','aw1')" onmouseout="cs()"><B>Website Templates</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Premade Html and Flash Templates from Pixel Envy </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.enetation.co.uk','aw2')" onmouseover="ss('go to www.enetation.co.uk','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?sa=l&ai=BEqm7Kg6cQoajK5bQaPWH7YUG1Za-BrqzmAjAjbcBwLgCEAMYAyDH-oECKARAihZIiTmqAQo5MjEyMzg3NDgwsgEOc2Vhb2Zub2lzZS5jb226AQk3Mjh4OTBfYXPIAQHaAShodHRwOi8vc2Vhb2Zub2lzZS5jb20vYmxvc3hvbS8yMDA1LzA1LzMw6AEB&num=3&adurl=http://www.enetation.co.uk/%3Fad%3Dgoogle&client=ca-pub-0747808285852372" onfocus="ss('go to www.enetation.co.uk','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.enetation.co.uk','aw2')" onmouseout="cs()"><B>Free Comments</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Hosted blog and web commenting system. Free and easy to install </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.blogware.com','aw3')" onmouseover="ss('go to www.blogware.com','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://home.blogware.com/&sa=l&ai=B70MUKg6cQoajK5bQaPWH7YUGwLmOCP7wrp4BwI23AfCEDhAEGAQgx_qBAigEQIoWSJc5oAGh177_A6oBCjkyMTIzODc0ODCyAQ5zZWFvZm5vaXNlLmNvbboBCTcyOHg5MF9hc8gBAdoBKGh0dHA6Ly9zZWFvZm5vaXNlLmNvbS9ibG9zeG9tLzIwMDUvMDUvMzDoAQE&num=4&client=ca-pub-0747808285852372" onfocus="ss('go to www.blogware.com','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.blogware.com','aw3')" onmouseout="cs()"><B>Blog Tool for Everyone</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Share ideas, photos, documents, links &amp; more with this blog tool. </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#336699"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://seaofnoise.com/blosxom/2005/05/30&hl=en&client=ca-pub-0747808285852372&adU=www.squarespace.com/&adT=Blogging+Evolved&adU=pixelenvy.co.uk&adT=Website+Templates&adU=www.enetation.co.uk&adT=Free+Comments&adU=www.blogware.com&adT=Blog+Tool+for+Everyone&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_”http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0747808285852372&dt=1117523528592&format=728x90_as&output=html&channel=9212387480&url=http%3A%2F%2Fseaofnoise.com%2Fblosxom%2F2005%2F05%2F30%23tiddlywiki&color_bg=FFFFFF&color_text=000000&color_link=0000FF&color_url=008000&color_border=336699&cc=98&u_h=854&u_w=1280&u_ah=790&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I N U g v ŒjŠ“œºÀ){)µ)Ç)Î00F0P0W0`0fK‡K½KÇKÉKÌK×Kîiciv             #              k

@@ -1,0 +1,1549 @@
+bplist00Ó',_WebSubresources_WebMainResource_WebSubframeArchives¨ #Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO$Ì/*   
+  Kubrick v1.2.5  for PhpWiki
+  Based on Michael Heilemann's excellent work for WordPress 1.2
+  http://binarybonsai.com/kubrick/
+*/
+
+body {
+  margin: 0;
+  padding: 0; 
+  font-size: 62.5%; /* Resets 1em to 10px */
+  font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  background-color: #d5d6d7;
+  color: #333;
+  background: url("/themes/Kubrick/images/kubrickbgcolor.jpg"); 
+}
+
+#header {
+  top: 0px;
+  background-color: #73a0c5;
+  background: url("/themes/Kubrick/images/header.jpg") no-repeat top center;
+  padding: 0;
+  margin: 0 auto;
+  height: 200px;
+  width: 100%;
+}
+
+#flashheader {
+  padding-top: 19px;
+  margin-left: 19px;
+  width: 722px;
+  height: 182px;
+}
+
+#actionbar, #editbar {
+  background: url("/themes/Kubrick/images/actionbarbg.jpg") no-repeat top center;
+  width: 760px;
+  height: 40px;
+}
+
+
+#LSResult {
+  position: absolute;
+  text-align: left;
+  display: none;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid #d0d0d0; 
+  font-size: 9px;
+  overflow: hidden;
+}
+
+#LSHighlight {
+  background-color: #f08000;
+}
+
+#LSResult .evenrow {
+  background-color: #f0f0f0;
+} 
+
+#LSREsult .oddrow {
+} 
+
+.LSEnd {
+  text-align: right;
+}
+.LSRow:hover {
+  background-color: white;
+}
+.LSRow {
+  padding: 1px;
+} 
+ul.LSRes {
+  margin: 0px;
+  padding: 0px;
+}
+li.LSRow {
+  margin: 0px;
+  list-style-image: none;
+}
+
+#sitemeter {
+  float: right;
+}
+
+#actionbuttons {
+  float: left;
+  height: 20px;
+  margin-top: 12px;
+  padding-left: 30px;
+  vertical-align: middle;
+}
+
+#editbar p {
+  height: 20px;
+  padding-top: 8px;
+  margin-left: 30px;
+  vertical-align: middle;
+}
+ 
+#actionbuttons a {
+  padding-right: 0px;
+  font-size: 11px; /* we need pixel units here to match the background */
+}
+
+#pagetrail {
+  margin: 0px;
+}
+
+#pagetrail p {
+  font-size: 9px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#page {
+  background-color: white;
+  background: url("/themes/Kubrick/images/kubrickbg.jpg"); 
+  margin: 20px auto;
+  padding: 0;
+  width: 760px;
+}
+
+#content {
+ font-size: 1.2em;
+}
+
+#postcontent {
+  overflow: hidden;
+}
+
+#pagetitle, #pagetitle a {
+  color: #c0c0c0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.indexLetterHeading {
+  margin-top: 8px;
+  padding: 4px;
+  background-color: #f0f0f0;
+}
+
+div.wikitext {
+  margin-top: 12px;
+}
+
+pre {
+  overflow: hidden;
+  padding: 2px;
+  background-color: #f0f0f0;
+}
+
+#seealso table, .transclusion-title {
+  font-size: 0.81em;
+}
+
+.transclusion-title {
+  margin: 0px;
+  
+}
+
+.transclusion {
+  margin-bottom: 8px;
+}
+
+div.comments {
+  margin-top: 0px;
+  text-align: right;
+  font-size: 0.81em;
+}
+
+
+#footer {
+  background-color: #eee;
+  background: url("/themes/Kubrick/images/kubrickfooter.jpg") no-repeat bottom center;
+  border: none;
+  width: 760px;
+  height: 60px;
+  clear: both;
+  text-align: center;
+}
+
+#footer p {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.widecolumn .entry p {
+  font-size: 1.05em;
+  }
+
+.narrowcolumn .entry, .widecolumn .entry {
+  line-height: 1.4em;
+  }
+
+.widecolumn {
+  line-height: 1.6em;
+}
+  
+.narrowcolumn .postmetadata {
+  text-align: center;
+  }
+
+.graybox {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+small {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+tt {
+  font-family: 'Andale Mono', 'Lucida Console', 'Courier New', monospaced;
+  font-size: 1.05em;
+}
+pre {
+  width: 486px;
+  font-size: 10px;
+  font-family: 'Andale Mono', 'Lucida Console', 'Courier New', monospaced;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2em;
+  text-align: center;
+  }
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 2px;
+  text-align: left;
+}
+
+#sidebar h2 {
+  font-family: 'Lucida Grande', Verdana, Sans-Serif;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+  text-decoration: none;
+  color: white;
+}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+  color: #333;
+}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+  text-decoration: none;
+}
+
+table.pagelist, table.referrerlist {
+  width: 100%;
+}
+
+table.referrerlist td {
+  font-size: 0.71em;
+}
+
+table.pagelist td {
+  font-size: 0.81em;
+}
+
+tr.evenrow {
+  background-color: #f0f0f0;
+}
+
+.entry p a:visited {
+  color: #b85b5a;
+}
+
+#sidebar {
+  font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  padding: 20px 0 10px 0;
+  margin-left: 535px;
+  width: 200px;
+}
+
+#sidebar form {
+  margin: 0;
+}
+
+#notification {
+  margin-left: 20px;
+  background: #ffe0e0;
+}
+
+#revisionbox dl, #cachebox dl {
+  width: 200px;
+  margin: 0px;
+  background: #ffe0e0 url("/themes/Kubrick/images/bottom_sidebar_round.gif") no-repeat bottom left;
+}
+#revisionbox dd, #cachebox dd {
+  padding-bottom: 10px;
+}
+#revisionbox dt, #cachebox dt {
+  margin: 0px;
+  padding: 5px;
+  background: #ffe0e0 url("/themes/Kubrick/images/top_sidebar_round.gif") no-repeat top left;
+}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+  color: #777;
+  }
+  
+code {
+  font: 1.1em 'Courier New', Courier, Fixed;
+}
+
+acronym, abbr, span.caps
+{
+  font-size: 0.9em;
+  letter-spacing: .07em;
+  }
+
+a, h2 a:hover, h3 a:hover {
+  color: #06c;
+  text-decoration: none;
+  }
+
+a:hover {
+  color: #147;
+  text-decoration: underline;
+}
+
+a.namedurl {
+  padding-right: 6px;
+  margin-right: 0px;
+  background: url('/themes/Kubrick/images/http.gif') right top no-repeat;
+} 
+/* https links */
+a.namedurl[href*="https"] {
+  padding-right: 6px;
+  margin-right: 0px;
+  background: url('/themes/Kubrick/images/https.gif') right top no-repeat;
+}
+/* local links (override above) */
+a.namedurl[href*="the.taoofmac.com"] {
+  padding-right: 0px;
+  background: none;
+} 
+/* interwiki */
+a.named-interwiki {
+  padding-right: 6px;
+  margin-right: 0px;
+  background: url('/themes/Kubrick/images/interwiki.gif') right top no-repeat;
+} 
+
+  
+
+#searchholder {
+  float: right;
+  height: 30px;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-right: 35px;
+}
+
+#livesearch {
+  height: 13px;
+  width: 100px;
+}
+
+
+.narrowcolumn, #logincontent, #editcontent {
+  float: left;
+  padding: 0 0 20px 25px;
+  margin: 0px 0 0;
+  width: 490px;
+  }
+
+.widecolumn {
+  padding: 10px 0 20px 0;
+  margin: 5px auto;
+  width: 450px;
+  }
+  
+.post {
+  margin: 0 0 40px;
+  text-align: justify;
+  }
+
+.widecolumn .post {
+  margin: 0;
+  }
+
+.narrowcolumn .postmetadata {
+  padding-top: 5px;
+  }
+
+.widecolumn .postmetadata {
+  margin: 30px 0;
+}
+  
+
+/*  Begin Headers */
+h1 {
+  margin: 0;
+}
+
+.description {
+  text-align: center;
+  }
+
+
+#sidebar h2 {
+  margin: 5px 0 0;
+  padding: 0;
+  }
+
+h3 {
+  padding: 0;
+  margin: 30px 0 0;
+  }
+
+h3.comments {
+  padding: 0;
+  margin: 40px auto 20px ;
+  }
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+  padding: 0;
+  max-width: 100%;
+  }
+
+/*  Using 'class="alignright"' on an image will (who would've
+  thought?!) align the image to the right. And using 'class="centered',
+  will of course center the image. This is much better than using
+  align="center", being much more futureproof (and valid) */
+  
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+img.alignright {
+  padding: 4px;
+  margin: 0 0 2px 7px;
+  display: inline;
+  }
+
+img.alignleft {
+  padding: 4px;
+  margin: 0 7px 2px 0;
+  display: inline;
+  }
+
+.alignright {
+  float: right;
+  }
+  
+.alignleft {
+  float: left
+  }
+/* End Images */
+
+
+
+/* Begin Lists
+
+  Special stylized non-IE bullets
+  Do not work in Internet Explorer, which merely default to normal bullets. */
+
+
+html>body ul {
+  margin-left: 0px;
+  padding: 0 0 0 30px;
+  list-style: none;
+  padding-left: 10px;
+  text-indent: -10px;
+  } 
+
+html>body li {
+  margin: 7px 0 8px 10px;
+  }
+
+.narrowcolumn ul li:before, #sidebar ul ul li:before {
+  content: "\00BB \0020";
+}
+
+.entry ol {
+  padding: 0 0 0 35px;
+  margin: 0;
+}
+
+.entry ol li {
+  margin: 0;
+  padding: 0;
+}
+
+.postmetadata ul, .postmetadata li {
+  display: inline;
+  list-style-type: none;
+  list-style-image: none;
+}
+  
+#sidebar ul, #sidebar ul ol {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar ul li {
+  list-style-type: none;
+  list-style-image: none;
+  margin-bottom: 15px;
+}
+
+#sidebar ul p, #sidebar ul select {
+  margin: 5px 0 8px;
+}
+
+#sidebar ul ul, #sidebar ul ol {
+  margin: 5px 0 0 10px;
+  }
+
+#sidebar ul ul ul, #sidebar ul ol {
+  margin: 0 0 0 10px;
+  }
+
+ol li, #sidebar ul ol li {
+  list-style: decimal outside;
+  }
+
+#sidebar ul ul li, #sidebar ul ol li {
+  margin: 3px 0 0;
+  padding: 0;
+  }
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+  text-align: right;
+}
+/* End Form Elements */
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+  cursor: help;
+}
+
+acronym, abbr {
+  border-bottom: 1px dashed #999;
+  }
+
+blockquote {
+  margin: 15px 30px 0 10px;
+  padding-left: 20px;
+  border-left: 5px solid #ddd;
+  }
+
+blockquote cite {
+  margin: 5px 0 0;
+  display: block;
+  }
+
+.center {
+  text-align: center;
+  }
+
+hr {
+  display: none;
+  }
+
+a img {
+  border: none;
+  }
+
+.navigation {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.hilite1 { background-color: #FFFF99; }
+.hilite2 { background-color: #FF99FF; }
+.hilite3 { background-color: #99FFFF; }
+.hilite4 { background-color: #FF9999; }
+.hilite5 { background-color: #9999FF; }
+
+/* End Various Tags & Classes*/
+_@http://the.taoofmac.com.nyud.net:8090/themes/Kubrick/Kubrick.cssXtext/cssÓO±		var hs = new Array();hs[""] = "1";hs["blog_2005_06_23"] = "1";hs["blog_2005_06_22"] = "4";hs["blog_2005_06_21"] = "2";hs["blog_2005_06_20"] = "2";hs["blog_2005_06_19"] = "4";hs["blog_2005_06_16"] = "2";hs["JavaScript"] = "2";hs["blog_2005_06_13_15_04"] = "3";hs["blog_2005_06_14"] = "1";hs["blog_2005_06_13"] = "1";hs["Mac_mini"] = "1";hs["blog_2005_06_12_18_49"] = "7";hs["Nokia_6280"] = "2";hs["blog_2005_06_11_18_01"] = "1";hs["blog_2005_06_09"] = "3";hs["Applications_Quartz_Composer"] = "1";hs["blog_2005_06_08"] = "1";hs["blog_2005_06_05_23_21"] = "17";hs["blog_2005_06_06_22_54"] = "5";hs["blog_2005_06_07_23_53"] = "3";hs["blog_2005_06_07"] = "1";hs["blog_2005_06_06"] = "5";hs["blog_2005_06_05"] = "7";hs["blog_2005_06_05_17_57"] = "2";hs["blog_2005_06_01_23_51"] = "1";hs["blog_2005_06_02"] = "1";hs["Applications_Phlink"] = "3";hs["blog_2005_05_31"] = "3";hs["blog_2005_05_29"] = "1";hs["Mathematics"] = "1";hs["HOWTO_Install_DokuWiki_on_Tiger"] = "1";hs["blog_2005_05_26"] = "4";hs["Movies"] = "1";hs["blog_2005_05_25"] = "2";hs["blog_2005_05_21_17_51"] = "4";hs["blog_2005_05_23"] = "4";hs["Comment_Policy"] = "1";hs["blog_2005_05_22"] = "2";hs["blog_2005_05_18_11_54"] = "1";hs["blog_2005_05_21"] = "1";hs["blog_2004_01_03_21_42"] = "2";hs["HOWTO_Enable_PHP_on_Mac_OS_X"] = "1";hs["blog_2005_05_17"] = "2";hs["Projects_vcard2ldap"] = "1";hs["blog_2005_05_18_21_25"] = "4";hs["blog_2005_05_18"] = "2";hs["blog_2005_05_17_23_04"] = "1";hs["blog_2005_05_16"] = "1";hs["HOWTO_Switch_To_The_Mac"] = "1";hs["blog_2005_05_14"] = "1";hs["blog_2005_05_06"] = "8";hs["blog_2005_05_12"] = "1";hs["HOWTO_Convert__and_Rotate__Windows_PDFs"] = "1";hs["blog_2005_03_12"] = "1";hs["blog_2005_05_11_22_56"] = "2";hs["blog_2005_05_11"] = "2";hs["blog_2005_05_09"] = "5";hs["blog_2005_05_07"] = "4";hs["blog_2005_05_10"] = "2";hs["blog_2005_03_17"] = "1";hs["blog_2005_05_08"] = "4";hs["blog_2005_05_05_23_59"] = "2";hs["blog_2005_05_07_13_50"] = "3";hs["blog_2005_05_05"] = "1";hs["blog_2005_05_03"] = "6";hs["blog_2005_05_04"] = "1";hs["blog_2005_05_01"] = "6";hs["blog_2005_05_01_23_59"] = "4";hs["blog_2005_05_02"] = "4";hs["HOWTO_Set_Up_daapd_on_Fedora_Linux"] = "1";hs["blog_2005_04_29"] = "6";hs["blog_2005_04_28"] = "2";hs["blog_2005_04_26"] = "6";hs["blog_2005_04_23"] = "1";hs["blog_2005_04_25"] = "1";
+var hstb = new Array();hstb["blog_2005_06_05_23_21"] = "4";hstb["GTD"] = "1";hstb["blog_2005_05_23_20_24"] = "2";hstb["blog_2005_05_27"] = "1";hstb["HOWTO_Read__Mac_Mail_on_a_SonyEricsson_Phone"] = "1";hstb["blog_2005_05_17_23_04"] = "1";hstb["blog_2005_05_07_13_50"] = "1";hstb["blog_2005_05_06"] = "2";hstb["blog_2004_11_08"] = "3";hstb["blog_2005_04_22"] = "1";hstb["blog_2005_03_12"] = "3";hstb["blog_2005_03_08"] = "4";hstb["blog_2005_02_25"] = "1";hstb["blog_2005_02_13"] = "1";hstb["blog_2004_12_09"] = "1";hstb["HOWTO_Switch_To_The_Mac"] = "3";hstb["blog_2004_03_27"] = "1";hstb["blog_2005_01_20"] = "2";hstb["blog_2005_01_17"] = "2";hstb["blog_2004_12_10"] = "3";hstb["blog_2005_01_15"] = "1";hstb["blog_2005_01_12"] = "1";hstb["blog_2005_01_11_19_40"] = "1";hstb["blog_2005_01_09"] = "2";hstb["blog_2005_01_07_23_48"] = "1";hstb["blog_2004_12_05"] = "9";hstb["blog_2003_10_18"] = "1";hstb["blog_2004_12_08"] = "1";hstb["blog_2004_11_13"] = "1";hstb["blog_2004_11_01"] = "1";hstb["blog_2004_10_26"] = "2";hstb["blog_2004_10_11_23_19"] = "1";hstb["blog_2003_11_07"] = "1";hstb["blog_2004_09_26"] = "1";hstb["blog_2004_10_06"] = "1";hstb["blog_2004_10_01"] = "1";hstb["blog_2004_09_25"] = "1";hstb["blog_2004_09_24"] = "1";hstb["blog_2004_09_20_22_57"] = "1";hstb["Applications_Rawr_endezvous"] = "1";hstb["blog_2004_09_05"] = "1";function postCount(id){ var hs_search = new RegExp('\\W','gi'); var hs_id = id.replace(hs_search,"_"); id = hs_id;if (hs[id]){ if (hs[id] == 1) { document.write("Comment (1)"); } else { document.write("Comments (" + hs[id] + ")"); } } else { document.write("Comment (0)"); } }
+function HaloScan(id) { var hs_search = new RegExp('\\W','gi'); var hs_id = id.replace(hs_search,"_"); id = hs_id;window.open('http://www.haloscan.com/comments/taoofmac/'+ id + '/','comments'+ id +'', 'directories=0,height=450,width=440,location=0,resizable=1,scrollbars=1,toolbar=0'); }function postCountTB(id){ var hs_search = new RegExp('\\W','gi'); var hs_id = id.replace(hs_search,"_"); id = hs_id;if (hstb[id]){ if (hstb[id] == 1) { document.write("Trackback (1)"); } else { document.write("Trackbacks (" + hstb[id] + ")"); } } else { document.write("Trackback (0)"); } }function HaloScanTB(id) { var hs_search = new RegExp('\\W','gi'); var hs_id = id.replace(hs_search,"_"); id = hs_id;window.open('http://www.haloscan.com/tb/taoofmac/'+ id + '', 'comments'+ id +'', 'directories=0,height=450,width=440,location=0,resizable=1,scrollbars=1,toolbar=0'); }_%http://www.haloscan.com/load/taoofmac_application/x-javascriptÓO|	/*
+// +----------------------------------------------------------------------+
+// | Copyright (c) 2004 Bitflux GmbH                                      |
+// +----------------------------------------------------------------------+
+// | Licensed under the Apache License, Version 2.0 (the "License");      |
+// | you may not use this file except in compliance with the License.     |
+// | You may obtain a copy of the License at                              |
+// | http://www.apache.org/licenses/LICENSE-2.0                           |
+// | Unless required by applicable law or agreed to in writing, software  |
+// | distributed under the License is distributed on an "AS IS" BASIS,    |
+// | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or      |
+// | implied. See the License for the specific language governing         |
+// | permissions and limitations under the License.                       |
+// +----------------------------------------------------------------------+
+// | Author: Bitflux GmbH <devel@bitflux.ch>                              |
+// +----------------------------------------------------------------------+
+
+*/
+var liveSearchReq = false;
+var t = null;
+var liveSearchLast = "";
+var isIE = false;
+// on !IE we only have to initialize it once
+if (window.XMLHttpRequest) {
+	liveSearchReq = new XMLHttpRequest();
+}
+
+function liveSearchInit() {
+	
+	if (navigator.userAgent.indexOf("Safari") > 0) {
+	//	document.getElementById('livesearch').addEventListener("keydown",liveSearchKeyPress,false);
+		document.getElementById('livesearch').addEventListener("blur",liveSearchHideDelayed,false);
+	} else if (navigator.product == "Gecko") {
+	//	document.getElementById('livesearch').addEventListener("keypress",liveSearchKeyPress,false);
+		document.getElementById('livesearch').addEventListener("blur",liveSearchHideDelayed,false);
+	} else {
+	//	document.getElementById('livesearch').attachEvent('onkeydown',liveSearchKeyPress);
+		document.getElementById('livesearch').attachEvent("onblur",liveSearchHide,false);
+		isIE = true;
+	}
+	document.getElementById('livesearch').setAttribute("autocomplete","off");
+}
+
+function liveSearchHideDelayed() {
+	window.setTimeout("liveSearchHide()",400);
+}
+	
+function liveSearchHide() {
+	document.getElementById("LSResult").style.display = "none";
+	var highlight = document.getElementById("LSHighlight");
+	if (highlight) {
+		highlight.removeAttribute("id");
+	}
+}
+
+function liveSearchKeyPress(event) {
+	
+	if (event.keyCode == 40 )
+	//KEY DOWN
+	{
+		highlight = document.getElementById("LSHighlight");
+		if (!highlight) {
+			highlight = document.getElementById("LSResult").firstChild.firstChild;
+		} else {
+			highlight.removeAttribute("id");
+			highlight = highlight.nextSibling;
+		}
+		if (highlight) {
+			highlight.setAttribute("id","LSHighlight");
+		} 
+		if (!isIE) { event.preventDefault(); }
+	} 
+	//KEY UP
+	else if (event.keyCode == 38 ) {
+		highlight = document.getElementById("LSHighlight");
+		if (!highlight) {
+			highlight = document.getElementById("LSResult").firstChild.lastChild;
+		} 
+		else {
+			highlight.removeAttribute("id");
+			highlight = highlight.previousSibling;
+		}
+		if (highlight) {
+				highlight.setAttribute("id","LSHighlight");
+		}
+		if (!isIE) { event.preventDefault(); }
+	} 
+	//ESC
+	else if (event.keyCode == 27) {
+		highlight = document.getElementById("LSHighlight");
+		if (highlight) {
+			highlight.removeAttribute("id");
+		}
+		document.getElementById("LSResult").style.display = "none";
+	} 
+}
+function liveSearchStart() {
+	if (t) {
+		window.clearTimeout(t);
+	}
+	t = window.setTimeout("liveSearchDoSearch()",200);
+}
+
+function liveSearchDoSearch() {
+	if (liveSearchLast != document.forms.searchform.s.value) {
+	if (liveSearchReq && liveSearchReq.readyState < 4) {
+		liveSearchReq.abort();
+	}
+	if ( document.forms.searchform.s.value == "") {
+		document.getElementById("LSResult").style.display = "none";
+		highlight = document.getElementById("LSHighlight");
+		if (highlight) {
+			highlight.removeAttribute("id");
+		}
+		return false;
+	}
+	if (window.XMLHttpRequest) {
+	// branch for IE/Windows ActiveX version
+	} else if (window.ActiveXObject) {
+		liveSearchReq = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	liveSearchReq.onreadystatechange= liveSearchProcessReqChange;
+	liveSearchReq.open("GET", "/space/TitleSearch?format=livesearch&s=" + document.forms.searchform.s.value);
+	liveSearchLast = document.forms.searchform.s.value;
+	liveSearchReq.send(null);
+	}
+}
+
+function liveSearchProcessReqChange() {
+	
+	if (liveSearchReq.readyState == 4) {
+		var  res = document.getElementById("LSResult");
+		res.style.display = "block";
+		res.innerHTML = liveSearchReq.responseText;
+	}
+}
+
+function liveSearchSubmit() {
+	var highlight = document.getElementById("LSHighlight");
+	if (highlight && highlight.firstChild) {
+		window.location = highlight.nextSibling.getAttribute("href");
+		return false;
+	} 
+	else {
+		return true;
+	}
+}
+
+function closeResults() {
+    document.getElementById("LSResult").style.display = "none";
+}
+_Jhttp://the.taoofmac.com.nyud.net:8090/themes/Kubrick/scripts/livesearch.jsÓOx/**
+ * Search Engine Keyword Highlight.
+ *
+ * This module can be imported by any HTML page, and it would analyse the
+ * referrer for search engine keywords, and then highlight those keywords on
+ * the page, by wrapping them around <span class="hilite">...</span> tags.
+ * Document can then define styles else where to provide visual feedbacks.
+ *
+ * Usage:
+ *
+ *   In HTML. Add the following line towards the end of the document.
+ *
+ *     <script type="text/javascript" src="se_hilite.js"></script>
+ *
+ *   In CSS, define the following style:
+ *
+ *     .hilite { background-color: #ff0; }
+ *
+ *   If Hilite.style_name_suffix is true, then define the follow styles:
+ *
+ *     .hilite1 { background-color: #ff0; }
+ *     .hilite2 { background-color: #f0f; }
+ *     .hilite3 { background-color: #0ff; }
+ *     .hilite4 ...
+ *
+ * @author Scott Yang <http://scott.yang.id.au/>
+ * @version 1.1
+ */
+
+// Configuration:
+Hilite = {
+    /**
+     * Whether to automatically hilite a section of the HTML document, by
+     * binding the "Hilite.hilite()" to window.onload() event. If this
+     * attribute is set to false, you can still manually trigger the hilite by
+     * calling Hilite.hilite() in Javascript after document has been fully
+     * loaded.
+     */
+    onload: false,
+
+    /**
+     * Name of the style to be used. Default to 'hilite'.
+     */
+    style_name: 'hilite',
+    
+    /**
+     * Whether to use different style names for different search keywords by
+     * appending a number starting from 1, i.e. hilite1, hilite2, etc.
+     */
+    style_name_suffix: true,
+
+    /**
+     * Set it to override the document.referrer string. Used for debugging
+     * only.
+     */
+    debug_referrer: ''
+};
+
+/**
+ * Decode the referrer string and return a list of search keywords.
+ */
+Hilite.decodeReferrer = function(referrer) {
+    referrer = decodeURIComponent(referrer);
+    here = decodeURIComponent(location.href);
+    var query = null;
+
+    if (here.match(/^http:\/\/(the)?\.?taoofmac.*/i)) {
+	// Tao
+	if (here.match(/s=/))
+	    query = here.replace(/^.*s=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/(www\.)?alltheweb.*/i)) {
+	// AllTheWeb
+	if (referrer.match(/q=/))
+	    query = referrer.replace(/^.*q=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/(the)?\.?taoofmac.*/i)) {
+	// Tao
+	if (referrer.match(/s=/))
+	    query = referrer.replace(/^.*s=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/(www)?\.?google.*/i)) {
+	// Google
+	if (referrer.match(/q=/))
+	    query = referrer.replace(/^.*q=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/search\.lycos.*/i)) {
+	// Lycos
+	if (referrer.match(/query=/))
+	    query = referrer.replace(/^.*query=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/search\.msn.*/i)) {
+	// MSN
+	if (referrer.match(/q=/))
+	    query = referrer.replace(/^.*p=([^&]+)&?.*$/i, '$1');
+    } else if (referrer.match(/^http:\/\/search\.yahoo.*/i)) {
+	// Yahoo
+	if (referrer.match(/p=/))
+	    query = referrer.replace(/^.*p=([^&]+)&?.*$/i, '$1');
+    }
+  
+    if (query) {
+	query = query.replace(/\'|"/, '');
+	query = query.split(/[\s,\+\.]+/);
+    }
+
+    return query;
+};
+
+/**
+ * Highlight a HTML string with a list of keywords.
+ */
+Hilite.hiliteHTML = function(html, query) {
+    var re = new Array();
+    for (var i = 0; i < query.length; i ++) {
+        if (query[i]) {
+	    var classname = Hilite.style_name;
+	    if (Hilite.style_name_suffix)
+		classname += (re.length+1);
+            re.push([new RegExp('('+query[i]+')', "gi"), classname]);
+	}
+    }
+
+    var last = 0;
+    var tag = '<';
+    var skip = false;
+    var skipre = new RegExp('^(script|style|textarea)', 'gi');
+    var part = null;
+    var result = '';
+
+    while (last >= 0) {
+        var pos = html.indexOf(tag, last);
+        if (pos < 0) {
+            part = html.substring(last);
+	    last = -1;
+        } else {
+            part = html.substring(last, pos);
+            last = pos+1;
+        }
+
+        if (tag == '<') {
+            if (!skip) {
+                for (var j = 0; j < re.length; j ++)
+                    part = part.replace(re[j][0], '<span class="'+re[j][1]+
+                                        '">$1</span>');
+            } else
+                skip = false;
+        } else if (part.match(skipre)) {
+            skip = true;
+        }
+
+        result += part + (pos < 0 ? '' : tag);
+        tag = tag == '<' ? '>' : '<';
+    }
+
+    return result;
+};
+
+/**
+ * Highlight a DOM element with a list of keywords.
+ */
+Hilite.hiliteElement = function(elm, query) {
+    if (!query)
+	return;
+
+    elm.innerHTML = Hilite.hiliteHTML(elm.innerHTML, query);
+};
+
+/**
+ * Highlight a HTML document using keywords extracted from document.referrer.
+ * This is the main function to be called to perform search engine highlight
+ * on a document.
+ *
+ * Currently it would check for DOM element 'content', element 'container' and
+ * then document.body in that order, so it only highlights appropriate section
+ * on WordPress and Movable Type pages.
+ */
+Hilite.hilite = function() {
+    // If 'debug_referrer' then we will use that as our referrer string
+    // instead.
+    var q = Hilite.debug_referrer ? Hilite.debug_referrer : document.referrer;
+    var e = null;
+    q = Hilite.decodeReferrer(q);
+    if (q && ((e = document.getElementById('content')) ||
+              (e = document.getElementById('container')) ||
+              (e = document.body)))
+    {
+	Hilite.hiliteElement(e, q);
+    }
+};
+
+// Trigger the highlight using the onload handler.
+if (Hilite.onload) {
+    if (window.onload) {
+	Hilite._old_onload = window.onload;
+	window.onload = function(ev) {
+	    Hilite._old_onload(ev);
+	    Hilite.hilite();
+	};
+    } else {
+	window.onload = Hilite.hilite;
+    }
+}
+_Ihttp://the.taoofmac.com.nyud.net:8090/themes/Kubrick/scripts/se_hilite.jsÓO$CWS&4  xœí{	8”ı»ğ3¶±eÉ¾EÖ„WÖ¡B²d——1;3ö-ŠJ–TÈJö-;Q"‘"ûZö}ÙÆ:ç™¡zÿÿÿw®s¾ï;×w½ßuÎs]ó<¿ß}ß¿{_±xPR ÿá„ —°X,@#Ì„ À=#€ĞtñD".9"]Ww´ÚÇX:ºÚYh;$
+ğD8h—#ˆÒ‰,°.Î*Îh„»ª»¥ğpµ¶D#”m@€Š'ÂÄ ¤ ;îÑÂİ	’(€à'·³8"€BJÈ~@˜âHp"R"ví£%1)1¸$Å-IÀTKûˆ4‰ ¯)àS $ÀñEJ¦Àt„$ÖŠƒ „ê'¯|F PÇP¢c(øøE‰’hÙâÀÊÇ`¨V1 µ™ÚâÉÙ€# G¸cvjÚ	  ’âô#Àíä~38æoûïŸ§ø×ó €7KûèÀ/€±»§D ;ŠÊG P ÒÉÒ¡ìînéİİ]\Ğ€Ò…¾d‡t´,l]¬,g§ë–(0¬h´;ÒÊ@h¤Âpq·ï6–ÖÜp´üyÔÙÅ¡…,^ÈeK´% me€£WK´˜)O¤‹Jiåˆt¶À-ÂuL­†p],qœAÉ€…€ãÒåeézáŠ¶U¬q,áî0k®Ñâl;^g	>;/K4Üácõig‹@_ôÍÁŸ³şµÕwAƒf#QZ–ZÇšœÇÅ)pİÑÀ[¬³ø8ÑqÎPÇ±õÏ¡è_kwKgk§ã‡–Ç_V×@_š8g8"œmÁ‡£‹‹;^œ:Î`œn`) A6® –¿EXx>Çª‰ã„÷„Š“+Úçw=â½‰²ğvrŒ4¯H[gw„¡ ½€3Îëbh;„%vÕÃÊ	w;:'f‡À±G‰ºÚ¹âEI'@~å‚ÏI""B°\Á„#dÂ×,;.a¥!q'ÀÊı][„J`}’ÄÄZò8Bv Šàö¤ø;¾ræ€RCû7ù?‘‘kıIñOH
+­££Dø&B©uTéd¿+õ	\Qõ §4Õo¥©A¥ATx)4¸"Ãó§9NÀcA ¢[í±$z/¬Èxì?ô¼N'u™9@(§S`úY¾„Lø³x^ILI=‚£bÀU/®OÒ“2°«á1ªıæÄÄÁ¬Ë”Äü×œ"8*Üé|eaÇ÷³k å4 Ó1t>Nuœ?d ))€w3+û1-(‘'‘ì›xBœ|ĞEà77ÈOngÿ¼¬$ö¬oÂŸUS^‚‹;h<Ë/ãñÚvS ¤¿|­ı[ûqà~yéÈIœGqàÂo¸&Ä2GÏëßA;">¥{”7ç†G÷gŠAØó*àÜJ	à¬aD ì
+Î	Ä è`|“' ‚œøé +øüCqTÇêñáAzïü Áå:(êŞ‚ß²ùuq™L*pléo.İoÿUàø=V¹eÿ’aÚ`iÿê½#7³ÏXVöŸ	}Ì—ÏWOG|<…ğpav<H_@B¿İ#‚Ç
+ê±Õ¢üåÿ#Œ˜..]*°ÇœğşÃÛv?ŠI…A(ÂøgÄññğóÿ’ÈçÙJT?á¸Ì8ÿK/cš‘w„^çÀ"DàwUI(0ı|aø‹ò¸­ğ_¶l ©äoó¥~-ñR.áÂ‹÷ÇQTÂ!Fğ?>wœÿtê89¸øşF€q¸ğ›¡ÌQ#»€s©,1Dû÷NTì_d ©Â‘ˆxŠºLP KÚr s¢S  °Ø¯À%€„ˆ˜„˜ˆ„„˜
+%!%§!''##§§¢¦¤a¢gff¢gddå8ÍÅÊÆËÎÈÈ-ÌÍ{†ÿ¬àY.‘s"çNœÀ1@¡PrRr:rr:VFVÿíÛpzCğ×O#!„ rPR2r
+ œ €‚Ã‰˜˜,?H ˆˆh‰OW&¡Ó±„ò¸ÑŸyNÊ{±¸A·s•OÂÊ=„Œœ‘‰™…õô~³‚’RH_‘½tYEUíŠº†şC#c¸5ÂÆÖiB{xzyûøŞ¾v÷ŞığGŸÄÆÅ?MH|‘ş2#3+;'·¤´¬¼¢²ªúuÃûÆMÍ[>uu÷ôöõOLNMÏÌÎÍ/¬ıXßØÜÚÆììâìòóú_ÚEÚE Q"(Î.€–ˆø”8ÉIe¨¥Ïù`Rú‹1Ï‹ëÉx%tW¬Ü;Éù$ÇO¯áLÃ[öŸ3,äÿÈ²_†ı¶kÌ1€FCU]À™˜Qï ZR Œ ƒÂĞBi!Ø!€’ìL´„´ ØĞ¦Ç„LšÔ>$cq¼QL¯ô´RµŸG•”(aa¬•ŒTQØÑˆ=m ¥ÏÎœ‰èÃ?:ÿ{ŞóP#ÜU.¼$ªŒWiùnI|†`Ùú6–ü½H£ªV½A]İl‰×ÚXò$¸ğÏ4èLD·„ªd']²µ3´k“´¹õ?ÈÿÉr„„¯«"Ò%ıÎD»6 &i“(¡DİÆ’iFåÿ"–%”ö<"¼¸ì¬GSŸ¨$ÿÓ¯ØûL#&³èR+9WN…9!]ª4am,´'gÀY•X v‹Ø|m$,r–wØûìÚĞu«áX û+M=üQ	š_Æ+íX ¡Ö7ïµÿ~!¶&PM*QÂ\lŸ§nclÏb’ôCZ‹]¿ ½u,0¨ƒgyn7Ãy4¦Í&¢ÿ* -:P¨;ØÁKÙXàáaÊèá>ØÒpjUÌ1­œBÿ‹_úÊ¢—>¦É¼q»Íù-03÷B"Ê¿Ø÷±°ÔQ¤e-Ş+ÎşBñ·C¢ÌgÃ‚¦ N‡¥˜×è½¦*ö~¿ñ ˆiPş¡è3ÅµBv¯Õşœ¯·y7° ¯á!ĞÁA`lêz‚F~´ÁV6¹¶w£÷ÔÓÿ	üÖPfR³Y±‡üV2ĞAÛ»Õulì&_°ÀÛÀí®Ê÷AÌVu¡¼Aõf"úË¼á¥ªÈjPû¥ÎDgP{9Ip6)QáÑ„ÿ=‘R<f×ÂNÇè£!÷HìÚ„Ì2Ã—õ°@»OĞJ©ÚPHù¦MŞLDç§•êŒ³Ö¡gO‘Ü­·"›SŸ¾ ±ë
+ÜX ±ïsÑîÆüájÑ50j½3ğØ—ÑÚ+Œ`ÜÒzÈ™øX‚i+¨Çìƒön”sí@‡ƒ
+°€şp`XÕäk9D©üì¿#·¿îStjÍw£=},°>b±·Ôm¨œ¼²İ¾/E…\mZ×(nÌ˜‚‡ê|ë´.§¨L€ºå¸qê	¿SAîR-û»A²_+;$ , úHuóqjwJ›EKVDëéŸWŸ¿Od©9¸Ğ4^wäZJc>8ÌçT@GO8¿¢Î¯#ü´®êĞQòçåWñĞ½'#ŞîctìîïsºäEÉŠMğ‘‰…~G©Ú/È0›/Ú›¡…	ßrz×èPr^×ğ~³@UÍ•£q”³“.åwµKt“î5½•OÌ]®»7YŠƒ•ŸÙ<;0Ş!ŸÍ¹ªÀÖ3—öLS·c§Â©’ò;3£¶{ÙÄF8Y[|©z+ á4L”¸™ ›?Igº‚| ùI+”ƒ­/¿’¥=® ™ŞÏº‰½Gâ0îu!¹3±2g>Ş51NÕàZù‘˜¸ñ$¶³ÔPühn¾PûÛŒîÿ2$Øº¾u&*ú6 s­[ìÎÚkx#‡k)ñs³‡gúÌƒú³´·C}ïIs¬ñv¿óÛaOĞ—ÇaÍÇ.k1Ø›r+2° ÷bÑæèBjQG?½—ºÂ6†RuUôö´7E&RÜË¼´®ZwÌ²3‘3]k(¥”.¿øå=ÁwçÓºëV6İ}-î-;I´IøNC?r;K¡êƒí0&÷P÷2‘Ò›âu®V,êCA¦Sñ¨csD4Ù*ÉÖç¸3öÎœ·ß½“0àÖnyŠpã…ˆÅõ{!ñ•ìçOÂxMTÍ[ë8›³Àş	ê
+déÙµ(a”˜hiZÑ‰6™ÁîúY‚îÓ1ıZ/íÕù¼hšİ(>œ×X«ª'©4.vúã`Ìé«âqƒ7b8IM>øs‹Ö,øÌ\*Rd.hSqÚìÇ†­¢è£d™×éÚ\0¶*{~/æ-–r]	¢ß5—-¾}6"?ı•(¸ÃëP+şõİÃ†Ra»si†7Ek2«á52ç0¨µ‰<œR‰d EÜĞ¹¼#xö×¡}<"ªO¸| *•”…Ó0İB=^bñ8¸şÇ¸ŸhÀªÚ´¹k}Ï£·Í|kO&–«çF†Ùì]ÿK[óÄåãˆ*˜ÛÃÕÃ%‡tœûÚu“sŞsĞ/¨¾˜¹Ï¾ÚìF§šşªŞ€…¤Š‹f^$ÓA˜dã=7åÇº!¶-«’uÅq#Êb­ŠºjÃÎMåïûĞSˆ{/r›[×ÁŸV7ŒR.ïˆıÓV³ÍOZŞrŸtD»Îÿ13Æ~óQUFM¸Àû|Ñ‹`ÍÄ`"ÁÎè}-a_p+-=0oú¢01ócŒb AîPüşíÂºş ÜÀºK°•ƒ,0Åæ…«­Í]ÖÉ¨¹å¸ÖGïZ~³íÑmšµ]/üßf«ÜáñY}/Î?:TñšIVÃüc°•ñ)!ÿ	,Ğ—-Üwµ‰Â‰íSó‹S}·í+i5éµºdtÊ™CÜÃk¹EĞ*QW0séÍ¦LÌrjz%a'o0L?oûŠ±ÕJ`IKˆ¨`qöK´I‡&Ã‚\[×SW;¿Ğ¤®
+˜Zô|—ºÚ¯óöÆ#Û?)—ß	kÉöŸ¸ R<¬Ñü›‰A:=¯b*<4µµ{À²ïe¨EåëÓ»*ÉºUDÔù™1Ç·DµşÉÎr=”÷MÀó1 Æ¾U–º Ö–ˆY–¨ÚËyrç"I;î÷î¶®ñÜíXaˆH>³’”…u•İÇ¿½¹FİHÍ4º8r®O,­G4°Exé•à§Oou÷sšÜ¶•Úß"ı´mzî.¼pSÌ]åèg’6ºn8ZôãÀ¡Œˆ3n¨åÙ‹‡ğÖÕ\ª‘ ^´°òçïEôø‹d$¤xY:Ğk©ËAùzµi—3§­[çtªG@ušÖó¥]\pÿrşÑ¢ùDğ‹kİf³¿Ò“ï%÷˜šXî¹¼Coj9Ù¦sq/^äÎ|®8É_4š²6gÎ;KD;ĞŸƒŒ¿¸­2æ3¹0Ÿ‚
+>IÜ¼=vß¿yşğ»E|Ú\Pî}ÖSÎõ|Ù7¿gP0}ÒÁ|êÇÇ6Ûg;Â©‘µ»$ŒBğ¾¢ËÍ»›wŞrsÓ«¯OÇÆÏlñî;<jó3òAé][§Îî8z}u¶ú¼3ÿW!%
+¶Ù7|ÀšŒšpkÒ? 6Â°µnQ¯¦ëğIiÕ\´‹Ùª*í)2™ÑeHmNmn
+«0 yK©uo;öÅT\
+E¦Îë¯xØM—TE8µ±	´p\)ôº^ö¾íMÂDâ£¾MçØ»±’šÁ<“0Ø‹Ö/F2äU|ÔD¨/CO¨mXj]75|ÔLP)V ¯½ÕÌ]ÈÈ¡¿>SÀoç\[“;şºOmòİ×ÙµÀ ì0èU‚ï×æYÅrûL)Mã<,^ÓìÙ8.a>Š$G³•¼„Ã,2,|tG3<¼—ñ48E 6ÙâÏÈÇÑTƒƒ_•bZ‘‘/Zêës%1ÌFf«ù?àw›:ÅÈS3óÔóJM6¼kpîNí÷ÄV¦iİÀÚ·é¹S–Q‹Ô·ÕçZ…æÃwR›¶Nê/úl¬Z^|ñ¸C ÖÎğã™íƒŒ¥¿Òk"vÓƒ'¿]´´†¦óTÁtwù·\úö‡9òÍG=Ê2”ô¾t¯T¿É6Aa!¦Õ%ªêÆ¡® `{âûyy†Ü$jf6OOıêè[²qz1»Œù"-rl£)ÒŠ1˜ú¢ Øê¢QZ‚í#®ÒÔí·ÚOh¿Ÿ7]-zàô§Ã}±ëù³s¹ê‡7V,Ê©ŞÌ˜ÚÉ
+ëŠC=¦>U³p%ÇN İŠ½œÅèOõöŸ.|W†},Ó‰Q\rvgØ¬{W}	cªUÿp‚ˆKìUóFÑ#¡‹ÁV‡L%ĞÖ±s;¾®AúÛšÑ†}Ï¤/—I›¼ù1h:Ë6û›¿Ã6g‹aâPS=nšTƒÊ2»yó.Ë£“é2ËuN72jÅ}
+‘&
+#ñH/'¹Ë:t0Şˆ8Åw¸o7ÆGWË7+™!B¦mø¢?Òîö­åÉ¢j¥ÏÅ
+è‡f|õ×é˜~(3¢T7òèœø½N]ªiò!*Ï™ÿUµzºBÏ†âè@»ï—à€—M%æ<OŸNú²ß
+8ÁÉÒgÛ)eThéIûˆ(g0¾3½ıK÷ätn”ñØÙOò=	)òä5hCøŒe&üÇÆt£H¼Û9´÷u•ÌÇB¦	ğûE1ójJ¤›0cÜ'İƒÎW6Oæ<=c¾M¡	ŒrtoÚşA’äa³ü–S=¶Lb|*é†_Ş“E†´u­ iê'œ²t‰3°ñçşBu\VıJ‡káòAsŸv<‡FrºØ¼GŒÍÆuHÔãÄ L¸‘ã«ö=¹~0¹&ıÔ¢m	¡æ’° »İÛsaCæŒÆÊ|dÍìQ¾m7Ú|*ß¿áÙV¿?öæşó§NFİ®|uàĞ<ñf‰-°ÅlÕí¾Ÿ¡åşdAæîQo€½ vmÒà+2G¢„&îùÿ+$	~œ 6?“WüË}­’£<RŸ¹mñ=ØsJçû”Î¥¾“…$$bâl^1àÎ®â ‘Øo),5(S8<)sérh˜ZZ¾ãîRFë-BÑÑLjpBf÷ÂJE	%ßÉ#Tš„>$nW/×YÕM.F¯‘œZã	e>Ù?2ËÄ-ôªÉ<ÙSĞàÎiÅç%_yØİğ&±è²wY\şœ¿|x»>\µÛ×”ñ%Ş­Ÿ„·{Ş˜j¡Ş,0íû’à.ó1òuÀYmŒ£ë!´¿ºåïRb>ÀAŒÖ ˆ †1D»ì¨Ö¥Í›rmÖù-­>HDF¶ÂƒJ5‰ò£ÔX2ĞÑ3o‹JeÚ·‚B×­ô^Kj?óïÄ&˜†¸3yÙ“÷¼í5-÷¦äå`¬&fÇ{ŒY4?¦İ¼2nªx‹¤}ÜzgEëÙ„ùsâ×NÈ½àÒ‘¸›Z¿+oÂßm»aÈ˜I"(w~™³(æ{ÁtÙëÄ‘qJTÃŒ´^¯;íNø§<§L¤&_¢šáš…‘ldßI‰Î9Nœ+ãäŠ–X  n±3ÙÎT8€ï·Ã=¾Ø{ó!U\i}1š¹ª­íR­ï$àüÂ>°¾·U«#±•·ÅèùÂCzß®€^ğF–
+Jk"w™pòõ®í–‡?Æy p=ÌíØ$z×¥ {2ön"ÏKc†Í4¾
+~cú]†¾L:/£1'Øê_›|Î“j¬¤³Vv`a›V¬İĞù†$>øOOPG˜¦!¢µÂº5+Ü•n(-+$¤ŞÆäE˜´î68›†¹Wt—'_iÕjŒˆ}·ÑB\¼Ğ”´úù}Åá©ŞŒ«iæ§È/Ã1÷Ûùà›™3_KN†_Õƒêô—+hğ2,O~fi2¨nå¿Ş¥˜Èº]VDµ¡¦úŠUeŠÚıS/q>J¯!æHQª½­ßŞ—ÉĞ‚ïy\Wü¥*½ıw?,ˆW––JCÜ_å:sİeXR"ßU[R#õ!áéT±‚ºÔ¦×{ÓÓ=\wjD/óòà„øg¡ˆ*úOÖ»F²wÊ¨©.äS‘Â"‘&/3c[çº#Äàıo‰½}…¦}¿,ÂÛRêÊÒá¶3»QôâK’e&²]²…ûJ?ß$W¨ÿüÌ;±[ûÍãko“>ùğ’‰ÜdÚœTÜ‘ZRZ#·w¬Ør/ÓRç_©Ä`Lnö|f0Ú”Ù¹Ø‚nºÄá˜®™ôo
+*¢Ãê§­½E*¾}‘@Şû›ü À =ÀSó&œâAvû%Í3Ykê5BÅ^Vì`İ´ B&¼™n¿/Ù6Ï±|ßà`ë›­ËLvÒ*Á\yâ\oñåIÎş•TI›taà‹Š£wFôûHQÊQ§Ò«…†ÎÃÃ¯×õg^t\NrBŸ_WµÿòÀz¨0	§»ãwŸñ\£5åvˆŞ{iß ˆ‚}Ù.¾xº§ûÕô4¦˜â¹sA‚ºyÌo6Ù‘Ÿ®&ˆP^ëLìXs~rÈÖÏv­*Eæ%m~R)Ìä3õÅ³Möök	ÊõC—Ò¥
+éÍ°Û›N…äId¼ÚBÎ—V7«'WØİó²¹Ãy¥ÎtÍÉ(8³ûØ&¢¯2lƒÅ£Ô‹»*¤ëKìüÄ*4İ8v¨¿²ôìÜ¢›1ÿ}É¦òG$OÍC<sˆnEÈ‰7_Ã×>‚ªÕI2k±ƒÏDôĞ~)¼À“ZëŞ5ãÉ×Æ’½­czõ¥ª?-ª()„•­ŞajylZVØgêé|Ë®ÿç—´y®~£‡F&u9¢%k¸^$£§¯Ÿ\×Î¬iÁïÜm|ßƒóìŞw‘Á~ªlådf¼w=öj®Îi–M]¸´}•|½£‘F¹şq\‚FMñ¾ÃÙ‹fŸtlb’}Ì¬£V#ú|œâÒğïVç±Ró\ÉŠ¤,–)‚0oŸÑ»ÒWŒÁ?\’³ßæuŠl¹sj0õ3½ÜÍı×!o
+Úw{G7Cê”]M<¨ºüeÔsƒsX{A&€u°ß¿ûQ×Ç«¥œ/SÔ_|Ö'|‘Ê¬Ò	Öäço;e®âŞ8¸ºmš
+6ş<ß©HªH?öó7Z¯Ù\¦ûL«pÍÙ{İÁoP¸rÛ…ò|Y«2ç›\Í¡¾3â†3Õ7	úEÄÊæ^œWçøˆÇ-nlÖÀ6×n²81‡K/wøêğ:£$4l×5=M¤ŠúKÕéC¯f¶ıİÏ§ÈV³nèÍì¯D6Go~Êğ$¹Bø&@³ĞŞËwø~Y/§P»—êbD5é¢Ùµêî!İ‰/¨dÒ'ÔÓfëŸ¤ıÑ4wkôÉµ15Zª2¡`O?‡=I&æ9Ü\ßn\–Ûƒ}¨¤Ê6*3}Â7ëéû}^é€)…QHÁ»m¢ıÔºõˆ24Ue%S¤šÒŸ”«=öçéJÒY»ØV<(/s³õu·G ÊÅ¶ôıº£c­pÕnøšƒÂ9¤´Zı–Táé‡¢òÍ`¯´Õ&k¤r¢u¹ÎŸŠš±vD˜å4©`´¦-#¹ïß'ò`'_,ª=›ùMã‹pÁ“âÓ,°Xã.I¡ ÉÔÒÆ˜÷‹,°PAæ³İ9­[äõ³>UÊ¿ŸpqCN°E*å)¼YL¸öÌíÔtğ6?ÿÚV!J¥weãêtm×÷›#ãªÒPŞÛõûsW/²›Qñ°a¶fúîO‘%ÿµkúê#W¼F"†L¥'¦(((E-Û'Mëİ¤šª_S]ÇèVº?@F>ÉÊ|]K2ÙÏPÎB	é+8ğU’–Èˆ™¦s‰MËw
+ÎpÓ…Ò¨ÆÚh xÙ:ğÇ÷ÌäË(VÅˆ^ÂXhcóÛ.\ÚÛ*>Íuo«EKÓiOU9›JçaHçd¡Ï,?‡MüÖ¶•á>¼Áª¬ôv†ûg—äPJ˜Ó~^aÓLşÑ*"æÁ%±±h8ÙW~e’¶9çf.äVÜ-h·ÔÒnV¨°Ø³”«v	í_ÛgÏÉù¼>äK5[ˆÛ,rh\Qá
+•ˆD(ÔÔÈĞ1MÍfsõ°n¼óÎ?Áué®Ös/ÔL 0“7Ì¹{'§^U-á^²­´@ôÑ¯j”oı~ôÅëNú²íÒå¯©ŒHo)¤Uºõ{Ù¿e[­Èá|³ğ€ñÁÖ¹»šæ’Uñ¼÷ıÇ{K¿Q÷'şP0ÙÅúåİËbüë"qÃ°±LQ¦Ü.tP—‡O8ˆ£1ìC/møÖOEÒD0Pê'ÃÃ×³Â’ÔEWÖlÓ)¯Ñ9mY„ÈŠ8˜Õ®ºï‹ğ‡Å	`²>Î.¬Ä1U;d*-xoíökÃî9ù›™ó®“J`ÎkÈï
+Óø"Æh“©d¤¦w™ÂåUÒMŸ5zÈMmİ›ùÔ¹U7ÍßMîÜğê÷ø©§İã,æu¹voùåë>öÁ·ª´¯Ûßdt÷İYĞıpQÎÇHú'¦Vóƒ§¢Ç6Ø¸ˆ9¼ÑÿÍBE1î­Ì“ìêN'—üÛCS²?”`ü.{s†qÈİ”x‘zé·¥^Nõ3>öîíÏš‘l>ßü¼rÜ²Ÿ™½Æä,,j³wùÕ˜åÔäìá~îÂxÖ©ñû2ôk4!»óğ>)?¿9Ñå)»aÙQ¥2¿u¥÷If\ŸC¾kln38I\ja¯õ6ÿ^¦çw÷Úì'‚eå¦%ñ³Ìœ±Ó‡ÂkR/?³Ş;í¤ûÙA™Eï¤­}L%”-éq;_î7ÌİÆø×åQY^¹Wúû¸øÜ±Ë€,\ äŞ›:š[&å¨­×!¹ì¢³ô^! ö"-C¹ĞUO#OÛ½`©ÂËL!¦Ò|u+Ö§ĞN63;ÏN¤6É\D²BÇáL‡NŸNòîì[µŸ/5uôq^&Q/­Kª¿Î\|Õ”ëY1!ªüÊ[äûhöÃ¡@uW’VuOí¢mt‹§7É*Gº×Ô±Ï„†æø-ˆ’¿!g4¿óÈ[¢±Û.n;Ó¨G²¦ÌÈ…û1÷¹Y.iøgøÚnh¸ÉÑ….ºÇÊĞC_<`?„?ëà¶.ÉOÑ¤íòÔ£ıR›Oÿ]å<Œ³L]ñw"EW»Ş÷“¾(Ï?Ö»ïÅÿÒAÕPò]=Ú§q‘Ì‚œ¹ô‘iÄN&wfFÅnl'è‘f´u¯ÊµQ72±ª†®vQ\pÂNr_¿}\#3%çêÓupì`[á©ú½¬ë‡Œœ¡§3^ ‡nT§|¹ğœlºjªBMWv`¿Î¼yÂŞ9¹gÑ’^ı¨Ñ¹'Ìœ’*-Hİ–+±°û^;OËæ—û<j­öåÁBÊğ…}qã¯ºÍê “Ğ‚Gß¨çBœ„İK""Cıúe¦µ_Ã±¯ò)h÷¹¿/¦œåºÖ=ªÚ+œÅÅ¤æ|x©òZ©[ŞŠ)šàLw`|€WĞvG_r=QuFF‰{ìõf“»!cüPİ–äíWë=öm˜cŒFH›4—â¾s;á[JuIÉg¾nß6FY0ÑÊ!°“s‰Qù%-ÌÖ¯^™‹<gtÏô}èH|ñe7L4şh}‡qÑÄ7õ¿fÎ|QÖè’ïN=çöue âÛ&áİn'DU
+…)ZL²°øEÔ’PØ*%£«ıtª±'Ò ZÛS?şL¦lĞ£L-Ã`  d¬0 /zãA¯X~m­~£CàEø÷ÃÒşæ‡äÉÄ úë›ı«Aïeİç‹œ£EÖ„sÍBŠ÷²›-|
+ÙëË¯^ªçå`½‡–jN¢¹\¿¿Ñ9ä&`œW”éÈ-yeÚÎ\¼İiï\5¿å·eCõ½—A~2_Ô¶!ÄÓñ!ÊıcBvÚg’©Uµ“2„ÀÿëËÌ&ñVZ2(?»™dÊÛS‚à¬V+<!˜ÒÁQ™.vl¨E¹¡XüĞ½S1i¿¾WºF0`êWœpÿHãıóŸz Ê`P	ÀÿÕ3Ãw(i ï˜góûÎ¨Ã KFÂ	FBÏJà¿&<Zÿ/h©_Ihttp://the.taoofmac.com.nyud.net:8090/themes/Kubrick/images/slideshow.swf_application/x-shockwave-flashÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓ!"O// Copyright (c)2005 Site Meter, Inc. 
+// <![CDATA[
+// codename: sm3entrelinhas
+
+var g_date=new Date();
+var g_hours=0;
+var g_minutes=0;
+var g_tzo = (typeof(g_date.getTimezoneOffset)!="undefined") ? g_date.getTimezoneOffset() : "";
+var g_width=window.screen.width; 
+var g_height=window.screen.height;
+var g_colorDepth=window.screen.colorDepth;
+var g_r="";
+var g_page=escape(document.location);
+var g_rtype="0";
+var g_server="70.84.88.170";
+var g_language = navigator.language ? navigator.language : navigator.userLanguage;
+var g_ip="86.135.68.201";
+
+// Get the User Agent Name
+var g_agent = navigator.appName;
+
+// if g_frames is true then try getting the framed referral (with out error checking)
+if (typeof(g_frames) != "undefined")
+	if (g_frames)
+		g_r=top.document.referrer;
+
+// Get the referral for non-multi-domained-framed sites using a Netscape browser
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["parent"] != null) 
+		if (parent["document"] != null) // ACCESS ERROR HERE!
+			if (parent.document["referrer"] != null) 
+				if (typeof(parent.document) == "object")
+				{
+					g_rtype="1";
+					g_r=parent.document.referrer; 
+				}
+
+// Get the referral for the current document if a framed referral wasn't found
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["referrer"] != null) 
+	{
+		g_rtype="4";
+		g_r = document.referrer;
+	}
+
+// Get the hours
+if (g_date)
+	g_hours=g_date.getHours();
+
+// Get the minutes
+if (g_date)
+	g_minutes=g_date.getMinutes();
+
+// Convert all the 'unknown's into blank
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	g_r = "";
+
+// Create the image url and write it into the page. 
+var g_bImage=1;
+if (typeof(g_sLastCodeName) != "undefined")
+	if (g_sLastCodeName == site)
+	    g_bImage = 0;
+if (g_bImage == 1)
+{
+document.write("<a href=\"http://www.sitemeter.com/");
+document.write("stats.asp?site="+site+"\" target=\"_top\">");
+document.write("<img src=\"http://" + g_server + "/");
+document.write("meter.asp?site="+site); 
+document.write("&refer="+escape(g_r));
+if (g_ip != "")
+	document.write("&ip="+g_ip);
+document.write("&hours="+g_hours);
+document.write("&minutes="+g_minutes);
+document.write("&rtype="+g_rtype);
+document.write("&w="+g_width);
+document.write("&h="+g_height);
+document.write("&clr="+g_colorDepth);
+document.write("&tzo="+g_tzo);
+document.write("&lang="+escape(g_language));
+if (typeof(g_security) != "undefined")
+	document.write("&security="+escape(g_security));
+document.write("&pg="+g_page);
+document.write("&js=1&rnd="+Math.random());
+document.write("\" border=\"0\" alt=\"Site Meter\"/></a>");
+}
+
+var g_sLastCodeName = site;
+
+// ]]>
+_:http://sm3.sitemeter.com/js/counter.js?site=sm3entrelinhasÓ$%&O¤GIF89a?  ¢       3ÿğ¶" ïØ  ÿÿÿÿÀ€!ù   ,    ?  @iºÜş0ÊùŒ³uá¼şTcuÌXŠJgj%¾p,§­±ÙvŠç®ù¨™‹vS±tq–<:oÁ¦QÉ¬Z¯Ølˆ×\:iİä)„¬ÀhãøÏ$†Å#tsx´NŞ@@h?*‚_Zˆ2	 ;_3http://70.84.88.170/meter.asp?site=sm3entrelinhas&refer=http%3A//www.bloglines.com/citations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&ip=86.135.68.201&hours=1&minutes=4&rtype=4&w=1280&h=854&clr=32&tzo=-60&lang=en&pg=http%3A//the.taoofmac.com.nyud.net%3A8090/space/blog/2005-06-23&js=1&rnd=0.6873457868058913Yimage/gifÔ()*+UUTF-8O9<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://the.taoofmac.com.nyud.net:8090/space//About"><META http-equiv="Content-Type" content="text/html; charset=utf-8"><LINK rel="prefetch" href="http://the.taoofmac.com/space/About"><LINK rel="prefetch" href="http://the.taoofmac.com/space/Archives"><LINK rel="prefetch" href="http://the.taoofmac.com/space/Credits"><LINK rel="prefetch" href="http://the.taoofmac.com/space/RecentChanges"><LINK rel="prefetch" href="http://the.taoofmac.com/photos"><LINK rel="alternate" type="application/atom+xml" href="http://the.taoofmac.com/space/RecentChanges?format=atom" title="Complete Atom Feed (bliki)"><LINK rel="alternate" href="http://the.taoofmac.com/space/RecentChanges&format=rss" type="application/rss+xml" title="Complete RSS Feed (bliki)"><LINK rel="alternate" href="http://the.taoofmac.com/space/RecentChanges?filter=blog&format=atom" type="application/atom+xml" title="Partial Atom Feed (full blog posts)"><LINK rel="alternate" href="http://the.taoofmac.com/space/RecentChanges?filter=blog&format=rss" type="application/rss+xml" title="Partial RSS Feed (full blog posts)"><LINK rel="alternate" href="http://the.taoofmac.com/space/RecentChanges?filter=blog&format=rss&images=no" type="application/rss+xml" title="Partial RSS Feed (full blog posts, no images)"><LINK rel="alternate" href="http://the.taoofmac.com/photos/rss.php" type="application/rss+xml" title="Photos RSS Feed (photos only)"><META name="generator" content="PhpWiki 1.3.3-rcarmo"><META name="author" content="Rui Carmo"><META name="copyright" content="Â© 2002-2005 Rui Carmo"><META name="robots" content="index,follow"><META name="keywords" content="blog/2005-06-23, The Tao of Mac"><META name="description" content="Dead tired. Decided to take the evening off to hack my own flavor of [TiddlyWiki|http://www.tiddlywiki.com] (I'm picking up my [earlier attempt|blog/2005-05-15] where I left off) and fiddle with [Google] Maps a bit."><BASE href="http://the.taoofmac.com.nyud.net:8090/space/"><LINK rel="shortcut icon" href=""><LINK rel="home" title="HomePage" href="HomePage"><LINK rel="help" title="HowToUseWiki" href="HowToUseWiki"><LINK rel="search" title="FindPage" href="FindPage"><LINK rel="bookmark" title="SandBox" href="SandBox"><LINK rel="bookmark" title="WikiWikiWeb" href="WikiWikiWeb">
+
+<LINK rel="archives" title="June 2005" href="http://the.taoofmac.com.nyud.net:8090/space//blog/2005-06">
+
+<LINK rel="stylesheet" title="Kubrick" type="text/css" charset="utf-8" href="/themes/Kubrick/Kubrick.css"><TITLE>The Tao of Mac - blog/2005-06-23</TITLE><SCRIPT type="text/javascript" src="http://www.haloscan.com/load/taoofmac"> </SCRIPT><SCRIPT type="text/javascript" src="/themes/Kubrick/scripts/livesearch.js"></SCRIPT><SCRIPT type="text/javascript" src="/themes/Kubrick/scripts/se_hilite.js"></SCRIPT><SCRIPT language="Javascript">
+function master_load() {
+  liveSearchInit();
+  Hilite.hilite();
+}
+</SCRIPT></HEAD><BODY leftmargin="0" topmargin="0" onload="master_load()">
+<DIV id="page">
+<DIV id="header"><DIV id="flashheader">
+<OBJECT classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="722" height="182" title="Flash slideshow"><PARAM name="allowScriptAccess" value="sameDomain">
+<PARAM name="movie" value="/themes/Kubrick/images/slideshow.swf">
+<PARAM name="quality" value="high">
+<PARAM name="bgcolor" value="#ffffff">
+<EMBED src="/themes/Kubrick/images/slideshow.swf" quality="high" bgcolor="#ffffff" width="722" height="182" name="flashheader" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></EMBED>
+
+</OBJECT>
+</DIV>
+</DIV>
+
+<DIV id="actionbar">
+<DIV id="actionbuttons">
+  <A href="/space">Home</A>
+      <A href="/space/About">About</A>
+      <A href="/space/Archives">Archives</A>
+      <A href="/photos">Photos</A>
+        <A href="HOWTO" title="HOWTO" class="wiki">HOWTO</A>        <A href="RecentChanges" title="RecentChanges" class="wiki">RecentChanges</A>        <A href="blog/2005-06-23?action=RelatedChanges" class="wikiaction">RelatedChanges</A>            <A href="blog/2005-06-23?action=Info" class="wikiaction">Info</A>  </DIV>
+
+<DIV id="searchholder"><FORM id="searchform" name="searchform" action="FullTextSearch" method="get" accept-charset="utf-8">
+<INPUT type="search" id="livesearch" name="s" size="12" maxlength="256" title="Search" value="Search" onkeypress="liveSearchStart()" onblur="setTimeout('closeResults()',2000); if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" onmouseout="window.status=''; return true;" onmouseover="window.status='Search'; return true;" autocomplete="off">
+   <BR>
+   <INPUT type="hidden" name="auto_redirect" value="0">
+</FORM>
+   <DIV id="LSResult">   </DIV>
+</DIV>
+</DIV>
+
+
+<DIV id="pagetrail"><P>Page Trail: <A href="blog/2005-06-23">Link Mode</A></P>
+</DIV>
+
+<DIV id="content" class="narrowcolumn">
+<DIV id="pagetitle"><A href="blog/2005-06-23?action=BackLinks" class="backlinks" title="BackLinks for blog/2005-06-23" onmouseover="window.status="BackLinks for blog/2005-06-23"; return true;" onmouseout="window.status='';return true;">blog/2005-06-23</A></DIV>
+<DIV id="postcontent">
+<H2>Link Mode</H2>
+<P>Dead tired. Decided to take the evening off to hack my own flavor of <A href="http://www.tiddlywiki.com" title="TiddlyWiki" class="namedurl">TiddlyWiki</A> (I'm picking up my <A href="blog/2005-05-15" title="blog/2005-05-15" class="named-wiki">earlier attempt</A> where I left off) and fiddle with <A href="Google" title="Google" class="wiki">Google</A> Maps a bit.</P>
+<P>Out there:</P>
+<UL><LI><A href="http://script.aculo.us" title="script.aculo.us" class="namedurl">script.aculo.us</A> has a new home page. Now that <A href="JavaScript" title="JavaScript" class="wiki">JavaScript</A> is trendy again, even lousy sites can look spiffy with this.</LI>
+<LI><A href="Intel" title="Intel" class="wiki">Intel</A>-based <A href="http://www.thinksecret.com/news/0506intelmac.html" title="developer systems" class="namedurl">developer systems</A> are being delivered. And what does the <A href="http://apple.slashdot.org/article.pl?sid=05/06/22/2234226" title="Slashdot crowd speculate upon" class="namedurl">Slashdot crowd speculate upon</A>? Running <A href="XP" title="XP" class="wiki">XP</A> on the damn things, of course.</LI>
+<LI><A href="http://www.codeweavers.com/about/general/press/?id=20050622" title="Codeweavers" class="namedurl">Codeweavers</A> is <A href="http://www.tuaw.com/2005/06/22/codeweavers-announces-mac-x86-plans/" title="preparing" class="namedurl">preparing</A> to tackle <A href="Mac%20OS%20X" title="Mac OS X" class="wiki">Mac OS X</A> on <A href="Intel" title="Intel" class="wiki">Intel</A>.</LI>
+<LI>Sender ID <A href="http://it.slashdot.org/article.pl?sid=05/06/23/1354232" title="re-surfaces" class="namedurl">re-surfaces</A>, aggressively pushed by <A href="Microsoft" title="Microsoft" class="wiki">Microsoft</A>. Other  anti-<A href="Spam" title="Spam" class="wiki">Spam</A> schemes are likely to jump on the bandwagon soon.</LI>
+<LI><A href="http://www.koffice.org/announcements/announce-1.4.php" title="KOffice 1.4" class="namedurl">KOffice 1.4</A> came out. Like Open<A href="Solaris" title="Solaris" class="wiki">Solaris</A>, nobody noticed.</LI>
+<LI><A href="Samsung" title="Samsung" class="wiki">Samsung</A> is <A href="http://www.engadget.com/entry/1234000820047771/" title="showing off" class="namedurl">showing off</A> a <A href="Motorola/V3" title="Motorola/V3" class="named-wiki">RAZR</A>-like phone. Judging from the recent <A href="Samsung" title="Samsung" class="wiki">Samsung</A> gear that I've been testing, this is likely to be miles ahead of anything <A href="Motorola" title="Motorola" class="wiki">Motorola</A> can dish out.</LI>
+</UL>
+</DIV>
+
+<DIV class="comments">
+<A href="javascript:HaloScan('blog/2005-06-23');" target="_self"><SCRIPT type="text/javascript">postCount('blog/2005-06-23');</SCRIPT>Comment (1)</A> | <A href="javascript:HaloScanTB('blog/2005-06-23');" target="_self"><SCRIPT type="text/javascript">postCountTB('blog/2005-06-23');</SCRIPT>Trackback (0)</A></DIV>
+
+<DIV id="seealso"><P>See Also:</P>
+<TABLE cellspacing="0" cellpadding="4" width="100%"><TBODY><TR><TD width="25%" bgcolor="#F0F3F5"><A href="HomePage" title="HomePage" class="named-wiki">HomePage</A></TD><TD width="25%" bgcolor="#E0E6EA"><A href="FullTextSearch" title="FullTextSearch" class="named-wiki">FullTextSearch</A></TD><TD width="25%" bgcolor="#D0DAE0"><A href="Index" title="Index" class="named-wiki">Index</A></TD></TR></TBODY></TABLE>
+</DIV>
+<DIV id="LSResult" style="display: none;"></DIV>
+</DIV>
+
+<DIV id="sidebar">
+  <DIV id="cachebox"><DL><DT><STRONG>Note:</STRONG> This is cached content.</DT><DD>
+     You are viewing this through <A href="http://www.scs.cs.nyu.edu/coral/">the Coral Network</A>, in order to avoid overloading my server.</DD></DL>
+  </DIV>
+<UL>
+<LI><H2>Archives</H2>
+<UL><LI><A href="blog/2005-06">
+June 2005</A></LI>
+<LI><A href="blog/2005-05">May 2005</A></LI>
+<LI><A href="blog/2005-04">April 2005</A></LI>
+</UL>
+</LI>
+<LI><H2>Syndication</H2>
+<UL><LI>Bliki: <A href="http://the.taoofmac.com/space/RecentChanges?format=rss">RSS</A>|<A href="http://the.taoofmac.com/space/RecentChanges?format=atom">Atom</A></LI>
+<LI>Blog Only: <A href="http://the.taoofmac.com/space/RecentChanges?filter=blog&format=rss">RSS</A>|<A href="http://the.taoofmac.com/space/RecentChanges?filter=blog&format=atom">Atom</A></LI>
+<LI>Others: <A href="http://the.taoofmac.com/photos/rss.php">Photos</A></LI>
+</UL>
+</LI>
+<LI><H2>Links</H2>
+<UL><LI><A href="http://www.decafbad.com/blog/" title="Les Orchard">0xDECAFBAD</A></LI>
+<LI><A href="http://2lmc.org/spool/" title="spool">2lmc</A></LI>
+<LI><A href="http://merlin.blogs.com/43folders/" title="GTD">43 Folders</A></LI>
+<LI><A href="http://binarybonsai.com/" title="Michael Heilemann">Binary Bonsai</A></LI>
+<LI><A href="http://www.invisiblethreads.com/potd/" title="Amazing">Daily Photography</A></LI>
+<LI><A href="http://daringfireball.net/" title="John Gruber">Daring Fireball</A></LI>
+<LI><A href="http://www.iclub.com.pt" title="A PT Mac User Club">iClub</A></LI>
+<LI><A href="http://asseptic.org/blog/" title="Eduardo Sousa">If Then Else</A></LI>
+<LI><A href="http://blog.sergiocarvalho.com/" title="S&eacute;rgio Carvalho">K</A></LI>
+<LI><A href="http://cafeteira.pedro.nu" title="pfig">Kafeteira</A></LI>
+<LI><A href="http://pauloquerido.net/" title="Paulo Querido">O Vento LÃ¡ Fora</A></LI>
+<LI><A href="http://onepointzero.com" title="Colin O'Brien">One Point Zero</A></LI>
+<LI><A href="http://diveintomark.org/" title="Occasional Diving">Mark Pilgrim</A></LI>
+<LI><A href="http://rage.against.org" title="Bruno Rodrigues">MoiMeme</A></LI>
+<LI><A href="http://na-cama.com" title="(I used to be there)">na-cama.com</A></LI>
+<LI><A href="http://no-prato.com" title="(knife and fork)">no-prato.com</A></LI>
+<LI><A href="http://www.simplicidade.org/notes/" title="Melo">Notes</A></LI>
+<LI><A href="http://nowhereland.nunonunes.org/" title="Nuno Nunes">Nowhereland</A></LI>
+<LI><A href="http://www.orkut.com/Profile.aspx?uid=8803503935997373321" title="(Profile)">Orkut</A></LI>
+<LI><A href="http://www.popdex.com/search/?query=the.taoofmac.com" title="(My Citations)">Popdex</A></LI>
+<LI><A href="http://www.russellbeattie.com/notebook/" title="Russell Beattie">Russell's Notebook</A></LI>
+<LI><A href="http://simon.incutio.com" title="PHP, Python, CSS, XML">Simon Willinson</A></LI>
+<LI><A href="http://www.schneier.com/blog/" title="Bruce Schneier">Schneier on Security</A></LI>
+<LI><A href="http://www.technorati.com/cosmos/search.html?rank=&url=the.taoofmac.com%2Fspace" title="(My Link Cosmos)">Technorati</A></LI>
+<LI><A href="http://whatdoiknow.org" title="Todd Dominey">What Do I Know</A></LI>
+<LI><A href="http://stevenf.com" title="Steven Frank">~stevenf</A></LI>
+</UL>
+</LI>
+</UL>
+
+<DIV id="adsense"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-1434202728559591";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "CCCCCC";
+google_color_url = "CCCCCC";
+google_color_text = "CCCCCC";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="120" height="600" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-1434202728559591&dt=1119571455712&lmt=1119560640&format=120x600_as&output=html&url=http%3A%2F%2Fthe.taoofmac.com.nyud.net%3A8090%2Fspace%2Fblog%2F2005-06-23&color_bg=FFFFFF&color_text=CCCCCC&color_link=CCCCCC&color_url=CCCCCC&color_border=FFFFFF&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</DIV>
+</DIV>
+
+
+<DIV id="debug"></DIV>
+
+<HR>
+<DIV id="footer">
+<SMALL class="center">Last edited on Thursday, June 23, 2005 22:04:00.<BR>The Tao of Mac is Â© 2002-2005 <A href="http://the.taoofmac.com/space/RuiCarmo">Rui Carmo</A>. It is <A href="http://creativecommons.org/licenses/by-nc-nd/2.0/" title="Some Rights Reserved">Protected by Creative Commons</A>, and makes no serious attempt at being valid <A href="http://validator.w3.org/check/referer">XHTML</A> due to lack of time.<BR>You may want to see the <A href="Credits">design credits</A> or <A href="Donate">donate</A>.</SMALL>
+</DIV>
+</DIV>
+<DIV id="sitemeter">
+<SCRIPT type="text/javascript" language="JavaScript">var site="sm3entrelinhas"</SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript1.2" src="http://sm3.sitemeter.com/js/counter.js?site=sm3entrelinhas">
+</SCRIPT><A href="http://www.sitemeter.com/stats.asp?site=sm3entrelinhas" target="_top"><IMG src="http://70.84.88.170/meter.asp?site=sm3entrelinhas&refer=http%3A//www.bloglines.com/citations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&ip=86.135.68.201&hours=1&minutes=4&rtype=4&w=1280&h=854&clr=32&tzo=-60&lang=en&pg=http%3A//the.taoofmac.com.nyud.net%3A8090/space/blog/2005-06-23&js=1&rnd=0.6873457868058913" border="0" alt="Site Meter"></A>
+
+
+</DIV>
+
+</BODY></HTML>_;http://the.taoofmac.com.nyud.net:8090/space/blog/2005-06-23Ytext/html¡-Ñ.Õ/+0(12_WebResourceFrameNameOV<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://the.taoofmac.com/space/blog/2005-06-23&hl=en&client=ca-pub-1434202728559591&adU=www.buysusa.com&adT=Adobe+Software+90%25+Off&adU=www.navicat.com&adT=Database+GUI+Tool+Mac+OSX&adU=www.nclt.com&adT=SMS/MMS+Gateway+-Download&adU=www.apple.com/ukstore&adT=Apple+software&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Google</FONT></A></TD></TR><TR><TD width="118" height="" align="" valign="top"><TABLE width="118" height="" cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw0" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.buysusa.com','aw0')" onmouseover="ss('go to www.buysusa.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BrtAqyU27QoWWDZHmaMv3sPEPjqHjCp6NyJcBwI23AZDWJxABGAEg1e71ASgEQIoWSIs5UIy4naIGmAGcSrIBGXRoZS50YW9vZm1hYy5jb20ubnl1ZC5uZXS6AQoxMjB4NjAwX2FzyAEB2gEtaHR0cDovL3RoZS50YW9vZm1hYy5jb20vc3BhY2UvYmxvZy8yMDA1LTA2LTIz&num=1&adurl=http://www.buysusa.com&client=ca-pub-1434202728559591" onfocus="ss('go to www.buysusa.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.buysusa.com','aw0')" onmouseout="cs()"><B>Adobe Software 90% Off</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Adobe Software At Bargain Prices Original CD Studio MX 2004 &amp; Others<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#000000">www.buysusa.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw1" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.navicat.com','aw1')" onmouseover="ss('go to www.navicat.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.navicat.com/download.php3&sa=l&ai=BmjcSyU27QoWWDZHmaMv3sPEPuK6IA-iEjo0BwI23AaD-ChACGAIg1e71ASgEQIoWSJw5UL_v9rgFmAGcSqABlqK__wOyARl0aGUudGFvb2ZtYWMuY29tLm55dWQubmV0ugEKMTIweDYwMF9hc8gBAdoBLWh0dHA6Ly90aGUudGFvb2ZtYWMuY29tL3NwYWNlL2Jsb2cvMjAwNS0wNi0yMw&num=2&client=ca-pub-1434202728559591" onfocus="ss('go to www.navicat.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.navicat.com','aw1')" onmouseout="cs()"><B>Database GUI Tool Mac OSX</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">Powerful MySQL GUI Client for Mac and Win. Download Navicat Now!<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#000000">www.navicat.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw2" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.nclt.com','aw2')" onmouseover="ss('go to www.nclt.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw2" target="_top" href="/pagead/iclk?sa=l&ai=B3E2CyU27QoWWDZHmaMv3sPEPmsbbBpjmraYBwI23AaD3NhADGAMg1e71ASgEQIoWSIs5UJ2L0dD-_____wGYAZxKsgEZdGhlLnRhb29mbWFjLmNvbS5ueXVkLm5ldLoBCjEyMHg2MDBfYXPIAQHaAS1odHRwOi8vdGhlLnRhb29mbWFjLmNvbS9zcGFjZS9ibG9nLzIwMDUtMDYtMjM&num=3&adurl=http://www.ncl.ie/Products/Provato.html&client=ca-pub-1434202728559591" onfocus="ss('go to www.nclt.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.nclt.com','aw2')" onmouseout="cs()"><B>SMS/MMS Gateway -Download</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">mmsc, smsc, cluster, routing, J2EE XML APIs &amp; browser console support<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#000000">www.nclt.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="118" height="146" align="left" valign="middle"><TABLE width="118" height="140" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw3" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.apple.com/ukstore','aw3')" onmouseover="ss('go to www.apple.com/ukstore','aw3')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:113px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw3" target="_top" href="/pagead/iclk?sa=l&ai=BFwTJyU27QoWWDZHmaMv3sPEPmp_YCPLrxMMBwI23AfDXHBAEGAQg1e71ASgEQIoWSIo5UKXe-JgHmAGcSrIBGXRoZS50YW9vZm1hYy5jb20ubnl1ZC5uZXS6AQoxMjB4NjAwX2FzyAEB2gEtaHR0cDovL3RoZS50YW9vZm1hYy5jb20vc3BhY2UvYmxvZy8yMDA1LTA2LTIz&num=4&adurl=http://tracker.tradedoubler.com/pan/TrackerServlet%3Fp%3D2701%26a%3D931922%26g%3D0%26epi%3Dsoft%26url%3Dhttp://store.apple.com/Apple/WebObjects/ukstore&client=ca-pub-1434202728559591" onfocus="ss('go to www.apple.com/ukstore','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.apple.com/ukstore','aw3')" onmouseout="cs()"><B>Apple software</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#000000">The entire range of Mac software to discover - on Apple Store<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#000000">www.apple.com/ukstore</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_ïhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-1434202728559591&dt=1119571455712&lmt=1119560640&format=120x600_as&output=html&url=http%3A%2F%2Fthe.taoofmac.com.nyud.net%3A8090%2Fspace%2Fblog%2F2005-06-23&color_bg=FFFFFF&color_text=CCCCCC&color_link=CCCCCC&color_url=CCCCCC&color_border=FFFFFF&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=96&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124      !  3  I  R  Y  k  z   %` %£ %¬ %³ 8h 8 8« 8² L2 L L† c cN cU ‡e ‡± ‡Ñ ‡Ú ‡ø ‡ş ®¹ ®ó ¯ ¯ º. ºk ºr » ¼P ¼Z ¼c ¼i õ õ½ õÇ õÉ õÌ õ× õîH[             3             N

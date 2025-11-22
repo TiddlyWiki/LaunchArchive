@@ -1,0 +1,627 @@
+bplist00Ó',_WebSubresources_WebMainResource_WebSubframeArchives©#$Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOà/*
+Theme Name: Blix
+Theme URI: http://www.kingcosmonaut.de/blix/
+Description: Hmmm...
+Version: 0.9.1
+Author: Sebastian Schmieg
+Author URI: http://www.kingcosmonaut.de/
+*/
+
+@import "layout.css";
+@import "spring_flavour.css";
+_9http://www.m-e-x.de/blog/wp-content/themes/Blix/style.cssXtext/cssÔ_WebResourceTextEncodingNameUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓOâGIF89aP  ÷  üfüşüœw w—8 $ô Ñw wà€ÿcæÿÿ  ÿ4Ø  Í  ÓÀ w Ä– åV Ñ  w9è !\  Ñ  w —“ ~ ÿE ÿ SnÌ £ Õ w VH Õ  Ó  w °”   '      @   P   $ĞÄåów   ÈŞ  å  w   Ğ       ° ó w   ,jä Ş Ò  w  Ì      Là°åÒóEw   Ğè$ê÷w  ø€ÏTæzöÑw wÿ °ÿ~óÿEwÿ  88æ"ôvw  Ï  à~ åE w   @ æP    [ {  Ó  w v%õ   ·} E  ``Ìâæ   ~n  o} ÕEÀw  ”    '    ÿ ÿ  ÿ  ÿ  ÿĞ`ÿWÿÑÿ w Ó  “  H               F  Ñ  w kw  Ê  Ó  w X| Z  Ö  w %? F æÑ ww “1 F æÑ ww            àh cæ      ¿  æ­ w ˜ ä                  üàT÷c      T$ ÷  w  ø÷àTíöæww ÿˆÿÿæÿÿÿÿ ÿp  ôä ww }  çæ w     Ø K    bp ç æ w àÿ{cÿğÿN ÿ  Œ¤çç    p‹bäææwww Üd úè N    °ª ÿ=Oÿ n £èÕ w  •ˆ \æ Ñ w  Ì b æ  wN  o tP    a    f  i  l  e        “@Gë»ÿGÿ  !ù     ,    P  ¿ H° Áƒ*\Èp`€‡#JœH±¢Å‹3
+  £Ç CvĞ°¤I…$pÉRdÊ“0a¦\Ù²æÈ˜8MÎôñcÏ‘}|èèF£37MzrçÈ§ hBù’)S••V*s#Ï _}JZ©Q¥hÏªDÚU%Ï¨!ÇJİŠëËºuIÒE«Ó+Ô•?£‚å™5/_ºVÍŞ]èÔfÍÅ9#lì˜%dÉ˜óV~œ¹sáŒ C‹]Ñ³éÓ ;_/http://www.m-e-x.de/blog/upload/rss_artikel.gifYimage/gifÓOìGIF89aP  ÷  üfüşüœw w—8 $ô Ñw wà€ÿcæÿÿ  ÿ4Ø  Í  ÓÀ w Ä– åV Ñ  w9è !\  Ñ  w —“ ~ ÿE ÿ SnÌ £ Õ w VH Õ  Ó  w °”   '      @   P   $ĞÄåów   ÈŞ  å  w   Ğ       ° ó w   ,jä Ş Ò  w  Ì      Là°åÒóEw   Ğè$ê÷w  ø€ÏTæzöÑw wÿ °ÿ~óÿEwÿ  88æ"ôvw  Ï  à~ åE w   @ æP    [ {  Ó  w vWõ    } E  ``Ìâæ   ~n  o} ÕEÀw  ”    '    ÿ ÿ  ÿ  ÿ  ÿĞ`ÿWÿÑÿ w Ó  “  H               F  Ñ  w kw  Ê  Ó  w X| Z  Ö  w %? F æÑ ww “1 F æÑ ww            àh cæ      ¿  æ­ w ˜ ä                  üàU÷c      U$ ÷  w  ø÷àTíöæww ÿˆÿÿæÿÿÿÿ ÿp  ôä ww }  çæ w     Ø K    bp ç æ w àÿ{cÿğÿN ÿ  Œ¤çç    p‹bäææwww Üe úè N    °© ÿ=Oÿ n £èÕ w  •ˆ \æ Ñ w  Ì b æ  wN  o tP    a    f  i  l  e        “@Gë»ÿGÿ  !ù     ,    P  É H° Áƒ*\Èp`€‡#JœH±¢Å‹3
+  £Ç CvĞ°¤I…$pÉRdÊ“0a¦\Ù²æÈ˜8MÎôñcÏ‘}|8ô¥Ñ7U™TåR§37òIÕ§Ë¦Q™:İºuéK®G‘•
+”&€ <ÍmŠ)É¨o•ÂÕJ—«VšÕi6lÖ¬wÛb;öîÔ½gÑ&Vûõ©]¿ƒ†ˆÕ¦å¯93Üi¹&fÍ Åêí,4´iÑS«^Íšâé×° ;_0http://www.m-e-x.de/blog/upload/rss_comments.gifÓOGIF89aP  ÷    ‹ÿÿÿ   ÿ’.ÔÖİÕÖŞSb›,x‚’Œ•»IY˜‘­ç…‘½˜ÍK[”éêíÛÜèèèëL\˜ØÛéĞÕéııÿ{ƒ ºÈç—š§´ºÊš¥ÀÁÄĞŒ³yƒ¦l´ûıÿ!4€@Tš(gõöùÚÛçñõüÒØèöüÿju¬‡”Á:K†“ÂÎÎİ^o©ğğôãëú›¤¼‹Œcw³y›Ÿ©ÇÄÓí¥¶ßx‰·O^‘˜¥ÎCN‡)0_cm¢‡ŸÚhr‚šÎ­½âíòõ™¶ƒŒ¬şÿÿ}¢áŞìşÙáñùıÿu€ªÆÌß¦è~…š™¶Rcíï÷¸ÀÒ,vøüÿ‡”º¨Äò`e~˜É4Dy­¸Ô¥Å½Ææjx±ÖÛë´ºÉSi©/?ƒšŸº4H×ÚääîÿXa|œ¦Ì\q¯“š¶PZ…üÿÿµ¾Ú¡¬Ñœ¬Ñt²ÒØå—´ĞÖèÜâï€ªô˜¶ir‘˜›¯„•bk•Î×é…—Ååæíy}’„¹MZ1C„åíûİçúeo™-:£ÎÑ×ê»Êğäçğ·ÀÖáãìv~§“¯æ—¤Ê—›¥B[¡ÆÎäÂÅÔ¥©´}Šº<Ds]e…DQ€¬±Â                                                                                                                                                                                                                                                                                                                              !ù     ,    P  @ÿ H° Áƒ*\Èp`  S,hI hK@W(ÍÀ #Š
+4‚ÔÙ0ÀC &Q¦<™åC–,QIÀL›*UŞ4)ğe€Ÿ@¥LxñÇ (]>¤ú2§Ó§P£Jª2@OªXcbİÊUªUZ»VK¶,O°&¡ÓàÆBv @E g~,ñQ£eË“0Çjİ©³æÍÃP¿>Œ Òü0PC(Î“5fòÀ	0'Æ~ÍŠúµ¡éÓ¨SdÊºµë×°cËİú*í×¡Gëvª8íÏJ4(šd…Ê2p„Å’¦.º¬*=úO™²ÛÔ¾}föÃß«^{}p¡‡$	‘Êêğ&ƒ‹,
+œĞ L9~Yç½;wğÿaKWÙP€!}|‚)ğ´†Iè!L0’S¾Y˜tßí„N$†˜SoM” 	|„Ğˆl8b‹x± R0ä¶ÛŠİ&äD
+)@@ ;_3http://blogstats.de/images/blogstats_mini_80x15.gifÓOÄGIF89aP  ‘  ÿf fffÿÿÿ   !ù     ,    P   •Œ©Ëí˜´Ú‹³Ş¼„âH–a‡¦êg¶­
+ÇëÖ¢ŒÇô9>@!U$“ÀĞHù$‡E¤S) F7á1£Å%÷‹üv§ã°8I½a³ì —g[£½7ïªíë{.æT&èuGh‘·æÆ£¶Æƒ×t”Gø9¥—fS“Ó‰²·iâ9ª*Dšz¤Êšñ
++«P  ;_/http://www.bloglines.com/images/sub_modern7.gifÓ !"O‰PNG
+
+   IHDR   P      ü«ßØ   tEXtSoftware GraphicConverter5]Hî   ¤IDATxœä•Q€ †½Swò¡—®¬>´RDÒEÁ¨ãg}ıl:o,\º‚™¸€}XîeÒnûú‰ä‹ó{àœ“`6Œ>Ÿ;‚¾UŞSWè!¨D Œ’÷ ç÷š§®KDğy<0MÛ	Œš#&&f¾<Êá'ÁJ‹%@K¸Ñj f¢¸5d°Ã
+sîJ+Ï)+­9`#q ›Š  ÿÿ Ò&Í–Ø³pT    IEND®B`‚_-http://www.m-e-x.de/blog/upload/weblogfaq.pngYimage/pngÔÓ%&"OÍ‰PNG
+
+   IHDR         ´´   	pHYs     šœ   gAMA  ±|ûQ“    cHRM  z%  €ƒ  ùÿ  €é  u0  ê`  :˜  o’_ÅF  CIDATxÚbüÿç33q    . ÑÿÿÿÿŞìòUZR=
+ ûğëğ  ø
+úáááFHL…ycˆ¨CYTÿçÿûl Í@"_¿ÿöåÛŸÿÿÿûÍÀ(,'Ì'«æje£
+@@³ÅÔüäŠ¥İÒîü‚ú§Lø	¾}-n™@ “Ş3|’›vïî°óË§'K!®,JJÿûUÊŞ[:(.åÔÅ3b<ü RÍğD)ˆ\¾ç¹<#Óû@îÜi‡ûg1°3œ<¨TÍËÇ÷ûï€ bû÷åÛ7ŸåXØø~m9Ïe´XR÷³&ÃuÅú@Ù,âÿÿß & ‹äCiq!	F·¿¿‰¨p3x„3iH²<ÿğñƒàŸ—@YöØ™¾ 4(ŞüğèÕÇïŸ˜9ù˜şñ|üöé3ÏŸoÌÿeÿÿaúÃÈ@L@éå~ÿ…ùçÿ~Ücxrõçë÷^¾fà ËC“é@ UeiùÄğõ×Ÿ¯LÆØ^2³üüÅ%Àı_•á.?#Èµ¿Y~óÈ—|¼B@òÇ?©]sRd¼;÷QõIåäW?W20\b8ñä%C-³ çïŸÿóŒŒ2ÿÿ?ÁŸB¯â|õ €@fÇVq‹Û©:êÉ<{ıHBéÍA>ÆÌ/¸?İ(ÆóçëßÊ§Íıÿç&@ Ìf   Veòu‹c}|    IEND®B`‚_1http://www.m-e-x.de/blog/counter/images/stats.pngÔ()*+UUTF-8OOá<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><HEAD>
+        <TITLE>MEX Blog Â» TiddlyWiki</TITLE>
+        <META http-equiv="Content-Type" content="UTF-8">
+        <META name="generator" content="WordPress 1.5">
+        <LINK rel="stylesheet" href="http://www.m-e-x.de/blog/wp-content/themes/Blix/style.css" type="text/css" media="screen, projection">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.m-e-x.de/blog/index.php/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.m-e-x.de/blog/index.php/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.m-e-x.de/blog/index.php/feed/atom/">
+        <LINK rel="pingback" href="http://www.m-e-x.de/blog/xmlrpc.php">
+        <META name="author" content="MEX"><META name="publisher" content="MEX"><META name="copyright" content="MEX"><META name="page-topic" content="Themen rund um Business und Allerlei"><META name="audience" content="alle"><META name="robots" content="index,follow"><META name="revisit-after" content="1 days"><LINK rel="shortcut icon" type="image/ico" href="http://www.m-e-x.de/favicon.ico">
+        
+</HEAD><BODY><DIV id="container">
+<DIV id="header">
+        <H1><A href="http://www.m-e-x.de/blog">MEX Blog</A></H1>
+</DIV> 
+<DIV id="navigation">
+
+        <FORM action="/blog/index.php/archives/2005/05/19/tiddlywiki/" method="get">                <FIELDSET>                        <INPUT value="" name="s" id="s">
+                        <INPUT type="submit" value="Go!" id="searchbutton" name="searchbutton">
+                </FIELDSET>
+        </FORM>
+
+        <UL>                <LI><A href="http://www.m-e-x.de/blog">Home</A></LI>
+                <LI><A href="http://www.m-e-x.de/blog/index.php/ueber-mex/">MEX</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/blogteam/">Team</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/was-ist-rss/">Blog &amp; RSS?</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/impressum/">Impressum</A></LI>
+        </UL>
+
+</DIV>
+
+<HR class="low">
+
+<DIV id="content">
+
+
+
+        
+        <DIV class="entry single">
+                <H2><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/">TiddlyWiki</A></H2>
+
+                <P class="info">                                <EM class="date">19.05.2005 14:14</EM>
+                <STRONG class="author">Robert Basic</STRONG>
+                                </P>
+
+                        <P>irgendwie interessant das Teil: <A href="http://www.tiddlywiki.com/">TiddlyWiki</A></P>
+        <BLOCKQUOTE><P>A TiddlyWiki is like a blog because itâ€™s divided up into neat little chunks, but it encourages you to read it by hyperlinking rather than sequentially: if you like, a non-linear blog analogue that binds the individual microcontent items into a cohesive whole. I think that TiddlyWiki represents a novel medium for writing, and will promote itâ€™s own distinctive WritingStyle. This is the ThirdVersion of TiddlyWiki, which adds several NewFeatures. There are also several TiddlyWikiAdaptations by other developers based on earlier versions.</P></BLOCKQUOTE>
+Aha, nicht unspannend. Probiert mal die Links aus, dann sieht man bereits die Effekte. Und auch mal das <A href="http://www.blogjones.com/TiddlyWikiTutorial.html">Tutorial</A> zwecks detailierter Beschreibung besuchen.<P></P>
+        <P>Es besteht grundsÃ¤tzlich aus zwei Hauptfunktionen, dann versteht man auch das Spannende an dem Ansatz sehr schnell:<BR>
+1. <STRONG>EasytoEdit</STRONG>: Double click on this entry. This will bring you into Editing Mode. Type whatever you want to in the large text box, then move your mouse next to the title of this tiddler and click â€œdoneâ€.</P>
+        <P>2. <STRONG>EasyToCarry</STRONG>: One of the best features of TiddlyWiki is that itâ€™s very portable. To save this entire wiki to your hard drive, right click here and click â€˜Save link asâ€¦â€™ or â€˜Save target asâ€¦â€™. You have now downloaded the entire tutorial in just one file. Every Tiddler, all of the style information, and all of the javascript program that makes the site work is contained in a single HTML file. No databases. No complicated file structures. Just one file.</P>
+        <P>Und beim schÃ¶n linearen Durchklicken auf dem Tutorial erschien dann ein weiterer Contentbestandteil am Ende des ganzen Textes. Quasi wie Seiten blÃ¤ttern, nur eben ohne den Ursprungsinhalt aus dem Auge zu verlieren. Erinnert mich etwas an Lotus Notes und die berÃ¼hmten Abschnitte, die man als Leser auf- und zuklappen kann. Gerade bei lÃ¤ngeren Texten Ã¤uÃŸerst nÃ¼tzlich.</P>
+        <P>via <A href="http://blog.akademie.de/eintrag/573/tiddlywiki-der-html-notizzettel">akademix</A>
+</P>
+
+                <P id="filedunder">Stichwortablage unter: <A href="http://www.m-e-x.de/blog/index.php/archives/category/software/" title="View all posts in Software" rel="category tag">Software</A></P>
+
+   </DIV>
+
+
+
+<DIV id="comments">
+
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0944418333349445";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel ="4290889435";
+google_color_border = "E9F7F6";
+google_color_bg = "EDF3DE";
+google_color_link = "333333";
+google_color_url = "0099FF";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0944418333349445&dt=1116522595736&format=468x60_as&output=html&channel=4290889435&url=http%3A%2F%2Fwww.m-e-x.de%2Fblog%2Findex.php%2Farchives%2F2005%2F05%2F19%2Ftiddlywiki%2F&color_bg=EDF3DE&color_text=000000&color_link=333333&color_url=0099FF&color_border=E9F7F6&ad_type=text_image&cc=95&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME><BR>
+
+
+        <H2>Erstelle einen Kommentar</H2>
+
+        
+        <FORM action="http://www.m-e-x.de/blog/wp-comments-post.php" method="post" id="commentform">                <FIELDSET>
+        
+                        <P><LABEL for="author">Name</LABEL> <INPUT type="text" name="author" id="author" value="" tabindex="1"> <EM>Required</EM></P>
+                        <P><LABEL for="email">Email</LABEL> <INPUT type="text" name="email" id="email" value="" tabindex="2"> <EM>Required, hidden</EM></P>
+                        <P><LABEL for="url">Url</LABEL> <INPUT type="text" name="url" id="url" value="" tabindex="3"></P>
+<P><LABEL for="mex">OK</LABEL> <INPUT id="mex1" name="mex1" type="text" value="" tabindex="4"><SPAN style="color:#FF0000;">Bitte "mex" eingeben</SPAN></P>
+
+
+                        <P><LABEL for="comment">Comment</LABEL> <TEXTAREA name="comment" id="comment" cols="45" rows="10" tabindex="5"></TEXTAREA></P>
+                        <P><INPUT type="hidden" name="comment_post_ID" value="2017">
+                        <INPUT type="submit" name="submit" value="Los" class="button" tabindex="6"></P>
+
+                </FIELDSET>
+                </FORM>
+
+        <P><STRONG>Some HTML allowed:</STRONG><BR>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </P>
+
+
+
+        <P><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/trackback/">Trackback this post</A> Â |Â  <A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/feed/">Subscribe to the comments via RSS Feed</A></P>
+
+</DIV> </DIV> 
+<HR class="low">
+
+<DIV id="subcontent">
+
+
+
+
+        <H2><EM>Kalender</EM></H2>
+
+        <TABLE id="wp-calendar">    <CAPTION>May 2005</CAPTION>
+    <THEAD><TR><TH abbr="Monday" scope="col" title="Monday">M</TH><TH abbr="Tuesday" scope="col" title="Tuesday">T</TH><TH abbr="Wednesday" scope="col" title="Wednesday">W</TH><TH abbr="Thursday" scope="col" title="Thursday">T</TH><TH abbr="Friday" scope="col" title="Friday">F</TH><TH abbr="Saturday" scope="col" title="Saturday">S</TH><TH abbr="Sunday" scope="col" title="Sunday">S</TH></TR></THEAD>
+
+    <TFOOT><TR><TD abbr="April" colspan="3" id="prev"><A href="http://www.m-e-x.de/blog/index.php/archives/2005/04/" title="View posts for April 2005">Â« Apr</A></TD><TD class="pad">Â </TD><TD colspan="3" id="next" class="pad">Â </TD></TR></TFOOT>
+
+    <TBODY><TR><TD colspan="6" class="pad">Â </TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/01/" title="Gibt es ein Leben nach der Geburt?
+Geruilla-Marketingaktion in Berlin">1</A></TD></TR><TR><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/02/" title="WP Plugin: Bad Behavior (3)
+Benehmen im GeschÃ¤ftsalltag
+Blogservices: Updateinfo Ã¼ber Trackback und mehr
+Blogeinnahmen
+FÃ¼nftes MEX Blog Resumee, RÃ¼ckschau und Quo Vadis
+DurchflussÃ¶ffnung
+Markenrecht: Tempus gegen Tempus Creativ
+Musikgruppen aus der Retorte: Clever oder Smart
+Klasse Anti-Aids Werbung
+Moblogging in Austria: Moday.at
+Downloaderitis">2</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/03/" title="Technoratispammed
+Finger weg von FlÃ¼sterpropaganda
+Raubkopie Kuriosum: Bechattung im Kino per Nachtsicht
+Shitmarketing: Haustechnikdialog wird bekannt
+Muttertag am 08. Mai
+Spiel fÃ¼r Zwischendurch: Mouse Copter
+USA Italien Irak: Sicherheit richtig gehandhabt">3</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/04/" title="Shopblog: MacEssentials
+HP befragt 400 US-KMUs
+Blogs pushen Viralmarketing
+Namenssuche fÃ¼r die Firma
+Blogsuchmaschinen
+SchwÃ¤che von Blogs mit Wiki ausgleichen
+Desktop-Suchmaschinen im Vergleich: Copernic gewinnt
+No.1 bei Google werden
+World around the Blog
+GÃ¼nstige Domainregistrierung bei Hostway.de
+Schneller Surfen auf Wikipedia">4</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/05/" title="High Quality Blogging: D-Frag Ã¼ber Sony Playstation Werbung
+HÃ¶chster Senfberg: Law Blog">5</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/06/" title="Sprechende PlakatsÃ¤ulen">6</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/07/" title="Firmenbestattung: Illegale GeschÃ¤fte und Insolvenzverschleppung
+Ã–sterreich: Ãœber Corporate Blogging
+Linktipp: Suchmaschinen News">7</A></TD><TD>8</TD></TR><TR><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/09/" title="Software: IHMC CMap Tools
+MoonEdit: In einem Dokument synchron editieren
+CSS KompatibilitÃ¤t
+Barbie Headless
+MÃ¶gliche Verluste bei AdSense
+World of Warcraft Blog: Macht wer mit?
+Super Sammlung fÃ¼r Webworker
+Udo Vetter goes Prozessinfo.de
+Linktipp: Stolen Inc.
+User Error vor dem Monitor
+Shakera
+Googles Kristallkugel: Blogs sind gefÃ¤hrlich
+WP Archiv: Super Archives Plugin
+Internet is borken">9</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/10/" title="Shopblogger hÃ¶ren
+Ãœberpapst
+3 gute GrÃ¼nde fÃ¼r ein Corporate Blog
+Google Reviews
+Hoster lernt Hostblogging
+Wiedervorlage Funktion fÃ¼r Blogartikel Ã¼ber Tagging
+World of Warcraft Blog: Domain steht fest
+Wunderman Ã¼ber Viralmarketing
+Ein Hackathon als Innovations- und Motivationsinstrument
+Basketball-Wunderkinder
+Microsofts Blogging Texas Holdem Style">10</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/11/" title="mÃ¶gliche Ã„nderung des Online-Rechts
+Der Fluch der Verlinkung
+Corporate Blogs = GroÃŸunternehmen
+Star Wars III - Revenge of the Sith
+Breuer fordert Tierartenschutz fÃ¼r bedrohte Manager">11</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/12/" title="Star Wars III - wie es war?
+Watchblog: Lobbyblog
+TrustRanking in Kommentaren bei Promiblogs wegen Spam
+7 Blogs unter der Designlupe
+Siegies RSS-Kamasutra: 28 Stellungen 
+Ping und Trackback Test
+Fight the Dosenfleisch">12</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/13/" title="WoWBlog erÃ¶ffnet
+Ist doch wahr! oder?">13</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/14/" title="Umfrage zu Blogs
+Henokiens: Die Methusalem-Unternehmen
+Google: Wer schaltet zu welchen Keywords Anzeigen
+Liebe Gamona WoW Besucher
+IBM fordert Mitarbeiter zum Bloggen auf um Verluste zu vermeiden
+BBC Backstage: Content for free">14</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/15/" title="Fotoblog: iso 800
+WoW Blog hat guten Start hingelegt
+Findory: prima Blogsuchmaschine
+BadBehavior: Effizient
+Freies Blogseminar von Hostway
+Freie KomplettlÃ¶sung fÃ¼r KMUs:  â€œWISO BÃ¼ro komplett!â€
+Webseiten Kritiken sind abmahnwÃ¼rdig">15</A></TD></TR><TR><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/16/" title="Agitatorische Geschwurbeler
+IBM: Mitarbeter Blogging Initiative II">16</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/17/" title="Lass mich Dein Wachs sein
+Suchmaschine fÃ¼r Coder
+Bzz Agent und die Agents
+GMail langsam?
+WoW Blogdesign nahezu abgeschlossen">17</A></TD><TD><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/18/" title="Templaterie.de mit neuem Auftritt
+schÃ¶ne Abriss Ã¼ber Blogs und ihre Geschichte
+Flickr Group: Bilder zeigen
+SCHUFA: Rin oder Raus
+CSS Optimiser
+Google: AdSense in RSS Beta">18</A></TD><TD id="today"><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/" title="Pro bei Flickr.com: Was bringt es?
+Anspruch und Wirklichkeit
+Google-Maps & geografische VerbrechensÃ¼bersicht
+TiddlyWiki
+Browsershots: Verdammt nÃ¼tzlich fÃ¼r Webdeveloper
+Headset gesucht?
+Yahoo und Google: Das Rennen um RSS Werbung
+Findory Feed: Nutzung?
+Blogger Ethics: Corporate Blogs sind nicht ausgenommen
+Motorola Razr V3
+Dr. Marlboro empfiehlt fÃ¼r Shops: Flash">19</A></TD><TD>20</TD><TD>21</TD><TD>22</TD></TR><TR><TD>23</TD><TD>24</TD><TD>25</TD><TD>26</TD><TD>27</TD><TD>28</TD><TD>29</TD></TR><TR><TD>30</TD><TD>31</TD><TD class="pad" colspan="5">Â </TD></TR></TBODY>
+        </TABLE>
+        <H2><EM>juengste Artikel</EM></H2>
+
+        <UL class="posts">        <LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/dr-marlboro-empfiehlt-fuer-shops-flash/">Dr. Marlboro empfiehlt fÃ¼r Shops: Flash</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/motorola-razr-v3/">Motorola Razr V3</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/blogger-ethics-corporate-blogs-sind-nicht-ausgenommen/">Blogger Ethics: Corporate Blogs sind nicht ausgenommen</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/findory-feed-nutzung/">Findory Feed: Nutzung?</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/yahoo-und-google-das-rennen-um-rss-werbung/">Yahoo und Google: Das Rennen um RSS Werbung</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/headset-gesucht/">Headset gesucht?</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/browsershots-verdammt-nuetzlich-fuer-webdeveloper/">Browsershots: Verdammt nÃ¼tzlich fÃ¼r Webdeveloper</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/">TiddlyWiki</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/google-maps-geografische-verbrechensuebersicht/">Google-Maps &amp; geografische VerbrechensÃ¼bersicht</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/index.php/archives/2005/05/19/anspruch-und-wirklichkeit/">Anspruch und Wirklichkeit</A></LI>
+        </UL>
+
+<A href="http://www.m-e-x.de/blog/index.php/feed/"><IMG src="http://www.m-e-x.de/blog/upload/rss_artikel.gif" alt="rss artikel" border="0" width="80" height="15"></A> <A href="feed:http://www.m-e-x.de/blog/index.php/comments/feed/"><IMG src="http://www.m-e-x.de/blog/upload/rss_comments.gif" alt="RSS Kommentare" border="0" width="80" height="15"></A> <A href="http://blogstats.de/index.php?url=http://www.m-e-x.de/blog" title="Meine Links"><IMG src="http://blogstats.de/images/blogstats_mini_80x15.gif" width="80" height="15" style="border:none;" alt=""></A> <A href="http://www.bloglines.com/sub/http://www.m-e-x.de/blog/wp-rss2.php"><IMG src="http://www.bloglines.com/images/sub_modern7.gif" alt="MEX zu Bloglines hinzufuegen" border="0" width="80" height="15"></A> <A href="http://stefanbucher.net/weblogfaq/"><IMG src="http://www.m-e-x.de/blog/upload/weblogfaq.png" alt="Was ist ein Blog" border="0"></A> <BR> <A href="http://www.geourl.info/near/?lat=50.117&lon=8.683&dist=100">Websites bis 100KM MEX-NÃ¤he</A><BR><BR>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0944418333349445";
+google_ad_width = 180;
+google_ad_height = 90;
+google_ad_format = "180x90_0ads_al_s";
+google_ad_channel ="1576829848";
+google_color_border = "E9F7F6";
+google_color_bg = "EDF3DE";
+google_color_link = "333333";
+google_color_url = "0099FF";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="180" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0944418333349445&dt=1116522595943&prev_fmts=468x60_as&format=180x90_0ads_al_s&output=html&channel=1576829848&url=http%3A%2F%2Fwww.m-e-x.de%2Fblog%2Findex.php%2Farchives%2F2005%2F05%2F19%2Ftiddlywiki%2F&color_bg=EDF3DE&color_text=000000&color_link=333333&color_url=0099FF&color_border=E9F7F6&cc=99&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+<H2><EM>Feeds + Admin</EM></H2>
+
+        <UL class="feeds">        <LI><A href="http://www.m-e-x.de/blog/index.php/feed/ ">Artikel (RSS)</A></LI>
+        <LI><A href="http://www.m-e-x.de/blog/index.php/comments/feed/ ">Kommentare (RSS)</A></LI>
+<LI><A href="http://www.m-e-x.de/blog/wp-register.php">Register</A></LI><LI><A href="http://www.m-e-x.de/blog/wp-login.php">Login</A></LI>
+        </UL>
+
+<SCRIPT type="text/javascript">
+document.write("<script type=\"text/javascript\" src=\"http://www.m-e-x.de/blog/counter/additional.php?res_width=" + screen.width + "&res_height=" + screen.height + "&js=true\"><\/script>");
+</SCRIPT><SCRIPT type="text/javascript" src="http://www.m-e-x.de/blog/counter/additional.php?res_width=1280&res_height=854&js=true"></SCRIPT>
+<TABLE style="width: 190px; border:0px;">
+   <TBODY><TR><TD>Besucher gesamt:</TD><TD style="text-align: right;">87386</TD></TR><TR><TD>Besucher heute:</TD><TD style="text-align: right;">804</TD></TR><TR><TD>Besucher gestern:</TD><TD style="text-align: right;">1146</TD></TR><TR><TD>Max. Besucher pro Tag:</TD><TD style="text-align: right;">1556</TD></TR><TR><TD>gerade online:</TD><TD style="text-align: right;"><A href="http://www.m-e-x.de/blog/counter/stats/online_users.php" onclick="window.open('http://www.m-e-x.de/blog/counter/stats/online_users.php','online_users','width=700,height=350,screenX=0,screenY=0,resizable=yes,scrollbars=yes'); return false;" target="online_users">7</A></TD></TR><TR><TD>max. online:</TD><TD style="text-align: right;">114</TD></TR><TR><TD>Seitenaufrufe gesamt:</TD><TD style="text-align: right;">368523</TD></TR><TR><TD>Seitenaufrufe diese Seite:</TD><TD style="text-align: right;">18</TD></TR><TR><TD colspan="2" style="text-align:center; padding-top: 10px;">     <A href="http://www.m-e-x.de/blog/counter/stats/index.php">      <IMG src="http://www.m-e-x.de/blog/counter/images/stats.png" style="width:15px; height:15px; border: 0px;" alt="" title="Statistiken">
+      Statistiken
+     </A>
+    </TD></TR></TBODY></TABLE>
+
+
+
+
+</DIV> 
+<HR class="low">
+
+<DIV id="footer">
+
+        <P><STRONG>Â© Copyright 2005 MEX Blog. All rights reserved.</STRONG><BR>
+        Design by <A href="http://www.kingcosmonaut.de/">Sebastian Schmieg</A> . Icons by <A href="http://www.graphicpush.com/blogicons/">Kevin Potts</A> . Powered by <A href="http://www.wordpress.org/">WordPress</A> . <A href="http://www.m-e-x.de/blog/wp-login.php">Login</A></P>
+        
+</DIV> 
+</DIV> 
+
+
+</BODY></HTML>_Bhttp://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/Ytext/html¢-3Ñ.Õ/+0(12_WebResourceFrameNameO½<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #333333 }a.ad:visited { color: #333333 }a.ad:hover { color: #333333 }a.ad:active { color: #333333 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="468" height="60" cellspacing="1" cellpadding="0" border="0" bgcolor="#e9f7f6"><TBODY><TR><TD><TABLE width="466" height="58" cellspacing="0" cellpadding="1" border="0" bgcolor="#edf3de"><TBODY><TR><TD colspan="2" width="" height=""><TABLE width="464" height="" cellspacing="0" cellpadding="2" border="0"><TBODY><TR><TD id="taw0" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('gehe zu www.sichere-erfolge.de','aw0')" onmouseover="ss('gehe zu www.sichere-erfolge.de','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BIhU_UsiMQu_iCIeMwQGyra2iDKr28AfYx4GaAcCNtwHQhgMQARgBIIvK_wEoAkCKFkiIOZgBrEuqAQo0MjkwODg5NDM1sgEMd3d3Lm0tZS14LmRlugEJNDY4eDYwX2FzyAEB2gFCaHR0cDovL3d3dy5tLWUteC5kZS9ibG9nL2luZGV4LnBocC9hcmNoaXZlcy8yMDA1LzA1LzE5L3RpZGRseXdpa2kv6AEB&num=1&adurl=http://www.sichere-erfolge.de&client=ca-pub-0944418333349445" onfocus="ss('gehe zu www.sichere-erfolge.de','aw0')" onclick="ha('aw0')" onmouseover="return ss('gehe zu www.sichere-erfolge.de','aw0')" onmouseout="cs()"><B>Top Unternehmerkonzept</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#000000; line-height:12px;">krisensicheres zweites Standbein GeschÃ¤ftsidee, Nebengewerbe </FONT></TD><TD id="taw1" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('gehe zu www.lookforit.de/Gewerbeobjekt-Max','aw1')" onmouseover="ss('gehe zu www.lookforit.de/Gewerbeobjekt-Max','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BcaE9UsiMQu_iCIeMwQGyra2iDPWetQrPgvWUAcCNtwHwogQQAhgCIIvK_wEoAkCKFkiNOZgBrEuqAQo0MjkwODg5NDM1sgEMd3d3Lm0tZS14LmRlugEJNDY4eDYwX2FzyAEB2gFCaHR0cDovL3d3dy5tLWUteC5kZS9ibG9nL2luZGV4LnBocC9hcmNoaXZlcy8yMDA1LzA1LzE5L3RpZGRseXdpa2kv6AEB&num=2&adurl=http://www.lookforit.de/Gewerbeobjekt-Max/index.html&client=ca-pub-0944418333349445" onfocus="ss('gehe zu www.lookforit.de/Gewerbeobjekt-Max','aw1')" onclick="ha('aw1')" onmouseover="return ss('gehe zu www.lookforit.de/Gewerbeobjekt-Max','aw1')" onmouseout="cs()"><B>sofort SelbstÃ¤ndig werden</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#000000; line-height:12px;">Gewerbeobjekt - NÃ¤he Bad FÃ¼ssing Wohnen &amp; Arbeiten in einem Haus </FONT></TD></TR></TBODY></TABLE></TD></TR><TR><TD nowrap="" width="99%" height="11" align="right" bgcolor="#e9f7f6"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.m-e-x.de/blog/index.php/archives/2005/05/19/tiddlywiki/&hl=de&client=ca-pub-0944418333349445&adU=www.sichere-erfolge.de&adT=Top+Unternehmerkonzept&adU=www.lookforit.de/Gewerbeobjekt-Max&adT=sofort+Selbst%C3%A4ndig+werden&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; line-height:13px;">Goooooogle-Anzeigen</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_¼http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0944418333349445&dt=1116522595736&format=468x60_as&output=html&channel=4290889435&url=http%3A%2F%2Fwww.m-e-x.de%2Fblog%2Findex.php%2Farchives%2F2005%2F05%2F19%2Ftiddlywiki%2F&color_bg=EDF3DE&color_text=000000&color_link=333333&color_url=0099FF&color_border=E9F7F6&ad_type=text_image&cc=95&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123Ñ4Õ/+5(67Oa<HTML><BODY style="background-color: transparent" marginwidth="0" marginheight="0"></BODY></HTML>_ <!--framePath //<!--frame1-->-->_Ähttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0944418333349445&dt=1116522595943&prev_fmts=468x60_as&format=180x90_0ads_al_s&output=html&channel=1576829848&url=http%3A%2F%2Fwww.m-e-x.de%2Fblog%2Findex.php%2Farchives%2F2005%2F05%2F19%2Ftiddlywiki%2F&color_bg=EDF3DE&color_text=000000&color_link=333333&color_url=0099FF&color_border=E9F7F6&cc=99&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I S Z l { ‘t°¹Âàæ(¡(Û(í(ô,Ú---11@1G5é66&6í77&8,8\8f8o8v;G;{;„;Š‹o‹´‹¾‹Á‹Ä‹Ï‹æ§º z } ˆ ì¡             8              ¢×

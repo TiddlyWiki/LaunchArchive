@@ -1,0 +1,178 @@
+bplist00“_WebSubresources_WebMainResource°”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOú/* This is the stylesheet modern browser will use to print your pages. */
+
+a {
+	color: #000;
+}
+
+body {
+	font-family: serif;
+	font-size: 12pt;
+}
+
+#content {
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+#header, h3, h4, .storytitle {
+	border: none;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+#main {
+	float: none;
+	margin: 0px 10%;
+	padding: 0px;
+	width: auto;
+}
+
+#menu {
+	display: none;
+}
+_,http://cutting-edge.info/wordpress/print.cssXtext/css‘_WebResourceTextEncodingNameUUTF-8O(V<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1"><TITLE>cutting-edge.info</TITLE>
+        
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META name="generator" content="WordPress 1.3-alpha-2">
+
+        <STYLE type="text/css" media="screen">
+                @import url( http://cutting-edge.info/wordpress/wp-layout.css );
+        </STYLE>
+        
+        <LINK rel="stylesheet" type="text/css" media="print" href="http://cutting-edge.info/wordpress/print.css">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://cutting-edge.info/wordpress/wp-rss2.php">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://cutting-edge.info/wordpress/wp-rss.php">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://cutting-edge.info/wordpress/wp-atom.php">
+        
+        <LINK rel="pingback" href="http://cutting-edge.info/wordpress/xmlrpc.php">
+        <LINK rel="archives" title="May 2005" href="http://cutting-edge.info/wordpress/index.php?m=200505">
+        <LINK rel="archives" title="September 2004" href="http://cutting-edge.info/wordpress/index.php?m=200409">
+        <LINK rel="archives" title="August 2004" href="http://cutting-edge.info/wordpress/index.php?m=200408">
+                <META name="ICBM" content="0, 0"><META name="DC.title" content="cutting-edge.info"><META name="geo.position" content="0;0"></HEAD><BODY><DIV id="rap">
+<H1 id="header"><A href="http://cutting-edge.info/wordpress">cutting-edge.info</A></H1>
+
+<DIV id="content">
+<H2>5/17/2005</H2>        
+<DIV class="post">         <H3 class="storytitle" id="post-6"><A href="" rel="bookmark" title="Permanent Link: PodCasting">PodCasting</A></H3>
+        <DIV class="meta">Filed under: <A href="http://cutting-edge.info/wordpress/index.php?cat=1" title="View all posts in General">General</A> ‚Äî Kent @ 10:55 pm </DIV>
+        
+        <DIV class="storycontent">                        <P>I have been exploring podcasting, and done some experimental podcasts at http://nondual.net. Of course they are not the sort that will become very popular being very academic. But I am excited about the possibilities of this new medium for scholarly discourse.
+</P>
+        </DIV>
+        
+        <DIV class="feedback">                        <A href="#comments">Comments (0)</A>       </DIV>
+        
+        
+</DIV>
+
+
+
+        
+<DIV class="post">         <H3 class="storytitle" id="post-5"><A href="" rel="bookmark" title="Permanent Link: Tiddly Wiki">Tiddly Wiki</A></H3>
+        <DIV class="meta">Filed under: <A href="http://cutting-edge.info/wordpress/index.php?cat=1" title="View all posts in General">General</A> ‚Äî Kent @ 10:53 pm </DIV>
+        
+        <DIV class="storycontent">                        <P>Discovered Tiddly Wiki at http://www.tiddlywiki.com/</P>
+        <P>Thinking about using it as the front page of my cutting-edge.info blog.</P>
+        <P>I think there are a lot of interesting possiblities with Tiddly Wiki, especially in relation to Podcasts. Why not put the show notes of the podcast in the tiddly wiki and place that in the RSS feed. Why not allow the Tiddly Wiki to start up the various MP3 file segements that the podcast is made up of so that the user can jump around within the podcast, organized by the shownotes, to skip advertisements, or to go to the items of interest.</P>
+        </DIV>
+        
+        <DIV class="feedback">                        <A href="#comments">Comments (0)</A>       </DIV>
+        
+        
+</DIV>
+
+
+
+<H2>9/16/2004</H2>        
+<DIV class="post">         <H3 class="storytitle" id="post-4"><A href="" rel="bookmark" title="Permanent Link: Dynamic Ontologies">Dynamic Ontologies</A></H3>
+        <DIV class="meta">Filed under: <A href="http://cutting-edge.info/wordpress/index.php?cat=1" title="View all posts in General">General</A>, <A href="http://cutting-edge.info/wordpress/index.php?cat=8" title="View all posts in ontology">ontology</A> ‚Äî palmer @ 4:57 am </DIV>
+        
+        <DIV class="storycontent">                        <P>Attended the Dynamic Ontologies conference in Trento Italy hosted by Roberto Poli. See http://www.unitn.it/events/do/index.htm. You can hear my talk on my research web page at http://holonomic.net. Also my paper written for the conference is there called ‚ÄúBeyond Dynamic Ontologies to N-ontologies and the foundations of Emergence in Fundamental Ontology.‚Äù Main attraction was the talk of Johanna Seibt on General Process Theory, aka Free Process Theory. Unlikely to be another conference on the same topic. This the the first one in 22 years after I finished my dissertation, on the subject of my research for all these years. The core group are Analytic Philosophers studying ontology and emergence. There were a wide variety of talks and perspectives at the conference. However, Fundamental Ontologists besides myself were conspicuously missing. Size of the conference was somewhat effected by a rail strike just prior to the conference. There were 40-50 people at the conference. I am glad I attended. It gave me some idea of the level of sophistication of academic studies of ontology and emergence, which are now focused at the second meta-level of Being.
+</P>
+        </DIV>
+        
+        <DIV class="feedback">                        <A href="#comments">Comments (0)</A>       </DIV>
+        
+        
+</DIV>
+
+
+
+<H2>8/28/2004</H2>        
+<DIV class="post">         <H3 class="storytitle" id="post-3"><A href="" rel="bookmark" title="Permanent Link: New WeBlog">New WeBlog</A></H3>
+        <DIV class="meta">Filed under: <A href="http://cutting-edge.info/wordpress/index.php?cat=1" title="View all posts in General">General</A> ‚Äî Kent @ 12:10 am </DIV>
+        
+        <DIV class="storycontent">                        <P>This is the new cutting-edge.info weBlog. Here I will be considering the topics of interest to me which is related to Systems Theory, Philosophy etc. I will be posting resources that I find of interest with regard to my topics of interest.
+</P>
+        </DIV>
+        
+        <DIV class="feedback">                        <A href="#comments">Comments (0)</A>       </DIV>
+        
+        
+</DIV>
+
+
+
+</DIV>
+
+
+
+<DIV id="menu">
+<UL>                <LI id="links">Links
+        <UL><LI><A href="http://archonic.net">Archonic.net</A>
+</LI>
+<LI><A href="http://dialog.net">DialogNet</A>
+</LI>
+<LI><A href="http://holonomic.net">Holonomic.net</A>
+</LI>
+<LI><A href="http://cutting-edge.info">This Weblog</A>
+</LI>
+
+        </UL>
+</LI>
+ <LI id="categories">Categories:       <UL>                <LI><A href="http://cutting-edge.info/wordpress/index.php?cat=1" title="View all posts filed under General">General</A>
+</LI>
+        </UL>
+ </LI>
+ <LI id="search">   <LABEL for="s">Search:</LABEL>    
+   <FORM id="searchform" method="get" action="/wordpress/index.php">     <DIV>                <INPUT type="text" name="s" id="s" size="15"><BR>
+                <INPUT type="submit" name="submit" value="Search">
+        </DIV>
+        </FORM>
+ </LI>
+ <LI id="archives">Archives:       <UL>                <LI><A href="http://cutting-edge.info/wordpress/index.php?m=200505" title="May 2005">May 2005</A></LI>
+        <LI><A href="http://cutting-edge.info/wordpress/index.php?m=200409" title="September 2004">September 2004</A></LI>
+        <LI><A href="http://cutting-edge.info/wordpress/index.php?m=200408" title="August 2004">August 2004</A></LI>
+        </UL>
+ </LI>
+ <LI id="calendar">       <TABLE id="wp-calendar">    <CAPTION>May 2005</CAPTION>
+    <THEAD><TR><TH abbr="Sunday" scope="col" title="Sunday">S</TH><TH abbr="Monday" scope="col" title="Monday">M</TH><TH abbr="Tuesday" scope="col" title="Tuesday">T</TH><TH abbr="Wednesday" scope="col" title="Wednesday">W</TH><TH abbr="Thursday" scope="col" title="Thursday">T</TH><TH abbr="Friday" scope="col" title="Friday">F</TH><TH abbr="Saturday" scope="col" title="Saturday">S</TH></TR></THEAD>
+
+    <TFOOT><TR><TD abbr="September" colspan="3" id="prev"><A href="http://cutting-edge.info/wordpress/index.php?m=200409" title="View posts for September 2004">¬´ Sep</A></TD><TD class="pad">¬†</TD><TD colspan="3" id="next" class="pad">¬†</TD></TR></TFOOT>
+
+    <TBODY><TR><TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD><TD>5</TD><TD>6</TD><TD>7</TD></TR><TR><TD>8</TD><TD>9</TD><TD>10</TD><TD>11</TD><TD>12</TD><TD>13</TD><TD>14</TD></TR><TR><TD>15</TD><TD>16</TD><TD><A href="http://cutting-edge.info/wordpress/index.php?m=20050517" title="Tiddly Wiki
+PodCasting">17</A></TD><TD id="today">18</TD><TD>19</TD><TD>20</TD><TD>21</TD></TR><TR><TD>22</TD><TD>23</TD><TD>24</TD><TD>25</TD><TD>26</TD><TD>27</TD><TD>28</TD></TR><TR><TD>29</TD><TD>30</TD><TD>31</TD><TD class="pad" colspan="4">¬†</TD></TR></TBODY>
+        </TABLE> </LI>
+ <LI id="meta">Meta:       <UL>                <LI><A href="http://cutting-edge.info/wordpress/wp-register.php">Register</A></LI>
+                <LI><A href="http://cutting-edge.info/wordpress/wp-login.php">Login</A></LI>
+                <LI><A href="http://cutting-edge.info/wordpress/wp-rss2.php" title="Syndicate this site using RSS"><ABBR title="Really Simple Syndication">RSS</ABBR></A></LI>
+                <LI><A href="http://cutting-edge.info/wordpress/wp-commentsrss2.php" title="The latest comments to all posts in RSS">Comments <ABBR title="Really Simple Syndication">RSS</ABBR></A></LI>
+                <LI><A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A></LI>
+                <LI><A href="http://gmpg.org/xfn/"><ABBR title="XHTML Friends Network">XFN</ABBR></A></LI>
+                <LI><A href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform."><ABBR title="WordPress">WP</ABBR></A></LI>
+                        </UL>
+ </LI>
+
+</UL>
+
+</DIV>
+
+</DIV>
+
+<P class="credit"> <CITE>Powered by <A href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform."><STRONG>WordPress</STRONG></A></CITE></P>
+
+</BODY></HTML>_#http://cutting-edge.info/wordpress/Ytext/html    1 3 : L [ q@IRpv*–*ˆ                           + 

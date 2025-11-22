@@ -1,0 +1,595 @@
+bplist00Ó#_WebSubresources_WebMainResource_WebSubframeArchives¤Õ	
+_WebResourceMIMEType_WebResourceData_WebResourceResponse_WebResourceTextEncodingName^WebResourceURLYtext/htmlO&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+Obplist00Ô
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver † Ñ	_WebResourceResponse€¯(./67;?CYZ[\]^_`abcdefghimpU$nullß !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1€€€#A¡Ešeú© #A¡	Í•kk€#A¡_„k×M€Ó)*+,-WNS.base[NS.relative€ €€_7http://pagead2.googlesyndication.com/pagead/show_ads.jsÒ0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYtext/htmlÒ89:YNS.stringUutf-8€Ò01<=£=>5_NSMutableStringXNSStringÓ@AB€	€ÈÓDEFOXZNS.objectsWNS.keys¨GHIJKLMN€€€€€€€€¨PQRSTUVW€
+€€€€€€€€VServer_Content-Encoding]Last-Modified]Cache-ControlTDate^Content-Length\Content-TypeSP3pXCAFE/1.0Tgzip_Thu, 07 Jul 2005 20:20:02 GMT_private, x-gzip-ok=""_Wed, 13 Jul 2005 19:26:59 GMTQ0_text/html; charset=UTF-8_lpolicyref="http://www.googleadservices.com/pagead/p3p.xml", CP="NOI DEV PSA PSD IVA PVD OTP OUR OTR IND OTC"Ò01jk£kl5_NSMutableDictionary\NSDictionaryÒ01no¢o5_NSHTTPURLResponseInternalÒ01qr£rs5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d „ Š « ® ² µ ¹ ¼ ¿ Ã Æ É Ì Ï Ö Ù İ à â ä æ è ê ó õ ş (*,.hmv…‹’›¥ª´º¼ÁÅ×àçéëíôÿ )+-/13579;BUcqv…’–Ÿ¤ÄÜüşˆ‘§´¹¼Øİáõ             t              Uutf-8_7http://pagead2.googlesyndication.com/pagead/show_ads.jsÔ
+O$bplist00Ô
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver † Ñ	_WebResourceResponse€¯(./67;OPQRSTUVWXYZ[6\`cU$nullß !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1€€€ #A¡F=‰tÅ,#A¡F8X†€#A¡EµãÁ€Ó)* ,-WNS.base[NS.relative€ €€_7http://www.blogcounter.de/bc/log.php?id=roadkill&referer=http%3A//www.bloglines.com/citations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&r=1280x854&c=32&showme=y&st=img&title=iguana.roadkill.de%20%BB%20killer-app%20of%20consumerism&style=5&url=http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/&b=715Ò0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYimage/pngÓ89:€€ÈÓ<=>FNZNS.objectsWNS.keys§?@ABCDE€€€€€€€§GHIJKLM€€	€
+€€€€€VServerZConnectionTDateZSet-Cookie^Content-Length\X-Powered-By\Content-Type]Apache/2.0.52Uclose_Wed, 13 Jul 2005 19:28:29 GMT_2same68080=847; expires=Wed, 13-Jul-05 19:58:31 GMTT1580YPHP/5.0.3Ò01]^£^_5_NSMutableDictionary\NSDictionaryÒ01ab¢b5_NSHTTPURLResponseInternalÒ01de£ef5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d € † § ª ® ± µ ¸ » ¿ Â Å È Ë Ò Õ Ù Ü Ş à â ä æ ï ò û ı ÿ
+%')+fktƒ‰™£ª¬®°·ÂÊÒÔÖØÚÜŞàèêìîğòôöøÿ
+)6CQWw¬±»ÀÄÚçìï(             g              6O,‰PNG
+
+   IHDR   P      çU¼   'PLTEëdëdfefgffefffeeìd‡Œw‡Œx‡xˆxfffÿÿÿ–°×  °IDAT(‘’­ã0…ƒ‚
+vIPÙjØ¢•ö¦([äbØ2÷†7¶Ì_UJÑj+Û?Ôº}‚¹ºèèóñõõ)'„Ğëõ´¢Ãº¢z].h©k´¢_+Z²z|ÉÚéµ¸¥/ÕgñVV8×û·mĞ®ëûa€è¸©b$ƒø,n¸ªğ÷ª©Â™Ò³Ö\I0ƒPÒÂqpÿŠ[6|/K\ ƒ¦ÜôÈy-7ù€f$Š<q“»­¢MÊ«9J›dÒ,~˜¸¹,ÚÄ’îÅ[Sâ=Æ-öì<İ,É¨‹Ş2º%Äf'¦b¾úOSVm³Û5‘%x€Ü'ÛO³Æû-‚·iNJüÍ¯Æmûè`µßÌ6ÓğÁÆ°1f¶h–ÌsGŸ3¶û]»ÇÙ‘§È¼b~Hz.z,YğpÏ`û,ô¨DGµê!C^8E(hí¤s]^OÛîŸ 7P j’8ãt7šÁHSÇÍı	fr‡ƒ‘N
+9qsVcoÆ^t#1®3Df‡{ñók}/Ğ©Fº ëu=œÖKÒïœŸCÎÔ¥^‡µF×úå¸¬ÿC»YŞGò    IEND®B`‚<br />
+<b>Warning</b>:  Cannot modify header information - headers already sent by (output started at /srv/www/blogcounter.de/html/bc/modules/image_gen.php:82) in <b>/srv/www/blogcounter.de/html/bc/modules/image_gen.php</b> on line <b>93</b><br />
+<br />
+<b>Warning</b>:  Cannot modify header information - headers already sent by (output started at /srv/www/blogcounter.de/html/bc/modules/image_gen.php:82) in <b>/srv/www/blogcounter.de/html/bc/modules/image_gen.php</b> on line <b>97</b><br />
+‰PNG
+
+   IHDR   P      çU¼   0PLTEìdfefëdgffeffÿüûfeeëd‡Œw‡Œx‡xˆxfffÿÿÿÿÿÿğğîˆ_¬f  «IDAT(‘…’¿n1Æ·‰¨R!ò
+TWĞğa«myƒc+i,*z¯-QûDm{¤ĞÚé¤“­L«äHz6+‘7@Ì]"DŸ\Y?óyfšuÏ;ZûÊÚZYWÇ-»Uö¢²‘n×gt×Ÿ7Ÿ_?èößºiŞ¼}Ğóï!1ƒ6
+¢:¢PŒI2˜›æÓ#xqí•ò1jgbF‹€Á8[’)Ë×¿@”!*ƒFé3Fè±¤“ùÅ>'\±6QZMÊå¢îfñë>LÇŒœNs%ı¨º,„J¥B­ç¸ÌƒûH¥_AÎŸì¥GŠ´Ï0d”’w›ÅßÍ¨óåàÈ	<m®!& È*‘(`ıü¾ü¼ÇPÇŒœ´jö*jk•wJ“,*du¹dù#lNr~zrpŒÉ¡¢Œ”šƒÅQÎH+EP{ø#x…%#*T.Û€J	X‰Yh˜àjuÂßQF[¬±Yƒwi€4PT	E€´ä05Ïcşö¿QßNë;6²-ÛíjÛ×-­ÒKÚŸ–vjÛm[;¶ëÎÖcıÅrcGP    IEND®B`‚_7http://www.blogcounter.de/bc/log.php?id=roadkill&referer=http%3A//www.bloglines.com/citations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&r=1280x854&c=32&showme=y&st=img&title=iguana.roadkill.de%20%BB%20killer-app%20of%20consumerism&style=5&url=http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/&b=715Yimage/pngÕ	
+O	8id = "roadkill";style = "5";if(showme==null) var showme='y';
+if(st==null)     var st='img';    // st means show-type
+
+v = navigator.appName;
+c=0;
+if (v != "Netscape") c = screen.colorDepth;
+else c = screen.pixelDepth;
+s = screen.width+"x"+screen.height;
+t = escape(document.title);
+var f = "";
+if (typeof(pp_frames) != "undefined")
+	if (pp_frames)
+		f = top.document.referrer;
+
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	if (document["parent"] != null) 
+		if (parent["document"] != null) // ACCESS ERROR HERE!
+			if (parent.document["referrer"] != null) 
+				if (typeof(parent.document) == "object")
+					f = parent.document.referrer; 
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	if (document["referrer"] != null) 
+		f = document.referrer;
+if ((f == "") || (f == "[unknown origin]") || (f == "unknown") || (f == "undefined"))
+	f = "";
+f = escape(f);
+r="?id="+id+"&referer="+f+"&r="+s+"&c="+c+"&showme="+showme+"&st="+st+"&title="+t+"&style="+style;
+if(jslogid==null) var jslogid = 0;
+else r = r + "&jslogid="+jslogid;
+
+function getElement(id) {
+    if (typeof(id) != 'string') return id;
+    if (document.getElementById) {
+	return document.getElementById(id);
+    } else if (document.all) {
+	return document.all[id];
+    } else {
+	return null;
+    }
+}
+
+var link = getElement('bclink');
+var html = getElement('bccount');
+
+    if (v != "Microsoft Internet Explorer") {
+	r = r+"&url="+document.URL; // $HTTP_REFERER problem with NS,...
+    }
+	
+if (link != null && html != null) {
+
+    if (link.href != 'http://www.blogcounter.de/') {
+
+        // Link ist verÃ¤ndert worden; wir setzen alles wieder zurÃ¼ck
+
+        link.href = 'http://www.blogcounter.de/counter-code-error/';
+
+        // Fehlerbild ausgeben
+
+        html.innerHTML = '';
+        html.innerHTML = '<span style="background-color:#E96E1B; color:#fff; text-decoration:none; font-family: arial bold, arial, helvetica; font-weight:bolder;">ERROR / FEHLER</span>';
+
+    } else {
+
+	rand = Math.round(1000*Math.random());
+	r = r+"&b="+rand;  //force the page to load the IMG
+
+	link.href = 'http://www.blogcounter.de/';
+
+	html.innerHTML = '';
+	html.innerHTML = '<img src="http://www.blogcounter.de/bc/log.php'+r+'" alt="BlogCounter.de - kostenloser Counter f&uuml;r Weblogs" border="0" width="80" height="15">';
+    }
+}OHbplist00Ô
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver † Ñ	_WebResourceResponse€¯(./67;?CUVWXYZ[\]^_`aehU$nullß !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1€€€#A¡F8]‹	8#A¡F7 óË€#A¡E¹Ch­€Ó)*+,-WNS.base[NS.relative€ €€_8http://track.blogcounter.de/js.php?user=roadkill&style=5Ò0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYtext/htmlÒ89:YNS.stringZiso-8859-1€Ò01<=£=>5_NSMutableStringXNSStringÓ@AB€	€ÈÓDEFMTZNS.objectsWNS.keys¦GHIJKL€€€€€€¦NOPQRS€
+€€€€€€VServerZConnectionTDate^Content-Length\X-Powered-By\Content-Type]Apache/2.0.52Uclose_Wed, 13 Jul 2005 19:28:29 GMTT2360YPHP/5.0.3_text/html; charset=ISO-8859-1Ò01bc£cd5_NSMutableDictionary\NSDictionaryÒ01fg¢g5_NSHTTPURLResponseInternalÒ01ij£jk5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d € † § ª ® ± µ ¸ » ¿ Â Å È Ë Ò Õ Ù Ü Ş à â ä æ ï ò û ı ÿ
+%')+fktƒ‰™£¨²½¿ÄÈÚãêìîğ÷
+$&(*,.029DIXer€†¦«µÕÚŞô	%*.B             l              PZiso-8859-1_8http://track.blogcounter.de/js.php?user=roadkill&style=5Ô
+Onbplist00Ô
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver † Ñ	_WebResourceResponse€¯(./67;STUVWXYZ[\]^Y_`ab6cgjU$nullß !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1€€€ #A¡F9G¯§#A¡F8“ÿ€#A¡‚{‹€Ó)* ,-WNS.base[NS.relative€ €€_3http://blogstats.de/images/blogstats_mini_80x15.gifÒ0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYimage/gifÓ89:€€ÈÓ<=>HRZNS.objectsWNS.keys©?@ABCDEFG€€€€€€€€€©IJKLMNOPQ€€	€
+€€€€€€€VServer]Last-Modified]Accept-RangesZConnectionTDate^Content-LengthZKeep-AliveTEtag\Content-Type_Apache/2.0.50 (Linux/SUSE)_Fri, 01 Jul 2005 12:54:27 GMTUbytes_Wed, 13 Jul 2005 19:28:18 GMTT1182_timeout=5, max=1000_"3ecbb-49e-1e3706c0"Ò01de£ef5_NSMutableDictionary\NSDictionaryÒ01hi¢i5_NSHTTPURLResponseInternalÒ01kl£lm5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d „ Š « ® ² µ ¹ ¼ ¿ Ã Æ É Ì Ï Ö Ù İ à â ä æ è ê ó ö ÿ)+-/ejs~‚ˆ˜¢©«­¯¶ÁÉÓÕ×ÙÛİßáãåïñóõ÷ùûıÿ
+&16EPUbŸ¥ÅÊà÷ü #(+GLPd             n              rOGIF89aP  ÷    ‹ÿÿÿ   ÿ’.ÔÖİÕÖŞSb›,x‚’Œ•»IY˜‘­ç…‘½˜ÍK[”éêíÛÜèèèëL\˜ØÛéĞÕéııÿ{ƒ ºÈç—š§´ºÊš¥ÀÁÄĞŒ³yƒ¦l´ûıÿ!4€@Tš(gõöùÚÛçñõüÒØèöüÿju¬‡”Á:K†“ÂÎÎİ^o©ğğôãëú›¤¼‹Œcw³y›Ÿ©ÇÄÓí¥¶ßx‰·O^‘˜¥ÎCN‡)0_cm¢‡ŸÚhr‚šÎ­½âíòõ™¶ƒŒ¬şÿÿ}¢áŞìşÙáñùıÿu€ªÆÌß¦è~…š™¶Rcíï÷¸ÀÒ,vøüÿ‡”º¨Äò`e~˜É4Dy­¸Ô¥Å½Ææjx±ÖÛë´ºÉSi©/?ƒšŸº4H×ÚääîÿXa|œ¦Ì\q¯“š¶PZ…üÿÿµ¾Ú¡¬Ñœ¬Ñt²ÒØå—´ĞÖèÜâï€ªô˜¶ir‘˜›¯„•bk•Î×é…—Ååæíy}’„¹MZ1C„åíûİçúeo™-:£ÎÑ×ê»Êğäçğ·ÀÖáãìv~§“¯æ—¤Ê—›¥B[¡ÆÎäÂÅÔ¥©´}Šº<Ds]e…DQ€¬±Â                                                                                                                                                                                                                                                                                                                              !ù     ,    P  @ÿ H° Áƒ*\Èp`  S,hI hK@W(ÍÀ #Š
+4‚ÔÙ0ÀC &Q¦<™åC–,QIÀL›*UŞ4)ğe€Ÿ@¥LxñÇ (]>¤ú2§Ó§P£Jª2@OªXcbİÊUªUZ»VK¶,O°&¡ÓàÆBv @E g~,ñQ£eË“0Çjİ©³æÍÃP¿>Œ Òü0PC(Î“5fòÀ	0'Æ~ÍŠúµ¡éÓ¨SdÊºµë×°cËİú*í×¡Gëvª8íÏJ4(šd…Ê2p„Å’¦.º¬*=úO™²ÛÔ¾}föÃß«^{}p¡‡$	‘Êêğ&ƒ‹,
+œĞ L9~Yç½;wğÿaKWÙP€!}|‚)ğ´†Iè!L0’S¾Y˜tßí„N$†˜SoM” 	|„Ğˆl8b‹x± R0ä¶ÛŠİ&äD
+)@@ ;_3http://blogstats.de/images/blogstats_mini_80x15.gifYimage/gifÔ	
+ !"UUTF-8O$á<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <TITLE>iguana.roadkill.de Â» killer-app of consumerism</TITLE>
+
+        <META name="generator" content="WordPress 1.5.1.3">
+
+        <STYLE type="text/css" media="screen">
+                @import url( http://iguana.roadkill.de/wp-content/themes/igu-almost-spring/style.css );
+        </STYLE>
+        <LINK rel="shortcut icon" href="http://iguana.roadkill.de/wp-content/themes/igu-almost-spring/images/favicon.ico">
+
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://iguana.roadkill.de/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://iguana.roadkill.de/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://iguana.roadkill.de/feed/atom/">
+        <LINK rel="pingback" href="http://iguana.roadkill.de/xmlrpc.php">
+
+                <LINK rel="archives" title="July 2005" href="http://iguana.roadkill.de/2005/07/">
+        <LINK rel="archives" title="June 2005" href="http://iguana.roadkill.de/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://iguana.roadkill.de/2005/05/">
+
+        </HEAD><BODY>
+<DIV id="wrapper">
+<DIV id="header"><DIV class="description">Best viewed with an Open Mind</DIV>
+<H1><A href="http://iguana.roadkill.de">iguana.roadkill.de</A></H1>
+
+</DIV>
+
+<DIV id="content">
+        
+                <DIV class="post">
+                        <H2 class="posttitle" id="post-38"><A href="http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/" rel="bookmark" title="Permanent link to killer-app of consumerism">killer-app of consumerism</A></H2>
+
+                        <P class="postmeta">                        July 13, 2005 at 16:53                    Â· Abgelegt in <A href="http://iguana.roadkill.de/category/allgemein/" title="View all posts in Allgemein" rel="category tag">Allgemein</A>                                             </P>
+
+                        <DIV class="postentry">                                <P>OK, die Ãœberschrift ist vielleicht etwas weit hergeholt, aber das <A href="http://odem.org/privacy/counterscript/">Telemarketing Counterscript</A> als interaktives <A href="http://www.tiddlywiki.com/">TiddlyWiki</A> hÃ¤tte schon was, finde ich.
+</P>
+                                                </DIV>
+
+                        <P class="postfeedback">                        <A href="http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/" rel="bookmark" title="Permanent link to killer-app of consumerism" class="permalink">Permalink</A>
+                        </P>
+
+                </DIV>
+
+                
+
+
+         
+                                
+                
+
+
+        <H2 id="postcomment">Leave a Comment</H2>
+        
+                
+                <FORM action="http://iguana.roadkill.de/wp-comments-post.php" method="post" id="commentform">                
+                        
+                        <P>                        <INPUT type="text" name="author" id="author" value="" size="30" tabindex="1">
+                        <LABEL for="author">Name (required)</LABEL>
+                        </P>
+                        
+                        <P>                        <INPUT type="text" name="email" id="email" value="" size="30" tabindex="2">
+                        <LABEL for="email">E-mail required)</LABEL>
+                        </P>
+                        
+                        <P>                        <INPUT type="text" name="url" id="url" value="" size="30" tabindex="3">
+                        <LABEL for="url"><ABBR title="Uniform Resource Identifier">URI</ABBR></LABEL>
+                        </P>
+
+                
+                <P>                <TEXTAREA name="comment" id="comment" cols="70" rows="10" tabindex="4"></TEXTAREA>                </P>
+        
+                <P>                <INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+                <INPUT type="hidden" name="comment_post_ID" value="38">
+                </P>
+        
+                        
+                </FORM>
+
+        
+
+        
+</DIV>
+
+<DIV id="sidebar">
+<UL>
+
+        
+<LI class="pagenav"><H2>iguana.roadkill.de</H2><UL><LI class="page_item"><A href="http://iguana.roadkill.de/impressum/" title="Impressum">Impressum</A></LI>
+</UL></LI>
+                        <LI><H2>Kategorien</H2>
+                                <UL>                                        <LI><A href="http://iguana.roadkill.de/category/9-juli/" title="DAS Projekt 2005: am 9. Juli wird geheiratet!">9. Juli</A>
+</LI>
+        <LI><A href="http://iguana.roadkill.de/category/allgemein/" title="View all posts filed under Allgemein">Allgemein</A>
+</LI>
+        <LI><A href="http://iguana.roadkill.de/category/aufgeschnappt/" title="Was man halt so hÃ¶rtâ€¦">Aufgeschnappt</A>
+</LI>
+        <LI><A href="http://iguana.roadkill.de/category/unmut/" title="View all posts filed under Unmut">Unmut</A>
+</LI>
+                                </UL>
+                        </LI>
+                        <LI><H2>Archiv</H2>
+                                <UL>                                        <LI><A href="http://iguana.roadkill.de/2005/07/" title="July 2005">July 2005</A></LI>
+        <LI><A href="http://iguana.roadkill.de/2005/06/" title="June 2005">June 2005</A></LI>
+        <LI><A href="http://iguana.roadkill.de/2005/05/" title="May 2005">May 2005</A></LI>
+                                </UL>
+                        </LI>
+
+
+
+<LI><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0789463108875404";
+google_ad_width = 120;
+google_ad_height = 240;
+google_ad_format = "120x240_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "E8E7D0";
+google_color_bg = "FAFAF0";
+google_color_link = "CC6600";
+google_color_url = "99CC33";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="120" height="240" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0789463108875404&dt=1121282971651&format=120x240_as&output=html&url=http%3A%2F%2Figuana.roadkill.de%2F2005%2F07%2F13%2Fkiller-app-of-consumerism%2F&color_bg=FAFAF0&color_text=333333&color_link=CC6600&color_url=99CC33&color_border=E8E7D0&ad_type=text&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=98&u_h=854&u_w=1280&u_ah=782&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=8&u_nmime=124" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME><BR></LI>
+<UL></UL>
+        
+        <LI>                <H2>Meta</H2>
+                <UL>                                                <LI><A href="http://iguana.roadkill.de/wp-login.php">Login</A></LI>
+                        <LI><A href="http://iguana.roadkill.de/feed/" title="Syndicate this site using RSS 2.0">Entries <ABBR title="Really Simple Syndication">RSS</ABBR></A></LI>
+                        <LI><A href="http://iguana.roadkill.de/comments/feed/" title="The latest comments to all posts in RSS">Comments <ABBR title="Really Simple Syndication">RSS</ABBR></A></LI>
+                        <LI><A href="http://wordpress.org" title="Powered by Wordpress, state-of-the-art semantic personal publishing platform.">Wordpress</A></LI>
+                                                <LI>                        <A href="http://www.blogcounter.de/" target="_blank" id="bclink" title="kostenloser Counter fuer Weblogs"><SPAN id="bccount" style="font-size:8px"><IMG src="http://www.blogcounter.de/bc/log.php?id=roadkill&referer=http%3A//www.bloglines.com/citations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&r=1280x854&c=32&showme=y&st=img&title=iguana.roadkill.de%20%BB%20killer-app%20of%20consumerism&style=5&url=http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/&b=715" alt="BlogCounter.de - kostenloser Counter fÃ¼r Weblogs" border="0" width="80" height="15"></SPAN></A>
+                        <SCRIPT language="JavaScript" type="text/javascript" src="http://track.blogcounter.de/js.php?user=roadkill&style=5">
+			</SCRIPT>
+</LI>
+                <LI><A href="http://blogstats.de/index.php?url=http://iguana.roadkill.de" title="Meine Linksphï¿½e"><IMG src="http://blogstats.de/images/blogstats_mini_80x15.gif" width="80" height="15" style="border:none;" alt=""></A></LI>
+                </UL>
+        </LI>
+
+
+        <LI>                <H2>Search</H2>
+                <FORM method="get" action="/index.php"><P>
+<INPUT type="text" value="" name="s" id="s">
+<INPUT type="submit" value="Search">
+</P>
+</FORM>
+        </LI>
+
+</UL>
+
+</DIV>
+
+<DIV id="footer"><P>
+<A href="http://beccary.com">Theme based on a Design by Beccary</A>
+Â·
+Â·
+<A href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><ABBR title="eXtensible HyperText Markup Language">XHTML</ABBR></A>
+Â·
+<A href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><ABBR title="Cascading Style Sheets">CSS</ABBR></A>
+</P>
+</DIV>
+
+</DIV>
+
+
+
+
+
+</BODY></HTML>_?http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/¡$Ñ%Õ	&
+' ()_WebResourceFrameNameO¼<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#cc6600" alink="#cc6600" vlink="#cc6600" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="120" height="240" cellspacing="1" cellpadding="0" border="0" bgcolor="#e8e7d0"><TBODY><TR><TD width="118" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://iguana.roadkill.de/2005/07/13/killer-app-of-consumerism/&hl=de&client=ca-pub-0789463108875404&adU=SEOStudio.com&adT=Free+Keyword+Tool&adU=www.toggolino.de&adT=Lernspiele+f%C3%BCr+Kinder&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Goooooogle-Anzeigen</FONT></A></TD></TR><TR><TD bgcolor="#fafaf0" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('gehe zu SEOStudio.com','aw0')" onmouseover="ss('gehe zu SEOStudio.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#cc6600"><A id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.trendmx.com/website-promotion-optimization-software/website-promotion-software.aspx&sa=l&ai=Bs0NbVGvVQpzANZH6wAHAi5jdA53S6gXfm7fqAcCNtwHgxQgQARgBIPCDmgMoAkCKFkiIOVCu8LSA-f____8BoAGP14r_A7IBEmlndWFuYS5yb2Fka2lsbC5kZboBCjEyMHgyNDBfYXPIAQHaAT9odHRwOi8vaWd1YW5hLnJvYWRraWxsLmRlLzIwMDUvMDcvMTMva2lsbGVyLWFwcC1vZi1jb25zdW1lcmlzbS8&num=1&client=ca-pub-0789463108875404" onfocus="ss('gehe zu SEOStudio.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('gehe zu SEOStudio.com','aw0')" onmouseout="cs()"><B>Free Keyword Tool</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#333333">The Proven Way to Get Top Ranking Do-It-Yourself SEO with Proven Tool<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#99cc33">SEOStudio.com</FONT></DIV></TD></TR><TR><TD bgcolor="#fafaf0" id="taw1" class="ch" width="" height="" align="left" valign="center" onfocus="ss('gehe zu www.toggolino.de','aw1')" onmouseover="ss('gehe zu www.toggolino.de','aw1')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:116px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#cc6600"><A id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=Bv0nkVGvVQpzANZH6wAHAi5jdA_GwyAX_u5edAcCNtwHAqQcQAhgCIPCDmgMoAkCKFkiLOVCWpYWd-f____8BsgESaWd1YW5hLnJvYWRraWxsLmRlugEKMTIweDI0MF9hc8gBAdoBP2h0dHA6Ly9pZ3VhbmEucm9hZGtpbGwuZGUvMjAwNS8wNy8xMy9raWxsZXItYXBwLW9mLWNvbnN1bWVyaXNtLw&num=2&adurl=http://www.toggolinoclub.de/%3Fpartnerid%3DSRTLGOOG&client=ca-pub-0789463108875404" onfocus="ss('gehe zu www.toggolino.de','aw1')" onclick="ha('aw1')" onmouseover="return ss('gehe zu www.toggolino.de','aw1')" onmouseout="cs()"><B>Lernspiele fÃ¼r Kinder</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#333333">Mit Bob der Baumeister lernen im Toggolino Club. FÃ¼r Kinder von 3-7.<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#99cc33">www.toggolino.de</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_óhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0789463108875404&dt=1121282971651&format=120x240_as&output=html&url=http%3A%2F%2Figuana.roadkill.de%2F2005%2F07%2F13%2Fkiller-app-of-consumerism%2F&color_bg=FAFAF0&color_text=333333&color_link=CC6600&color_url=99CC33&color_border=E8E7D0&ad_type=text&ref=http%3A%2F%2Fwww.bloglines.com%2Fcitations%3Furl%3Dtiddlywiki.com%26submit%3DSearch&cc=98&u_h=854&u_w=1280&u_ah=782&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=8&u_nmime=124   ! 3 I N Y o  — µ Ä Î'‰,˜,,Ø,á2	899t9~9‰BÅGGGWG`KÒPtPªP´P½PÃu¨uêuìuïuúv‡Ñ‡ä             *              ‰Û

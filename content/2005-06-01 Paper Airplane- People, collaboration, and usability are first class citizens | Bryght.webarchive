@@ -1,0 +1,637 @@
+bplist00Ò_WebSubresources_WebMainResource¥Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO;a.glossary-indicator {
+	vertical-align: super;
+	cursor: help;
+	font-size: xx-small;
+	padding-left: 2px;
+	font-weight: bold
+}
+
+a.glossary-term {
+	text-decoration: none;
+	border-bottom: 1px dotted #080;
+	color: #080;
+	cursor: help;
+}
+
+dl.glossary-list > dt {
+	font-weight: bold;
+}
+
+dl.glossary-list > dd {
+	font-weight: normal;
+	font-size: x-small;
+	margin-left: 15px;
+}
+
+a.glossary-edit-term {
+	font-size: x-small;
+	font-weight: normal;
+	padding-left: 6px;
+}
+
+.glossary-related {
+	font-style: italic;
+}
+
+.glossary-links {
+	text-align: center;
+	letter-spacing: -0.05em;
+}
+
+_Hhttp://www.bryght.com/hm/profiles/standard/modules/glossary/glossary.cssXtext/cssÓO6k/*	sIFR (Scalable Inman Flash Replacement) Version 2.0 RC1
+	Copyright 2004 Mike Davidson, Shaun Inman, Tomas Jogin and Mark Wubben
+
+	This software is licensed under the CC-GNU LGPL <http://creativecommons.org/licenses/LGPL/2.1/>
+*/
+
+/* Changed by Steven Wittens: additions marked with 'Bryght'. */
+
+var hasFlash = function(){
+	var nRequiredVersion = 6;	
+	
+	if(navigator.appVersion.indexOf("MSIE") != -1 && navigator.appVersion.indexOf("Windows") > -1){
+		document.write('<script language="VBScript"\> \n');
+		document.write('on error resume next \n');
+		document.write('hasFlash = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash." & ' + nRequiredVersion + '))) \n');  
+		document.write('<'+'/script\> \n');
+		/*	If executed, the VBScript above checks for Flash and sets the hasFlash variable. 
+			If VBScript is not supported it's value will still be undefined, so we'll run it though another test
+			This will make sure even Opera identified as IE will be tested */
+		if(window.hasFlash != null){
+			return window.hasFlash;
+		};
+	};
+	
+	if(navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"] && navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){
+		var flashDescription = (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]).description;
+		var flashVersion = parseInt(flashDescription.charAt(flashDescription.indexOf(".") - 1));
+		return flashVersion >= nRequiredVersion;
+	};
+	
+	return false;
+}();
+
+String.prototype.normalize = function(){
+	return this.replace(/\s+/g, " ");
+};
+
+/* IE 5.0 does not support the push method, so here goes */
+if(Array.prototype.push == null){
+	Array.prototype.push = function(item){
+		this[this.length] = item;
+		return this.length;
+	};
+};
+
+/*	Implement function.apply for browsers which don't support it natively
+	Courtesy of Aaron Boodman - http://youngpup.net */
+if (!Function.prototype.apply){
+	Function.prototype.apply = function(oScope, args) {
+		var sarg = [];
+		var rtrn, call;
+
+		if (!oScope) oScope = window;
+		if (!args) args = [];
+
+		for (var i = 0; i < args.length; i++) {
+			sarg[i] = "args["+i+"]";
+		};
+
+		call = "oScope.__applyTemp__(" + sarg.join(",") + ");";
+
+		oScope.__applyTemp__ = this;
+		rtrn = eval(call);
+		oScope.__applyTemp__ = null;
+		return rtrn;
+	};
+};
+
+/*	The following code parses CSS selectors.
+	This script however is not the right place to explain it,
+	please visit the documentation for more information. */
+var parseSelector = function(){
+	var reParseSelector = /^([^#\.>\`]*)(#|\.|\>|\`)(.+)$/;
+	function parseSelector(sSelector, oParentNode, sMode){
+		sSelector = sSelector.replace(" ", "`");
+		var selector = sSelector.match(reParseSelector);
+		var node, listNodes, listSubNodes, subselector;
+		var listReturn = [];
+
+		if(selector == null){ selector = [sSelector, sSelector]	};
+		if(selector[1] == ""){ selector[1] = "*" };
+		if(sMode == null){ sMode = "`" };
+		
+		switch(selector[2]){
+			case "#":
+				subselector = selector[3].match(reParseSelector);
+				if(subselector == null){ subselector = [null, selector[3]] };
+				node = 	document.getElementById(subselector[1]);
+				if(node == null || (selector[1] != "*" && node.nodeName.toLowerCase() != selector[1].toLowerCase())){
+					return listReturn;
+				};
+				if(subselector.length == 2){
+					listReturn.push(node);
+					return listReturn;	
+				};
+				return parseSelector(subselector[3], node, "#");
+			case ".":
+				if(sMode == "`"){
+					listNodes = getElementsByTagName(oParentNode, selector[1]);
+				} else {
+					listNodes = oParentNode.childNodes;
+				};
+				
+				for(var i = 0; i < listNodes.length; i++){
+					node = listNodes[i];
+					if(node.nodeType != 1){
+						continue;	
+					};
+
+					subselector = selector[3].match(reParseSelector);
+					if(subselector != null){
+						if(node.className.match("\\b" + subselector[1] + "\\b") == null){
+							continue;
+						};
+						listSubNodes = parseSelector(subselector[3], node, subselector[2]);
+						listReturn = listReturn.concat(listSubNodes);	
+					} else if(node.className.match("\\b" + selector[3] + "\\b") != null){
+						listReturn.push(node);
+					};
+				};
+				return listReturn;
+			case ">":
+				if(sMode == "`"){
+					listNodes = getElementsByTagName(oParentNode, selector[1]);
+				} else {
+					listNodes = oParentNode.childNodes;
+				};
+				for(var i = 0; i < listNodes.length; i++){
+					node = listNodes[i];
+					if(node.nodeType != 1){
+						continue;	
+					};
+					if(node.nodeName.toLowerCase() != selector[1].toLowerCase()){
+						continue;
+					};
+					listSubNodes = parseSelector(selector[3], node, ">");
+					listReturn = listReturn.concat(listSubNodes);	
+				};
+				return listReturn;
+			case "`":
+				listNodes = getElementsByTagName(oParentNode, selector[1]);
+				for(var i = 0; i < listNodes.length; i++){
+					node = listNodes[i];
+					listSubNodes = parseSelector(selector[3], node, "`");
+					listReturn = listReturn.concat(listSubNodes);	
+				};
+				return listReturn;
+			default:
+				listNodes = getElementsByTagName(oParentNode, selector[0]);
+				for(var i = 0; i < listNodes.length; i++){
+					listReturn.push(listNodes[i]);
+				};
+				return listReturn;
+		};
+	};
+	
+	function getElementsByTagName(oParentNode, sTagName){
+		/*	IE5.x does not support document.getElementsByTagName("*")
+			therefore we're resorting to element.all */
+		if(sTagName == "*" && oParentNode.all != null){
+			return oParentNode.all;
+		};
+		return oParentNode.getElementsByTagName(sTagName);
+	};
+	
+	return parseSelector;
+}();
+
+/*	Executes an anonymous function which returns the function sIFR (defined inside the function).
+	You can replace elements using sIFR.replaceElement()
+	All other variables and methods you see are private. If you want to understand how this works you should
+	learn more about the variable-scope in JavaScript. */
+var sIFR = function(){
+	if(window.hasFlash == false || !document.createElement || !document.getElementById){ return function(){return false} };
+
+	/* Providing a hook for you to hide certain elements if Flash has been detected */
+	if(document.documentElement){
+		document.documentElement.className = document.documentElement.className.normalize() + (document.documentElement.className == "" ? "" : " ") + "sIFR-hasFlash";
+	};
+
+	/* Opera and Mozilla require a namespace when creating elements in an XML page */
+	var sNameSpaceURI = "http://www.w3.org/1999/xhtml";
+	var UA = function(){ 
+		var sUA = navigator.userAgent.toLowerCase();
+		var oReturn =  {
+			bIsKHTML: sUA.indexOf('safari') > -1 || sUA.indexOf('konqueror') > -1 || sUA.indexOf('omniweb') > -1,
+			bIsOpera : sUA.indexOf('opera') > -1,
+			bIsGecko : navigator.product != null && navigator.product.toLowerCase() == 'gecko',
+			bIsXML : document.contentType != null && document.contentType.indexOf('xml') > -1
+		};
+		oReturn.bIsIE = sUA.indexOf('msie') > -1 && ! oReturn.bIsOpera && !oReturn.bIsKHTML && !oReturn.bIsGecko;
+		return oReturn;
+	}();
+
+	var bIsInitialized = false;
+	var stackReplaceElementArguments = [];
+	
+	function fetchContent(oNode, oNewNode, sCase){
+		var sContent = "";
+		var oSearch = oNode.firstChild;
+		var oRemove, oRemovedNode, oTarget;
+
+		while(oSearch){
+			if(oSearch.nodeType == 3){
+				switch(sCase){
+					case "lower":
+						sContent += oSearch.nodeValue.toLowerCase();
+						break;
+					case "upper":
+						sContent += oSearch.nodeValue.toUpperCase();
+						break;
+					default:
+						sContent += oSearch.nodeValue;
+				};
+			} else if(oSearch.nodeType == 1){
+				if(oSearch.nodeName.toLowerCase() == "a"){
+					if(oSearch.getAttribute("target")){
+						oTarget = oSearch.getAttribute("target");
+					} else {
+						oTarget = "";
+					};
+					sContent += '<a href="' + oSearch.getAttribute("href") + '" target="' + oTarget + '">';
+				};				
+				if(oSearch.hasChildNodes){
+					sContent += fetchContent(oSearch, null, sCase);
+				};
+				if(oSearch.nodeName.toLowerCase() == "a"){
+					sContent += "</a>";
+				};
+			};
+			oRemove = oSearch;
+			oSearch = oSearch.nextSibling;
+			if(oNewNode != null){
+				oRemovedNode = oRemove.parentNode.removeChild(oRemove);
+				oNewNode.appendChild(oRemovedNode);	
+			};
+		};
+		return sContent;
+	};
+	
+	function createElement(sTagName){
+		if(document.createElementNS){
+			return document.createElementNS(sNameSpaceURI, sTagName);	
+		} else {
+			return document.createElement(sTagName);
+		};
+	};
+
+	function createObjectParameter(nodeObject, sName, sValue){
+		var node = createElement("param");
+		node.setAttribute("name", sName);	
+		node.setAttribute("value", sValue);
+		nodeObject.appendChild(node);
+	};
+	
+	function replaceElement(sSelector, sFlashSrc, sColor, sLinkColor, sHoverColor, sBgColor, nPaddingTop, nPaddingRight, nPaddingBottom, nPaddingLeft, sFlashVars, sCase){
+		if(!mayReplace()){
+			return stackReplaceElementArguments.push(arguments);	
+		};
+		
+		if(sFlashVars != null){
+			sFlashVars = "&" + sFlashVars.normalize();
+		} else {
+			sFlashVars = "";	
+		};
+		
+		var sWmode = (sBgColor == "transparent") ? "transparent" : "opaque";
+		var node, sWidth, sHeight, sMargin, sPadding, sText, sVars, nodeAlternate, nodeFlash;
+		var listNodes = parseSelector(sSelector, document);
+		if(listNodes.length == 0){ return false };
+
+		for(var i = 0; i < listNodes.length; i++){
+			node = listNodes[i];
+			
+			/* Prevents elements from being replaced multiple times. */
+			if(node.className.match(/\bsIFR\-replaced\b/) != null){ continue; };
+
+			sWidth = node.offsetWidth - nPaddingLeft - nPaddingRight;
+			sHeight = node.offsetHeight - nPaddingTop - nPaddingBottom;
+
+			nodeAlternate = createElement("span");
+			nodeAlternate.className = "sIFR-alternate";
+
+			sText = fetchContent(node, nodeAlternate, sCase);
+			sText = sText.replace(/%\d{0}/g, "%25");
+			sText = sText.replace(/\+/g, "%2B");
+			sText = sText.replace(/&/g, "%26");
+			sText = sText.replace(/\"/g, "%22");
+			sText = sText.normalize();
+
+			sVars = "txt=" + sText + sFlashVars + "&w=" + sWidth + "&h=" + sHeight;
+			if (sColor != null){sVars += "&textcolor=" + sColor};
+			if (sLinkColor != null){sVars += "&linkcolor=" + sLinkColor}; 
+			if (sHoverColor != null){sVars += "&hovercolor=" + sHoverColor};
+			
+			node.className = node.className.normalize() + (node.className == ""  ? "" : " ") + "sIFR-replaced";
+
+			/*	Opera only supports the object element, other browsers are given the embed element,
+				for backwards compatibility reasons between different browser versions. */
+			if(UA.bIsOpera){
+				nodeFlash = createElement("object");
+				nodeFlash.setAttribute("type", "application/x-shockwave-flash");
+				nodeFlash.setAttribute("data", sFlashSrc);
+				createObjectParameter(nodeFlash, "quality", "high");
+				createObjectParameter(nodeFlash, "wmode", sWmode);
+				createObjectParameter(nodeFlash, "bgcolor", sBgColor);
+				createObjectParameter(nodeFlash, "flashvars", sVars);
+			} else {
+				nodeFlash = createElement("embed");
+				nodeFlash.setAttribute("src", sFlashSrc);
+				nodeFlash.setAttribute("flashvars", sVars);
+				nodeFlash.setAttribute("type", "application/x-shockwave-flash");
+				nodeFlash.setAttribute("pluginspage", "http://www.macromedia.com/go/getflashplayer");
+				nodeFlash.setAttribute("wmode", sWmode);
+				nodeFlash.setAttribute("bgcolor", sBgColor);
+			};
+			nodeFlash.className = "sIFR-flash";
+			nodeFlash.setAttribute("width", sWidth);
+			nodeFlash.setAttribute("height", sHeight);
+			/* 100% width for Bryght */
+			nodeFlash.style.width = "100%";/*sWidth + "px";*/
+			nodeFlash.style.height = sHeight + "px";
+			node.appendChild(nodeFlash);
+							
+			node.appendChild(nodeAlternate);
+			
+			/*	Workaround to force KHTML-browsers to repaint the document. 
+				Additionally, IE for both Mac and PC need this.
+				See: http://neo.dzygn.com/archive/2004/09/forcing-safari-to-repaint */
+
+			if(UA.bIsKHTML || UA.bIsIE){
+				node.innerHTML += "";
+			};
+		};
+	};
+	
+	function mayReplace(e){
+		if(((UA.bIsXML && UA.bIsGecko || UA.bIsKHTML) && e == null && bIsInitialized == false) || document.getElementsByTagName("body").length == 0){
+			return false;
+		};
+		return true;
+	};
+	
+	function sIFR(e){
+		if((!sIFR.bAutoInit && (window.event || e) != null) || !mayReplace(e)){
+			return;	
+		};
+		bIsInitialized = true;
+
+		for(var i = 0; i < stackReplaceElementArguments.length; i++){
+			replaceElement.apply(null, stackReplaceElementArguments[i]);
+		};
+		stackReplaceElementArguments = [];
+	};
+
+	sIFR.replaceElement = replaceElement;
+	sIFR.UA = UA;
+	sIFR.bAutoInit = true;
+	
+	if(window.attachEvent){
+		window.attachEvent("onload", sIFR);
+	} else if(document.addEventListener || window.addEventListener){
+		if(document.addEventListener){
+			document.addEventListener("load", sIFR, false);	
+		};
+		if(window.addEventListener){
+			window.addEventListener("load", sIFR, false);	
+		};
+	} else {
+		if(typeof window.onload == "function"){
+			var fOld = window.onload;
+			window.onload = function(){ fOld(); sIFR(); };
+		} else {
+			window.onload = sIFR;
+		};
+	};
+
+	return sIFR;
+}();
+
+/* Additions for Bryght */
+   /*if (hasFlash) {
+     var sUA = navigator.userAgent.toLowerCase();
+     if (sUA.indexOf('safari') > -1) {
+       document.write('<style type="text/css">@import "themes/bryght/sifr.css";</style>');
+     }
+   }*/
+   /*
+   sIFR.replaceElement("h1.title", "themes/bryght/sifr.swf", "#000000", null, null, null, 0, 0, 0, 0);
+   sIFR.replaceElement("h2.node-title", "themes/bryght/sifr.swf", "#102EB2", "#102EB2", "#102EB2", null, 0, 0, 0, 0);
+   sIFR.replaceElement(".comment>h3", "themes/bryght/sifr.swf", "#102EB2", "#102EB2", "#102EB2", null, 0, 0, 0, 0);
+   sIFR.replaceElement(".mission-bottom>h2", "themes/bryght/sifr.swf", "#222222", null, null, null, 0, 0, 0, 0);
+   sIFR.replaceElement("#content h1", "themes/bryght/sifr.swf", "#000000", null, null, null, 0, 0, 0, 0);
+   sIFR.replaceElement("#content h2", "themes/bryght/sifr.swf", "#444444", null, null, null, 0, 0, 0, 0);
+   sIFR.replaceElement("#content h3", "themes/bryght/sifr.swf", "#666666", null, null, null, 0, 0, 0, 0);
+   */
+_<http://www.bryght.com/sites/bryght.com/themes/bryght/sifr.js_application/x-javascriptÓOˆ‰PNG
+
+   IHDR  u   k   ¿ˆâ¥   tIMEÔ ğiu  ÷PLTEÿ¼ÍÍÍÈÈÉÏÏĞÑÑÑÕÕÕÙÙÙİİİáááåååéééíííñññõõõùùùùúıûüşşşşÿşùÿşéşûÙÿúÑşúÅÿöÂşù¹şşİşıáşşåşşíÿşñÿşõşùÁşø²şúÕÿö¹şşÙşúÍşşÕÿöµşù½şşÑşşÍõöüóôûôõû‘ŸÜAYÁ4N½<T¿eyÍ´½çÒØğ†•ØG^Ä)Dº0³.±8µ:RÀYnÉ’ ÜÙŞòi|Ï!=¶t…ÒÛàô¾ÆêH_ÄMdÅÆÍìşö±şö©şö¥şõ•şô‘şùµéëø4´{ŒÔ}ÕşúÉşö­şôşğ`şì6şéşçşçşçÄËì8Q¾ÕÚñcxÍşîQşéşõ™şşÉ<¶·Àè¦±â:¶•¢İauË5³»Äéşì:ÀÈê/I¼¹Âè6P¾E\Â.HºQfÇşíI÷øüœÚwˆÔUjÈáåõíğùİâô1²şñ…şè×Üò]rÊÏÕğşï]êìø2L½6´ˆ—Ù2´ğòúËÑîÃÊìÈÏíåèöìïù©´ã¡­ámÏ²¼çşìBVlÉRhÇ>VÀèê÷x‰ÓJaÄ‚’Ö;T¿Ûäçö±ºåªà$?¸şîNŠ™Ù®¸åÑ×ğœ¨ßıñsx‰Ô¶¿è&A¹bvÌ™¦ŞÿşÅH_Ãşê$şê+LbÅpÑığj—¤İşèC\Ãığfşò‰şõ‰lĞÿşÁ%?·şö¡ıò{h{Î:TÀşïUÿş½DY¨ ¤Š ¤„ÊÇzøíy:P¤àÙpŒšÚ[k™o€ÑL^5¯À¾zÿş¹ÊÏÜ@U¢)Bªbq—mz”‰ÖĞsõêiùíhÇÄxÿşµÿı±¦¨‚&@ªşû«şõRdÍÈvãÛnëálÿú£·Àçşòÿù›ÿø•ÿøÿñ•şñ‘ÿñ™ÿòÿë‹ÿê‚ÿì’ÿñ¡ÿñ¥ÿã‚ÿã~ÿåŠÿì›ÿñ©ÿæ‘ÿí¡ÿó±ÿßÿñ®ÿö½ÿó´ÿß}ÿïªG¹™ú   tRNS @æØf  ,IDATxÚí{|×uÇ•ÔNm°½íjÑ>5I+†€±~ñŒ¤E&h¶0.H;Ğàâ86È`#?°I°eo ÁD"ªp£ÖmÒ4­Ú&­SÑBcl0ƒãşÑû{ïÜ™Y‰Y7Ÿş>|>ìîÌÎh¾÷ì¹ç{çLŞïxıé×¼ğG¿Á#Ÿ?ÿÑG]¸xñ>¹4rÄˆ†Â²Q¡ˆßÅâñxxÅbÑ¨ß‰„Ã¡Ğ¨²²ŠÂÒ††`°8ñÛ‘#Ë/]ºô1Õ¥òòò‘@	 b"ø:ö+»}òá‡ç.^¼xáÂ…3àÌçĞU¡?(/WúÀĞ¯­õª²iNıÂÅsŸ|\şÛ¥£Bá†^ÀÉÀN¹*«¨¨,…Ü‹!P@kdQQDJ§Óè„¾¨€¯Iîç ÷3gÎ îÆåœ:#|^”şƒÁ‰û£3ú‡—,6T”2 kT6Ü+[Ò„(@Ê€÷¤¡Z€*àÿ-à}OÜ©¾^¯IÕÖ;{öÔ…“€ûéÓô¢à•KêèxêüùÓ²ÎŸŸš<:<ú™3Nû0U>2l¨DşBç˜Sğwq/ƒÜ1Q*w§J¶_ ¯ë©ÚÚsgOzs?}ş}z5¹¡ş>'ÊùŒ!ú‘~ĞßGÇ~ïÔÙs©šò¢â`e…tŞŞø(_VFˆ¶¤©}WbàeP£°àË
+üË€Ü€{
+Ø{İY€p'”#ì6Ää'tø“ zmª@oÁşE	İàÀÓ•<"UCÖ!^£F‘íÓÓ×‡í½®÷(æn\O.müİİÇß:	õz>î¸MÁ¡OÕÕ¦ô¢DOõ/qsÊ“óàCØ˜‰ïp8"(LvÄ¸÷îµ”;¾¢ÜaoEêÌcæ€õ©SG‰Nòï¾{üøñîîÓ§[³‡Ï ´·®V¯ïëISÿB-=\¬C%J
+Ìä©“÷à±B¸»#ÜßáŞß?pøÈ‘:À½]Pw±Sä³gÏN&“Í u/P|Ş77'“'gÏFÜ»»[³nÖ“'›1ôş4ğ/!â_ İXB§*hÖ^>JxQŞ vLß ƒGÜîÇzáë!“êİlll|çÄ‰Ío¿ƒ:uëm  4K#âŞónĞ®°Q{9<Ğß—–ü‹¿\ç°ğ7|4Éì› Kâ{;¼,x=àjr‡0?øĞ‰.~‹±‡Û@³€¿´±›¼+ŸlÖfxpìş>àÔÿ ëzØÒÑğØD1ñ8×Ê¸óæ~^1¢\`§ÌO`æ„ø FOÀƒ½’<bä„8@ìB€ö3ÿR,B×Ëãš=w&JÜjß8rJ"w{.¬ı2èïï#ê‡]¹Ÿ@¾Æ¬F¥ğ¶d’B/Ã™ lê]V¡¦Ùq7dAÜØ[àŞÒ"bŸMì&Ô)  ïÁCl8Â€]ÿ oğ„¼á_R/>A?
+_H& M½ÁD½Ü–$ò‚O±Ûr…ˆ¹ƒWÓû6üébìSçœ°ó~%m$4Òi
+wñ„½Cq†=D #lå&êz#ó'’‡öwuj]}SäÔà!wdî’—!ª×Ø%è€	 NØlP-¼Ş¡hTtX‚NCõ¸:†Nvj-Õ²´wdîĞ»óØ¡»Dæî1u™9@^F†xTÆÔx†Şğ's^1õ@U×%ª1jK6”€\pCiI -Præ/È„ıøqo©›¡&!2¼f	ÖêâY<©”’ö‘#´“îSCWÚzD‹ê’Õ°")LHHF
+d7ƒ½Œˆ½9Ø)ô½N3Ğá5êúCdLMÇ“j™Ú¿ƒ™SèbÎKá×c~3ô®®ı%*æ‘†z]¥ú†ˆhî±ò2ĞŠxkÇÜ=¥Î[:Bƒ‹¨1ª6¸ã®F“ıî„BQØKÓH‰ÆR°¢¸
+:°vS¶ (Ò­U(P`/ã±7£qwc£—Ô÷‚:\Ğa5	uiòO(ô‰ê·ÚO> .C]ó›hz»Ô:$:ì‚’zİ^õ\68wÉÉ4'ñÄSêœOç<.TSî!–®n¡±¼SáÙ‡JÜM« kZP6Ñ’.+ñßßT“J¥j,í=,8wâd`$sÅíG±µ{Jıqêi#5b$¼Eîü„B‹¥Ò¼ZZØlOfN§IE7!z‰rÿqKêÆ7c0‘jìZµoï£İ»oUWcJÉ=ûTÉHØ“^b7zR4`v(š!a°)c<¡Pa¡J“*ÈdDûiyn°G"]Ö
+Òï„Á¼Ü¡íšxØŞª_æ°!˜H÷ \Ø±c ™í1uÙ¿ |Ôêÿ~j-gî<›P`*Ë$<ıÆÌ9èßN³Ñ­½2ÅQ­Ş†z#áW¨§º7™µ¸KÅ½PèR9ìGkOzGÆu}È¿€„Îw§šh™Kk‡…	Ï> ÔlŒ¬|î˜LNóCêR‹Êõò¢ ŒRm¨ïÇğ‚5‡TÌ÷C
+,0°Gå@boöúa>R‡>ÙC©WßÊ¼»±J‚WÄ™¸Ù‡8ƒ®c§¹Ÿº÷qÀ6Ô»`³÷Îo²Öü^3öb;síµÇz‰µ{F}€IÑ„ìæê»¤Õ)dFÁß‰¢t~-Î1×´©ì4å Üz $Z4Ùé@wìÒ£âÉÔ^„½¹Ù{êÆ„Ú™º±L"ËR,nt£m–Ôã¶ÔÁø´¸sA“½t*œŒìÚ™©óœz?É„)õ“MÔ…eÖŠI3˜±xŒ›}r³¯OÎÖÖK»š2k¿{©¥©#óòQW8Mûku.­m#°$Eş¤Ã’ú~;êá@§èMwv*3™»ÇÀ^Rï7²^lÆŞgA=ÓäŒ8ÓÜÃ+ê1ß_ıç)¨û8¡Ş´ ÑœˆÉÆN2ÄØzF½Ïc
+ë°²¢î^S­¨§Ş·~^½æßÿC†Şª/nr¦Åu&ì	¡C%SKÄØÑêo¨÷³¬zøSD=„øş+Üöo¿’GIÛ›œj»ÙÇ”ğ*5öz{—Ôa>Ÿ³ÿTP×Z¡ù	ÚøS9ëØä\­ö>FØØáÒSdíQO³¼z,Vğ)¡^
+ ÿoüÉÁìuA}¯yÚ 
+cêáw„İ;êÜŠºoı³·?hFöäè¡¥¾~uû#Æ¦Ùoı‚lüÙ[B> ³É)f©aL‘î-ö>zÜDıÁİëª@\]õµİù„ÇØç–®mßÑ6eÏ¸ç&bNÏ>õ•¶¶ñÖã^7¾hüSëÃ±3&İ6kæÌ™³Ş˜ûò®İ»vm}X¤>æ«/€³<ñ½ùÆßÿCıã/~ùOÿL¡7ïsE}ŸeĞ.¦|ÉmQïágiÚ›Q¿Ë@›6^ß¬!NùFhudÜ07Óo<E>;÷[Õ²ØÉS_ËN³²~cëJi÷¿ı;L]onr§f3ö8M.±$X¦^2{Dİ˜B6S¿ù	îÊ÷¬F@d~£iŸ'/7¢/?@·<¶mjµBS9ê+«ŒÏÛ¶hÚ½æİ,=Qò¸Kê›©Ì.ŞË¨×zI½Ra´j¥-]ştAw¾U"u–Ğ5EÈqZÆıF/­h¯Kê{u«˜İp1-=äˆİêÌÁ8 ^½UE}–Lıiúİs”‡ºo«uğ‹Y½Gşì'?íê®Á_ÛäVµV«ù¸ñiº‡Ü0æ•±óë%Ô'ß8÷ú	Kè»?QQŸ(Säû<uæåÇ½ŞñâMôÍB¡7­2á–¹é›74mËÄ{g‘wşo¾ùæ_şUÍ}¶º¦Şm5R*`.¦2MŒZ{mî©W-GA	X“oPŸ²szl6M¦®Mä¨o¡şåè|ƒv¦>zlß+´ÿ@™DŞ=ƒzÒ/'º\SßïÄÅ¤É]©)Ï¨·XS_s~;¢{É ~3ü|YÛÓkí©Ï (qH8fßñRê¯¢mù´Cø¦Æı¦^áókú]Sÿ±bU n¸@=õ)°õYôr©±oRÓ°¡Ş!Æ3ÚŸ‘÷3xêwãmÏgQŸÇ¯owM]‘‹!%6Z©cì)/¨§íl}½\ê©—»¦NÍ™ÒÒ&êË­¨ôù®©ÏW.]©Ç ÆîõÊËI}#uäx ºz2ïEÜR/"êÒ¢‰<ìØ‹±±ë¿ÔÙ˜éy8ÆZûòî-êÁ!ò0¥|Cî›I şÈ+ê—“úN–˜õÆL»oËŠzB_äšú"İrÚ-z¤·Íà¢&¿/Ôµ7˜B·iYQ/×ç¹¦>Ï–:
+bPwJ]Œ7Ô[.7um¹)÷µÎ—u]?äšz«‚z±&w§Ğ±Cìõ^Q¯¨9õö[şTd¾äõ|-[ê½®©+V	Ã$<:%–pá¤úzÏ¨—]Fê¯O™Wíh7Íj8§®ßáúz&[§Ô‹=¥ŞÂQ9u2°`×Ö×~°ìæ-İìSÌ%9÷ëú·]Rÿ¶Á¯SÓSLŒİ{¿.ÍV›¨o´§Næ?_3¨¼¼ÁvÏ)u0ÑÖí’úÁŒÔ±­cÇê¦5éå’ {²ÏúLä°Ç´Ô¿KòÚPºv1J#LâÁ€„ÁbR7ÏÓŞ4á;uÂ/ã?ï^Îe¨hÜÈæÀPè±rùuò#Y1Ú	õ•*êqûÃzî²]Jê‘:Q…NÏ¨£Û†È½Æ=ItÜ¾æ!ƒû¸;,¨ßÆúÊU{ÖTsÔw°äúËH»&¾ÔnI½ME½í†±\Ôî:àúZ%õˆtß/p1˜zÂ3êÔÖyÇş}FnÎŠØ¤Æ
+Ÿõê©'@}K•éÓ9ü`¹šúTúõì÷|kY²*šì\rË9ÊÔq¥Y/©½€ËŠÚ0ÃÊßæö›Ã9¤éÏ¨õ½µ©¿ÄïßÁİú^ã|êtŸÅİš™zKC:è-u:r.f’ú.ÍŠº¶‘Ê§µïâãuß«Ìö^½d3Ü¶Ç†:íˆ‘^3‚]O.p}AR=aEY»‡¶©÷ß~GÎ´·°›¼Ÿ$ô‹/Ñy%»Áª0nº	j—ÂÚ«4æµï-Î  šo‚±÷Ëì¾;(§Ë¿:-nû-”Êh Ó@K*{J3v„}ãÓÜäşÔoÜK×Üå/C]í3ÏŠáˆoÓsÏ/\øx’Îx.|½ö‹/¬Q9™Á¶oÎºä"oÚI[g*üâ†ô˜Ë×‘ÎŠ[5Î±;*-²ºÙÚo¬ëeÔK1u O=ß3ÚŸ\½zõÆM@›ÛÇò€·lŞ´éö|›å‹Ë¹…ô7óÔfp¸‡—¯cKğR¼-[4¾8ú‘-íoç4ºı±mÛ¶İíÓÄê5NÒìÛ­nq/—Š9ÔƒA'¶»Ó0¹óÙym'¥Ö“p2à—O}nF»‰¬]ŒZ•úª”ÁÁêÈÖqM} oÖô7ù“Îùûp³›/‚ù„µÔ´Ù¯å1úIVr5ßiSÒ<ËblQ/îLêRo1J+PËX°ÏB~é«}í>º`.ry¤Zè!î7êe#Vù±õQè¶Z—.	ŠeK°‡ñ˜:«^ÎWWˆÅ3ÔíSßZ·|?úcô5ü•Ä]ßú ·,¥ëVY™û«êl
+Æø5¡3EÔË
+K	v¯=öì»ÕŒÖ·4¹‡_<ú%1…S½ä¶¥K—Ş²ì>ù.vÛ»*íŒ]×gYÅıÎ/'íªôó5K¢¬äP)ÂŞç±­—‰u-bq{ğÂV|wqĞŞM)ı‘:[0Íù}¬"u¡nRr‘|?ŞâEÍöµ‘üR±AR´C÷˜:1vRi»í?“80·Şå‹F1š
+ú\%rå±eğb¡ÓTã¼ùw`“_pÇüy©©Jåº7a\m¨»wÔYİœ5vÆ=fu×:·ÍÀBRS§M¬sÆLÓâë/8¾SŞÌ=nªˆWS[—œ¬«­Ñ3ª¾ÀL×*Eò–:u1vSyÛ¢È¬¯7şó&šsé7Lº±ŠŒW§Ütó-·JÌUMÊ5¸Œ=¬g¯ˆT½7Bm½ÂKèœ‡¡>&ÌtQÇ%Jœ”â2£Ç =ÚäÏãvµ8”•§K³†^h.¬…ê™•@^R'»(t®po-ƒLAVñ}ğ˜Ûß“xüâ,¡›U‡‘­—”`
+^QgÌÉÃ†(öˆXTGQ…‡#ÏfX%3·nØ¸XÍÇTÏ©ŠLµû"˜z ¤q÷
+z^!Å ì2x›*G‚¹¸b—™+j(©Š(™ŸázÌT0‘TLxR/!
+ …vò "×Ü	|ø/ÃĞ6.Tµ²?¾	{Ñ  c¯c¾
+0 O©òĞv»}5ÖçÆä‘§)3—ÎcK¸„ˆi
+SGÅáU{
+=¯¤D4uL=ÄU”a‡ÕÅëb1ÓØÆ~dk0·.˜'rÃvw]jPx¤¤ğÈ«@Î¨8…dî2sÙsä¨Èœ=GMnm¿1f“Ğ…Ù„Œì14´.h8D.ÛCèy|}Qã!gN KØ£±˜ã4‚É·˜™‹ÜåR$ÿè´O-ò›+Cª‚rÕX½¤.—*:/öªæ¡¥3æN Æ^àl¼T(æŸ©Ç°çå’ºÁİ)õˆ\+Ój€)‡Œ>Ô:=ß¥
+sK™½{0fõ\·G=/gÔ]Ú¹
+{ÔaQÍ¨Ô‰f<>ÿè51ó´gµ~F0=/¼bo©ÛT4»óíÂ86#rŞĞm KØÖ‚ÈÂ‘Vş¼$f÷`fz©‡]+b?P´€˜YÈÈ<Ì'ã,¬Õ³6{šâ’¨z@“¨Cy=ï]è*QWÃNu¨k­tYìSc¯ëˆ|ùRş@apzpûˆ`aÈo›œÈÏ÷¡ƒÚş1×7k˜YW«t•YÈ¼kÜéZ;]g#Ÿ pÕDwÄº,%öàÅÓ]çT×f+D1ï3õXWºêsPÂoosÉ.,†mâKliÔ"CÀ›9gß–¶lm½¢ø§+1TA™w…•®´;‹ä|¬‰WÊâãáæ_—#7ãÈÀ}¼­Zy{/r•M`jÔyWº,…¿·2pKäö¸EFİOşà©."£+ÏèÆmü·²@3¸êM-úÖ«İá6.]iæ„ºü!ó0—¯/µïHqoz•[É'æõ`:kfèCÑ­æ›˜‘•U#XöQk‘¼«İË©É@×I\$‡7CQÏØ\€f)F0oX6r	Ùepe};³3ıP3ôX¿¼áƒÕàÃ|á>¿ôL¡¹óÀ;Ë†È»¬°š¹ıˆD3õŒc¢k‡¾ŒßíØth(;‚­>Xêìn†£îÇ™”—Øx‹©¡aÎQS—#pÙ¨»ÏB8Ìr¨s1ùCÁ(Á;ÎÁd™zõ¬³>óJÖÄó‡0é58òƒÎ~ı?õ\P¿.kù2)?“´ÿÊxIÈèŸ°NØ¤½²Ê˜Z<sÓqPœš«'»Œúg?û#'l‘c¿ÂYZRšˆ²n0ë¶±hB_mŸnk²Şç×ÿfOG+˜yC    IEND®B`‚_=http://www.bryght.com/sites/bryght.com/themes/bryght/logo.pngYimage/pngÓOŒ‰PNG
+
+   IHDR   $      péNú   ™PLTEÿ|$å^ğcÿÑ²İn$íÉ±å„Cç³‘á]ù²‚÷éàÿÿÿÿr!ÿšWÿãÑóÂ¡ÿ´‚Ğr3÷àĞŸAÍg#ğlÿÚÁÿæÕø×ÁÿDÕXÿÈ¤ÎUæ{3ç½¡úôïäw.ÿf ßrÿíáè«‚ğÁ¡}3ÂPñÔÀ?à§‚ú–Sÿ…4ôdÿöğÔaÿ«sğ®‚Y!½µ   ®IDATxœ•Ğé‚0`PQdêQğ,(¸x,T}ÿ‡³å—:É&İäË¤Yg•´fçŒ©5§?ĞZÂDHàF” f[Ö›ÖğÄáÆ ´ X¡ˆkÈÉ!çR"COêfDW `—$Rxzú) ¸“A—#0oFBëƒ
+máq3ê"¾E~Éq…‚ƒ”êãæCC‹Ì^!›gç­ÉeÓí3›±ˆÌ«Ã6şïŸ[3z#9§É8Êq    IEND®B`‚_"http://www.bryght.com/misc/xml.pngÓO’GIF89a¾ 3 æ  ###©©Ã{{{ad#ÓÔ	ÿ 3™™™ŠŠæææÿƒ	:::Ø_ ÖÖÖ™™™­­­™™Mö÷ÿRRRfffÿo‹ÿ>ÄÄyµµµŞŞŞÒ¥¬ÅÅÒfffÿ¢¼ÇÈÿ0&ÿØ JJJßÏŒŒ”ŒŒŒïïïì©&Ì†ƒn7H—³ÿ¬ ™™fjws~~‘ÿÿ åØåÿ+aÿ-ZZZBBBæî333ÿOç¦ÅÅÅ÷÷÷ÿ~¨ğ!¨¨“7ÿï óûáıp ÿ(OÿÌÌíí)ÿâêÿ¼ ¸¸bÿÄÄ„„„ÿBrsŒ¥¥¥ÿ2½½½ÿhÿ¼Éÿ™ ÿåêÿÿÿÿ"Rÿ£'''ÿ>_‘ÿÑİqq!ÿ1İäÿÿÿpõõ ÿ`ÿ
+:ÊËÌÌÌÿæ ÿ1HÿtÿÌ ÿ³ÿ3:)ƒƒÌÌ ÿø ÿ;ÿ××ÿ8!ÿ##×àÿv‡Øƒ~sss¥¥°ÿõöÿ:ÿ´ ÿŞ ÿ¢ ÿJÿiÿDÿ3fîîÿ+^ÿÿÿ!ù  ,    ¾ 3  ÿ€‚ƒ„…ƒ†Š‹Œ‘’“”•–—›œŸ ¡6`¡¥¦§¨©ª®¯°±I²¶·¸¥KK6K¹ÁÂÃ"šÄÌÍÁF33IÎÔÕ¯6FF6ÖŞß¡Óàäå–­æêÄ#Ë—£ëñÁ¤›‰òù²`µ›##ú¾â%° 8h*¬f@ÎÂ‡ÂlL3 á6MäÈÀQ£Fİ >JÒÑ€HCI`Dø A¾$"Œ(ˆCD	3%08¹hÉÌhy-@B>D3)(ÉÌø^p·hÄ‡Ñf0UÕPNB[`\`à¨ YÓ	’-„¾6ÿVk$š™
+ÔşI‚F¯'¥3"Øb ’â…ı¡ ê¶3®»€ÍA0,P-„d¨ƒ’d­ç‰`¶–%‘ìîqQ³~º-‡ ò=`hİ|H‘?€ƒ
+Š”¼‰m9`(i4æƒ 1Şù­ö`F@¹ À9Æ)’ÃâÏ¯M£ıµ8õ[Kf²‘U¼Ÿâ«Y2
+Á(P,!w#D _¡ÍĞJõiŸ@&X.ü¢[4ÙÙ G4 xÊhD°^#pÃ ÚxƒhC@8Hl_m8C2r&!U‚ q‘}bV$ô8ˆ Ñ( Aÿ
+Ä AG!‚F	à’ TI%n„Œ`T&ñd1lÔ‘x%.qbŠ B@C´™Är‚•	@œhÈc-åÉ0>Eƒ™VF5%ˆ0—Enõ‡—ŒZ¹ÕÉADĞ£—SndÀ{XF%HE…„TU“6&ÈYÉ™4‚0 ÃsÇD“Z‘5”•$Šÿµ	 wÆÙ¦  À˜aÀ®0åO\f
+NÊVM½2†Yµ4ìYÅåÊ–" ùÜ 6Ê*/®\ ™œF“ß¤…Ä¶”"j%È®A
+r¡š üÁ¤@Nø™&`0FÊÿq3Æ#$«,€KÄkÇ7à€Fş(ÆÉáQJ™dX0Úõ&‚F’ø :ÅY%$s;ÓDÊr¯©†ØMr¹şÔ
+ºmÑk¨&E?ìt`6\x£&D} ‰¼°ù1€#Àd„CaZÆ…¼(ö Eç5ˆÏA1€•IÈM;]ˆãrá ¬@=}G#ÂbE	²õe5Ó…(£àš î¤BxƒJFĞOˆL!ì¤f·yXLlì VŞ§ ©dFÆŸ¨ı†‰l­Â $]#8—0Òó^Ô2´Ò”1`’™z§’wµ!ò2ÿÇÿb»RñÀVù[z}L…È!çfå(›Á
+!¬İ6€"Ä0Å2,šÁHå<Ò%ˆ1‰™Šb ‡¥Ÿ@a¿©^Ë.:A`o›À ¦ˆf)íËæ
+ñ£èr0€PòAtC:_±ÁO ¦ã­e
+*   4!s8€ü >Á 'L+Ô £4šğFzp}¶¾(z­ĞcŒF´–ZíÅhXR÷1$ÏQx€™JŠ’„6’I8ù@~îs#qôâúƒ­¥Âí 'HA¸PñLšBVbğ¯ªÏjŒ¹£©$ÔÆÕ$©OMÚŠt4˜qÜ+ÿcµr@'"y)@$	Vb ª;ö"KÈOl%‡ÍJ,¿ñŒF$  ÆI°Àr5%^³%2¢ˆ­z)¸aĞ¾`H!.A)
+`I¡LMÍÇ#;ºÒŒviÌŸ(I 
+Ğ^Â€Xø€êJGNcÊA<`À“;€ˆ†Ó˜!)R)ğ“à¡bJ0CúÀ‚+ ¡B„B`;[\P(ğœ‡@á  ,ĞÁÒ@‚´àlhHÆ-d80Œ2B^LE° È€x|TmzLfn±0#¹´ÈS…`5à oPÚÀD eïÂğ$`KUØÈ(GUş4"S4A	c¸  uØ õ8à"¡*€$œ°Âs4ÅÜà°€nƒø BøDIK¦+X:ùøu,’€ ôê	*´ajPCP Ø( A«Â¦yÙ\ì!j½
+˜ „=Á’míB„°†.„!x A(À†KdG·'±BBÉ€@œĞLn‘+ĞTJ( 8†:q–ºò ‚^P€œ6º
+ˆÀwÁ»&ÀRø„1,°^öšxB(–ğDûú7WÓı¯€\ˆ@  ;_?http://www.bryght.com/conf/bryght-com.bryght.net/files/logo.gifYimage/gifÔ_WebResourceTextEncodingNameUUTF-8O>A<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="sIFR-hasFlash"><HEAD>  <TITLE>Paper Airplane: People, collaboration, and usability are first class citizens | Bryght</TITLE>
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <LINK rel="shortcut icon" href="sites/bryght.com/themes/bryght/favicon.ico">
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8"><BASE href="http://www.bryght.com/"><STYLE type="text/css" media="all">@import "misc/drupal.css";</STYLE><STYLE type="text/css">@import url(hm/profiles/standard/modules/event/event.css);</STYLE><LINK type="text/css" rel="stylesheet" href="hm/profiles/standard/modules/glossary/glossary.css">
+  <STYLE type="text/css" media="all">@import "sites/bryght.com/themes/bryght/style.css";</STYLE>
+  <SCRIPT type="text/javascript" src="sites/bryght.com/themes/bryght/sifr.js"></SCRIPT>  <SCRIPT type="text/javascript">
+   if (hasFlash) {
+     var sUA = navigator.userAgent.toLowerCase();
+     if (sUA.indexOf('safari') > -1) {
+       document.write('<style type="text/css">@import "sites/bryght.com/themes/bryght/sifr.css";</style>');
+     }
+   }
+   sIFR.replaceElement("h1.title", "sites/bryght.com/themes/bryght/sifr.swf", "#000000", null, null, null, 0, 0, 0, 0);
+   sIFR.replaceElement("h2.node-title", "sites/bryght.com/themes/bryght/sifr.swf", "#102EB2", "#102EB2", "#102EB2", null, 0, 0, 0, 0);
+   sIFR.replaceElement(".comment>h3", "sites/bryght.com/themes/bryght/sifr.swf", "#102EB2", "#102EB2", "#102EB2", null, 0, 0, 0, 0);
+      sIFR.replaceElement(".mission-bottom>h2", "sites/bryght.com/themes/bryght/sifr.swf", "#222222", null, null, null, 0, 0, 0, 0);
+      sIFR.replaceElement("#content h1", "sites/bryght.com/themes/bryght/sifr.swf", "#000000", null, null, null, 0, 0, 0, 0);
+      sIFR.replaceElement("#content h2", "sites/bryght.com/themes/bryght/sifr.swf", "#444444", null, null, null, 0, 0, 0, 0);   
+      sIFR.replaceElement("#content h3", "sites/bryght.com/themes/bryght/sifr.swf", "#666666", null, null, null, 0, 0, 0, 0);
+  </SCRIPT><STYLE type="text/css">@import "sites/bryght.com/themes/bryght/sifr.css";</STYLE></HEAD><BODY>  <DIV id="header">      <H1 id="pagetitle"><A href="" title="Index page"><IMG id="logo" src="sites/bryght.com/themes/bryght/logo.png" alt="Bryght"></A></H1>
+     </DIV>
+
+       <DIV id="navbar1">     <UL>           <LI><A href="http://support.bryght.com" description="Our dedicated support site">Support</A></LI>
+            <LI><A href="contact">Contact Us</A></LI>
+            <LI><A href="features">Features</A></LI>
+            <LI><A href="services" description="Custom Drupal development and ">Services</A></LI>
+            <LI><A href="solutions" description="Community content hosting and website publishing">Solutions</A></LI>
+            <LI><A href="" description="Bryght home page">Home</A></LI>
+           </UL>
+     <DIV class="w1"></DIV>
+    </DIV>
+   
+       <DIV id="navbar2">     <UL>           <LI><A href="search">Search</A></LI>
+            <LI><A href="articles">Articles</A></LI>
+            <LI><A href="event" description="Upcoming events">Events</A></LI>
+            <LI><A href="news">News</A></LI>
+            <LI><A href="faq">FAQ</A></LI>
+            <LI><A href="about">About</A></LI>
+           </UL>
+     <DIV class="w1"></DIV>
+    </DIV>
+   
+     <DIV id="right"><DIV class="w1">    <DIV class="block block-article" id="block-article-0">  <H2>Latest Articles</H2>
+  <DIV class="content"><DIV class="item-list"><H3></H3><UL><LI><A href="blog/roland-tanglao/baitcar-com-a-bryght-site-developed-by-vicious-bunny-creative-and-raincity-studios">Baitcar.com a Bryght site developed by Vicious Bunny Creative and Raincity Studios</A></LI><LI><A href="blog/boris-mann/paper-airplane-people-collaboration-and-usability-are-first-class-citizens" class="active">Paper Airplane: People, collaboration, and usability are first class citizens</A></LI><LI><A href="blog/roland-tanglao/bryght-event-blogging-webvisions-july-15-2005-in-portland-oregon">Bryght event blogging WebVisions July 15, 2005 in Portland, Oregon</A></LI><LI><A href="blog/boris-mann/iphoto-plug-in-for-drupal">iPhoto plug-in for Drupal</A></LI><LI><A href="blog/roland-tanglao/raincity-studios-and-goodbasic-merge-relaunch-sites-as-bryght-sites">Raincity Studios and GoodBasic merge, relaunch sites as Bryght sites</A></LI></UL></DIV><DIV class="more-link"><A href="articles" title="Read more articles.">more</A></DIV></DIV>
+</DIV>
+<DIV class="block block-event" id="block-event-1">  <H2>Upcoming events</H2>
+  <DIV class="content"><DIV class="item-list"><UL><LI><A href="events/vancouver-international-video-festival-vidfest-2005" title="Vancouver International Video Festival (VIDFEST) 2005">Vancouver International Video Festival (VIDFEST) 2005</A> (14 days)</LI><LI><A href="events/gnomedex-2005" title="Gnomedex 2005">Gnomedex 2005</A> (21 days)</LI><LI><A href="events/web-visions-2005" title="Web Visions">Web Visions</A> (43 days)</LI><LI><A href="events/oscon-2005" title="O'Reilly Open Source Conference 2005">O'Reilly Open Source Conference 2005</A> (61 days)</LI><LI><A href="events/xml-conference" title="XML Conference">XML Conference</A> (165 days)</LI></UL></DIV><DIV class="more-link"><A href="event" title="More events.">more</A></DIV></DIV>
+</DIV>
+<DIV class="block block-aggregator" id="block-aggregator-feed-4">  <H2>Bryght PubSub</H2>
+  <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://drupal.org/node/24033">drupal.org - Community plumbing - OSCON Portland August 1-5, 2005</A></LI><LI><A href="http://blog.ericrice.com/blog/_archives/2005/5/26/888818.html">Eric Rice - Podcast &amp; Videoblog Roadshow: Seattle, Vancouver BC</A></LI><LI><A href="http://thelastminute.typepad.com/blog/2005/05/my_first_podcas.html">The Last Minute - My First Podcast</A></LI></UL></DIV><DIV class="more-link"><A href="aggregator/sources/4" title="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+<DIV class="block block-aggregator" id="block-aggregator-feed-6">  <H2>Bryght Support</H2>
+  <DIV class="content"><DIV class="item-list"><UL><LI><A href="http://support.bryght.com/node/215">May 3: Server Issues (resolved)</A></LI><LI><A href="http://support.bryght.com/articles/personal-urban-vancouver-hyper-local-citizen-journalism-site">Create your own personal Urban Vancouver hyper-local citizen journalism site</A></LI><LI><A href="http://support.bryght.com/node/211">Image Uploading Fixed, Random Image Block Added</A></LI><LI><A href="http://support.bryght.com/node/208">April 22: DNS issues (resolved)</A></LI><LI><A href="http://support.bryght.com/articles/converting-css-html-design-phptemplate-introduction">Converting a CSS/HTML design to PHPTemplate - An Introduction</A></LI></UL></DIV><DIV class="more-link"><A href="aggregator/sources/6" title="View this feed's recent news.">more</A></DIV></DIV>
+</DIV>
+<DIV class="block block-user" id="block-user-0">  <H2>User login</H2>
+  <DIV class="content"><FORM action="user/login" method="post"><DIV class="user-login-block">
+<INPUT type="hidden" name="edit[destination]" value="node/289">
+<DIV class="form-item"> <LABEL for="edit-name">Username:</LABEL><BR>
+ <INPUT type="text" maxlength="64" class="form-text" name="edit[name]" id="edit-name" size="15" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-pass">Password:</LABEL><BR>
+ <INPUT type="password" class="form-password" maxlength="64" name="edit[pass]" id="edit-pass" size="15" value="">
+</DIV>
+<INPUT type="submit" class="form-submit" name="op" value="Log in">
+</DIV>
+
+</FORM>
+<DIV class="item-list"><UL><LI><A href="user/register" title="Create a new user account.">Create new account</A></LI><LI><A href="user/password" title="Request new password via e-mail.">Request new password</A></LI></UL></DIV></DIV>
+</DIV>
+<DIV class="block block-user" id="block-user-1">  <H2>Navigation</H2>
+  <DIV class="content"><DIV class="menu"><UL><LI class="leaf"><A href="event/2005/06/01">calendar</A></LI><LI class="leaf"><A href="signup">sign up</A></LI><LI class="leaf"><A href="tracker">recent posts</A></LI><LI class="collapsed"><A href="aggregator">news aggregator</A></LI><LI class="leaf"><A href="syndication">syndication</A></LI></UL></DIV></DIV>
+</DIV>
+<DIV class="block block-user" id="block-user-2">  <H2>Who's new</H2>
+  <DIV class="content"><DIV class="item-list"><UL><LI><A href="user/121" title="View user profile.">kobus</A></LI><LI><A href="user/120" title="View user profile.">fabteacher</A></LI><LI><A href="user/119" title="View user profile.">mywelt@mywelt.net</A></LI><LI><A href="user/118" title="View user profile.">Starjive</A></LI><LI><A href="user/117" title="View user profile.">Khansen</A></LI></UL></DIV></DIV>
+</DIV>
+<DIV class="block block-user" id="block-user-3">  <H2>Who's online</H2>
+  <DIV class="content">There are currently 0 users and 29 guests online.</DIV>
+</DIV>
+<DIV class="block block-syndication" id="block-syndication-0">  <H2>Syndicate</H2>
+  <DIV class="content"><DIV class="xml-icon"><A href="rss.xml"><IMG src="misc/xml.png" width="36" height="14" alt="XML feed" title="XML feed"></A></DIV><DIV class="more-link"><A href="syndication" title="Review all XML feeds exported by Bryght">more</A></DIV>
+</DIV>
+</DIV>
+    <SPAN class="clear"></SPAN>
+   </DIV></DIV>
+    
+   <DIV id="content" class="content-right">    <DIV id="contentwrap">     <DIV class="breadcrumb"><A href="">Home</A> Â» <A href="news">blogs</A> Â» <A href="blog/boris-mann">Boris Mann's blog</A></DIV>
+     
+          <H1 class="title sIFR-replaced"><EMBED src="sites/bryght.com/themes/bryght/sifr.swf" flashvars="txt=Paper Airplane: People, collaboration, and usability are first class citizens&w=970&h=28&textcolor=#000000" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="opaque" bgcolor="null" class="sIFR-flash" width="970" height="28" style="width: 100%; height: 28px; "></EMBED><SPAN class="sIFR-alternate">Paper Airplane: People, collaboration, and usability are first class citizens</SPAN></H1>
+                         <DIV id="innercontent">      <DIV class="node">    
+ <DIV class="info-page"><A href="user/2" title="View user profile.">Boris Mann</A> - June 1, 2005 - 12:03am</DIV> <DIV class="content">   <P>OK, <A href="http://codinginparadise.org/weblog/">Brad</A>, you got me.</P>
+
+<IMG src="conf/bryght-com.bryght.net/files/logo.gif" align="left" style="padding: 10px 10px 10px 0" alt="Paper Airplane Logo">
+
+<P>Brad Neuberg left a <A href="http://www.bryght.com/blog/boris-mann/bryght-wants-to-make-it-easy-to-publish-generally#comment-1513">drive by comment</A> on a slightly older post of mine, with a little blurb about <A href="http://www.codinginparadise.org/paperairplane">Paper Airplane</A>. I like the single-sentence abstract, followed by three questions that start the introduction:</P>
+
+<BLOCKQUOTE><SPAN><P>This paper describes a radical new vision of the World Wide Web and browsers that deeply embed collaboration and editing.</P>
+
+<P>What if community and editing were a central and transparent part of the web and browsers?</P>
+<P>What if the web was extremely integrated for usability, with instant messaging, site creation, the web server, and more all integrated into one whole?</P>
+<P>What would this web look like if despite being integrated it was massively decentralized on a peer-to-peer network, able to exist and run without businesses or governments?</P>
+</SPAN></BLOCKQUOTE>
+
+<P>The whole paper, and the capabilities it describes, is <A href="http://www.codinginparadise.org/paperairplane">worth a read</A>.</P> 
+
+<P>I've been interested lately in <A href="http://www.tiddlywiki.com">TiddlyWiki</A> (I wrote about it <A href="http://www.bmannconsulting.com/node/1480">over on my B. Mann Consulting blog</A>), which is a single HTML file, JavaScript-powered wiki. I think it's a step along the path towards what Brad describes.</P>
+
+<P>What this class of two-way web applications offer is a lack of context switching. The barrier between reading and editing content is very minimal. And the "content" itself <EM>is</EM> the application.</P>
+
+<P>Apparently, Web 2.0 will be self-hosting. <A href="http://www.hopstudios.com/nep/column/">Travis Smith</A> is a little bit afraid: his comment on learning that Tiddly does its thing masquerading as an HTML file was something along the lines of: "I've been working with HTML for years, and it's like waking up one day and being told that cars now drive themselves". I, for one, welcome our new P2P-enabled, semantically correct overlords.</P>
+
+<P>But of course, the notion of a page is eroding -- something that is familiar to me from Drupal. All content (the base type is called a "node") in the system can be dynamically remixed, presented, and sliced and diced many different ways by pivoting around different attributes and metadata of the content itself. So what replaces the page? Why, unique URLs, which start looking a lot like built-in REST interfaces for displaying the particular slice of data that you want to view.</P> </DIV>
+     <SPAN class="readmore-fill"></SPAN>  <DIV class="terms">Categories: <A href="taxonomy/term/18">Web 2.0</A></DIV>
+  <DIV class="node-links"><A href="blog/boris-mann" title="Read Boris Mann's latest blog entries.">Boris Mann's blog</A></DIV>
+  <DIV class="clear"></DIV>
+ </DIV>
+<A id="comment"></A>
+<FORM method="post" action="comment"><DIV><INPUT type="hidden" name="edit[nid]" value="289">
+</DIV></FORM><DIV class="box">
+  <H2 class="sIFR-replaced"><EMBED src="sites/bryght.com/themes/bryght/sifr.swf" flashvars="txt=Post new comment&w=970&h=26&textcolor=#444444" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="opaque" bgcolor="null" class="sIFR-flash" width="970" height="26" style="width: 100%; height: 26px; "></EMBED><SPAN class="sIFR-alternate">Post new comment</SPAN></H2>
+  <DIV class="content"><FORM action="comment/reply/289" method="post"><A id="comment-form"></A>
+<DIV class="form-item"> <LABEL for="edit-name">Your name:</LABEL><SPAN class="marker">*</SPAN><BR>
+ <INPUT type="text" maxlength="40" class="form-text required" name="edit[name]" id="edit-name" size="20" value="Anonymous">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-mail">E-mail:</LABEL><SPAN class="marker">*</SPAN><BR>
+ <INPUT type="text" maxlength="40" class="form-text required" name="edit[mail]" id="edit-mail" size="20" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-homepage">Homepage:</LABEL><BR>
+ <INPUT type="text" maxlength="40" class="form-text" name="edit[homepage]" id="edit-homepage" size="20" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-subject">Subject:</LABEL><BR>
+ <INPUT type="text" maxlength="64" class="form-text" name="edit[subject]" id="edit-subject" size="50" value="">
+</DIV>
+<DIV class="form-item"> <LABEL for="edit-comment">Comment:</LABEL><SPAN class="marker">*</SPAN><BR>
+ <TEXTAREA wrap="virtual" cols="70" rows="10" name="edit[comment]" id="edit-comment" class="textarea required"></TEXTAREA></DIV>
+<INPUT type="hidden" name="edit[format]" value="1">
+<DIV class="form-item"> <LABEL>Formatting guidelines:</LABEL><BR>
+ <UL class="tips"><LI id="filter/2">Lines and paragraphs break automatically.</LI></UL>
+ <DIV class="description"><A href="filter/tips">More information about formatting options</A></DIV>
+</DIV>
+<INPUT type="hidden" name="edit[cid]" value="">
+<INPUT type="hidden" name="edit[pid]" value="">
+<INPUT type="hidden" name="edit[nid]" value="289">
+<INPUT type="submit" class="form-submit" name="op" value="Preview comment">
+<INPUT type="submit" class="form-submit" name="op" value="Post comment">
+
+</FORM>
+</DIV>
+</DIV>
+     </DIV>
+    </DIV>
+   <SPAN class="clear"></SPAN>
+   </DIV>
+   <SPAN class="clear"></SPAN>
+ 
+</BODY></HTML>_phttp://www.bryght.com/blog/boris-mann/paper-airplane-people-collaboration-and-usability-are-first-class-citizensYtext/html    1 7 > P _ u´ÿ9~9½9Ø9ßTkT«TµT¼VLVqVx__P_Z_c__‡Ì?                            I

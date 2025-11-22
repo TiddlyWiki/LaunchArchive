@@ -1,0 +1,387 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOÚ	body {
+		
+		background:#660033;		
+		}
+	A 			{ color: #CC3300; text-decoration: none;} 
+	A:link		{ color: #CC3300; text-decoration: none; } 
+	A:visited	{ color: #CC3300; text-decoration: none; } 
+	A:active	{ color: #CC6600;  } 
+	A:hover		{ color: #CC6600;  }
+
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:verdana, arial, sans-serif;
+		color:#CC9933;
+		font-size:x-large;
+		font-weight:bold;
+  		background:#FFF;
+  		padding-left:5px; 					
+		}
+		
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:verdana, arial, sans-serif;
+		font-size: x-large;
+		color: #CC9933;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;	
+  		text-transform:none;	
+		letter-spacing: none; 		
+		}	
+				
+	#content {
+		float:center;
+		width:90%;
+		background:#FFF;
+		margin-right:5px;
+		margin-bottom:5px;
+		}
+
+	#links {
+		background:#FFF;
+		color:#CCC;
+		margin-top:35px;				
+		}
+		
+	.blog {
+  		padding-left:5px;
+  		padding-top:5px;
+  		padding-right:5px;					
+		}	
+	
+	.blogbody {
+		font-family:verdana, arial, sans-serif;
+		color:#0000000;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;		
+  		border-left:1px dotted #663333;			
+  		border-right:1px dotted #663333;
+  		border-bottom:1px dotted #663333;	  			  		
+  		padding:10px;
+		}
+
+	.blogbody a,
+	.blogbody a:link,
+	.blogbody a:visited,
+	.blogbody a:active,
+	.blogbody a:hover {
+		font-weight: normal;
+		text-decoration: underline;
+	}
+	
+	.title	{ 
+		font-family: verdana, arial; 
+		font-size: x-small; 
+		color:#CC3300;
+	                font-weight:bold;	
+		}			
+		
+	#menu {
+  		margin-bottom:10px;
+		background:#FFF;
+		font-size:small;
+		font-weight:bold;  							
+		}	
+		
+	.date	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: x-small; 
+		color: #000000; 
+		font-weight:bold;
+		text-transform:uppercase;
+		margin-top:10px;		
+  		border-bottom:1px dotted #666;	
+		}			
+		
+	.posted	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: x-small; 
+		color: #000000; 
+		}
+		
+		
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		padding:5px;				
+		}
+	
+	.calendarhead {	
+		font-family:verdana, arial, sans-serif;
+		color:#CC9933;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;
+  		line-height:140%;				
+		}	
+	
+	.side {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;				
+		}	
+		
+	.sidetitle {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:10px;
+  		border-bottom:1px dotted #666;
+  		text-transform:uppercase;
+		letter-spacing: .2em;  					
+		}		
+	
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:xx-small;
+		font-weight:bold;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:10px;
+  		text-align:center;
+  		background:#FFF;  		
+ 		}	
+		
+	.powered {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:xx-small;
+		font-weight:bold;
+		border-top:1px dotted #666;
+		border-bottom:1px dotted #666;		
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing: .2em 
+		background:#FFF; 					
+		}	
+		
+	
+	.comments-body {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding-bottom:10px;			
+		}		
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;	
+    	margin-top:0px;		
+		}	
+		
+	.comments-head	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: small; 
+		color: #999; 
+		font-weight:bold;
+		margin-top:10px;
+		text-transform:uppercase;
+		border-bottom:1px dotted #666;		
+		}		
+
+ 	.trackback-body {
+		font-family:verdana, arial, sans-serif;
+		color:#333;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;	
+  		padding-top:15px;				
+		}		
+
+	.trackback-url {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;	
+  		padding:5px;
+  		border:1px dashed #666; 				
+		}
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;
+  		margin-bottom:20px;
+		}	
+
+	#banner-commentspop {
+		font-family:verdana, arial, sans-serif;
+		color:#CC9933;
+		font-size:large;
+		font-weight:bold;
+  		background:#FFF;
+  		padding-left:15px; 
+		}
+
+
+_1http://www.tuginternet.com/jeremy/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>The Eager Brain: Stross on Singularity</TITLE>
+
+<LINK rel="stylesheet" href="http://www.tuginternet.com/jeremy/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.tuginternet.com/jeremy/index.rdf">
+
+<LINK rel="start" href="http://www.tuginternet.com/jeremy/" title="Home"><LINK rel="prev" href="http://www.tuginternet.com/jeremy/archives/002592.html" title="Real Life Zombie Attack">
+
+<LINK rel="next" href="http://www.tuginternet.com/jeremy/archives/002595.html" title="Brain Exercises">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'www.tuginternet.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://www.tuginternet.com/jeremy/" accesskey="1">The Eager Brain</A></H1>
+<SPAN class="description">Some guy, trying to say smart stuff.</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://www.tuginternet.com/jeremy/archives/002592.html">Â« Real Life Zombie Attack</A> |
+
+<A href="http://www.tuginternet.com/jeremy/">Main</A>
+| <A href="http://www.tuginternet.com/jeremy/archives/002595.html">Brain Exercises Â»</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 24, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">Stross on Singularity</H3>
+
+<P>Charlie Stross has written up a tongue-in-cheek <A href="http://www.antipope.org/charlie/toughguide.html">hypertext guide</A> to the Singularity with Tiddlywiki.  Among some of the humorous definitions, we find:<BR>
+</P><BLOCKQUOTE>SingularitySf is SF about the SIngularity! It is written by real ScienceFictionWriters.<P></P>
+
+<P>This is really cool right now on account of SF not having much to say about global warming, space travel, time travel, contact with aliens, and all that 20th century shit. If you're not writing SingularitySf you're either unfashionable or worse, you might be one of them FantasyWriters.</P></BLOCKQUOTE><P></P>
+
+<P>And also:<BR>
+</P><BLOCKQUOTE>This explanation is pants. The real reason we all write SingularitySf is because it gives us an excuse to play with PixieDust without getting sand kicked in our faces for being FantasyWriters. All we have to do is rename it NanoTechnology and throw in some references to UpLoading and medium-sized French musical instruments -- Viola!</BLOCKQUOTE><P></P>
+
+<P>I have to admit, this is the last person I would have expected criticism of the subgenre to come from.  But I think he's spot-on in his criticism.  It's like that Clarke quote: "Any sufficiently advanced technology is indistinguishable from magic" used as a rallying cry/manifesto for the subgenre. </P>
+
+<P>The dividing line between fantasy and science fiction when it comes to singularity or far-future SF is in fantasy, we have a magical world that is not our own in which other people live in and have wonderful adventures doing impossible things, and in singularity science fiction, we have a magical world  descended from our own in which people <I>who could be us one day, if we believe really hard!</I> doing impossible things.   </P>
+
+<P>Fantasy folks are content to imagine a world completely divorced from reality, and SF folks need a tenuous connection to help them pretend they're super-hot, immortal gods travelling to exotic places, meeting exotic creatures, and waging vast wars upon them.</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by JeremyT at May 24, 2005 12:53 PM
+| <A href="http://tuginternet.untimelydeath.com/jeremy/mt/mt-tb.cgi?__mode=view&entry_id=2594" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+
+<BR></SPAN>
+
+</DIV>
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_6http://www.tuginternet.com/jeremy/archives/002594.htmlYtext/html    1 3 : L [ qOƒŒ•³¹+Ó,                           ,

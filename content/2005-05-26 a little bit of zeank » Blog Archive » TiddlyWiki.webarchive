@@ -1,0 +1,727 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO7G/*
+Theme Name: equiX v1.1
+Theme URI: http://marcoss.com.ar/dsgn/equix/
+Description:  <a href="http://marcoss.com.ar/dsgn/equix/" title="|X| - One Theme to Rule Them All">equiX</a> v1.1 is a theme made for WordPress 1.5+ | dsgn by <a href="http://marcoss.com.ar/" title="Marcos Sader">m^r(oS</a>.
+Author: Marcos Sader
+Author URI: http://marcoss.com.ar/
+Version: 
+-- About --
+	equiX is a theme designed to fully intarate with WordPress 1.5+, 
+	all the files you need to make your blog run out-of-the box are 
+	included and styled.	
+-- Credits ---
+	Design: The equix template ia desing by Marcos Sader (http://marcoss.com.ar/).
+	WordPress: For this amazing state-of-the-art semantic personal publishing platform. 
+	and of course Matt, the wordpress forums and codex team for all the help and 
+	information provided during the development.
+-- License --
+	Everything included in the package, the CSS, XHTML and design is released under
+	the GNU GPL License v.2, June 1991:
+		http://www.fsf.org/licensing/licenses/gpl.html
+		http://www.gnu.org/licenses/gpl.html
+
+-- Made in Cï¿½rdoba, Argentina | Marcos Sader - 2005 --
+*/
+/*---------------------------- Main -------------------------------*/
+html, body {
+	margin: 20px auto;
+	padding: 0px;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	font-size: 8px;
+	text-align: center;
+	background-color: #94A6B8;
+/*	cursor: crosshair; */
+	color: #333333;
+	}
+/*---------------------------- Links -------------------------------*/
+a {  
+	color: #336699;
+	text-decoration: none;
+	}	
+a:visited {
+	color: #94A6B8;
+	text-decoration: none;
+	}
+a:hover {
+	color: #000000;
+	text-decoration: none;
+	}		
+a img {
+	border: none;
+	}		
+/*---------------------------- Images Structure -------------------------------*/
+
+img.c {						/*Now if you add the class "c" will center the img, "r" will float it to the right and yeah you guessed!... "l" will float it left.*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}	
+img.r {
+	float: right;
+	}
+img.l {
+	float: left;
+	}
+.entry img {					/*A nice hover efect when your post-images are linking somewhere (does not work in IE)*/
+	border: 1px solid #FFFFFF;
+	padding: 6px;
+	max-width: 98%;
+	border: none;
+	}
+.entry a img {	
+	border: 1px solid #FFFFFF;
+	padding: 6px;
+	max-width: 98%;
+	}
+.entry a img:hover {	/*-- does not work in IE --*/
+	border: 1px inset #000000;
+	background-color: #EFEDED;
+	}	
+/*---------------------------- General Html -------------------------------*/
+hr {
+	display: none;
+	}
+h2, h3 {	
+	font-weight: bold;
+	text-align: left;
+	margin: 0px;
+	}
+	.ncol h2{	
+		border-bottom: 1px solid #CCCCCC;
+		font-size: 14px;
+		}
+	.archived h2{	
+		font-size: 11px;
+		}
+	.lnks h2{	
+		border-bottom: 1px solid #CCCCCC;
+		font-size: 12px;
+		width: 80%;
+		}			
+	.narchives h3{	
+		margin: 25px 0px 10px 0px;
+		}
+	.wcol h2{	
+		font-size: 20px;
+		margin-bottom: 20px;
+		}	
+	.sidebar h2{	
+		border-bottom: 1px solid #CCCCCC;
+		text-align: right;
+		font-size: 10px;
+		}	
+h2, h3, h2 a, h2 a:visited{
+	color: #000000;
+	}
+h2 a:hover {
+	color: #336699;
+	}		
+h3{	
+	font-size: 13px;
+	}	
+blockquote {
+	background-color: #F7F7F7;
+	border-left : 5px solid #94A6BD;
+	padding: 10px 20px;
+	}
+blockquote:hover { /*-- does not work in IE --*/
+	background: #FFFFFF;
+	}
+code, pre, kbd {	
+	font-family: 'Courier New', Courier, mono, Fixed, sans-serif;
+	font-size: 1.1em;
+	display: block;
+	}	
+small {
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+acronym, abbr {
+	letter-spacing: .07em;
+	border-bottom: 1px dashed #993333;	
+	cursor: help;
+	}	
+strike, del {
+	text-decoration: line-through;
+}	
+/*---------------------------- Page Navigation -------------------------------*/	
+.navigation {
+	margin: 40px 30px 20px 30px;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 12px;
+	}
+.ncol .navigation {
+	margin: 15px 0px;
+	font-size: 11px;
+	}	
+.ar {						/*This way you can use a simple class="ar"/"al"/"ac" to get an objet floated or centered.*/
+	float: right;
+	}
+.al {
+	float: left
+	}
+.ac {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	}
+/*---------------------------- Content -------------------------------*/
+#content{
+	margin: 0px auto;
+	width: 780px;
+	font-size: 11px;
+	text-align: left;
+	}
+/*----------------------------Top Bar -------------------------------*/
+#topbar{
+	margin: 1px 0px;
+	padding: 0px;
+	width: 778px;
+	height: 25px;
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	line-height: 17px;
+	font-size: 10px;
+	}
+.navbar{	
+	margin: 0px auto;
+	padding: 3px 1px 2px 1px;
+	}
+.navbar ul{
+	display: inline;
+	list-style-type: none;
+	}
+.navbar li{
+	display: inline;
+	list-style-type: none;
+	}
+.navbar a, .navbar a:visited  {
+	cursor: pointer;
+	float: left;
+	font-weight: bold;
+	margin: 0px 10px 3px 10px;
+	color: #000000;
+	}		
+.navbar a:hover{
+	color: #336699;
+	}
+/*---------------------------- Top Search Form -------------------------------*/
+.topsform {
+	margin: -1px 2px 3px 0px;
+	padding: 0px;
+	width: 220px;
+	height: 16px;	
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	-moz-border-radius: 4px;
+	float: right;
+	}	
+.t-s{
+	margin: 0px auto;
+	padding: 0px;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	color: #666666;
+	font-size: 10px;
+	width: 67%;
+	height: 100%;
+	border: none;
+	background-color: #FFF;	
+	}	
+.topsformsubmit{
+	margin: 0px auto;
+	padding: 0px;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	color: #000000;
+	font-size: 10px;
+	font-weight: bold;
+	width: 30%;
+	height: 100%;
+	background-color: #FFF;
+	border: none;
+	border-left:1px solid #CCCCCC;
+	-moz-border-radius: 4px;
+	cursor: pointer;
+	}
+.topsformsubmit:hover{ /*-- does not work in IE --*/
+	background-color: #EFEDED;
+	color: #336699;
+	}	
+/*---------------------------- Header -------------------------------*/
+	/*--Just drop a 778px*98px image named 'header.png' in the theme folder an it will be displayed in your blog header---*/
+.header {
+	margin: 1px 0px;
+	padding: 0px;
+	display: block;
+	width: 778px;
+	height:98px;
+	background-color: #314D73;
+	background: url('header.png') no-repeat bottom center;
+	border: 1px solid #CCCCCC;
+	cursor: pointer;
+	}		
+/*---------------------------- Page -------------------------------*/
+.page {
+	width: 778px;
+	margin: 1px 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	text-align: left;
+	float: left;
+	}
+/*---------------------------- Narrow Column -------------------------------*/
+.ncol {
+	padding: 30px 0px 40px 23px;
+	width: 545px;
+	background:#FFF;
+	float:left;
+	}	
+/*---------------------------- Wide Column -------------------------------*/
+.wcol {
+	margin: 0px auto;
+	width: 80%;	
+	padding: 20px 15px 10px 15px;		
+	line-height: 1.5em;
+	}
+/*---------------------------- Post Structure -------------------------------*/
+.post {
+	margin: 0px 10px 30px 0px;
+	text-align: justify;	
+	}
+.archived {
+	padding: 20px 0px 0px 15px;
+	}	
+.postmetadata {
+	width: 85%;
+	margin: 25px 0px 0px 0px;
+	padding: 3px;
+	border-top: 1px solid #CCCCCC;
+	color: #999999;
+	text-align: left;
+	line-height: 17px;
+	font-size: 10px;
+	}
+	.wcol .postmetadata {
+	width: 100%;
+	margin: 25px 0px 30px 0px;
+	}
+.entry {
+	font-size: 1em;
+	line-height: 1.4em;
+	}
+.entry a {  
+	font-weight: bold;
+	}
+.entry ol li {
+	list-style: decimal outside;
+	}
+.entry ul li {	
+	list-style-type: square;
+	}
+.entry form { 
+	text-align: left;
+	}
+.entry input { /* For password-protected posts */
+	margin: 2px auto;
+	font-size: 9px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	}	
+.entry input[value="Submit"] {
+	font-size: 9px;
+	cursor: pointer;
+	}
+.entry input[value="Submit"]:hover{ /*-- does not work in IE --*/
+	background-color: #EFEDED;
+	}
+/*---------------------------- Sidebar -------------------------------*/
+.sidebar {
+	width: 210px;
+	padding: 35px 0px 40px 0px;
+	float:right;
+	font-size: 10px;
+	}
+.sidebar h2.lnkname	 {
+	margin: 0px 0px -5px 10px;
+	text-align: left;
+	font-size: 10px;
+	border: none;
+	}	
+.sidebar ul {
+	margin: 0px 15px 30px 20px;
+	padding: 0px;
+	list-style-type: none;
+	list-style-image: none;
+	}
+.sidebarul li {
+	list-style-type: none;
+	list-style-image: none;	
+	}
+.sidebar  ul li ul {	
+	margin: 10px 0px 20px 30px;
+	list-style-type: none;
+	list-style-image: none;
+	}	
+.sidebar  ul li ul li {	
+	color: #666666;
+	list-style-type: square;
+	list-style-image: none;
+	}
+.sidebar  ul li ul li a{	
+	font-weight: bold;
+	}	
+/*---------------------------- Search box for error-404 pages -------------------------------*/
+.searchbox{
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 0px;
+	display: block;
+	width: 500px;
+	height: 50px;
+	background: #EFEDED;
+	border:1px solid #CCCCCC;
+	}
+.searchbox #searchform {
+	background: #FFFFFF;
+	margin: 14px auto;
+	width: 400px;
+	padding: 0px;
+	border: 1px solid #CCCCCC;
+	}
+.searchbox #searchform #s{
+	margin: 0px auto;
+	padding: 1px;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	color: #666666;
+	font-size: 10px;
+	width: 298px;
+	height: 100%;
+	border: none;
+	background-color: #FFFFFF;	
+	}
+.searchbox #searchform #searchsubmit{
+	border: none;
+	margin: 0px auto;
+	padding: 2px 0px;
+	font-family: Verdana, Geneva, Arial, sans-serif;
+	color: #000000;
+	font-size: 10px;
+	font-weight: bold;
+	width: 96px;
+	height: 100%;
+	background-color: #FFFFFF;
+	border-left:1px solid #CCCCCC;
+	cursor: pointer;
+}
+.searchbox #searchform #searchsubmit:hover{ /*-- does not work in IE --*/
+	background-color: #EFEDED;
+	color: #336699;
+	}
+/*---------------------------- Comments -------------------------------*/
+.comarea{
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	line-height: 17px;
+	}
+.comol{
+	margin: 20px 0px 40px 0px;
+	text-align: left;
+	font-weight: bold;	
+	list-style-type: upper-roman;
+	}
+.comli{
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	margin: 25px 0px 20px 0px;
+	padding: 4px;
+	min-height: 90px; /*-- does not work in IE --*/
+	width: 95%;
+}
+.comauth{
+	border-bottom: 1px solid #CCCCCC;	
+	width: 70%;
+	font-size: 11px;
+	font-weight: bold;	
+	padding: 0px 0px 2px 2px;
+}
+.mod {
+	color: #990033;
+	}
+.comli .cmeta {
+	margin: 1px 0px 5px 2px;
+	border: none;
+	font-size: 10px;
+	font-weight: normal;
+}	
+.comtxt{
+	margin: 0px 0px 0px 5px;
+	font-size: 9px;
+	font-weight: normal;	
+	text-align: left;
+}
+.preview {
+	text-align: left;
+	margin-top: 20px;
+	list-style: none;
+	width: 100%;
+	}
+.preview ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+.preview ul li {
+	list-style: none;
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	padding: 4px;
+	min-height: 90px; /*-- does not work in IE --*/
+	}
+#TextDisplay { /*Live Preview of Comments */
+	margin: 5px 0px 0px 5px;
+	font-size: 9px;
+	font-weight: normal;	
+	text-align: left;
+	}	
+/*---------------------------- Comment Form -------------------------------*/
+#commentform {
+	margin: 15px 0px 30px 0px;
+	}
+#commentform input {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	border: 1px solid #CCCCCC;
+	border-right: 3px solid #CCCCCC;
+}
+#commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	width: 594px;
+	padding: 2px;
+	border: 1px solid #CCCCCC;
+	border-right: 3px solid #CCCCCC;
+}
+#commentform #submit {
+	width: 600px;
+	padding: 2px;
+	background: #FFFFFF;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	border-right: 3px solid #CCCCCC;
+	font-weight: bold;
+	cursor: pointer;
+}
+#commentform #submit:hover { /*-- does not work in IE --*/
+	background-color: #EFEDED;
+}
+/*---------------------------- Footer -------------------------------*/
+.footer {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	line-height: 17px;
+	font-size: 0.8em;
+	margin: 1px 0px;
+	padding: 0px;
+	width: 778px;
+	height: 55px;
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	clear:both;
+	}	
+.powered {
+	margin: 12px auto;
+	margin-right: 100px;
+	padding-left: 30px;
+	text-align: center;
+	}
+.powered a {	
+	font-weight: bold;
+	}
+/*---------------------------- Go-up -------------------------------*/
+	/*------An useless bottom line that will let you go up by clicking on it :p-----*/
+.go-up {	
+	margin: 1px auto;
+	padding: 0px;
+	width: 778px;
+	height: 15px;
+	background-color: #FFFFFF;
+	border:1px solid #CCCCCC;
+	font-size: 10px;
+	cursor: pointer;
+	}
+.ttrack a, .ttrack a:visited, .ttrack a:hover{
+	color: #FFFFFF;
+	font-size: 0px;
+	}		
+/*---------------------------- narchives Template -------------------------------*/
+.narchives {
+	margin-top: 20px;
+	}
+.narchives a {
+	font-weight: bold;
+	}	
+.narchives input {
+	cursor: pointer;
+	}	
+/*---------------------------- Links Template -------------------------------*/	
+.lnks {
+	font-size: 10px;
+	padding: 8px 0px 0px 30px;
+	}
+.lnks a {
+	font-weight: bold;
+	}	
+.lnks ul li {	
+	margin: 0px 0px 0px 4px;
+	color: #666666;
+	list-style-type: square;
+	list-style-image: none;
+	}
+.lnks li {
+	list-style-type: none;
+	list-style-image: none;	
+	}
+/*---------------------------- mozilla-styles -------------------------------*/
+	/*--	Just a nice touch for mozilla user, will make text selection with a fancy background
+		Taken from: http://a.proletarium.org/post/11/
+		If you want to use it just uncomment it, is deactive coz won't validate.. :(
+	--*/
+		/*--
+			*::-moz-selection {
+				background-color: #f09;
+				color: #fff;
+				} 
+		--*/
+/*-------------------------------End of |X| - One Theme to Rule Them All-------------------------------------------------------*/
+/*-- zeank's own stuff --*/
+.important_note {
+  background-color: #F7F7F7;
+  padding: 10px 20px;
+  margin-left:40px;
+  margin-right:40px;
+  border-left: 5px solid darkred;
+}_?http://zeank.in-berlin.de/wp-content/themes/equix_v11/style.cssXtext/cssÓOí‰PNG
+
+   IHDR   }   2   FP$®   gAMA  ±üa   sRGB ®Îé    cHRM  z%  €ƒ  ùÿ  €é  u0  ê`  :˜  o’_ÅF   PLTEÒMåååŞŞŞÅÅÅggg³´ÒÀÀÀÌÌÌæX	şÔM‡Âáááÿú¥ÙÒÒÒ†¼îcú³sD‡¨¨¨ÿÓ‘Ï²—ÿÿÓ•Ìùùù‰Ãh‘èw	¢ÔÆÜ¡ûè÷÷÷ 6yØØØÕÕÕ =‚ÿÚû{*ÖÖåş×&êêêºéöööïïïóóóùœWŒk«°ş”4Œ¸
+m¬V&'js¬ğğğ’’’òƒ<ıè7´´´ÿã¤Nf¦Ì•jqªåÈ¦SĞr±Ï¼©òòòú©g¸k7´åb¢—kR %iÉÉÉôl#K«KW•ìììšÍ™™™±]Ïf"ÿùeü‡,Æ6	Î‘5ş´5şÉ+QcpøŒHÿ©YÚÌÁ¤Ì®ÿö'}ºèèèûô8…²¬^dœÔ¤uşÁ6ÿŞ3ttu[œ)Gg›ÑğhÿéX‚‚‚¼ìQ“»“rÿ›GıÅşã&°á Ò,s^¢æ”Fü×jöëàK<w„ O¼¼¼ı¨*ıèGIvÁÁÖ •É•Ì&1bs±ÿúZ§ü˜%‚¾MMNmªZZZ [‚ài,ÛÛÛ'W+;õv1
+šÌz·…Y= dªc¤V˜ààìÅ—˜À05MÜÃ6åŠ8Übÿîxì”)¢¤È©Û bî|÷€¦×ü 7ÿÿw®àùùû3k_—ş¦K*Y x´é^îêçÿÿªg¦ıııüüüA@@úúüûûû´;w<&ÄZ(ñññhfr÷÷ú"¿îu´ÊÁ½O_ Ø‰SîÀ3×ÔÒ¿¡F@aİ›dŒrw$i·è¸çäääõõõ	i¨k¥òp(fWfàw5ê©tÿºuû¬„”* }¸ïìêwµ 8ƒÙÑÈ h®lŸÈô±|wŠ …V€{±¥N€Šè¢ ùÀ%ÿì¯ÿı¿üüı‚«¹T‰{ãââŸl;Fò¾]åª\YcVü»O¸ˆÿûJãÃuşşş333ÿÿÿ'dÚ   	pHYs    Òİ~ü  	JIDATXÃí˜XS×ÇrI$ÌDÇE˜>cªFHÖ0$
+²	jı
+õƒ 6àX—‚ÊDœ‰×âVŠm×ŠˆØêêÍ5Ó8¿¶j«Äv«Ûª³qİœvv£ºµÛ=Ù{nn¨E}´u{ö<şŸî½çÜ÷ı½ÿsNÎÍƒÀ÷¿”à1ı1ıÿ¾/9xÇˆôôïsJO±#8ùÿ%úË;ÒŞZ–k–Fy###½QQöfí²·N¥ïxùQÓ'o/¸Ü¢=`¶Gy]QQÉÉ%m^¶ñÔöäGHß<'N–·^›{à’ÙnŠŠ¬ãø —šÍ-·Òƒ÷=ú¾q¶ò¼¼C´¹—šíŞŠ°½Æs•ïºİ| ±ñ@c¹ìTğ# ÿ5¸ FVÕÒR^¾í¸?a4ZYYiãèv3Ğ¯¼ô·NıøÛ¦'Ï©IÙlŸ·ÌŸ0WœÇğãÇïåV}ØÌ™³‡MxáÌÆ––„ôäoîêYlÛ/×$$È8<6¯Õæ6Û+Î1¼²r/X·Û'6{æ÷V¦¼úÎ'Çæ_áú†ô§?ü™õ/È¯‰‹ãğØü2Îü‰ŠsC9º1¬››¯\9ôşÇ/ünÈ¬Ye¿œ<î]	ûè,ù›ö“>—Á—ókjjâæø
+nŞyëÍ—hµ‡òÊ[d›ş2kÖ’²y»¯Îğùè‡£Ó¾A»Ú±—ñ^>GçÍã±çÖ½÷ü¹¡XÆH;X?‘«]éU²Ú#+¦–-I™:e÷Ü|,Ë>8õ}ô|{ûénë±sgşx›mÿÇfO¸ õ7ã´7ª¹ùR®öÂ! WÙ:7ı°xEÊ,ŒOásÒá½+:º}G8';›ÇÇ^&KØøÇAYY÷oÓ†±ÎŸ7Vpp çí?C<óÏ­c“Š“†/_[v}ÊîE£}$ûàtõÙöèèè×N`8Æóæo]{úÆ¬Ï7•/‹ZºÔ¸ÔhÜ¶4,Òœ‹­ç}ÜkSB¦ş¶8)©øbÿ×ç­¾h´“TıÈåc€Îú~µklvv İ×œt#+kàÖZYÕûmK9y½mvìü)˜õ–ª¿=óƒåı×–­+ŞõÅÛŸ.ßx_×Õ?øh¶ïtÚ5ºÃGÁøì÷Ö¬Yæk-¸øê€£µ«d·"Ú0>,Rê¼„okŒih,¯ª²Éâæûwÿ=!ë’¦öÿnÖ›Å‹f¨?	1°N¶Ït§êILÿ)èHöš_¿»ğìÙ'şÉ2nÌ€ÔiÓ6éì<xKG[[‡W*µK#¥ğ]ÓFTƒZĞ™ÿÊç·÷Lš·.qÏ§YÓ‡§vÿdŞy÷÷ “î±[ ¼xúÃ/Âqqñ oŞœT2Ãà›Ÿm‰ik‹2KáİÖĞ&h¨îˆ©Î™˜3±Öe\g~-š¼rRÈŠ!“Şü\ù«·5²¯t6V9–C—^œ–šš:fÌ˜ Íã±<±ŠƒÇt´m‘Æ4˜Í[Ú:@ÕÕ9@°qtÀ×n½ş¯•×‡¬í?púğ/ÿœ1Zåqö•îé:ŠÙ%‚ñ€65Šµ€£ÉY¯ÁÌi\ÄÄ€s OŒ°%$$ÄÅÕäç×f3ÉÈH2éõÅÓO¿óì\µîŞæï¦Ó† £À.|‡Ó¬ñ\0Ÿ›6Ü¼ÙšSÄÀúÑ~öêÕ«×çÙ`_¨éÌßY›ıÊä”ŒÄ%Ï-¿¸hò³!'İgßèN]ĞÏŞï §~¼j)¹á©ÏVçäÀ"‹á„—fczkkD¦Û€¿jş)e‰eÏİş|FÆ—…j²ot—º	è<³_İ?%OŒ|êfëD0‹àÈœqì¼ôû¼¸|[c‹,Á¶a•ã”ÄÄ²/Ş,Ëø‡D©bûºÏ>ì¤YüŠ€–¥ï
+hqféûoüƒşP‹Ÿeï¿ÕùNI’±A§.T–
+»CƒšŠøğp‰Db2‰°Ä).Ød‚Dááñ
+ESPh·°TY¨Ö4X€ºœ4Ğ1^åÑ¸{ğ< ˜ø"T8PÂ¡ıì¸[ãQa8¦Ó¼y¯öğãq\	+il¡’‡¬cz/|©ŸàJğñàâBq@sìÒ^pNûÇãn5ÏïêÅ5)‹s„†vwñlµÛ€cë˜ÎãñÜûùP TĞ$êî†Bıe…gõV¸ø“©W/
+)üdS¼ŸíŸsÎÑùÁ'cU¥€
+•V¦$HDÂ^"¨Àt9ê…w€%¤sXu~v,všf,Me_¯w8ôzƒÁ­Ó©õ¨KÉ«Õ){©à/(Êÿé-.xÖéÜÇœgûÃ>"`y<Ï§ˆXUPš>M£Ñ#·B/ÖuÉÓºÔ 1ÒëÅø8¥©õ”Z‚oÄP²‚ ä\‡‚û:D‹õnƒXß¤ÑPTZš’äÙ8¦ó|ìßEYˆÒ{ôÈC9J›Á@´F„²jäˆpÀ½QL“(¥¨RFÎ8i(ú%š4D0Çàq9j
+G•…ÒXJ‹%…˜P@ó¾ı{©€Û|§èd<'=ªgÂc¯!OÒ«T*ªÓX•2H#F"ºS¨' 0èRzŠp›¸&%’§!Æã¨!9IPøèF™¤ó6ëßçïàÓárf:"È"„¬$I0Š`ÀDHŸxÒÊ $A"’,b¸xHOâA#‘(Æ‚§`
+ë‰kK¢"q^‡åëì·ËW Şi5cUVZŠ	è&‘©Ì7rÔ-gLp4é	+ÏMW‘ËE.2©‘¶X54Z)d¢ä¬CrhÁy¨>@fïzÇùùğ”	Õ:,trQŒ;)èLD™P‘š`h‹Ã%G&²83uED!å€>'aÁƒæ¤‘	ü©»ÄØŸ!W="è.d¥&'áèÎDò¯¡ïñ†…$,ŒQ!VÈn!Ê!b¼lêØL«ËÊŠarÄE­@è³"F‡‘„5ÁÄX8ƒpßNVSÄR`¹ë‡uo:÷ö–(XIÏ(+ÜÆ$]
+!”ÄğU*Ú¤ğõüt(º ‘Ü\İ%|ü¿ÊÇt¿şÀí3˜´¿b    IEND®B`‚_Qhttp://sfx-images.mozilla.org/affiliates/Buttons/125x50/takebacktheweb_125x50.pngYimage/pngÔ_WebResourceTextEncodingNameUUTF-8O»<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <TITLE>
+        a little bit of zeank  Â» Blog Archive   Â» TiddlyWiki    </TITLE>
+        <META name="generator" content="WordPress 1.5.1.1">
+        <LINK rel="stylesheet" href="http://zeank.in-berlin.de/wp-content/themes/equix_v11/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://zeank.in-berlin.de/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://zeank.in-berlin.de/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://zeank.in-berlin.de/feed/atom/">
+        <LINK rel="pingback" href="http://zeank.in-berlin.de/xmlrpc.php">
+                <LINK rel="archives" title="May 2005" href="http://zeank.in-berlin.de/2005/05/">
+                <SCRIPT type="text/javascript"><!-- This will let you use a preview for your comments. -->
+		<!--
+	
+		function ReloadTextDiv()
+	
+		{
+	
+		var NewText = document.getElementById("comment").value;
+	
+		splitText = NewText.split(/\n/).join("<br />");
+	
+		var DivElement = document.getElementById("TextDisplay");
+	
+		DivElement.innerHTML = splitText;
+	
+		}
+	
+		//-->
+	</SCRIPT>        
+        <SCRIPT type="text/javascript"><!-- This is a "hack" so you can have it working on the fucking non-standard Internet Exploted (aka IE) -->
+		<!--
+		var browserName=navigator.appName; 
+		if (browserName=="Microsoft Internet Explorer")
+		{ 
+		document.write('<link rel="stylesheet" href="http://zeank.in-berlin.de/wp-content/themes/equix_v11/style_ie.css" type="text/css">')
+		}
+		//-->
+		</SCRIPT></HEAD><BODY>
+<DIV id="content">        <DIV id="topbar">                <UL class="navbar">                        <LI><A id="top" href="http://zeank.in-berlin.de" title="coding and stuff">a little bit of zeank</A>                    
+                        </LI>
+                        <LI>                                <A href="http://zeank.in-berlin.de/archives.php" title="Archives">archives</A>                        
+                        </LI>
+                        <LI>                                <A href="http://zeank.in-berlin.de/about/" title="some notes about this page and its author">about</A>                        
+                        </LI>
+                                        </UL>
+                <FORM method="get" id="tsearchform" class="topsform" action="/index.php">
+        <DIV>                <INPUT type="text" value="" name="s" id="ts" class="t-s">
+                <INPUT type="submit" class="topsformsubmit" id="tsearchsubmit" title="Search!" value="Search!">
+        </DIV>
+</FORM>
+        </DIV>
+        <DIV class="header" onclick="location.href='http://zeank.in-berlin.de';"></DIV>
+                <DIV class="page">                <DIV class="navigation">                <DIV class="al"><A href="http://zeank.in-berlin.de/2005/05/25/jwchat-10beta1-is-out/">jwchat-1.0beta1 is out</A></DIV>
+                <DIV class="ar"><A href="http://zeank.in-berlin.de/2005/05/25/some-notes-on-implementing-http-binding/">some notes on implementing http binding</A></DIV>
+        </DIV>                
+        <DIV class="wcol">                <DIV class="post">                        <H2 id="post-6">                                <A href="http://zeank.in-berlin.de/2005/05/25/tiddlywiki/" rel="bookmark">TiddlyWiki</A>
+                        </H2>
+                        <DIV class="entry">                                        <P><A href="http://www.tiddlywiki.com">TiddlyWiki</A> is a mini wiki <EM>page</EM> (!) completely written in (guess what!) - JavaScript. This really rocks! I think I could use some of its code for jwchat . At least that file loading/saving stuff might be what letâ€™s me do file transfer some time in the future.
+</P>
+                        </DIV>
+                        <P class="postmetadata">                                By: Steve | <A href="http://zeank.in-berlin.de/2005/05/25/tiddlywiki/" rel="bookmark">2005/05/25</A> | <A href="http://zeank.in-berlin.de/category/cool-stuff/" title="View all posts in Cool Stuff" rel="category tag">Cool Stuff</A> | <A href="http://zeank.in-berlin.de/2005/05/25/tiddlywiki/trackback/">Trackback</A> | <A href="http://zeank.in-berlin.de/2005/05/25/tiddlywiki/feed/">Comments [RSS 2.0]</A><BR>
+                                                        </P>
+                </DIV>
+        
+<DIV class="comarea">                                
+        <H3 id="reply">Leave a Reply Â»Â»</H3> 
+
+        <FORM action="http://zeank.in-berlin.de/wp-comments-post.php" method="post" id="commentform">                                <P>                        <INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+                        <LABEL for="author"><STRONG>Name</STRONG></LABEL>
+                </P>
+                <P>                        <INPUT type="text" name="email" id="email" value="" size="22" tabindex="2"> 
+                        <LABEL for="email"><STRONG>Email</STRONG></LABEL>
+                </P>
+                <P>                        <INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+                        <LABEL for="url"><STRONG>Website</STRONG></LABEL>
+                </P>
+                                <P>                        <TEXTAREA name="comment" id="comment" cols="100%" rows="12" tabindex="4" onkeyup="ReloadTextDiv();"></TEXTAREA>                </P>
+                <P>                        <INPUT name="submit" type="submit" id="submit" tabindex="5" value="Say It!" title="Submit your comment!">
+                        <INPUT type="hidden" name="comment_post_ID" value="6">
+                </P>
+
+                <DIV class="preview" id="prev">                        <UL>                                <LI>                
+                                        <DIV class="comauth"><A href="#prev" title="Live Preview of your comment">Comment Preview</A></DIV>
+                                        <DIV class="comtxt" id="TextDisplay"></DIV>
+                                </LI>
+                        </UL>
+                </DIV>
+                        </FORM>
+        
+        </DIV>
+                </DIV>        
+</DIV>
+<DIV class="footer">        
+                <A href="http://www.mozilla.org/products/firefox/">                <IMG border="0" class="ar" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/125x50/takebacktheweb_125x50.png">
+        </A>
+        <P class="powered">                a little bit of zeank is proudly powered by <A href="http://wordpress.org" title="state-of-the-art semantic personal publishing platform">WordPress</A> &amp; <A href="http://marcoss.com.ar/dsgn/equix/" title="|X| - One Theme to Rule Them All">equiX</A>.
+                <BR>
+                Code is Poetry | <A href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS!">CSS</A> | <A href="http://validator.w3.org/check?uri=referer" title="Valid XHTML 1.0!">XHTML</A> | dsgn by: <A href="http://marcoss.com.ar/" title="Marcos Sader">Marcos Sader</A>
+                </P>
+</DIV>
+</DIV>
+<DIV class="go-up" onclick="location.href='#top';"><DIV class="ttrack"><A href="http://technorati.com/tag/equixtrack" rel="tag">equixtrack</A></DIV></DIV>
+
+
+</BODY></HTML>_0http://zeank.in-berlin.de/2005/05/25/tiddlywiki/Ytext/html    1 4 ; M \ r7½7ÿ88E ETE^EgE…E‹cJc}                           c‡

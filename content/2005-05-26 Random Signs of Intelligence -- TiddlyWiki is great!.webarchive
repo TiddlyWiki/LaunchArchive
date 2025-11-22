@@ -1,0 +1,2022 @@
+bplist00Ó>B_WebSubresources_WebMainResource_WebSubframeArchives¯$'*.147:Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO>kbody, html {
+    height: 100%;
+}
+
+form {
+    margin: 0;
+    padding:0;
+}
+
+textarea {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+    border: 1px solid #999;  
+    color: #333333;
+    background-color: #FFF;
+}
+
+input {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+    border-top: 1px solid #DEDEDE;  
+    border-bottom: 1px solid #999;  
+    border-left: 1px solid #DEDEDE;  
+    border-right: 1px solid #999;  
+    color: #333;
+    background-color: #FFF;
+    padding: 1px 1px 1px 1px;
+}
+
+select {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+    border: 1px solid #333;  
+}
+
+input.checkbox  {
+    border: none ! important;
+    background-color: transparent;
+}
+
+input.radio  {
+    border: none ! important;
+    background-color: transparent;
+}
+
+img {
+    border: none;
+}
+
+/*** core ***/
+
+body {
+    margin: 0 35px 20px 35px;
+    color: #333;
+    background-color: #fff;
+    font: 12px arial,verdana,sans-serif;
+}
+
+table {
+    background-color: transparent;
+    color: #333;
+    font: 12px arial,verdana,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #0000FF;
+    background-color: transparent;
+}
+
+a:link, a:visited, a:active {
+    background-color: transparent;
+    color: #3366CC;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:focus {
+    outline: thin dotted invert;
+}
+
+a:hover {
+    background-color: transparent;
+    color: #FF0000;
+    cursor: pointer;
+}
+
+a.plain {
+    text-decoration: none;
+}
+
+textarea {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+    padding: 1px;
+}
+
+input {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+    cursor: pointer;
+}
+
+select {
+    font: normal 12px Arial,Verdana,Helvetica,sans-serif;
+}
+
+input.buttonWhite {
+    background-color: #eee;
+    color: #333;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc #999 #999 #ccc;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 3px;
+}
+
+input.button {
+    background-color: #DEDEDE;
+    color: #333;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999 #333 #333 #999;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 3px;
+}
+
+/***  structural  ***/
+
+table.columns {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+table.columns td.left {
+    vertical-align: top;
+    width: 20%;
+    height: 100%;
+    padding: 18px 10px 15px 0;
+    border-collapse: collapse;
+}
+
+table.columns td.center {
+    vertical-align: top;
+    padding: 18px 20px 15px 20px;
+    height: 100%;
+    min-width: 340px;
+    border-collapse: collapse;
+}
+
+table.columns td.header {
+    margin: 0;
+    padding: 25px 0 0 0;
+    background-color: #DEDEDE;
+    border-top: 3px solid #000;
+    border-bottom: 10px solid #000;
+    border-collapse: collapse;
+}
+
+table.columns td.right {
+    vertical-align: top;
+    width: 20%;
+    padding: 18px 0 15px 10px;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+table.columns td.footer {
+    margin: 0;
+    padding: 10px 0 0 0;
+    border-bottom: 4px solid #000;
+}
+
+table.blogHeader {
+    margin: 0;
+    padding: 6px 15px;
+    border-bottom: 1px solid #fff;
+}
+
+table.blogHeader a:link,
+table.blogHeader a:active, 
+table.blogHeader a:visited {
+    color: #666;
+}
+
+table.blogHeader a:hover {
+    color: #FF0000;
+}
+
+table.blogHeader td.blogHeaderLeft {
+    vertical-align: bottom;
+    text-align: left;
+}
+
+table.blogHeader td.blogHeaderCenter {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+table.blogHeader td.blogHeaderRight {
+    text-align: right;
+    vertical-align: bottom;
+}
+
+table.blogFooter {
+}
+
+table.blogFooter a:link,
+table.blogFooter a:active, 
+table.blogFooter a:visited {
+}
+
+table.blogFooter a:hover {
+}
+
+table.blogFooter td.blogFooterLeft {
+    padding: 6px;
+    text-align: left;
+}
+
+table.blogFooter td.blogFooterCenter {
+    padding: 6px;
+    text-align: center;
+}
+
+table.blogFooter td.blogFooterRight {
+    padding: 6px;
+    text-align: right;
+}
+
+#content {
+    position: relative;
+}
+
+/*** articles ***/
+
+.articleAll {
+}
+
+.photoAll {
+}
+
+.dayArticles {
+}
+
+.article {
+    margin-bottom: 35px;
+    clear: both;
+}
+
+.article p {
+    margin: 0 0 1em 0;
+}
+
+.articleTitle {
+    font-size: 16px;
+    font-weight: bold;
+    /*margin: 0 0 3px 0;*/
+    /*padding: 0 0 3px 0;*/
+    clear: left;
+    /*border-bottom: 1px solid #dedede;*/
+}
+
+.articleAuthor {
+    background-color: transparent;
+    font: normal 10px arial,verdana,geneva,sans-serif;
+    margin: 0 0 13px 0;
+    color: #999;
+    clear: both;
+}
+
+.articleBody {
+    font: 12px arial,verdana,geneva,sans-serif;
+    line-height: 150%;
+    clear: both;
+}
+
+div.articleBody table td,
+div.articleBody table th {
+    font: 12px arial,verdana,geneva,sans-serif;
+    line-height: 150%;
+}
+
+.articleMore {
+    font: normal 11px arial,verdana,geneva,sans-serif;
+}
+
+.articleStats {
+    background-color: transparent;
+    color: #999;
+    margin: 8px 0;
+    font: normal 10px arial,verdana,geneva,sans-serif;
+    white-space: nowrap;
+    clear: both;
+}
+
+.postDate {
+    font-weight: normal;
+    font-size: 11px;
+    margin: 0 0 15px 0;
+    padding: 2px 6px;
+    background-color: #F7F7F7;
+    white-space: nowrap;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px 0 2px 0;
+}
+
+.photoPostDate {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 6px 0 0 0;
+    padding: 4px 0 2px 0;
+    white-space: nowrap;
+    border-top: 1px dotted #ccc;
+}
+
+/*** components ***/
+
+#leftcol {
+    font-size: 11px;
+}
+
+#leftcol .component {
+    margin-bottom: 30px;
+    clear: both;
+}
+
+#leftcol .componentHead {
+    margin: 0 0 2px 0;
+    padding: 1px 0 0 0;
+    font-size: 11px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 2px solid #000;    
+}
+
+#leftcol .componentHead a {
+    text-decoration: none;
+}
+
+#leftcol .componentContent {
+    padding: 6px 6px 3px 6px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #ccc;
+}
+
+#leftcol a {
+}
+
+#leftcol a:link, 
+#leftcol a:active, 
+#leftcol a:visited {
+}
+
+#leftcol a:hover {
+}
+
+#centercol {
+}
+
+#centercol a {
+}
+
+#centercol a:link, 
+#centercol a:active, 
+#centercol a:visited {
+}
+
+#rightcol {
+    font-size: 11px;
+}
+
+#rightcol .component {
+    margin-bottom: 30px;
+    clear: both;
+}
+
+#rightcol .componentHead {
+    margin: 0 0 2px 0;
+    padding: 1px 0 0 0;
+    font-size: 11px !important;
+    font-weight: bold;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-top: 2px solid #000;
+}
+
+#rightcol .componentHead a {
+    text-decoration: none;
+}
+
+#rightcol .componentContent {
+    padding: 6px 6px 3px 6px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #ccc;
+}
+
+#rightcol a {
+}
+
+#rightcol a:link, 
+#rightcol a:active, 
+#rightcol a:visited {
+}
+
+#rightcol a:hover {
+}
+
+.componentRSSFeed {
+}
+
+.componentRSSFeed ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.componentRSSFeed ul li {
+    margin: 0 0 6px 0;
+}
+
+.componentBlogroll {
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.componentBlogrollItem {
+    margin-bottom:6px;
+}
+
+.componentTopics {
+    line-height: 18px;
+}
+
+.componentTopicItem {
+    margin-bottom:6px;
+}
+
+.componentArchive {
+    line-height: 18px;
+    white-space: nowrap;
+}
+
+.componentCalendar {
+    font: normal 9px arial,verdana,geneva,sans-serif;
+    text-align: center;
+}
+
+table.componentCalendar {
+    font-size: 10px;
+}
+
+table.componentCalendar td.componentCalendarDayname {
+    padding: 0 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+table.componentCalendar td.componentCalendarDay {
+}
+
+.componentLogin {
+    text-align: right;
+}
+
+.componentWelcome {
+}
+
+.componentBlogname {
+    font: normal 34px arial,verdana,sans-serif;
+    line-height: 34px;
+    letter-spacing: -1px;
+    background-color: transparent;
+    color: #666;
+}
+
+div.componentBlogname a:link, 
+div.componentBlogname a:visited,
+div.componentBlogname a:active
+{
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.componentBlogname a:hover {
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.componentPostArticleLink,
+.componentEditArticleLink,
+.componentRssLink,
+.componentHomeLink,
+.componentEmailNotifyLink {
+    font: bold 11px arial,verdana,geneva,sans-serif;
+    background-color: transparent;
+    color: #666;
+}
+
+table.blogHeader td.blogHeaderLeft div.componentText,
+table.blogHeader td.blogHeaderCenter div.componentText,
+table.blogHeader td.blogHeaderRight div.componentText,
+table.blogFooter td.blogFooterLeft div.componentText,
+table.blogFooter td.blogFooterCenter div.componentText,
+table.blogFooter td.blogFooterRight div.componentText 
+{
+    display: inline;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+
+#leftcol div.componentText {
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+#rightcol div.componentText {
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.componentRecentVisitors {
+}
+
+.componentRecentVisitorsItem {
+    margin-bottom: 8px;
+}
+ 
+.componentRecentTrackbacks {
+}
+
+.componentRecentTrackbacksItem {
+    margin-bottom: 8px;
+}
+
+.componentRecentEntries {
+}
+
+.componentRecentEntriesItem {
+    margin-bottom: 8px;
+}
+
+.componentRecentComments {
+}
+
+.componentRecentCommentsItem {
+    margin-bottom: 8px;
+}
+
+.componentRecentArticles {
+}
+
+.componentRecentArticlesItem {
+    margin-bottom: 8px;
+}
+
+.componentRecentPhotos {
+}
+
+.componentRecentPhotosItem {
+    margin-bottom: 12px;
+}
+
+.componentRecentPhotosItem img {
+    border: 1px solid #000;
+}
+
+/*** comments ***/
+
+.commentForm {
+    padding: 8px;
+    margin: 0;
+    clear: both;
+    border: 1px solid #ccc;
+    background-color: #F7F7F7;    
+}
+
+.commentFormInline {
+    padding: 8px;
+    margin: 18px 0;
+    clear: both;
+    border: 1px solid #ccc;
+    background-color: #F7F7F7;    
+}
+
+.commentsHead {
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    border-top: 2px solid #ccc;
+}
+
+.comments {
+    margin: 12px 0 18px 0;
+    clear: both;
+}
+
+.commentTitle {
+    font-weight:bold;
+}
+
+.commentAuthor {
+    font: normal 11px arial,verdana,geneva,sans-serif;
+    margin-bottom: 8px;
+    padding-top: 2px;
+    border-top:1px solid #ccc;
+    color: #999;
+    background-color: transparent;
+}
+
+.commentReply {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.commentBody {
+}
+
+.comment {
+    padding-bottom: 5px;
+    margin: 12px 0;
+}
+
+.commentReplyRef {
+    padding-bottom: 5px;
+    margin: 0 0 12px 0;
+}
+
+.commentIndent0 {}
+.commentIndent1 {margin-left:25px;}
+.commentIndent2 {margin-left:50px;}
+.commentIndent3 {margin-left:75px;}
+.commentIndent4 {margin-left:100px;}
+.commentIndent5 {margin-left:125px;}
+.commentIndent6 {margin-left:150px;}
+.commentIndent7 {margin-left:175px;}
+.commentIndent8 {margin-left:200px;}
+
+/*** trackbacks ***/
+
+.trackbacks {
+    margin: 12px 0;
+    clear: both;
+}
+
+.trackbacksHead {
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    border-top: 2px solid #ccc;
+}
+
+.trackback {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 12px;
+    margin: 12px 0;
+}
+
+
+/*** photo albums ***/
+
+table.thumbnails {
+}
+
+table.thumbnails td {
+    padding: 0 12px 0 0;
+}
+
+table.thumbnails td.row {
+    padding: 0 12px 0 0;
+}
+
+table.thumbnails td.emptyRow {
+}
+
+table.thumbnailsByDay {
+}
+
+table.thumbnailsByDay td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0 12px 0 0;
+ }
+
+.thumbnailCaption {
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 0 16px 0;
+}
+
+.thumbnail {
+    margin-bottom: 2px;
+}
+
+.thumbnail img {
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+img.photo {
+    border: 1px solid #999;
+    margin: 0 0 10px 0;
+}
+
+/*** text headers ***/
+
+.sectionHead1 {
+    font-weight:bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+/*** misc ***/
+
+.categoryPostList {
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+    margin: 18px 0;
+    clear: both;
+}
+
+table.categoryPostListTable {
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+}
+
+.categoryBreadcrumb {
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.articleBreadcrumb {
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 6px 0 6px 0;
+    margin: 0 0 20px 0;
+    font: normal 11px arial,verdana,sans-serif;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+.photoBreadcrumb {
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 6px 0 6px 0;
+    margin: 0 0 12px 0;
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+div.articleBreadcrumb table {
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+}
+
+div.photoBreadcrumb table {
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+}
+
+div.articleBreadcrumb span.emph {
+    font-weight: bold;
+}
+
+div.photoBreadcrumb span.emph {
+    font-weight: bold;
+}
+
+.pager {
+    font-size: 11px;
+    margin: 12px 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.articlePrintLink {
+    font: normal 11px Arial,Verdana,Helvetica,sans-serif;
+    margin-top: 12px;
+    clear: both;
+}
+
+.emph {
+    font-weight: bold;
+}
+
+.noncompliant {
+    display: none;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+/*** thumbnails ***/
+
+div.dayPhotos {
+}
+
+div.thumbcontainer {
+    background-color: #fff;
+}
+
+div.thumb {
+    width: 150px;
+    margin: 0 12px 20px 0;
+    float: left;
+}
+
+div.spacer {
+    clear: both;
+}
+
+div.thumb img {
+    border: 1px solid #999;
+    margin: 0 0 4px 0;
+}
+
+div.thumbcaption {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: left;
+}
+
+/*******************/
+
+.editButtons {
+    margin: 16px 0 0 0;
+}
+
+img.editButtonOn,
+img.editButtonOff,
+img.editButtonDown,
+img.editButtonUp {
+    width: 23px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.editButtonOn {
+    border: 1px solid #000;
+    background: #eee;
+}
+
+.editButtonOff {
+    border: 1px solid #dedede;
+    background: #FFF;
+}
+
+.editButtonDown {
+    background: #ccc;
+}
+
+.editButtonUp {
+    background: #FFF;
+}
+
+/*******************/
+
+.reviewBox {
+    margin-bottom: 25px;
+}
+
+table.reviewDetails {
+    border: 1px solid #dedede;
+}
+
+table.reviewDetails td.reviewTitle {
+    font: bold 16px arial,helvetica,verdana,sans-serif;
+    background-color: #dedede;
+}
+
+table.reviewDetails td.reviewDetailLabel {
+    font: bold 11px arial,helvetica,verdana,sans-serif;
+    text-align: right;
+    white-space: nowrap;
+    background-color: #eee;
+}
+
+table.reviewDetails td.reviewDetailValue {
+    font: normal 11px arial,helvetica,verdana,sans-serif;
+}
+
+.updatedAlbumBox {
+    background-color: #eee;
+    color: #000;
+    /*border: 1px solid #000;*/
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align:left;
+}
+
+table.updatedAlbumHead {
+    margin: 0;
+    padding: 3px 8px;
+    background-color: #808080;
+    color: #fff;
+}
+
+table.updatedAlbumHead td.albumName {
+    font-weight: bold;
+}
+
+table.updatedAlbumHead td.albumName a {
+    text-decoration: none;
+    color: #fff;
+}
+
+table.updatedAlbumHead td.albumName a:link,
+table.updatedAlbumHead td.albumName a:active,
+table.updatedAlbumHead td.albumName a:visited 
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+table.updatedAlbumHead td.albumName a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+table.updatedAlbumHead td.updateTime {
+    font: normal 9px verdana,arial,sans-serif;
+}
+
+/*** minithumbs ***/
+
+.miniThumbCount {
+}
+
+.miniThumbCount a {
+    text-decoration: none;
+}
+
+.miniThumbSizedImg {
+    border: 1px solid #000;
+}
+
+.miniThumbHorizContainer {
+    clear: both;
+}
+
+.miniThumbHoriz {
+    float: left;
+    margin: 0 6px 0 0;
+    padding: 0;
+}
+
+.miniThumbVertContainer {
+    margin: 0;
+}
+
+.miniThumbVert {
+    margin: 0 0 6px 0;
+    padding: 0;
+}
+
+.miniThumbDefaultImg {
+    padding: 2px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+
+.miniThumbSelectedImg {
+    padding: 0;
+    border: 3px solid #ff0000;
+    background-color: #fff;
+}
+
+.miniThumbSizedCaption {
+    text-align: left;
+    margin: 5px 0 8px 0;
+}
+
+.miniThumbLinks {
+    margin-bottom: 12px;
+}
+_4http://utterdoul.myblogsite.com/_templates/style.cssXtext/cssÓO	
+var ua    = navigator.userAgent;
+var d     = document;
+var w     = window;
+var edit  = false;
+var start = -1;
+var end   = -1;
+var len   = -1;
+
+if (d.selection || (ua.indexOf('Gecko') >= 0 && ua.indexOf('Safari') < 0)) {
+    edit = true;
+}
+
+function getText(field) {
+    if (d.selection) {
+        return d.selection.createRange().text;
+    }
+    else {
+        len   = field.textLength;
+        start = field.selectionStart;
+        end   = field.selectionEnd;
+        if (end == 1 || end == 2) {
+            end = len;
+        }
+        return field.value.substring(start, end);
+    }
+}
+
+function setText(field, value) {
+    field.focus();
+    if (d.selection) {
+		d.selection.createRange().text = value;
+    }
+    else if (len && (start >= 0) && end) {
+        field.value = field.value.substring(0, start) + value + 
+                        field.value.substr(end, len);
+    }
+    else {
+		field.value = field.value + value;
+    }
+}
+
+function wrapSelection(field, left, right) {
+    if (!edit) {
+        return;
+    }
+    var value = getText(field);
+    if (value) {
+        setText(field, left + value + right);
+    } else {
+        field.value = field.value + left + right;
+    }
+    return false;
+}
+
+function wrapSelectionWithLink(field) {
+    if (!edit) {
+        return;
+    }
+	var url = prompt("Enter URL:", "http://");
+	if (url != null) {
+		var left  = "<a href=\"" + url + "\">";
+		var right = "</a>";
+		wrapSelection(field, left, right);
+	}
+	return false;
+}
+
+/*
+function openWindow(url, name, height, width) {
+    if (height == null) height = 450;
+      if (width == null)  width = 500;
+        window.open(url, name, 'scrollbars=yes,menubar=no,resizable=yes,toolbar=no,width=' + width + ',height=' + height);
+}
+*/
+
+function openWindow(url, name, height, width) {
+  if (height == null) height = 450;
+  if (width == null)  width = 500;
+
+  var win;
+  var winleft = (screen.width - width) / 2;
+  var wintop  = (screen.height - height) / 2;
+
+  win = window.open(url, name, 'scrollbars=yes,menubar=no,' +
+                               'toolbar=no,width=' + width + 
+                               ',height='+height +
+                               ',top=' + wintop + 
+                               ',left=' + winleft + ',resizable=yes'
+		    );
+  if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+_>http://utterdoul.myblogsite.com/_system_templates/rich_edit.js_application/x-javascriptÓOƒÿØÿà JFIF  H H  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  – c" ÿÄ               ÿÄ L 
+     !1Aa"2QqB‘¡±#Rr²ÁÑ%CSb‚’¢³Âá$&3456DTcds“”ÒÿÄ              ÿÄ 4        !1AQ"2Raq±34‘ğ#$BS¡áÿÚ   ? İ¹ñ…Ğêš•9ä{Í4’â‡Ï«Ë.oÚ¸mç"¨¥÷–BÇ4êÎHï€k>â£Ã|7‰ƒâ_ãn>òKeCZ,ä‘“°$u5t“t¬ÄÆÖv*ÿ jã›âO£3!L¾NÜ”øe_,œg·:±ëÆIé½di¹/ŒTëOfø±Ü[ŠKAµZÜlr@$¥Dc
+9'q·+·O‘pàæ_T·PŞµ•„ì	òÀò¦#I±ºK›·JY”ƒ•[¶ıü/ÉQ©£İÜPÔ©K~Û¨cÙZ±òG÷Ñ[mÎ©q¿Ìğ
+ şY?ÿ £Ş¢s1Í¥ïæš‘«m«ËAôæM+uWáF²Ø¤Ì–¥ÁÛp¬º/úÅQêÁÃ+s8_õŠ£^+Ea>"5~N¡šÖ—Û?5Ñû>»\íÖ»H!µ*å*ä)ã;·Î‘Œxà‡ZÉÆTÀóÜVqt‰ÂÜExf}şLëDô 7> d!IÕœ6;n ø[”œÕ2óÅöß1l]éÔı£‡äH9ùŠ:´”ñ´¼i«
+£Ã’n“m3¸zÉ%©2·g’BP… væqË$ïŒu­JÛmjÑgj|øLµ ÍG“ÜœŸ:aâÛ\Ù¶oÚäø¸ÒğÂ¿7ymVg,üOÙ@oÍ‡ê'jXROøå¼tğ\?bj>T=‚.Qà,ıˆ¢XÅRãGú£ò
+á}Jf#S­69÷ëŠQ¡¨ì‚à$ œa)UñÈf¢×ÇJÓ8Z/¡pdE2r9¢u-cV{óÊ¡áÌ¹uöSKNJu§…™mjó$Ìa²¢á	NI$ä$îz“DšØS§Õñ1ÿ e?²©¶ÛÏØìVu]a½q™pRuT¥4¥xxI	m:6.öqª»‰8eâŞé¶»èr[SRYqŠ¢à ¨-!JPÉ)öyB·NæÊŒ
+´ÚDtƒoyqÈäÙQ[G±I;|Æ)Ğä™-¨8æÔPëyÎ•|ú‚ üvÈ™ˆ°ÛÓqp94G@}yÎ¥é×^Më‰Å# ¡]Õ…~¬To D)Á[R¦µ*‰6Ê¥Ç2_wÕö8®–—t{Ãqc˜lóÏÙUn*µÆá‹‹OÚÙtDCm¦K9OŒ	:G<tïĞ+NÛš·q•ªt“éll;.ÚïŠ–z¸œ‚@ï”,Ğ÷pışÓàKilKi@øRX*ÒHÂ†GbwÛp)\A\„»ÕĞ,u
+,©K¾pt„É)rM±¦äÇ˜Ú‰:JˆÒIÜ}x¯v™Ë¹p¼id8ô]kÏS¤äşºË¬ŒÜïqáÛcëõZßñuM€PŒóR†Ù8Hú]«[,3Î¦šN–˜R‘ğJS÷Pö³k³ØıAŞşAbQ¢dAĞEWö( ÁN™ı2óı
+˜³TøÏæÏÈ,ü/ÂTàt:µğŸF¶6ÕšæòZBAôWÖp÷zœv#¸ª‘9×ƒ úÊ?À²è=÷EEÃ,ä5ƒªl—èap[²T•$(‚6#­wj¦ğ}µµğÌW~Lw
+ÜÉeâÂÔ=Ó”ı•3Äšc.S’¤® Ü+ÅJRsŒ€”ÙÉ­·.#²VM™5¸¨H9[‹Ù¶‘º–{×ÈTx1Üiµ©ò’û«.:SË'`` TøĞ£ÅÔ¦[k÷–¢T¥|Ôw5"¡{¯dà%J•*¹1÷[e¥¸êÒ†Ğ
+”¥Ì“Yí×l“%†âØw{V”-æS•diT£·aDÿ O¸ä;u­·bá--¸¿â‚6úÔ•Wx¡ÛS‘ã5e1 dahO…Œ•õ @óçñ®ÒãË¢¹ÆXÖ9òÿ ¨Í£¡&Ja\-‹µ+ Œ!9å©%))ñŠ¶Ş=Gp ÿ »;ú³òëw¿Áôé²ŠÖôWSá—\+)^úU¨íŞ¬uÏÁqqå’±oq:”w)’’|€¢ßhI‘/BÎ÷(éü˜Š?Ò@©C8Î*0!w…c’#õ¬şÊ­zeùş ğ£)z’ù@¥å+NzƒçÎªq8üL·ïU_eCü ´$’)«ÖQ†6(p~‰¦:İÖ<y½nqµ%'Â)>"{”ò«´´Êe0—§i	¥‡7(X8Çl•Ÿ‹7—OVÙY—Ó4ÇÈ«²ñ±ü#¿Ö*¸€ÚîÁ&6|Ròœ~úSîc¯˜ß;T+$Ö¬«fÚóí¦#šË+yÀ•çQI'Ş'¦0jZîğ™¼ºâ¯(q	N=œ¬§nD'#ùÆ|«Y¹QÌ­4
+_ÑÓEa§P¨7Ø×Ea©:ÛN¥©l”¥? IäOÂ‰…ÌD88XDŠØ®æ•s4©’ [`rùm@Œ¤·63èê^ÉÔ:Çï¨Ë“cŠÓŒ_¹Úç)JÒ¤jB”¥j*IÉj²j3+yçÛhJZÎ@æIªd¿Â­É4®•a	m°m[ô=(‡òSFñ@X
+›j²Ë¿M‘Ğ™1ì«{YS£JR”ì“İ` àO*Óo‹Á³¢4,µ	m¥? µA´ñ¬ódwí“‰ÂX”’5| úñDø…_äÕÓğş‰ Á¥ÁI™,’láUû¿ŠÈZ	9=™h}«5&ÉÛ]ÕI1œv$‹@ÉmClã™ÆGË¡û§+»mÒ©%akRR	Û$
+Ïâ†òäRÁqlm!]!ÉbKØ¯!ÖÏÓAÎış”‹l_ép“’J~yç½S’ÙjO¤2ã‘ßêëG
+?>Šˆ4bÓ|”ó^ÆÒëí»à¶R 	 ('’ÁÇÑ9èÖ˜Ïo­[ÎÙ6<Ô»u±lµ*[ LürĞùpkv2A:Rs’¦ôàçùß§£¶æ4)ÈHiµ¸Ò<'‡ÁI~<ÅIiÄ¸´Î'CéÍo‘ù*Gc¸éŠ‡!›ºäÂiÄ	J€Ô~’FNŸÛ­HçÇ Kº…3CÚhî-—‹†l²†ËÄTró‰9ö±‚02~‘Û°«Í¨İUolİ}ÒÎJÄpB@è7'|séBx:Öˆp eEÓ¥#	ßÌäü€«0¯CŠÇ61¨¬éœ½P›½*í*°¢TŞ9×:M–ÌVPÄùX{„”íö“ó¨W»œ›'¦Ú¸åR-óTôg›sña•am4±€1ÜóZgYe]"G‘n)à¼¨à(õNzgêªÍËŠmíÚ®0.6	°'O
+SÁ-Œ8î 
+É;ã	øò§ mYŠÉnë˜ıüóo<GÀs.W¦v*\ñ!ÍSé¡IZQáè—<œ÷Ç*ÑRãÒxNÊÉyËaS„ó'ÃçTÎá›­ÚİèÈƒdiã!m†Š)dçpwí¶ä	ÜhwÄèáË–‘‚";ŞÁ®SÁI;Dl1İÕ¬e†fÈ[„€c´ygé(`|NMLLv"¼[¾¬G4T²`¹#jğN´]™u¤%je¶QÀV•³ÓÇãŠ5p~Mê7#†š…ãkKï$ Á €Fœä_:ƒˆÃ¦”—S¶¥µÌÛn§²	â–ÓÖİeÑ¨¡.ctçlwÀÅKı\¤Ü	Ç£îàü¦Î5ŸQÜ
+ˆ³.{¬¼[\d§ÛzJ²FÃH=÷Í…i§VËéÌÎ;‚µsrèIé°¬GiİÉhKEDl"N]¸zB”ú.ñÚx§JœKÅ¥Îó¯)|M	eà­»‡°¥É_¤¥”%¤kÛ;j?Ş’øÊ£œKOa Ÿ¿5ëo±Ú­—&|N³":¼GˆJV¢’=®^UXÈ7%\–´æ¯öYŞ²µF”˜«ŒÛ‚–×±¦ßríD9S‘œîiùŞ½*Ä)R¥J »¶M,mÌıt!<Qa'¹ƒœÿ +ªâ{
+A*¼Á Ïş»%ÔŞè¦7¡<P¢ºwôUæ)Ÿáww¸?ù…ân+±ËáùÑ!Ü˜‘!æô!¶‰Q$‘Û§dOÖ6Aò44î³ğuÈèXşİ2Û »n”ÌéN"7¥ êIY)RpöJu´jD6Ñ"èáQØ1¶??ûê`·bO‰â¯ÃÎ¿cßÆYüÓŠËâÒµ¹áöMÃZá=×Š™ò’Ä[Ä—ßxègD=Qê¥¶ $ãªá#P¢µCm§<ÏÄäîh%½„ãŸa‡œg)OÜO×V,§jó¹rİ5l@ÊÜ„BŒü”±—?ÌIpşªš=£±ØĞÛeÆ;¤iSŸğá‘!J•œÚyôsOÃ£2N G%á±’JĞ À¯ËÓí²·ÛK«÷¥€¥|‡ZïØ›N¡%õ$sR":@şrâÈ¼3.ä·QwÇq¤6\RFo`qx÷¯U!{\ØÃl•K¯`¯ íJ«£¬€{ó?ôÜı”ª×„ÿ t¨¼Vw
+„¦.IVĞÛÌ¡û+Íq.JÑ*îù?rhëÊÊˆñUa»øƒ6ö#ôSÙUºæ£ïC7V³\õUÉ\äBº\?¬Q£Î•!ã¹§û¿ÒïFc{¿ußl0–ëÎ¾yi	öQ¥)Hß dgO˜ô†c´\}Ô4Z– CUÖ;€¢TÉ:Ze$òøœl×Ú¨»ÇÉ“[¬’­´2&†·`Å­Öå0äT¥O³©Õœ'ÂÆ	é±Üg55›Äyî1à9©—[KÂ„ys'<¼¨1rT8LzÄ0ß§:“!ee$6HF’6®ûêï·³¡3/%NKiMG*O¹ã[¤`‘òïF|RÃRÂ9DI«ä[•»0– ûÉ	m§R¼«`py¹ÈÈÚ…KüdçTÌè‘ã²„ÇiN¾‚3Ÿg\Éør¯îYœyÇ!®N””±,'
+l);ç¦Ä‡*}†J¥ÚZyØéiÁìj	Æ°>—Ç¿4ÌX™a;tïºY*FèZ‘´² ë.d‘îJ}­3İæ¥w?_JójĞêÍÉõ)J*R”Ëz”IÉ$ãOÎkÑ¼šÉÖlõPœx´éÒ)õ:Éÿ YLòKüÒ¢yïJ¤ô–Où
+‹ÊÃî…Åûçç^K9¯G6Yù×‰5œy«‹„ÓIÀÍ:˜¯…‚w»˜×¸Œ""QAA¤©$/c„‚	8ûâF3]mÇ-ñ-i~+†8Ó’²Ê° @ÉêI;šd–ì8ÚV[Z¤¥À7A#˜ªÓœ'([ÖÓn0ãŠq*Óî‚ ?HïÌòåµlàfˆ†çè«½„•njËp¸\Spººâ@Gn2BSŒåJæIÎÃåšü†X¾8¸1’–ZO£¨äàr¬Ç CÚ¡I²][œÎÍ)´·¤”¬¥éú@J³×®Õ&ÎÅî0Ãú4¤á	^×;ÕœÌØæ…~©Z×4õF„öHæ¡üšBc${ØùŠñ.Ê;–{W<Gˆö¢ŠÄ!ª`ïİ)BSXÿ 8Ÿ®½ÙŞãæhaZHÊ¢¨yW‹ëeL–ŠTO3CÃ#¤ sFL¨àœ¾ßó©UddlÅ*œ@o2U­ï}_:ğéJ•RZr¸v4©PDòKÔŒÒ¥\•;Â6¥JŠî© 3Ê¹§zT¨Zdğœ×
+R­ŠAÅ*TA6Lô(Ç÷„}T©R©\ÒhoeÿÙ_4http://www.blogware.com/profiles/utterdoul/thumb.jpgZimage/jpegÓO¹
+// Copyright (c)2005 Site Meter, Inc. 
+
+var g_date=new Date();
+var g_hours=0;
+var g_minutes=0;
+var g_r="";
+var g_rtype="0";
+var g_server ="70.84.241.242"
+var g_ip="81.155.57.205";
+
+// Get the User Agent Name
+var g_agent = navigator.appName;
+
+// if g_frames is true then try getting the framed referral (with out error checking)
+if (typeof(g_frames) != "undefined")
+	if (g_frames)
+		g_r=top.document.referrer;
+
+// Get the referral for non-multi-domained-framed sites using a Netscape browser
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["parent"] != null) 
+		if (parent["document"] != null) // ACCESS ERROR HERE!
+			if (parent.document["referrer"] != null) 
+				if (typeof(parent.document) == "object")
+				{
+					g_rtype="1";
+					g_r=parent.document.referrer; 
+				}
+
+// Get the referral for the current document if a framed referral wasn't found
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	if (document["referrer"] != null) 
+	{
+		g_rtype="4";
+		g_r = document.referrer;
+	}
+
+// Get the hours
+if (g_date)
+	g_hours=g_date.getHours();
+
+// Get the minutes
+if (g_date)
+	g_minutes=g_date.getMinutes();
+
+// Convert all the 'unknown's into blank
+if ((g_r == "") || (g_r == "[unknown origin]") || (g_r == "unknown") || (g_r == "undefined"))
+	g_r = "";
+
+// Create the image url and write it into the page. 
+
+document.write("<a href=\"http://www.sitemeter.com/");
+document.write("stats.asp?site="+site+"\" target=_top>");
+document.write("<img src=\"http://" + g_server + "/");
+document.write("meter.asp?site="+site); 
+document.write("&refer="+escape(g_r));
+if (g_ip != "")
+	document.write("&ip="+g_ip);
+document.write("&hours="+g_hours);
+document.write("&minutes="+g_minutes);
+document.write("&rtype="+g_rtype);
+document.write("&rnd="+Math.random());
+document.write("\" border=0 title=\"Site Meter\"></a>");
+_8http://s17.sitemeter.com/js/counter.js?site=s17utterdoulÓOŸGIF87aX   ÷     3  f  ™  Ì  ÿ   3 33 f3 ™3 Ì3 ÿ3  f 3f ff ™f Ìf ÿf  ™ 3™ f™ ™™ Ì™ ÿ™  Ì 3Ì fÌ ™Ì ÌÌ ÿÌ  ÿ 3ÿ fÿ ™ÿ Ìÿ ÿÿ   33 3f 3™ 3Ì 3ÿ 3 33333f33™33Ì33ÿ33 f33f3ff3™f3Ìf3ÿf3 ™33™3f™3™™3Ì™3ÿ™3 Ì33Ì3fÌ3™Ì3ÌÌ3ÿÌ3 ÿ33ÿ3fÿ3™ÿ3Ìÿ3ÿÿ3  f3 ff f™ fÌ fÿ f 3f33ff3f™3fÌ3fÿ3f ff3fffff™ffÌffÿff ™f3™ff™f™™fÌ™fÿ™f Ìf3ÌffÌf™ÌfÌÌfÿÌf ÿf3ÿffÿf™ÿfÌÿfÿÿf  ™3 ™f ™™ ™Ì ™ÿ ™ 3™33™f3™™3™Ì3™ÿ3™ f™3f™ff™™f™Ìf™ÿf™ ™™3™™f™™™™™Ì™™ÿ™™ Ì™3Ì™fÌ™™Ì™ÌÌ™ÿÌ™ ÿ™3ÿ™fÿ™™ÿ™Ìÿ™ÿÿ™  Ì3 Ìf Ì™ ÌÌ Ìÿ Ì 3Ì33Ìf3Ì™3ÌÌ3Ìÿ3Ì fÌ3fÌffÌ™fÌÌfÌÿfÌ ™Ì3™Ìf™Ì™™ÌÌ™Ìÿ™Ì ÌÌ3ÌÌfÌÌ™ÌÌÌÌÌÿÌÌ ÿÌ3ÿÌfÿÌ™ÿÌÌÿÌÿÿÌ  ÿ3 ÿf ÿ™ ÿÌ ÿÿ ÿ 3ÿ33ÿf3ÿ™3ÿÌ3ÿÿ3ÿ fÿ3fÿffÿ™fÿÌfÿÿfÿ ™ÿ3™ÿf™ÿ™™ÿÌ™ÿÿ™ÿ Ìÿ3ÌÿfÌÿ™ÌÿÌÌÿÿÌÿ ÿÿ3ÿÿfÿÿ™ÿÿÌÿÿÿÿÿ                                                                                                                        !ù     ,    X    ÿ Y	H° Áƒ*\È0¡V×"JœH±¢Å‹3jÜhñßCŠ¬	BtŠ$"Vˆ¡,‰’U«‚ˆdqœISc '^)P€ O=S,@±à…‹F_´há‚‹+rÖœ:•NŠ3"Ğ˜QF–D^=ÕJP«Y‚fECt•,S2VpdÈJ ‰ÚË—.ß¼5o~œ¨£CÊ™•(ÑµV!_›51ZD+ÿ¤^´ÂŠ•Îmåz^áñágÏ5o´:Xbk€<ZSfÖ£Y¸#RlóÆx­\ó,qÅİˆ™©â½:±Ë†
+~äÀ‘cúêcrtÉÁeL—.u»Xÿ‘‘£UÀÅ_+¢@ª¬U¿ñc„ˆû?DÙp„ş#9 ˜2ÄEÚnqöqmgaFTªm$˜jb€ B!€ Al bEüğ8 ˆÃBõ4åÄÊg×Ô¡p1¨\DñQ$CÄd2ÄDr!VŒÁ¤O~ö‚Ùø p:^££U;.×ZD>1D †,È$Ó5k®If.·×g•ÇåƒÿÔµWœõ8ÑŠ,²E5°bM,±ÑšÖôæ`‚G—D“>¨§]|ftá›ZTÃ[TH\ b €È «ì¹×*äeÿÚe—~Jdˆ4Ò"Í+®HƒÊ4¹º2M!ÓLóÇ+…ü‘JŸ8ë³U2' Ì0ã3¨ˆbÌ¢4Ó-3 2ÊÇüanU¸#´ì6øå5yøá¢ø/ñæ‘Ê(Uü‘Gÿö»Bº¤¹Ùî¬›N0Ítò2ÈDóŒ5Ö¬»îE˜IvÑ{ÉXP[²{ I‘´\2‡0—è‘Œ'É”R
+Œ¥DTs[aÖ(FpFgPAU—‹AßtgV½àD	K„²ÊÂx³Ğ$4ÑbM47Cde=cDZNF‡#E^v6ËIUkD{àrË$¾Ür‹/“à‚w/½LÿÒ‹/˜øRG˜@…‹WÄ
+…¡1XE !§Şer]öh&_³%n(1Én¼¡D”ĞñF&¦×E&†«~øØ<G:gt-´Tyâyô]UÇ™ï‘.oïK.¤çòF/¸Ô¡‰&ud¢ºë.f•]zŠö]RİaTÜc¾×ÒhŸË&v,J(Ñœb™d–]ÿ›ƒ$íÄe™óÙ‘§jo»ÆN …(DQ¸®°‡+BWD º`
+	Òå¬ˆÕf„ƒ™»ç<IòBŒpm˜{×š ;ô|(‹û^Ã‹ÊYåzs-®FG‹Üâ|ÈÄ‡üNm%{—xâ¥'H^°€(…)NaÜÁ Õ´Ò WpÁf…\W¸ÒÈF6Zá
+vÙ"»(Ç:î¨‹vÌcU®‚š>úñ€ô³ÈB²3„‚gbpHœüã‘Œ¤$'IÉJZò’˜Ìd%W ;_zhttp://70.84.241.242/meter.asp?site=s17utterdoul&refer=&ip=81.155.57.205&hours=7&minutes=23&rtype=4&rnd=0.4215786505591025Yimage/gifÓOnGIF89a  æ  ïïï¥sÿÿ†jÁÁÁ···ûûûÿÃ³’ê¥¤¢šh®¯¯ğ¡‹ Ÿœäää©©©¥ÿÆÆÆ²³µµ·ºÿÿ¥ n{nœjlƒ~râ³C÷ğ‰Ú¿l˜•Š…}‹‚ÿ×„¤r³Ï¢&ÿë„™gåß„âÁPË˜3É !£u“‰Ì™4¢p
+É–1°~œš–¸º¾ølB¬zååå×¸@Æš†wıÕp§u£qğäz¦¦¦ÿø“ÿäÿÛuÿï‰ëëëfŠ¦ÿÿœ¶¶¶ûúüÆšÿÿÿÿÿ™                                                                                                                                                                     !ù  I ,       Ë€I‚ƒ„……1	0+ †IE–—–“EŸE“EB«BE7D†,EBGBE*"/’‚(	µGG»4G3›‚.µ2Ê&C9¦IFŞßàŞ'$:±İHCéêéHF æFè=õö=CF8æ ó@
+H!…†æÌâ£¡CjŒP`.É?$?2jÌ¸ÃF	nI92D‹
+.(àA€DbÊœIÀA! ArêÜ	ÀÀ¤Ÿ… ;_5http://utterdoul.myblogsite.com/_images/imgfolder.gifÔ !"#_WebResourceTextEncodingNameUutf-8O<!-- 
+
+drawBlogroll( "<div class=\"blogrollmain\">"+
+"<div class=\"blogrollitem\"><a href=\"http://www.43folders.com/\">43 Folders</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://blogs.zdnet.com/BTL&part=rss&tag=feed&subj=zdblog\">Between the Lines</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.scalabilityexperts.com\">Blog Entries</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.bloglines.com\">Bloglines | News</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://staff.develop.com/bobb/weblog/\">Bob Beauchemin\'s Blog</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.boingboing.net/\">Boing Boing</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://blog.changethis.com/changethis_newsletter/\">ChangeThis Newsletter</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://blogs.conchango.com/christianwade/\">Christian Wade\'s Blog</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.cinematical.com\">Cinematical</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.dealcatcher.com/\">DealCatcher.com</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://dealnews.com\">dealnews - Today\'s Edition</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.dilbert.com\">Dilbert</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.engadget.com/\">Engadget</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.fark.com/\">Fark.com</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.gizmodo.com/\">Gizmodo</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.hackaday.com/\">hack a day</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.huffingtonpost.com/\">The Huffington Post | Raw Feed</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.ipodlounge.com\">iPodlounge</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.jalopnik.com/\">Jalopnik</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.sqlskills.com/blogs/kimberly/\">Kimberly L. Tripp: Improving your SQL skills</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.kuro5hin.org/\">kuro5hin.org</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.lifehacker.com/\">Lifehacker</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://sqljunkies.com/WebLog/nielsb/default.aspx\">Niels SQL Server Blog</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://savethehumans.com\">Savethehumans.com - Recent Headlines</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.simple-talk.com\">Simple Talk</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.slackermanager.com/slacker_manager/\">Slacker Manager</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.space.com/\">SPACE.com</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://blogs.msdn.com/sqlclr/default.aspx\">SQL Server 2005: CLR Integration</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.sqljunkies.com/\">SqlJunkies Just Published</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.sqlservercentral.com\">SQLServerCentral.com Articles</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.sswug.org\">SSWUG.ORG - SQL Server Headlines</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.sswug.org\">SSWUG.ORG Articles</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.tuaw.com\">The Unofficial Apple Weblog (TUAW)</a></div>"+
+"<div class=\"blogrollitem\"><a href=\"http://www.michaelhyatt.com/workingsmart/\">Working Smart</a></div>"+
+"<a href=\"http://www.bloglines.com\" style=\"font-style: italic;\" >Powered by Bloglines</a>"+
+"</div>");
+function drawBlogroll(s){
+  document.write(s);
+}
+// -->
+<!-- 0.052:1 -->
+_.http://rpc.bloglines.com/blogroll?id=UtterDoulYtext/htmlÓ%&OşGIF89aP  ³  ìfüşüd¬dfd Z  7   ‚           í +    !ù     ,    P  «pÈI«½8ëÍgø`(dih*@ë¾p,`ßx®ï|/«™pØªùH$pÀ":aÆ¤tj[6‹ì•víº¢¿N\½ÌÑ´Ïú…ß4,÷;.ÿìFğ}OÖçØ_]YZM,†thj|hfxw~cAnq/…p”4ušy|f’\^•p¤™ŠgŒv{<€O² Tµ¢²N´¶¼±¹D»¼µV)ÅÆÇÈ$ËÌÍÎ ;_+http://pics3.inxhost.com/images/sticker.gifÓ()O8GIF89aX  æ     Åİİ¾ ™Ìfff½¹§(lœ¤¤QSSïïïÅqF n©f™™333ÁaŠ––®!1ÓååÚW£ÄÔ R—z||ºéÿÿÿ’äRäm££¾ÕÕÒq& 3f…ŠŠ&?jæææÕŞŞ=`‚Ò@
+¯¶¶ ‹Áÿ†< 
+IÌÌÌDEE¥nJ F†Z``)o€ìc¢W3¿¿¿İ—g†®®ó÷÷õ³zWZZq{{3Ìÿği"Xw;CCİcÌ3 Şìì)s¢nLEÿÌ™{Òêıì®ŠŒŒ¦Ú 6…ìkùUc}„Îİİ²¡šµÌÌˆJ-Şl¨¿¿ŞJ ^¥ uµ«‘yçl'Ê I–ït%çZÔ½œÌÔÔ+9cÒ…9X\™HQQ:<<pŸSo† dßßßŞy Æœtêz¬­­åïïÉ$ßS´ÁÁÁM())DI‹“•À¦ËÛùŒO¯x`àb f™¹WÕ;£Õ•8=Éñ[ò€1!ù : ,    X   ÿ€:‚O„…†‡ˆ‰Š‹Œ†‚‘„M•–—˜™š›œoR¤t¦¦„’6®¯°±²³´µ¶·orIYTTUXH}©:„­·ÌÍÎµ	i+¯s»..½¿XßÇ„Ïäå·­4^lafÖIIØÚÁUßßt„	æüı¯NQÔpY!ÇÏ;xñ\”qr@H•bßŠè{e¡bÅ3±Œi†ÀÂ³ lÙ°áC_Tø1hmW.Fn”¨àí$š,ÃPÀû`YØÈlŒGg3BÖ²1ŒI5PT~™ú%„"7– pAåæM,X$°‘`†G¼Ø7Ãš#®ÿÖ 8ÔÕµö¡UT.Ğ¤V •eÃ‰5QîÜ‘aç†ãuêüÙÑÏ°¯`±ì„UÃ‘3Hxº"È´$f4  kLƒ#^x-ÃŒ omH@â áVÜ11áJŠãu–,Ñ²£y™=Ğ£g¶Áf¤ueG®8"ÚÆĞ8GFıbÌu£6 ĞÎİ‚1/¬'% æºõ	ìÀ!£¿ÿşÍí°Åİ@4Qİu œ`AX‡{C‰ƒxFYğÀyî°„º‡ŞH‚‡öQ'‚?˜à†wl!ãŒşi{xà© ß&0F^qä@cHÄÿ	0~^ü($l@C²Q$8ÄÁ†lxˆ%•l”Y&#Ø1Á0*6ã›1¸ABhgRH!–™l4È„qÊ’lÄ#ÄA	 ğ9Æ úgz¹B ‡® ¥=À'@Ì @bwDÅ›¨Ê	C@ vÖPC @Ôj«­M4‘à­¼êÊë¯	êêë®Àò:Bh$†[h€ê›?@ğÃSğ!†dÑÁ'Üvë­%M1{w8ûìŒ&üPÜ\0Q
+(0ÀÀ¶ßÖk/&;…©ÎÆx.›Ü`D%¯¼OäškNMäĞ€ÂG,ñÄ¹zHñÿÅMtFhpê‰ıÃ>Âó.Â´L@.ÃÜòÌ4×l³Í póÎ37¥XÇülJh¡…¸€‡ÊU°Ür$ÀË ôğ@ËO¼ 4ƒpµ×€½|RsVw öÚl·ı†¦6«¹C+QôÈÀÃÒUôİ4OÌ,FkLíÓ:uA”İ²ÖP@ HÀƒ›í 8ÎóÌR´ F¹Œk®Œıİw
+ğPßNO-óË¨W; ¨wÀÌôÖ  o ğqƒÎ¶+N ÆŸ ƒntœØéÿ]a=Éñ27Ü ¬ğË¹‚¯^ÿê`şo[MXişòã7±ó
+¯‘Ç¥“{úô/@ˆ  =`a#HàËØ€¨goÂ ˜À
+şî   Fğ ÓPP=o 	*HÂÀNØO¿øå,şùO ø€åñR	TOøÀ€  PóÂ†xá:Á@)œÁPq  ˆHÅ*…pøAéH×±-ü@ mcÆ lø¢†ÀWª(D+±nt#ãHÇ3`qM?š~ Æ6è!È‚ ÏxF!ÈK
+"H¤"ÉÈF:ò‘Œ$
+¥52.vlZ?Ğƒ&c‡ò•“YpÁÖäE†Hšr‘RJ¥*WÉÊ38!mˆŒäÖ1MÚRıq â!(Àd`€Pƒ°ò˜ÈL¦2„DXFa_øëØn9…-ø'2´‚s˜‡”ı"fÂršóœ$ôÂ
+œ`¸“>ˆ§<çÏØÓXC0¿)yùóŸ ¨@JĞ‚ô  D   ;_?http://sfx-images.mozilla.org/affiliates/Buttons/88x31/take.gifÓ+,-O)‰PNG
+
+   IHDR   X      cÈ
+à   bKGD ÿ ÿ ÿ ½§“   	pHYs     šœ   tIMEÔ9<[øÁ  ¶IDATxÚíš{pTUÇ?·o¿owÒI§;iy„„ğ0„	A@¾G™YugG×-uwÀšÚÚkk«¶jkwj-‡ª¬Y\qÇÅÒyÔ@­Š‚âDä¬<šD‚IHB§»“îN'İ÷öíûØ?pºŒŠ2ÿìÀ·ª«Î=uîïœóé{¿ß9ç
+¦ir-
+üå/LOÏ½¶é 7tÍ²~UƒÇ~sDìîÛj†ß×Š½¥CÒôÆ¦–5k…ÚµŒæ£éäP4Íşúñ‰8¿`§Ëş¼3=şWÓ«jß57¾ä½çVÁ_Y^:'UŸTU=o¹îıyŠş†>ûÚù÷—o ½"áj.ÂUõ«n¿îc‹¸ù¡HwÜ.@Q5I™áhšô¤Š(
+Hv+6«§MD•µD&«¾.•:·wşËı7 °å®Ÿ\IíßæM“İôOw ÙEi…xR&›d"‘åüå9UÇ+Ù)ö:0°Y-èºAEĞÃÄ¤ŠÛ.² ÔÎı‚ê5` 8üx£¾¾>^àùé–u_m*÷yY-Ö”{(¯("£hÄG3ôwÇ`$C4!§x$N§İ0Á4I¤d%nÆ2²’'£hü|ÿ%ßwñzp³uÀƒÀ‹À¶ŞŞŞÕŸü½çß„Ê¼¯[³ÕÑ$mKk¹4–áÜÙş÷`?®ñ<—3
+=£iä	…T,I.#£ê™+®BÎi†A™ÏÅDF¥ÌçàğˆÉö7_O^a=ğ“ßC¶ T5·:uÑ½KW…æÁãa¤‰óÌ¼yo½~··ŸÄ>©‘uX8<0Jr4Küò‘c„wãÒ‰3¤²R‰ôdœªÓÓ—`$6ˆ¦øÅ‘<ƒÃ×äV`coooÀ0kqÛã•ÓƒK.d±¾“‡–ô‹%9t˜Ğ…—i°}ÄÁ¡,ãªjCÏ[17xjˆï'~ø(Ã±,’ÈrLFÅ%Š$†ÓGÓ˜ÑI~¹ûìõßÖë,­m®™+¿½éÃ³¼ñÓ¬š3ACE†HdSÓioŸÃXùl.w_`v´ƒù©}T$Oa‰ö’êCÍçIídüÜyfÕ82<”¢§ŸEÄ.XÈqøØ$—#Ñ¯U<ÿÆf˜Édş {ñxœL&óµúêïïÿ¢ê5âú?{û8Å{´ã#nóŸeÙÍ^&2EdË1–-Y€|şşºè¾ú[ƒ½<ºÜÁ÷—ÙYY— Xÿ¿;Bfhwå|L‹ˆ`@©ÓAÀc#yò#rÑ4yÁE ,KóœZúûûÙ²eŸûe³YEñÜÛÛËÓO?Íúõë¿Ò^<gãÆ455QVV†År%<…Ãa6nÜHKK>Ÿïª÷?ñÄÔÕÕ
+…¦d»VÁWÓ~ébœÉKi‚Õ!¼••dÒãÌVº˜-Æi™EKPµRæ-i§ªº
+´,ßtî_SÍ{GŞg÷şÓüêÄI¼óLoNF¶@f8†à*!osĞ}éÊÓ!IròäIV¯¾t?şøc’É$Éd’`ğ›Kïzzzhjjúò­€@ €ÁÁAêêê$©P¿téRFGG)//Çår]ÕÆåË—™5kVá^ ÚÚÓ«9÷şEr£”øı´ÜûcØÃ—Øşü8ûÆ6F£ô|Æù-TÍiDË¤0-NÌ¼‚ÃãàµNgù +†TTD.‘d üzÅL¯ÁS„ä™Ì™†A `Ã†tvvròäIÚÚÚƒlÙ²…H$Â¶mÛp8lØ°šš~úÓŸÊ;vì àv»éêê"‡Y±b+V¬ `÷îİtuuQ]]=Å]ìÙ³gJÛúûû‘$© øØ±ctvv²jÕª‚½D"A(b×®]x<âñ8sçÎE’$vïŞıi ŸKá,}#’Oƒ*à¯kÁá­£¹í6êÜ—ˆŒ$ñÕµ"•N'Ø°ˆ-«0]~o–âö@5_%£“"õÕÍÔx$‹…D4C>#ã,¸}ÅxÜvœ‚†jq¡(
+ 6›’’’ÂH‚Á v»p8Lqq1‰D‚^xY–éêê¢¯¯Y–	‡Ãô÷÷cš&twwãñxØºu+©TŠ;v°cÇjjjèîî.Øß¼y3,\¸­[·²gÏâñ8{öìa``€¢¢" r¹@€—^z‰;wÇéîîFUUdYæå—_FQEáÙgŸE×ut]¿êSmIÎØ\væÏó£•5ŠÊêi[÷ ¿}wh¥Õó¨l¾ÑW…PR‰š…à›AïÀ8;ûo¾{„¬]¢zzˆã+Ş ²€„ÛiÅĞtœÅšaÏç¿ôU]½z5+W®¤¡¡Ó4 ›Íb ªªìÜwß},\¸€¡¡!Âá0­­­,^¼˜{î¹§`7#Š"‘H„ÒÒRN:…¢(TVVrûí·\ÒòåË¹ûî»immåôéÓ¤ÓéÂ Iuuu´··“H$e™uëÖ±nİº«¯B„hjHÕD¾³f‚€«ÃÔ±åµ‹¨o>Ã‡‡öÓvÛzì’p‘Ìrúàû\üğ(˜Yªë+YTÙHĞçä‚éà”VLÚH!S„Çmãr4…ê-&äv2¹¶\8âõz¯9Ğ•——Ê±XŒP(„Ïçã³Û ^¯AX²d	‡ƒl6‹ËåÂétRYY9¥I’Ğ4Y–§î-’$a³Ù Ğuªªª/Yæ‰Îpn`‹8ù¥2ÉŞÒJÀdÑšØ÷ËèíÁ)•rîè«$"ı”Ü,^:‡²€İŠ‹)ã*ñšQÄğñ£Ì˜wc‰ºÓE©_bäÌ UÓ&±Z­_+P¥R)²ÙlàÕÔØØÈğğ0¢(NIÜn7N§“»îº‹‰‰	\.˜òGF£Q²Ù,Ç§¢¢¢ğÖ|VsçÎ-´¯­­½:`=ÿÀR^¦ô—8«.GÕl€†ŠEh¿{='t dejª,]v—ÑÔASÑó2¦–#“‡ŞxN<‡¤‹¤²Í8]¬(BtŠ¤R
+åóm8?nKK{÷îåĞ¡CX,.^¼X˜àguçwòÌ3Ï°iÓ&ÊÊÊ
+õO>ù$›7oæÂ…ˆ¢ÈÃ?ŒİnŸ:::Ø»w/n·›µk×’Íf¿°ŸššÚÛÛÙ¶m¯¼ò
+n·›h4úÅ»iî²GÎ]0kÙ;/¯Á?m.ÆÌg!¯ :z^FD]ÃTeŒ¼‚™Ïaê*h9MEGä‡Ù»{;;û¿OyëH¶<—zbäTeÒà/nËñ£ş¹Å@___!êëëC’$‚Á ±XŒL&Cmm-û÷ïÇçóòÓ¢¢"‚Á`áŞOÛ‘e™ÎÎNü~?6›|>OSS###œ8q‚úúz B¡Š¢úĞuóçÏ388ÈŒ3E‘úúzTU-Øşô˜ Îœ9C.—+dÁ`¿ßÿûé]LÓÄn¿ù1ÑvË¶ÿügßıÎ|œ¾zp–‚nÂ'0|4S»õ
+ÜOÊšŠ]„#ûØµÿÏ\F}[‘YìvF>Ç?ş ”u÷ŞñG­ÌœNgáú«|´,ËŸË[u]GQ”/K­¦µkQ>ŸÇb±|Ñx~-˜¦‰Åâò:¤?;2# 4Ş:¿ys‚,lISóMxŠ‚XD7‚)bh9Œ|SS>«bê¹+e]EQ’ü×ÿŒòwÛÒx§×ã«,GGp¦!ã?~ö(uuu×Ó~ÄcV Ã'¬öiGÌG~÷Âk£N^¦Ôáæ¦N–µxho©`Şœ™øŠ+°ŠnĞ]ÅĞr )˜šŠE0pØ‹yëh?‚2„E)a2* M¦ÉOd¹wEÉ”Äÿ:ĞëÀ…®©—‡îüïò™‹H~|€tVË¼Û)kïvêÅeE#çÛõxoi)Ş¶ ÄM3§ãq!bÁ44ÓÀæ°°¯k’s}YD”ÑAˆ_B°:±IÖ¬}ükgÿÕ	<W__Ÿ2ãôÈŞŸä½â\GEËrmô”-ö¦€³"‘¶*¯ÈlıÀdÕk|3­¸“o5;Y4'Hİ´ Å.7ˆÏ($S“X°›Ô\3—aAû4šš¯§'÷¹úúú÷>wªlšú  Ø…O¹ı³`Z–êúø¯¬0(à™01GoYy+©ñ4ôòŞé1ÈcNµÎœ†™¼õÁ9-ƒÏåÁãq§i¸©ˆ>õ`a)z½É}á©² >Ağ¬³Š3¿‹f¤'¬“€ ‚	¦abºh¶ú}åmíK?´oßqkNQ¸iv-ÃC	Ò™¡4.üŒı¦ij7N•§Bv~¿W¤²Ô‚»L¯€iAÔÑu-=§¡væ’Öæ§ö¼}¨"6–`Şì&'eú†O}`2ü¯`t˜¦)sJ¸–O§¡Ø*à÷
+8‹’EìeAÿ´PEùÊÊiåO:Ô%åÔ<3BÓPòÉHÿĞé·aôßó¦iæ¹%\ë·iŸUsÓŠïÅcé{Gâ}ã^Ï(õƒ±xXÎÅ §LÓLrC_ğ§ÜˆGÃ4MĞ¬išú´ß àújıUvªÈË•    IEND®B`‚_Jhttp://sfx-images.mozilla.org/affiliates/thunderbird/thunderbird_88x31.pngYimage/pngÓ/0OŒGIF89aX  ÷     €   € €€   €€ € €€ÀÀÀÀÜÀ¦Êğ)c” ”ÿ œÿ”ÿœÿœÿœÿ¥ÿ!¥ÿ!­ÿ)c”)¥ÿ)­ÿ1c”1kœ1­ÿ9c”9k”9kœ9­ÿ9µÿBkœBsœBs¥B{­BµÿJsœJ{¥J{­JµÿR{¥R„µRŒ½RµÿR½ÿZ„­ZŒ½ZµÿZ½ÿc”ÆcÆÿkŒ­kŒµk”µkœÎk½ÿkÆÿs”µs¥ÖsÆÿsÎÿ{œ½{­Ş{Îÿ„¥½„Æÿ„Îÿ„ÖÿŒ¥ÆŒ­ÆŒÆÿ”­Æ”Îÿ”Öÿ”ŞÿœµÎœÖÿ¥½Î¥½Ö¥Şÿ­½Ö­ÖÿµŞÿµçÿµïÿ½ÎŞ½çÿÆÖŞÆÖçÆçÿÎçÿÎïÿÖŞçÖçÿÖïÿŞçïŞïÿçïïçï÷çïÿç÷ÿçÿÿïï÷ï÷÷ï÷ÿïÿÿ÷ÿÿÿÿ÷ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûğ  ¤€€€ÿ   ÿ ÿÿ   ÿÿ ÿ ÿÿÿÿÿ,    X   ş H° Áƒ*\Èpá…‡#JœH±¢Å‹3V¨±£Ç 1rI²ä{(Sª\ÉRåÃ‘&cv´÷ÀÍ›8sê|`ï%€‡>‚êHq!„6BèğQÔÇ‡>–e:U‡	¨S±F½
+Th	6‚}hÏÁ‚³hÓª]ë ç…‘A±^8ºéQ)|˜à€4nW¾:äv…¸kİ¡L/%k­ƒ7„ ‰båIc¶náRİŒÕ…]ğõœXn\¿¦KŸşü™/Æi#H!Ã¦6&kgş™:u^£:b„ğ‘WµÃ‚{wÕunŠaa§mpBí¹Ï¶õÙ5*ÑÕ%|şw¡cxø¬S‰kåŒ:=Ñ:KO+ÁzmÙlËuêÑâÇšq„%·D§V×q•µÖ
+¶‘Ÿ~»† {6¦ÃQ²G`{œ%wÒeh	anùí§YDt!¥˜‹G¢rXñõabş9˜ÖYØv80ñCj©Ø_iE•Ô1øàÂÅ°^oé­GTwNZ8ßYĞVcØFFi)Ó™éˆÖ	¶±±Å=Ö6Åef¢i'Ejebm[4°€hÔF†ºq§Qm!zgEy:`…m8œÕ€—lŒP()
+‘¦‹J”g—µ©AæY”Zª]…˜ñÅ\°ÁÅş_˜±)W°ÅCŠ¶ğ_´ğPlT¡(°Â²ñĞ»†1®lä ëˆi`Hê%\:j\pgxû*³ (ªh«ğÊlºÆ^P»…ÁFº«ºkÛ–{²!ZÊFøj(l `›Á·2k¯Â›k¬ÃÛ«Ã=4H¢¶Ö
+ö%Q&ªD°²¼!1kÄ§Ü.¢ŠnP„¼+·;^„ŠİYOÔ†Æ¨czÁ´Ú,Ë*qÃ1Ãk¯Ò»sDjZp-¡ôË†FX§ÁÖm
+'Ír»ÀÖJvĞO=ŸBX§†@€1Y‰ênã}5tÒévñ®ô&*3Ãïª­c/dARhA†+0€™¡°ª»ëªc»Ã3ÈÛëCß’ÀÆ³¡şëĞO[¼Ö° DfWg§ !¯5<d;îÑ¤ÓïÀóD9ív¶düñw¯|I0-ïüGE/ıôÔG  ;_/http://wbloggar.com/images/wbloggar-button1.gifÓ23O<!--
+document.write('<div class=\'technorati\'><p><a href=\'http://www.technorati.com/profile/utterdoul\'>Technorati Profile</a>');
+document.write('<a href=\'http://www.technorati.com/cosmos/search.html?url=http&#37;3A&#37;2F&#37;2Futterdoul&#46;myblogsite&#46;com\'><img src=\'http://static.technorati.com/images/bubble_icon.gif\' align=\'absmiddle\' hspacing=\'5\' height=\'20\' width=\'24\' alt=\'Get Conversations about Random Signs of Intelligence :: Main Page\' /></a>');
+document.write('</p>');
+document.write('</div>');
+// -->_)http://technorati.com/embed/vwa5zcfnzp.jsÓ56O1GIF89a  Õ     ÿÿÿÿÿş‘£¬ıüı6wİ<{Ş-sÛ0tØ2uİ6yÜ7y×:|à9zÙBŞ<|ÕE‚ÓQ‡Í8yÊI„ÎZ’ÕPŒÒh˜Ğz¤Òˆ±ÚÏÔÙÅÙë¹ÈÖ¬¿ÏŸ¯½³Îâ§‘£­¡«“¤®•¥®sŠ•…˜¡”¡¦Òäê•¦«äïòáëíéõöıÿÿşÿÿñ÷óùıúíñîışıøü÷úûøÿÿüşüôÿşúâáŞõóîïëçÿüùêéèéäààŞİæææÚÚÚ,       ÿÀÌoHüõnÈd¯8ì•|¨TÒX¯)šT
+‚
+TÏ…Y åâq¿hÀæ© 	Dãñ0ã'-qsV	Z†Y_Q40‚;2,`[´ ;76ƒ¢¶62";¶¶_Š)#ÑÓÕ-ÈR„”+Ş?ÂnäQ_0
+/Ğ9
+Ü\àƒ?½âèà0íŸ*dÄˆ!C…‡~DPQÈ&8pP`A…0\¨° É	ŒÅ ¤®‘8€GÁV´tccÃƒ‘ö@XÁÂ…0¶"x!A.pØÊ!C:æE1$`ƒ„	ZyÔX»–@-ãÆFaÃÇ^Qb@ˆ&Pˆ@¸°áÃH ;_3http://static.technorati.com/images/bubble_icon.gifÓ89OuGIF89a^  ÷  ¼¼¼îííôôôúúúïïï>ŸÅëëêñññşşşùùùÌÌÌ×××ÛÛÛİİİæææßßßáááäääéèèøøøµÜêËËËºÅÅÅÑã$‘¾ıııZ¯ĞÓêòN¨ËìììËãìòòò~ÁÙ»İëöööÍçñûûû½ÙåéÒÒÒğğğ> ÆJ£ÅY®Î©ĞŞ,–ÀqºÖªÖçóîìØéïy¿ÙQªÌÛïöE¡Åÿÿÿ™ËŞ»×àüüü½ÙäV¯Ï1™Â¶Úæi³ÎàààöûıêêêØØØv¾×’ÉŞÔÔÔL§Ê”À<ŸÅÓáæšÍàm¸Õäíğ–Âééé¡Óåq¾Ù¿ÕİÚÚÚl¼ØöòğÊÊÊe´ÒA¢ÇJ¦Ê›ÆÕÿúö˜Ãëîï=ŸÆŠÈŞèèè¾àíòñğñøûîêéæêë.Æ‰ÅÛ7£Éb²Ñ@ Æ8Åí÷úşüú5›Ã6›Ä>¥ÉŞçè= Æ\¯ÏéõùŞŞŞŒÆÛØŞáûış¡É×¨ÏİB¢ÇÌßæğğïÃáëışşøôò8¤ÊàèêĞâéşÿÿ^±Ï†ÆŞ;ŸÅññğÂÛãü÷õl¶Óãããu³Ìçççáñ÷;ÆR¬ÍøùùŞïõÁâî¦Óã.—Á¦Ïİ= Å°ÔâÎÎÎ–ÍàE¥ÉÅŞçI¤ÈÎĞĞ×äéåææÉßè­ØçD£È‹ÆİÕÖÖ”Å×ÖÖÖ’ÀÈÖÚãçıışÜÜÜ„ÈßÁÔëåãäååæççËá —Â ˜Ã÷ôót»ÕÎàæğòòßŞŞDªÏÖìó¬Ôâ¨Ë×ÕÚÜäêìëééìîít¸ÑÍÍÍúúùüùøÅßêÆÕÛÂØß—ÈÛ¨Ğà«Õäõõõÿÿü¯×çÕìô> ÅÇàéÆâíÇäïùóñáããùöôÿöóÈÈÈ>§Ì:§Ì¡ÕçãëíõôôñğğåìîÛçëíèæüüıÒäêĞåìÖãèôéå.Ã¢ÊØ¢ÌÚ¡Íİçâá|¾ÖÇİ; Æ7œÄc´Ñd³Ó€ÃÚ…ÄÛ¯Úé@¡ÅÍÏÏ8Ä†¾ÔÒèğC¢ÈB§Ëïõ÷µÔŞH¥Ê!ù     ,    ^   ÿ H° Áƒ*\È°!Á#JœH±¢Å‹3jÜ˜@à€ CŠI²¤É“(SªàQeŠ)C¦ÀTY`%ÉšpÚ©“§H‚
+:´ÕB<!Ê4hM£2…úTªUT…V
+ôjĞVVJ-@Ö©YdM«U­S·pË¶«õ¬Ü§ntõ:ÅÊ uFKµ0¸X«=ìT±aÄŒµ2®JY±Z·hŞÌ™ó+	Rp&»ùéÓ¨h&½ZõÕ¦OÃ}:­kÙxiÇ~zXuær5ŞD€"o4Q€@çÃ­eKıº@tëÒ§ë,xôé×Ú¯ûÿ Ğ8pøÁá‘IŒÍ(LRš´kÛµ­Ã¶¿ZvÔüÕÖn÷İ'Ş@@5Ë¤2K=› á„×(øI€¡ ‚ÜmH@‡
+¶!ˆ"0â‰!š8¢ŠšÈâ‹Æ˜ UèQË$Îl¡‡	Ü´¡ &òÉâáDiä‘H&©¤‚@—pÁ"'bFÆ8‰J’8éå—`†)æ˜d–if™M>©<ğ@ú8ã¥)zpæxæ©ç—ip‰_@AE T€Œ“F`(„ë@ÒáÜiNGĞpŒ—|¸ğÃg
+d€d¨ÃE[ÄĞB*QØò)
+>ñé«°~ÿêÃ3•bÀ	ÏÌ	}Äê«eøŒği•!Lğë²ÌÂê©â¤3*6çXƒÎ.:|zá4k@G¨	8 2J`€ g¼ĞÉ§q´SÄïĞ
+P”`@/•P@G1”S3›„ó)9E¸Ç§¢œ¢EÍ>‹*H`C?˜ğÅŸ9A(Ş®q5–@Ñëè‚ Iğğ†,ÒÃoXĞŒ‰’¯i¨á=ê2qˆ¼€È GDâÆÂH³+¬ ï²I ;¾˜ˆ6lãÊßXM§$XmöÙV÷°
+Là!€K¨Àó¬ÁA*Ì!ƒõÿ‘…H°ƒ
+” ,¼ÈAÄ ¤%_tğop‚$àA) Úgä€ºü‚.ƒÒ ÁŒî@¢ó¹.»ìk‚E$l<áÀjp‚=sÜ  œP`	#¸9>ÀèJ¨1C	\1ÃKğüãIatñ‚%‡À Äì²‹şú¬f¸¾ìÜÀ
+^¤°{4¾/²ĞĞ– 0
+±¼ÈÏs@201½êAvàHÁ‰Gp`Hè0$à}HFHÂ–°}0¡
+Á¥‚P` À>8@ >¢ñøG‚p7ÈCĞ@ÿrğP
+,AäñÒ€ÌğB$æP„pè¡· Ân B
+`£ÅxÅbŒh<Ãf@	áA@	0C  ğ"¼ 7˜À*0 A¸C&‘ 0Şa$ 2A$‚„€À4f`ÇIø£ø4€Æ0
+ä ¥(EI1b”¨|@	tP ”˜@`©€à6€Z( P2b% På±|å4 8 ãhf
+R	J4àšØÌf²qnfcĞ¦8ÇINljáùP&PÎvŠ³€g;Â€zÚó@Œ€Ràø¨@zÏ& ¨BJP,à¡è  X´C¨F7ÊÑzô£ Õ¨@@Ò’šô¤(M©JWÊÒ–ºô¥
+pˆLgJÓšÊ4  ;_/http://www.bloglines.com/images/sub_modern2.gifÔ ;<=O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÔ?@A#UUTF-8OQº<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" ""><HTML><HEAD><TITLE>Random Signs of Intelligence :: TiddlyWiki is great!</TITLE>
+
+<LINK rel="StyleSheet" href="/_templates/style.css" type="text/css">
+
+
+
+
+<LINK rel="alternate" type="application/rss+xml" title="RSS: Random Signs of Intelligence" href="http://utterdoul.myblogsite.com/blog/index.xml">
+
+
+
+<LINK rel="alternate" type="application/rss+xml" title="Authenticated RSS: Random Signs of Intelligence" href="http://utterdoul.myblogsite.com/blog/index.xml?secure=1">
+
+
+
+<LINK rel="EditURI" type="application/rsd+xml" title="RSD" href="http://utterdoul.myblogsite.com/blog/rsd.xml">
+
+
+<META name="Description" content=""><META name="Keywords" content="">
+
+
+
+<SCRIPT language="javascript" type="text/javascript" src="/_system_templates/rich_edit.js"></SCRIPT>
+
+
+
+
+</HEAD><BODY>
+<DIV id="content"><TABLE border="0" cellpadding="0" cellspacing="0" class="columns" width="100%">
+
+
+<TBODY><TR><TD class="header" align="center" colspan="3">
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="blogHeader"><TBODY><TR><TD class="blogHeaderLeft">
+<DIV class="component"><DIV class="componentBlogname">
+<IMG alt="Devil Baby" src="http://www.blogware.com/profiles/utterdoul/thumb.jpg"> <A href="http://utterdoul.myblogsite.com/blog">Random Signs of Intelligence</A></DIV>
+</DIV>
+
+
+</TD><TD class="blogHeaderRight">
+<DIV class="componentText"><SPAN class="componentRssLink"><A href="http://utterdoul.myblogsite.com/blog/index.xml">Syndicate</A></SPAN></DIV>
+
+
+
+
+
+<DIV class="componentText"><SPAN class="componentHomeLink"><A href="http://utterdoul.myblogsite.com/blog">Home</A></SPAN></DIV>
+
+
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR><TR><TD class="left">
+<DIV id="leftcol">
+<DIV class="component"><DIV class="componentHead">Site Meter</DIV>
+<DIV class="componentContent">
+<SCRIPT type="text/javascript" language="JavaScript">var site="s17utterdoul"</SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript1.2" src="http://s17.sitemeter.com/js/counter.js?site=s17utterdoul">
+</SCRIPT><A href="http://www.sitemeter.com/stats.asp?site=s17utterdoul" target="_top"><IMG src="http://70.84.241.242/meter.asp?site=s17utterdoul&refer=&ip=81.155.57.205&hours=7&minutes=23&rtype=4&rnd=0.4215786505591025" border="0" title="Site Meter"></A>
+
+
+
+</DIV> </DIV> 
+<DIV class="component"><DIV class="componentHead">MICRO BROWSER</DIV>
+<DIV class="componentContent">
+<IFRAME width="200" height="300" name="MB_BA74106C3B9A479083FB4E19A029CFA7" src="http://b1.bitty.com/browser/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D"></IFRAME>
+
+</DIV> </DIV> 
+
+
+<DIV class="component"><DIV class="componentHead">This Month</DIV>
+<DIV class="componentContent">
+<TABLE cellpadding="1" cellspacing="1" class="componentCalendar"><TBODY><TR><TH colspan="7">May 2005</TH></TR><TR><TD class="componentCalendarDayname">Sun</TD><TD class="componentCalendarDayname">Mon</TD><TD class="componentCalendarDayname">Tue</TD><TD class="componentCalendarDayname">Wed</TD><TD class="componentCalendarDayname">Thu</TD><TD class="componentCalendarDayname">Fri</TD><TD class="componentCalendarDayname">Sat</TD></TR><TR><TD align="center" class="componentCalendarDay">
+1
+
+</TD><TD align="center" class="componentCalendarDay">
+2
+
+</TD><TD align="center" class="componentCalendarDay">
+3
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/4">4</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/5">5</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+6
+
+</TD><TD align="center" class="componentCalendarDay">
+7
+
+</TD></TR><TR><TD align="center" class="componentCalendarDay">
+8
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/9">9</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/10">10</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/11">11</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/12">12</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+13
+
+</TD><TD align="center" class="componentCalendarDay">
+14
+
+</TD></TR><TR><TD align="center" class="componentCalendarDay">
+15
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/16">16</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/17">17</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+18
+
+</TD><TD align="center" class="componentCalendarDay">
+<A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/19">19</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+20
+
+</TD><TD align="center" class="componentCalendarDay">
+21
+
+</TD></TR><TR><TD align="center" class="componentCalendarDay">
+22
+
+</TD><TD align="center" class="componentCalendarDay">
+23
+
+</TD><TD align="center" class="componentCalendarDay">
+24
+
+</TD><TD align="center" class="componentCalendarDay">
+<A style="font-weight:bold;" href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/25">25</A>
+
+</TD><TD align="center" class="componentCalendarDay">
+26
+
+</TD><TD align="center" class="componentCalendarDay">
+27
+
+</TD><TD align="center" class="componentCalendarDay">
+28
+
+</TD></TR><TR><TD align="center" class="componentCalendarDay">
+29
+
+</TD><TD align="center" class="componentCalendarDay">
+30
+
+</TD><TD align="center" class="componentCalendarDay">
+31
+
+</TD></TR></TBODY></TABLE>
+</DIV> </DIV> 
+
+
+
+<DIV class="component"><DIV class="componentHead"><A href="http://utterdoul.myblogsite.com/blog" style="text-decoration:none">Main Page</A></DIV>
+<DIV class="componentContent">
+<DIV style="margin-left:10px;">
+<IMG src="/_images/imgfolder.gif">Â <A style="text-decoration:none" href="http://utterdoul.myblogsite.com/blog/Photos">Photos</A>
+
+</DIV>
+
+</DIV> </DIV>  
+
+
+<DIV class="component"><DIV class="componentHead">Recent Articles</DIV>
+<DIV class="componentContent"><DIV class="componentRecentArticles">
+
+<DIV class="componentRecentArticlesItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/25/885261.html">TiddlyWiki is great!</A>
+</DIV>
+
+<DIV class="componentRecentArticlesItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/25/885242.html">The Joys of Blogging</A>
+</DIV>
+
+<DIV class="componentRecentArticlesItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/19/872759.html">Quixtar Blog: Blogging 101 - You Don't Need a Blog</A>
+</DIV>
+
+<DIV class="componentRecentArticlesItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/17/867228.html">Weird nightmares</A>
+</DIV>
+
+<DIV class="componentRecentArticlesItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/16/863615.html">Ugly Aquarium Sites</A>
+</DIV>
+
+</DIV> </DIV> </DIV>  
+
+
+<DIV class="component"><DIV class="componentHead">Recent Reviews</DIV>
+<DIV class="componentContent"><DIV class="componentRecentReviews">
+
+<DIV class="componentRecentReviewsItem"><A href="http://utterdoul.myblogsite.com/blog/_archives/2005/3/16/442011.html">Robots - thoroughly enjoyed it.</A>
+</DIV>
+
+</DIV> </DIV> </DIV>  
+
+<DIV class="component"><DIV class="componentHead">Blog Roll</DIV>
+<DIV class="componentContent">
+<SCRIPT language="javascript" type="text/javascript" src="http://rpc.bloglines.com/blogroll?id=UtterDoul"></SCRIPT><DIV class="blogrollmain"><DIV class="blogrollitem"><A href="http://www.43folders.com/">43 Folders</A></DIV><DIV class="blogrollitem"><A href="http://blogs.zdnet.com/BTL&part=rss&tag=feed&subj=zdblog">Between the Lines</A></DIV><DIV class="blogrollitem"><A href="http://www.scalabilityexperts.com">Blog Entries</A></DIV><DIV class="blogrollitem"><A href="http://www.bloglines.com">Bloglines | News</A></DIV><DIV class="blogrollitem"><A href="http://staff.develop.com/bobb/weblog/">Bob Beauchemin's Blog</A></DIV><DIV class="blogrollitem"><A href="http://www.boingboing.net/">Boing Boing</A></DIV><DIV class="blogrollitem"><A href="http://blog.changethis.com/changethis_newsletter/">ChangeThis Newsletter</A></DIV><DIV class="blogrollitem"><A href="http://blogs.conchango.com/christianwade/">Christian Wade's Blog</A></DIV><DIV class="blogrollitem"><A href="http://www.cinematical.com">Cinematical</A></DIV><DIV class="blogrollitem"><A href="http://www.dealcatcher.com/">DealCatcher.com</A></DIV><DIV class="blogrollitem"><A href="http://dealnews.com">dealnews - Today's Edition</A></DIV><DIV class="blogrollitem"><A href="http://www.dilbert.com">Dilbert</A></DIV><DIV class="blogrollitem"><A href="http://www.engadget.com/">Engadget</A></DIV><DIV class="blogrollitem"><A href="http://www.fark.com/">Fark.com</A></DIV><DIV class="blogrollitem"><A href="http://www.gizmodo.com/">Gizmodo</A></DIV><DIV class="blogrollitem"><A href="http://www.hackaday.com/">hack a day</A></DIV><DIV class="blogrollitem"><A href="http://www.huffingtonpost.com/">The Huffington Post | Raw Feed</A></DIV><DIV class="blogrollitem"><A href="http://www.ipodlounge.com">iPodlounge</A></DIV><DIV class="blogrollitem"><A href="http://www.jalopnik.com/">Jalopnik</A></DIV><DIV class="blogrollitem"><A href="http://www.sqlskills.com/blogs/kimberly/">Kimberly L. Tripp: Improving your SQL skills</A></DIV><DIV class="blogrollitem"><A href="http://www.kuro5hin.org/">kuro5hin.org</A></DIV><DIV class="blogrollitem"><A href="http://www.lifehacker.com/">Lifehacker</A></DIV><DIV class="blogrollitem"><A href="http://sqljunkies.com/WebLog/nielsb/default.aspx">Niels SQL Server Blog</A></DIV><DIV class="blogrollitem"><A href="http://savethehumans.com">Savethehumans.com - Recent Headlines</A></DIV><DIV class="blogrollitem"><A href="http://www.simple-talk.com">Simple Talk</A></DIV><DIV class="blogrollitem"><A href="http://www.slackermanager.com/slacker_manager/">Slacker Manager</A></DIV><DIV class="blogrollitem"><A href="http://www.space.com/">SPACE.com</A></DIV><DIV class="blogrollitem"><A href="http://blogs.msdn.com/sqlclr/default.aspx">SQL Server 2005: CLR Integration</A></DIV><DIV class="blogrollitem"><A href="http://www.sqljunkies.com/">SqlJunkies Just Published</A></DIV><DIV class="blogrollitem"><A href="http://www.sqlservercentral.com">SQLServerCentral.com Articles</A></DIV><DIV class="blogrollitem"><A href="http://www.sswug.org">SSWUG.ORG - SQL Server Headlines</A></DIV><DIV class="blogrollitem"><A href="http://www.sswug.org">SSWUG.ORG Articles</A></DIV><DIV class="blogrollitem"><A href="http://www.tuaw.com">The Unofficial Apple Weblog (TUAW)</A></DIV><DIV class="blogrollitem"><A href="http://www.michaelhyatt.com/workingsmart/">Working Smart</A></DIV><A href="http://www.bloglines.com" style="font-style: italic;">Powered by Bloglines</A></DIV>
+
+</DIV> </DIV> 
+</DIV> </TD><TD class="center">
+<DIV id="centercol">
+
+
+
+
+ 
+
+
+
+
+
+<DIV class="categoryBreadcrumb">
+<A href="http://utterdoul.myblogsite.com/blog">Main Page</A>
+
+
+</DIV>
+
+
+<DIV class="articleAll">
+
+<DIV class="articleBreadcrumb"><TABLE border="0" cellpadding="1" cellspacing="0">
+
+<TBODY><TR><TD valign="top" nowrap=""><SPAN class="emph">Previous:</SPAN>Â </TD><TD valign="top"><A href="/blog/_archives/2005/5/25/885242.html">
+The Joys of Blogging
+
+</A>
+</TD></TR></TBODY></TABLE>
+</DIV>  
+<DIV class="article"><DIV class="articleTitle">
+
+
+
+TiddlyWiki is great!
+
+</DIV>
+<DIV class="articleAuthor">by 
+
+   <A href="javascript:openWindow('http://utterdoul.myblogsite.com/blog/cmd=view_user/username=utterdoul', 'info', 450, 600);">utterdoul</A>
+
+ at 05:45PM (EDT) on May 25, 2005 Â |Â  <A href="http://utterdoul.myblogsite.com/blog/_archives/2005/5/25/885261.html">Permanent Link</A>
+
+Â |Â  <A href="http://technorati.com/cosmos/search.html?url=http%3A%2F%2Futterdoul.myblogsite.com%2Fblog%2F_archives%2F2005%2F5%2F25%2F885261.html">Cosmos</A>
+
+</DIV>
+<DIV class="articleBody"><P>Just discovered TiddlyWiki and instantantly fell in love. Its basically a Wiki in a single HTML file, java and all. And you can throw the file onto a usb drive and have a complete and portable wiki. Check out <A href="http://www.tiddlywiki.com/" target="_blank">Jeremy Ruston's TiddlyWiki</A>Â and now there are some variations popping up too. Like GTDTiddlyWiki which is configured for the Get Things Done fad or the TagglyWiki version which allows you to tag each tiddler as well. I am too lazy to look up all the links but Google and you shall find.</P><P>I do like the Wiki writing style, it is sort of like object oriented programming. Besides I think it models the way my (and I suspect that most other peopleâ€™s) mind works. Small pieces of information and a lot of jumping about.</P><P>I am using a TiddlyWiki to manage a personal project â€“ I will keep posting on how that goes. I will upgrade my Wiki to the TagglyWiki since I do miss EverNoteâ€™s tagging capability. But now I can get it! </P>
+</DIV>  
+
+ 
+ 
+
+<DIV class="categoryPostList"><TABLE border="0" cellpadding="1" cellspacing="0" class="categoryPostListTable"><TBODY><TR><TD valign="top" nowrap=""><SPAN style="font-weight:bold;">Posted to:</SPAN>Â </TD><TD valign="top">
+<DIV style="margin-bottom:3px;"><A href="http://utterdoul.myblogsite.com/blog">Main Page</A></DIV>
+
+</TD></TR></TBODY></TABLE>
+</DIV> 
+</DIV> 
+<A name="comments"></A>
+
+<DIV class="commentsHead">Comments</DIV>
+
+
+
+ 
+
+
+<DIV style="margin-bottom:20px;"><A href="#post_comment">Post a comment</A></DIV>
+  
+
+<DIV class="comments">
+
+
+No comments found.
+  
+</DIV> 
+
+
+<A name="trackbacks"></A>
+<DIV class="trackbacksHead">Trackbacks</DIV>
+
+<DIV class="trackbacks">
+<P><SPAN style="font-weight:bold;">TrackBack URL:</SPAN><BR> http://utterdoul.myblogsite.com/blog/_trackback/885261</P>
+
+
+
+No trackbacks found.
+ 
+</DIV> 
+ 
+
+<A name="post_comment"></A>
+<DIV style="margin:25px 0;">
+<DIV class="commentFormInline"><FORM name="comment" method="post" action="/blog">
+<INPUT type="hidden" name="cmd" value="do_post_comment">
+<INPUT type="hidden" name="article_id" value="885261">
+<INPUT type="hidden" name="parent_id" value="">
+
+
+
+<DIV style="margin-bottom:10px;">
+You are not currently logged in. If you would like your user information to be displayed with your comment, please enter your login information below.
+
+</DIV>
+
+<DIV style="font-weight:bold;margin-bottom:10px;">Login information:</DIV>
+
+<DIV style="margin-bottom:20px;"><TABLE border="0" cellpadding="2" cellspacing="0"><TBODY><TR><TD align="right" width="5%" nowrap="">Username:Â </TD><TD nowrap=""><INPUT type="text" name="username" value="" size="30" maxlength="255"> <SPAN class="error"></SPAN></TD></TR><TR><TD align="right" width="5%" nowrap="">Password:Â </TD><TD nowrap=""><INPUT type="password" name="password" value="" size="30" maxlength="255"> <SPAN class="error"></SPAN></TD></TR></TBODY></TABLE>
+</DIV>
+
+  
+<DIV style="font-weight:bold;margin-bottom:10px;">Post comment:</DIV>
+
+<TABLE border="0" cellpadding="2" cellspacing="0">
+ 
+
+
+
+<TBODY><TR><TD>Â </TD><TD nowrap=""><INPUT type="checkbox" class="checkbox" name="comment_notices" value="true"> Receive comment notifications for this article</TD></TR><TR><TD align="right" width="5%" nowrap="">Subject:Â </TD><TD nowrap=""><INPUT type="text" name="title" value="Re: TiddlyWiki is great!" size="30" maxlength="255"> <SPAN class="error"></SPAN></TD></TR><TR><TD align="right" width="5%" valign="top" nowrap="">Comment:Â </TD><TD valign="top"><TEXTAREA name="body" style="width:100%;height:100px;max-width:400px;" wrap="soft"></TEXTAREA><BR>
+<SPAN class="error"></SPAN></TD></TR><TR><TD>Â </TD><TD nowrap=""><INPUT type="submit" class="button" name="preview_comment" value="Preview">Â 
+<INPUT type="submit" class="button" value="Post">
+</TD></TR></TBODY></TABLE>
+</FORM>
+</DIV> 
+
+</DIV>
+
+
+</DIV> 
+
+</DIV> </TD><TD class="right">
+<DIV id="rightcol">
+<DIV class="component"><DIV class="componentHead">Login</DIV>
+<DIV class="componentContent"><DIV class="componentLogin">
+<FORM method="post" action="/blog/"><INPUT type="hidden" name="cmd" value="login">
+<TABLE border="0" cellpadding="2" cellspacing="0" class="componentLogin"><TBODY><TR><TD align="right" nowrap="">Username:</TD><TD align="left" nowrap=""><INPUT type="text" name="username" value="" size="10"></TD></TR><TR><TD align="right" nowrap="">Password:</TD><TD align="left" nowrap=""><INPUT type="password" name="password" value="" size="10"></TD></TR><TR><TD>Â </TD><TD align="left" nowrap=""><DIV style="margin-top:2px;">
+<INPUT type="submit" class="buttonWhite" value="Login"></DIV></TD></TR><TR><TD align="right" colspan="2" nowrap=""><DIV style="margin:8px 0 6px 0;"><A href="/blog/cmd=manage_notices">Create Reader Account</A></DIV></TD></TR></TBODY></TABLE>
+</FORM>
+</DIV> </DIV> </DIV> 
+
+<DIV class="component"><DIV class="componentHead">Help Fight Spam!</DIV>
+<DIV class="componentContent">
+<A href="http://english-34144387517.spampoison.com"><IMG src="http://pics3.inxhost.com/images/sticker.gif" save="" border="0" width="80" height="15"></A>
+
+This link will redirect email harvesting bots to a site that will feed it with an infinite loop of fake email addresses, mostly on known spammer owned domains! This will render their harvested list pratically useless and of no commericial value. Bloggers and Webmasters, please help fight spam.
+
+</DIV> </DIV> 
+<DIV class="component"><DIV class="componentHead">Good Stuff</DIV>
+<DIV class="componentContent"><TABLE>
+<TBODY><TR><TD><A href="http://www.spreadfirefox.com/?q=affiliates&id=0&t=68"><IMG border="0" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/88x31/take.gif"></A>
+</TD></TR><TR><TD><A href="http://www.mozilla.org/products/thunderbird/" title="Get Thunderbird - Reclaim Your Inbox"><IMG src="http://sfx-images.mozilla.org/affiliates/thunderbird/thunderbird_88x31.png" width="88" height="31" border="0" alt="Get Thunderbird"></A>
+</TD></TR><TR><TD><A href="http://wbloggar.com" title="The best interface between you and your blog"><IMG src="http://wbloggar.com/images/wbloggar-button1.gif" border="0"></A>
+</TD></TR><TR><TD><SCRIPT type="text/javascript" src="http://technorati.com/embed/vwa5zcfnzp.js"> </SCRIPT><DIV class="technorati"><P><A href="http://www.technorati.com/profile/utterdoul">Technorati Profile</A><A href="http://www.technorati.com/cosmos/search.html?url=http%3A%2F%2Futterdoul.myblogsite.com"><IMG src="http://static.technorati.com/images/bubble_icon.gif" align="absmiddle" hspacing="5" height="20" width="24" alt="Get Conversations about Random Signs of Intelligence :: Main Page"></A></P></DIV>
+</TD></TR><TR><TD><A href="http://www.bloglines.com/sub/http://utterdoul.myblogsite.com">
+<IMG src="http://www.bloglines.com/images/sub_modern2.gif" border="0" alt="Subscribe with Bloglines">
+</A>
+</TD></TR></TBODY></TABLE>
+</DIV> </DIV> 
+<DIV class="component"><DIV class="componentHead">Search</DIV>
+<DIV class="componentContent"><DIV class="componentSearch">
+<FORM method="get" action="/blog"><INPUT type="hidden" name="cmd" value="search">
+<TABLE border="0" cellpadding="0" cellspacing="0" class="componentSearch">
+<TBODY><TR><TD nowrap=""><INPUT type="text" name="keywords" value="" size="20"></TD></TR><TR><TD nowrap="">
+<INPUT type="checkbox" class="checkbox" name="search_all" value="true"> Search all blogs</TD></TR><TR><TD nowrap="">
+<DIV style="margin-top:2px;"><INPUT type="submit" class="buttonWhite" value="Go"></DIV></TD></TR></TBODY></TABLE>
+</FORM>
+</DIV> </DIV> </DIV> 
+
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0429246492893688";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "CCCCCC";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="160" height="600" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0429246492893688&dt=1117088582815&format=160x600_as&output=html&url=http%3A%2F%2Futterdoul.myblogsite.com%2Fblog%2F_archives%2F2005%2F5%2F25%2F885261.html&color_bg=FFFFFF&color_text=333333&color_link=000000&color_url=666666&color_border=CCCCCC&ad_type=text&cc=41&u_h=854&u_w=1280&u_ah=792&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+</DIV> </TD></TR></TBODY></TABLE>
+
+</DIV> 
+
+</BODY></HTML>_Dhttp://utterdoul.myblogsite.com/blog/_archives/2005/5/25/885261.html¢C¹ÒDIÕE#F?GH_WebResourceFrameNameOÁ<HTML><HEAD><TITLE>The Only News That I Trust</TITLE></HEAD><FRAMESET rows="80,*,20"><FRAME name="buttonbar_BA74106C3B9A479083FB4E19A029CFA7" src="/browser/buttonbar/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" scrolling="no" noresize=""><FRAME name="display_BA74106C3B9A479083FB4E19A029CFA7" src="http://news.bbc.co.uk/low/english/pda/" noresize=""><FRAME name="statusbar_BA74106C3B9A479083FB4E19A029CFA7" src="/browser/statusbar/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" scrolling="no" noresize=""></FRAMESET></HTML>_#MB_BA74106C3B9A479083FB4E19A029CFA7_#http://b1.bitty.com/browser/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D£Jr²ÒKn¯LORUVWZ]`abcfghkÓMNOOGIF89a 
+ ‘  ÿÿÿïïï™™™ÿÿÿ!ù   ,     
+   œ‰Æ;0Îá„[Î¼u—‰§™Mõx+ëJb ;_+http://b1.bitty.com/img/titlebarDocIcon.gifÓPQO£GIF89a  ³  ÿÿÿõõõàààÖÖÖÌÌÌÂÂÂ¸¸¸­­­£££™™™………zzzpppfffÿÿÿ!ù   ,       PğÉI«M8ëMÿ`HicÃáhİ×@àˆ9G¼ñŠµ …6¨M6«X¡áK ?€ ä°eˆ¢ù›P€¢èH9^ªºJŞ¸»–¸% ;_,http://b1.bitty.com/img/titlebarHelpIcon.gifÓSTO*GIF89a  €ÿ ÿÿÿ   !ù    ,       2 ;_http://b1.bitty.com/img/x.gifÓSTÓSTÓXYO’GIF89a$  ‘  ÌÌÌ™™™   ÿÿÿ!ù   ,    $   cœ©Ëí£œ´2a©À9ŠÀuÎŠc €Ûj²Š/ŒÃe;Üó\3½T« Æk|ŒI³ixB§ÔªµR„HG®ÇVÙí…Xœo"‹ÀÔÔØ09mVŒ{Qz7ß8ËúòõXQ  ;_&http://b1.bitty.com/img/buttonBack.gifÓ[\OœGIF89a$  ‘  ÌÌÌ™™™   ÿÿÿ!ù   ,    $   mœ©Ëí£œ´6a«ÀYŠÀuÏŠÊ†~@id ÀšêŒÏ¬Çz-Jmd»V‚4ºŠJÄ¦ÉHB§Ôªu„š†¤Æí‘ƒ	»ÏØ\FƒÉhöÙ½6ço1øé•³éz÷¾¾×Gç7ø¦v•¨øP  ;_)http://b1.bitty.com/img/buttonForward.gifÓ^_O´GIF89a$  ¢  ïïï™™™fff   ÿÿÿ         !ù   ,    $   yHºÜş0ÊI«½8«À»ïZ diAÈŒç™ª)Ì²@¾0;Û Â±Ï‡S±ND áhJu»İM	òŠ!fë÷Üš°š˜£,›Ïè´d0X°ÕoEİ®Úw<[/·Øÿ}||€u{w}„Švn‰ˆ‹zoƒ‡j—˜e	 ;_&http://b1.bitty.com/img/buttonMenu.gifÓSTÓSTÓSTÓdeO¹GIF89a$  ¢  ïïï™™™fff   ÿÿÿ         !ù   ,    $   ~HºÜş0ÊI«½8“À»ïZ diAÈŒç™ª
++Ì´@¾°\Ï7· Ê·
+q*-¸D†”¤#ÊìùX@k.[rj>`qL.›ÏÁXaûÜéÆ€M'Ìİwû_¨ë€u}yvˆ~
+}‹‚‡‰ryzt{ƒ†hœ0	 ;_(http://b1.bitty.com/img/buttonLaunch.gifÓSTÓSTÓijO{GIF89a0  ÷  Å-.§+/¡‚£hl©rx½¸¹½º¼±°²§£±¦¥®  ·  ³     ›  ˆ  x ¡bd²´Ë ± — µ ‹CO ¬ ™*;› ˆ/CªXd› #´(‰7± +Ä(›2¨?U¥Qb¡hv¨›Ğr}¨qz™”œ¹)@Šœ¡± &@áAdÅ+B‚N]Š‡•¾ª¶Ö²³¶Hi¾j{¤–¤Æ}ˆ£/gâ*T´6Z«FoËLtÌAa¥Riav¦xÄ›°àª²Ã¯¶Æ¬³Â«±¾#`ÕEh°Qq±d½\vªi„½m‰Âo…°}“¾~“¾¤Î€’¶¢®Æ¨±Ä8cµZ€ÆgŒĞd¯uŒ¶w‹°}‘·€“· ¬Á©®·Gt½›±Öµ¸½_‡À´¶¹bÏxŸÒœÂš®É®»Í­ºÊ¶º¿Œœ«†›­»À¾m›ƒn›ƒn™€W‡fm“wQwU[‚_NwQfhU‰U‘Y³V@v=¯Ä®ÂÁ¤¢Å¥¹” Ë´KÂ°fÇ¶kÃ¶~Á¿·ËŸ Ş¾LÃ«Q¿­gªšcç± Ï  ¼’´ŸZÀ¬h³¤tÇ»•ã¥ Ï› §€©†(–}8¼¹°p „FÖ‘ Æ»¤ÒÌÀÓuc¾obÃ†·–¯š–Æ°¬å*ÅI8À`Q½ujÁ—‘›"ã>+´@2¶g^¾ypÕ…Ï“ŒÀš¹™•“ÉRG½PG¤KB›ZTÀys¹…€¾¥£›/)¨€}¹‹ƒ"30’=9á”’É  ²  ­  ª  ›  ˜  •  ‡  †  {  œómjİ‹Š±¡¡ÿÿÿ                                                                                                                                             !ù  Ğ ,    0   ÿ ¡	H° Áƒ*\È°¡Ã‡RÒÄI˜ˆùèÁ‘G*D¦`à€±`;wÜ Ø"GI‚yê8”âB!+O¤>$$(Ğ¡E¢\Y²Z;M•’•Ğ‹„ªnA³Œ ´Aˆ XÄ+G`,@`t´Y° íb†I„PpÚŸ›4AÒqBà‡Fã  íT-{P èåŒ5£bl…ì ‚’2½Ğ °C£oš-…K!&)S¡M*c])ë3ÉÏ@CŠP<Ø‚ÆƒÀ<pœ;À°‡8`­Ø/¾@k„I`$JÇˆHğ[4aÄ^AX¥PÅ†I(‘áÚ³^´Véh©R"G—¦áa‚h{ĞM¼$“(‘ñ…‘Å…„'/½„	YPC…%	ÑÀi‡/¥ ÂLtáP@ ;_"http://b1.bitty.com/img/google.gifÓlmO€GIF89a2  ‘  fff   ÿÿÿ   !ù   ,    2   Q”©Ëí£œ´Ú‹³Şó%Á`e„)rj-´
+±ğãqÓ:}“R<óí^¥ÑS…D<cÇB:€KæQ×ºÖËj3ë,²ØrçŒN«×lD ;_,http://b1.bitty.com/img/searchformbutton.gifÕE#o?pqO(<HTML><HEAD><TITLE>The Only News That I Trust</TITLE></HEAD><BODY bgcolor="cccccc" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"><TABLE cellspacing="0" cellpadding="0" width="100%" height="100%" border="0"><TBODY><TR oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><TD valign="top"><TABLE cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="666666"><TBODY><TR><TD width="100%"><IMG src="/img/titlebarDocIcon.gif" width="13" height="10" align="absmiddle"><FONT color="efefef" size="1" face="helvetica,arial">The Only News That I Trust</FONT></TD><TD><A href="/browser/help/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" target="display_BA74106C3B9A479083FB4E19A029CFA7" onmouseover="window.status='About Bitty Browser';return true" onmouseout="window.status='';return true"><IMG src="/img/titlebarHelpIcon.gif" width="19" height="15" border="0" alt="Help" title="About Bitty Browser"></A></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="999999"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="666666"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="efefef"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" width="100%" border="0"><TBODY><TR><TD width="100%"><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD><A href="javascript:history.back()" onmouseover="window.status='Back';return true" onmouseout="window.status='';return true"><IMG src="/img/buttonBack.gif" width="36" height="31" border="0" hspace="2" alt="Back" title="Back"></A></TD><TD><A href="javascript:history.forward()" onmouseover="window.status='Forward';return true" onmouseout="window.status='';return true"><IMG src="/img/buttonForward.gif" width="36" height="31" border="0" hspace="2" alt="Forward" title="Forward"></A></TD><TD><A href="/browser/menu/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" target="display_BA74106C3B9A479083FB4E19A029CFA7" onmouseover="window.status='View additional features';return true" onmouseout="window.status='';return true"><IMG src="/img/buttonMenu.gif" width="36" height="31" border="0" hspace="2" alt="Menu" title="View additional features"></A></TD></TR></TBODY></TABLE></TD><TD><IMG src="/img/x.gif" width="6" height="1"></TD><TD bgcolor="999999"><IMG src="/img/x.gif" width="1" height="1"></TD><TD bgcolor="efefef"><IMG src="/img/x.gif" width="1" height="1"></TD><TD><A href="http://news.bbc.co.uk/low/english/pda/" target="_blank" onclick="MBw=window.open('http://b1.bitty.com/browser/?a=08242F7B454Aqy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjaaAm6tSOTtzRQ8Hnm1Zzor','poMB_BA74106C3B9A479083FB4E19A029CFA7','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=200,height=280'); MBw.focus(); return false" onmouseover="window.status='Open in a new window';return true" onmouseout="window.status='';return true"><IMG src="/img/buttonLaunch.gif" width="36" height="31" border="0" hspace="4" alt="Launch" title="Open in a new window"></A></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="999999"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="efefef"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0" width="100%"><FORM method="get" action="http://www.google.com/custom" target="display_BA74106C3B9A479083FB4E19A029CFA7"><INPUT type="hidden" name="client" value="pub-1638101641339302"><INPUT type="hidden" name="forid" value="1"><INPUT type="hidden" name="channel" value="2189009916"><INPUT type="hidden" name="ie" value="ISO-8859-1"><INPUT type="hidden" name="oe" value="ISO-8859-1"><INPUT type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#CCCCCC;VLC:663399;AH:center;BGC:FFFFFF;LBGC:FFFFFF;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"><INPUT type="hidden" name="hl" value="en"></FORM><TBODY><TR><TD oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><IMG src="/img/google.gif" width="48" height="17"></TD><TD><INPUT type="text" name="q" size="14" maxlength="255" value="" style="font-size:9pt;"></TD><TD oncontextmenu="return false" ondragstart="return false" onselectstart="return false" width="100%"><INPUT type="image" name="sa" src="/img/searchformbutton.gif" width="50" height="17" onmouseover="window.status='Search Google';return true" onmouseout="window.status='';return true" alt="Search Google" title="Search Google"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_*buttonbar_BA74106C3B9A479083FB4E19A029CFA7_-http://b1.bitty.com/browser/buttonbar/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3DÓs¨¬¯twx{|}€„…ˆ‰Œ‘”•˜™œ ¡¤¥¦§ÓuvOHGIF89a  ‘  ïïï™™™fff   ,       !ŒËæ"¢.ûÂÅxV±-“ÓiQ¹}(¥®3¾YB ;_$http://b1.bitty.com/img/iconMenu.gifÓSTÓyzOOGIF89a 
+ ‘  ÌÌÌ™™™fffÿÿÿ!ù   ,     
+   œ#!Ø¹’'™
+@øï1”æÙŒàú`	D½•l ;_&http://b1.bitty.com/img/iconReturn.gifÓSTÓSTÓ~OjGIF89a  ¢  ÿÿÿïïïÌÌÌfffÿÿÿ         !ù   ,       /H4Ìúoˆ9T’ÒÆµß ¤Èhª¢'
+0/¶Á†ó’8«»™oWÊqœ ;_&http://b1.bitty.com/img/iconFolder.gifÓSTÓ‚ƒOJGIF89a  ‘  ïïï™™™fff   ,       #ŒËæ"¢Z±æµ9DŠ=^Tuš`XŠgÛNŸ:‹É ;_&http://b1.bitty.com/img/iconLaunch.gifÓSTÓ†‡OOGIF89a 
+ ‘  ÌÌÌ™™™fffÿÿÿ!ù   ,     
+   T4©;†ü’c-Nxä¼ÁH’ ‡r'µ\¬½ÍR  ;_'http://b1.bitty.com/img/iconOpenURL.gifÓSTÓŠ‹O€GIF89a  ¢  ÿÿÿïïïÌÌÌ™™™fff333ÿÿÿ   !ù   ,       E8ºjş#È9¹&NY‰øDtDĞyBH–åP k¶µ…”Ê×øJ…£mµ€ 'ÂÄÃeK>;äs:NŸ9çõ¢İv¯_C ;_#http://b1.bitty.com/img/iconNew.gifÓSTÓOgGIF89a  ¢  ïïïÌÌÌ™™™fffÿÿÿ         !ù   ,       ,8ºÌ1 J0^…3Ş›µ}õaÙf5Ê¬l›:´à½s}Wm‹ÅH  ;_$http://b1.bitty.com/img/iconSave.gifÓSTÓ’“OUGIF89a  ‘  ÿÿÿfffÿÿÿ   !ù   ,       &Œ"íÀÂzAK¦ÍÜİEĞ•àÅ=^~œ'"èñª]izP  ;_(http://b1.bitty.com/img/iconSettings.gifÓSTÓ–—OgGIF89a  ¢  ïïïËËË˜˜˜fff   ÿÿÿ      !ù   ,       ,X5Ìúj€9\3P`Ÿ„VA ŞFu‘Š¦›À]M)³ôt_ì<Ì‹VK  ;_#http://b1.bitty.com/img/iconKey.gifÓSTÓš›OÍGIF89a  Ä  òòòåååØØØÌÌÌÅÅÅÁÁÁ¸¸¸µµµ«««¡¡¡œœœ–––‹‹‹ˆˆˆ|||zzztttmmmfffÿÿÿ                           !ù   ,       J %ZÂ0Œ#BIT%€ˆ,DMJ#R5ƒ8†Á$ ¨T$Ká1€œD€ b PP$ª!"@xÛ.j)`-cåÌÆ¦ìÙ`}~ÓE! ;_$http://b1.bitty.com/img/iconHelp.gifÓSTÓŸOwGIF89a  ¢  ïïïÌÌÌ™™™fff333   ÿÿÿ   !ù   ,       <hºµî%´A_´ìL b±×X“®pI³A¯ƒ ÀÅ€ù­‚:U(TŒ älÖLƒ	 ;_$http://b1.bitty.com/img/iconHome.gifÓSTÓ¢£OSGIF89a  ‘  ÿÿ™   ÿÿÿ   !ù   ,       $”™w	ÿ–	°Æik@‘ö8 ˜Adzy©ŠŠ¡Û´v­0 ;_$http://b1.bitty.com/img/smiley13.gifÓSTÓSTÔ ;<=ÓSTÕE#©?ª«OI£<HTML><HEAD><TITLE>Bitty Browser: Menu</TITLE></HEAD><BODY bgcolor="ffffff" topmargin="8" leftmargin="8" marginheight="8" marginwidth="8"><FONT size="2" face="helvetica,arial"><IMG src="/img/iconMenu.gif" width="13" height="13" hspace="2" align="absmiddle"><B>Bitty Browser</B> <FONT color="999999">&gt;</FONT> Menu</FONT><TABLE cellspacing="1" cellpadding="0" border="0" bgcolor="cccccc" width="100%"><TBODY><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0" bgcolor="efefcc" width="100%"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="2"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TABLE cellspacing="8" cellpadding="0" border="0" width="100%"><TBODY><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD><IMG src="/img/iconReturn.gif" width="14" height="10"></TD><TD><IMG src="/img/x.gif" width="4" height="1"></TD><TD><FONT size="2" face="helvetica,arial"><B>Return to:</B></FONT></TD></TR></TBODY></TABLE><FONT size="2" face="helvetica,arial"><A href="http://news.bbc.co.uk/low/english/pda/" onmouseover="window.status='Open';return true" onmouseout="window.status='';return true">The Only News That I Trust</A></FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="4"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="1" bgcolor="cccccc"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="1"></TD></TR></TBODY></TABLE><TABLE cellspacing="8" cellpadding="0" border="0" width="100%"><TBODY><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/directory/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='What else is on?';return true" onmouseout="window.status='';return true"><IMG src="/img/iconFolder.gif" width="14" height="12" vspace="2" border="0"></A></TD><TD><IMG src="/img/x.gif" width="4" height="1"></TD><TD width="100%"><A href="/browser/directory/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='What else is on?';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>What else is on?</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Browse the directory of miniaturized sites.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="http://news.bbc.co.uk/low/english/pda/" target="_blank" onclick="MBw=window.open('http://b1.bitty.com/browser/?a=08242F7B454Aqy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjaaAm6tSOTtzRQ8Hnm1Zzor','poMB_BA74106C3B9A479083FB4E19A029CFA7','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=200,height=280'); MBw.focus(); return false" onmouseover="window.status='Open in a new window';return true" onmouseout="window.status='';return true"><IMG src="/img/iconLaunch.gif" width="13" height="13" hspace="1" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="http://news.bbc.co.uk/low/english/pda/" target="_blank" onclick="MBw=window.open('http://b1.bitty.com/browser/?a=08242F7B454Aqy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjaaAm6tSOTtzRQ8Hnm1Zzor','poMB_BA74106C3B9A479083FB4E19A029CFA7','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=200,height=280'); MBw.focus(); return false" onmouseover="window.status='Open in a new window';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Launch</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Pop this browser open into a new window.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/openurl/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Open URL';return true" onmouseout="window.status='';return true"><IMG src="/img/iconOpenURL.gif" width="14" height="10" vspace="3" border="0"></A></TD><TD><IMG src="/img/x.gif" width="4" height="1"></TD><TD width="100%"><A href="/browser/openurl/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Open URL';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Open URL</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Open any Web site, RSS feed, or Podcast.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/save/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D&mode=new" onmouseover="window.status='New';return true" onmouseout="window.status='';return true"><IMG src="/img/iconNew.gif" width="14" height="16" border="0"></A></TD><TD><IMG src="/img/x.gif" width="4" height="1"></TD><TD width="100%"><A href="/browser/save/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D&mode=new" onmouseover="window.status='New';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>New</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Build your own Bitty browser from scratch.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/save/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D&mode=save" onmouseover="window.status='Save';return true" onmouseout="window.status='';return true"><IMG src="/img/iconSave.gif" width="13" height="13" hspace="1" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="/browser/save/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D&mode=save" onmouseover="window.status='Save';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Save</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Add a Bitty browser displaying "The Only News That I Trust" to <I>your</I> Web site.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/settings/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='View Settings';return true" onmouseout="window.status='';return true"><IMG src="/img/iconSettings.gif" width="12" height="16" hspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="4" height="1"></TD><TD width="100%"><A href="/browser/settings/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='View Settings';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>View Settings</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Display this browser's settings.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/login/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Log In';return true" onmouseout="window.status='';return true"><IMG src="/img/iconKey.gif" width="13" height="13" hspace="1" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="/browser/login/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Log In';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Log In</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Administer advanced account settings.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/help/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Bitty Browser Help';return true" onmouseout="window.status='';return true"><IMG src="/img/iconHelp.gif" width="11" height="14" hspace="2" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="/browser/help/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Bitty Browser Help';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Bitty Browser Help</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">A quick guide to Bitty.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="http://www.bitty.com/" target="_blank" onmouseover="window.status='Full-size Home Page';return true" onmouseout="window.status='';return true"><IMG src="/img/iconHome.gif" width="13" height="13" hspace="1" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="http://www.bitty.com/" target="_blank" onmouseover="window.status='Full-size Home Page';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Full-size Home Page</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">Visit the main Bitty Web site (pops open a new window).</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD valign="top"><A href="/browser/sponsors/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Google Targeted Ads';return true" onmouseout="window.status='';return true"><IMG src="/img/smiley13.gif" width="13" height="13" hspace="1" vspace="1" border="0"></A></TD><TD><IMG src="/img/x.gif" width="3" height="1"></TD><TD width="100%"><A href="/browser/sponsors/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" onmouseover="window.status='Google Targeted Ads';return true" onmouseout="window.status='';return true"><FONT size="2" face="helvetica,arial"><B>Google Targeted Ads</B></FONT></A></TD></TR><TR><TD></TD><TD colspan="2"><TABLE cellspacing="0" cellpadding="0" border="0" height="2"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="2">They  help make Bitty possible, so please go take a look.</FONT></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="12"><TBODY><TR><TD></TD></TR></TBODY></TABLE><TABLE cellspacing="1" cellpadding="0" border="0" bgcolor="cccccc" width="100%"><TBODY><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0" bgcolor="efefcc" width="100%"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="2"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><FONT face="helvetica,arial" size="1">Bitty Browser Sponsored Links:</FONT><TABLE cellspacing="0" cellpadding="0" border="0" height="12"><TBODY><TR><TD></TD></TR></TBODY></TABLE><CENTER><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-1638101641339302";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text";
+google_ad_channel ="2870888283";
+google_page_url = document.location;
+google_color_border = "818181";
+google_color_bg = "EFEFEF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="125" height="125" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-1638101641339302&dt=1117088825233&format=125x125_as&output=html&channel=2870888283&url=http%3A%2F%2Fb1.bitty.com%2Fbrowser%2Fmenu%2F%3Fa%3D082426978722qy4E8d5LFeMxQYhIvVh%252BekwpKoSJCE7Q4mG0sa%252FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%252FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%252FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%252FKDfvxxv8t8YedOARX47cjY%253D&color_bg=EFEFEF&color_text=000000&color_link=0000FF&color_url=008000&color_border=818181&ad_type=text&loc=http%3A%2F%2Fb1.bitty.com%2Fbrowser%2Fbuttonbar%2F%3Fa%3D082426978722qy4E8d5LFeMxQYhIvVh%252BekwpKoSJCE7Q4mG0sa%252FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%252FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%252FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%252FKDfvxxv8t8YedOARX47cjY%253D&cc=98&u_h=854&u_w=1280&u_ah=792&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=7&u_" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME><P></P></CENTER><TABLE cellspacing="1" cellpadding="0" border="0" bgcolor="cccccc" width="100%"><TBODY><TR><TD><TABLE cellspacing="0" cellpadding="0" border="0" bgcolor="efefcc" width="100%"><TBODY><TR><TD><IMG src="/img/x.gif" width="1" height="2"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TABLE cellspacing="0" cellpadding="0" border="0" height="8"><TBODY><TR><TD></TD></TR></TBODY></TABLE><FONT size="1" face="helvetica,arial"><A href="http://www.bitty.com/" target="_blank">Bitty Browser</A><BR>Â© 2005 <A href="http://www.turnstyle.com/bio.asp" target="_blank">Scott Matthews</A>, <A href="http://www.turnstyle.com/" target="_blank">Turnstyle</A>.<BR>All rights reserved.</FONT></BODY></HTML>_(display_BA74106C3B9A479083FB4E19A029CFA7_(http://b1.bitty.com/browser/menu/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D¡­Ñ®ÕE#¯?°±O<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#0000ff" alink="#0000ff" vlink="#0000ff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="125" height="125" cellspacing="1" cellpadding="0" border="0" bgcolor="#818181"><TBODY><TR><TD width="123" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://b1.bitty.com/browser/menu/%3Fa%3D082426978722qy4E8d5LFeMxQYhIvVh%252BekwpKoSJCE7Q4mG0sa%252FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%252FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%252FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%252FKDfvxxv8t8YedOARX47cjY%253D&hl=en&client=ca-pub-1638101641339302&adU=HealthyComputerClub.com/PCRescue&adT=Download+It+Now-+Free&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#ffffff">Ads by Goooooogle</FONT></A></TD></TR><TR><TD bgcolor="#efefef" id="taw0" class="ch" width="" height="" align="left" valign="center" onfocus="ss('go to HealthyComputerClub.com/PCRescue','aw0')" onmouseover="ss('go to HealthyComputerClub.com/PCRescue','aw0')" onmouseout="cs()" onclick="ga(this,event)"><DIV style="overflow:hidden; width:121px; padding-left:2px"><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#0000ff"><A id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.healthycomputerclub.com/Software/PCRescue/index.html&sa=l&ai=BceFwIGyVQtSHDo6wSdfa2YkBiZrkCNm1hJ0BwI23AdCGAxABGAEgwuD6AkCKFkiFOZgBrEugAeysr_8DqgEKMjg3MDg4ODI4M7IBDGIxLmJpdHR5LmNvbboBCjEyNXgxMjVfYXPIAQHaAf8BaHR0cDovL2IxLmJpdHR5LmNvbS9icm93c2VyL21lbnUvP2E9MDgyNDI2OTc4NzIycXk0RThkNUxGZU14UVloSXZWaCUyQmVrd3BLb1NKQ0U3UTRtRzBzYSUyRmRUcDhtTmxnS2Rua0ZUQlpFczFBYUduYk1pRHFpTjFqT3BzRFgyQlkydExKT2xyRUJrR212MVBDYVViTENBU0hhODdFZnZYSSUyRkpYcFNXRnZ5Z1ZkaEl6d2FOTjI3WEtSNFVIZFlVUEhEJTJGYmhlQU5hNkd3YmhJWk5nNm5TOUFsc1JmT1ZsMkpKMDE2MmFrTVlEVUI1QkdpM0NqSk9Nd3Ni6AEB&num=1&client=ca-pub-1638101641339302" onfocus="ss('go to HealthyComputerClub.com/PCRescue','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to HealthyComputerClub.com/PCRescue','aw0')" onmouseout="cs()"><B>Download It Now- Free</B></A><BR></FONT><FONT style="line-height:14px;font-size:11px" face="arial,sans-serif" color="#000000">Finds &amp; Fixes Computer Errors Free Download &amp; 100% Guarantee<BR></FONT><FONT style="line-height:14px;font-size:10px" face="arial,sans-serif" color="#008000">HealthyComputerClub.com/PCRescue</FONT></DIV></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_èhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-1638101641339302&dt=1117088825233&format=125x125_as&output=html&channel=2870888283&url=http%3A%2F%2Fb1.bitty.com%2Fbrowser%2Fmenu%2F%3Fa%3D082426978722qy4E8d5LFeMxQYhIvVh%252BekwpKoSJCE7Q4mG0sa%252FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%252FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%252FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%252FKDfvxxv8t8YedOARX47cjY%253D&color_bg=EFEFEF&color_text=000000&color_link=0000FF&color_url=008000&color_border=818181&ad_type=text&loc=http%3A%2F%2Fb1.bitty.com%2Fbrowser%2Fbuttonbar%2F%3Fa%3D082426978722qy4E8d5LFeMxQYhIvVh%252BekwpKoSJCE7Q4mG0sa%252FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%252FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%252FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%252FKDfvxxv8t8YedOARX47cjY%253D&cc=98&u_h=854&u_w=1280&u_ah=792&u_aw=1280&u_cd=32&u_tz=60&u_his=2&u_java=true&u_nplug=7&u_Ò³µ¡´ÓuvÕE#¶?·¸O"<HTML><HEAD><TITLE>The Only News That I Trust</TITLE></HEAD><BODY bgcolor="cccccc" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"><TABLE cellspacing="0" cellpadding="0" border="0" width="100%" height="100%" oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><TBODY><TR><TD><A href="/browser/help/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" target="display_BA74106C3B9A479083FB4E19A029CFA7" onmouseover="window.status='About Bitty Browser';return true" onmouseout="window.status='';return true"><IMG src="/img/iconMenu.gif" width="13" height="13" border="0" title="About Bitty Browser" hspace="2"></A></TD><TD bgcolor="999999"><IMG src="/img/x.gif" width="1" height="1"></TD><TD bgcolor="efefef"><IMG src="/img/x.gif" width="1" height="1"></TD><TD><IMG src="/img/x.gif" width="2" height="1"></TD><TD width="100%"><FONT size="1" face="helvetica,arial"><A href="/browser/help/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" target="display_BA74106C3B9A479083FB4E19A029CFA7" onmouseover="window.status='About Bitty Browser';return true" onmouseout="window.status='';return true">About Bitty</A> / <A href="/browser/sponsors/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3D" target="display_BA74106C3B9A479083FB4E19A029CFA7" onmouseover="window.status='Our Sponsors';return true" onmouseout="window.status='';return true">Our Sponsors</A></FONT></TD></TR></TBODY></TABLE></BODY></HTML>_*statusbar_BA74106C3B9A479083FB4E19A029CFA7_-http://b1.bitty.com/browser/statusbar/?a=082426978722qy4E8d5LFeMxQYhIvVh%2BekwpKoSJCE7Q4mG0sa%2FdTp8mNlgKdnkFTBZEs1AaGnbMiDqiN1jOpsDX2BY2tLJOlrEBkGmv1PCaUbLCASHa87EfvXI%2FJXpSWFvygVdhIzwaNN27XKR4UHdYUPHD%2FbheANa6GwbhIZNg6nS9AlsRfOVl2JJ0162akMYDUB5BGi3CjJOMwsbtH670Qx4ioAbC%2FKDfvxxv8t8YedOARX47cjY%3DÑºÕE#»?°¼O%†<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }body { background-color: transparent; }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="160" height="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#cccccc"><TBODY><TR><TD width="158" height="13" align="left" valign="middle"><A href="http://services.google.com/feedback/abg?url=http://utterdoul.myblogsite.com/blog/_archives/2005/5/25/885261.html&hl=en&client=ca-pub-0429246492893688&adU=www.ukmortgageleads.com&adT=Mortgage+Leads&adU=Guild-of-Mortgage-Advisers.co.uk&adT=Mortgage+leads+from+%C2%A310.&adU=www.paaleads.com&adT=Mort/Term+leads+From+%C2%A319&adU=www.squarespace.com/&adT=Blogging+Evolved&adU=www.blog.co.uk&adT=blog.co.uk&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=right height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:11px" face="arial,sans-serif" color="#000000">Ads by Google</FONT></A></TD></TR><TR><TD width="158" height="" align="" valign="top"><TABLE width="158" height="" cellspacing="0" cellpadding="0" border="0"><TBODY><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw0" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.ukmortgageleads.com','aw0')" onmouseover="ss('go to www.ukmortgageleads.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=B_5acLWuVQqbBILSgSfHQubEBuOryBbaDtJgBwI23AeDFCBABGAEgtYSjAigFQIoWSI45sgEYdXR0ZXJkb3VsLm15YmxvZ3NpdGUuY29tugEKMTYweDYwMF9hc8gBAdoBRGh0dHA6Ly91dHRlcmRvdWwubXlibG9nc2l0ZS5jb20vYmxvZy9fYXJjaGl2ZXMvMjAwNS81LzI1Lzg4NTI2MS5odG1s6AEB&num=1&adurl=http://www.ukmortgageleads.com&client=ca-pub-0429246492893688" onfocus="ss('go to www.ukmortgageleads.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.ukmortgageleads.com','aw0')" onmouseout="cs()"><B>Mortgage Leads</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#333333">Quality local mortgage leads No Upfront Costs<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#666666">www.ukmortgageleads.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw1" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to Guild-of-Mortgage-Advisers.co.uk','aw1')" onmouseover="ss('go to Guild-of-Mortgage-Advisers.co.uk','aw1')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.gpma.co.uk/join&sa=l&ai=BD8hPLWuVQqbBILSgSfHQubEBmt6_Borrt48BwI23AZDeThACGAIgtYSjAigFQIoWSJc5oAHIpb7_A7IBGHV0dGVyZG91bC5teWJsb2dzaXRlLmNvbboBCjE2MHg2MDBfYXPIAQHaAURodHRwOi8vdXR0ZXJkb3VsLm15YmxvZ3NpdGUuY29tL2Jsb2cvX2FyY2hpdmVzLzIwMDUvNS8yNS84ODUyNjEuaHRtbOgBAQ&num=2&client=ca-pub-0429246492893688" onfocus="ss('go to Guild-of-Mortgage-Advisers.co.uk','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to Guild-of-Mortgage-Advisers.co.uk','aw1')" onmouseout="cs()"><B>Mortgage leads from Â£10.</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#333333">Filtered to your exact requirements Exclusive. Qualified. Two mins old.<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#666666">Guild-of-Mortgage-Advisers.co.uk</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw2" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.paaleads.com','aw2')" onmouseover="ss('go to www.paaleads.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw2" target="_top" href="/pagead/iclk?sa=l&ai=Bx67hLWuVQqbBILSgSfHQubEBvuTsB_DohJABwI23AfCjVxADGAMgtYSjAigFQIoWSIs5sgEYdXR0ZXJkb3VsLm15YmxvZ3NpdGUuY29tugEKMTYweDYwMF9hc8gBAdoBRGh0dHA6Ly91dHRlcmRvdWwubXlibG9nc2l0ZS5jb20vYmxvZy9fYXJjaGl2ZXMvMjAwNS81LzI1Lzg4NTI2MS5odG1s6AEB&num=3&adurl=http://www.paaleads.com&client=ca-pub-0429246492893688" onfocus="ss('go to www.paaleads.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.paaleads.com','aw2')" onmouseout="cs()"><B>Mort/Term leads From Â£19</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#333333">4in10 Sales Mintel indpnt research Exclusive &amp; Qualified in Minutes<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#666666">www.paaleads.com</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw3" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.squarespace.com/','aw3')" onmouseover="ss('go to www.squarespace.com/','aw3')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.squarespace.com/%3FpartnerTag%3Dgoogle%26planTag%3Dblgnetwork&sa=l&ai=BeMOfLWuVQqbBILSgSfHQubEB0JvZCbTa_ZUBwI23AZChDxAEGAQgtYSjAigFQIoWSJY5oAGf1_r-A7IBGHV0dGVyZG91bC5teWJsb2dzaXRlLmNvbboBCjE2MHg2MDBfYXPIAQHaAURodHRwOi8vdXR0ZXJkb3VsLm15YmxvZ3NpdGUuY29tL2Jsb2cvX2FyY2hpdmVzLzIwMDUvNS8yNS84ODUyNjEuaHRtbOgBAQ&num=4&client=ca-pub-0429246492893688" onfocus="ss('go to www.squarespace.com/','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.squarespace.com/','aw3')" onmouseout="cs()"><B>Blogging Evolved</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#333333">Elegant. Powerful. Professional. The better way to put a blog online<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#666666">www.squarespace.com/</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="158" height="116" align="left" valign="middle"><TABLE width="158" height="114" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw4" class="ch" width="" height="" align="center" valign="center" onfocus="ss('go to www.blog.co.uk','aw4')" onmouseover="ss('go to www.blog.co.uk','aw4')" onmouseout="cs()" onclick="ga(this,event)"><TABLE width="95%" cellpadding="0" cellspacing="0" border="0"><TBODY><TR><TD><DIV style="overflow:hidden; width:153px; padding-left:0px"><FONT style="font-size:13px" face="arial,sans-serif" color="#000000"><A id="aw4" target="_top" href="/pagead/iclk?adurl=http://www.blog.co.uk&sa=l&ai=BgqqlLWuVQqbBILSgSfHQubEBg7GcCteZuasBwI23AdCGAxAFGAUgtYSjAigFQIoWSJI5oAGXhoP-A7IBGHV0dGVyZG91bC5teWJsb2dzaXRlLmNvbboBCjE2MHg2MDBfYXPIAQHaAURodHRwOi8vdXR0ZXJkb3VsLm15YmxvZ3NpdGUuY29tL2Jsb2cvX2FyY2hpdmVzLzIwMDUvNS8yNS84ODUyNjEuaHRtbOgBAQ&num=5&client=ca-pub-0429246492893688" onfocus="ss('go to www.blog.co.uk','aw4')" onclick="ha('aw4')" onmouseover="return ss('go to www.blog.co.uk','aw4')" onmouseout="cs()"><B>blog.co.uk</B></A><BR></FONT><FONT style="font-size:13px" face="arial,sans-serif" color="#333333">Create your free blog here. Easy to set up and manage.<BR></FONT><FONT style="font-size:10px" face="arial,sans-serif" color="#666666">www.blog.co.uk</FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_¢http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-0429246492893688&dt=1117088582815&format=160x600_as&output=html&url=http%3A%2F%2Futterdoul.myblogsite.com%2Fblog%2F_archives%2F2005%2F5%2F25%2F885261.html&color_bg=FFFFFF&color_text=333333&color_link=000000&color_url=666666&color_border=CCCCCC&ad_type=text&cc=41&u_h=854&u_w=1280&u_ah=792&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123      !  3  I  [  b  t  ƒ  ™ ? ?? ?H ?O Hg H¨ HÃ HÊ [Q [ˆ [“ [š cW c’ c™ k< k¹ kÃ kÊ n< nt n} n› n¡ }3 }d }n }u ~v ~¤ ~« …ç †) †0 ”] ”ª ”´ ”» ›K ›} ›„  Ê Ñ    <  C ¨¼ ¨î ¨÷ Ï² Ïì Ïş Ğ Ğ!Ë""""%"<&&''N'R'W'j'q'Ã'ñ'ø((Í(Ô))!)()/)6)Ë)ô)û*š*Æ*Í+„+­+´+»+Â+É,…,°,·,¾,Å1D1i1p1ó2"2-HYH†I·I¾IİIäJ/JVJ]JdJ¶JßJæJíJôKaKŠK‘K˜KåLLLLnL˜LŸL¦M)MOMVM]MÇMîMõMüNTNN†NN÷OO$O+OûP"P)P0PªPÑPØPßQ5Q\QcQjQsQzQ…›,›Wœƒœ…œˆœ“«˜««¯—¯œ¯¯¥¯°·Ö¸¹4¹7¹BŞÌ             ½             àr

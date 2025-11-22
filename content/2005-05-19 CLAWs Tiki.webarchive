@@ -1,0 +1,2528 @@
+bplist00“'_WebSubresources_WebMainResourceÆ !"#$%&”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO9)// $Header: /cvsroot/tikiwiki/tiki/lib/tiki-js.js,v 1.31.2.5 2004/07/22 16:42:34 teedog Exp $
+
+function toggle_dynamic_var($name) {
+	name1 = 'dyn_'+$name+'_display';
+	name2 = 'dyn_'+$name+'_edit';
+	if(document.getElementById(name1).style.display == "none") {
+		document.getElementById(name2).style.display = "none";
+		document.getElementById(name1).style.display = "inline";
+	} else {
+		document.getElementById(name1).style.display = "none";
+		document.getElementById(name2).style.display = "inline";
+	
+	}
+	
+}
+
+function chgArtType() {
+	if (document.getElementById('articletype').value != 'Review') {
+		document.getElementById('isreview').style.display = "none";
+	} else {
+		document.getElementById('isreview').style.display = "";
+	}
+}
+
+function chgTrkFld() {
+	if (document.getElementById('trkfldtype').value == 'd'){
+		document.getElementById('trkfldoptions').style.display = "inline";
+		document.getElementById('trkflddropdown').style.display = "inline";
+		document.getElementById('trkfldimage').style.display = "none";
+	} else if (document.getElementById('trkfldtype').value == 'i' ) {
+		document.getElementById('trkfldoptions').style.display = "inline";
+		document.getElementById('trkflddropdown').style.display = "none";
+		document.getElementById('trkfldimage').style.display = "inline";
+	} else {
+		document.getElementById('trkfldoptions').style.display = "none";
+		document.getElementById('trkflddropdown').style.display = "none";
+		document.getElementById('trkfldimage').style.display = "none";
+	}
+}
+
+function setMenuCon(foo) {
+	var it = foo.split(",");
+	document.getElementById('menu_url').value = it[0];
+	document.getElementById('menu_name').value = it[1];
+	if (it[2]) {
+		document.getElementById('menu_section').value = it[2];
+	} else {
+		document.getElementById('menu_section').value = '';
+	}
+	if (it[3]) {
+		document.getElementById('menu_perm').value = it[3];
+	} else {
+		document.getElementById('menu_perm').value = '';
+	}
+}
+
+function genPass(w1, w2, w3) {
+	vo = "aeiouAEU";
+
+	co = "bcdfgjklmnprstvwxzBCDFGHJKMNPQRSTVWXYZ0123456789_$%#";
+	s = Math.round(Math.random());
+	l = 8;
+	p = '';
+
+	for (i = 0; i < l; i++) {
+		if (s) {
+			letter = vo.charAt(Math.round(Math.random() * (vo.length - 1)));
+
+			s = 0;
+		} else {
+			letter = co.charAt(Math.round(Math.random() * (co.length - 1)));
+
+			s = 1;
+		}
+
+		p = p + letter;
+	}
+
+	document.getElementById(w1).value = p;
+	document.getElementById(w2).value = p;
+	document.getElementById(w3).value = p;
+}
+
+function setUserModule(foo1) {
+	document.getElementById('usermoduledata').value = foo1;
+}
+
+function setSomeElement(fooel, foo1) {
+	document.getElementById(fooel).value = document.getElementById(fooel).value + foo1;
+}
+
+function replaceSome(fooel, what, repl) {
+	document.getElementById(fooel).value = document.getElementById(fooel).value.replace(what, repl);
+}
+
+function replaceLimon(vec) {
+	document.getElementById(vec[0]).value = document.getElementById(vec[0]).value.replace(vec[1], vec[2]);
+}
+
+function replaceImgSrc(imgName,replSrc) {
+  document.getElementById(imgName).src = replSrc;
+}
+
+function setSelectionRange(textarea, selectionStart, selectionEnd) {
+  if (textarea.setSelectionRange) {
+    textarea.focus();
+    textarea.setSelectionRange(selectionStart, selectionEnd);
+  }
+  else if (textarea.createTextRange) {
+    var range = textarea.createTextRange();
+    textarea.collapse(true);
+    textarea.moveEnd('character', selectionEnd);
+    textarea.moveStart('character', selectionStart);
+    textarea.select();
+  }
+}
+function setCaretToPos (textarea, pos) {
+  setSelectionRange(textarea, pos, pos);
+}
+function insertAt(elementId, replaceString) {
+  //inserts given text at selection or cursor position
+  textarea = document.getElementById(elementId);
+  var toBeReplaced = /text|page|area_name/;//substrings in replaceString to be replaced by the selection if a selection was done
+  if (textarea.setSelectionRange) {
+    //Mozilla UserAgent Gecko-1.4
+    var selectionStart = textarea.selectionStart;
+    var selectionEnd = textarea.selectionEnd;
+    var scrollTop=textarea.scrollTop;
+    if (selectionStart != selectionEnd) { // has there been a selection
+	var newString = replaceString.replace(toBeReplaced, textarea.value.substring(selectionStart, selectionEnd));
+    	textarea.value = textarea.value.substring(0, selectionStart)
+                  + newString
+                  + textarea.value.substring(selectionEnd);
+      setSelectionRange(textarea, selectionStart, selectionStart + newString.length);
+    }
+    else  {// set caret
+       textarea.value = textarea.value.substring(0, selectionStart)
+                  + replaceString
+                  + textarea.value.substring(selectionEnd);
+      setCaretToPos(textarea, selectionStart + replaceString.length);
+    }
+    textarea.scrollTop=scrollTop;
+  }
+  else if (document.selection) {
+    //UserAgent IE-6.0
+    textarea.focus();
+    var range = document.selection.createRange();
+    if (range.parentElement() == textarea) {
+      var isCollapsed = range.text == '';
+      if (! isCollapsed)  {
+        range.text = replaceString.replace(toBeReplaced, range.text);
+        range.moveStart('character', -range.text.length);
+        range.select();
+      }
+	else {
+		range.text = replaceString;
+	}
+    }
+  }
+  else { //UserAgent Gecko-1.0.1 (NN7.0)
+    setSomeElement(elementId, replaceString)
+    //alert("don't know yet how to handle insert" + document);
+	}
+}
+
+function setUserModuleFromCombo(id) {
+	document.getElementById('usermoduledata').value = document.getElementById('usermoduledata').value
+		+ document.getElementById(id).options[document.getElementById(id).selectedIndex].value;
+//document.getElementById('usermoduledata').value='das';
+}
+
+function show(foo,f) {
+	document.getElementById(foo).style.display = "block";
+	if (f) { setCookie(foo, "o"); }
+}
+
+function hide(foo,f) {
+	document.getElementById(foo).style.display = "none";
+	if (f) { setCookie(foo, "c"); }
+}
+
+function flip(foo) {
+	if (document.getElementById(foo).style.display == "none") {
+		show(foo);
+	} else {
+		if (document.getElementById(foo).style.display == "block") {
+			hide(foo);
+		} else {
+			show(foo);
+		}
+	}
+}
+
+function toggle(foo) {
+	if (document.getElementById(foo).style.display == "none") {
+		show(foo);
+
+		setCookie(foo, "o");
+	} else {
+		if (document.getElementById(foo).style.display == "block") {
+			hide(foo,1);
+		} else {
+			show(foo,1);
+		}
+	}
+}
+
+function tikitabs(focus,max) {
+	for (var i = 1; i < max; i++) {
+		var tabname = 'tab' + i;
+		var content = 'content' + i;
+		//if (document.getElementById(tabname) != 'undefined') {
+			if (i == focus) {
+				//show(tabname);
+				show(content);
+				setCookie('tab',focus);
+			} else {
+				//hide(tabname);
+				hide(content);
+			}
+		//}
+	}
+}
+
+function setfoldericonstate(foo) {
+	pic = new Image();
+
+	if (getCookie(foo) == "o") {
+		pic.src = "img/icons/ofo.gif";
+	} else {
+		pic.src = "img/icons/fo.gif";
+	}
+
+	document.getElementsByName(foo + 'icn')[0].src = pic.src;
+}
+/* foo: name of the menu
+ * def: menu type (e:extended, c:collapsed, f:fixed)
+ * the menu is collapsed function of its cookie: if no cookie is set, the def is used
+ */
+function setfolderstate(foo, def) {
+	status = getCookie(foo);
+	if (status == "o") {
+		show(foo);
+	} else if (status != "c" && def == 'e') {
+		show(foo, "o");
+	}
+	else {
+		hide(foo);
+	}
+
+	setfoldericonstate(foo);
+}
+
+function icntoggle(foo) {
+	if (document.getElementById(foo).style.display == "none") {
+		show(foo);
+
+		setCookie(foo, "o");
+	} else {
+		hide(foo);
+
+		setCookie(foo, "c");
+	}
+
+	setfoldericonstate(foo);
+}
+
+//
+// set folder icon state during page load
+//
+function setFolderIcons() {
+	var elements = document.forms[the_form].elements[elements_name];
+
+	var elements_cnt = ( typeof (elements.length) != 'undefined') ? elements.length : 0;
+
+	if (elements_cnt) {
+		for (var i = 0; i < elements_cnt; i++) {
+			elements[i].checked = document.forms[the_form].elements[switcher_name].checked;
+		}
+	} else {
+		elements.checked = document.forms[the_form].elements[switcher_name].checked;
+
+		;
+	} // end if... else
+
+	return true;
+}     // setFolderIcons()
+
+// name - name of the cookie
+// value - value of the cookie
+// [expires] - expiration date of the cookie (defaults to end of current session)
+// [path] - path for which the cookie is valid (defaults to path of calling document)
+// [domain] - domain for which the cookie is valid (defaults to domain of calling document)
+// [secure] - Boolean value indicating if the cookie transmission requires a secure transmission
+// * an argument defaults when it is assigned null as a placeholder
+// * a null placeholder is not required for trailing omitted arguments
+function setCookie(name, value, expires, path, domain, secure) {
+	var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "")
+		+ ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+
+	document.cookie = curCookie;
+}
+
+// name - name of the desired cookie
+// * return string containing value of specified cookie or null if cookie does not exist
+function getCookie(name) {
+	var dc = document.cookie;
+
+	var prefix = name + "=";
+	var begin = dc.indexOf("; " + prefix);
+
+	if (begin == -1) {
+		begin = dc.indexOf(prefix);
+
+		if (begin != 0)
+			return null;
+	} else begin += 2;
+
+	var end = document.cookie.indexOf(";", begin);
+
+	if (end == -1)
+		end = dc.length;
+
+	return unescape(dc.substring(begin + prefix.length, end));
+}
+
+// name - name of the cookie
+// [path] - path of the cookie (must be same as path used to create cookie)
+// [domain] - domain of the cookie (must be same as domain used to create cookie)
+// * path and domain default if assigned null or omitted if no explicit argument proceeds
+function deleteCookie(name, path, domain) {
+	if (getCookie(name)) {
+		document.cookie = name + "="
+			+ ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+	}
+}
+
+// date - any instance of the Date object
+// * hand all instances of the Date object to this function for "repairs"
+function fixDate(date) {
+	var base = new Date(0);
+
+	var skew = base.getTime();
+
+	if (skew > 0)
+		date.setTime(date.getTime() - skew);
+}
+
+//
+// Expand/collapse lists
+//
+function flipWithSign(foo) {
+	if (document.getElementById(foo).style.display == "none") {
+		show(foo);
+
+		collapseSign("flipper" + foo);
+		setCookie(foo, "o");
+	} else {
+		hide(foo);
+
+		expandSign("flipper" + foo);
+		setCookie(foo, "c");
+	}
+}
+
+// set the state of a flipped entry after page reload
+function setFlipWithSign(foo) {
+	if (getCookie(foo) == "o") {
+		collapseSign("flipper" + foo);
+
+		show(foo);
+	} else {
+		expandSign("flipper" + foo);
+
+		hide(foo);
+	}
+}
+
+function expandSign(foo) {
+	document.getElementById(foo).firstChild.nodeValue = "[+]";
+}
+
+function collapseSign(foo) {
+	document.getElementById(foo).firstChild.nodeValue = "[-]";
+} // flipWithSign()
+
+//
+// Check / Uncheck all Checkboxes
+//
+function switchCheckboxes(the_form, elements_name, switcher_name) {
+	// checkboxes need to have the same name elements_name
+	// e.g. <input type="checkbox" name="my_ename[]">, will arrive as Array in php.
+	var elements = document.forms[the_form].elements[elements_name];
+
+	var elements_cnt = ( typeof (elements.length) != 'undefined') ? elements.length : 0;
+
+	if (elements_cnt) {
+		for (var i = 0; i < elements_cnt; i++) {
+			elements[i].checked = document.forms[the_form].elements[switcher_name].checked;
+		}
+	} else {
+		elements.checked = document.forms[the_form].elements[switcher_name].checked;
+
+		;
+	} // end if... else
+
+	return true;
+}     // switchCheckboxes()
+
+//
+// Set client offset (in minutes) to a cookie to avoid server-side DST issues
+// Added 7/25/03 by Jeremy Jongsma (jjongsma@tickchat.com)
+//
+var expires = new Date();
+var offset = -(expires.getTimezoneOffset() * 60);
+expires.setFullYear(expires.getFullYear() + 1);
+setCookie("tz_offset", offset, expires, "/");
+
+// function added for use in navigation dropdown
+// example :
+// <select name="anything" onchange="go(this);">
+// <option value="http://tikiwiki.org">tikiwiki.org</option>
+// </select>
+function go(o) {
+	if (o.options[o.selectedIndex].value != "") {
+		location = o.options[o.selectedIndex].value;
+
+		o.options[o.selectedIndex] = 1;
+	}
+
+	return false;
+}
+
+
+// function:	targetBlank
+// desc:	opens a new window, XHTML-compliant replacement of the "TARGET" tag
+// added by: 	Ralf Lueders (lueders@lrconsult.com)
+// date:	Sep 7, 2003
+// params:	url: the url for the new window
+//		mode='nw': new, full-featured browser window
+//		mode='popup': new windows, no features & buttons
+
+function targetBlank(url,mode) {
+  var features = 'menubar=yes,toolbar=yes,location=yes,directories=yes,fullscreen=no,titlebar=yes,hotkeys=yes,status=yes,scrollbars=yes,resizable=yes';
+  switch (mode) {
+    // new full-equipped browser window
+    case 'nw':
+      break;
+    // new popup-window
+    case 'popup':
+      features = 'menubar=no,toolbar=no,location=no,directories=no,fullscreen=no,titlebar=no,hotkeys=no,status=no,scrollbars=yes,resizable=yes';
+      break;
+    default:
+      break;
+   }
+   blankWin = window.open(url,'_blank',features);
+}
+
+// function:	confirmTheLink
+// desc:	pop up a dialog box to confirm the action
+// added by: 	Franck Martin
+// date:	Oct 12, 2003
+// params:	theLink: The link where it is called from
+// params: theMsg: The message to display
+function confirmTheLink(theLink, theMsg)
+{
+    // Confirmation is not required if browser is Opera (crappy js implementation)
+    if (typeof(window.opera) != 'undefined') {
+        return true;
+    }
+                                                                                                                  
+    var is_confirmed = confirm(theMsg);
+    //if (is_confirmed) {
+    //    theLink.href += '&amp;is_js_confirmed=1';
+    //}
+                                                                                                                  
+    return is_confirmed;
+} 
+
+/** \brief: modif a textarea dimension
+ * \elementId = textarea idea
+ * \height = nb pixels to add to the height (the number can be negative)
+ * \width = nb pixels to add to the width
+ * \formid = form id (needs to have 2 input rows and cols
+ **/
+function textareasize(elementId, height, width, formId) {
+	textarea = document.getElementById(elementId);
+	form = document.getElementById(formId);
+	if (textarea && height != 0 && textarea.rows + height > 5) {
+		textarea.rows += height;
+		if (form.rows)
+			form.rows.value = textarea.rows;
+	}
+	if (textarea && width != 0 && textarea.cols + width > 10) {
+		 textarea.cols += width;
+		if (form.cols)
+			form.cols.value = textarea.cols;
+	}
+}
+
+
+_.http://claws.uct.ac.za/clawtiki/lib/tiki-js.js_application/x-javascript”Oâ]/*
+$Header: /cvsroot/tikiwiki/tiki/styles/Attic/tikineat.css,v 1.1.4.1 2005/01/14 18:43:34 mose Exp $
+Simple basic theme for generic tiki
+
+IE hacks applied !
+read http://glish.com/css/hacks.asp 
+
+changing colors ?
+you can list them with
+  grep -i " #[0-9a-f]\{3,6\};" styles/tikineat.css | cut -d\# -f2 | sort | uniq -c
+and change them with
+  perl -pi -e 's/AAAAAA/bbbbbb/g' styles/tikineat.css
+*/
+
+body {
+	background-color : #E9ECEF;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin : 0;
+	padding : 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin : 0;
+	margin-bottom : 3px;
+}
+H1 {
+	font-size : 24px;
+	color : #436976;
+}
+H2 {
+	font-size : 18px;
+	color : #234956;
+}
+H3 {
+	font-size : 14px;
+	color : #032936;
+}
+H4 {
+	font-size : 12px;
+	color : #032936;
+}
+H5 {
+	font-size : 11px;
+	color : #032936;
+}
+H6 {
+	font-size : 10px;
+	color : #032936;
+}
+ul {
+	margin-top : 2px;
+	margin-bottom : 6px;
+}
+a {
+	color : #225566;
+	font-weight : bold;
+}
+a:hover {
+	color : #000000;
+	background-color : #E9ECEF;
+}
+small {
+	font-size : .8em;
+}
+hr {
+	width : 100%;
+	height : 1px;
+	background-color : #8CACBB;
+	border-width : 0px;
+	padding : 0px;
+	color : #8CACBB;
+}
+td {
+	color : #000000;
+	font-size : 11px;
+	vertical-align : top;
+	text-align : left;
+}
+th {
+	color : black;
+	background-color : #DEE7EC;
+	border : 1px solid #8CACBB;
+	padding : 0 2px;
+}
+caption {
+	font-weight : bold;
+}
+/* General form elements */
+FORM {
+	margin : 0px;
+	padding : 0px;
+}
+input, textarea, select {
+	font-size : 10px;
+	color : #112233;
+}
+input {
+	text-indent : 2px;
+}
+input[type=checkbox], input[type=radio] {
+	border : 0;
+}
+input[type=submit] {
+	border : 1px solid #46596f;
+	background-color: #C7D0D9;
+	font-weight : bold;
+}
+input[type=submit]:hover {
+	background-color : #FFFFFF;
+	cursor : pointer;
+}
+textarea {
+	width : 95%;
+}
+label {
+	cursor : pointer;
+}
+
+/* GENERAL LAYOUT EXPLANATION
+	*
+	* The tiki application is enclosed as a whole in tiki-main
+	* tiki-main contains three divs: tiki-top, tiki-mid and tiki-bot
+	* that will be used for the header, application and footer.
+	*
+	* tiki-mid contains a 3-column table, the columns are called (ids)
+	* leftcolumn, centercolumn and rightcolumn
+	* centercolumn contains tiki-center where the main area is displayed.
+	*
+	*/
+
+/*********************** GENERAL LAYOUT ************************************/
+DIV#tiki-main {
+	margin : 0px;
+}
+DIV#tiki-top {
+	font-size : 10px;
+	background-color : #C7D0D9;
+	padding-bottom : 1px;
+	border-bottom : 1px solid #8CACBB;
+}
+DIV#tiki-top a {
+	text-decoration : none;
+}
+DIV#tiki-mid {
+	margin : 0;
+	padding : 0;
+}
+DIV#tiki-bot {
+	padding-top : 10px;
+	padding-bottom : 5px;
+	background-color : #C7D0D9;
+	margin : 0;
+	border-top : 1px solid #8CACBB;
+	border-bottom : 1px solid #8CACBB;
+}
+
+#leftcolumn {
+	width : 180px;
+	padding : 0px;
+	border-right : 1px solid #8CACBB;
+}
+#centercolumn {
+	background-color: #F3F6F9;
+	margin : 0;
+	width : 100%;
+}
+#rightcolumn {
+	width : 180px;
+	padding : 0px;
+	border-left : 1px solid #8CACBB;
+}
+DIV#tiki-center {
+	padding : 10px 0;
+}
+DIV#tiki-mid > table {
+	width : 100%;
+	border-spacing : 0;
+	margin : 0;
+	padding : 0;
+}
+div#debugconsole {
+	position: absolute;
+	background-color: #F3F6F9;
+	top: 0px;
+	left: 20px;
+	right: 310px;
+	height: auto;
+	z-index: 1;
+	padding: 5px;
+	border: 6px ridge #996600;
+	font-size: 12px;
+}
+
+#overDiv table {
+	width : auto !important;
+}
+
+/********************************************* GENERAL STYLE PROPERTIES **********************************************/
+/* Boxes used for modules (modules are those boxes in the left/right columns) */
+div.box {
+	background-color : white;
+	overflow : hidden;
+	margin : 3px;
+	border : 1px solid #ACCCDD;
+	width : 174px;
+	font-size : 10px;
+}
+div.box-title {
+	background-color: #F3F6F9;
+	border-bottom : 1px solid #ACCCDD;
+	overflow : hidden;
+	font-size : 10px;
+	text-align : center;
+	margin : 0;
+}
+div.box-title table {
+	width : 100%;
+}
+div.box-data {
+	overflow : hidden;
+	color : black;
+	padding : 5px;
+	font-size : 10px;
+}
+div.separator, div.separatorline {
+	background-color: #FFFFFF;
+	color : black;
+	padding : 2px;
+	border-top : 1px dashed #8CACBB;
+}
+.linkmenu, .rsslink {
+	font-size : 10px;
+	text-decoration : none;
+	font-weight : normal;
+}
+.rsslist {
+	background-color: #FFFFFF;
+	margin : 0;
+	margin-right : 10px;
+	padding : 1px;
+}
+.rssitem {
+	font-weight : normal;
+	padding : 1px 6px 1px 6px;
+	border-top : 1px dashed #DADAC9;
+}
+.rssitem:first-child {
+	border-top: 0;
+}
+.rssdate {
+	color: #999999;
+	font-style: italic;
+}
+.separator {
+	font-size : 10px;
+	text-decoration : none;
+}
+.flip {
+	font-size : 10px;
+	text-decoration : none;
+}
+
+span.user-box-text {
+	color: black;
+}
+
+/* When modules display a list of items each item is enclosed in a cell with the following style */
+TD.module {
+	font-size : 10px;
+	color : black;
+	text-align : left;
+}
+.linkmodule, .linkmodule:visited {
+	font-size : 10px;
+	text-decoration : none;
+}
+
+/* Now the boxes for the rest of Tiki (non-modules */
+div.cbox {
+	background-color : white;
+	margin : 3px;
+	border : 1px solid #8CACBB;
+	overflow : hidden;
+}
+div.cbox-title {
+	color : black;
+	border-bottom : 1px solid #8CACBB;
+	overflow : hidden;
+	text-align : center;
+	padding : 0px;
+	margin : 0px;
+}
+.cboxtlink {
+	color : black;
+	font-size : 10px;
+	text-decoration : none;
+}
+div.cbox-data {
+	overflow : hidden;
+	padding : 0 5px;
+	font-size : 10px;
+	color : black;
+	width : 100%;
+}
+
+/* Some boxes are identified by an ID, for example the  boxes in the main application menu, we set display to
+	none to make the menu appear collapsed initially, change this to 'block' if you want it to be extended fully */
+
+/* Banners of type text (textadds) are displayed as links using the following style */
+.bannertext {
+	font-size : 10px;
+	color : #424242;
+	text-decoration : none;
+}
+.bannertext:hover {
+	color : black;
+}
+div.imagerank {
+	margin : 10px 5px;
+}
+
+/* A simple box is just a div with a border around and some margin
+	* used for example in the admin screen */
+div.simplebox {
+	padding : 8px;
+	color : black;
+	border : 1px solid #8CACBB;
+	background-color : white;
+	font-size : 10px;
+}
+
+
+/* General tables */
+/* These styles apply to tables used to display common listings such as the wiki page listing, last changes,
+	listings in admin screens, etc. */
+
+/* The table */
+table.normal {
+	padding : 0px;
+	margin : 0px;
+	border-collapse : collapse;
+	width : 100%;
+	voice-family : "\"}\"";
+	voice-family : inherit;
+	width : 97%;
+}
+html>body table.normal {
+	width : 100%;
+}
+table.listgallery, table.creategalform, table.gallerylisting, table.bloglist, table.editblogform,
+table.editfgalform, table.listfgal, table.listfiles, table.listarticles, table.forumstable,
+table.forumformtable, table.viewthread, table.jukeboxlist {
+	padding : 0px;
+	margin : 0px;
+	border-collapse : collapse;
+	width : 100%;
+}
+
+TABLE.admin {
+	width : 100%;
+}
+TABLE.normalnoborder {
+}
+
+/* Cells in forms without background color (inside a div for example) */
+.form td {
+	background-color : transparent;
+}
+/* Cells in forms using a background color */
+.formcolor td,
+.galform td,
+.editblogform td,
+.editfgalform td,
+.comform td,
+.forumform td {
+	border : 1px solid #8CACBB;
+	background-color : #DEE7EC;
+}
+
+/* Table headings */
+TD.heading, td.gallistheading, td.listgalheading, td.bloglistheading,
+td.listfgalheading, td.jukeboxlistheading, td.listfilesheading,
+td.listartheading, td.forumheading, td.viewthread {
+	color : black;
+	background-color : #DEE7EC;
+	border : 1px solid #8CACBB;
+	padding : 0 2px;
+}
+
+th.gallistheading, th.listgalheading, th.bloglistheading,
+th.listfgalheading, th.jukeboxlistheading, th.listfilesheading,
+th.listartheading, th.forumheading, th.viewthread {
+}
+
+TD.button {
+	background-color : #DEE7EC;
+	border : 1px solid #8CACBB;
+	padding : 0 2px;
+	text-align : center;
+	vertical-align : middle;
+}
+
+/* Links to view an object from a table listing objects can be generalized to this link */
+a.tablename, a.galname, a.imagename, a.jukeboxname,
+a.blogname, a.fgalname, a.artname, a.forumname {
+	font-weight : bold;
+	color : black;
+}
+a.forumnameread {
+	letter-spacing : 1px;
+	color : black;
+}
+
+/* Links in table headings */
+.tableheading, .gallistheading, .listgalheading, .bloglistheading,
+.llisfgalheading, .llistfileslink, .llistart, .lforumheading {
+}
+
+table.findtable {
+	margin-bottom : 1px;
+	padding-bottom : 10px;
+}
+.findtable td { }
+
+/* Odd rows in several listings */
+tr.odd {
+	border : 1px solid #8CACBB;
+	color : black;
+	background-color : #F7F9FA;
+}
+tr.odd:hover {
+	background-color: #FFF7E6;
+}
+tr.even {
+	border : 1px solid #8CACBB;
+	background-color : #E7E9EA;
+	color : black;
+}
+tr.even:hover {
+	background-color: #FFF7E6;
+}
+TD.odd,td.gallistnameodd,td.gallistdescriptionodd,td.gallistcreatedodd,td.gallistlastModifodd, td.gallistuserodd,
+td.gallistimagesodd, td.gallisthitsodd, td.gallistactionsodd, td.listgalidodd, td.listgalnameodd, td.listgalcreatedodd,
+td.listgalhitsodd, td.listgaluserodd, td.listgalfilesizeodd, td.bloglistnameodd, td.bloglistdescriptionodd,
+td.bloglistcreatedodd,td.bloglistlastModifodd,td.bloglistuserodd,td.bloglistpublicodd,td.bloglistpostsodd,
+td.bloglistvisitsodd, td.bloglistactivityodd, td.bloglistactionsodd, td.listfgalnameodd, td.listfgaldescriptionodd,
+td.listfgalcreatedodd, td.listfgallastModifodd, td.listfgaluserodd, td.listfgalfilesodd, td.listfgalvisitsodd,
+td.listfgalactionsodd, td.listfilesnameodd,td.listfilesdescriptionodd,td.listfilesidodd,td.listfilesfilenameodd,
+td.listfilesfilesizeodd,td.listfilescreatedodd,td.listfilesdlsodd,td.listfilesnameodd,td.listfilesuserodd,td.listfilesactionsodd,
+td.listarttitleodd,td.listarttopicodd,td.listartpublishDateodd,td.listartauthorodd,td.listartreadsodd,td.listarthasimageodd,
+td.listartuseimageodd,td.listartactionsodd,td.listartsizeodd,td.forumstableodd,td.forumstableinfoodd,td.topictitleodd,
+td.topicrepliesodd,td.topicreadsodd,td.topicscoreodd,td.topiclastpostodd,td.topicauthorodd, td.jukeboxlistnameodd,
+td.jukeboxdescriptionodd, td.jukeboxcreatedodd, td.jukeboxlastmodifodd, td.jukeboxlistuserodd, td.jukeboxlisttracksodd,
+td.jukeboxlistvisitsodd {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #F7F9FA;
+}
+TD.even,td.gallistnameeven, td.gallistdescriptioneven, td.gallistcreatedeven,td.gallistlastModifeven, td.gallistusereven ,
+td.gallistimageseven,td.gallisthitseven, td.gallistactionseven, td.listgalideven, td.listgalnameeven, td.listgalcreatedeven,
+td.listgalhitseven, td.listgalusereven,td.listgalfilesizeeven, td.bloglistnameeven, td.bloglistdescriptioneven,
+td.bloglistcreatedeven,td.bloglistlastModifeven,td.bloglistusereven,td.bloglistpubliceven,td.bloglistpostseven,
+td.bloglistvisitseven, td.bloglistactivityeven, td.bloglistactionseven, td.listfgalnameeven, td.listfgaldescriptioneven,
+td.listfgalcreatedeven, td.listfgallastModifeven, td.listfgalusereven, td.listfgalfileseven, td.listfgalvisitseven,
+td.listfgalactionseven,td.listfilesnameeven ,td.listfilesdescriptioneven,td.listfilesideven,td.listfilesfilenameeven,
+td.listfilesfilesizeeven,td.listfilescreatedeven,td.listfilesdlseven,td.listfilesnameeven,td.listfilesusereven,td.listfilesactionseven,
+td.listarttitleeven,td.listarttopiceven,td.listartpublishDateeven,td.listartauthoreven,td.listartreadseven,td.listarthasimageeven,
+td.listartuseimageeven,td.listartactionseven,td.listartsizeeven,td.forumstableeven,td.forumstableinfoeven,td.topictitleeven,
+td.topicreplieseven,td.topicreadseven,td.topicscoreeven,td.topiclastposteven,td.topicauthoreven, td.jukeboxlistnameeven,
+td.jukeboxdescriptioneven, td.jukeboxcreatedeven, td.jukeboxlastmodifeven, td.jukeboxlistusereven, td.jukeboxlisttrackseven,
+td.jukeboxlistvisitseven {
+	border : 1px solid #8CACBB;
+	background-color : #E7E9EA;
+	color : black;
+	border-collapse : collapse;
+}
+TD.third {
+	border : 1px solid #8CACBB;
+	color : Black;
+	background-color : #8CACBB;
+}
+
+/* When the page title is a link this is the style */
+.pagetitle, .forumspagetitle {
+	font-size : 24px;
+	color : #234956;
+	margin : 0 10px;
+	margin-bottom : 3px;
+}
+
+.link, .gallink, .bloglink, .fgallink, .trailer,
+.opencomlink, .commentslink, .admlink,.forumbutlink {
+	font-weight : normal;
+	padding : 0;
+}
+
+div.searchdate {
+	font-size : 10px;
+	color : #333333;
+}
+
+/* Pagination for listings */
+.mini {
+	font-size: 9px;
+	color : Black;
+}
+.prevnext, .galprevnext, .blogprevnext, .fgalprevnext,
+.artprevnext, .forumprevnext, .jukeboxprevnext {
+	font-size: 12px;
+	padding: 1px 6px;
+}
+
+.attention {
+	color: red;
+}
+.highlight {
+	background-color : #eeee99 !important;
+	color : #000000;
+}
+
+div#edithelpzone {
+	display : none;
+}
+div#attzone {
+	display : none;
+	margin-top : 10px;
+}
+div#attzoneopen {
+	display : block;
+	margin-top : 10px;
+}
+a.tikihelp, a.tikihelp:visited {
+	border : 0;
+}
+a.tikihelp:hover {
+	color : #224466;
+	cursor : help;
+}
+
+
+/***********************************************  THE WIKI ***********************************************************/
+div.titlebar {
+	background-color: #C7D0D9;
+	color: #000000;
+	border: 1px solid #46596f;
+	letter-spacing : 1px;
+	padding : 0 6px 1px 6px;
+	margin : 3px 0 6px 0;
+	font-weight : bold;
+}
+
+/* The bar where the actions for a page are displayed */
+DIV#page-bar {
+	margin : 0 5px;
+}
+DIV#page-bar table, DIV#page-bar td, DIV#page-bar tr {
+	margin: 0;
+	padding: 0;
+}
+
+/* Wiki action buttons (the buttons displayed at the end of each page to edit/print/remove/etc a page */
+.button2, .button3 {
+	font-size : 10px;
+	margin : 0;
+	margin-right : 2px;
+	padding : 0;
+}
+.button3 {
+	-moz-border-radius : 5px 5px 0 0;
+}
+.button3 .linkbut {
+	-moz-border-radius : 5px 5px 0 0;
+	padding-bottom : 2px;
+	border-bottom : 0;
+}
+
+/* Links in buttons */
+.linkbut, .linkbut:visited {
+	font-size : 10px;
+	color : #223344;
+	background-color : #C7D0D9;
+	padding : 1px 4px;
+	font-weight : normal;
+	text-decoration : none;
+	border : 1px solid #46596f;
+}
+.linkbut:hover {
+	background-color : #FFFFFF;
+	color : #000000;
+}
+.tab1 form {
+	display : inline;
+}
+div.cache {
+	background-color : #DEE7EC;
+	border : 1px solid #8CACBB;
+	padding : 10px
+	margin : 4px;
+}
+div.cachedpage {
+	border : 1px solid black;
+	padding : 10px
+	margin : 20px;
+}
+.wikicache, .wikicache:visited {
+	font-size : 9px;
+	font-weight : normal;
+	color : #998833;
+	text-decoration : none;
+}
+.wikicache:hover {
+	color : #000000;
+	background-color: transparent;
+}
+table.wikitable {
+	border-collapse : collapse;
+}
+td.wikicell {
+	border-collapse : collapse;
+	border : 1px solid #8CACBB;
+	background-color : #F7F9FA;
+}
+div.wikitext {
+	font-size : 12px;
+	padding : 10px;
+	clear : both;
+	width : auto;
+}
+.wikitext div.box {
+	width : auto;
+}
+.wikitopline table {
+	width : 100%;
+	voice-family : "\"}\"";
+	voice-family : inherit;
+	width : 97%;
+}
+html>body .wikitopline table {
+	width : 100%;
+}
+.wikitopline {
+	float: right;
+}
+.wiki {
+}
+.wikinew {
+	color : #CC0000;
+}
+textarea.wikiedit {
+}
+p.editdate {
+	color : #223344;
+	border-top : 1px solid #8CACBB;
+	font-size : 9px;
+	padding : 0 10px;
+}
+div.wiki-edithelp {
+	background : white;
+	border : 1px solid black;
+	padding : 10px;
+}
+img.externallink {
+	margin : 0 2px;
+}
+div.tocnav {
+	font-size : 10px;
+	border-top : 1px solid #8CACBB;
+	border-bottom : 1px solid #8CACBB;
+	color: black;
+	padding: 2px 0;
+	margin-bottom: 2px;
+}
+.tocnavlink {
+	color : black;
+}
+/* wiki diff styles */
+.diff td {
+	border: 1px solid #A9B8C2;
+}
+.diff div {
+	border-top : 1px solid #A9B8C2;
+}
+.diffheader {
+	background-color : #A9B8C2;
+	font-weight: bold;
+}
+.diffadded {
+	background-color : #CCFFCC;
+}
+.diffdeleted {
+	background-color : #FFCCCC;
+}
+.diffbody {
+	background-color : #F2F4F5;
+}
+.diffchar {
+	color : red;
+}
+/**** coloration for c o d e plugin *****/
+div.code {
+	font-size : 10px;
+	padding : 5px;
+	border : 1px dashed #CCCCCC;
+	background-color : #F4F4F4;
+	font-family : monospace;
+}
+.codelisting {
+	font-family : monospace;
+	padding : 10px;
+	background-color : #FFFFFF;
+	margin : 0;
+	border : 1px solid #ADACAF;
+}
+.codecaption {
+	font-size : 10px;
+	padding : 0 10px;
+	background-color : #FFFFFF;
+	position : relative;
+	bottom : -5px;
+	display : inline;
+	border : 1px solid #ADACAF;
+	border-bottom : 0;
+	margin : 0;
+	color : #666666;
+	background-color: #E9ECEF;
+	font-weight : bold;
+	-moz-border-radius-topright : 1ex;
+}
+
+/******************************************************* IMAGE GALLERIES **********************************************/
+
+TABLE.galtable {
+	border-collapse : collapse;
+	border : 1px solid #8CACBB;
+	width : 100%;
+	voice-family : "\"}\"";
+	voice-family : inherit;
+	width : 97%;
+}
+html>body .galtable {
+	width : 100%;
+}
+TD.oddthumb {
+	background-color : #E7E9EA;
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	text-align : center;
+}
+TD.eventhumb {
+	background-color : #F7F9FA;
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	text-align : center;
+}
+div.thumbnails {
+	border : 1px solid white;
+	margin : 10px;
+}
+img.athumb {
+	border : 1px solid white;
+}
+.caption {
+	color : black;
+}
+p.norecords {
+	font-weight : bold;
+}
+div.imagetitle {
+	font-weight : bold;
+	font-size : 26px;
+}
+div.gallerylink {
+}
+div.showimage {
+	text-align : center;
+	margin : 5px 0;
+}
+div.imgaldescr {
+	margin : 10px;
+}
+.sorttitle {
+	margin-left : 10px;
+}
+/******************************************************* WEBLOGS **********************************************************/
+div.blogtitle {
+	color : black;
+	font-weight : bold;
+	font-size : 26px;
+	margin : 0 10px;
+}
+div.bloginfo {
+	color: #666666;
+	font-size : 80%;
+	color : #424242;
+	margin-left : 10px;
+	margin-right: 2px;
+}
+div.blogdesc {
+	clear : both;
+	margin : 0px;
+	padding : 3px 10px;
+	border-bottom: 1px solid #AEAEAE;
+}
+div.blogtools {
+	background-color: #C7D0D9;
+	border-top : 1px solid #8CACBB;
+	border-bottom : 1px solid #8CACBB;
+	font-size : 10px;
+	margin-bottom : 10px;
+	padding : 0px;
+	text-align: right;
+}
+div.posthead {
+	background-color: #C7D0D9;
+	border-top : 1px solid #AEAEAE;
+	color : black;
+	overflow : hidden;
+	padding : 0 10px;
+}
+div.posthead td[align=right] {
+	vertical-align : bottom;
+	margin : 0 10px;
+}
+span.posthead {
+	font-weight : bold;
+}
+span.posthead small {
+	font-size : 9px;
+	color : #666666;
+	font-weight : normal;
+}
+.blogt {  }
+div.postbody {
+	overflow : hidden;
+	border-top : 1px solid #AEAEAE;
+	border-bottom : 1px solid #AEAEAE;
+	font-size : 10px;
+	color : black;
+	padding : 10px;
+	width : auto;
+}
+
+/****************************************************** CMS ***************************************************************/
+
+div.articletitle {
+	border-top : 1px solid #46596f;
+	margin-top : 5px;
+	clear : both;
+}
+span.titlea {
+	background : #C7D0D9;
+	border : 1px solid #8CACBB;
+	border-left : 0;
+	border-top : 0;
+	padding : 0px 20px;
+	margin : 3px 0 6px 0;
+	font-size : 12px;
+	font-weight : bold;
+	-moz-border-radius-bottomright : 20px;
+}
+span.titleb,
+span.titleb:after {
+	font-size : 10px;
+	color : #666666;
+	margin : 5px 20px;
+}
+div.articleheading {
+	margin : 5px 20px 5px 20px;
+	clear : both;
+}
+div.articleheadingtext {
+	display : inline;
+}
+div.articletrailer {
+	border-top : 1px solid #C7D0D9;
+	margin-bottom : 10px;
+	clear : both;
+}
+span.trailer {
+}
+.articleimage {
+	margin-right : 20px;
+}
+div.articlebody {
+	border : 1px solid #AEAEAE;
+	border-left : 0;
+	border-right : 0;
+	background-color : #FFFFFF;
+	padding : 20px;
+	margin : 10px 0;
+	clear : both;
+}
+
+/******************************************************* CALENDAR **********************************************************/
+.day, .day:visited {
+	font-weight : normal;
+	font-size : 10px;
+	color : black;
+}
+.today {
+	font-size : 10px;
+	color : black;
+}
+.nav {
+	font-size : 10px;
+	color : black;
+}
+.changedate {
+	font-size : 9px;
+	color : black;
+}
+.date {
+	font-size : 10px;
+	color : black;
+	font-weight : bold;
+}
+/*************************************************** COMMENTS **************************************************************/
+#comzone {
+	display : none;
+	margin : 5px 0px;
+	padding : 0;
+}
+#comzoneopen {
+	display : block;
+	margin : 5px 0px;
+	padding : 0;
+}
+span.commentstitle {
+	font-weight : bold;
+	font-size : 12px;
+}
+.subcomment {
+	margin-left: 10px;
+}
+
+/************************************************************ CHAT *********************************************************/
+table.chatroom {
+	border-color : 2px solid #334455;
+	width : 100%;
+}
+td.chatchannels {
+	background-color : #C7D0D9;
+}
+td.chatarea {
+	padding-left : 0px;
+	margin-left : 0px;
+	color : black;
+	background-color : #FFFFFF;
+}
+table.chatform {
+	border : 1px solid #00639C;
+	width : 100%;
+	border-top : 0px;
+}
+td.tdchatform {
+	color : Black;
+	background-color : #EEEEEE;
+}
+span.chnormal  {
+	color : black;
+}
+span.chuser {
+	color : black;
+	font-weight : bold;
+}
+
+/********************************************************** POLLS ********************************************************/
+div.pollresults {
+	margin-top : 5px;
+	font-size : 12px;
+	padding : 0 5px;
+}
+table.pollresults {
+	width : 100%;
+}
+td.pollr {
+	color : black;
+}
+#pollopen {
+	display : block;
+}
+#pollzone {
+	display : none;
+}
+#polledit {
+	display : none;
+}
+.pollnav {
+}
+
+/***************************************************** FORUMS *****************************************************/
+div.forumspagetitle {
+}
+table.threads {
+	width : 100%;
+}
+td.viewthreadl {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #EEEEEE;
+	height : 10px;
+}
+td.viewthreadr {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #EEEEEE;
+	height : 10px;
+}
+td.threadsevenl {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #EEEEEE;
+}
+td.threadsevenr {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #EEEEEE;
+}
+td.threadsoddl {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #DDDDDD;
+}
+td.threadsoddr {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #DDDDDD;
+}
+td.threadseparator {
+	border : 1px solid #8CACBB;
+	border-collapse : collapse;
+	background-color : #EEEEEE;
+	height : 5px;
+}
+#forumpost {
+	display : none;
+}
+#forumpostopen {
+	display : block;
+}
+div.forumtoolbar {
+	background-color : #395AAD;
+	margin-bottom : 20px;
+	border : 0px;
+}
+td.forumtoolbar {
+	color : white;
+	font-weight : bold;
+	text-decoration : none;
+	vertical-align : bottom;
+}
+.toolbarlink, .toolbarlink:active {
+	color : white;
+	font-weight : bold;
+	text-decoration : none;
+}
+.toolbarlink:hover {
+	color : #00FFFF;
+}
+.forumvotelink {
+	color : black;
+}
+
+/************************************************ CATEGORIES **************************************************************/
+table.tcategpath {
+	margin-bottom : 40px;
+	border : 1px solid #8CACBB;
+	width : 100%;
+	border-collapse : collapse;
+}
+td.tdcategpath {
+	color : #578308;
+	font-weight : bold;
+	background-color : #CDE2A7;
+	padding : 0 3px;
+	margin : 0px;
+	border-spacing : 0px;
+}
+.categpath {
+}
+table.subcats {
+	padding : 20px 0;
+	width : 100%;
+	border-spacing : 0px;
+	margin-bottom : 10px;
+	border : 1px solid #46596f;
+	background-color : #CDE2A7;
+	border-collapse : collapse;
+}
+td.tdsubcat {
+	width : 25%;
+	background-color : #8CACBB;
+}
+.categlink {
+}
+table.catobjects {
+	width : 100%;
+	border-spacing : 0px;
+	padding-right : 0px;
+	margin-bottom : 10px;
+	border : 1px solid #46596f;
+	border-collapse : collapse;
+}
+td.categobjectsnameeven,
+td.categobjectsnameodd {
+	color : black;
+}
+td.categobjectsdataeven,
+td.categobjectsdataodd {
+	background-color : #F7F9FA;
+	color : black;
+}
+.catname {
+	color : #46596f;
+}
+.catblock {
+	border : 1px solid #AAAAAA;
+}
+.catlists {
+	border-top : 1px solid #FFFFFF;
+	padding : 1px 6px 1px 6px;
+	background-color : transparent;
+	color : #666666;
+}
+.catlists:last-child {
+	border-bottom : 1px solid #FFFFFF;
+}
+.catlists:hover {
+	background-color : #DEDEDE;
+}
+.cattitle {
+	color : #000000;
+	font-weight : bold;
+}
+.catlists a.link {
+	color : #666666;
+	padding : 0px 4px 0px 4px;
+	border : 1px solid #AAAAAA;
+	-moz-border-radius : 6px;
+}
+.catlists a.link:hover {
+	color : #000000;
+}
+
+/***************************************************** FAQS **************************************************************/
+div.faqlistquestions {
+	background-color : #FFFFFF;
+	color : black;
+	border : 1px solid #8CACBB;
+	margin-bottom : 20px;
+}
+div.faqqa {
+	background-color : #FFFFFF;
+	color : black;
+	border : 1px solid #8CACBB;
+	margin-bottom : 20px;
+}
+div.faqquestion {
+	font-weight : bold;
+	padding : 2px 12px;
+	padding-bottom : 0;
+	background-color : #DEE7EC;
+}
+div.faqanswer {
+	padding : 4px 12px;
+	padding-top : 0;
+}
+
+/***************************************************** QUIZZES **************************************************************/
+div.questionblock {
+	border : 1px solid #8CACBB;
+	background-color : white;
+	padding : 4px;
+	margin-bottom : 10px;
+}
+div.quizquestion {
+	margin-bottom : 5px;
+}
+div.quizoptions {
+}
+div.quizdescription {
+	border : 1px solid #8CACBB;
+	background-color : white;
+	margin-bottom : 10px;
+}
+div.quizanswer {
+	border : 1px solid #8CACBB;
+	background-color : white;
+	margin-bottom : 10px;
+}
+
+/***************************************************** SHOUTBOX **************************************************************/
+div.shoutboxmsg {
+	border : 1px solid #8CACBB;
+	border-bottom : 0;
+	background-color : white;
+	margin-bottom : 0px;
+	padding : 4px;
+	padding-bottom : 1px;
+}
+div.shoutboxmsg:last {
+	border-bottom : 1px solid #8CACBB;
+}
+div.shoutboxmodmsg {
+	font-size : 10px;
+	margin : 0 5px 4px 5px;
+	padding-top : 5px;
+	padding-bottom : 1px;
+}
+textarea.tshoutbox{
+	background-color : white;
+	border : 1px solid #8CACBB;
+	color : #000000;
+	font-size : 10px;
+	width : 162px;
+}
+.wiki-table {
+	border-color : 1px solid #8CACBB;
+}
+.wiki-tr-a td {
+	background-color : #DDDDDD;
+	border : 0;
+}
+.wiki-tr-b td {
+	background-color : #EEEEEE;
+	border : 0;
+}
+
+/*************************************************** DIRECTORY ***************************************************/
+div.dircategs {
+	border : 1px solid #8CACBB;
+	padding : 5px;
+}
+.dirlink {
+	color : black;
+}
+.dirsublink {
+	font-size : 10px;
+	color : black;
+}
+div.dirlistsites {
+	background-color : white;
+	padding-left : 5px 0 10px 5px;
+	border : 1px solid #8CACBB;
+	margin-top : 10px;
+}
+div.dirsite {
+	background-color : #F7F9FA;
+	margin : 5px;
+}
+span.dirsitedesc {
+}
+span.dirsitetrail {
+	font-size : 10px;
+}
+span.dirsitecats {
+}
+.dirsitelink {
+	color : black;
+}
+div.dirrelated {
+	background-color : White;
+	margin-top : 10px;
+	border : 1px solid #8CACBB;
+	padding : 5px;
+}
+td.dirfooter {
+	font-size : 9px;
+}
+div.dirfooter {
+	margin-top : 10px;
+	border : 1px solid #8CACBB;
+}
+
+/*************************************************** MESSAGES ***************************************************/
+td.prio1, td.prio2, td.prio3, td.prio4, td.prio5 {
+	border : 1px solid #8CACBB;
+	padding-left : 2px;
+}
+td.prio1 {
+	background-color : #F7F9CA;
+}
+td.prio2 {
+	background-color : #F7F9EA;
+}
+td.prio3 {
+	background-color : #F7F9FA;
+}
+td.prio4 {
+	background-color : #F7F9FD;
+}
+td.prio5 {
+	background-color : #F7F9FF;
+}
+div.messureadflag {
+	background-color : #CCCCCC;
+	padding-left : 5px;
+}
+div.messureadhead {
+	background-color: #DEDEDE;
+	margin-top: 2px;
+}
+div.messureadbody {
+	margin-top : 5px;
+	background-color : #DEDEDE;
+}
+.readlink {
+	font-size : 10px;
+	color : black;
+}
+/********************* trackers  *********************/
+.statuson {
+	padding : 1px;
+	margin : 1px;
+	border : 1px inset #666666;
+	-moz-border-radius : 20px;
+	vertical-align : middle;
+	background-color : #BBAA99;
+}
+.statusoff {
+	padding : 1px;
+	margin : 2px;
+	vertical-align : middle;
+}
+/******************************************** Tiki calendar *********************************************/
+#calendar {
+	width : 100%;
+}
+.Cal0, .Cal1, .Cal2 {
+	color : #425262;
+	font-size : 10px;
+	padding-right : 0px;
+}
+.Cal0:before {
+	content : "? ";
+}
+.Cal1:before {
+	content : "+ ";
+	background-color : #FFCC77;
+}
+.Cal2:before {
+	content : "X ";
+	background-color : #EEEEAA;
+}
+.caltitle {
+	font-weight : bold;
+	color : #425262;
+}
+.calcheckbox {
+	background-color : #FFFFFF;
+}
+.caltoggle {
+	font-size : 9px;
+	margin-bottom : 7px;
+}
+.calfocus {
+	font-size : 9px;
+	background-color : transparent;
+}
+.calfocus a {
+	text-decoration : none;
+	font-weight : normal;
+	color : #000000;
+}
+.calfocuson {
+	font-size : 9px;
+	background-color : #F3E498;
+}
+.calfocuson a {
+	text-decoration : none;
+	font-weight : normal;
+	color : #000000;
+}
+
+.Calwiki, .Calblog, .Calgal, .Calart, .Calforum, .Caldir, .Calfgal,
+.Calfaq, .Calquiz, .Caltrack, .Calsurv, .Calnl, .Caleph, .Calchart {
+	border-top : 1px dashed #CCCCCC;
+	font-size : 10px;
+	padding : 0 3px;
+	margin-top : 0;
+}
+
+.Calwiki a {
+	color : #443F39;
+	font-weight : normal;
+}
+.Calwiki:before {
+	content : "w";
+	font-family:  monospace;
+	background-color : #FFFFFF;
+}
+.Calblog a {
+	color : #443F39;
+	font-weight : normal;
+}
+.Calblog:before {
+	content : "b";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calgal a {
+	font-weight : normal;
+	color : #303F49;
+}
+.Calgal:before {
+	content : "i";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calart a {
+	color: #304F30;
+	font-weight: normal;
+}
+.Calart:before {
+	content : "a";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calforum a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calforum:before {
+	content : "o";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Caldir a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Caldir:before {
+	content : "d";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calfgal a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calfgal:before {
+	content : "f";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calfaq a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calfaq:before {
+	content : "q";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calquiz a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calquiz:before {
+	content : "z";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Caltrack a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Caltrack:before {
+	content : "t";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calsurv a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calsurv:before {
+	content : "s";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calnl a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calnl:before {
+	content : "n";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Caleph a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Caleph:before {
+	content : "e";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.Calchart a {
+	color : #304F30;
+	font-weight : normal;
+}
+.Calchart:before {
+	content : "c";
+	font-family : monospace;
+	background-color : #FFFFFF;
+}
+.calweb {
+	font-weight : bold;
+	font-size : 10px;
+	text-decoration : none;
+	padding-left : 3px;
+	padding-right : 3px;
+	color : #336699;
+}
+.calweb:hover {
+	color : #996633;
+}
+#calprio {
+	margin-left : 7px;
+	padding : 0 5px;
+	color : black;
+}
+.calprio1 {
+	background-color : #DAE0E0;
+}
+.calprio2 {
+	background-color : #DADCDC;
+}
+.calprio3 {
+	background-color : #DAD0D0;
+}
+.calprio4 {
+	background-color : #DACACA;
+}
+.calprio5 {
+	background-color : #DAC0D0;
+}
+.calprio6 {
+	background-color : #DABABA;
+}
+.calprio7 {
+	background-color : #DAB0B0;
+}
+.calprio8 {
+	background-color : #DAAAAA;
+}
+.calprio9 {
+	background-color : #DA9A9A;
+}
+.calprio1 a, .calprio2 a, .calprio3 a, .calprio4 a, .calprio5 a,
+.calprio6 a, .calprio7 a, .calprio8 a, .calprio9 a {
+	color : #000000;
+	font-weight : normal;
+}
+div.tabrow {
+	margin-left : 29px;
+	background-color : #EEEEEE;
+	border : 1px solid #787878;
+	border-bottom : 0;
+	font-size : 11px;
+}
+td.middle {
+	vertical-align : middle;
+}
+.daterow {
+	margin-left : 10px;
+}
+.mininotes {
+	font-size : 9px;
+	color : #666666;
+}
+.opaque {
+	background-color: #FFFFFF;
+	width : auto;
+	border : 1px solid #666666;
+	-moz-border-radius : 10px;
+	padding : 5px;
+}
+.opaque .box-title,
+.opaque .box-data {
+	width: auto;
+}
+.calcontent {
+	min-height: 60px;
+}
+.viewmodeon {
+	padding : 0px;
+}
+.viewmodeoff {
+	padding-left : 0px;
+}
+a.viewmodeon img {
+	margin : 0;
+	padding : 0;
+}
+a.viewmodeoff img {
+	margin : 0;
+	padding : 0;
+}
+#caltable {
+	width: 100%;
+}
+/*************************** user menu ***************/
+.option {
+}
+.optionline {
+	border-top : 1px dashed #8CACBB;
+	margin-top : 2px;
+	padding-top : 2px;
+}
+/*************************** other misc styles ***************/
+div.tree {
+	text-align : left;
+	padding-left : 1.5em;
+}
+div.tree#top {
+	border : 1px outset #46596f;
+	padding : 10px;
+}
+/* TikiIntegrator: By default copy rules dialog not shown */
+div#rules-copy-panel {
+	displayi : none;
+}
+/* JsCalendar wrapper */
+#datrigger {
+	border : 1px outset #666666;
+	padding : 1px 3px 1px 5px;
+	margin : 2px;
+	cursor : pointer;
+	font-weight : bold;
+}
+.calendar {
+	z-index: 200;
+}
+table.commentinfo {
+	width : 100%;
+	background-color: #FFF7E6;
+}
+div#loadstats {
+	color : #666666;
+	padding : 5px;
+}
+
+/* phplayers style */
+.box-data table {
+	width : 100%;
+}
+.mdkverbar  {
+	margin : 0px;
+}
+.mdksubmenu {
+	z-index : 999;
+	position : absolute;
+	left : 0;
+	top : 0;
+	background-color : #FFFFFF;
+	visibility : hidden;
+}
+.mdksubmenu table {
+	width : auto;
+}
+.mdksubframe  {
+	z-index : 1000;
+	position : relative;
+	display : block;
+	border : 1px solid #000000;
+}
+.mdkitem {
+	border-top : 1px solid #DEDEDE;
+	position : relative;
+	text-align : left;
+	white-space : nowrap;
+}
+.mdkitem a  {
+	padding : 2px 5px;
+	position : relative;
+	display : block;
+}
+.mdkitem a:visited  {
+}
+.mdkitem a:hover  {
+}
+.mdkitem a:active {
+	color : #993300;
+}
+.mdkitem .mdkfwdarr {
+	position : absolute;
+	top : 5px;
+	right : 12px;
+}
+/* toc */
+.toc {
+}
+.toc li {
+	margin-top : 3px;
+}
+.tocnav {
+	background-color : #EEEEEE;
+	margin-bottom : 16px;
+}
+.tocnav table {
+	width : auto;
+	margin-left: auto;
+	margin-right: 3px;
+	/* background-color : #FFFFFF; */
+}
+.tocnav a {
+	font-size : 10px;
+	color : #424242;
+}
+#clear {
+	clear : both;
+}
+/***************** tiki tabs ***************/
+.tabmark {
+	display : inline;
+	font-size : 10px;
+	background-color : #DDDDDD;
+	border : 1px solid #666666;
+	margin : 0px;
+	margin-right : 5px;
+	padding: 2px 0;
+	-moz-border-radius : 5px 5px 0 0;
+}
+.tabmark a {
+	-moz-border-radius : 5px 5px 0 0;
+	border-bottom : 0;
+	color : #666666;
+	font-weight : bold;
+	padding : 1px 5px;
+}
+.tabmark a:active {
+	background-color : white;
+	color : red;
+}
+.tabmark a:hover {
+	color : black;
+	background-color : #CCCCCC;
+}
+.tabcontent {
+	z-index : 200;
+	position : relative;
+	border : 1px solid #999999;
+	padding: 6px 2px 2px 2px;
+	margin: 5px;
+	margin-top : 0;
+	background-color : #EEEEEE;
+	-moz-border-radius : 0px 4px 4px 4px;
+}
+
+/*********************** Version Plugin Style **********************/
+.versions {
+	border-top : 1px dashed #999999;
+	border-bottom : 1px dashed #999999;
+	min-height : 142px;
+}
+.versionav,
+.versionav:after {
+	display : inline;
+	float : right;
+	border-left : 1px dashed #999999;
+}
+.versionav .button2 {
+	display : block;
+	border : 0;
+	border-bottom : 1px dashed #999999;
+	background-color : none;
+}
+.versionav .button2 .linkbut {
+	border : 0;
+	background-color : inherit;
+	padding : 0 10px;
+}
+.versionav .highlight {
+	background-color : #CCCCCC;
+	font-weight : bold;
+}
+.versiontitle,
+.versiontitle:after {
+	font-weight : bold;
+	border-bottom : 1px dashed #999999;
+	border-left : 1px dashed #999999;
+	padding : 2px 30px;
+	float : right;
+}
+
+/* end of css file */
+
+_3http://claws.uct.ac.za/clawtiki/styles/tikineat.cssXtext/css”O´GIF89a  ≥ ˇÍ EEE   ˇŒ ˇ… ˛ù ˇ¥ ˇ˛ìˇ˝ˇˇ«ˇÂ ˇˇÎ            !˘   ,       XêIjùò’ïŒpúCLA''¶´vòqj	ü?Ç*p∆ÇÜ !«í\ÛÙ¨¶'Öp∏˛d/¬N3(^0-çU&∏›kQ¿@73,Km ;_<http://claws.uct.ac.za/clawtiki/img/smiles/icon_confused.gifYimage/gif”OäGIF89a  ƒ ˙≥ ˝  ‡l ˜é[ˇ˜Õ˚hh˛∂u˜ú ˇ“á¸§iˇ∑∑˛òòÁsJEEEˇ‰‰ˇ˙ıˇÃÃˇÍ ¯ÄÄˇ¸È˙◊ ˛„ ˘¶¶ˇ¸˛ÀÉˇ˛ì„__ŸH6   ˇÂô˙¡{   !ˇNETSCAPE2.0   !˘  ,       f‡'äMYéËWNDñ'⁄∞◊›¡—åMÀ›@Nnß ¸ÄAòä`ãù8]#c„<≠ë †î©P*»àW[∫  dÂ|.ùç8ÿw@ mÂx·DqjÉ:<Éââá2ylR)<&D#! !˘
+  ,     Q‡'~œD∆8ñ]áº∆0öﬂk±H‘ˆùN.O\¢[Õê xò‚ôH ´ÕÉTõAœ f»èPÑIxEhó¡„¯∫JT≠⁄E! !˘2  ,     H‡'äNπå®AJªc˘µÙ˜í3]üjõ+πWOTõ-$ãE◊RÕBgâJÆöèÑö-¿ÆÀë‚%-¶Ã3Ã|n´Q¢Îu-
+ !˘
+  ,     P‡'äAc:u‚√X~n˝¡"A◊6∫∫;ƒFhâl4CÇ‡1`xàf"Å0®5èu0e|<Éó<B&¡ú<Ã;Ê~€Á)—tJÖ  !˘
+  ,     Q‡'~ëe¡8ñ◊Ω¡1öﬂk±ò’ˆùÆO;d\¢[- »Pï^‰…åÄÂz  ÇC/ >» äPTADhØó¡„¯∫J‰ı⁄E! ;_;http://claws.uct.ac.za/clawtiki/img/smiles/icon_redface.gif”O[GIF89a  Ê     ÜÜÜ◊ÿÊÿÿÿÓ˜ˇÀÂˇ‹Ìˇµµµ………∏‹ˇ¶¶¶≤≤≤ΩΩΩWWW’’’ÒÒÒâââŸŸŸîîîõõõæææøøø¬¬¬qqqzzzdddœœœÃÃÃûûûüüüùùù†††¨¨¨ÆÆÆ±±±•••™™™´´´óóómmm```___|||vvvsssNNNEEECCCXXXUUUPPPéééçççåååïïïìììíííÇÇÇÄÄÄ~~~àààÖÖÖÉÉÉ≥≥≥≈‘ˇ’‹Ô°´Àπø’ù°∞∑√ﬂØ‘ˇƒ›˘≥÷ˇµ¡€ﬂ·ÂOOUªªƒggsÜÜ¶ããû{{Å«“ˇŒ◊˚acz≥≥∂π∫Œä™z‘‘‘“““‡‡‡ÂÂÂ···ŒŒŒ∂∂∂¥¥¥∫∫∫¿¿¿ºººÓÓÓÚÚÚqÑg˙˙˙ÌÌÌËËËÁÁÁÈÈÈÏÏÏÍÍÍ                                                         !˘  m ,       ∏ÄmmÑÖÇàâUååDâêmEîI8ëàBúGMôÇC	§HFS°L@QRAJi=©êk_!]?≥Ç$#bgl<à[X\`W≥+
+‡Ye9¿%4:>V0*¿fd6;&
+f@»Ä—Ñ1–Ä∏ë‚Dç0jD\HîA¡ÉOúP—‚•ÅåÇâ$†pÒb	î1X¸J†•ÀïÅ  ;_7http://claws.uct.ac.za/clawtiki/img/icons/ico_print.gif”OàGIF89a  ˜       ˇ{{ {{{ΩΩΩˇˇ ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ!˘   ,       e H∞†¡É¿∞°√Ü 0`† ≈ä à` Äå ‡8Ä  ãQäÙ(±ÄIåE`Ÿë‚»î2gí, Ä¿»ç={“–ìÄOE}5 ¥©—°£“‹Hµ™UÅ ;_3http://claws.uct.ac.za/clawtiki/img/icons/email.gif”OıâPNG
+
+   IHDR   $      pÈN˙   sBIT€·O‡   PLTEˇˇˇıÒÌ¯Ë›ˇÊ’Ô‰‹˜›Ã⁄ÀË◊Ãˆ“ª–ªˇ»§ÊÃ∫∆™‡ ∫ﬁ…∫Ë¬™ºôﬂø©Ô±àÙ©wÂ≠àÒ®w”∞ôÂ£w’ßáˇöW‡°wÓúfﬁ†v÷ùv„òf≈†áﬂñfªúá…òwﬂåUÏáDÊÖD∫ëwπëwÙÄ3‘àUÓ~3ﬂÇDÕÖUˆw"«ÇUÒu"“}D‰w.≥Öeﬁw3æU™Åf∑|Tˇf “r3›m"Îh˜c ¨xU≈m3Ô` §tTÏ^ Ê\ ‚]∏h3∆c"‘_≥f3ﬁY Õ\°iDŸW ∆Y¶a3”T œS «P ≤QîZ3≈J ªK úS"µH ¨E õH®C çCú> ô= ì; }3?!Nä]D   	pHYs    “›~¸   !tEXtSoftware Macromedia Fireworks 2.0Ó´[«   tEXtCreation Time 10/28/01¨Á  IDATxúÖëYSÉ0Ö/ï÷%V‹ÎBµÓÓUÉFR‚E-H—∫˝ˇa”iz^ŒôÃ7πgÓÖ°±Å:ÖE¨Dîp)•iÏ:˛Œ†›∫m€OÇL∂LÛ‡^PrΩbVùÄë© m~\H”ùòNEn?tÒ∏ß¡YXÄùN`ŒËÒCÕrP+b£∞¨%Å«ŸËœ±‡‹%˘üLÄDå»˙|SÏ´aÁ—øNZ+v…§¶R"6KÍi5ŒwZhHàÒ´ö&ÁrŒ-‡ãÁ;çÉˆù–ÛJpS5Cü[†Ê†WüAoÀFHá·˜ä\H‡2ºÌA3K/VÃì˙,BSGßÀBMüˆA8ª UbåQï•ª›≥t~Í˜¡ZLƒdà    IENDÆB`Ç_+http://claws.uct.ac.za/clawtiki/img/rss.pngYimage/png”””””””‘()*+,_WebResourceTextEncodingNameUUTF-8O-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
+
+<SCRIPT type="text/javascript" src="lib/tiki-js.js"></SCRIPT><LINK rel="StyleSheet" href="styles/tikineat.css" type="text/css"><LINK rel="icon" href="favicon.png"><TITLE>
+CLAWs Tiki
+</TITLE>
+
+
+
+
+
+
+    
+
+
+
+
+</HEAD><BODY><DIV id="tiki-main">
+    <DIV id="tiki-mid">    <TABLE border="0" cellpadding="0" cellspacing="0">    <TBODY><TR><TD id="leftcolumn">            
+
+
+
+
+<DIV class="box"><DIV class="box-title">
+  Search
+
+</DIV><DIV class="box-data">
+        <FORM class="forms" method="get" action="tiki-searchresults.php">    <INPUT id="fuser" name="words" size="14" type="text" accesskey="s"> in:<BR>
+    <SELECT name="where"><OPTION value="pages">Entire Site</OPTION><OPTION value="wikis">Wiki Pages</OPTION><OPTION value="galleries">Image Gals</OPTION><OPTION value="images">Images</OPTION><OPTION value="blogs">Blogs</OPTION><OPTION value="posts">Blog Posts</OPTION></SELECT>
+    <INPUT type="submit" class="wikiaction" name="search" value="go"> 
+    </FORM>
+
+</DIV></DIV>
+            
+
+
+
+
+<DIV class="box"><DIV class="box-title">
+  Login
+
+</DIV><DIV class="box-data">
+    
+         <FORM name="loginbox" action="tiki-login.php" method="post"> 
+           <TABLE border="0">      <TBODY><TR><TD>          <TABLE>          <TBODY><TR><TD class="module"><LABEL for="login-user">user:</LABEL></TD></TR><TR><TD><INPUT type="text" name="user" id="login-user" size="20"></TD></TR><TR><TD class="module"><LABEL for="login-pass">pass:</LABEL></TD></TR><TR><TD><INPUT type="password" name="pass" id="login-pass" size="20"></TD></TR><TR><TD><INPUT type="submit" name="login" value="login"></TD></TR><TR><TD class="module"><LABEL for="login-remember">Remember me</LABEL> <INPUT type="checkbox" name="rme" id="login-remember" value="on"></TD></TR><TR><TD valign="bottom"><A class="linkmodule" href="tiki-register.php" title="Click here to register">register</A></TD></TR></TBODY></TABLE>
+        </TD></TR></TBODY></TABLE>
+
+              <INPUT type="hidden" name="stay_in_ssl_mode" value="">
+            </FORM>
+    
+</DIV></DIV>
+             
+
+
+
+
+
+<DIV class="box"><DIV class="box-title">
+  <A class="flip" href="javascript:flip('mainmenu');">Menu</A>
+
+</DIV><DIV class="box-data">
+    <DIV id="mainmenu" style="display: block">¬†<A href="tiki-index.php" class="linkmenu">Home</A><BR>
+
+
+
+  ¬†<A href="tiki-stats.php" class="linkmenu">Stats</A><BR>
+
+
+
+  ¬†<A href="tiki-calendar.php" class="linkmenu">Calendar</A><BR>
+
+
+  <DIV class="separator">  <A class="separator" href="javascript:toggle('wikimenu');">[-]</A>  <A class="separator" href="tiki-index.php">Wiki</A>
+  <A class="separator" href="javascript:toggle('wikimenu');">[+]</A>  </DIV>
+  <DIV id="wikimenu" style="display:none;">      ¬†<A href="tiki-index.php" class="linkmenu">Wiki Home</A><BR>
+        ¬†<A href="tiki-lastchanges.php" class="linkmenu">Last changes</A><BR>
+        ¬†<A href="dump//new.tar" class="linkmenu">Dump</A><BR>
+        ¬†<A href="tiki-wiki_rankings.php" class="linkmenu">Rankings</A><BR>
+        ¬†<A href="tiki-listpages.php" class="linkmenu">List pages</A><BR>
+    ¬†<A href="tiki-orphan_pages.php" class="linkmenu">Orphan pages</A><BR>
+        ¬†<A href="tiki-editpage.php?page=SandBox" class="linkmenu">Sandbox</A><BR>
+            </DIV>
+  <DIV class="separator">  <A class="separator" href="javascript:toggle('galmenu');">[-]</A> 
+  <A class="separator" href="tiki-galleries.php">Image Galleries</A> 
+  <A class="separator" href="javascript:toggle('galmenu');">[+]</A>  </DIV>
+  <DIV id="galmenu" style="display:none;">      ¬†<A href="tiki-galleries.php" class="linkmenu">Galleries</A><BR>
+        ¬†<A href="tiki-galleries_rankings.php" class="linkmenu">Rankings</A><BR>
+        </DIV>
+
+
+  <DIV class="separator">  <A class="separator" href="javascript:toggle('blogmenu');">[-]</A>  <A class="separator" href="tiki-list_blogs.php">Blogs</A>
+  <A class="separator" href="javascript:toggle('blogmenu');">[+]</A>  </DIV>
+  <DIV id="blogmenu" style="display:none;">    ¬†<A href="tiki-list_blogs.php" class="linkmenu">List blogs</A><BR>
+      ¬†<A href="tiki-blog_rankings.php" class="linkmenu">Rankings</A><BR>
+          </DIV>
+
+
+
+
+
+
+  <DIV class="separator">  <A class="separator" href="javascript:toggle('quizmenu');">[-]</A> 
+  <A href="tiki-list_quizzes.php" class="separator">Quizzes</A>
+  <A class="separator" href="javascript:toggle('quizmenu');">[+]</A>  </DIV>
+  <DIV id="quizmenu" style="display:none;">  ¬†<A href="tiki-list_quizzes.php" class="linkmenu">List quizzes</A><BR>
+    ¬†<A href="tiki-quiz_stats.php" class="linkmenu">Quiz stats</A><BR>
+      ¬†<A href="tiki-list_courses.php" class="linkmenu">List Courses</A><BR>
+  </DIV>
+
+
+
+
+
+
+
+
+
+</DIV>
+
+</DIV></DIV>
+
+                  
+            
+
+  
+
+
+<DIV class="box"><DIV class="box-title">
+  Featured links
+
+</DIV><DIV class="box-data">
+       <TABLE border="0" cellpadding="0" cellspacing="0">               <TBODY><TR><TD class="module">        <A class="linkmodule" href="http://dragonfire.uct.ac.za/">         Dragonfire
+        </A>
+       </TD></TR></TBODY></TABLE>
+  
+</DIV></DIV>
+            
+      </TD><TD id="centercolumn"><DIV id="tiki-center">
+<DIV class="blogtitle">  Viewing blog post
+      : meanwhile, feeding
+  </DIV>
+
+<DIV class="blogdesc"><A class="link" href="tiki-view_blog.php?find=&blogId=4&offset=0&sort_mode=created_desc">Return to d@vid's blog.</A>
+</DIV>
+
+<DIV class="posthead"><TABLE><TBODY><TR><TD align="left">
+<SPAN class="posthead">        meanwhile, feeding<BR>
+        <SMALL> posted by d@vid on Thu 19 of May, 2005 [13:47 UTC]</SMALL>
+</SPAN>
+</TD><TD align="right">
+</TD></TR></TBODY></TABLE>
+</DIV>
+<DIV class="postbody">I cannot <I>believe</I> it's only a month since my last post, but I guess one existential crisis a week can do that - I blame an inability to defy reflection, or book myself free time
+<BR>
+<BR>it's always easier to confront things in a deluge, thus I present:
+<BR><UL><LI> <A class="wiki" href="http://www.feedreader.com">feedreader</A> too many blogs (and other feeds)? aggregate! best solution* this side of ada's project
+</LI><LI> <A class="wiki" href="http://www.tiddlywiki.com">TiddlyWiki</A> your personal one-file (!) javascript-based wiki, suitable for USB drive storage (just wish it would work on Mac OS 9 <IMG alt="confused" src="img/smiles/icon_confused.gif">) and those of us who want to maintain a site** in a simple fashion
+</LI><LI> if you get it and want to run with, be sure to check out <A class="wiki" href="http://www.tiddlywiki.com/#TiddlyWikiAdaptations">TiddlyWikiAdaptations</A>
+</LI><LI> a hint that the CLAWsite may upgrade again, once anyone on the CLAWnet team has any time (and we've decided on a migration plan, and what we're migrating <I>to</I>, and...)
+</LI></UL>
+<BR>I will have to collect more feeds as people migrate (or find themselves) on other blogging sites (even I was a blogster <A class="wiki" href="http://kwill.blogspot.com/">once upon a time</A>) - in the meanwhile I look forward to Episode III just <A class="wiki" href="http://moonflake.blogspot.com/2005/05/well-okay-then.html">like</A> <A class="wiki" href="http://schpat.blogspot.com/2005/05/blog-is-born.html">everybody</A> <A class="wiki" href="http://jleag.com/41">else</A>
+<BR>
+<BR><DIV class="titlebar">LARPing news (for want of content)</DIV>
+<BR>Tim &amp; I will be reviewing the results of Flower War 1-Acatl this weekend, and just <I>maybe</I> I'll get round to some discussion of campaign LARPing and design
+<BR>
+<BR>I &amp; Tim have a cunning plan for player-generated LARPs (one session prep, one session play) which we will hopefully implement this vac*** - I hate to pre-empt these things, but this is a damn fine idea
+<BR>
+<BR>I will make myself a <A class="wiki" href="http://www.gapingvoid.com/">business card</A> that says "LARP consultant", my main function is to say "don't tell me about it, just write the damn LARP so I can play!" (secondary function: figure out which character I can play once I've heard too much, tertiary function: write my own damn LARPs) ‚Äî does one take clients out to lunch or the other way 'round?
+<BR>
+<BR><DIV class="titlebar">zammow news</DIV>
+<BR>zamwhat? exactly - plane tickets to Icon (via Durban) are booked, and hopefully I'll have actually posted off the zammow copies of CLAWmarks by then <IMG alt="redface" src="img/smiles/icon_redface.gif">
+<BR>
+<BR><DIV class="titlebar">feetnote</DIV>
+<BR> * for a web-based solution try <A class="wiki" href="http://del.icio.us/">http://del.icio.us/</A> - I only fiddled
+<BR>
+<BR> ** ha! one step closer, but no promises on a deadline
+<BR>
+<BR> *** whatever <I>that</I> means
+<BR>
+<BR>(EDIT: added the business card link, it's all bloggy)<BR>
+<HR>
+<TABLE><TBODY><TR><TD>
+<SMALL><A class="link" href="tiki-view_blog_post.php?blogId=4&postId=443">Permalink</A>
+(referenced by: 0 posts references: 0 posts)
+</SMALL>
+</TD><TD style="text-align:right">
+<A href="tiki-print_blog_post.php?postId=443"><IMG src="img/icons/ico_print.gif" border="0" alt="print" title="print"></A>
+<A href="tiki-send_blog_post.php?postId=443"><IMG src="img/icons/email.gif" border="0" alt="email this post" title="email this post"></A>
+</TD></TR></TBODY></TABLE>
+</DIV>
+
+            </DIV>
+      </TD></TR></TBODY></TABLE>
+  </DIV>
+    <DIV id="tiki-bot">            <DIV id="rss" style="text-align: center">                                                <A href="tiki-wiki_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Wiki</SMALL>
+                                                                <A href="tiki-blogs_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Blogs</SMALL>
+                                                                <A href="tiki-articles_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Articles</SMALL>
+                                                                <A href="tiki-image_galleries_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Image galleries</SMALL>
+                                                                <A href="tiki-file_galleries_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>File galleries</SMALL>
+                                                                <A href="tiki-forums_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Forums</SMALL>
+                                                                <A href="tiki-map_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Maps</SMALL>
+                                                                <A href="tiki-directories_rss.php?ver=1&css=y"><IMG alt="rss" style="border: 0" src="img/rss.png"></A>
+                                <SMALL>Directories</SMALL>
+                        </DIV>
+
+
+
+
+<DIV id="loadstats" style="text-align: center">        <SMALL>[ Execution time: 1.36 secs ] ¬† [ Memory usage: 5.71MB ] ¬† [ 26 database queries used ] ¬† [ GZIP Enabled ] ¬† [ Server load: 0.00 ]</SMALL>
+</DIV>  </DIV>
+  </DIV>
+
+
+
+  
+
+    
+
+
+
+
+ </BODY></HTML>_Khttp://claws.uct.ac.za/clawtiki/tiki-view_blog_post.php?blogId=4&postId=443Ytext/html    1 @ G Y h ~9´9‹9˜9˛√_√ï√û√•ƒSƒíƒúƒ£«1«o«v…’  Õ¢ÕÿÕﬂ–ÿ—————%—,—3—:—A—J—h—n˛Ñ˛“             -              ˛‹

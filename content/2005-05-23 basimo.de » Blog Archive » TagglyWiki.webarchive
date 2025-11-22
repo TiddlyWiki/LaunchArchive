@@ -1,0 +1,1086 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives¢”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO"ç/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_>http://www.basimo.de/words/wp-content/themes/default/style.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.jsYtext/html‘UUTF-8O$◊<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <TITLE>basimo.de  ¬ª Blog Archive   ¬ª TagglyWiki</TITLE>
+        
+        <META name="generator" content="WordPress 1.5">
+
+        <LINK rel="stylesheet" href="http://www.basimo.de/words/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.basimo.de/words/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.basimo.de/words/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.basimo.de/words/feed/atom/">
+        <LINK rel="pingback" href="http://www.basimo.de/words/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://www.basimo.de/words/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                          #page           { background: url("http://www.basimo.de/words/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                        #header         { background: url("http://www.basimo.de/words/wp-content/themes/default/images/kubrickheader_cap.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://www.basimo.de/words/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /*
+                #headerimg      { background: url('http://www.basimo.de/words/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                */
+
+        </STYLE>
+
+                <LINK rel="archives" title="May 2005" href="http://www.basimo.de/words/archives/2005/05/">
+        <LINK rel="archives" title="January 2005" href="http://www.basimo.de/words/archives/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.basimo.de/words/archives/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.basimo.de/words/archives/2004/11/">
+
+        </HEAD><BODY>
+
+<DIV id="page">
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://www.basimo.de/words">basimo.de</A></H1>
+                <DIV class="description">let‚Äôs have a problem</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">¬´ <A href="http://www.basimo.de/words/archives/2005/05/23/135/">Beim Essen weinen</A></DIV>
+                        <DIV class="alignright"></DIV>
+                </DIV>
+
+
+                <DIV class="post">                        <H2 id="post-136"><A href="http://www.basimo.de/words/archives/2005/05/23/136/" rel="bookmark" title="Permanent Link: TagglyWiki">TagglyWiki</A></H2>
+<P><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-5526562480853802";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "CFCFCF";
+google_color_bg = "CFCFCF";
+google_color_link = "b85b5a";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-5526562480853802&dt=1116874699788&format=468x60_as&output=html&url=http%3A%2F%2Fwww.basimo.de%2Fwords%2Farchives%2F2005%2F05%2F23%2F136%2F&color_bg=CFCFCF&color_text=333333&color_link=b85b5a&color_url=666666&color_border=CFCFCF&ad_type=text_image&cc=43&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</P>                        
+                        <DIV class="entrytext">                                        <P><A href="http://informationality.com/tagglywiki/tagglywiki.html">TagglyWiki</A>, a taggable, reusable, non-linear personal web notebook:</P>
+        <P>Nach dem <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD TiddlyWiki</A> ist <A href="http://informationality.com/tagglywiki/tagglywiki.html">TagglyWiki</A> die zweite interessante Erweiterung des urspr√ºnglichen <A href="http://www.tiddlywiki.com/">TiddlyWiki</A>s. TiddlyWiki ist ein in HTML, CSS und JavaScript geschriebenes <A href="http://de.wikipedia.org/wiki/Wiki">Wiki</A>, l√§uft in modernen Browsern und ben√∂tigt keinen Server, um die einzelnen Seiten zu speichern. Da TiddlyWiki nur aus einer einzigen Datei besteht, kann man es auf einem Memorystick mit sich rumtragen, sich selbst oder anderen per Mail schicken, oder irgendwo auf dem eigenen Webspace deponieren. TagglyWiki erweitert TiddlyWiki um die M√∂glichkeit, den einzelnen Seiten (oder <EM>Tiddlers</EM>, wie sie bei TiddlyWiki genannt werden) Tags hinzuzuf√ºgen, und diese dann zum Suchen zu verwenden.
+</P>
+        
+                                
+
+                                <P class="postmetadata alt">
+
+                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Monday, May 23rd, 2005 
+                                                and is filed under <A href="http://www.basimo.de/words/archives/category/verlinkt/" title="View all posts in verlinkt" rel="category tag">verlinkt</A>.
+                                                You can follow any responses to this entry through the <A href="http://www.basimo.de/words/archives/2005/05/23/136/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.basimo.de/words/archives/2005/05/23/136/trackback/">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://www.basimo.de/words/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="136">
+</P>
+
+</FORM>
+
+
+        
+                
+        </DIV>
+
+<HR>
+<DIV id="footer">
+        <P>                basimo.de is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.basimo.de/words/feed/">Entries (RSS)</A>
+                and <A href="feed:http://www.basimo.de/words/comments/feed/">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV>
+
+
+                
+
+</BODY></HTML>_3http://www.basimo.de/words/archives/2005/05/23/136/°—’_WebResourceFrameNameOÎ<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #b85b5a }a.ad:visited { color: #b85b5a }a.ad:hover { color: #b85b5a }a.ad:active { color: #b85b5a }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="468" height="60" cellspacing="1" cellpadding="0" border="0" bgcolor="#cfcfcf"><TBODY><TR><TD><TABLE width="466" height="58" cellspacing="0" cellpadding="1" border="0" bgcolor="#cfcfcf"><TBODY><TR><TD colspan="2" width="" height=""><TABLE width="464" height="" cellspacing="0" cellpadding="2" border="0"><TBODY><TR><TD id="taw0" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('gehe zu www.musicaleditor.com','aw0')" onmouseover="ss('gehe zu www.musicaleditor.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.musicaleditor.com/index.php%3Fname%3Ddetail_prof4&sa=l&ai=Bg9GGvCeSQv2lCZa-ScfvucoFsuPrCOzHgqYBwI23AfCiBBABGAEg8oKNAygCQIoWSJE5oAHg_eH-A7IBDXd3dy5iYXNpbW8uZGW6AQk0Njh4NjBfYXPIAQHaATNodHRwOi8vd3d3LmJhc2ltby5kZS93b3Jkcy9hcmNoaXZlcy8yMDA1LzA1LzIzLzEzNi_oAQE&num=1&client=ca-pub-5526562480853802" onfocus="ss('gehe zu www.musicaleditor.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('gehe zu www.musicaleditor.com','aw0')" onmouseout="cs()"><B>Music Notation Software</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">MagicScore - sheet music software. professional version only for $49. </FONT></TD><TD id="taw1" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('gehe zu www.sienzo.com','aw1')" onmouseover="ss('gehe zu www.sienzo.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.sienzo.com%3Fgo%3D5&sa=l&ai=BKt_7vCeSQv2lCZa-ScfvucoFttOpCcDXhKcBwI23AYCmHRACGAIg8oKNAygCQIoWSIQ5oAG0ou3-A7IBDXd3dy5iYXNpbW8uZGW6AQk0Njh4NjBfYXPIAQHaATNodHRwOi8vd3d3LmJhc2ltby5kZS93b3Jkcy9hcmNoaXZlcy8yMDA1LzA1LzIzLzEzNi_oAQE&num=2&client=ca-pub-5526562480853802" onfocus="ss('gehe zu www.sienzo.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('gehe zu www.sienzo.com','aw1')" onmouseout="cs()"><B>Guitar chords software</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">Software for getting chords from all music. Download free trail now </FONT></TD></TR></TBODY></TABLE></TD></TR><TR><TD nowrap="" width="99%" height="11" align="right" bgcolor="#cfcfcf"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.basimo.de/words/archives/2005/05/23/136/&hl=de&client=ca-pub-5526562480853802&adU=www.musicaleditor.com&adT=Music+Notation+Software&adU=www.sienzo.com&adT=Guitar+chords+software&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; line-height:13px;">Google-Anzeigen</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_òhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-5526562480853802&dt=1116874699788&format=468x60_as&output=html&url=http%3A%2F%2Fwww.basimo.de%2Fwords%2Farchives%2F2005%2F05%2F23%2F136%2F&color_bg=CFCFCF&color_text=333333&color_link=b85b5a&color_url=666666&color_border=CFCFCF&ad_type=text_image&cc=43&u_h=854&u_w=1280&u_ah=788&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I L S e t ä##\#e#n#å#íJMJáJëJöJ†o{o±o≥o∂o¡oÿÅ«Å⁄                           Év

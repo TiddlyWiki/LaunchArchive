@@ -1,0 +1,752 @@
+bplist00�_WebSubresources_WebMainResource��	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO"�/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_Mhttp://www.dzr-web.com/people/darren/blog/wp-content/themes/default/style.cssXtext/css�_WebResourceTextEncodingNameUUTF-8O*�<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <TITLE>Phlogiston  » Blog Archive   » TiddlyWiki: Wow!</TITLE>
+        
+        <META name="generator" content="WordPress 1.5.1.1">
+
+        <LINK rel="stylesheet" href="http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.dzr-web.com/people/darren/blog/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.dzr-web.com/people/darren/blog/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.dzr-web.com/people/darren/blog/feed/atom/">
+        <LINK rel="pingback" href="http://www.dzr-web.com/people/darren/blog/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                           #page           { background: url("http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                         #header         { background: url("http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /*
+                #headerimg      { background: url('http://www.dzr-web.com/people/darren/blog/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                */
+
+        </STYLE>
+
+                <LINK rel="archives" title="May 2005" href="http://www.dzr-web.com/people/darren/blog/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.dzr-web.com/people/darren/blog/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.dzr-web.com/people/darren/blog/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.dzr-web.com/people/darren/blog/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.dzr-web.com/people/darren/blog/2005/01/">
+
+        </HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://www.dzr-web.com/people/darren/blog">Phlogiston</A></H1>
+                <DIV class="description">Darren Brierton’s Blog</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">« <A href="http://www.dzr-web.com/people/darren/blog/2005/05/21/galloways-best-riposte/">Galloway’s best riposte</A></DIV>
+                        <DIV class="alignright"></DIV>
+                </DIV>
+        
+                <DIV class="post" id="post-66">                        <H2><A href="http://www.dzr-web.com/people/darren/blog/2005/05/21/tiddlywiki-wow/" rel="bookmark" title="Permanent Link: TiddlyWiki: Wow!">TiddlyWiki: Wow!</A></H2>
+        
+                        <DIV class="entrytext">                                        <P>Oh. My. God. This is so unbelievably cool: <A href="http://tiddlywiki.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>. Apparently I have been living under a rock, as it has been out for quite some time and yet I’ve only just noticed it.  (<A href="http://tomorrowelephant.net/">Hannu</A>, it seems, has known about it for ages. Hannu, I hate to be mean—well, actually I rather enjoy it—but for someone who is supposed to be writing up your PhD thesis don’t you find it worrying that you apparently spend even more of your life browsing the web than I do?)</P>
+        <P>So, TiddlyWiki is a <A href="http://en.wikipedia.org/wiki/Wiki">Wiki</A>, like <A href="http://en.wikipedia.org/">WikiPedia</A>, but it is a bit different too:</P>
+        <BLOCKQUOTE><P>A Wiki is a popular way of building collaborative websites. It’s based on the ideas of easy editing of pages and the use of special WikiWord notation to automagically create links between pages. See Wikipedia for more details. TiddlyWiki is different from a conventional Wiki because it is not based on entire pages of content, but rather items of MicroContent that are referred to as ‘tiddlers’.</P></BLOCKQUOTE>
+        <P>Also, unlike normal Wikis TiddlyWiki is not a server side application at all, in fact it doesn’t work on a server. Even more astonishingly, <STRONG>it is one single file</STRONG>. The file contains all of the Javascript, <ABBR title="Cascading Style Sheets">CSS</ABBR> and <ABBR title="Extensible Hypertext Markup Language">XHTML</ABBR> that you need, and runs as a rich web application in your browser (like <A href="http://maps.google.com/">Google Maps</A>). This one single file is <STRONG>both application and data</STRONG>.</P>
+        <P>You can use it for anything, but the obvious use would be for note taking. I can’t get over how clever it is. In fact it’s such an impressive piece of coding that my admiration is slowly turning into rancorous envy.</P>
+        <P>To use it yourself, simply download the <A href="http://tiddlywiki.com/index.html">file</A> (right-click on the link and select “Save as …”) to your computer, and then open it in your browser. You can delete anything you like, edit what you want, create new entries, etc. It all gets saved back to the one single file you downloaded. It’s really incredibly nifty. (Mac OS X users will probably need to use Firefox, as it doesn’t apparently work very well in Safari.)</P>
+        <P>If any of you are devotees of <A href="http://www.amazon.co.uk/exec/obidos/ASIN/">David Allen’s <CITE>Getting things Done</CITE></A> then you will be interested to know about <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD Tiddly Wiki</A>: </P>
+        <BLOCKQUOTE><P>GTD Tiddly Wiki is a Getting Things Done adaptation by Nathan Bowers of Jeremy Ruston’s Open Source TiddlyWiki. The purpose of GTD Tiddly Wiki is to give users a single repository for their GTD lists and support materials so they can create/edit lists, and then print directly to 3×5 cards for use with the Hipster PDA.</P></BLOCKQUOTE>
+        
+                                        
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Saturday, May 21st, 2005 at 11:50 pm                                         and is filed under <A href="http://www.dzr-web.com/people/darren/blog/category/general/" title="View all posts in General" rel="category tag">General</A>.
+                                                You can follow any responses to this entry through the <A href="http://www.dzr-web.com/people/darren/blog/2005/05/21/tiddlywiki-wow/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.dzr-web.com/people/darren/blog/2005/05/21/tiddlywiki-wow/trackback/" rel="trackback">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://www.dzr-web.com/people/darren/blog/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="66">
+</P>
+
+</FORM>
+
+
+        
+                
+        </DIV>
+
+
+<HR>
+<DIV id="footer">        <P>                Phlogiston is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.dzr-web.com/people/darren/blog/feed/">Entries (RSS)</A>
+                and <A href="feed:http://www.dzr-web.com/people/darren/blog/comments/feed/">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV>
+
+
+                
+
+</BODY></HTML>_Dhttp://www.dzr-web.com/people/darren/blog/2005/05/21/tiddlywiki-wow/Ytext/html    1 3 : L [ q##R#[#d#�#�NNZ                           Nd

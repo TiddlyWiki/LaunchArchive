@@ -1,0 +1,4062 @@
+bplist00Ò#_WebSubresources_WebMainResource¨ Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO¥body {
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-align: center;
+	margin: 0;
+	background: #fff url(/images/nav/body-bg.gif) top repeat-x;
+}
+
+body.home {
+	background: #fff url(/images/nav/home-bg-repeat.jpg) top repeat-x;
+}
+
+#homebackground {
+	background: url(/images/nav/home-bg-center.jpg) center top no-repeat;
+}
+
+form {
+	margin: 0; padding: 0;
+}
+
+fieldset
+{  
+  border:0;
+  margin:0;
+  padding:0;
+}
+
+div.clearleft {
+	clear: both;
+	font-size: 0px;
+	height: 0px;
+}
+
+a:link, a:visited {
+	color: blue;
+	padding: 1px;
+}
+
+a:hover {
+    background-color: blue;
+    color: #fff;
+    padding: 1px;
+}
+
+#show-add-related-goal {
+    margin: 0 0 20px 0;
+}
+
+#add-related-goal {
+    display: none;
+}
+
+a.admin:link, a.admin:visited, #show-add-goal h4 a.admin:link, #show-add-goal h4 a.admin:visited, #show-create-account h4 a.admin:visited {
+	color: #12A702;
+	padding: 1px;
+}
+
+a.admin:hover, 
+#show-add-goal h4 a.admin:hover,
+#show-create-account h4 a.admin:hover {
+	color: white;
+	background: #12A702;
+}
+
+a.cancel:link, a.cancel:visited, a.delete:link, a.delete:visited {
+	color: red;
+	padding: 1px;
+}
+
+a.cancel:hover, a.delete:hover {
+	color: white;
+	background: red;
+}
+
+a img {
+	border: none;
+}
+
+h1 {
+	position: relative;
+	font-family: "courier new", courier, monospace;
+	color: #000;
+	font-weight: bold;
+	line-height: 1em;
+	letter-spacing: -1px;
+	font-size: 26px;
+	margin: 0 0 5px 0;
+}
+
+.uploadpicture h1 span, .edit h1 span {
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.edit h1 span {
+	display: block;
+}
+
+.edit h1 {
+	margin-right: 150px;
+}
+
+.category h1,
+.generic h1 {
+	margin: 10px 0 0 0;
+	padding-bottom: 30px;
+	font-weight: normal;
+	font-size: 22px;
+}
+
+h1 a:link, h1 a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	background: none;
+	text-decoration: underline;
+}
+
+img#person, img.person {
+    z-index: 5;                         
+	float: left;
+	background: #fff;
+	margin: 0 10px 0 0;
+	border: 1px solid #ccc;
+	padding: 2px;
+	position: relative;
+}
+
+div.changearrow {
+	font-size: 34px;
+	float: left;
+	line-height: 60px;
+	margin: 0 10px 0 0;
+	font-weight: bold;
+	color: #999;
+	width: 35px;
+	text-align: center;
+}
+
+
+h1#goaltitle {
+	margin: 0 220px 0px 0px;
+	padding: 0;
+}
+
+.profile h1 {
+	margin-top: 18px;
+	margin-left: 95px;
+}
+
+.profile h2#persondetails,
+.generic h2#persondetails {
+    position: relative;
+	font-weight: normal;
+	font-size: 12px;
+	display: inline;
+}
+
+.generic h1#persontitle {
+    font-weight: bold;
+    margin: 10px; padding: 0;
+}
+
+h2#searchterms {
+	font-family: "courier new", courier, monospace;
+	color: #000;
+	font-weight: normal;
+	line-height: 1em;
+	letter-spacing: -1px;
+	font-size: 22px;
+	margin: 0 0 5px 0;
+}
+
+.category h1 strong,
+.generic h1 strong {
+	font-size: 22px;
+}
+
+h2#persondetails a.admin {
+	font-size: 11px;
+}
+
+h2#persondetails span {
+	color: #ccc;
+}
+
+h2#wantsto {
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 4px 0 5px 0px;
+}
+
+.lg h2#wantsto,
+.lg-team h2#wantsto {
+	margin: 0 0 8px 0;
+}
+
+.lg h2#wantsto span,
+.lg-team h2#wantsto span {
+	background: #ffc;
+	padding: 2px 4px;
+}
+
+h3#numberofentries {
+	margin: 0 0 10px 0;
+	padding-top: 10px;
+	font-size: 12px;
+	color: #12A702;
+}
+
+.search #main {
+	margin: 10px 0 0 20px;
+}
+
+.category #main,
+.generic #main {
+	margin: 5px 0 0 0px;
+}
+
+.category #sidebar p,
+.generic #sidebar p {
+	color: #666;
+	font-size: 11px;
+}
+
+.edit #sidebar p {
+	font-size: 11px;
+}
+
+.search #main h3,
+.category #main h3,
+.generic #main h3 {
+	font-size: 14px;
+	margin: 10px 0 10px 0;
+}
+
+.category #main h3,
+.generic #main h3 {
+	margin-top: 0;
+}
+
+.search #main h3 span,
+.category #main h3 span,
+.generic #main h3 span {
+	font-weight: normal;
+}
+
+.search #main ol,
+.category #main ol,
+.generic #main ol {
+	margin-bottom: 25px;
+}
+
+.search #main li,
+.category #main li,
+.generic #main li {
+	font-size: 12px;
+	margin-bottom: 3px;
+	color: #666;
+}
+
+.search #main li a,
+.category #main li a,
+.generic #main li a {
+	font-size: 14px;
+}
+
+.search #main li span,
+.category #main li span,
+.generic #main li span {
+	color: #999;
+	font-size: 10px;
+}
+
+.generic .entry li span {
+    color: #000;
+}
+
+.category #main ul,
+.category #main ol,
+.generic #main ul,
+.generic #main ol {
+	padding-left: 0;
+	margin-left: 30px;
+}
+
+.category #main ul.moregoals li a {
+	font-size: 11px;
+}
+
+.category #main ul.weegoals {
+	list-style: none;
+	margin-left: 18px;
+	margin-right: 40px;
+	padding-left: 10px;
+	border-left: 2px solid #ddd;
+}
+
+.category #main ul.weegoals li {
+	display: inline;
+	margin-right: 5px;
+}
+
+.category #main ul.weegoals li a {
+	font-size: 10px;
+}
+
+#container {
+	position: relative;
+	width: 735px;
+	margin: 0 auto 30px auto;
+	padding: 0;
+	text-align: left;
+}
+
+.home #container {
+	width: 750px;
+	position: relative;
+}
+
+#header {
+	position: relative;
+	color: #255C83;
+	background: #3077A9 url(/images/nav/header-bg-right.gif) bottom right no-repeat;
+	margin: 0 0 10px 0;
+	padding: 0 5px 0 10px;
+	font-size: 12px;
+	height: 35px;
+}
+
+#header input#search {
+	margin-left: 10px;
+	color: #999;
+	width: 175px;
+	vertical-align: middle;
+}
+
+#header a {
+    background-color: transparent;
+    padding: 0;
+}
+
+#header a.logout {
+	font-size: 11px;
+}
+
+#header span {
+	font-size: 10px;
+}
+
+.home #header {
+	background: none;
+}
+
+#header p {
+	margin: 0; padding: 6px 0 0 0;
+}
+
+#header strong {
+	color: #fff;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+.home #header strong {
+	font-weight: normal;
+}
+
+.home #header strong a {
+	font-weight: bold;
+}
+
+input.submit {
+	vertical-align: middle;
+}
+
+#header a:link, #header a:visited {
+	color: #fff;
+}
+
+#header img#logo {
+	position: absolute;
+	top: 32px;
+	right: 53px;
+	z-index: 10;
+}
+
+.home #header img#logo {
+	position: absolute;
+	top: 34px;
+	right: 30px;
+}
+
+#page-body {
+	padding: 10px 0 0 10px;
+	z-index: 1;
+}
+
+.error #page-body,
+.login #page-body,
+.account #page-body,
+.uploadpicture #page-body,
+.profile #page-body,
+.search #page-body,
+.zeitgeist #page-body,
+.category #page-body,
+.generic #page-body {
+	background: url(/images/nav/profile-header-bg.jpg) top no-repeat;
+}
+
+.perma #page-body,
+.edit #page-body {
+	background: url(/images/nav/perma-header-bg-green.jpg) top no-repeat;
+}
+
+#main {
+	clear: left;
+	float: left;
+	width: 500px;
+	margin: 5px 15px 20px 0;
+	z-index: 2;
+}
+
+.home #main {
+	clear: none;
+	float: left;
+	margin: 15px 0 30px 10px;
+}
+
+.error #main {
+	font-size: 14px;
+	margin: 20px;
+}
+
+.profile #main {
+	margin: 10px 0 15px 0;
+}
+
+.perma #main {
+	width: auto;
+	float: none;
+	margin-top: 20px;
+}
+
+#sidebar {
+	float: right;
+	width: 200px;
+	margin: 5px 0 0 0;
+}
+
+.category #sidebar,
+.generic #sidebar {
+	width: 200px;
+	margin-top: 10px;
+}
+
+.edit #sidebar {
+	margin-top: 30px;
+	width: 170px;
+}
+
+.category #sidebar h4 {
+	border: none;
+	color: #666;
+}
+
+.generic #sidebar h4 {
+	border-bottom: 1px solid #ccc;
+	border: none;
+	color: #666;
+}
+
+.edit #sidebar h2,
+.edit #sidebar h4 {
+	border: none;
+	font-size: 11px;
+	color: #666;
+	margin: 0 0 10px 0;
+}
+
+.edit #sidebar h2#delete {
+	font-size: 11px;
+	margin: 0 0 20px 0;
+	font-weight: normal;
+}
+
+.edit #sidebar h2#delete strong {
+	font-size: 12px;
+}
+
+.perma #sidebar {
+	position: absolute;
+	top: 90px;
+	width: 200px;
+	right: 0;
+	margin: 0 0 50px 0;
+}
+
+.perma #sidebar h3 {
+	margin: 0 0 10px 0;
+	font-size: 11px;
+}
+
+.home #sidebar {
+	margin-top: 50px;
+	width: 185px;
+}
+
+.home #sidebar p#explanation {
+	color: #12A702;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0 0 20px 0;
+}
+
+#flickr h3 
+{
+  margin: 0 0 5px 0;
+  font-size: 10px;
+}
+
+#flickr a {
+    background-color: transparent;
+}
+
+#flickr img 
+{ 
+  background: #fff;
+  margin: 0 0 10px 0;
+  border: 1px solid #ccc; 
+  padding: 2px; 
+}
+
+.flickr-link
+{ 
+  font-size:12px;
+  font-family:arial,helvetica,sans-serif;
+  text-align:center;
+  font-weight:bold;
+  width:80px;
+  background-color: #fff;
+}
+
+.sidebar-links {
+	margin-left: 7px;
+}
+
+p.category, p.tags {
+	color: #999;
+	margin: 3px 15px 10px 15px; padding: 0;
+	font-size: 9px;
+	line-height: 1.5em;
+}
+
+p.category a, p.tags a,
+#new-stuff a {
+	font-size: 10px;
+}
+
+p.tags a:link,
+p.tags a:visited,
+p.tags a:active,
+p.category a:link,
+p.category a:visited,
+p.category a:active,
+#new-stuff a:link,
+#new-stuff a:visited,
+#new-stuff a:active {
+	color: #666;
+}
+
+p.tags a:hover,
+p.category a:hover,
+#new-stuff a:hover {
+    background-color: #666;
+	color: #fff;
+}
+
+#actions {
+	color: #666;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#actions h3 {
+	margin: 0;
+}
+
+#actions p.button {
+	margin: 0 0 4px 0; padding: 0;
+}
+
+#actions p.youhaveit {
+	margin: 5px 0 15px 0; padding: 0;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#actions-links {
+	text-align: left;
+	padding: 3px 0 5px 0;
+	margin: 10px 0 0 0;
+	background: url(/images/nav/actions-bg-green.jpg) bottom no-repeat;
+}
+
+#actions #actions-links p#linktolg {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin: 12px 0 15px 0; padding: 0;
+}
+
+#sidebar h4 {
+	margin: 5px 0 10px 0px;
+	padding: 0;
+	font-size: 10px;
+	color: #333;
+	border-bottom: 1px solid #ccc;
+}
+
+#sidebar h4.rss {
+	border: none;
+	margin: 15px 10px;
+}
+
+#sidebar h4.rss img {
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#sidebar h4.rss span {
+	font-weight: normal;
+	font-size: 10px;
+}
+
+#sidebar h4.rss span a,
+#sidebar h4.rss span a:hover {
+    color: #666;
+    background-color: #fff;
+	font-weight: normal;
+	font-size: 10px;
+}
+
+h4#seeeveryone {
+	font-size: 12px;
+	margin: 0 0 5px 0;
+	padding-top: 10px;
+	font-weight: normal;
+}
+
+h4#seeeveryone span {
+	font-weight: normal;
+	color: #999;
+	font-size: 11px;
+}
+
+h4#seeeveryone span strong {
+	font-weight: normal;
+	color: #666;
+}
+
+.ads {
+	margin-bottom: 20px;
+}
+
+.ad {
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+#sidebar .ad h4 {
+	border: none;
+	margin: 0 0 3px 0; padding: 0;
+}
+
+#sidebar .ad h4 a {
+    background-color: #fff;
+	color: #000;
+}
+
+#sidebar .ad p {
+	margin: 0; padding: 0;
+	font-size: 11px;
+}
+
+ul.recommended-goals {
+	list-style: none;
+	margin: 0 0 20px 0px; padding: 0 0 0 8px;
+}
+
+ul.admin-links {
+	margin: 0 20px 15px 0;
+	padding: 0 0 0 10px;
+	list-style: none;
+	line-height: 1.2em;
+}
+
+ul.admin-links a.delete {
+	color: #333;
+}
+
+ul.admin-links li {
+	margin: 0; padding: 0;
+	margin-bottom: 5px;
+	font-size: 10px;
+	color: #999;
+}
+
+ul.admin-links a {
+	font-size: 11px;
+}
+
+p.worthit, span.worthit {
+	color: #12A702;
+	font-weight: bold;
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+h4 span.worthit {
+	font-size: 11px;
+}
+
+p.worthit span, p.notworthit span {
+	font-weight: normal;
+	text-transform: none;
+	font-size: 10px;
+	color: #666;
+}
+
+p.notworthit, span.notworthit {
+	color: #666;
+	font-weight: bold;
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+ul.recommended-goals li {
+	margin-bottom: 8px;
+}
+
+ul.recommended-goals li p {
+	margin: 0; padding: 0;
+	font-size: 10px;
+	color: #999;
+}
+
+ul.recommended-goals li h5 {
+	font-size: 10px;
+	margin: 0; padding: 0;
+}
+
+h3 {
+	margin: 10px 0 20px 0;
+	font-size: 12px;
+	color: #666;
+}
+
+.entrybody {
+	margin-left: 10px;
+}
+
+.entryimages ul {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+.entryimages ul li {
+	display: inline;
+	margin: 0; padding: 0;
+}
+
+.entryimages img {
+    background: transparent;
+	border: 1px solid #ccc;
+	margin: 0 5px 5px 0;
+	padding: 3px;
+}
+
+.entry {
+	margin: 0 30px 20px 0px;
+}
+
+h4.done {
+	background: #ffc;
+	margin: 5px 20px 0 0;
+	padding: 3px 6px;
+}
+
+h4.done span.edit {
+	font-weight: normal;
+	color: #999;
+}
+
+.profile .entry {
+	border-bottom: 1px dotted #ccc;
+	margin-right: 15px;
+}
+
+.profile #lastentry {
+	border-bottom: none;
+	margin-bottom: 30px;
+}
+
+
+.profile p#noentries {
+	margin: 0px 60px 0 95px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.entry a.admin {
+	font-size: 11px;
+}
+
+.entry h4, .profile .entry h5 {
+	margin-top: 0;
+	font-size: 10px;
+	color: #999;
+	margin-bottom: 0px;
+}
+
+.entry p {
+	margin: 0px 0 10px 0;
+}
+
+.entry h4 a:link,
+.entry h4 a:visited,
+.entry h4 a:active,
+.entry h4 strong,
+.profile .entry h5 a:link,
+.profile .entry h5 a:visited,
+.profile .entry h5 a:active,
+.profile .entry h5 strong,
+.comment h4 strong,
+.comment h4 a:link,
+.comment h4 a:visited,
+.comment h4 a:active,
+.goal-activity h4 strong,
+.goal-activity h4 a:link,
+.goal-activity h4 a:visited,
+.goal-activity h4 a:active {
+	font-family: "courier new", courier, verdana, sans-serif;
+	letter-spacing: -1px;
+	font-size: 16px;
+	color: #000;
+}
+
+.comment h4 strong,
+.comment h4 a:link,
+.comment h4 a:visited,
+.comment h4 a:active,
+.goal-activity h4 strong,
+.goal-activity h4 a:link,
+.goal-activity h4 a:visited,
+.goal-activity h4 a:active {
+	margin: 0px;
+	padding: 0px;
+}
+
+.entry h4 span a:link,
+.entry h4 span a:visited,
+.entry h4 span a:active,
+.entry h4 span a:link,
+.entry h4 span a:visited,
+.entry h4 span a:active,
+.profile .entry h5 span a:link,
+.profile .entry h5 span a:visited,
+.profile .entry h5 span a:active {
+    font-family: verdana, sans-serif;
+	font-size: 12px;
+    color: #666;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+.entry h4 a:hover,
+.comment h4 a:hover,
+.goal-activity h4 a:hover,
+.ag-person .entry h5 a:hover,
+.profile .entry h5 a:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.entry h4 strong a:hover {
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+}
+
+.entry h4 span a:hover,
+.profile .entry h5 span a:hover {
+    color: #fff;
+    background-color: blue;
+}
+
+.profile h3 {
+	margin: 5px 0 10px 0;
+}
+
+.profile h3 span {
+	font-size: 11px;
+	font-weight: normal;
+	color: #999;
+}
+
+.profile h4 {
+	font-weight: normal;
+	margin: 0;
+}
+
+.profile h4 a:link,
+.profile h4 a:visited {
+	font-family: verdana, sans-serif;
+	letter-spacing: 0;
+	font-size: 12px;
+	color: blue;
+	margin: 0;
+}
+
+.profile .entry h5 {
+	margin-left: 10px;
+}
+
+.profile .entry h5 a {
+	letter-spacing: 0;
+	font-size: 14px;
+	color: #000;
+}
+
+.entry p.worthit { 
+	margin: 2px 0 0 28px;
+}
+
+.entry h3.finished, .profile h4.finished {
+	padding-left: 28px;
+	line-height: 21px;
+	background: url(/images/icons/check-big.gif) left no-repeat;
+}
+
+
+.entry p.entry-metadata,
+.comment p.comment-metadata,
+.comment p.yourcomment-metadata,
+.goal-activity p.goal-metadata {
+	font-size: 10px;
+	color: #ccc;
+	margin-left: 10px;
+}
+
+.entry p.entry-metadata span,
+.comment p.comment-metadata span,
+.comment p.yourcomment-metadata span,
+.goal-activity p.goal-metadata span { /* the datestamp */
+	color: #999;
+}
+
+.perma .entry {
+	width: 470px;
+	clear: left;
+}
+
+.thread {
+	clear: left;
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 3px solid #dedede;
+}
+
+.thread .thread {
+	margin-left: 15px;
+}
+
+.thread .aggregatedperson {
+	margin-bottom: 20px;
+}
+
+.thread .entrybody, .thread h4, .thread p.entry-metadata {
+	margin-left: 95px;
+}
+
+#show-add-entry, #add-entry, #show-add-goal, #add-goal,
+#show-add-related-goal {
+	margin: 0 0 20px 0;
+}
+
+#show-add-entry h4, 
+#show-add-goal h4, 
+#show-create-account h4,
+#show-add-related-goal h4 {
+	border: none;
+	font-size: 11px;
+	margin: 0 0 0 0;
+	line-height: 17px;
+	padding: 0 0 0 23px;
+	background: url(/images/nav/add-bug.gif) left no-repeat;
+}
+
+#show-create-account h4 { 
+    font-family: "courier new", courier, monospace;
+    font-size: 26px;
+}
+
+#show-done-edit h4, #done-edit h4 {
+	margin: 0;
+}
+
+#show-done-edit, #done-edit {
+	margin: 5px 0 20px -5px;
+	border: 1px solid #ccc;
+}
+
+#done-edit h4 {
+	margin-left: 0;
+}
+
+#done-edit {
+	display: none;
+	background: #ffc;
+	padding-bottom: 5px;
+}
+
+#done-edit p {
+	margin: 5px 0 10px 10px;
+}
+
+#done-edit p span {
+	color: #999;
+	font-size: 11px;
+}
+
+
+.add-comment {
+	margin: 20px 0 0 23px;
+	clear: left;
+}
+
+.thread .add-comment {
+	margin: 0 0 20px 0;
+}
+
+.add-comment h3 {
+	margin: 0 0 15px 0;
+}
+
+#add-entry, #add-goal {
+	display: none;
+	border: 1px solid #ccc;
+	padding: 2px;
+	background: #E0F1DF;
+	margin: 0 10px 20px -10px;
+}
+
+#add-goal {
+	margin: 0 0 20px 0;
+}
+
+#show-add-tags, #add-tags {
+	font-size: 9px;
+	line-height: 1.5em;  
+}
+
+#add-tags {
+	margin: 3px 15px 10px 15px; padding: 0;
+    display: none;
+}
+
+#add-entry h4, #add-goal h4, #create-account h4 {
+	color: #fff;
+	padding: 5px 5px 5px 10px;
+	background: #12A702;
+	margin: 0;
+}
+
+#add-entry dl,
+#add-goal dl {
+	margin: 10px;
+	padding: 0;
+}
+
+.login dl { 
+  width: 600px;
+}
+.login dl > dt { 
+  width:150px;
+}
+
+.add-comment dl {
+	margin: 0 0 0 95px;
+}
+
+#add-entry dt, #add-entry dd,
+#add-goal dt, #add-goal dd,
+.add-comment dt, .add-comment dd {
+	margin: 0; padding: 0;
+	color: #666;
+	font-size: 11px;
+}
+
+#add-entry dt, #add-goal dt, .add-comment dt {
+	margin-top: 5px;
+}
+
+#add-entry dd input {
+	width: 470px;
+	font-family: "courier new", courier, monospace;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 16px;
+}
+
+#add-goal dd input, .add-comment dd input {
+	width: 170px;
+	font-family: "courier new", courier, monospace;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 14px;
+}
+
+#add-entry dd textarea, .add-comment dd textarea {
+	font-family: monospace;
+	width: 470px;
+	font-size: 12px;
+}
+
+.add-comment dd input,
+.add-comment dd textarea {
+	width: 300px;
+}
+
+#add-entry dt span, .add-comment dt span {
+	color: #999;
+	font-size: 10px;
+}
+
+#add-entry dt.submit {
+	text-align: left; 
+}
+
+#add-entry dt.submit span {
+	color: #999;
+	font-size: 10px;
+}
+
+#add-entry dt.submit span a {
+	font-size: 11px;
+}
+
+.bigiconentries h3, 
+.recententries h3, 
+.peopledoingthis h3,
+.standalone-comments h3 {
+	border-bottom: 1px solid #ccc;
+}
+
+.peoplesoup {
+	clear: left;
+	margin: 0px 0 20px 20px;
+	line-height: 30px;
+	padding-top: 10px;
+}
+
+.peoplesoup span {
+	margin-right: 3px;
+	font-size: 11px;
+	color: #666;
+}
+
+.peoplesoup span.nobreak {
+	margin: 0;
+	white-space: nowrap;
+}
+
+.peoplesoup img {
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	padding: 1px;
+}
+
+
+.featuredentry h3 {
+	background: #CFDDEB url(/images/nav/feature-bg.gif) top no-repeat;
+	margin: 0;
+	color: #333;
+	padding: 5px 10px;
+	border: 0;
+}
+
+.bigiconentries h4,
+.bigiconentries .entrybody,
+.bigiconentries .entryimages,
+.bigiconentries p.entry-metadata,
+.standalone-comments .commentbody,
+.standalone-comments .commentimages,
+.standalone-comments p.comment-metadata,
+.featuredentry h4,
+.featuredentry .entrybody,
+.featuredentry .entryimages,
+.featuredentry p.entry-metadata,
+.bigiconentries .commentbody,
+.bigiconentries .commentimages,
+.bigiconentries p.comment-metadata,
+.goal-activity p.goal-metadata {
+	margin-left: 95px;
+}
+
+.standalone-comments .yourcommentbody,
+.standalone-comments .yourcommentimages,
+.standalone-comments p.yourcomment-metadata {
+    margin-left: 0px;
+}
+
+.standalone-comments .response-to,
+.standalone-comments .response-to a,
+.bigiconentries .response-to,
+.bigiconentries .response-to a {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+
+.recententries h4,
+.recententries .entrybody,
+.recententries .entryimages,
+.recententries p.entry-metadata {
+	margin-left: 0;
+}
+
+.bigiconentries .entry,
+.standalone-comments .comment,
+.bigiconentries .goal-activity {
+	clear: left;
+}
+
+.featuredentry .entry {
+	padding: 10px 30px 0 8px;
+	margin: 0;
+	border: 2px solid #CFDDEB;
+	border-top: none;
+}
+
+p.featuredteam {
+	background: #EFE7BA url('/images/nav/team-arrow-bg.gif') 0 50% no-repeat;
+	margin: 0 0 0 83px;
+	font-size: 11px;
+	color: #666;
+	padding: 4px 2px 4px 15px;
+}
+
+p.featuredteam a {
+	font-size: 12px;
+}
+
+.recententries .entry {
+	float: left;
+	width: 220px;
+	margin-bottom: 10px;
+}
+
+.recententries h4 {
+	font-size: 10px;
+	margin: 0 0 3px 0;
+}
+
+.recententries h4 a {
+	font-size: 14px;
+	letter-spacing: 0;
+}
+
+.recententries .entrybody {
+	font-size: 11px;
+	line-height: 1.3em;
+}
+
+.recententries .entry-metadata {
+	font-size: 10px;
+}
+
+.featuredentry {
+	clear: left;
+	margin: 15px 0;
+}
+
+.bigiconentries .aggregatedperson,
+.standalone-comments .aggregatedperson,
+.featuredentry .aggregatedperson {
+	width: 85px;
+	float: left;
+	margin: 0 10px 5px 0;
+	text-align: center;
+}
+
+.bigiconentries .aggregatedperson p,
+.standalone-comments .aggregatedperson p,
+.featuredentry .aggregatedperson p {
+	font-size: 10px;
+	color: #999;
+	margin: 0;
+}
+
+.bigiconentries .aggregatedperson img,
+.standalone-comments .aggregatedperson img,
+.featuredentry .aggregatedperson img {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.aggregatedperson {
+	width: 85px;
+	float: left;
+	margin: 0 5px 5px 0;
+	text-align: center;
+}
+
+.aggregatedperson p {
+	font-size: 10px;
+	color: #999;
+	margin: 0;
+}
+
+.aggregatedperson img {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.peopledoingthis {
+	clear: left;
+	margin-top: 15px;
+}
+
+.peopledoingthis ul, ul.people  {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+ul.people {
+	margin-left: 15px;
+}
+
+.peopledoingthis ul li {
+	float: left;
+	display: inline;
+	margin: 0 0 10px 17px; padding: 0;
+	width: 233px;
+}
+
+.generic #main .peopledoingthis ul li {
+	float: left;
+	display: inline;
+	margin: 0 0 10px 0; padding: 0;
+	width: 200px;
+}
+
+.generic #main .peopledoingthis h5 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0; padding: 0;
+}
+
+.generic #main .peopledoingthis h5 a {
+    font-size: 12px;
+}
+
+.generic #main .peopledoingthis h5.seeall {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.generic #main .peopledoingthis h5.seeall a {
+    font-size: 10px;
+}
+
+ul.people li {
+	clear: left;
+	margin: 0 0 8px 0; padding: 0;
+}
+
+.peopledoingthis ul li img, ul.people li img,
+.generic #main peopledoingthis ul li img {
+	float: left;
+	border: 1px solid #ccc;
+	padding: 2px;
+	margin: 0 5px 5px 0px;
+}
+
+.peopledoingthis ul li p {
+	font-size: 11px;
+	color: #666;
+}
+
+ul.people li p {
+	font-size: 10px;
+}
+
+.peopledoingthis ul li p,
+.peopledoingthis ul li h4,
+ul.people li p,
+ul.people li h5 {
+	margin: 0 0 0 55px; padding: 0;
+}
+
+.peopledoingthis ul li h4 {
+	font-size: 12px;
+	margin-top: 3px;
+	font-weight: normal;
+}
+
+ul.people li h5 {
+	font-size: 12px;
+	padding-top: 2px;
+	font-weight: normal;
+}
+
+.peopledoingthis li.finished p {
+	font-size: 10px;
+}
+
+.peopledoingthis li.finished h4 {
+	margin-bottom: 1px;
+}
+
+.peopledoingthis li.finished img {
+	border: 1px solid #12A702;
+}
+
+.peopledoingthis li.finished p.ididit {
+	padding-left: 16px;
+	line-height: 17px;
+	font-size: 9px;
+	text-transform: uppercase;
+	background: url(/images/icons/check-small.gif) 0 2px no-repeat;
+	font-weight: bold;
+	color: #12A702;
+}
+
+.team-links {
+	background: #EFE7BA url(/images/nav/team-bg-bot.gif) bottom no-repeat;
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0;
+	float: left;
+	width: 200px;
+}
+
+#sidebar .team-links h4 {
+	margin: 5px 10px;
+	font-weight: normal;
+	border: none;
+	padding: 0;
+}
+
+#sidebar .team-links h4#seeteam {
+	border: none;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0;
+	padding: 7px 10px 0 10px;
+	background: #EFE7BA url(/images/nav/team-bg-top.gif) top no-repeat;
+}
+
+.team-links ul.people {
+	margin: 10px 0 0 10px;
+}
+
+.team-links ul.people li h5 {
+	padding-top: 7px;
+}
+
+.team-links ul.people li img {
+	background: #ddd;
+}
+
+.profile #sidebar {
+	margin-top: 10px;
+}
+
+.profile #sidebar h3 {
+	margin: 10px 0 10px 0; padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.profile #sidebar ul.near-person-links {
+    margin: 0 0 20px 15px;
+    padding: 0;
+}
+
+.profile #sidebar ul.near-person-links li {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+ol.wantlist {
+	margin: 0 0 20px 35px; padding: 0;
+}
+
+ol.wantlist li a {
+    line-height: 20px;
+}
+
+ol.wantlist li input#newgoal {
+	width: 275px;
+}
+
+ol.wantlist li img,
+ul.donelist li img {
+	vertical-align: middle;
+}
+
+a:link.subdued,
+a:visited.subdued,
+a:active.subdued {
+	background: #fff;
+	color: #666;
+	padding: 1px;
+}
+
+a:hover.subdued,
+a:hover.subdued {
+	background: #666;
+	color: #FFF;
+	padding: 1px;
+}
+
+ul.donelist {
+	margin: 0 0 20px 0px; padding: 0;
+	list-style: none;
+}
+
+ol.wantlist li {
+	padding: 0;
+	margin: 0 0 5px 0;
+	font-size: 16px;
+	color: #999;
+	line-height: 16px;
+}
+
+.profile #main .donelist li {
+	font-size: 16px;
+	color: #999;
+}
+
+ol.wantlist li span, ul.donelist li span {
+	font-size: 10px;
+	white-space: nowrap;
+}
+
+ol.wantlist li span a, 
+ul.donelist li span a {
+    background-color: #fff;
+	color: #666;
+}
+
+ol.wantlist p, ul.donelist p {
+	font-size: 10px;
+	color: #666;
+	margin: 2px 0;
+}
+
+ul.donelist li {
+	background: url(/images/icons/check-small.gif) 0 2px no-repeat;
+	padding: 0 0 0 20px;
+	margin: 0 0 8px 0;
+	font-size: 12px;
+	line-height: 14px;
+	color: #666;
+}
+
+ul.donelist span.worthit {
+	/*color: #12A702;
+	font-size: 9px;*/
+}
+
+ul.donelist p.notworthit {
+	/*color: #666;
+	font-size: 9px;*/
+}
+
+/* ---- HOME PAGE ----------------------------------- */
+
+div.goalsoup {
+	clear: left;
+}
+
+div.goalsoup h2 {
+	font-size: 12px;
+	margin: 30px 0 5px 0;
+}
+
+.category #sidebar ul, 
+.home #sidebar ul,
+.generic #sidebar ul, 
+.search #sidebar ul,
+.search #sidebar ol,
+.category #sidebar ol, 
+.home #sidebar ol,
+.generic #sidebar ol {
+	padding: 0;
+	margin: 0 0 30px 8px;
+}
+
+.category #sidebar ul li, 
+.home #sidebar ul li,
+.home #sidebar ol li,
+.search #sidebar ul li,
+.search #sidebar ol li,
+.generic #sidebar ul li,
+.generic #sidebar ol li {
+	margin: 0 0 4px 8px;
+	padding: 0;
+	font-size: 10px;
+	color: #999;
+}
+
+.category #sidebar ul li strong,
+.generic #sidebar ul li strong {
+	color: #000;
+	font-weight: normal;
+}
+
+/* Goal Soup styles */
+
+div.goalsoup {
+    color: #666;
+}
+
+div.goalsoup span a {
+	color: #000;
+	line-height: 25px;
+	margin: 0 2px;
+}
+
+span.nobreak {
+	white-space: nowrap;
+}
+
+div.goalsoup span span.nobreak a {
+	font-size: 12px;
+}
+
+div.goalsoup span.level1 { font-size: 11px; line-height: 15px; }
+div.goalsoup span.level2 { font-size: 12px; line-height: 17px; }
+div.goalsoup span.level3 { font-size: 14px; line-height: 19px; }
+div.goalsoup span.level4 { font-size: 16px; line-height: 21px; }
+div.goalsoup span.level5 { font-size: 18px; line-height: 23px; }
+div.goalsoup span.level6 { font-size: 20px; line-height: 25px; }
+div.goalsoup span.level7 { font-size: 22px; line-height: 27px; }
+div.goalsoup span.level8 { font-size: 24px; line-height: 29px; }
+div.goalsoup span.level9 { font-size: 26px; line-height: 31px; }
+
+div.goalsoup span.level1 a { background: #FFFBEE; color: #777; }
+div.goalsoup span.level2 a { background: #FFF6DD; color: #555; }
+div.goalsoup span.level3 a { background: #FFF2CD; color: #333; }
+div.goalsoup span.level4 a { background: #FFEEBB; color: #000; }
+div.goalsoup span.level5 a { background: #FFEAAB; color: #000; }
+div.goalsoup span.level6 a { background: #FFE699; color: #000; }
+div.goalsoup span.level7 a { background: #FFE188; color: #000; }
+div.goalsoup span.level8 a { background: #FFDD77; color: #000; }
+div.goalsoup span.level9 a { background: #FFDD77; color: #000; font-weight: bold; padding: 0 4px; }
+
+div.goalsoup span a:hover,
+div.goalsoup span.level1 a:hover,
+div.goalsoup span.level2 a:hover,
+div.goalsoup span.level3 a:hover {
+	color: blue;
+	background-color: transparent;
+}
+
+div.tagsoup span.level1 { font-size: 12px; line-height: 17px; }
+div.tagsoup span.level2 { font-size: 14px; line-height: 19px; }
+div.tagsoup span.level3 { font-size: 16px; line-height: 21px; }
+div.tagsoup span.level4 { font-size: 18px; line-height: 23px; }
+div.tagsoup span.level5 { font-size: 20px; line-height: 25px; }
+div.tagsoup span.level6 { font-size: 22px; line-height: 27px; }
+div.tagsoup span.level7 { font-size: 24px; line-height: 29px; }
+div.tagsoup span.level8 { font-size: 26px; line-height: 31px; }
+div.tagsoup span.level9 { font-size: 28px; line-height: 33px; }
+
+div.tagsoup span.level1 a { background: #FFFBEE; color: #777; }
+div.tagsoup span.level2 a { background: #FFF6DD; color: #555; }
+div.tagsoup span.level3 a { background: #FFF2CD; color: #333; }
+div.tagsoup span.level4 a { background: #FFEEBB; color: #000; }
+div.tagsoup span.level5 a { background: #FFEAAB; color: #000; }
+div.tagsoup span.level6 a { background: #FFE699; color: #000; }
+div.tagsoup span.level7 a { background: #FFE188; color: #000; }
+div.tagsoup span.level8 a { background: #FFDD77; color: #000; }
+div.tagsoup span.level9 a { background: #FFDD77; color: #000; font-weight: bold; padding: 0 4px; }
+
+div.tagsoup span a:hover,
+div.tagsoup span.level1 a:hover,
+div.tagsoup span.level2 a:hover,
+div.tagsoup span.level3 a:hover {
+	color: blue;
+	background-color: transparent;
+}
+
+
+div.goalsoup span.personinsert {
+	margin: 0 5px;
+}
+
+div.goalsoup span.personinsert img {
+	vertical-align: middle;
+}
+
+div.goalsoup span.personinsert a {
+	font-size: 12px;
+	padding: 0;
+	color: #555;
+	margin: 0;
+}
+
+#biggoalfield {
+	background: #AEDAA9;
+	float: left;
+	width: 355px;
+	margin-right: 5px;
+}
+
+#biggoalfield input {
+    position: relative;
+	width: 340px;
+	font-family: "courier new", courier, monospace;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 18px;
+	margin: 4px;
+}
+
+#footergoalfield {
+    float: left;
+	width: 365px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#footergoalfieldlabel {
+    float: left;
+}
+
+#footergoalfield input#newgoal {
+    width: 350px;
+	font-family: "courier new", courier, monospace;
+	font-weight: bold;
+	letter-spacing: 0px;
+	font-size: 14px;
+    margin: -1px, 0px;
+}
+
+#introblock {
+	clear: left;
+	margin: 0px 0 10px 0;
+	width: 517px;
+}
+
+#welcomeblock img#person {
+	margin: 0 10px 10px 0;
+}
+
+#welcomeblock {
+	margin: 0px 0 15px 0px;
+}
+
+#welcomeblock h1 {
+	padding-top: 10px;
+    display: inline;
+}
+
+#welcomeblock h2 {
+	font-size: 14px;
+	margin: 5px 0 0 0;
+}
+
+#introblock h1 {
+	font-family: "courier new", courier, monospace;
+	color: #000;
+	font-weight: bold;
+	line-height: 1em;
+	letter-spacing: -1px;
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+
+#introblock h2 {
+	font-size: 12px;
+	margin: 20px 0 5px 0;
+}
+
+#welcomeblock p {
+	font-size: 11px;
+	line-height: 14px;
+	margin: 5px 0 0 0;
+	color: #999;
+}
+
+#welcomeblock p strong {
+	font-weight: normal;
+	color: #663336;
+}
+
+.login dl {
+	margin: 20px;
+}
+
+.login dt {
+	float: left;
+	width: 80px;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.login dd {
+	margin: 0 0 5px 90px;
+	font-size: 11px;
+	line-height: 24px;
+	color: #666;
+	margin-left:
+}
+
+.login dd input {
+	font-size: 14px;
+}
+
+.login dd span {
+	color: #ccc;
+}
+
+.login dd input#email {
+	width: 300px;
+	font-family: monospace;
+}
+
+.login dd input#password {
+	width: 150px;
+	margin-right: 5px;
+}
+
+.login dd input#submit {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.account #main {
+	margin-top: 30px;
+	float: right;
+}
+
+.edit #main {
+	margin: 30px 0 0 0;
+}
+
+.uploadpicture #main {
+	margin: 30px 0 0 20px;
+	width: 700px;
+}
+
+.account #sidebar {
+	float: left;
+	width: 150px;
+	left: 0;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.account #sidebar img#person {
+	float: none;
+}
+
+.account dl, .edit dl {
+	margin: 0 0 30px 0;
+	padding: 0;
+}
+
+.account dt, .edit dt {
+	float: left;
+	width: 110px;
+	font-size: 11px;
+	text-align: right;
+	padding-top: 5px;
+	font-weight: bold;
+	color: #333;
+	margin-right: 5px;
+}
+
+.edit dt {
+	width: 75px;
+}
+
+.account dd, .edit dd {
+	margin: 0 0 5px 120px;
+	font-size: 11px;
+	color: #666;
+	margin-left:
+}
+
+.edit dd {
+	margin-left: 85px;
+}
+
+.uploadpicture dl {
+	float: left;
+	margin-left: 10px;
+}
+
+.uploadpicture dd {
+	color: #666;
+	font-size: 11px;
+	margin: 0 0 5px 0;
+	line-height: 24px;
+}
+
+.uploadpicture dt {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+.account dd input, .edit dd input {
+	font-size: 14px;
+	font-family: monospace;
+}
+
+.edit dd input#title {
+	width: 350px;
+}
+
+.edit dd textarea {
+	width: 300px;
+	font-size: 12px;
+	font-family: monospace;
+}
+
+.account dd p, .edit dd p, .uploadpicture dd p {
+	color: #999;
+	margin: 0;
+}
+
+dd input.email {
+	width: 300px;
+	font-family: monospace;
+}
+
+dd input.password {
+	width: 150px;
+	margin-right: 5px;
+}
+
+.login dd input#submit {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.account dd.submit, .edit dd.submit {
+	margin-top: 25px;
+}
+
+.account h2 {
+	font-size: 12px;
+	color: #999;
+	font-weight: normal;
+	clear: left;
+}
+
+div#soupfooter {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	clear: both;
+}
+
+.category #soupfooter {
+	padding-top: 10px;
+}
+
+div#iwantto {
+	font-family: "courier new", courier, monospace;
+	color: #000;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 18px;
+	padding: 10px 10px;
+	margin: 0;
+}
+
+.profile #main h2 
+{ 
+  font-size:14px;
+  color:#666;
+}
+
+div#soupfooter div#iwantto {
+	background: #A2BDCF;
+	/* url(/images/nav/soupfooter-bg.gif) top no-repeat */
+}
+
+div#soupfooter div#iwantto input {
+	vertical-align: middle;
+}
+
+.profile #iwantto {
+	clear: left;
+	padding-top: 10px;
+	margin: 0;
+	background: #AEDAA9;
+}
+
+input#newgoal {
+	width: 350px;
+	font-family: "courier new", courier, monospace;
+	font-weight: bold;
+	letter-spacing: 0px;
+	font-size: 14px;
+}
+
+div#soupfooter .goalsoup {
+	background: #fff;
+	padding: 5px;
+	border: 2px solid #a2bdcf;
+	border-top: none;
+}
+
+div#footer {
+	clear: left;
+	margin: 10px 0;
+	font-size: 10px;
+	color: #999;
+}
+
+.home #footer,
+.account #footer,
+.auth #footer,
+.about #footer {
+    clear: both;
+	margin: 10px 0;
+	border-top: 1px dotted #ccc;
+	padding: 5px 10px;
+}
+
+
+div#footer a {
+    background-color: #fff;
+	color: #333;
+}
+
+#soupfooter div.goalsoup h2 {
+	margin-top: 5px;
+}
+
+#persons-tags {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/* General stuff */
+
+#show-account-info h2 {
+	border: none;
+	font-size: 11px;
+	margin: 0 0 0 0;
+	line-height: 17px;
+	padding: 0 0 0 23px;
+	background: url(/images/nav/add-bug.gif) left no-repeat;
+}
+
+#account-info {
+    display: none;
+}
+
+.ads h5 {
+    margin: 0;
+	padding-top: 10px;
+}
+
+.entryimage img {
+	border: 1px solid #ccc;
+	padding: 3px;
+	margin: 5px 5px 5px 0;
+}
+
+.profile .entryimage,
+.perma .entryimage,
+.ag-person .entryimage {
+    margin-left: 10px;
+}
+
+ul.people {
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+div.people-also-doing {
+    clear: both;
+    display: block;
+    margin-bottom: 20px;
+}
+
+div.people-also-doing h3 {
+    border-bottom: 1px solid #ccc;
+}
+
+ul.similar-goals li {
+	margin-bottom: 8px;
+}
+
+ul.similar-goals li p {
+	margin: 0; padding: 0;
+	font-size: 12px;
+	color: #999;
+}
+
+ul.similar-goals li h5 {
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0; padding: 0;
+}
+
+ul.similar-goals li h5 span {
+    line-height: 10px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+ul.similar-goals li h5 span a.admin:link {
+    font-size: 10px;
+}
+
+people-list {
+    display: block;
+    clear: both;
+}
+
+people-list ul.people, 
+.new-people ul.people {
+	margin: 10px 0 0 10px;
+}
+
+.new-people ul.people li {
+	float: left;
+	display: inline;
+	margin: 0 0 10px 17px; padding: 0;
+	width: 200px;
+}
+
+.new-people ul.people li h5 {
+	padding-top: 7px;
+}
+
+.new-people ul.people li img {
+	background: #ddd;
+}
+
+/* for ag pages (entry titles should be bold) */
+.ag-person .entry h5 a, .ag-person .entry h5 strong {
+	font-family: "courier new", courier, verdana, sans-serif;
+	letter-spacing: -1px;
+	font-size: 16px;
+	color: #000;
+}
+
+tr {
+    vertical-align: top;
+}
+
+.actionconfirmationmessage {
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #ffffcc;
+	margin: 1em 0;
+}
+
+.errormessage {
+	border: 1px solid #900;
+	margin-bottom: 1em;
+}
+
+.errormessage strong {
+    display: block;
+    background: #f33;
+    padding: 3px;
+    color: #fff;
+}
+
+#created-by-line {
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #999;
+	font-size: 10px;
+}
+
+#quotation {
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+#quotation .quote {
+}
+
+#quotation .author {
+    text-decoration: emphasis;
+    font-size: 10px;
+    color: #999;
+}
+
+#find-help-box p {
+    margin: 0 0 20px 10px;
+    font-size: 11px;
+}
+
+p.reopen-goal {
+	margin: 0px 0 10px 0; padding: 0;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#add-anonymous-comment {
+	display: none;
+	padding: 2px;
+	margin-top: 1em;
+}
+
+.commentboxless {
+    padding: 3px;
+}
+
+.commentboxmore {
+    display: none;
+    padding: 3px;
+}
+
+.account-email {
+    margin-bottom: 1em;
+}
+
+.account-email span {
+    font-size: 10px;
+    color: #999;
+}
+
+ul.blogs {
+	margin: 0 0 20px 0px; padding: 0;
+	list-style: none;
+}
+
+ul.blogs div {
+    color: #999;
+	font-size: 10px;
+}
+
+ul.blogs li {
+    margin-bottom: 1em;
+}
+
+.blogpassword {
+    display: none;
+}
+
+#your-profile-images {
+    margin-bottom: 1em;
+}
+
+#your-profile-images div {
+    font-weight: bold;
+    font-size: 10px;
+    color: #999;
+}
+
+ul.profile-images li {
+	list-style: none;
+	margin-bottom: 1em;
+}
+
+#your-blogs {
+    margin-bottom: 1em;
+}
+
+#rss-link {
+	margin: 0 0 30px 15px;
+}
+
+#goals-list ul 
+{                
+  list-style-type: none;
+}
+
+#goals-list li
+{ 
+  margin-bottom:10px;
+}
+
+#people-list img 
+{ 
+  margin:2px 5px 2px 5px;
+}
+
+#zeitgeist-index dt 
+{ 
+  font-size:12pt;
+  margin:10px 0 5px 0;
+}
+
+.zeitgeist h2 
+{ 
+  font-size: 12px;
+  color: #666;
+  margin: 10px 0 10px 0; padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#matureLink 
+{ 
+  font-size:9px;
+}
+
+#show-image-flag {display: block;}
+#image-flag {display: none;}
+
+.image-to-flag img#person,
+.image-to-flag img#entry,
+.image-to-flag img#comment {
+    float: none;
+    position: relative;
+    clear: both;
+    display: block;
+    margin: 20px 0 20px 0;
+}
+
+.flag-image {
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    display: block;
+    width: 250px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+
+
+.flag-image #image-flag {
+    text-align: left;
+}
+
+.flag-image #image-flag span {
+    color: #666;
+}
+
+.flag-image #image-flag textarea {
+    width: 230px;
+}
+
+.flag-image a {
+    font-size: 12px;
+    color: #999;
+}
+
+.home #recent-activity,
+.generic #recent-activity {
+    margin-top: 2em;
+    display: block;
+    clear: both;
+    background-color: #ffc;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.home #recent-activity li,
+.generic .short-entries li {
+    margin-bottom: 1em;
+}
+
+.home #recent-activity li h4.entry-title,,
+.generic .short-entries li h4.entry-title {
+	font-family: "courier new", courier, monospace;
+	color: #000;
+	font-weight: bold;
+	line-height: 1em;
+	font-size: 14px;
+	margin: 0 0 3px 0;
+}
+
+.home #recent-activity li h4.entry-title a,
+.generic .short-entries li h4.entry-title a {
+	font-family: "courier new", courier, monospace;
+    color: #000;
+}
+
+.home #recent-activity li h4.entry-title a:hover,
+.generic .short-entries li h4.entry-title a:hover {
+	font-family: "courier new", courier, monospace;
+    background-color: #000;
+    color: #fff;
+}
+
+.home #recent-activity li h4.entry-title span,
+.generic .short-entries li h4.entry-title span {
+    font-family: verdana, sans-serif;
+    color: #666;
+}
+
+.generic #main .short-entries li span a {
+    font-size: 10px;
+}
+
+.home #recent-activity li span,
+.generic .short-entries li span {
+    line-height: 10px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.zeitgeist-bar {
+    padding: 5px 0;
+    margin-bottom: 1em; 
+}
+
+.tinyW { 
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.uploadprofileimage a {
+    font-size: 10px;
+}
+
+#api-key-application {
+    margin-top: 2em;
+    border-top: 1px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+}
+
+#api-key-application span {
+    font-size: 10px;
+    color: #666;
+}
+
+.api-key-status {
+    background-color: #ffc;
+    padding: 5px;
+}
+
+.generic #main .api-keys a {
+    font-size: 12px;
+                             
+}
+
+img.small-profile-image {
+}
+
+ul.cheers-list 
+{ 
+  list-style:none;
+}
+
+.cheers-list img 
+{  
+  padding: 3px;
+}
+
+#cheers-teaser 
+{
+  color:#666;
+  margin-bottom:10px;
+}
+
+#cheers-teaser a 
+{
+  font-size: 10px;
+}
+
+#cheers-teaser a:hover {
+    color: #fff;
+}
+
+#edit-subscription {
+  color:#666;
+  margin-bottom:10px;
+}
+
+#edit-subscription a 
+{
+  font-size: 10px;
+}
+
+#new-stuff a {
+    font-size: 10px;
+    color: #666;
+}
+
+#new-stuff a:hover {
+    font-size: 10px;
+    background-color: #666;
+    color: #fff;
+}
+
+span.delete-button a,
+span.delete-button a:hover {
+    background-color: #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-image { 
+    float: left;                    
+	width: 400px;
+  	margin: 0 10px 0 0;
+}
+#gallery {
+	width: 200px;
+    float: left;                    
+   	margin: 0;
+    padding: 0;
+}
+#edit-image {
+    display: none;
+}
+#show-edit-image {
+    font-size: 12px;
+}
+#main-image-delete {
+    font-size: 10px;
+    color: #ccc;
+}
+.gallery-thumbnail { 
+    padding: 0 10px 20px 10px;
+    float: left;               
+}
+.image-caption { 
+    clear: both;
+    width: 400px;
+    padding: 10px 0 0 0;         
+}
+#upload-profile-image {
+	clear: left;
+    padding: 5px 0 0 10px;         
+}
+
+.autocomplete {
+    position: absolute;
+    z-index: 10;
+    
+    width: 353px;
+    font-size: 11px;
+    font-family: verdana, sans-serif;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+    letter-spacing: 0px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+
+.autocomplete ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.autocomplete li {
+    margin: 0;
+    padding: 2px;
+    border: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.autocomplete .selected {
+    background-color: #ffa;
+}
+_.http://www.43things.com/stylesheets/screen.cssXtext/cssÓOîfunction toggleDisplay(id1,id2) {
+	// if id1 is hidden, then show it and hide id2. else do the opposite.
+	if (document.getElementById(id1).style.display == 'none') {
+		document.getElementById(id1).style.display = 'block'
+		document.getElementById(id2).style.display = 'none'
+	} else {
+		document.getElementById(id1).style.display = 'none'
+		document.getElementById(id2).style.display = 'block'
+	}
+	return false;
+}
+
+function toggleDisplayInline(id1,id2) {
+	// if id1 is hidden, then show it and hide id2. else do the opposite.
+	if (document.getElementById(id1).style.display == 'none') {
+		document.getElementById(id1).style.display = 'inline'
+		document.getElementById(id2).style.display = 'none'
+	} else {
+		document.getElementById(id1).style.display = 'inline'
+		document.getElementById(id2).style.display = dtype
+	}
+	return false;
+}
+
+// For more explicit on and off switching
+function turnDisplay(id, onOrOff)  {
+    if (onOrOff == 'off') {
+		 document.getElementById(id).style.display = 'none'
+    } else if (onOrOff == 'on') {
+		 document.getElementById(id).style.display = 'block'
+    }
+    return false;
+}
+
+// Yellow Fade Technique (tm 37 Signals)
+var Color= new Array();
+Color[2] = "ee";
+Color[3] = "dd";
+Color[4] = "cc";
+Color[5] = "bb";
+Color[6] = "aa";
+Color[7] = "99";
+
+function waittofade() {
+	if (document.getElementById('fade')) {
+    setTimeout("fadeIn(10)", 1000);
+	 }
+}
+
+function fadeIn(where) {
+    if (where >= 1) {
+        document.getElementById('fade').style.backgroundColor = "#ffff" + Color[where];
+		  if (where > 1) {
+			  where -= 1;
+			  setTimeout("fadeIn("+where+")", 200);
+			} else {
+			  where -= 1;
+			  setTimeout("fadeIn("+where+")", 200);
+			  document.getElementById('fade').style.backgroundColor = "transparent";
+			}
+
+    }
+}
+
+function popWindow(url,name,options){
+        var ContextWindow = window.open(url,name,options);
+        ContextWindow.opener = this;
+        ContextWindow.focus();
+}
+
+var classElements = new Array();
+function getElementsByClass(classname){
+    var inc=0
+    var alltags = document.all? document.all : document.getElementsByTagName("LI")
+
+    for (i=0; i<alltags.length; i++){
+        if (alltags[i].className==classname){
+            classElements[inc] = alltags[i]
+            inc += 1
+        }
+    }
+    return classElements
+}
+
+function showMatureItems(){
+    elements = getElementsByClass('mature')
+
+    for (i=0; i<elements.length; i++){
+        elements[i].style.display = 'list-item'
+    }
+    document.getElementById('matureLink').style.display = 'hidden'
+}
+
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+        } else {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1){
+                end = dc.length;
+            }
+        }
+    return unescape(dc.substring(begin + prefix.length, end));
+}
+
+function setCookie(name, value, expires, domain) {
+      var curCookie = name + "=" + escape(value) +
+              ((expires) ? "; expires=" + expires.toGMTString() : "") +
+              "; path=/" +
+              ((domain) ? "; domain=" + domain : "");
+      document.cookie = curCookie;
+}
+
+
+function deleteCookie(name, path, domain) {
+    if (getCookie(name)) {
+        document.cookie = name + "=" + 
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+    }
+}
+_.http://www.43things.com/javascripts/scripts.js_application/x-javascriptÓOP	/*  Prototype: an object-oriented Javascript library, version 1.0.1
+ *  (c) 2005 Sam Stephenson <sam@conio.net>
+ *
+ *  Prototype is freely distributable under the terms of an MIT-style license. 
+ *  For details, see http://prototype.conio.net/
+ */
+
+var Prototype = {
+  Version: '1.1.0'
+}
+
+var Class = {
+  create: function() {
+    return function() { 
+      this.initialize.apply(this, arguments);
+    }
+  }
+}
+
+var Abstract = new Object();
+
+Object.prototype.extend = function(object) {
+  for (property in object) {
+    this[property] = object[property];
+  }
+  return this;
+}
+
+Function.prototype.bind = function(object) {
+  var method = this;
+  return function() {
+    method.apply(object, arguments);
+  }
+}
+
+Function.prototype.bindAsEventListener = function(object) {
+  var method = this;
+  return function(event) {
+    method.call(object, event || window.event);
+  }
+}
+
+Number.prototype.toColorPart = function() {
+  var digits = this.toString(16);
+  if (this < 16) return '0' + digits;
+  return digits;
+}
+
+var Try = {
+  these: function() {
+    var returnValue;
+    
+    for (var i = 0; i < arguments.length; i++) {
+      var lambda = arguments[i];
+      try {
+        returnValue = lambda();
+        break;
+      } catch (e) {}
+    }
+    
+    return returnValue;
+  }
+}
+
+var Toggle = {
+  display: function() {
+    for (var i = 0; i < arguments.length; i++) {
+      var element = $(arguments[i]);
+      element.style.display = 
+        (element.style.display == 'none' ? '' : 'none');
+    }
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+function $() {
+  var elements = new Array();
+  
+  for (var i = 0; i < arguments.length; i++) {
+    var element = arguments[i];
+    if (typeof element == 'string')
+      element = document.getElementById(element);
+
+    if (arguments.length == 1) 
+      return element;
+      
+    elements.push(element);
+  }
+  
+  return elements;
+}
+
+function getElementsByClassName(className) {
+  var children = document.getElementsByTagName('*') || document.all;
+  var elements = new Array();
+  
+  for (var i = 0; i < children.length; i++) {
+    var child = children[i];
+    var classNames = child.className.split(' ');
+    for (var j = 0; j < classNames.length; j++) {
+      if (classNames[j] == className) {
+        elements.push(child);
+        break;
+      }
+    }
+  }
+  
+  return elements;
+}
+
+/*--------------------------------------------------------------------------*/
+
+var Ajax = {
+  getTransport: function() {
+    return Try.these(
+      function() {return new ActiveXObject('Msxml2.XMLHTTP')},
+      function() {return new ActiveXObject('Microsoft.XMLHTTP')},
+      function() {return new XMLHttpRequest()}
+    ) || false;
+  },
+  
+  emptyFunction: function() {}
+}
+
+Ajax.Base = function() {};
+Ajax.Base.prototype = {
+  setOptions: function(options) {
+    this.options = {
+      method:       'post',
+      asynchronous: true,
+      parameters:   ''
+    }.extend(options || {});
+  }
+}
+
+Ajax.Request = Class.create();
+Ajax.Request.Events = 
+  ['Uninitialized', 'Loading', 'Loaded', 'Interactive', 'Complete'];
+
+Ajax.Request.prototype = (new Ajax.Base()).extend({
+  initialize: function(url, options) {
+    this.transport = Ajax.getTransport();
+    this.setOptions(options);
+  
+    try {
+      if (this.options.method == 'get')
+        url += '?' + this.options.parameters + '&_=';
+    
+      this.transport.open(this.options.method, url, true);
+      
+      if (this.options.asynchronous) {
+        this.transport.onreadystatechange = this.onStateChange.bind(this);
+        setTimeout((function() {this.respondToReadyState(1)}).bind(this), 10);
+      }
+              
+      if (this.options.method == 'post') {
+        this.transport.setRequestHeader('Connection', 'close');
+        this.transport.setRequestHeader('Content-type',
+          'application/x-www-form-urlencoded');
+      }
+      
+      this.transport.send(this.options.method == 'post' ? 
+        this.options.parameters + '&_=' : null);
+                      
+    } catch (e) {
+    }    
+  },
+      
+  onStateChange: function() {
+    var readyState = this.transport.readyState;
+    if (readyState != 1)
+      this.respondToReadyState(this.transport.readyState);
+  },
+  
+  respondToReadyState: function(readyState) {
+    var event = Ajax.Request.Events[readyState];
+    (this.options['on' + event] || Ajax.emptyFunction)(this.transport);
+  }
+});
+
+Ajax.Updater = Class.create();
+Ajax.Updater.prototype = (new Ajax.Base()).extend({
+  initialize: function(container, url, options) {
+    this.container = $(container);
+    this.setOptions(options);
+  
+    if (this.options.asynchronous) {
+      this.onComplete = this.options.onComplete;
+      this.options.onComplete = this.updateContent.bind(this);
+    }
+    
+    this.request = new Ajax.Request(url, this.options);
+    
+    if (!this.options.asynchronous)
+      this.updateContent();
+  },
+  
+  updateContent: function() {
+    if (!this.options.insertion) {
+      this.container.innerHTML = this.request.transport.responseText;
+    } else {
+      new this.options.insertion(this.container,
+        this.request.transport.responseText);
+    }
+
+    if (this.onComplete) {
+      setTimeout((function() {this.onComplete(this.request)}).bind(this), 10);
+    }
+  }
+});
+
+/*--------------------------------------------------------------------------*/
+
+var Field = {
+  clear: function() {
+    for (var i = 0; i < arguments.length; i++)
+      $(arguments[i]).value = '';
+  },
+
+  focus: function(element) {
+    $(element).focus();
+  },
+  
+  present: function() {
+    for (var i = 0; i < arguments.length; i++)
+      if ($(arguments[i]).value == '') return false;
+    return true;
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+var Form = {
+  serialize: function(form) {
+    var elements = Form.getElements($(form));
+    var queryComponents = new Array();
+    
+    for (var i = 0; i < elements.length; i++) {
+      var queryComponent = Form.Element.serialize(elements[i]);
+      if (queryComponent)
+        queryComponents.push(queryComponent);
+    }
+    
+    return queryComponents.join('&');
+  },
+  
+  getElements: function(form) {
+    form = $(form);
+    var elements = new Array();
+
+    for (tagName in Form.Element.Serializers) {
+      var tagElements = form.getElementsByTagName(tagName);
+      for (var j = 0; j < tagElements.length; j++)
+        elements.push(tagElements[j]);
+    }
+    return elements;
+  }
+}
+
+Form.Element = {
+  serialize: function(element) {
+    element = $(element);
+    var method = element.tagName.toLowerCase();
+    var parameter = Form.Element.Serializers[method](element);
+    
+    if (parameter)
+      return encodeURIComponent(parameter[0]) + '=' + 
+        encodeURIComponent(parameter[1]);                   
+  },
+  
+  getValue: function(element) {
+    element = $(element);
+    var method = element.tagName.toLowerCase();
+    var parameter = Form.Element.Serializers[method](element);
+    
+    if (parameter) 
+      return parameter[1];
+  }
+}
+
+Form.Element.Serializers = {
+  input: function(element) {
+    switch (element.type.toLowerCase()) {
+      case 'hidden':
+      case 'password':
+      case 'text':
+        return Form.Element.Serializers.textarea(element);
+      case 'checkbox':  
+      case 'radio':
+        return Form.Element.Serializers.inputSelector(element);
+    }
+    return false;
+  },
+
+  inputSelector: function(element) {
+    if (element.checked)
+      return [element.name, element.value];
+  },
+
+  textarea: function(element) {
+    return [element.name, element.value];
+  },
+
+  select: function(element) {
+    var index = element.selectedIndex;
+    return [element.name, (index >= 0) ? element.options[index].value : ''];
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+Abstract.TimedObserver = function() {}
+Abstract.TimedObserver.prototype = {
+  initialize: function(element, frequency, callback) {
+    this.frequency = frequency;
+    this.element   = $(element);
+    this.callback  = callback;
+    
+    this.lastValue = this.getValue();
+    this.registerCallback();
+  },
+  
+  registerCallback: function() {
+    setTimeout(this.onTimerEvent.bind(this), this.frequency * 1000);
+  },
+  
+  onTimerEvent: function() {
+    var value = this.getValue();
+    if (this.lastValue != value) {
+      this.callback(this.element, value);
+      this.lastValue = value;
+    }
+    
+    this.registerCallback();
+  }
+}
+
+Form.Element.Observer = Class.create();
+Form.Element.Observer.prototype = (new Abstract.TimedObserver()).extend({
+  getValue: function() {
+    return Form.Element.getValue(this.element);
+  }
+});
+
+Form.Observer = Class.create();
+Form.Observer.prototype = (new Abstract.TimedObserver()).extend({
+  getValue: function() {
+    return Form.serialize(this.element);
+  }
+});
+
+
+/*--------------------------------------------------------------------------*/
+
+Abstract.Insertion = function(adjacency) {
+  this.adjacency = adjacency;
+}
+
+Abstract.Insertion.prototype = {
+  initialize: function(element, content) {
+    this.element = $(element);
+    this.content = content;
+    
+    if (this.adjacency && this.element.insertAdjacentHTML) {
+      this.element.insertAdjacentHTML(this.adjacency, this.content);
+    } else {
+      this.range = this.element.ownerDocument.createRange();
+      if (this.initializeRange) this.initializeRange();
+      this.fragment = this.range.createContextualFragment(this.content);
+      this.insertContent();
+    }
+  }
+}
+
+var Insertion = new Object();
+
+Insertion.Before = Class.create();
+Insertion.Before.prototype = (new Abstract.Insertion('beforeBegin')).extend({
+  initializeRange: function() {
+    this.range.setStartBefore(this.element);
+  },
+  
+  insertContent: function() {
+    this.element.parentNode.insertBefore(this.fragment, this.element);
+  }
+});
+
+Insertion.Top = Class.create();
+Insertion.Top.prototype = (new Abstract.Insertion('afterBegin')).extend({
+  initializeRange: function() {
+    this.range.selectNodeContents(this.element);
+    this.range.collapse(true);
+  },
+  
+  insertContent: function() {  
+    this.element.insertBefore(this.fragment, this.element.firstChild);
+  }
+});
+
+Insertion.Bottom = Class.create();
+Insertion.Bottom.prototype = (new Abstract.Insertion('beforeEnd')).extend({
+  initializeRange: function() {
+    this.range.selectNodeContents(this.element);
+    this.range.collapse(this.element);
+  },
+  
+  insertContent: function() {
+    this.element.appendChild(this.fragment);
+  }
+});
+
+Insertion.After = Class.create();
+Insertion.After.prototype = (new Abstract.Insertion('afterEnd')).extend({
+  initializeRange: function() {
+    this.range.setStartAfter(this.element);
+  },
+  
+  insertContent: function() {
+    this.element.parentNode.insertBefore(this.fragment, 
+      this.element.nextSibling);
+  }
+});
+
+/*--------------------------------------------------------------------------*/
+
+var Effect = new Object();
+
+Effect.Highlight = Class.create();
+Effect.Highlight.prototype = {
+  initialize: function(element) {
+    this.element = $(element);
+    this.start  = 153;
+    this.finish = 255;
+    this.current = this.start;
+    this.fade();
+  },
+  
+  fade: function() {
+    if (this.isFinished()) return;
+    if (this.timer) clearTimeout(this.timer);
+    this.highlight(this.element, this.current);
+    this.current += 17;
+    this.timer = setTimeout(this.fade.bind(this), 250);
+  },
+  
+  isFinished: function() {
+    return this.current > this.finish;
+  },
+  
+  highlight: function(element, current) {
+    element.style.backgroundColor = "#ffff" + current.toColorPart();
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+
+Event = {
+  KEY_BACKSPACE: 8,
+  KEY_TAB:       9,
+  KEY_RETURN:   13,
+  KEY_ESC:      27,
+  KEY_LEFT:     37,
+  KEY_UP:       38,
+  KEY_RIGHT:    39,
+  KEY_DOWN:     40,
+  KEY_DELETE:   46,
+
+  element: function(event) {
+    return event.srcElement || event.currentTarget;
+  },
+  
+  stop: function(event) {
+    if(event.preventDefault) 
+      { event.preventDefault(); event.stopPropagation(); }
+    else 
+      event.returnValue = false;
+  },
+  
+  getParentNodeOrSelfByName: function(event, nodeName) {
+    element = Event.element(event);
+      while(element.nodeName != nodeName && element.parentNode) 
+        element = element.parentNode; 
+    return element;
+  },
+  
+  observeKeypress: function(element, observer) {
+    if(navigator.appVersion.indexOf('AppleWebKit')>0) 
+      { $(element).addEventListener("keydown",observer,false); return; }
+    if($(element).addEventListener)
+      $(element).addEventListener("keypress",observer,false)
+    else if($(element).attachEvent)
+      $(element).attachEvent("onkeydown",observer);
+  },
+  
+  observeBlur: function(element, observer) {
+    if($(element).addEventListener)
+      $(element).addEventListener("blur",observer,false)
+    else if($(element).attachEvent)
+      $(element).attachEvent("onblur",observer);
+  },
+  
+  observeClick: function(element, observer) {
+    if($(element).addEventListener)
+      $(element).addEventListener("click",observer,false)
+    else if($(element).attachEvent)
+      $(element).attachEvent("onclick",observer);
+  },
+  
+  observeHover: function(element, observer) {
+    if($(element).addEventListener)
+      $(element).addEventListener("mouseover",observer,false)
+    else if($(element).attachEvent)
+      $(element).attachEvent("onmouseover",observer);
+  }
+  
+}
+
+Text = {
+  stripTags: function(htmlstr) {
+    return htmlstr.replace(/<\/?[^>]+>/gi,"");
+  },
+  decodeHTML: function(htmlstr) {
+    return htmlstr.replace("&lt;","<").replace("&gt;",">").replace("&quot;",'"').replace("&amp;","&");
+  }
+}
+
+Element = {
+  show: function(element) {
+    $(element).style.display = '';
+  },
+  hide: function(element) {
+    $(element).style.display = 'none';
+  },
+  samePositionAs: function(element, aselement) {
+    if(navigator.appVersion.indexOf('MSIE')>0) {
+      $(element).style.top      = $(aselement).style.top;
+      $(element).style.left     = $(aselement).style.left;
+      $(element).style.width    = $(aselement).offsetWidth;
+      $(element).style.height   = $(aselement).offsetHeight;
+    }
+  }
+}
+                    
+Ajax.Autocomplete = Class.create();
+Ajax.Autocomplete.prototype = (new Ajax.Base()).extend({
+  initialize: function(element, update, url, options) {
+    this.element     = $(element); 
+    this.update      = $(update);  
+    this.has_focus   = false; 
+    this.changed     = false; 
+    this.active      = false; 
+    this.index       = 0;     
+    this.entry_count = 0;    
+    this.url         = url;
+    this.request     = null;
+    this.cache       = new Object();
+
+    this.setOptions(options);
+    this.options.asynchronous = true;
+    this.options.onComplete   = this.onComplete.bind(this)
+    this.options.frequency    = this.options.frequency || 0.2;
+    this.options.min_chars    = this.options.min_chars || 1;
+    this.options.method       = 'get';
+
+    this.hide();    
+    if(this.options.indicator)
+      this.indicator = $(this.options.indicator);
+       
+    this.observer = null;
+    
+    Event.observeKeypress (this.element,
+                           this.onKeyPress.bindAsEventListener(this));
+    Event.observeClick(document, this.onBlur.bindAsEventListener(this));
+  },
+  
+  show: function() {
+    Element.show(this.update);
+    if(!this.iefix && (navigator.appVersion.indexOf('MSIE')>0)) {
+      new Insertion.Before(this.update, 
+       '<iframe id="' + this.update.id + '_iefix" style="display:none;" rc="javascript:false;" frameborder="0" scrolling="no"></iframe>');
+      this.iefix = $(this.update.id+'_iefix');
+      this.iefix.style.position = 'absolute';
+      this.iefix.style.zIndex = 1;
+      this.update.style.zIndex = 2;
+    }
+    if(this.iefix) {
+      Element.samePositionAs(this.iefix, this.update);
+      Element.show(this.iefix);
+    }
+  },
+  
+  hide: function() {
+    if(this.iefix) Element.hide(this.iefix);
+    Element.hide(this.update);
+  },
+  
+  startIndicator: function() {
+    if(this.indicator) Element.show(this.indicator);
+  },
+  
+  stopIndicator: function() {
+    if(this.indicator) Element.hide(this.indicator);
+  },
+  
+  onObserverEvent: function() {
+    this.changed = false;   
+    if(this.element.value.length>=this.options.min_chars) {
+      this.startIndicator();
+      this.options.parameters = this.options.callback ?
+        this.options.callback(this.element,
+                              Form.Element.getValue(this.element)) :
+          Form.Element.getValue(this.element);
+      if (this.request != null) {
+        this.request.transport.abort();
+        this.request = null;
+      }
+      if (this.cache[this.options.parameters] != null) {
+        this.onPopulate(this.cache[this.options.parameters]);
+      } else {
+        this.request = new Ajax.Request(this.url, this.options);
+      }
+    } else {
+      this.active = false;
+      this.hide();
+    }
+  },
+  
+  onPopulate: function(response) {
+    if(!this.changed) {
+      this.update.innerHTML = response;
+      if(this.update.firstChild && this.update.firstChild.childNodes) {
+        this.entry_count = 
+          this.update.firstChild.childNodes.length;
+        for (var i = 0; i < this.entry_count; i++) {
+          var entry = this.get_entry(i);
+          entry.autocompleteIndex = i;
+          Event.observeHover(entry, this.onHover.bindAsEventListener(this));
+          Event.observeClick(entry, this.onClick.bindAsEventListener(this));
+        }
+      } else { 
+        this.entry_count = 0;
+      }
+      
+      this.stopIndicator();
+      
+      this.index = 0;
+      this.render();
+    }
+  },
+  
+  onComplete: function(request) {
+    var response = request.responseText || '';
+    this.cache[this.options.parameters] = response;
+    this.onPopulate(response);
+    this.request = null;
+  },
+
+  onKeyPress: function(event) {
+    if(this.active)
+      switch(event.keyCode) {
+       case Event.KEY_TAB:
+       case Event.KEY_RETURN:
+         this.select_entry();
+         Event.stop(event);
+       case Event.KEY_ESC:
+         this.hide();
+         this.active = false;
+         return;
+       case Event.KEY_LEFT:
+       case Event.KEY_RIGHT:
+         return;
+       case Event.KEY_UP:
+         this.mark_previous();
+         this.render();
+         Event.stop(event);
+         return;
+       case Event.KEY_DOWN:
+         this.mark_next();
+         this.render();
+         Event.stop(event);
+         return;
+      }
+     else 
+      if(event.keyCode==Event.KEY_TAB || event.keyCode==Event.KEY_RETURN) 
+        return;
+    
+    this.changed = true;
+    this.has_focus = true;
+    
+    if(this.observer) clearTimeout(this.observer);
+      this.observer = 
+        setTimeout(this.onObserverEvent.bind(this),
+        this.options.frequency*1000);
+  },
+  
+  onHover: function(event) {
+    element = Event.getParentNodeOrSelfByName(event, 'LI');
+    if(this.index != element.autocompleteIndex) 
+    {
+        this.index = element.autocompleteIndex;
+        this.render();
+    }
+  },
+  
+  onClick: function(event) {
+    element = Event.getParentNodeOrSelfByName(event, 'LI');
+    this.index = element.autocompleteIndex;
+    this.select_entry();
+  },
+  
+  onBlur: function(event) {
+    element = Event.element(event);
+    if(element==this.update) return;
+    while(element.parentNode) 
+      { element = element.parentNode; if(element==this.update) return; }
+    this.hide();
+    this.active = false;
+  }, 
+ 
+  render: function() {
+    if(this.entry_count > 0) {
+      for (var i = 0; i < this.entry_count; i++)
+        this.get_entry(i).className =
+          this.index==i ? 'selected' : '';
+        
+      if(this.has_focus) { 
+      /* Disabled due to problems with the footer in IE
+        if(this.get_current_entry().scrollIntoView) 
+          this.get_current_entry().scrollIntoView(false);
+      */  
+        this.show();
+        this.active = true;
+      }
+    } else this.hide();
+  },
+  
+  mark_previous: function() {
+    if(this.index > 0) this.index--
+      else this.index = this.entry_count-1;
+  },
+  
+  mark_next: function() {
+    if(this.index < this.entry_count-1) this.index++
+      else this.index = 0;
+  },
+  
+  get_entry: function(index) {
+    return this.update.firstChild.childNodes[index];
+  },
+  
+  get_current_entry: function() {
+    return this.get_entry(this.index);
+  },
+  
+  select_entry: function() {
+    this.hide();
+    this.active = false;
+    value = Text.decodeHTML(Text.stripTags(this.get_current_entry().firstChild.innerHTML));
+    this.element.value = value;
+    this.element.focus();
+  }
+});
+
+_0http://www.43things.com/javascripts/prototype.jsÓO_GIF89ac  æ  BBB###888œœœÁÁÁşÿÿşşüüúó\\\kkkíííşÿşÍÍÍÿşşÚÚÚÉÉÉcccSSS±±±Ó±IÒÒÒsssÿÿşáááKKK”””zzzÜÂrÄ•«««¶¶¶Î¨4ıış‚‚‚Ğª:øõææææñèÊËŸ!Èœ£££şışÿşÿõõõÖ´QÌ£)ÖÖÖñññùöëéØ¦åÏ‘Ø·Xıü÷Ñ­@Ø¼dŒŒŒéééöîÚ»»»×»^Ø¹]ııûüüıîã½êİ¯÷÷÷åÒ—úúúÿüüáË†óóö×¶Yøóäùùûøøúûûüüşüşşÿ+++şşşÿÿÿ                                                                                                                                    !ù     ,    c   ÿ€S‚*>R+:1‚S‹5S*R!,‹?0BS9%LR–šS¦§ª«!¥¨©«ƒE–3'7“S@<4¾4H4-AS!ËÌ	/¨§–±Ş°ŞšS2((#$‚S7 ñÃ2‹	   P( €@¢TÀ¦J€àÂi*aÃµXV4šbEéÖµ³€’ƒ)FP™¢ñ‘…'™¦8$ èƒ ‚"@Éám[7‰«
+@ÉğdÀƒURTŒ›’Ä@¨›â¨ÇS‚8¨¤DÎå%9£ìTà	Î),   ØÿLØÑ Ã>|€ñÀÂ ?5íH@À“:ÇbÀ-…DXQ£Å	SzH4eÆ->8¸1ˆĞ#%ˆ¬ ‚6@)` ”'È ˜`Ê‡İQ-EC*& <!N Â)egÛ~(ÄÁ
+”õiVÇ€ÁŠğè@afEºæ„©šµ 
+O`O¡|"¢H°Ä¢A
+ LÁ)@À%(QVG	2 <ğ¶ÙõC Px 8D„#2t0USğ°™d>La€A¸`ƒ'œ0Ãà`Ğà«µ&Å¤6Å hğHQØ%H	Q(°Èÿ†y"È)äEk5eQ¸H[™ qĞğ” Ş©h@&Ä6tPÌI‚€“£*²6….òB’‹T Eo‹|P6DqÖ8 €Ó¶á€A&L‚	#tÀC˜Rà‚4PÀA,¶°’Š‚è€BRàç1íQùJlS2„çQ–ì©ä{OHçÒdŒ ‰ğ à#O@1@5g™pC<ĞjŠÂ‹<Ä ´€À
+Rø`@ €¢&©ÌyŠl¹™2+6¶ö¹Ü#½
+RèÂİ&ÁBS”PÀ(Á YzR\ $!I9(p ?øPÄ$œ€„ÿª˜²Zn§¼”šºy
+Ò.®ì/ZP¤ÖÀË; O‚@H•&š•¤¢	¶r3v¤]·J
+©¢ÀšX\‚,À§ <‘Á#;(*HO M	hÀñLğ)„ ÂŞ1Ã.4<ãÑA$A‚	XŠ@w§,ğO èÁE¼ °,P@2z°@
+À@€Eñ„;< ArpMrRK0s4A Àk4 ‚²0‚@'¸0‚#ØRƒMÔ"ûms€€ê=’‚m†	 @–üÌßVÀ@Y+]ÖZgıDÖ	 th0ïKHÑŸ¼Qà²·%À,5¡ƒ	$Œ¦gcE‚p0„‚ Í&üj P–¹âÈÁ*Ğ "` Xà”PÀ ui€P–à€@	
+sŠDÁØ *€€É«!´q¨@§ .‚W å‡šˆ@Af8BC±0ÀØÁ %2NpÂ"şÄ*Zq
+°ÍP ÅD$†W£Ãh‰ˆ Ï€> ‘@  ;_+http://www.43things.com/images/nav/logo.gifYimage/gifÓOèGIF89a  æ  À¤FûùòÉ¬J©“EğçËÍ±VÊ¬KÌ°SË¯QÆ¯[Ë®PÊ¬LşşüÿÿÿÉ«JÊ­Nıûøöñâw~[ìâ¿Ä«Sëà½şıüÆ®[Å¬V¬–FıüøÍ±UÅ­X„…Yª”Eìá¾>WğèÌğèÍ«•EĞ¶a†‡\Ğ¶`äØ­¬ Y«–Fùöë-FO-d‰àĞŒ™ynlC„”w¥‘EL—ZnbOki„†Z.q¡/t¥øõëèÚ°Æ®YV…”­¢_ytEtƒiÑ·díåÊ¿¬^¢š[ Pqf†„8P`…‡¬—GÔ½uùõëŸF@}Ÿ×ÁzóíØ*h”8RW¶§_¾¢F©”EÅ©HâÒâÓŸœ‹E‚‹gÛÉŠ'DS?}¡Ä«TØÂ{……Xëà¾,m›Fòë×êà½Ë²^Mmy^ny]6y¥‘„EîæËº§V3c€x[|€YÑ·eÎµ_ÇªHÈªIÌ°TË®OÄ§GÇ©HÊ­MÁ¤FÆ¨H0w©Ì¯RÂ¥F7NÅ¨HÉ«IÃ¦G!ù     ,       ÿ€yy`.A	ˆˆ:[j0K‚y;Prrzz
+ssvv(2yZ<¡²²£z¦©~~BgDzÄµ¤·§©«½¾qqSFW¤¶\""nº&Îppuu>%
+¦§9U!$T^Xäxúe5§LüX°‹„ÄÕ©D_Ÿ‡l:¤R¢	¯fq´¨ã°ÁÃ>tèHè@p—7_RÖÑø‘NƒbJèrÑÏq6ÀAL$b
+•ĞÆ—Ÿ8oTàØçecbâH³§ê?ffUˆ$BJab€ «U£ĞX£dœCBE­Ş™K—.6ÁóNÜ=s<XÉ“yœ¬èa%C†#Fxğ e€åËbXy‘å¦/d@áCº´iÓE@±!( ;_)http://www.43things.com/images/nav/go.gifÓOP)ÿØÿà JFIF  H H  ÿághttp://ns.adobe.com/xap/1.0/ <?xpacket begin='ï»¿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CR"?>
+<x:xapmeta xmlns:x='adobe:ns:meta/' x:xaptk='XMP toolkit 2.8.2-33, framework 1.5'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+
+ <rdf:Description about='uuid:de931b94-7ae2-11d9-8060-9f8b928eeb16'
+  xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
+  <!-- pdf:Subject is aliased -->
+ </rdf:Description>
+
+ <rdf:Description about='uuid:de931b94-7ae2-11d9-8060-9f8b928eeb16'
+  xmlns:photoshop='http://ns.adobe.com/photoshop/1.0/'>
+  <!-- photoshop:Caption is aliased -->
+ </rdf:Description>
+
+ <rdf:Description about='uuid:de931b94-7ae2-11d9-8060-9f8b928eeb16'
+  xmlns:xap='http://ns.adobe.com/xap/1.0/'>
+  <!-- xap:Description is aliased -->
+ </rdf:Description>
+
+ <rdf:Description about='uuid:de931b94-7ae2-11d9-8060-9f8b928eeb16'
+  xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/'>
+  <xapMM:DocumentID>adobe:docid:photoshop:de931b92-7ae2-11d9-8060-9f8b928eeb16</xapMM:DocumentID>
+ </rdf:Description>
+
+ <rdf:Description about='uuid:de931b94-7ae2-11d9-8060-9f8b928eeb16'
+  xmlns:dc='http://purl.org/dc/elements/1.1/'>
+  <dc:description>
+   <rdf:Alt>
+    <rdf:li xml:lang='x-default'>                               </rdf:li>
+   </rdf:Alt>
+  </dc:description>
+ </rdf:Description>
+
+</rdf:RDF>
+</x:xapmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                       
+<?xpacket end='w'?>ÿá7Exif  II*          ’       ²    
+   ·              Á       É   (       1    Ñ   2    å          i‡    ü   ˆ                                  SONY CYBERSHOT H      H      Adobe Photoshop 7.0 2005:02:09 16:38:22     š‚    .  ‚    6  "ˆ       'ˆ             0220    >      R  ‘     ‘    f  ’
+    n  ’    v  ’       ’        	’       
+’    ~        0100             Ò       Ò   £       £       ¤        ¤        ¤        ¤            
+        
+   2005:01:17 15:27:46 2005:01:17 15:27:46           
+   0      P   
+                 Ö      Ş  (           æ      I      H      H      ÿØÿà JFIF  H H  ÿí Adobe_CM ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  € €" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? %
+P”(™˜…#¦¨µÓíIKİc(ªË¬Ñ•4½ñ©ÚÑ.YëWMŞC«¹¬ífĞ~önÜÕO®õÚÁö{÷1¦È®÷·ÜÏÜº‹V	'±Ÿ(N°´—½ÅËÄÌa³ÖÚÑô£éë±Ğö¢Âà(ºê,PçU`áìĞ®Ï£uu!sÚkéÙ öÍİ¹") ÛrBœ&„Â…8M	)„&!L„ĞŠBŒ"˜„”ÿ ÿĞP’”&!BÈ†Ù%Vw*ãŞ5U^öç¸C%Ñ¡=ƒ´ä$@Ô¤9™ı'(›œï³Üáæ7İ{¶ÅŸÿ 5ß¹…¹•YSİ´>°Iípw·{9h›M‘TİsˆcXÀI$¬®¶ŞwµŒY¿Y,¾HcƒF8±ùº÷6ÌŸ{œc}z+ÿ Âé¸2Ï!:TGtä€ˆ¹w:Ã~£ı^Ç§œu¦ö6Âü›^+fïô´cºªÿ ôjÍ¯ëNeMı&3^w:š±+çï±ßçªØ¬¯¨RÛàÌ¶46×Údslƒ¿{·ê+_óqÖHûv+fâ¼¸6'ÔÚÌw{”‰3&Š;ßà¿q×#Ê›¸Z°.Šú¡Äÿ JÂ'OøÌ‡>§³ÿ İ¬ßÔ°iÜãnüvKí„;è9íVÿ ğ¬Xöt®ŸŒçY“œ^Ã¨m8÷<Àş[ÙC®õÏ¦àWgO§<n[îh¶ÛGo¼z{3Ñgèÿ q:"}vc™‡GR›¨½›è±¶·Å„øÂ™\ÆLf--ë]
+ÒqGó­a>¥ŸfïôØ¯ú>§ú_ÑÜÊ¿F¯ôNº3HÅÊöåëµà Û òüËSéeºğ˜…(LBI`BbÈM	!ÿÑ’b1!BÈÔµûœªä1®†ÛfÚ×ƒ[5±öú»k¯óÛ¿İgü´æ3Ê­—[ß[TzµZË>GeƒşÚ±é¦7¡ê¸x5İ“™vKşÊÊ°YX`ôõy-ŸæŸÒÜıîõ3éşÔVbÔÆİé0zùµÍËw&ın{C™½ÍşköXÀq‹è²§;oÓ´9¤nS‡éïvÇÿ Ælÿ ‹M®§SêÙmîFã5¶²]UtYí~ŸÚ=eø!ˆŒ"#H8‘9O—Ó÷™=…³)íaÉxõ7¸KK\í­²ö½Ş‡»ı3·¢²«¡•:­×U°½¥¥…¥‡Øçú~ƒ/³o±ŸÒ“}•®¼XÜFĞ1{ë¹­½–ÙKëgéïıúOø5b¶ØãEBŠì­âŠÏJØÜÏSĞfCÛ}­eÈı©á#¦/"Ôeìf kßŒ	-aqaŒ¶Ë^ÏÓ~c}Ÿø
+ªìL+…8ıBìi-´9 <1Úûµ¹ûéÿ Àÿ à¿šF·‡[ëš\rjqxú6ò=?Íú3Óÿ ê"›&‹`¡€’`L=¯»/'eìfC]şóÿ œı‰_cö ÀÕË®øìpñú>F·M²Zæ¿×Æ¹Í5½£éWSÚ\íï£é×‘_ĞX]W§œÚú«©çuAßN§¤ïê}*ŸşµÙã×{±ªsª4¹º;%¦*5ë½ãvÛ=V~}Tµ£?Áÿ ƒYıS›¨{_µì0ÇYYÜÙhöX×Î¯ôõ¯ÌDä1Eù~+#†35}%¤¯£c¦g¡…^LCÌ¶ÖÏoÓÿ ;é«+ê»­£'+Ñlv–ûáıv¹« „ï&=zîÆ(LBHÿÒ’Iá(Q25r#zÄ·n¾ïo´Á×Áï¦ŠË¬õ-ÒªŒ™ÒO‚jàGVø6ÛK…`‚Ûµ‚ê™ô½JÙ[?sÑZLéuQu®}w¹¥íkZÖ€Ã;kcFÆ·ıá{ú÷¬\0K[Ã·íÑ¤ƒÅ-üÿ ë¦ËÆçÜëAñv[@ö eKøe“RtíÓéY˜]:‡XâCs=;7<êİ4vç'nÿ ¦Œèµ½–1õµô’Xàí¶íß¥ÿ ®ïYG1®{&ğP6e­hlÒ5øê$¨â­ıƒ‰ÒìÜ±æÏkäî?œÖ¸–ı²ú[­u¶Öö-ƒ¹Ì’Òû>ß¢²}Û®i D4O?÷ïå)S‹mE¬#ƒ¾Q&ºÚ9tÓğO•ÓßKİmm{Z6¹‡ùÈpúGÔÍØï ë™{?àwª[ºÖ½Î`°´º–±ÏgÒİk)÷ı;jıø?ø%mİO«b	±Ê§¼{]¡şzj²:_WÜq,ôò;è|‚	ö¹Æ¯Íwü+?é¤dÊGl‚ûH|ñú¹õ´fTKKÀàÍÑ¸1Û›eGÓÙc77ÿ R-(T²±²)Ék‹6:»;¾‘kŒÏÍ»›WˆN€«/Óä·)²%¹õ’—ïß1!1
+P™9‰ÿÓ,(»@J™LD…#EÚ’Ts½SĞò™I"Â×G?Gÿ "‰c]3-v¬p‡:¤ìåbôZÃk.y}mhôãAÛU«[]@£Û*7ÑÔ†3+Â´WéÕ lïˆşrÍß£şª½Š\p¨nNã’ÊÏÚ¬&eÿ ›éÂd‰:Øòg…
+'^­Ê·ZÎ4ìªgå7…ÏcŞ$µ‚]¦§Ek§=ÁºhJ]#ŞöË‡’e²QèÖéQ¹¸Üjk^æCËÈİém,o¹­únoèáU¶\MôüÏäAÅc1†Æµ­oî´?œ¬l6™à"uØR"ÜßÑO>Ò%×1]J›è{¨sÜĞla‚5Ú`…Ö<5ÊÍÊh~×F­ppïÂ14¶q°Ã=ö0aõFúµ¸–S˜İ%ß¸ïô7ÿ #èZ®{I˜;‰(•Ü™oµõÇ´].EaqcwÛDHÊ’Ø²C„6*„ÊE1OaÿÔ9L”‚‰‘@B®^%Š™@¤.XìíTä6·8ı¢Òe§óNŸˆèåÑ¸‡[âˆ[P7˜5ÙÎİ‚·mÛ*pp2+6£Íá„;Mla Gò·mú(Ï»8³Ó6z¡üïiş·ô¥×ÑzÏªà%\,`¼<}MuVá¡à«ÆÍÍø$$wLåQpÓ^êİ†e øÏÁR½ásœa­— %¥±­¦¦[cX-;j Içke#N#H\'XÉwPÌ¬ïÆ­¡µï=ĞyË«èWÙL¨ÚKŸY5—»Ràß¢gú§j±ğâÕÉ>#àéŠr™ÿÕ°SŠADÈ³„‚®!_U²«ƒ¸|Ò)pí¦OœòFÉê'ÍÎ·ı 4#¸ñQÌufÅ-Ã]o}’~‹‹u#åVYÔ¬kGè•;L×F1•¥º'S«˜Ã!¢v0Çj>nÜ›£0ªÙ¹®s¾Ïciv€¼ÿ ~*Ãú0g·*/¶Â=Â|•[ŞàØú3ÙURK2 ;o>+Ÿë™vYƒcfœÑrà´2nÙ^Ñó+«Ù8Û{¹íäwèk!æÅÔO“MÄêH“áæµ>¯uƒ‹‘öKİúµÎĞŸÌ°é¸!ÿ áUÄ´ü@wùÀ?şü€t~jÑÕ©o¤Aƒ¡	—…×ºBšl¥¿A–·|y5Ú=\¯ë~x YE/ãsOıS“h¦ßÿÖ1NINl‹¦{CšAN˜ù¤§>Ö:·Aã±Us]Xï¾Ã´RÒíÜÿ cûjßQÍÆ¦¢ûlkŞ^|u¿¼åÆõN³vy5´±AÒ¾î#è¾ßü‚7ä*ózl¼\š}N;‘İ§÷?5^¯-­ #ºóÚr/Çy},'éÁş³WAş¡u-²›Ã˜ñ1 #Ë„Écáë»,2™µz{3¨/y  ²-Ë¼ÚNÚÇé*µx—ØéºÁ?Ê—Ñ­·§Òœ&ãâıÊ±íL4¾Éh>×ä¸ldè|~/­‚ÌŠè'V·{‡wÑÿ  º‡2º*sëh%s¾á¹q6İnM®¾ÓºËL“ş¿º¤Ä,ß@Å˜Ôk»'¿@I rñ)Ì½ßÉ	û|†»æ
+@b4I.?%/2’ŸÿÙÿí:Photoshop 3.0 8BIM     +   x                                 8BIM%     û	¦½L*6âÌW©¬…8BIMí      H     H    8BIM&               ?€  8BIM        8BIM        8BIMó     	         8BIM
+       8BIM'     
+        8BIMõ     H /ff  lff       /ff  ¡™š       2    Z         5    -        8BIMø     p  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè  8BIM          @  @    8BIM         8BIM    E             Ò  Ò    D S C 0 2 9 9 8                                Ò  Ò                                            null      boundsObjc         Rct1       Top long        Leftlong        Btomlong  Ò    Rghtlong  Ò   slicesVlLs   Objc        slice      sliceIDlong       groupIDlong       originenum   ESliceOrigin   autoGenerated    Typeenum   
+ESliceType    Img    boundsObjc         Rct1       Top long        Leftlong        Btomlong  Ò    Rghtlong  Ò   urlTEXT         nullTEXT         MsgeTEXT        altTagTEXT        cellTextIsHTMLbool   cellTextTEXT        	horzAlignenum   ESliceHorzAlign   default   	vertAlignenum   ESliceVertAlign   default   bgColorTypeenum   ESliceBGColorType    None   	topOutsetlong       
+leftOutsetlong       bottomOutsetlong       rightOutsetlong     8BIM        8BIM    e      €   €  €  À   I  ÿØÿà JFIF  H H  ÿí Adobe_CM ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  € €" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? %
+P”(™˜…#¦¨µÓíIKİc(ªË¬Ñ•4½ñ©ÚÑ.YëWMŞC«¹¬ífĞ~önÜÕO®õÚÁö{÷1¦È®÷·ÜÏÜº‹V	'±Ÿ(N°´—½ÅËÄÌa³ÖÚÑô£éë±Ğö¢Âà(ºê,PçU`áìĞ®Ï£uu!sÚkéÙ öÍİ¹") ÛrBœ&„Â…8M	)„&!L„ĞŠBŒ"˜„”ÿ ÿĞP’”&!BÈ†Ù%Vw*ãŞ5U^öç¸C%Ñ¡=ƒ´ä$@Ô¤9™ı'(›œï³Üáæ7İ{¶ÅŸÿ 5ß¹…¹•YSİ´>°Iípw·{9h›M‘TİsˆcXÀI$¬®¶ŞwµŒY¿Y,¾HcƒF8±ùº÷6ÌŸ{œc}z+ÿ Âé¸2Ï!:TGtä€ˆ¹w:Ã~£ı^Ç§œu¦ö6Âü›^+fïô´cºªÿ ôjÍ¯ëNeMı&3^w:š±+çï±ßçªØ¬¯¨RÛàÌ¶46×Údslƒ¿{·ê+_óqÖHûv+fâ¼¸6'ÔÚÌw{”‰3&Š;ßà¿q×#Ê›¸Z°.Šú¡Äÿ JÂ'OøÌ‡>§³ÿ İ¬ßÔ°iÜãnüvKí„;è9íVÿ ğ¬Xöt®ŸŒçY“œ^Ã¨m8÷<Àş[ÙC®õÏ¦àWgO§<n[îh¶ÛGo¼z{3Ñgèÿ q:"}vc™‡GR›¨½›è±¶·Å„øÂ™\ÆLf--ë]
+ÒqGó­a>¥ŸfïôØ¯ú>§ú_ÑÜÊ¿F¯ôNº3HÅÊöåëµà Û òüËSéeºğ˜…(LBI`BbÈM	!ÿÑ’b1!BÈÔµûœªä1®†ÛfÚ×ƒ[5±öú»k¯óÛ¿İgü´æ3Ê­—[ß[TzµZË>GeƒşÚ±é¦7¡ê¸x5İ“™vKşÊÊ°YX`ôõy-ŸæŸÒÜıîõ3éşÔVbÔÆİé0zùµÍËw&ın{C™½ÍşköXÀq‹è²§;oÓ´9¤nS‡éïvÇÿ Ælÿ ‹M®§SêÙmîFã5¶²]UtYí~ŸÚ=eø!ˆŒ"#H8‘9O—Ó÷™=…³)íaÉxõ7¸KK\í­²ö½Ş‡»ı3·¢²«¡•:­×U°½¥¥…¥‡Øçú~ƒ/³o±ŸÒ“}•®¼XÜFĞ1{ë¹­½–ÙKëgéïıúOø5b¶ØãEBŠì­âŠÏJØÜÏSĞfCÛ}­eÈı©á#¦/"Ôeìf kßŒ	-aqaŒ¶Ë^ÏÓ~c}Ÿø
+ªìL+…8ıBìi-´9 <1Úûµ¹ûéÿ Àÿ à¿šF·‡[ëš\rjqxú6ò=?Íú3Óÿ ê"›&‹`¡€’`L=¯»/'eìfC]şóÿ œı‰_cö ÀÕË®øìpñú>F·M²Zæ¿×Æ¹Í5½£éWSÚ\íï£é×‘_ĞX]W§œÚú«©çuAßN§¤ïê}*ŸşµÙã×{±ªsª4¹º;%¦*5ë½ãvÛ=V~}Tµ£?Áÿ ƒYıS›¨{_µì0ÇYYÜÙhöX×Î¯ôõ¯ÌDä1Eù~+#†35}%¤¯£c¦g¡…^LCÌ¶ÖÏoÓÿ ;é«+ê»­£'+Ñlv–ûáıv¹« „ï&=zîÆ(LBHÿÒ’Iá(Q25r#zÄ·n¾ïo´Á×Áï¦ŠË¬õ-ÒªŒ™ÒO‚jàGVø6ÛK…`‚Ûµ‚ê™ô½JÙ[?sÑZLéuQu®}w¹¥íkZÖ€Ã;kcFÆ·ıá{ú÷¬\0K[Ã·íÑ¤ƒÅ-üÿ ë¦ËÆçÜëAñv[@ö eKøe“RtíÓéY˜]:‡XâCs=;7<êİ4vç'nÿ ¦Œèµ½–1õµô’Xàí¶íß¥ÿ ®ïYG1®{&ğP6e­hlÒ5øê$¨â­ıƒ‰ÒìÜ±æÏkäî?œÖ¸–ı²ú[­u¶Öö-ƒ¹Ì’Òû>ß¢²}Û®i D4O?÷ïå)S‹mE¬#ƒ¾Q&ºÚ9tÓğO•ÓßKİmm{Z6¹‡ùÈpúGÔÍØï ë™{?àwª[ºÖ½Î`°´º–±ÏgÒİk)÷ı;jıø?ø%mİO«b	±Ê§¼{]¡şzj²:_WÜq,ôò;è|‚	ö¹Æ¯Íwü+?é¤dÊGl‚ûH|ñú¹õ´fTKKÀàÍÑ¸1Û›eGÓÙc77ÿ R-(T²±²)Ék‹6:»;¾‘kŒÏÍ»›WˆN€«/Óä·)²%¹õ’—ïß1!1
+P™9‰ÿÓ,(»@J™LD…#EÚ’Ts½SĞò™I"Â×G?Gÿ "‰c]3-v¬p‡:¤ìåbôZÃk.y}mhôãAÛU«[]@£Û*7ÑÔ†3+Â´WéÕ lïˆşrÍß£şª½Š\p¨nNã’ÊÏÚ¬&eÿ ›éÂd‰:Øòg…
+'^­Ê·ZÎ4ìªgå7…ÏcŞ$µ‚]¦§Ek§=ÁºhJ]#ŞöË‡’e²QèÖéQ¹¸Üjk^æCËÈİém,o¹­únoèáU¶\MôüÏäAÅc1†Æµ­oî´?œ¬l6™à"uØR"ÜßÑO>Ò%×1]J›è{¨sÜĞla‚5Ú`…Ö<5ÊÍÊh~×F­ppïÂ14¶q°Ã=ö0aõFúµ¸–S˜İ%ß¸ïô7ÿ #èZ®{I˜;‰(•Ü™oµõÇ´].EaqcwÛDHÊ’Ø²C„6*„ÊE1OaÿÔ9L”‚‰‘@B®^%Š™@¤.XìíTä6·8ı¢Òe§óNŸˆèåÑ¸‡[âˆ[P7˜5ÙÎİ‚·mÛ*pp2+6£Íá„;Mla Gò·mú(Ï»8³Ó6z¡üïiş·ô¥×ÑzÏªà%\,`¼<}MuVá¡à«ÆÍÍø$$wLåQpÓ^êİ†e øÏÁR½ásœa­— %¥±­¦¦[cX-;j Içke#N#H\'XÉwPÌ¬ïÆ­¡µï=ĞyË«èWÙL¨ÚKŸY5—»Ràß¢gú§j±ğâÕÉ>#àéŠr™ÿÕ°SŠADÈ³„‚®!_U²«ƒ¸|Ò)pí¦OœòFÉê'ÍÎ·ı 4#¸ñQÌufÅ-Ã]o}’~‹‹u#åVYÔ¬kGè•;L×F1•¥º'S«˜Ã!¢v0Çj>nÜ›£0ªÙ¹®s¾Ïciv€¼ÿ ~*Ãú0g·*/¶Â=Â|•[ŞàØú3ÙURK2 ;o>+Ÿë™vYƒcfœÑrà´2nÙ^Ñó+«Ù8Û{¹íäwèk!æÅÔO“MÄêH“áæµ>¯uƒ‹‘öKİúµÎĞŸÌ°é¸!ÿ áUÄ´ü@wùÀ?şü€t~jÑÕ©o¤Aƒ¡	—…×ºBšl¥¿A–·|y5Ú=\¯ë~x YE/ãsOıS“h¦ßÿÖ1NINl‹¦{CšAN˜ù¤§>Ö:·Aã±Us]Xï¾Ã´RÒíÜÿ cûjßQÍÆ¦¢ûlkŞ^|u¿¼åÆõN³vy5´±AÒ¾î#è¾ßü‚7ä*ózl¼\š}N;‘İ§÷?5^¯-­ #ºóÚr/Çy},'éÁş³WAş¡u-²›Ã˜ñ1 #Ë„Écáë»,2™µz{3¨/y  ²-Ë¼ÚNÚÇé*µx—ØéºÁ?Ê—Ñ­·§Òœ&ãâıÊ±íL4¾Éh>×ä¸ldè|~/­‚ÌŠè'V·{‡wÑÿ  º‡2º*sëh%s¾á¹q6İnM®¾ÓºËL“ş¿º¤Ä,ß@Å˜Ôk»'¿@I rñ)Ì½ßÉ	û|†»æ
+@b4I.?%/2’ŸÿÙ 8BIM!     U       A d o b e   P h o t o s h o p    A d o b e   P h o t o s h o p   7 . 0    8BIM        ÿâXICC_PROFILE   HLino  mntrRGB XYZ Î  	  1  acspMSFT    IEC sRGB              öÖ     Ó-HP                                                 cprt  P   3desc  „   lwtpt  ğ   bkpt     rXYZ     gXYZ  ,   bXYZ  @   dmnd  T   pdmdd  Ä   ˆvued  L   †view  Ô   $lumi  ø   meas     $tech  0   rTRC  <  gTRC  <  bTRC  <  text    Copyright (c) 1998 Hewlett-Packard Company  desc       sRGB IEC61966-2.1           sRGB IEC61966-2.1                                                  XYZ       óQ    ÌXYZ                 XYZ       o¢  8õ  XYZ       b™  ·…  ÚXYZ       $   „  ¶Ïdesc       IEC http://www.iec.ch           IEC http://www.iec.ch                                              desc       .IEC 61966-2.1 Default RGB colour space - sRGB           .IEC 61966-2.1 Default RGB colour space - sRGB                      desc       ,Reference Viewing Condition in IEC61966-2.1           ,Reference Viewing Condition in IEC61966-2.1                          view     ¤ş _. Ï íÌ  \   XYZ      L	V P   Wçmeas                            sig     CRT curv           
+     # ( - 2 7 ; @ E J O T Y ^ c h m r w |  † ‹  • š Ÿ ¤ © ® ² · ¼ Á Æ Ë Ğ Õ Û à å ë ğ ö û%+28>ELRY`gnu|ƒ‹’š¡©±¹ÁÉÑÙáéòú&/8AKT]gqz„˜¢¬¶ÁËÕàëõ !-8COZfr~Š–¢®ºÇÓàìù -;HUcq~Œš¨¶ÄÓáğş+:IXgw†–¦µÅÕåö'7HYj{Œ¯ÀÑãõ+=Oat†™¬¿Òåø2FZn‚–ª¾Òçû		%	:	O	d	y		¤	º	Ï	å	û
+
+'
+=
+T
+j
+
+˜
+®
+Å
+Ü
+ó"9Qi€˜°Èáù*C\u§ÀÙó&@Zt©ÃŞø.Id›¶Òî	%A^z–³Ïì	&Ca~›¹×õ1OmŒªÉè&Ed„£Ãã#Ccƒ¤Åå'Ij‹­Îğ4Vx›½à&Il²ÖúAe‰®Ò÷@eŠ¯Õú Ek‘·İ*QwÅì;cŠ²Ú*R{£ÌõGp™Ãì@j”¾é>i”¿ê  A l ˜ Ä ğ!!H!u!¡!Î!û"'"U"‚"¯"İ#
+#8#f#”#Â#ğ$$M$|$«$Ú%	%8%h%—%Ç%÷&'&W&‡&·&è''I'z'«'Ü((?(q(¢(Ô))8)k))Ğ**5*h*›*Ï++6+i++Ñ,,9,n,¢,×--A-v-«-á..L.‚.·.î/$/Z/‘/Ç/ş050l0¤0Û11J1‚1º1ò2*2c2›2Ô33F33¸3ñ4+4e44Ø55M5‡5Â5ı676r6®6é7$7`7œ7×88P8Œ8È99B99¼9ù:6:t:²:ï;-;k;ª;è<'<e<¤<ã="=a=¡=à> >`> >à?!?a?¢?â@#@d@¦@çA)AjA¬AîB0BrBµB÷C:C}CÀDDGDŠDÎEEUEšEŞF"FgF«FğG5G{GÀHHKH‘H×IIcI©IğJ7J}JÄKKSKšKâL*LrLºMMJM“MÜN%NnN·O OIO“OİP'PqP»QQPQ›QæR1R|RÇSS_SªSöTBTTÛU(UuUÂVV\V©V÷WDW’WàX/X}XËYYiY¸ZZVZ¦Zõ[E[•[å\5\†\Ö]']x]É^^l^½__a_³``W`ª`üaOa¢aõbIbœbğcCc—cëd@d”dée=e’eçf=f’fèg=g“géh?h–hìiCišiñjHjŸj÷kOk§kÿlWl¯mm`m¹nnknÄooxoÑp+p†pàq:q•qğrKr¦ss]s¸ttptÌu(u…uáv>v›vøwVw³xxnxÌy*y‰yçzFz¥{{c{Â|!||á}A}¡~~b~Â#„å€G€¨
+kÍ‚0‚’‚ôƒWƒº„„€„ã…G…«††r†×‡;‡ŸˆˆiˆÎ‰3‰™‰şŠdŠÊ‹0‹–‹üŒcŒÊ1˜ÿfÎ6nÖ‘?‘¨’’z’ã“M“¶” ”Š”ô•_•É–4–Ÿ—
+—u—à˜L˜¸™$™™üšhšÕ›B›¯œœ‰œ÷dÒ@®ŸŸ‹Ÿú i Ø¡G¡¶¢&¢–££v£æ¤V¤Ç¥8¥©¦¦‹¦ı§n§à¨R¨Ä©7©©ªª««u«é¬\¬Ğ­D­¸®-®¡¯¯‹° °u°ê±`±Ö²K²Â³8³®´%´œµµŠ¶¶y¶ğ·h·à¸Y¸Ñ¹J¹Âº;ºµ».»§¼!¼›½½¾
+¾„¾ÿ¿z¿õÀpÀìÁgÁãÂ_ÂÛÃXÃÔÄQÄÎÅKÅÈÆFÆÃÇAÇ¿È=È¼É:É¹Ê8Ê·Ë6Ë¶Ì5ÌµÍ5ÍµÎ6Î¶Ï7Ï¸Ğ9ĞºÑ<Ñ¾Ò?ÒÁÓDÓÆÔIÔËÕNÕÑÖUÖØ×\×àØdØèÙlÙñÚvÚûÛ€ÜÜŠİİ–ŞŞ¢ß)ß¯à6à½áDáÌâSâÛãcãëäsäüå„ææ–çç©è2è¼éFéĞê[êåëpëûì†ííœî(î´ï@ïÌğXğåñrñÿòŒóó§ô4ôÂõPõŞömöû÷Šøø¨ù8ùÇúWúçûwüü˜ı)ıºşKşÜÿmÿÿÿÛ C 	
+	
+	
+
+
+
+ÿÛ C
+ÿÀ  K K" ÿÄ             ÿÄ 8 	     !1"AQa2q#$RÁr3Bc‚‘¡ÑáğÿÄ              ÿÄ +          1!Qaq‘±Áğ"2A¡ÿÚ   ?  !×‰UQK6 õ cÀí¬»ÄÉ	úC#×M}“0|Nñ*—bméjàjÇ)•²uã¬cŒã×I·ø¦¹C\‰ºíÔ•4Œ|ÒR)ŠTø$†Ç·¾˜%ì›Fè¦Æf«¥˜.éüÄ®}Pğyõàûmí‡á–È¦Ü2o!zŞ·ÊhÛe¥P£4 ÔÔ(aÔ`÷”54Ä9¤îÜôP’9óoŞ¨7M¢çdj)*W(ã‚¨#ĞƒÁºĞ{köÇÓìÚU¡´lİ·E@®dzH¥¬`…ˆÎêç·|ŒúiÕhŞ’î¯Y¸ì;bøm¶ÈÕ«â’Ëç«é~Ÿ¬ Häc“ª£{´„Dô³BÛÈ,µZ-C$:§µ÷¥“{R™¶ítU=ù‘,‘©#÷í­‡‹ãE„İe¼„À3ÛZO¡1÷Ôš.«(Ö@>Ú¾V´³4Q’{ü²çB÷¨V’ªÌxçKİ‹#Y”½’£óªY^n/4rHH¡@N<îÁÃƒOïªVÏh,×ÊÁy¹«¥&J×ª•bú',«ä¦YNnc[6Ùk¸ÒÑÓ´‚¦G8Ûê7[ØÁíÔÇ#÷'¶˜¶oo5kIlbyhKÇõ/¦€·PU‡P9ÈÉ'9<êšZxéÚàÁ÷½ÓˆÈi”‹Œ^şMó$vA+·(íöÖcKf†3ĞMRSÒFÎª¤8W¬‚Jœr4)¸ü%šªànöMÍ¹-W V†v«50åä/Oö³+Î9ø:è8|2»ÉK*UÔ¤­4q«FÕjør ¯`§#ç>úÈ¼xqxŠÜ´‰F¢	ˆâ”–ê#¨}28 –oOÛDµå¸ôP{iåØÛÅÀÿ uÈ>!mÍÇ²®°ïZiè®‘I›‹P7ôÕ£¨ƒ0_N¢§­ïæ¤?6®á¦İÛr‚ïoâØCôèİ™OÈ`GÛSn«¹Ó5M;FÓ«$'Kôyz¿Jã¸  |Ş¹Àğ{o>Ö³\-BS54-1?î#äûN}C«…F§épí×ß¼!&¡øQëi¿1Ë‘Ûb2.6ñF.œvÔu}ãÔ=W J(x´/yş¢ãÑÏ!~ú2’>t#v¢’’±œŒn¥mü#•›tñz-¯~›km*Z ÔR²²:pï4¤u¹à(9>ø×E4UŞ¢Wp¬•ˆêé’v8>ØÎ4}K´SWÖíXm²WÖH²ºÖ†é,Tã¤ı#×ÓFÖy"†÷JÉ2ùÕÀàgşùÒú‰ ;'¼:!§qrzz¯1Ñ×ÔV%?ç#ŒÊB€®G¡9=µ¿Cm¸Zæu¶^îQ±93—Aÿ )Êãí¬míáõ=öïoºT,°şJuš%b«Ô¾şàúÄq¢Z
+XçV–Ş©J922¨ØòuYÅ $WÊ4¸—7d¿¼Im°ôÑx›GùëmDŸN;Íx–o©ı@üÓYÖ{JS\§¯·VÇp¶]#D#ÊYIàú†Áì}¾5¡â]¦šÿ BhëHªÊëÎP=øÕ[¶+<˜·«,U©×(<>ŒG÷îã9õÀÁpL	Ãt¶¦•Ícô6ØWäP˜ùôÕÇPu''MyÈ<ÃX»¡Oåã pm±ËT»RşnŠDÇ˜ßCpŠAĞt´r/"Á¾;ñ­jè­7zG¹ıgR‹Ò±w9ïÿ ÜcçXRÈĞ39\äk*ív¬x‚4f?˜w(¸ã¹Ò¹Ùõ÷ZN01iü‚˜×À×8aZ
+zØÕ[¬¬,¥=0F·èjákDf%U~Ÿ64ºÛw;¥\J«r·$AzpôåÙÒAû^{ËÚhdr,³³œ¸SŸMlÒS7ÜlT»–tVyœ…@§’}´¡Ùş:5ïÅÛpÑAü§Ñ§¬F%šeRKg±RF8ø9ÕOw­AÛ÷8r ÑÈ¤!Çu#\ãú¯oÜ©«m5U4¢Hä^ ÿ ÷:oÃ`yı,Ï©"ÑŒ®ÿ ~5?ûÒ³gş#6­şÓß+ã´\U@¨‚¡RØä«’sÜçãE‘ø›´¦@é¹¬]-Û5ñó¦ZHÊG¨sL¼ùõï#UÏëÔ£üh`HGsÚ3šˆ@úN|ÃØé9wñ;nØ7¢ÙnµAãëyz	ÿ fÇĞ‘Ï=¾ú-üFne×Ëi«’šDU
+ÈGQÁÇñë®ÚYJÌìü³1É$÷']l˜XRecàp-]ùkñ3oÒR$Ô†Sõ#í¡mË¿£ºÕ7ğZyšÆ#4%¤or=ÉÒïÂÛe~Ì¶ÔVRÁ,Â,u´c$@Ï¾›¶ˆ£†D1Ç^ÁP >ÚE+ZÒZ‘“É#A'b^1«vÛve†®ç8XàÏ› rÇÜ÷Ò‚¶¡ª&PêÀ-ñÆš¿‰‘ñn$zgş#éMØó3œŸ¾´|9°Íf8›¯PG%ÕĞƒŸQí¯J€(Ë±×˜†ZR{õc_ˆbÓ%ËÿÙ_5http://images.43things.com/profile/00/00/0e/3815l.jpgZimage/jpegÓOWÿØÿà JFIF  H H  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ   " ÿÄ               ÿÄ 0 		         !1A"QRSaq‘234¡±ÁÿÄ                ÿÄ             A!12ÿÚ   ? é²¢ĞB ¹áËrLeã4ì“˜²­º®¸×Ä:*è(&;SÆÂ˜Z¸vå”²úëK¡.¬¤;
+’ÓÃ}t£V8Ân­‹¶ê¸y	y\ê–Á<"L¥$Ti"t­25.´&Mvcğ[»ç.Üµ¿·y·YD-kË‰S™ˆË":ôè¿²ğúS®nÕyn´ºãŒ!µ-/XY”À@'^ºNiÎøúšv9Z¿Î4èa«Ä-YIYâirUÙ!¾ıUCg”Eê-­næÑ+IqL¸— œàIÓzÔ'ãW‘¨­ş”ùÿ jr:+Å{²½­¢m8ƒD¥²I™’I“û&¥æŞï¿52¾R~ô2…ĞjÏÿÙ_6http://images.43things.com/profile/00/00/31/12689s.jpgÓ!"OËÿØÿà JFIF  H H  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ   " ÿÄ               ÿÄ 4 	        !16AQUaqu"$7R‘³Ñs’“¡±ÿÄ              ÿÄ $           !1Qaq‘2AÿÚ   ? ­˜3¥^D¶ªr£­)}ÇDx‹Jm² O´Mî. êñÓ´“&ZuWv•¼5!¹-"ûkT€MÔŸ,>Ï¯Ã©A©	ğ£9.ÇbF½¢Ğ+[Ø‘{ùaj¥ÎiêÃÏ¡(c”ˆY!d!GT£…•Çùë_L4˜É¢võõû;Vœ[‹P'q$œŸÉÉã4?15Z3Íë”óUPÒÜf6‡uIE’
+MÂt$Ûë®ó¥œ»ÍÀÆ4:}
+VlïÌ®›FpmnÈUßÅkñÖÿ ×nóy”û‰Ÿª¿8H_[¶4<DpÕ;VßP+'jYŠÓ2o†ê‹&«!‡~P°n…Üq©Ë¯M­˜²ö¤-M!ÃÀ¸ì8è-¯˜ÁªwBê¨çÜ«“:7šıb_øœ„ìÜto…ÂõğJÇÖŸ>… ¸Å}oïKŒ Ú£‹¶Q§QÃW Çn34üWcôÓö± `ûB“ŒÎO4…ÛzT’8¯ÿÙ_5http://images.43things.com/profile/00/00/15/5456s.jpgÔ$%&'(_WebResourceTextEncodingNameUUTF-8O,²<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML><HEAD><TITLE>43 Things</TITLE><LINK rel="Shortcut Icon" href="/favicon.ico"><LINK rel="Stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen">
+
+
+
+
+<SCRIPT language="JavaScript" type="text/javascript" src="/javascripts/scripts.js"></SCRIPT><SCRIPT language="JavaScript" type="text/javascript" src="/javascripts/prototype.js"></SCRIPT>
+
+
+
+
+</HEAD><BODY class="perma" onload="toggleCommentBox(0); return false;">
+
+
+
+<DIV id="container">
+<FORM method="get" action="/search/query"><DIV id="header">
+<A href="/"><IMG id="logo" src="/images/nav/logo.gif" width="99" height="19" alt="43 Things"></A>
+<P>
+
+
+<A href="/">Home</A> | 
+<A href="/zeitgeist">Zeitgeist</A> | 
+
+<A href="/twinkler/list">Your 0 Things
+</A> |
+<A href="http://www.43things.com/xs?mid=1">Log In</A>
+
+
+| 
+
+<INPUT name="q" size="20" type="text" value="Search" onclick="this.value == 'Search' ? this.value = '' : true" style="vertical-align:middle;">
+
+<INPUT type="image" src="/images/nav/go.gif" style="vertical-align:middle;" alt="Go">
+</P>
+
+
+
+</DIV>
+
+</FORM>
+
+
+<DIV id="page-body">
+<SCRIPT language="javascript" type="text/javascript">
+//<!--
+// For opening and closing the comment box.
+var last_id = null;
+var showlogin = "show-anonymous-form"
+var hidelogin = "add-anonymous-comment"
+
+function toggleCommentBox(id)  {
+    // If we're now replying to a new comment, close the old comment box
+    if (last_id != null && last_id != id) {
+        document.getElementById('commentbox_' + last_id +
+'_more').style.display = 'none'
+        document.getElementById('commentbox_' + last_id +
+'_less').style.display = 'inline'
+        
+                 // Delete the old comment form
+                 var old_commentbox = document.getElementById('commentbox_' +
+last_id + '_form')
+                 old_commentbox.innerHTML = null                 
+    }
+    // Close
+    if (document.getElementById('commentbox_' + id + '_more').style.display ==
+'block') {
+        document.getElementById('commentbox_' + id + '_more').style.display =
+'none'
+        document.getElementById('commentbox_' + id + '_less').style.display =
+'block'
+        
+    // Open
+    } else {
+
+        document.getElementById('commentbox_' + id + '_more').style.display =
+'block'
+        document.getElementById('commentbox_' + id + '_less').style.display =
+'none'
+                 
+        // Render the comment form
+        var commentbox = document.getElementById('commentbox_' + id + '_form')
+
+        var commentform = ('<div class="add-comment">\n\n\n\n\n\n\n\n\n\n\n\n<div style="clear:both;">\n<strong>Log in or create an account to comment on entries...</strong>\n<form method="post" action="/auth/authenticate" enctype="multipart/form-data">\n<input type="hidden" name="redirect_controller" value="entries" />\n<input type="hidden" name="redirect_action" value="view" />\n<input type="hidden" name="redirect_id" value="69295" />\n<input type="hidden" name="mid" value="1" />\n\n<input type="hidden" id="comment_comment_id" name="comment[comment_id]" value="" />\n\n<p>Your username:<br />\n<input id="person_username" maxsize="50" name="person[username]" size="30" type="text" value="" /></p>\n\n<p>Your password:<br />\n<input id="person_password" maxsize="50" name="person[password]" size="30" type="password" value="" /><br />\n<input type="checkbox" name="remember_me" value="1" /> Remember me on this computer\n</p>\n\n<input type="submit" value="Log In" /> \n<span>(or <a href="#" class="cancel" onclick="toggleCommentBox(); return false;"> Cancel</a>)\n\n<p>Or, <a href="/auth?redirect_id=69295&amp;redirect_controller=entries&amp;redirect_action=view">Create a new account</a></p>\n</form>\n</div>\n\n\n\n</div>')
+        
+        if (id != 0) {
+            commentbox.innerHTML = ('<div class="thread">' + commentform +
+'</div>')
+        } else { 
+            commentbox.innerHTML = commentform
+        }
+
+        // Make sure the comment's comment id is set correctly
+        var reply_to_comment = document.getElementById('comment_comment_id')
+        reply_to_comment.value = id
+                 
+        // Remember what the last comment box was, so we can close it later
+        last_id = id
+
+    }
+    return false;
+}
+//-->
+</SCRIPT>
+
+<A href="/people/view/yakuza"><IMG src="http://images.43things.com/profile/00/00/0e/3815l.jpg" id="person" height="75" width="75"></A>
+<H2 id="wantsto">
+
+  <A href="/people/view/yakuza">Chuq</A> in <STRONG>Washington</STRONG> has 42 things including...
+
+
+</H2>
+<H1 id="goaltitle"><A href="/things/view/148862">Use and Promote TiddlyWiki</A></H1>
+
+<DIV id="main">
+<DIV class="entry">
+
+<H5><A href="/entries/view/69295">Yeah TiddlyWiki is sweet!</A>
+Â â€”Â 3 hours ago
+
+</H5>
+
+
+<DIV class="entrybody"><P>I was using <A href="www.instiki.org">Instiki</A> for a few days, and wasnâ€™t very happy with it.  <A href="http://tiddlywiki.com">TiddlyWiki</A> is great.</P>
+</DIV>
+
+<P class="entry-metadata"><SPAN>May 18, 08:14AM PDT</SPAN> 
+
+</P>
+</DIV>
+
+
+
+<A name="comments"></A>
+  <H3>Add the first comment:</H3>
+
+<DIV id="commentbox_0_less" style="display: none; "><A href="#" onclick="toggleCommentBox(0); return false;" class="admin">Add a comment</A></DIV>
+<DIV class="add-comment" id="commentbox_0_more" style="display: block; "><DIV id="commentbox_0_form"><DIV class="add-comment">
+
+
+
+
+
+
+
+
+
+
+
+<DIV style="clear:both;"><STRONG>Log in or create an account to comment on entries...</STRONG>
+<FORM method="post" action="/auth/authenticate" enctype="multipart/form-data"><INPUT type="hidden" name="redirect_controller" value="entries">
+<INPUT type="hidden" name="redirect_action" value="view">
+<INPUT type="hidden" name="redirect_id" value="69295">
+<INPUT type="hidden" name="mid" value="1">
+
+<INPUT type="hidden" id="comment_comment_id" name="comment[comment_id]" value="0">
+
+<P>Your username:<BR>
+<INPUT id="person_username" maxsize="50" name="person[username]" size="30" type="text" value=""></P>
+
+<P>Your password:<BR>
+<INPUT id="person_password" maxsize="50" name="person[password]" size="30" type="password" value=""><BR>
+<INPUT type="checkbox" name="remember_me" value="1"> Remember me on this computer
+</P>
+
+<INPUT type="submit" value="Log In"> 
+<SPAN>(or <A href="#" class="cancel" onclick="toggleCommentBox(); return false;"> Cancel</A>)
+
+<P>Or, <A href="/auth?redirect_id=69295&redirect_controller=entries&redirect_action=view">Create a new account</A></P>
+</SPAN></FORM>
+</DIV>
+
+
+
+</DIV></DIV>
+</DIV>
+
+</DIV>
+
+<DIV id="sidebar"><H3><A href="/people/view/yakuza">See all of Chuq's entries</A></H3>
+<H3><A href="/things/view/148862">See everyone with this goal</A></H3>
+
+
+</DIV>
+
+
+<P style="clear: left;">Â </P>
+</DIV>
+
+
+    <DIV id="soupfooter">    <DIV id="iwantto">
+    
+        <FORM method="post" action="/twinkler/adopt_by_name">        <FIELDSET>    
+
+    <DIV id="footergoalfieldlabel">I want to:</DIV>
+    <DIV id="footergoalfield">    <DIV><INPUT id="newgoal" name="goal[name]" type="text" size="40" autocomplete="off"></DIV>
+    <DIV id="newgoal_autocomplete" class="autocomplete" style="display: none; "></DIV>
+    <SCRIPT type="text/javascript">
+    new Ajax.Autocomplete(
+      'newgoal', 'newgoal_autocomplete',
+      '/suggests/thing',
+      { callback: function(element, value) {
+        return 'mid=1&q=' + escape(value.replace(/\s+$/, '')) }})
+    </SCRIPT>
+    </DIV>
+    <INPUT type="submit" value="Add this to my list">
+    </FIELDSET>
+    </FORM>
+    </DIV>
+
+    <DIV class="goalsoup">    <H2>The world wants to...</H2>
+    
+
+
+
+
+    
+    
+        
+        
+        
+             
+             <SPAN class="personinsert"><SPAN class="nobreak"><A href="/people/view/Amsboc"><IMG src="http://images.43things.com/profile/00/00/31/12689s.jpg" height="25" width="25" align="absmiddle"></A> <A href="/teams/progress/270910">Amsboc</A></SPAN><A href="/teams/progress/270910"> wants to be less selfish</A></SPAN>
+        
+    
+    <SPAN class="level2">    <A href="/things/view/3024">Finish what I start</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/5446">go on vacation</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/46518">take a cruise to Alaska</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/23506">travel all over the world</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level2">    <A href="/things/view/4169">graduate from college</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/11777">learn basque</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level9">    <A href="/things/view/136">Learn Spanish</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/165">hike the appalachian trail</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level2">    <A href="/things/view/1226">Finish my website</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level7">    <A href="/things/view/305">Learn Ruby</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level2">    <A href="/things/view/2331">be rich</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/8737">build a pvr</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/744">Live on the beach</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/14460">become independently wealthy</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/9813">pay off my debt</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/84134">use the word 'brouhaha' more</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/35364">Find somewhere to call home</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/522">visit Africa</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/177">make a documentary film</A>
+    </SPAN>
+    
+
+
+    
+    
+        
+        
+        
+             
+             <SPAN class="personinsert"><SPAN class="nobreak"><A href="/people/view/nothing"><IMG src="http://images.43things.com/profile/00/00/15/5456s.jpg" height="25" width="25" align="absmiddle"></A> <A href="/teams/progress/117448">nothing</A></SPAN><A href="/teams/progress/117448"> wants to Live near an ocean</A></SPAN>
+        
+    
+    <SPAN class="level1">    <A href="/things/view/417">meet more people</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/7876">make more art</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/11323">Learn Violin</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/1449">travel to london</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level1">    <A href="/things/view/15927">drive across America</A>
+    </SPAN>
+    
+
+
+    
+    
+    <SPAN class="level2">    <A href="/things/view/2512">organize my photos</A>
+    </SPAN>
+    
+
+
+
+    </DIV>
+    </DIV>
+
+
+<DIV id="footer">
+
+
+
+
+
+<A href="/about/view/faq">FAQ</A> |
+<A href="/about/view/terms">Terms of Use</A> |
+<A href="/about/view/privacy">Privacy Policy</A> |
+<A href="/rss">RSS</A> |
+
+
+<A href="/about/view/press">Press</A> | 
+<A href="http://robotcoop.com">Robot Co-op Blog</A> | 
+
+
+Copyright Â© 2004 - 2005 Robot Co-op
+
+</DIV>
+
+
+
+
+</DIV>
+
+
+</BODY></HTML>_*http://www.43things.com/entries/view/69295Ytext/html        1  :  A  S  b  x ! R [ b ¬T ¬… ¬  ¬§ ü´ üç üîQ‰|¨¯VÜWWW&YYºYÁ\\È\Ñ\ï\õ‰«‰Ø             )             ‰â

@@ -1,0 +1,441 @@
+bplist00“_WebSubresources_WebMainResource°”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO∏	
+	body {
+		margin:0px 0px 10px 0px;
+		background:#FFFFFF;		
+		}
+	A 			{ color: #999966; text-decoration: none; font-weight:bold; } 
+	A:link		{ color: #999966; text-decoration: none; } 
+	A:visited	{ color: #999966; text-decoration: none; } 
+	A:active	{ color: #99CC66;  } 
+	A:hover		{ color: #99CC66;  }
+	
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:arial, verdana, sans-serif;
+		color:#FFF;
+		font-size:x-large;
+		font-weight:bold;
+		border-bottom:1px dotted #FFF;
+		border-top:3px solid #99CCFF;
+  		background:#336699;
+  		padding:15px; 
+  		text-transform:uppercase;
+		letter-spacing: .2em; 		
+		}
+	
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:arial, verdana, sans-serif;
+		font-size: x-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:arial, verdana, sans-serif;
+		color:#99CCFF;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#336699;	
+  		text-transform:none;	
+		letter-spacing: none; 		
+		}	
+				
+	#content {
+		float:left;
+		width:65%;
+		background:#fff;
+		border-right:1px dotted #999;
+		margin-right:15px;
+		padding-bottom:20px;
+		}
+
+	#links {
+		background:#fff;
+		padding-right:15px;				
+		}
+		
+	.blog {
+  		padding-left:15px;
+  		padding-top:15px;
+  		padding-right:15px;			
+		}	
+	
+	.blogbody {
+		font-family:trebuchet ms, georgia, verdana, arial, sans-serif;
+		color:#333;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding-left:10px;	
+  		padding-right:10px;
+  		padding-top:10px;			
+		}
+
+
+	.blogbody a,
+	.blogbody a:link,
+	.blogbody a:visited,
+	.blogbody a:active,
+	.blogbody a:hover {
+		font-weight: normal;
+		text-decoration: underline;
+	}
+	
+	.title	{ 
+		font-family: verdana, arial; 
+		font-size: small; 
+		color: #003366; 
+		text-transform: uppercase;
+		font-weight:bold;	
+		}			
+		
+	#menu {
+  		margin-bottom:15px;
+		background:#FFF;  							
+		}	
+		
+	.date	{ 
+		font-family:trebuchet ms, georgia, verdana, arial, sans-serif; 
+		font-size: small; 
+		color: #666; 
+		border:1px solid #999;
+		padding:5px;
+		margin-bottom:10px;
+		font-weight:bold;
+		}			
+		
+	.posted	{ 
+		font-family:arial, verdana, sans-serif; 
+		font-size: x-small; 
+		color: #003366;
+		margin-bottom:15px; 
+		}
+		
+		
+	.calendar {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+  		text-align:center;	
+		}
+	
+	.calendarhead {	
+		font-family:arial, verdana, sans-serif;
+		color:#003366;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;				
+		}	
+	
+	.side {
+		font-family: arial, verdana, sans-serif;
+		color:#333;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;				
+		}	
+		
+	.sidetitle {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:bold;
+  		background:#EEE;
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:10px;
+  		text-align:center;
+  		text-transform:uppercase;
+		letter-spacing: .2em;  					
+		}		
+	
+	.syndicate {
+		font-family:arial, verdana, sans-serif;
+		font-size:xx-small;
+		font-weight:bold;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:10px;
+  		text-align:center;
+  		background:#EEE;  		
+ 		}	
+		
+	.powered {
+		font-family:arial, verdana, sans-serif;
+		color:#003366;
+		font-size:xx-small;
+		font-weight:bold;
+		border-top:1px solid #CCC;
+		border-bottom:1px solid #CCC;		
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing: .2em  					
+		}	
+		
+	
+	.comments-body {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;			
+		}		
+
+	.comments-post {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;			
+		}	
+
+	.trackback-body {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;			
+		}		
+
+	.trackback-url {
+		font-family: arial, verdana, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:10px;
+  		border:1px dashed #CCC;			
+		}
+
+	.trackback-post {
+		font-family:arial, verdana, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#FFF;			
+		}
+
+		
+	.comments-head	{ 
+		font-family: trebuchet ms, georgia, verdana, arial, sans-serif; 
+		font-size: small; 
+		color: #666; 
+		border:1px solid #999;
+		padding:5px;
+		font-weight:normal;
+		margin-top:10px;		
+		}		
+
+	#banner-commentspop {
+		font-family: trebuchet ms, georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-bottom:1px dotted #FFF;
+		border-top:3px solid #99CCFF;
+  		background:#336699;
+  		padding:15px; 
+		}
+
+
+_-http://dangerous-thinking.com/styles-site.cssXtext/css‘_WebResourceTextEncodingNameUUTF-8O⁄<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>Dangerous thinking, the blog from David Rosam: Of WiKis, Tiddlers and Backpacks</TITLE>
+
+<LINK rel="stylesheet" href="http://dangerous-thinking.com/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://dangerous-thinking.com/index.rdf">
+
+<LINK rel="start" href="http://dangerous-thinking.com/" title="Home"><LINK rel="prev" href="http://dangerous-thinking.com/archives/003510.html" title="Technology Marketing Tips' subscription form is now live">
+
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'dangerous-thinking.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://dangerous-thinking.com/" accesskey="1">Dangerous thinking</A></H1>
+<SPAN class="description">David Rosam on life, copywriting and search engine optimization - and some important stuff.</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://dangerous-thinking.com/archives/003510.html">¬´ Technology Marketing Tips' subscription form is now live</A> |
+
+<A href="http://dangerous-thinking.com/">Main</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 22, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">Of WiKis, Tiddlers and Backpacks</H3>
+
+<P>My Palm sync went west earlier in the week (now mysteriously fixed), and I very nearly took the plunge and took a paid subscription to <A href="http://backpackit.com">Backpack</A>. But then the <A href="http://shared.snapgrid.com/gtd_tiddlywiki.html">GTD flavour of TiddlyWiKi </A>is <I>l'application du jour</I>...just Google GTD TiddlyWiki or TiddlyWiki, and you'll see what I mean.</P>
+
+<P>Between them, Backpack and GTD TiddlyWiki have got me thinking that I need something Wiki-like, whether my Palm woes return or not. But, as I said last week, Backpack is not yet proven to my satisfaction. </P>
+
+<P>What's more, Wikis need all that server side stuff, and GTD Tiddly Wiki has a very nasty bug that has lost some of my data. GTDTW, in my opinion, is not yet ready for the big time, although Nathan Bowers is working on a fix. </P>
+
+<P>A little Googling during that late-Saturday-night-in-front-of-the-telly-with-a-beer catatonic state, found me <A href="http://www.wikiserver.org/">WxWikiServer</A>. I'm in love! Even at the dead of night, It took me just minutes to install and configure - in effect, WxWikiServer has its own server and wiki app, and all you do is unzip and run. Then two little configuration tweaks - one to set up the Windows ID of the machine I'm running it on to allow network access, and a second to allow anonymous editing from anywhere on the network, and I was away! I've now included WxWikiServer in the machine's start-up folder.</P>
+
+<P>WxWikiServer feels mature and solid. I'm running it on Windows 2K Professional on an old PIII; it will run on just about any flavour of Windows (desktop or server), plus Mac OS-X and Linux. If you're looking for a Wiki and baulk at all that server-side gubbins, I'd say give it a go.</P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by David Rosam at May 22, 2005 08:31 PM
+| <A href="/cgi-bin/mt-link.cgi?__mode=view&entry_id=3512" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+
+<BR></SPAN>
+
+</DIV>
+
+
+<DIV class="comments-head"><A name="comments"></A>Comments</DIV>
+
+
+
+
+<DIV class="comments-head">Post a comment</DIV>
+
+<DIV class="comments-body"><FORM method="post" action="/cgi-bin/mt-note.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="3512">
+
+<DIV style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">        <LABEL for="author">Name:</LABEL><BR>
+        <INPUT tabindex="1" id="author" name="author"><BR><BR>
+
+        <LABEL for="email">Email Address:</LABEL><BR>
+        <INPUT tabindex="2" id="email" name="email"><BR><BR>
+
+        <LABEL for="url">URL:</LABEL><BR>
+        <INPUT tabindex="3" id="url" name="url"><BR><BR>
+</DIV>
+
+Remember personal info?<BR>
+<INPUT type="radio" id="bakecookie" name="bakecookie"><LABEL for="bakecookie">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+
+<LABEL for="text">Comments:</LABEL><BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA><BR><BR>
+
+<INPUT type="submit" name="preview" value="¬†Preview¬†">
+<INPUT style="font-weight: bold;" type="submit" name="post" value="¬†Post¬†"><BR><BR>
+
+</FORM>
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+</DIV>
+
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_2http://dangerous-thinking.com/archives/003512.htmlYtext/html    1 3 : L [ q-]foçì1q1¶                           1∞

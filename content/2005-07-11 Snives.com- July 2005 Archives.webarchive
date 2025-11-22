@@ -1,0 +1,471 @@
+bplist00Ò_WebSubresources_WebMainResource¡Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOÐ	body {
+		margin:0px 0px 10px 0px;
+		background:#333;
+		}
+
+	A			{ color:#99CCFF; text-decoration:none; }
+	A:link		{ color:#99CCFF; text-decoration:none; }
+	A:visited	{ color:#99CCFF; text-decoration:none; }
+	A:active	{ color:#99CC66; }
+	A:hover		{ color:#99CC66; }
+
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:x-large;
+		font-weight:normal;
+		border-bottom:1px dotted #999;
+		border-top:3px dotted #999;
+		background:#000;
+		padding:15px;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:verdana, arial, sans-serif;
+		font-size: x-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:bold;
+		background:#000;
+		text-transform:none;
+		letter-spacing:normal;
+		}
+
+	#content {
+		float:left;
+		width:65%;
+		background:#333;
+		border-right:1px dotted #999;
+		margin-right:15px;
+		padding-bottom:20px;
+		}
+
+	#links {
+		padding-right:15px;
+		}
+
+	.blog {
+		padding-left:15px;
+		padding-top:15px;
+		padding-right:15px;
+		}
+
+	.blogbody {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:small;
+		font-weight:normal;
+		background:#333;
+		line-height:140%;
+		padding-left:50px;
+		padding-right:50px;
+		padding-top:10px;
+		}
+
+	.title {
+		font-family:verdana, arial;
+		font-size:small;
+		color:#CCC;
+		text-transform:uppercase;
+		font-weight:bold;
+		}
+
+	#menu {
+		margin-bottom:15px;
+		background:#333;
+		}
+
+	.date {
+		font-family:verdana, arial, sans-serif;
+		font-size:small;
+		color:#CCC;
+		border:1px solid #CCC;
+		padding:5px;
+		margin-bottom:10px;
+		font-weight:normal;
+		}
+
+	.posted	{
+		font-family:verdana, arial, sans-serif;
+		font-size:x-small;
+		color:#CCC;
+		margin-bottom:15px;
+		}
+
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		text-align:center;
+		}
+
+	.calendarhead {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:x-small;
+		font-weight:bold;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		}
+
+	.side {
+		font-family:verdana, arial, sans-serif;
+		color:#003366;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		}
+
+	.sidetitle {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:bold;
+		line-height:140%;
+		padding:2px;
+		margin-top:10px;
+		text-align:left;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:xx-small;
+		line-height:140%;
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		}
+
+	.powered {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:xx-small;
+		font-weight:bold;
+		border-top:1px solid #CCC;
+		border-bottom:1px solid #CCC;
+		line-height:140%;
+		text-transform:uppercase;
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing:.2em;
+		}
+
+	.comments-body {
+		font-family:verdana, arial, sans-serif;
+		color:#CCC;
+		font-size:small;
+		font-weight:normal;
+		background:#333;
+		line-height:12px;
+		padding-left:10px;
+		padding-right:10px;
+		padding-bottom:15px;
+		}
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		}
+
+	.comments-head {
+		font-family:verdana, arial, sans-serif;
+		font-size: small;
+		color: #CCC;
+		border:1px solid #999;
+		padding:5px;
+		font-weight:normal;
+		margin-top:10px;
+		}
+
+	#banner-commentspop {
+		font-family:verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-bottom:1px dotted #999;
+		border-top:3px dotted #999;
+		background:#000;
+		padding:15px;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+		
+		
+	 .trackback-body {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#333;
+  		line-height:140%;	
+  		padding-top:15px;				
+		}		
+
+	.trackback-url {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:small;
+		font-weight:normal;
+  		background:#333;
+  		line-height:140%;	
+  		padding:5px;
+  		border:1px dashed #999; 				
+		}
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#333;
+  		margin-bottom:20px;
+		}_!http://snives.com/styles-site.cssXtext/cssÔ_WebResourceTextEncodingNameUUTF-8O/V<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>Snives.com: July 2005 Archives</TITLE>
+
+<LINK rel="stylesheet" href="http://snives.com/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://snives.com/index.rdf"><LINK rel="start" href="http://snives.com/" title="Home"><LINK rel="prev" href="http://snives.com/archives/2005_06.html" title="June 2005">
+
+
+
+<SCRIPT language="javascript" type="text/javascript">
+function OpenComments (c) {
+    window.open(c,
+                    'comments',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+</SCRIPT>
+
+</HEAD><BODY>        
+
+<DIV id="banner"><H1><A href="http://snives.com/" accesskey="1">Snives.com</A></H1>
+<SPAN class="description"></SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://snives.com/archives/2005_06.html">Â« June 2005</A> |
+
+<A href="http://snives.com/">Main</A>
+
+</DIV>
+
+</DIV>
+
+<DIV class="blog">
+
+
+<H2 class="date">July 09, 2005</H2>
+
+
+<DIV class="blogbody"><A name="000144"></A>
+<H3 class="title">Terrorism Causes</H3>
+
+<P><A href="http://www.cnn.com/2005/WORLD/europe/07/09/london.attacks.blair.ap/index.html">Blair shows</A> they are working on it.</P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000144">05:15 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=144" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=144" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+
+
+<DIV class="blogbody"><A name="000143"></A>
+<H3 class="title">Terrorism</H3>
+
+<P>Tim Bray over at <A href="http://www.tbray.org/ongoing/When/200x/2005/07/07/London-Bombs">ongoing</A> makes some good points.  All the <A href="http://www.cnn.com/2005/POLITICS/07/09/bush.radio.ap/index.html">rhetoric </A> does nothing to get at root causes.  It's great that Blair and Bush are making a show of strength.  I would be happier to hear what they're doing to find out what creates a terrorist in the first place. </P>
+
+<P>Could it all be about upsetting the balance of power?  If the real agenda is money and power and the terrorists hide behind religious extremism then it would be hard for Bush and Blair to stamp out the root cause.  All ego driven individuals hunger for money and power.  If this is what you are after and you don't have the firepower or economic base to fight mano a mano, terrorism is an attractive option.</P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000143">02:31 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=143" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=143" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+
+
+<DIV class="blogbody"><A name="000142"></A>
+<H3 class="title">CD Burning for Archiving</H3>
+
+<P>I just listened to a podcast from IT Conversations called <A href="http://www.itconversations.com/shows/detail127.html">Maximum Burn</A>. You'll be amazed at what you learn about burning CDs for archival purposes. Using a Sharpie to label your CDs is bad for longevity. They are alcohol based and over time the alcohol eats into the data layer. It's recommended you use a non-alcohol based, soft tip pen instead.  One other point was that paper labels are fine. Where you get into trouble is if you try to peel the label off.  If you peel it off it strips a metal layer off and renders your CD useless.</P>
+
+<P>Here's <A href="http://beradio.com/mag/radio_maximum_burn/index.html">the article</A> on which the podcast was based. </P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000142">01:56 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=142" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=142" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+
+
+<DIV class="blogbody"><A name="000141"></A>
+<H3 class="title">TiddlyWiki</H3>
+
+<P>I'm a little late in posting about this but <A href="http://www.tabletpcbuzz.com/forum/topic.asp?TOPIC_ID=25076">Tablet PC Buzz</A> mentioned a new wiki format.  It seemed to really fit a need for this guy so I wondered what was so great about it.  I read the <A href="http://www.blogjones.com/TiddlyWikiTutorial.html">TiddlyWiki tutorial</A>.  Great little tool if you need a wiki format for information gathering and display but don't want to go through the hassle of implementing a full-blown serverside wiki.</P>
+
+<P>Unless you're involved in an online community, you will not have any need for a wiki.  Sending email and text documents around will meet your needs fine.  </P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000141">10:20 AM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=141" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=141" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+<H2 class="date">July 06, 2005</H2>
+
+
+<DIV class="blogbody"><A name="000140"></A>
+<H3 class="title">Drive-In Theater</H3>
+
+<P>I went to the drive in theater last night in Alexandria Bay.  It was here that I first saw Star Wars in 1977.  I also saw Christine in my best friend's brother's red 1956 Chevrolet (Keith Stewart's car - Mark Stewart is my best friend).  I remember as the lights came on at the end all the cars were beeping at us as we drove out of there.</P>
+
+<P>Last night was War of the Worlds and Mr. and Mrs. Smith.  You won't believe how much it costs up there:  $5/person for a double feature.  We brought two bags of microwavable popcorn from home.  We brought our own drinks.  Tune your radio to 106.1 FM. We kept the car windows down all the same because a rain storm had gone through earlier and there were no mosquitoes to speak of.  </P>
+
+<P>Back in 1977 you had to park in front of a speaker, grab the speaker off its pole, hang it on your window, and then close your window on it.  The bugs invariably found their way inside and you had to lather up with bug repellant even though you were inside your car.<BR>
+ </P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000140">11:46 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=140" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=140" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+<H2 class="date">July 05, 2005</H2>
+
+
+<DIV class="blogbody"><A name="000139"></A>
+<H3 class="title">Thousand Islands Then (1980s) and Now</H3>
+
+<BR>
+<TABLE border="1"><TBODY><TR><TD>Then</TD><TD>Now</TD></TR><TR><TD>Jet Skis were rare. Found in the Lake of the Isles or at private river front property.  Early models took a skilled balancing act to operate.
+</TD><TD>Jet Skis are everywhere. Design of recent models requires very little coordination. Youths barely old enough to ride a bike operate them. A certificate is required for legal operation but that doesnâ€™t stop anyone.
+</TD></TR><TR><TD>
+Visibility = 1 foot in most places
+</TD><TD>Visibility = 30 feet in most places
+
+<A href="http://www.glfc.org/lakecom/loc/habitat.pdf">Water clarity</A> began increasing due to mussel invasion in the upstream waters of Lake Erie and Lake Ontario in the 1990s. Colonization of the river directly by mussels from 1992-1994 was associated with very noticeable increases in water clarity.
+</TD></TR><TR><TD>Few pleasure craft.</TD><TD><A href="http://www.google.com/search?q=cigarette+boat">Cigarette boats</A>, <A href="http://www.google.com/search?q=mega+yachts">mega yachts</A> and their smaller cousin the <A href="http://www.google.com/search?q=cabin+cruiser">cabin cruiser</A> are in rich supply.
+</TD></TR><TR><TD>High level of boating safety</TD><TD>Low level of boating safety. See above point. As wealthy individuals flock to the area the level of boating safety could be seen to deteriorate.  Simply having the dough to buy a big boat doesnâ€™t necessarily mean you have the experience or the knowledge to operate it safely.  The overall level of safety on the St Lawrence River has been in decline for decades as more rich cats discover the region.
+</TD></TR></TBODY></TABLE>
+<BR>
+Note: I don't make any claims to scientific accuracy. Most points can, however, be substantiated with basic observation.
+<BR>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000139">06:27 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=139" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=139" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+
+<H2 class="date">July 04, 2005</H2>
+
+
+<DIV class="blogbody"><A name="000138"></A>
+<H3 class="title">Be Present</H3>
+
+<P>If there was ever a place to practice being present, the St Lawrence River is it.  We started out from Massachusetts early Saturday morning.  By early afternoon we had arrived at the family cottage on the river.  I helped my Dad power wash a dock and boathouse and dig a hole to China.  The hole to China was to see if we could uncover the reason for a complete back up of water from the clothes washer, shower, and sinks.  If you tried to run the washer the sinks would back up and cause a flood into the kitchen.  The toilets were fine because that was a separate pipe.  </P>
+
+<P>We did figure it out.  After forty years of use the wood box that held the gravel and stone that the water used to pump in to had collapsed on itself.  Dirt had filled in the spaces.  So, for all intents and purposes, rather than draining into the drywell, the water from the washer, sinks, and shower were draining out into the ground.  As soon as the drywell collapsed there was no place for the water to go.  Flooding occurred as the water met against a solid mass of dirt and came back into the house.</P>
+
+<P>Between the digging and the power washing it was easy to just be.  No worries. The constant flow of the river, the cool summer breezes, and yes, the fact that I was a few days into a weekâ€™s vacation had everything to do with the ease with which I could allow my mind to go blank.  The normal worries were stripped away.</P>
+
+<P>Tonight itâ€™s off in the boat to see the July 4th fireworks display. Every year they shoot them off from the grounds of Boldt Castle on Heart Island across from Alexandria Bay.</P>
+
+
+
+<DIV class="posted">        Posted by Kevin Harris at <A href="http://snives.com/archives/2005_07.html#000138">08:46 PM</A>
+                | <A href="http://snives.com/mov/mt-comments.cgi?entry_id=138" onclick="OpenComments(this.href); return false">Comments (0)</A>
+        
+                | <A href="http://snives.com/mov/mt-tb.cgi?__mode=view&entry_id=138" onclick="OpenTrackback(this.href); return false">TrackBack</A>
+        
+</DIV>
+
+</DIV>
+
+
+</DIV>
+</DIV>
+
+
+</BODY></HTML>_'http://snives.com/archives/2005_07.htmlYtext/html    1 3 : L [ qEir{™ŸAùB#                           B-

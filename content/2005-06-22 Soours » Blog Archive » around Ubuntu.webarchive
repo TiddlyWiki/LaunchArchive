@@ -1,0 +1,760 @@
+bplist00Ò_WebSubresources_WebMainResource¢Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO"/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+_Chttp://www.soours.com/wordpress/wp-content/themes/default/style.cssXtext/cssÓO	ÿØÿà JFIF  H H  ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ   d ÿÄ               ÿÄ .       !1A"2QBR$abqÑÿÄ              ÿÄ 3        !1AQaq‘2¡Áá"BÑğ$Rr±ñÿÚ   ? ßô!F„#B¡Ğ„hB4!'+˜âwTg*¤„\e¿°Ï¾€…AÛªùqİ’Á_C)§©Š2©R*Qà;a‹(Éì+ƒ8ghV«QÇ2ÑœOn¾vğVÕµµ:`Ò©‰Ã] Î˜sõ ’KAÕ¥œP¯¼vÜUÍE%öÜµK!…¡5
+>qÄŒùÏXÕáÃo9‚“°ÄÌ©¸Û1)9wÆÖ‚g†]ÃlI#b¬­R ‚=éÍáWÎÂ“ ö)1·ªR]á· £§¬–ùoJzbZ¡BÉÄá¸Ÿ|3¦7†İ¹î`¤é"S¢\mÖUé¾¯ÿ Š›uEÖÙŞ¬‹æÒhÂ…x_‰y r¹ÊàxÖõoW†TªÆ8ÕiÃû„Lçu¨CÀœ–‰mÜVk½$•TJJˆb8‘ã”‡ü¿÷\İÕµkCıCK|ä§¦9†™ì†ÜVdŒH×:@…ŠêÈóıÕw@	Æ=UÁÃî‰Â)™×D¥Eî×Hè•
+h™ĞH¥’Ÿc:sî(²18	î›NÊâ %Œ&i¿DMâÉ--}¸ö‘Å#çc ;Ò>»$±®ºwN§iRZŒw/R@Û±ÑWöæëis^îññ•R pƒß8÷#¯}fØñì~Ğà äµ8À-XL‚N§Äì›|I¼](¬”rZ„­G3–¨¨§'¥ Ô‚ªÄıÀÏzélF¥OÏœéÜ®fë˜Á AöYt›²©ù¨›”ˆ²ÇSPŒ[¶&O¨¯±9ğµYJÙÄ ÙôËåçşªNuP	&Ÿx¯¹ş’µUÜ’¡[å•ê³ÑLJ ±ƒ€Av tÍ…ó€y÷†ÉÃ¢Ói1ªFÃyº½°/Ë›¢Få©‡53Ÿ¸ÿ óîäA…Hø£h‹ln».ù¤¢‰áJ|Kä’CàŒr °ä|¾úì¸Ë¯-jğçº	Ó'ÓÀ0c¤ªõF…í®ÃOvÙÇxÖÛ 7zz™¨£x”ª0Œ˜ã$8ÉÑ^íô/m¬)¼Å2Ğã'2Hô6Ì 6Zçª¥Õİìğ"ßmzšY/	Tå!ÀicS)föÊ‚1şõµNÚäqÇÖ"™=Qñú(‰¨İ?¬©²Ôo½€÷)¨f¶­š9ÚfV„0Œ?·M€sàùÕzl¹mà¤1ÄDÏéÓ}>ÉÄŒMŠWiÅhŸâ¶ë’Ø´¿¦V—Œ¤uMË1ã··WÛ ã­eqã‹o½ùıZÆzÏhñ9«VF ¹›y£_æªv×Ø÷YæZs\$UF|z€¸Üdóñçñ¯%·ea¨â)øí÷]½Ó«~#Iœ|o?O’öèa“fY$C<rdeÁ+÷„ûuŞ4·8]eIÃ2OÑÁÂş³N„Hï ‘û©+ÆÛQñÛQISNĞ§,¨À//«ÉğNïşjÍjÔ]Äæ‘™õTííë³†TeF™:ã-½Tm¡í+m¿‹¦ùŒ7 $Ç©Ÿ«ì÷ó­oÈåÖæÄí:ï¢·v.MZ™Ã¼i¶¿ª«»jªÎÌµ¤5jğE<Áé×,˜ıØëÈp÷`u³Ânkg0$èNÃ¬,ËÛ
+wÜH°“ h¼à=Ùïöî©Êµ;Œt¶¨ë‰8Îdb@ú˜“€¿àxÉÔâşóATúÏóÂ¹W†pºmÄú#§ºA3°9| ùZ=³qĞí¯mÂšá¢¦TPáÃå[#‚:ğúÆ•×O{‹Şf~Ö4 2“K|’}Oì>+[´$	f¡ZhŒTâ?N2rUxŒêÊÉ*“ºöÖòÜ÷Ë<µ¶äÚõrDìÊ¤Nˆ„ƒ¯¸°ÎNGCÇc]…÷³¦Úíkvƒş$üGğê¡{^ã)E]ÕICh§ŠÙM*G4fYŒ
+C¯¢™?V=/`c˜^±Ö¹÷=ÏqsÌ“©î¦Ñ1]«rõ½µ’9^7há§â²ñ™	•?³ÔÇG²3Y7÷d‡®‘§æ9|Óp7¢BÕ¶®”õÜ+,ûyZX'U‚(ÓÇÂ 0!bG`‚Çø!½º&MWk>ñÔhuÕ[Ñ=[Fä¤¤4VÛNØ§¢tW’@ª4ŸyUë¹ ş8=œêŠ¹Î»‹üçşÔ”ÜiœTÌÙ.á´n4”¤–°Ô­ /BÊ]T®p@l4‡ÁÇC¼“ª¢ÚˆCx
+ol¸$c¤w)•EŸzÏ`ª¡JµLõ0ş™X“‚…q• \¼‚'Kìô°àÂ#¤Hn«—‡—™É”¼¶Ê—)4–
+š!$†«&4ç”E
+£ˆÁ9=÷ùĞmè`Ë°Cn®I¹”¤ö-Å"[¤{|ºE/ÍSz@fi‹¯EĞÉ÷Î3ŒŞ‰X=QwpŠ†tÔ®.Ûjûq²CËØR¾fU´t ¨R%ÁÎ2Hïğ5,#ÕsO¶.”ÖûƒC·¶|UÍé|¨”¬l9~¡Æ|d€G&“V£Œ¹Äù%6“mn‰E<kÚ‘M¡`‚J8È¥\•É\˜›¯=`®Ñ&'uZ.•5ÿÙ_5http://www.soours.com/images/imagesforblog/yubnub.jpgZimage/jpegÔ_WebResourceTextEncodingNameUUTF-8O*I<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <TITLE>Soours  Â» Blog Archive   Â» around Ubuntu</TITLE>
+        
+        <META name="generator" content="WordPress 1.5.1.1">
+
+        <LINK rel="stylesheet" href="http://www.soours.com/wordpress/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.soours.com/wordpress/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.soours.com/wordpress/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.soours.com/wordpress/feed/atom/">
+        <LINK rel="pingback" href="http://www.soours.com/wordpress/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://www.soours.com/wordpress/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                             #page           { background: url("http://www.soours.com/wordpress/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                   #header         { background: url("http://www.soours.com/wordpress/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://www.soours.com/wordpress/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /*
+                #headerimg      { background: url('http://www.soours.com/wordpress/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                */
+
+        </STYLE>
+
+                <LINK rel="archives" title="June 2005" href="http://www.soours.com/wordpress/archives/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://www.soours.com/wordpress/archives/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.soours.com/wordpress/archives/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.soours.com/wordpress/archives/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.soours.com/wordpress/archives/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.soours.com/wordpress/archives/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.soours.com/wordpress/archives/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.soours.com/wordpress/archives/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://www.soours.com/wordpress/archives/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://www.soours.com/wordpress/archives/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://www.soours.com/wordpress/archives/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://www.soours.com/wordpress/archives/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://www.soours.com/wordpress/archives/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://www.soours.com/wordpress/archives/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://www.soours.com/wordpress/archives/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://www.soours.com/wordpress/archives/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://www.soours.com/wordpress/archives/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://www.soours.com/wordpress/archives/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://www.soours.com/wordpress/archives/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://www.soours.com/wordpress/archives/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://www.soours.com/wordpress/archives/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://www.soours.com/wordpress/archives/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://www.soours.com/wordpress/archives/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://www.soours.com/wordpress/archives/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://www.soours.com/wordpress/archives/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://www.soours.com/wordpress/archives/2003/05/">
+        <LINK rel="archives" title="March 2003" href="http://www.soours.com/wordpress/archives/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://www.soours.com/wordpress/archives/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://www.soours.com/wordpress/archives/2003/01/">
+
+        </HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://www.soours.com/wordpress">Soours</A></H1>
+                <DIV class="description">(punchline used to be â€œLa victoria, siempreâ€) - Experimentally reversing to Kubrik theme (wonâ€™t last, folks)</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="widecolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">Â« <A href="http://www.soours.com/wordpress/archives/2005/06/21/pdf-download-a-firefox-extension/">PDF Download, a Firefox extension</A></DIV>
+                        <DIV class="alignright"><A href="http://www.soours.com/wordpress/archives/2005/06/22/dotclear/">DotClear</A> Â»</DIV>
+                </DIV>
+        
+                <DIV class="post" id="post-530">                        <H2><A href="http://www.soours.com/wordpress/archives/2005/06/21/around-ubuntu/" rel="bookmark" title="Permanent Link: around Ubuntu">around Ubuntu</A></H2>
+        
+                        <DIV class="entrytext">                                        <UL>        <LI><A href="http://yekubuntu.free.fr/hoary/index.php">yeK-Ubuntu</A></LI>
+        <LI><A href="http://www.prendreuncafe.com/blog/index.php/2005/03/04/21-installer-ubuntu-hoary-sur-un-dell-inspiron-8200">Installer Ubuntu Hoary sur un Dell Inspiron 8200</A></LI>
+        <LI><A href="http://www.gnoppix.org/">Gnoppix</A> <CITE>is a linux live cd based upon Ubuntu . It can be compared to Knoppix but Gnoppix uses GNOME as desktop environment</CITE>. (<A href="http://www.prendreuncafe.com/blog/index.php/2005/06/16/147-gnoppix-10-est-sortie">via</A>)</LI>
+        <LI><A href="http://planet.ubuntu-fr.org/">Planet Ubuntu fr</A></LI>
+        <LI><A href="http://www.linuxgraphic.org/">linuxgraphics</A></LI>
+        <LI><A href="http://www.lea-linux.org/">LÃ©a (Linux entre amis)</A></LI>
+        <LI><A href="http://yubnub.org/"><IMG src="http://www.soours.com/images/imagesforblog/yubnub.jpg" alt="YubNub logo"></A> a social command line for the Web (<A href="http://www.flickr.com/photos/jonathanaquino/17472671/">best on paper!</A>)</LI>
+        <LI><A href="http://www.tiddlywiki.com/">TiddlyWiki</A>, a reusable non-linear personal web notebook (<A href="http://www.prendreuncafe.com/blog/index.php/">via</A> [<EM>in</EM> blogmarks])</LI>
+        <LI><A href="http://packages.ubuntu.com/">Ubuntu packages</A></LI>
+        </UL>
+        
+                                        
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Tuesday, June 21st, 2005 at 16:31 (CDT+2)                                         and is filed under <A href="http://www.soours.com/wordpress/archives/category/computers/gnulinux/" title="View all posts in GNU/Linux" rel="category tag">GNU/Linux</A>.
+                                                You can follow any responses to this entry through the <A href="http://www.soours.com/wordpress/archives/2005/06/21/around-ubuntu/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        Both comments and pings are currently closed.                  
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+                                <P class="nocomments">Comments are closed.</P>
+                
+        
+
+        
+                
+        </DIV>
+
+
+<HR>
+<DIV id="footer">        <P>                Soours is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.soours.com/wordpress/feed/">Entries (RSS)</A>
+                and <A href="feed:http://www.soours.com/wordpress/comments/feed/">Comments (RSS)</A>.
+                        </P>
+</DIV>
+</DIV>
+
+
+                
+
+</BODY></HTML>_Bhttp://www.soours.com/wordpress/archives/2005/06/21/around-ubuntu/Ytext/html    1 4 ; M \ r##I#R#Y,^,–,¡,ª,È,ÎWW`                           Wj

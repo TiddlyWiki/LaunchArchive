@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>The Digital Librarian: TiddlyWiki and Annotating the Web...</title>
+
+<link rel="stylesheet" href="http://digitallibrarian.org/GBStyleSheet.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://digitallibrarian.org/index.rdf" />
+
+<link rel="start" href="http://digitallibrarian.org/" title="Home" />
+<link rel="prev" href="http://digitallibrarian.org/archives/000079.html" title="H2Q Service version 0.1.1 Released" />
+
+<link rel="next" href="http://digitallibrarian.org/archives/000081.html" title="Advanced Wiki'ing with Library Tools" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'digitallibrarian.org';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://digitallibrarian.org/archives/000080.html"
+    trackback:ping="http://digitallibrarian.org/cgi-bin/mt-tb.cgi/76"
+    dc:title="TiddlyWiki and Annotating the Web..."
+    dc:identifier="http://digitallibrarian.org/archives/000080.html"
+    dc:subject="Cool Tools"
+    dc:description="There&apos;s a fellow in London who has done an ingenius thing - he has created a totally client-side wiki tool. TiddlyWiki is an amazing display of creativity - go now and play with it, and then return to read the..."
+    dc:creator="JAF"
+    dc:date="2004-09-24T14:37:00-08:00" />
+</rdf:RDF>
+-->
+
+
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="http://digitallibrarian.org/archives/000080.html">
+<dc:title>TiddlyWiki and Annotating the Web...</dc:title>
+<dc:description>There&apos;s a fellow in London who has done an ingenius thing - he has created a totally client-side wiki tool. TiddlyWiki is an amazing display of creativity - go now and play with it, and then return to read the...</dc:description>
+<dc:creator>JAF</dc:creator>
+<dc:date>2004-09-24T14:37:00-08:00</dc:date>
+<license rdf:resource="http://creativecommons.org/licenses/by/1.0/" />
+</Work>
+<License rdf:about="http://creativecommons.org/licenses/by/1.0/">
+<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+<requires rdf:resource="http://web.resource.org/cc/Notice" />
+<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+</License>
+</rdf:RDF>
+-->
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://digitallibrarian.org/" accesskey="1">The Digital Librarian</a></h1>
+<span class="description">Information. Organization. Access.</span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://digitallibrarian.org/archives/000079.html">&laquo; H2Q Service version 0.1.1 Released</a> |
+
+<a href="http://digitallibrarian.org/">Main</a>
+| <a href="http://digitallibrarian.org/archives/000081.html">Advanced Wiki'ing with Library Tools &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">September 24, 2004</h2>
+
+<div class="blogbody">
+
+<h3 class="title">TiddlyWiki and Annotating the Web...</h3>
+
+<p>There's a fellow in London who has done an ingenius thing - he has created a totally <a href="http://www.tiddlywiki.com/">client-side wiki tool</a>. TiddlyWiki is an amazing display of creativity - go now and play with it, and then return to read the rest of this post.</p>
+
+<p>So, now that you've TiddlyWikied (I'm hoping that's a correct usage of the term), think about how such a tool might be used in a research setting. The <a href="http://w3.org">W3C</a> has a <a href="http://w3.org/2001/Annotea/">project</a> looking at enhancing collaboration on the web through the sharing of "metadata based web annotations, bookmarks, and their combinations." Their approach to web-based annotation collaboration is interesting, but in my mind, a bit too involved at this point to fall into the 'easily adoptable' bucket. However, think about a service like <a href="http://unalog.com">Unalog</a>. One of Unalog's strength's is its low barrier to adoptability. It's extremely easy to click on a Unalog bookmarklet, add (or not) a description to the link, and create a linkstack. Now, let's take this a step further: Imagine that, once you've stacked a link in Unalog, you then had not only the ability to return to the page you just stacked, but you also had the option to return to the page you just stacked <b>wrapped in TiddlyWiki</b> functionality. In other words, you could immediately start annotating *any* html-driven web page. Better yet, you could then perhaps save the annotated version of that page to the Unalog server, linking it to the original linkstack. You could then not only share your linkstacks, but your annotations of the linkstacked resource, in the context of the resource. Unalog and TiddlyWiki seem to be a perfect match for each other, if the wrapping ability I mention above is feasible. My gut tells me it is, but I guess we'll have to wait until someone tries it out (hackfest idea, anyone?)</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by JAF at September 24, 2004 02:37 PM
+| <a href="http://digitallibrarian.org/cgi-bin/mt-tb.cgi?__mode=view&amp;entry_id=80" onclick="OpenTrackback(this.href); return false">TrackBack</a>
+
+<br /></span>
+
+</div>
+
+
+<div class="comments-head"><a name="comments"></a>Comments</div>
+
+
+
+
+<div class="comments-head">Post a comment</div>
+
+<div class="comments-body">
+<form method="post" action="http://digitallibrarian.org/cgi-bin/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1" />
+<input type="hidden" name="entry_id" value="80" />
+
+<div style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;">
+	<label for="author">Name:</label><br />
+	<input tabindex="1" id="author" name="author" /><br /><br />
+
+	<label for="email">Email Address:</label><br />
+	<input tabindex="2" id="email" name="email" /><br /><br />
+
+	<label for="url">URL:</label><br />
+	<input tabindex="3" id="url" name="url" /><br /><br />
+</div>
+
+Remember personal info?<br />
+<input type="radio" id="bakecookie" name="bakecookie" /><label for="bakecookie">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;" /><label for="forget">No</label><br style="clear: both;" />
+
+<label for="text">Comments:</label><br />
+<textarea tabindex="4" id="text" name="text" rows="10" cols="50"></textarea><br /><br />
+
+<input type="submit" name="preview" value="&nbsp;Preview&nbsp;" />
+<input style="font-weight: bold;" type="submit" name="post" value="&nbsp;Post&nbsp;" /><br /><br />
+
+</form>
+
+<script type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

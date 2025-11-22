@@ -1,0 +1,995 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives£”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOÄbody {
+	margin: 20px 0 20px 20px;
+	background-color: #eee;
+	
+}
+
+a {
+	text-decoration: none; font-weight: bold}
+
+a:link {
+	color: #669900;
+font-weight: bold; border-bottom: 0px dotted #99cc00;
+}
+a:visited {
+	color: #669900;
+font-weight: bold;border-bottom:0px dotted #fff
+}
+
+a:active { color: #003366;}
+a:hover {
+	color: Black; border-bottom: 0px dotted #333;
+}
+
+h1,h3 {
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+h2 {margin: 0px;
+padding:0px;
+font-weight: bold;}
+
+#banner {
+	background-color: transparent;
+	border-bottom: 0px solid #bbd0de;
+	color: #2b2b2b;
+	font-family: Georgia, Verdana, 'Trebuchet MS', sans-serif;
+	padding: 20px 0 0 20px;
+	text-align: left;
+	
+	
+}
+
+#banner a {
+	color: #669900;
+	text-decoration: none; border: none;
+}
+
+a#banner-img {
+display: none;
+	
+}
+
+#banner h1 {
+	font-size: large;
+text-transform: uppercase;
+	font-weight: bold;
+letter-spacing: 0.3em;border:none;
+}
+
+#banner h2 {
+	font-size: small;
+	font-family: Georgia, 'Trebuchet MS', Verdana, sans-serif;
+	font-weight: bold;
+	letter-spacing: .1em;
+	
+}
+
+
+#center {
+	background-color: #ffffff;
+	color: #333333;
+	float: left;
+	font-family: Georgia,'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	overflow: hidden;
+	padding: 0px 5px 5px 5px;
+	width: 420px;
+	border-top: 0px solid #2b2b2b;
+}
+
+#container {
+	background-color: transparent;
+	margin-top: 20px ;
+
+padding-left: 10px;
+	
+	width: 630px; 
+	
+}
+
+.content {
+	padding: 20px 15px 15px 15px;
+	background-color: #fff;
+	color: #333333;
+	font-family: Georgia,  Verdana, 'Trebuchet MS', sans-serif;
+	font-size: small;
+	border-top: 0px solid #2b2b2b;
+}
+
+
+#right {
+background-color: transparent;
+float: left;
+overflow: hidden;
+width: 200px;
+border: 0px solid #2b2b2b;
+padding-top: 20px
+}
+
+.content p {
+color: #333333;
+font-family: Georgia,  'Trebuchet MS',Verdana, sans-serif;
+font-size: small;
+font-weight: normal;
+line-height: 150%;
+text-align: left;
+
+}
+
+.content blockquote {
+	line-height: 150%;
+background-color: #eee;
+font-weight: bold;
+padding: 15px
+	}
+
+.content li {margin-left: 40px;
+	font-size: 90%;color: #2b2b2b;
+	}
+
+.content h2 {
+
+	color: #aaa;
+	font-family: Georgia; 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	border-bottom: 1px solid #aaa;
+	text-align: left;
+	font-weight: bold;
+	
+}
+
+.content h3 {
+background-color: #eee;
+	color: #2b2b2b;
+	font-family: Georgia;'Trebuchet MS', Verdana, sans-serif;
+	font-size: medium;
+
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.content h4 {text-align: center; text-transform: uppercase;
+color: #4c81a1; }
+
+.content p.posted {
+	border-top: 1px solid #999999;
+	color: #999999;
+	background-color: #eee;
+	font-family:Georgia,Verdana,'Trebuchet MS',  sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+	margin-bottom: 40px;
+}
+
+#calendar {
+	line-height: 140%;
+	color: #333333;
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	padding: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	display: none;
+}
+
+#calendar table {
+	padding: 2px;
+	border-collapse: collapse;
+	border: 0px;
+	width: 100%;
+}
+
+#calendar caption {
+	color: #666666;
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	border-bottom: 1px solid #999999;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 3px;
+	letter-spacing: .3em;
+}
+
+#calendar th {
+	text-align: center;
+	font-weight: normal;
+}
+
+#calendar td {
+	text-align: center;
+}
+
+.sidebar{
+font-family: Verdana, 'Trebuchet MS',  sans-serif;
+font-size: small;
+padding-right: 20px;
+border-left: 0px solid #ffffff;
+
+}
+
+.sidebar h2 {
+ 
+	border-bottom: 1px solid #aaa;
+	color: #2b2b2b;
+	font-family: Georgia,Verdana, 'Trebuchet MS', sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+	letter-spacing: .3em;
+	margin: 3px 0 3px 10px;
+	text-align: left;
+	text-transform: uppercase;
+
+margin-top: 2px
+}
+.sidebar h4 { font-family: Georgia, sans-serif; text-align: center; border: 1px solid #aaa; text-transform: uppercase;
+color: #2b2b2b; padding: 2px}
+.sidebar ul {
+	padding-left: 0px;
+	margin: 0px;
+	font-family: Verdana, 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	padding: 3px 15px 10px 15px;
+	text-align: left;
+}
+
+.sidebar li {
+	font-family: Verdana, 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	text-align: left;
+	list-style-type: none;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.sidebar img {
+	border: 3px solid #eee;
+margin-left: 10px;
+	}
+
+.photo {
+	text-align: left;
+	margin-bottom: 20px;
+	}
+
+.link-note {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: x-small;
+	line-height: 150%;
+	text-align: left;
+	padding: 2px;
+	margin-bottom: 15px;
+	}
+
+#powered {
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	font-size: x-small;
+	text-align: left;
+}
+
+#comment-data {
+	float: left;
+	width: 180px;
+	padding-right: 15px;
+	margin-right: 15px;
+	text-align: left;
+	border: 1px solid #BBB;
+	}
+
+textarea[id="comment-text"] {
+	width: 80%;
+	}
+
+#quote {
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+margin-bottom: 20px;
+	color: #669900;
+	background-color: #f5f5f5;
+	border-bottom: 2px dotted #996600;
+	padding: 10px;
+}
+
+
+#nav {
+	CLEAR: both;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 20px;
+	background-color: transparent;
+	font-size: 65%;
+}
+#nav UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#nav UL LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center;
+}
+#nav UL LI A {
+	BACKGROUND: White;
+	COLOR: #2b2b2b;
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-RIGHT: #ccc 1px solid;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	PADDING-LEFT: 0px;
+	BORDER-LEFT-WIDTH: #eee 1px solid;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px 0px 10px;
+	WIDTH: 86px;
+	LINE-HEIGHT: 22px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: #ccc 1px solid;
+	FONT-FAMILY: verdana, tahoma, arial, helvetica, sans-serif;
+	HEIGHT: 22px;
+	TEXT-ALIGN: center;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+
+#nav UL LI A:hover {
+	BACKGROUND: #FFFFF0;
+	COLOR: #669900;
+	border-top: #aaa 1px solid;
+	border-right: #eee 1px solid;
+	border-bottom: none;
+}
+
+#mininav {
+	FONT-SIZE: 9px; COLOR: #999; FONT-FAMILY: verdana, tahoma, arial, helvetica, sans-serif;
+text-align: center
+}
+#mininav A {
+	COLOR: #999; TEXT-DECORATION: none
+}
+#mininav A:link {
+	COLOR: #999; TEXT-DECORATION: none
+}
+#mininav A:visited {
+	COLOR: #999; TEXT-DECORATION: none
+}
+#mininav A:hover {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.bigLink {
+	FONT-SIZE: 14px
+}
+.cnet {
+	TEXT-ALIGN: center
+}
+.pullquote {
+	COLOR: #777
+}
+.centerImg {
+	TEXT-ALIGN: center
+}
+.callUs {
+	FONT-SIZE: 16px; MARGIN-LEFT: 20px
+}
+.flowFix {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+.designedForWindows {
+	MARGIN-TOP: 25px; TEXT-ALIGN: left
+}
+
+/* set millions of background images */
+.rbroundbox { background: url('nt.gif') repeat; }
+.rbtop div  { background: url('tl.gif') no-repeat top left; }
+.rbtop      { background: url('tr.gif') no-repeat top right; }
+.rbbot div  { background: url('bl.gif') no-repeat bottom left; }
+.rbbot      { background: url('br.gif') no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent  { margin: 0 7px; }
+.rbroundbox { width: 660px; margin: 0px auto; }
+
+#google-banner{
+background-color: #fff;
+border: 0px dotted #aaa; margin: 10px}
+
+#google-tower{
+margin-top: 20px}
+
+#amazon-banner {margin: 10px}
+
+#amazon-tower{text-align: center; margin-top: 20px}_-http://www.1stpersonpress.com/styles-site.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascript‘‘UUTF-8O*Í<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8"><META name="generator" content="http://www.movabletype.org/">
+
+<TITLE>Prose &amp; Icons: Tiddly Wikki</TITLE>
+
+<LINK rel="stylesheet" href="http://www.1stpersonpress.com/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.1stpersonpress.com/index.rdf"><LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://www.1stpersonpress.com/atom.xml">
+
+<LINK rel="start" href="http://www.1stpersonpress.com/" title="Home"><LINK rel="prev" href="http://www.1stpersonpress.com/archives/becomecom-shopping-search.html" title="Become.com Shopping Search"><SCRIPT type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.1stpersonpress.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+</HEAD><BODY>
+<DIV class="rbroundbox">        <DIV class="rbtop"><DIV></DIV></DIV>
+                <DIV class="rbcontent"><DIV id="container">
+
+<DIV id="banner"><H1><A href="http://www.1stpersonpress.com/" accesskey="1">Prose &amp; Icons</A></H1>
+<H2>Field Notes from the Frontlines of Personal Publishing</H2></DIV> 
+<DIV id="nav"><UL id="navlist">
+<LI id="active"><A href="http://1stpersonpress.com/home.php" id="current">Home</A></LI>
+<LI><A href="http://www.1stpersonpress.com">Publishing</A></LI>
+<LI><A href="http://www.1stpersonpress.com/pagecoach/services.php">Tutoring</A></LI>
+<LI></LI><LI><A href="http://www.1stpersonpress.com/links/index.php">Tools</A></LI>
+<LI><A href="http://www.1stpersonpress.com/about.php">About</A></LI>
+</UL>
+
+
+</DIV>
+
+
+<DIV class="content">
+<DIV id="google-banner"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-9414372097330730";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="1886489342";
+google_color_border = "FFFFFF";
+google_color_bg = "EEEEEE";
+google_color_link = "669900";
+google_color_url = "669900";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9414372097330730&dt=1116532358100&format=468x60_as&output=html&channel=1886489342&url=http%3A%2F%2Fwww.1stpersonpress.com%2Farchives%2Ftiddly-wikki.html&color_bg=EEEEEE&color_text=333333&color_link=669900&color_url=669900&color_border=FFFFFF&cc=32&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME></DIV> 
+
+<P>Posts from Category:
+<A href="http://www.1stpersonpress.com/archives/blogging/index.php">Blogging</A>
+</P>
+<P align="right"><A href="http://www.1stpersonpress.com/archives/becomecom-shopping-search.html">¬´ Become.com Shopping Search</A> |
+<A href="http://www.1stpersonpress.com/">Main</A>
+</P>
+
+<H2>May 19, 2005</H2>
+
+<H3>Tiddly Wikki</H3>
+<P>I placed this initially under the Blogging Category because I don't have a single, suitable tag to attach to <A title="TiddlyWiki - a reusable non-linear personal web notebook" href="http://www.osmosoft.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>.</P>
+
+<P>I think it might primarily interest bloggers, who are accustomed to writing in chunks. Beyond that association, it's part Creative Process, part New Media, part WebWriting, part Wiki...</P>
+
+<P>It really reminds me of my earliest research into writing hypertext and resembles a project developed as part of Storyspace.</P>
+
+<BLOCKQUOTE>Reusable non-linear web notebook</BLOCKQUOTE> does sum it up nicely.
+
+<P></P>
+
+<DIV id="a000316more"><DIV id="more">
+</DIV></DIV>
+
+
+
+<P class="posted">Posted by Slade at May 19, 2005 07:49 PM</P>
+<P>Other Entries from Category:
+<A href="http://www.1stpersonpress.com/archives/blogging/index.php">Blogging</A>
+</P>
+
+<FORM method="post" action="http://www.1stpersonpress.com/cgi-bin/mt/mt-send-entry.cgi"><INPUT type="hidden" name="entry_id" value="316">
+<INPUT type="hidden" name="_redirect" value="http://www.1stpersonpress.com/archives/tiddly-wikki.html">
+Email this entry to:<BR>
+<INPUT name="to" size="20"><BR><BR>
+Your email address:<BR>
+<INPUT name="from" size="20"><BR><BR>
+Message (optional):<BR>
+<TEXTAREA name="message" rows="5" cols="20" wrap="virtual"></TEXTAREA><BR><BR>
+<INPUT type="submit" value="Send">
+</FORM>
+
+<IFRAME src="http://rcm.amazon.com/e/cm?t=deardiaristco-20&o=1&p=13&l=st1&mode=electronics&search=wifi%2C%20wireless%2C%20notebooks%2C%20laptop&fc1=&=1&lc1=&lt1=&f=ifr&bg1=&f=ifr" marginwidth="0" marginheight="0" width="468" height="60" border="0" frameborder="0" style="border:none;" scrolling="no"></IFRAME>
+<DIV id="google-banner"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-9414372097330730";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="1886489342";
+google_color_border = "FFFFFF";
+google_color_bg = "EEEEEE";
+google_color_link = "669900";
+google_color_url = "669900";
+google_color_text = "333333";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9414372097330730&dt=1116532358602&prev_fmts=468x60_as&format=468x60_as&output=html&channel=1886489342&pv_ch=1886489342%2B&url=http%3A%2F%2Fwww.1stpersonpress.com%2Farchives%2Ftiddly-wikki.html&color_bg=EEEEEE&color_text=333333&color_link=669900&color_url=669900&color_border=FFFFFF&cc=97&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME></DIV> 
+<H2 id="trackbacks">Looking for a Ping?</H2>
+<P class="techstuff">If you would like to Track it on Back via the TB-URL for this entry, please use:<BR>
+http://www.1stpersonpress.com/cgi-bin/mt/mt-tb.cgi/278</P>
+
+<P>Here are links to a few weblogs that make reference to this article <A href="http://www.1stpersonpress.com/archives/tiddly-wikki.html">Tiddly Wikki</A>:</P>
+
+<P id="p18">¬ª <A href="http://www.1stpersonpress.com/links/archives/tiddly-wikki.html">Tiddly Wikki</A> from 1st Person Links<BR>
+Prose &amp; Icons: Tiddly Wikki... <A href="http://www.1stpersonpress.com/links/archives/tiddly-wikki.html">[Read More]</A>
+</P>
+<P class="posted">Tracked on May 19, 2005 07:52 PM</P>
+<P id="p19">¬ª <A href="http://www.1stpersonpress.com/links/archives/tiddly-wikki.html">Tiddly Wikki</A> from 1st Person Links<BR>
+Prose &amp; Icons: Tiddly Wikki... <A href="http://www.1stpersonpress.com/links/archives/tiddly-wikki.html">[Read More]</A>
+</P>
+<P class="posted">Tracked on May 19, 2005 07:54 PM</P>
+
+
+<H2 id="comments">Comments</H2>
+
+
+
+
+<H2>Post a comment</H2>
+
+ 
+
+
+<FORM method="post" action="http://www.1stpersonpress.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)"><INPUT type="hidden" name="static" value="1">
+<INPUT type="hidden" name="entry_id" value="316">
+
+<DIV id="name_email"><P><LABEL for="author">Name:</LABEL><BR>
+<INPUT tabindex="1" id="author" name="author"></P>
+
+<P><LABEL for="email">Email Address:</LABEL><BR>
+<INPUT tabindex="2" id="email" name="email"></P>
+</DIV>
+
+
+<P><LABEL for="url">URL:</LABEL><BR>
+<INPUT tabindex="3" type="text" name="url" id="url">
+Remember Me?
+<INPUT type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"><LABEL for="remember">Yes</LABEL><INPUT type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"><LABEL for="forget">No</LABEL><BR style="clear: both;">
+</P>
+
+<P><LABEL for="text">Comments:</LABEL> (you may use HTML tags for style)<BR>
+<TEXTAREA tabindex="4" id="text" name="text" rows="10" cols="50"></TEXTAREA></P>
+
+<DIV align="center"><INPUT type="submit" name="preview" tabindex="5" value=" Preview ">
+<INPUT style="font-weight: bold;" type="submit" name="post" tabindex="6" value=" Post ">
+</DIV>
+</FORM>
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+	document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+	document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+	document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+	document.comments_form.bakecookie[0].checked = true;
+} else {
+	document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</SCRIPT>
+
+
+</DIV>
+</DIV>
+
+
+
+
+</DIV>
+        <DIV class="rbbot"><DIV></DIV></DIV>
+</DIV>
+
+
+</BODY></HTML>_8http://www.1stpersonpress.com/archives/tiddly-wikki.htmlYtext/html£1—’_WebResourceFrameNameOO<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #669900 }a.ad:visited { color: #669900 }a.ad:hover { color: #669900 }a.ad:active { color: #669900 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="468" height="60" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD><TABLE width="466" height="58" cellspacing="0" cellpadding="1" border="0" bgcolor="#eeeeee"><TBODY><TR><TD colspan="2" width="" height=""><TABLE width="464" height="" cellspacing="0" cellpadding="2" border="0"><TBODY><TR><TD id="taw0" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('go to www.vortexhost.com','aw0')" onmouseover="ss('go to www.vortexhost.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BTzV4dO6MQu-oErKCSYT-7NoNtN2lCrro7JcBwI23AZC_BRABGAEgsbmgAigCQIoWSIY5qgEKMTg4NjQ4OTM0MrIBFnd3dy4xc3RwZXJzb25wcmVzcy5jb226AQk0Njh4NjBfYXPIAQHaAThodHRwOi8vd3d3LjFzdHBlcnNvbnByZXNzLmNvbS9hcmNoaXZlcy90aWRkbHktd2lra2kuaHRtbOgBAQ&num=1&adurl=http://www.vortexhost.com/hosting/blog-hosting.php%3Fblog%3D9&client=ca-pub-9414372097330730" onfocus="ss('go to www.vortexhost.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.vortexhost.com','aw0')" onmouseout="cs()"><B>Start your own blog</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">Get a blog at your-name.com Free setup / Easy to use </FONT></TD><TD id="taw1" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('go to www.squarespace.com/','aw1')" onmouseover="ss('go to www.squarespace.com/','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.squarespace.com/%3FpartnerTag%3Dgoogle%26planTag%3Dblgnetwork&sa=l&ai=BSM-ldO6MQu-oErKCSYT-7NoN0JvZCbTa_ZUBwI23AbC9EBACGAIgsbmgAigCQIoWSJY5oAGf1_r-A6oBCjE4ODY0ODkzNDKyARZ3d3cuMXN0cGVyc29ucHJlc3MuY29tugEJNDY4eDYwX2FzyAEB2gE4aHR0cDovL3d3dy4xc3RwZXJzb25wcmVzcy5jb20vYXJjaGl2ZXMvdGlkZGx5LXdpa2tpLmh0bWzoAQE&num=2&client=ca-pub-9414372097330730" onfocus="ss('go to www.squarespace.com/','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.squarespace.com/','aw1')" onmouseout="cs()"><B>Blogging Evolved</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">Elegant. Powerful. Professional. The better way to put a blog online </FONT></TD></TR></TBODY></TABLE></TD></TR><TR><TD nowrap="" width="99%" height="11" align="right" bgcolor="#ffffff"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.1stpersonpress.com/archives/tiddly-wikki.html&hl=en&client=ca-pub-9414372097330730&adU=www.vortexhost.com&adT=Start+your+own+blog&adU=www.squarespace.com/&adT=Blogging+Evolved&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; line-height:13px;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_ìhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9414372097330730&dt=1116532358100&format=468x60_as&output=html&channel=1886489342&url=http%3A%2F%2Fwww.1stpersonpress.com%2Farchives%2Ftiddly-wikki.html&color_bg=EEEEEE&color_text=333333&color_link=669900&color_url=669900&color_border=FFFFFF&cc=32&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123“ -§!%(+”"#$OGIF89ad 2 ’     ˇˇˇ{{{RRRÑO ÑÑÑ
+
+
+õõõ£££≥≥≥ªªªS2 ®e Èå «w uF ‰‰‰√√√cccÌÌÌ———©©©www( mmm;;;YYYııı---ÃÃÃDDDëëë222›››KKKÿÿÿ»»»666˘˘˘:# ˇô àààççç""" ñññ‹Ñ rrrÈÈÈÚë    ˛˛˛  ˚˚˚!˘     ,    d 2  ˇ@ÄpH,è»§r…l:ü–®tJ≠ZØÿ¨vÀÌzø‡∞xL.õœË¥zÕnªﬂ∏|NØ€Ô¯º~?Æ∏P!  *0% %B7& 0Bû/ $)í  "	4ÑC
+#
+≥
+ÅB*4 ¿5!$H0&+œ/ œœÿ	662œœ(íÿœ+$)ÁíÄÿ≥+• <)
+$ ∞ ¡ÉPpaÆ¿à ºé–Äˆ°BÑ &nîx»°Äkúq „YÅûÒÍ∞Å”3 ‡0‡É∏ ¿P‡"öÖˇ!	&,3¿¡¬&D0¡ àB∂	\jBDƒ#N| "•	Ä ∞·Ÿ	 fV0aCûmb¿ô	6∂)í  ÑOGTX Åê+p@D CÇÉR<RÅ®¡§#~`˚Ç™g" L‰†	ÄÑ¢ò‡Fﬂ g\˚	¿¥O=πh@\”D N‡XàøBåPZ`¬QË˚5¨i…T†Uk ‡èæg…Ú®`∆£¬ã )ÜÚ! Ω‰Í	—Åœ…"ùR.XßD_Hí
+ xwZx„çﬁ\™'¬C&¿@ˇHŒ˜‘HOÂ qB8Êûqú r∆·V`t”	ë‡Œ@
+LP	•M(^Zñ… .Ès4†‡BA 
+è{Åc"äB@¡&§@≈Â@	2@¿Å6*òƒm	,)Q		9ﬂ
+$ÄGBœ‹uÕ9t†¬3 ¿VÊ ;	ÑêAe@¬Ds›'Aù(Ü@≤X`ôç#,! +@Pâê`¬Ùú0¡©I0AÉ≈AGà
+e¯ôÅ˙H ¡
+°˛˜¬{¨PÄå@¡2BBŒNê¿22P ÀI	!Ä	SƒÄE0‡ ëˇ``≈ƒ€¬Í"°8¥[≈, `Ó§∆ƒrG¨Ë3¥‡¿Ë‡DÂ‚‡@3< 	[ë¥’>lÉ&©â 2s (@í&≠ç"B±,#ÇÀê∞Ã ¿E4–¬º<∞ ƒêC1`∞¿8ÄC<‡¬‚∫6¿xpÄ∏†¿V"@s÷|∞À&|`¡ ºYp∏jõ<¡T‡BÀ$U√Ï¨7”4∞ÙﬁGM@∫BœˇÉ÷∆V√∞‚cÛgö	5˘^èw«[∞¿ÓÎç√‡.;—6‚à‡Å_” 
+( 6ÉÏ‡råVÂΩY`›??çÉ·"ºa◊;	+Ô¸Û–G/˝Ù‘Wo˝ıÿgØ˝ˆ‹wÔ=A  ;_Vhttp://rcm-images.amazon.com/images/G/01/associates/2005/OM/headers/logo_bs_100x50.gifYimage/gif”&'$OúGIF89ad 
+ Ä  fffˇˇˇ!˘     ,    d 
+  sÑè©ÀÌ£D°ÜtgÀäÎÂ}†äL	†üjRdZ•2ieÒåÀ}›{Ì˚≈lDñ£Ü≥Âz/f¶åîÀ&”ôìx8RÿuöΩvø‘¢ä^πŒ‚Ù˜UFsŸgl[nBw∞µ+ﬁóƒ∆7DS◊Çòó∏»ÿ®ÁπP  ;_8http://rcm-images.amazon.com/images/G/01/rcm/privacy.gif”)*$O'GIF89a  ˜       3  f  ô  Ã  ˇ3  3 33 f3 ô3 Ã3 ˇf  f 3f ff ôf Ãf ˇô  ô 3ô fô ôô Ãô ˇÃ  Ã 3Ã fÃ ôÃ ÃÃ ˇˇ  ˇ 3ˇ fˇ ôˇ Ãˇ ˇ 3  33 3f 3ô 3Ã 3ˇ33 33333f33ô33Ã33ˇf3 f33f3ff3ôf3Ãf3ˇô3 ô33ô3fô3ôô3Ãô3ˇÃ3 Ã33Ã3fÃ3ôÃ3ÃÃ3ˇˇ3 ˇ33ˇ3fˇ3ôˇ3Ãˇ3ˇ f  f3 ff fô fÃ fˇ3f 3f33ff3fô3fÃ3fˇff ff3fffffôffÃffˇôf ôf3ôffôfôôfÃôfˇÃf Ãf3ÃffÃfôÃfÃÃfˇˇf ˇf3ˇffˇfôˇfÃˇfˇ ô  ô3 ôf ôô ôÃ ôˇ3ô 3ô33ôf3ôô3ôÃ3ôˇfô fô3fôffôôfôÃfôˇôô ôô3ôôfôôôôôÃôôˇÃô Ãô3ÃôfÃôôÃôÃÃôˇˇô ˇô3ˇôfˇôôˇôÃˇôˇ Ã  Ã3 Ãf Ãô ÃÃ Ãˇ3Ã 3Ã33Ãf3Ãô3ÃÃ3ÃˇfÃ fÃ3fÃffÃôfÃÃfÃˇôÃ ôÃ3ôÃfôÃôôÃÃôÃˇÃÃ ÃÃ3ÃÃfÃÃôÃÃÃÃÃˇˇÃ ˇÃ3ˇÃfˇÃôˇÃÃˇÃˇ ˇ  ˇ3 ˇf ˇô ˇÃ ˇˇ3ˇ 3ˇ33ˇf3ˇô3ˇÃ3ˇˇfˇ fˇ3fˇffˇôfˇÃfˇˇôˇ ôˇ3ôˇfôˇôôˇÃôˇˇÃˇ Ãˇ3ÃˇfÃˇôÃˇÃÃˇˇˇˇ ˇˇ3ˇˇfˇˇôˇˇÃˇˇˇ                                                                                                                        !˘  ◊ ,        Ø ;_Dhttp://rcm-images.amazon.com/images/P/B00007KQOD.01._SCTHUMBZZZ_.jpg”),$_Dhttp://rcm-images.amazon.com/images/P/B00022PTHU.01._SCTHUMBZZZ_.jpg’./0O	Õ<HTML><BODY topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"><TABLE border="0" cellspacing="0" cellpadding="0">   <TBODY><TR><TD><TABLE border="0" cellspacing="0" cellpadding="0"><TBODY><TR><TD><A href="http://www.amazon.com/exec/obidos/redirect?tag=deardiaristco-20&creative=331465&camp=15309&link_code=st1&path=subst/home/home.html" target="_top"><IMG src="http://rcm-images.amazon.com/images/G/01/associates/2005/OM/headers/logo_bs_100x50.gif" width="100" height="50" border="0" alt="Amazon.com"></A></TD></TR><TR><TD><A href="http://rcm.amazon.com/e/cm/privacy-policy.html?o=1" target="_top"><IMG src="http://rcm-images.amazon.com/images/G/01/rcm/privacy.gif" width="100" height="10" border="0" alt="Amazon.com" logo=""></A></TD></TR></TBODY></TABLE></TD><TD>       <TABLE width="368" height="60" border="0" cellspacing="0" cellpadding="1" bgcolor="#616161">         <TBODY><TR><TD width="100%" height="100%">             <TABLE width="366" height="58" border="0" cellspacing="0" cellpadding="0">               <TBODY><TR bgcolor="#FFFFFF"><TD width="5"></TD><TD align="center">                   <TABLE border="0">                     <TBODY><TR><TD><A href="http://www.amazon.com/exec/obidos/redirect?tag=deardiaristco-20&creative=331465&camp=15309&link_code=st1&path=ASIN/B00007KQOD" target="_top"><IMG src="http://rcm-images.amazon.com/images/P/B00007KQOD.01._SCTHUMBZZZ_.jpg" border="0" height="50" hspace="1" alt="Shop Now!"></A></TD><TD><A href="http://www.amazon.com/exec/obidos/redirect?tag=deardiaristco-20&creative=331465&camp=15309&link_code=st1&path=ASIN/B00007KQOD" target="_top"><FONT face="Arial" size="-2" color="3366FF">Evo N1015V ATHLON-1.4G 3...</FONT></A><BR><FONT face="Arial" size="-2" color="000000">Compaq</FONT></TD><TD width="5"></TD><TD><A href="http://www.amazon.com/exec/obidos/redirect?tag=deardiaristco-20&creative=331465&camp=15309&link_code=st1&path=ASIN/B00022PTHU" target="_top"><IMG src="http://rcm-images.amazon.com/images/P/B00022PTHU.01._SCTHUMBZZZ_.jpg" border="0" height="50" hspace="1" alt="Shop Now!"></A></TD><TD><A href="http://www.amazon.com/exec/obidos/redirect?tag=deardiaristco-20&creative=331465&camp=15309&link_code=st1&path=ASIN/B00022PTHU" target="_top"><FONT face="Arial" size="-2" color="3366FF">Compaq</FONT></A><BR><FONT face="Arial" size="-2" color="000000">Compaq Computer</FONT></TD></TR></TBODY></TABLE>                 </TD></TR></TBODY></TABLE>           </TD></TR></TBODY></TABLE>     </TD></TR></TBODY></TABLE>  </BODY></HTML>_ <!--framePath //<!--frame1-->-->_•http://rcm.amazon.com/e/cm?t=deardiaristco-20&o=1&p=13&l=st1&mode=electronics&search=wifi%2C%20wireless%2C%20notebooks%2C%20laptop&fc1=&=1&lc1=&lt1=&f=ifr&bg1=&f=ifr—2’345O<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #669900 }a.ad:visited { color: #669900 }a.ad:hover { color: #669900 }a.ad:active { color: #669900 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="468" height="60" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD><TABLE width="466" height="58" cellspacing="0" cellpadding="1" border="0" bgcolor="#eeeeee"><TBODY><TR><TD colspan="2" width="" height=""><TABLE width="464" height="" cellspacing="0" cellpadding="2" border="0"><TBODY><TR><TD id="taw0" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('go to bloggers4labour.org','aw0')" onmouseover="ss('go to bloggers4labour.org','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.bloggers4labour.org/index.jsp&sa=l&ai=BfRxcde6MQunkAp3SSdHK9IQM0devCvHKqaMBwI23AZCwChABGAMgsbmgAigCQIoWSJY5oAGU66b_A6oBCjE4ODY0ODkzNDKyARZ3d3cuMXN0cGVyc29ucHJlc3MuY29tugEJNDY4eDYwX2FzyAEB2gE4aHR0cDovL3d3dy4xc3RwZXJzb25wcmVzcy5jb20vYXJjaGl2ZXMvdGlkZGx5LXdpa2tpLmh0bWzgAQLoAQE&num=3&client=ca-pub-9414372097330730" onfocus="ss('go to bloggers4labour.org','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to bloggers4labour.org','aw0')" onmouseout="cs()"><B>Bloggers for Labour</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">Uniting all Labour-supporting bloggers under one roof. </FONT></TD><TD id="taw1" class="ch" width="229" height="41" align="left" valign="top" onfocus="ss('go to www.editme.com','aw1')" onmouseover="ss('go to www.editme.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="font-size:11px; font-family:verdana,arial,sans-serif; line-height:14px;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.editme.com/&sa=l&ai=BJmVNde6MQunkAp3SSdHK9IQM2ObRBfqUuKsBwI23AeDrJRACGAQgsbmgAigCQIoWSIg5oAGYtYr_A6oBCjE4ODY0ODkzNDKyARZ3d3cuMXN0cGVyc29ucHJlc3MuY29tugEJNDY4eDYwX2FzyAEB2gE4aHR0cDovL3d3dy4xc3RwZXJzb25wcmVzcy5jb20vYXJjaGl2ZXMvdGlkZGx5LXdpa2tpLmh0bWzgAQLoAQE&num=4&client=ca-pub-9414372097330730" onfocus="ss('go to www.editme.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.editme.com','aw1')" onmouseout="cs()"><B>Wiki Hosting for $5/mo</B></A></FONT><BR><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; color:#333333; line-height:12px;">The award-winning, irresistibly editable web site solution. </FONT></TD></TR></TBODY></TABLE></TD></TR><TR><TD nowrap="" width="99%" height="11" align="right" bgcolor="#ffffff"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.1stpersonpress.com/archives/tiddly-wikki.html&hl=en&client=ca-pub-9414372097330730&adU=bloggers4labour.org&adT=Bloggers+for+Labour&adU=www.editme.com&adT=Wiki+Hosting+for+%245/mo&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="font-size:10px; font-family:verdana,arial,sans-serif; line-height:13px;">Ads by Goooooogle</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_ <!--framePath //<!--frame2-->-->_ªhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-9414372097330730&dt=1116532358602&prev_fmts=468x60_as&format=468x60_as&output=html&channel=1886489342&pv_ch=1886489342%2B&url=http%3A%2F%2Fwww.1stpersonpress.com%2Farchives%2Ftiddly-wikki.html&color_bg=EEEEEE&color_text=333333&color_link=669900&color_url=669900&color_border=FFFFFF&cc=97&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I M T f u ã?HQouF0FjF|FÖFéFîqÇqΩq«qÀqŒqŸqÑCÑVÖÌÖÚÖ˜Ö˛ããtã~ãÖå$å_åfèëèÿèﬂê&ê1öö%öÕö–ö€¨Ê≠	             6              Æ»

@@ -1,0 +1,1231 @@
+bplist00Ò/_WebSubresources_WebMainResource¬#&),Ó	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO¬body {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+    margin: 0; padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    font-weight: bold;
+    color: #036; background-color: transparent;
+}
+h1 a {
+    font-weight: normal;
+    font-size: 80%;
+}
+h2 {
+    font-weight: normal;
+    color: #036; background-color: transparent;
+}
+h3 {
+    color: #024; background-color: transparent;
+}
+.hide {
+    display: none;
+}
+hr {
+    border: 0;
+    width: 80%;
+    color: #369; background-color: #369;
+    height: 2px;
+}
+table.choices {
+    margin-left: 1.5em;
+    margin-right: -1.5em;
+    margin-top: 1em;
+}
+table.edged {
+    border: 2px solid #c5dff9;
+}
+table.edged td {
+    border: 1px solid #8fc3f7;;
+}
+.standout {
+    text-align: center;
+}
+.standout .container {
+    color: #000; background-color: #c5dff9;
+    border: 1px solid #8fc3f7;
+    padding: 3px;
+    /* margin shorthand isn't recognized by IE5/Mac */
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.errorbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFEEEE;
+    background-repeat: repeat-x;
+    border: 1px solid #FF9999;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.warningbar {
+    color: #000;
+    font: 12px Verdana, Arial, Sans-Serif;
+    background-color: #FFFFDD;
+    background-repeat: repeat-x;
+    border: 1px solid #FFCC33;
+    padding: 8px;
+    margin-top: auto; margin-bottom: auto;
+    margin-left: auto; margin-right: auto;
+    width: auto;
+    text-align: left;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+
+/* layout */
+
+#Userpic {
+    position: absolute;
+    width: 100%; height: 100px;
+    top: 0px; right: 0; 
+    text-align: right;
+}
+#Userpic img {
+    display: inline;
+    border: 1px solid #FFF;
+}
+.talk-comment {
+    margin-top: 1em;
+    margin-bottom: 0px;
+}
+#Logo {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 68px;
+    margin: 0; padding: 0;
+    color: #FFF; background-color:#69C;
+}
+#Logo img {
+    border: 0;
+}
+#Greeting {
+    position: absolute;
+    left: 300px; top: 25px; right: 112px;
+    width: auto; text-align: right;
+    color: #FFF; background-color: #69C;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Setlang {
+    position: absolute;
+    left: 300px; right: 112px; top: 45px;
+    width: auto; text-align: right;
+}
+#Setlang a {
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+/* Fix IE5 Horizontal scroll */
+* html div#Content { width: 100%; w\idth: auto; }
+
+#Content pre {
+   line-height: 1em; 
+}
+.talk-comment {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+#Upgrade {
+    position: absolute;
+    top: 60px; left: 70px;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#Upgrade a {
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    border: 0;
+}
+
+/* Forms */
+
+#Search {
+    position: absolute;
+    left: 300px; top: 103px; right: 40px;
+    width: auto; height: 20px;
+    margin: 5px 0 5px 5px; padding: 0; border: 0;
+    text-align: right;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    clear: both;
+}
+#commenttext { width: 100%; }
+
+/* Navigate */ 
+
+#NavMenuList {
+    color: #000; background-color: transparent;
+    font: 80% Arial, Geneva, Helvetica, sans-serif;
+    padding: 3px; margin-left: 40px;
+}
+.NavSubMenuList li {
+    display: inline;
+    list-style: none;
+}
+#NavMenuListTitle {
+    display: block; margin-left: 40px;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+#FooterNav {
+    margin: 0px; padding: 0 100px 0 70px;
+    border: 1px solid #69C;
+    color: #FFF; background-color: #69C;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+    color: #FFF; background-color: #69C;
+}
+#FooterNav a {
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+/* Form Items */
+.formitem {
+    color: #343434;
+    font-size: 1em;
+}
+
+.formnumber {
+    font-weight: bold;
+    margin-top: 1.8em;
+    font-size: .9em;
+}
+
+.formitemName {
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 1.8em;
+}
+
+.formitemDesc {
+    margin-top: .4em;
+    margin-bottom: .4em;
+    color: #505050;
+}
+
+.formitemNote {
+    color: #da6320;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.formitemFlag {
+    color: #CE0000;
+    font-size: .9em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+.borderedtable {
+    border: solid 1px black;
+}
+
+/* the top of the borderedtable, use th tags for header columns */
+.borderedtable th {
+    background-color: #dddddd;
+    border-bottom: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+_(http://stat.livejournal.com/xc/basic.cssXtext/cssÓ
+OÁ/* The 90% width keeps the menubar from wrapping prematurely, 
+but overlays the upgrade button in some browsers. Still
+looking for a good fix. 
+100% stretches the bar and creates a horizontal scroll. Suckage. */
+#NavMenuList {
+    position: absolute;
+    left: 60px; top: 60px;
+    height: 40px; width: 90%;
+    margin: 0; padding: 0;
+    display: inline; white-space: nowrap;
+    clear: both;
+}
+#NavMenuList li {
+    display: inline;
+    list-style: none; white-space: nowrap;
+}
+#NavMenuList a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; display: block;
+    border-top: 1px solid #FFF;
+}
+#NavMenuList a.preextra {
+    padding: 2px 1px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#NavMenuList a.extra {
+    padding: 2px 10px 1px 1px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #69C;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+    font-weight: bold;
+}
+#NavMenuList a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuList .NavSubMenuList {
+    visibility: hidden;
+    left: 0; top: 20px;
+    position: absolute; height: 20px;
+    width: 100%; display: inline; white-space: nowrap;
+    margin: 0; padding: 0; border: 0px;
+}
+#NavMenuList .NavSubMenuList li a {
+    color: #FFF;
+    background-color: #69C;
+    float: left;
+}
+#NavMenuList .NavSubMenuList li a:hover {
+    color: #000; background-color: #FFF;
+}
+#NavMenuListTitle {
+    display: none;
+}_.http://stat.livejournal.com/xc/menu-normal.cssÓ
+O”body, dd, dt, th, td, p, div, li, pre, code, kbd { font-size: small; }
+h3 { font-size: medium; }
+h2 { font-size: large; }
+h1 { font-size: x-large; }_/http://stat.livejournal.com/xc/normal-fonts.cssÓ
+OËbody {
+    color: #000000;
+    background: #ffffff url(allbars.gif) repeat-x;
+}
+a:link {
+    color: #00C; background-color: transparent;
+}
+a:visited {
+    color: #306; background-color: transparent;
+}
+a:active {
+    color: #F60; background-color: transparent;
+}
+h1 {
+    margin: 0 0 0.5em 0; padding: 0;
+}
+h2 {
+    margin: 0.3em 0 0.1em 0; padding: 0;
+}
+/* h2+p {
+    margin: 0;
+} */
+h3 {
+    font-style: italic;
+    margin: 0.2em 0 0.2em 0; padding: 0;
+}
+p {
+    margin: 0.75em 0;
+}
+.hide {
+    display: none;
+}
+div.centered {
+    text-align: center;
+    width: 100%;
+}
+.lesstop {
+    margin-top: 2px;
+}
+.de {
+    color: #909090; background-color: #ffffff;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+/* layout */
+
+#Content {
+    margin: 120px 80px 0 50px;
+    padding-bottom: 20px;
+}
+#Content pre {
+   line-height: 1.1em; 
+   font-size: 1.1em;
+}
+#Logo {
+    color: #FFF; background-color: transparent;
+}
+#Setlang {
+    position: absolute;
+    left: auto; right: 5px; top: 0px;
+    width: 250px; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right; white-space: nowrap;
+}
+#Setlang a {
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    color: #FFF; background-color: #69C;
+    text-decoration: none;
+}
+#Greeting {
+    position: absolute;
+    left: auto; right: 112px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#Greeting.nopic {
+    right: 50px;
+}
+#Greeting a {
+    color: #FFF; background-color: #69C;
+    font-weight: normal;
+}
+#Greeting a b {
+    font-weight: normal;
+}
+#Greeting #Logout {
+    font: 9px Arial, Geneva, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+#LoginBox {
+    position: absolute;
+    left: auto; right: 20px; top: 15px;
+    width: auto; height: 20px;
+    text-align: right;
+    color: #FFF; background-color: transparent;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+#NotLoggedInDiv a {
+    color: #FFF;
+}
+
+#Upgrade {
+    position: absolute;
+    left: auto;
+    right: 142px; top: 59px;
+    width: 180px; height: 20px;
+    padding-top: 2px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, sans-serif;
+    display: block; float: left;
+}
+#Upgrade a {
+    padding: 2px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: #036;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left; white-space: nowrap;
+    display: block; text-align: right;
+}
+#Upgrade a:hover {
+    color: #000; background-color: #FFF;
+}
+#Userpic {
+    display: block;
+    position: absolute;
+    left: auto; right: 0; top: 0;
+    width: 101px; height: 100px;
+    color: #FFF; background-color: transparent;
+    text-align: right;
+}
+#Userpic img {
+    color: #000; background-color: #FFF;
+    border: 0;
+    border-left: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+#menu-tos {
+    margin-left: 60px;
+}
+#FooterNav {
+    width: 100%; height: 20px;
+    color: #FFF; background-color: #69C;
+    margin: 0; padding: 0; border: 0;
+    clear: both;
+}
+#FooterNav li {
+    display: inline;
+    list-style: none;
+}
+#FooterNav a {
+    padding: 3px 10px 1px 10px;
+    width: auto; height: 16px;
+    color: #FFF; background-color: transparent;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+    text-decoration: none;
+    float: left;
+}
+#FooterNav a:hover {
+    color: #000; background-color: #FFF;
+}
+#Search {
+    float: left;
+    position: absolute;
+    left: auto; right: 40px; top: 103px;
+    width: auto; height: 20px;
+    margin: 0; padding: 0; border: 0;
+    text-align: right;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+#ljbreadcrumbs {
+    float: right;
+    position: absolute;
+    left: 10px; right: auto; top: 107px;
+    width: auto; height: 20px;
+    margin: 0px; padding: 0; border: 0;
+    text-align: left;
+    white-space: nowrap; display: inline;
+    font: 11px Arial, Geneva, Helvetica, sans-serif;
+}
+
+#Comments q {
+    font-style: italic;
+}
+
+_+http://stat.livejournal.com/xc/extended.cssÓOvar xcol_cur_menu = null;
+var xcol_cur_submenu = null;
+
+function show(id)
+{
+    if (!isDOMcompliant()) { return; }
+    var menu = document.getElementById("Menu" + id);
+    var menus = document.getElementById("NavMenuList");
+    if (!menus) return;
+
+    var submenu = menus.getElementsByTagName("ul").item(id);
+    if (xcol_cur_submenu == null) {
+        submenu.style.visibility = "visible";
+    } else {
+        xcol_cur_submenu.style.visibility = "hidden";
+        submenu.style.visibility = "visible";
+    }
+    if (xcol_cur_menu == null) {
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    } else {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+        menu.style.backgroundColor = "#FFF";
+        menu.style.color = "#000";
+    }
+    xcol_cur_menu = menu;
+    xcol_cur_submenu = submenu;
+}
+
+function unshow()
+{
+    if (!isDOMcompliant()) { return; }
+    if (xcol_cur_submenu != null) {
+        xcol_cur_submenu.style.visibility = "hidden";
+    }
+    if (xcol_cur_menu != null) {
+        xcol_cur_menu.style.backgroundColor = "#036";
+        xcol_cur_menu.style.color = "#FFF";
+    }
+    xcol_cur_submenu = null;
+    xcol_cur_menu = null;
+}
+
+function isDOMcompliant()
+{
+    return document.getElementById && document.getElementsByTagName;
+}
+
+function xcShowLoginDiv () {
+    if (!document.getElementById) return true;
+    var notloge = document.getElementById("NotLoggedInDiv");
+    var logboxe = document.getElementById("LoginBox");
+    var xcusere = document.getElementById("xc_user");
+    if (!notloge || !logboxe || ! xcusere) return true;
+    notloge.style.display = 'none';
+    logboxe.style.display = 'block';
+    xcusere.focus();
+    return false;
+}
+
+var showNothing = function () { show(0) };
+if (window.attachEvent)
+    window.attachEvent("onload", showNothing);
+if (window.addEventListener)
+    window.addEventListener("load", showNothing, false);
+_(http://stat.livejournal.com/xc/layout.js_application/x-javascriptÓO't/*
+ *  md5.jvs 1.0b 27/06/96
+ *
+ * Javascript implementation of the RSA Data Security, Inc. MD5
+ * Message-Digest Algorithm.
+ *
+ * Copyright (c) 1996 Henri Torgemane. All Rights Reserved.
+ *
+ * Permission to use, copy, modify, and distribute this software
+ * and its documentation for any purposes and without
+ * fee is hereby granted provided that this copyright notice
+ * appears in all copies. 
+ *
+ * Of course, this soft is provided "as is" without express or implied
+ * warranty of any kind.
+ */
+
+
+
+function array(n) {
+  for(i=0;i<n;i++) this[i]=0;
+  this.length=n;
+}
+
+/* Some basic logical functions had to be rewritten because of a bug in
+ * Javascript.. Just try to compute 0xffffffff >> 4 with it..
+ * Of course, these functions are slower than the original would be, but
+ * at least, they work!
+ */
+
+function integer(n) { return n%(0xffffffff+1); }
+
+function shr(a,b) {
+  a=integer(a);
+  b=integer(b);
+  if (a-0x80000000>=0) {
+    a=a%0x80000000;
+    a>>=b;
+    a+=0x40000000>>(b-1);
+  } else
+    a>>=b;
+  return a;
+}
+
+function shl1(a) {
+  a=a%0x80000000;
+  if (a&0x40000000==0x40000000)
+  {
+    a-=0x40000000;  
+    a*=2;
+    a+=0x80000000;
+  } else
+    a*=2;
+  return a;
+}
+
+function shl(a,b) {
+  a=integer(a);
+  b=integer(b);
+  for (var i=0;i<b;i++) a=shl1(a);
+  return a;
+}
+
+function and(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1&t2)+0x80000000);
+    else
+      return (t1&b);
+  else
+    if (t2>=0)
+      return (a&t2);
+    else
+      return (a&b);  
+}
+
+function or(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return ((t1|t2)+0x80000000);
+    else
+      return ((t1|b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a|t2)+0x80000000);
+    else
+      return (a|b);  
+}
+
+function xor(a,b) {
+  a=integer(a);
+  b=integer(b);
+  var t1=(a-0x80000000);
+  var t2=(b-0x80000000);
+  if (t1>=0) 
+    if (t2>=0) 
+      return (t1^t2);
+    else
+      return ((t1^b)+0x80000000);
+  else
+    if (t2>=0)
+      return ((a^t2)+0x80000000);
+    else
+      return (a^b);  
+}
+
+function not(a) {
+  a=integer(a);
+  return (0xffffffff-a);
+}
+
+/* Here begin the real algorithm */
+
+    var state = new array(4); 
+    var count = new array(2);
+	count[0] = 0;
+	count[1] = 0;                     
+    var buffer = new array(64); 
+    var transformBuffer = new array(16); 
+    var digestBits = new array(16);
+
+    var S11 = 7;
+    var S12 = 12;
+    var S13 = 17;
+    var S14 = 22;
+    var S21 = 5;
+    var S22 = 9;
+    var S23 = 14;
+    var S24 = 20;
+    var S31 = 4;
+    var S32 = 11;
+    var S33 = 16;
+    var S34 = 23;
+    var S41 = 6;
+    var S42 = 10;
+    var S43 = 15;
+    var S44 = 21;
+
+    function F(x,y,z) {
+	return or(and(x,y),and(not(x),z));
+    }
+
+    function G(x,y,z) {
+	return or(and(x,z),and(y,not(z)));
+    }
+
+    function H(x,y,z) {
+	return xor(xor(x,y),z);
+    }
+
+    function I(x,y,z) {
+	return xor(y ,or(x , not(z)));
+    }
+
+    function rotateLeft(a,n) {
+	return or(shl(a, n),(shr(a,(32 - n))));
+    }
+
+    function FF(a,b,c,d,x,s,ac) {
+        a = a+F(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function GG(a,b,c,d,x,s,ac) {
+	a = a+G(b, c, d) +x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function HH(a,b,c,d,x,s,ac) {
+	a = a+H(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function II(a,b,c,d,x,s,ac) {
+	a = a+I(b, c, d) + x + ac;
+	a = rotateLeft(a, s);
+	a = a+b;
+	return a;
+    }
+
+    function transform(buf,offset) { 
+	var a=0, b=0, c=0, d=0; 
+	var x = transformBuffer;
+	
+	a = state[0];
+	b = state[1];
+	c = state[2];
+	d = state[3];
+	
+	for (i = 0; i < 16; i++) {
+	    x[i] = and(buf[i*4+offset],0xff);
+	    for (j = 1; j < 4; j++) {
+		x[i]+=shl(and(buf[i*4+j+offset] ,0xff), j * 8);
+	    }
+	}
+
+	/* Round 1 */
+	a = FF ( a, b, c, d, x[ 0], S11, 0xd76aa478); /* 1 */
+	d = FF ( d, a, b, c, x[ 1], S12, 0xe8c7b756); /* 2 */
+	c = FF ( c, d, a, b, x[ 2], S13, 0x242070db); /* 3 */
+	b = FF ( b, c, d, a, x[ 3], S14, 0xc1bdceee); /* 4 */
+	a = FF ( a, b, c, d, x[ 4], S11, 0xf57c0faf); /* 5 */
+	d = FF ( d, a, b, c, x[ 5], S12, 0x4787c62a); /* 6 */
+	c = FF ( c, d, a, b, x[ 6], S13, 0xa8304613); /* 7 */
+	b = FF ( b, c, d, a, x[ 7], S14, 0xfd469501); /* 8 */
+	a = FF ( a, b, c, d, x[ 8], S11, 0x698098d8); /* 9 */
+	d = FF ( d, a, b, c, x[ 9], S12, 0x8b44f7af); /* 10 */
+	c = FF ( c, d, a, b, x[10], S13, 0xffff5bb1); /* 11 */
+	b = FF ( b, c, d, a, x[11], S14, 0x895cd7be); /* 12 */
+	a = FF ( a, b, c, d, x[12], S11, 0x6b901122); /* 13 */
+	d = FF ( d, a, b, c, x[13], S12, 0xfd987193); /* 14 */
+	c = FF ( c, d, a, b, x[14], S13, 0xa679438e); /* 15 */
+	b = FF ( b, c, d, a, x[15], S14, 0x49b40821); /* 16 */
+
+	/* Round 2 */
+	a = GG ( a, b, c, d, x[ 1], S21, 0xf61e2562); /* 17 */
+	d = GG ( d, a, b, c, x[ 6], S22, 0xc040b340); /* 18 */
+	c = GG ( c, d, a, b, x[11], S23, 0x265e5a51); /* 19 */
+	b = GG ( b, c, d, a, x[ 0], S24, 0xe9b6c7aa); /* 20 */
+	a = GG ( a, b, c, d, x[ 5], S21, 0xd62f105d); /* 21 */
+	d = GG ( d, a, b, c, x[10], S22,  0x2441453); /* 22 */
+	c = GG ( c, d, a, b, x[15], S23, 0xd8a1e681); /* 23 */
+	b = GG ( b, c, d, a, x[ 4], S24, 0xe7d3fbc8); /* 24 */
+	a = GG ( a, b, c, d, x[ 9], S21, 0x21e1cde6); /* 25 */
+	d = GG ( d, a, b, c, x[14], S22, 0xc33707d6); /* 26 */
+	c = GG ( c, d, a, b, x[ 3], S23, 0xf4d50d87); /* 27 */
+	b = GG ( b, c, d, a, x[ 8], S24, 0x455a14ed); /* 28 */
+	a = GG ( a, b, c, d, x[13], S21, 0xa9e3e905); /* 29 */
+	d = GG ( d, a, b, c, x[ 2], S22, 0xfcefa3f8); /* 30 */
+	c = GG ( c, d, a, b, x[ 7], S23, 0x676f02d9); /* 31 */
+	b = GG ( b, c, d, a, x[12], S24, 0x8d2a4c8a); /* 32 */
+
+	/* Round 3 */
+	a = HH ( a, b, c, d, x[ 5], S31, 0xfffa3942); /* 33 */
+	d = HH ( d, a, b, c, x[ 8], S32, 0x8771f681); /* 34 */
+	c = HH ( c, d, a, b, x[11], S33, 0x6d9d6122); /* 35 */
+	b = HH ( b, c, d, a, x[14], S34, 0xfde5380c); /* 36 */
+	a = HH ( a, b, c, d, x[ 1], S31, 0xa4beea44); /* 37 */
+	d = HH ( d, a, b, c, x[ 4], S32, 0x4bdecfa9); /* 38 */
+	c = HH ( c, d, a, b, x[ 7], S33, 0xf6bb4b60); /* 39 */
+	b = HH ( b, c, d, a, x[10], S34, 0xbebfbc70); /* 40 */
+	a = HH ( a, b, c, d, x[13], S31, 0x289b7ec6); /* 41 */
+	d = HH ( d, a, b, c, x[ 0], S32, 0xeaa127fa); /* 42 */
+	c = HH ( c, d, a, b, x[ 3], S33, 0xd4ef3085); /* 43 */
+	b = HH ( b, c, d, a, x[ 6], S34,  0x4881d05); /* 44 */
+	a = HH ( a, b, c, d, x[ 9], S31, 0xd9d4d039); /* 45 */
+	d = HH ( d, a, b, c, x[12], S32, 0xe6db99e5); /* 46 */
+	c = HH ( c, d, a, b, x[15], S33, 0x1fa27cf8); /* 47 */
+	b = HH ( b, c, d, a, x[ 2], S34, 0xc4ac5665); /* 48 */
+
+	/* Round 4 */
+	a = II ( a, b, c, d, x[ 0], S41, 0xf4292244); /* 49 */
+	d = II ( d, a, b, c, x[ 7], S42, 0x432aff97); /* 50 */
+	c = II ( c, d, a, b, x[14], S43, 0xab9423a7); /* 51 */
+	b = II ( b, c, d, a, x[ 5], S44, 0xfc93a039); /* 52 */
+	a = II ( a, b, c, d, x[12], S41, 0x655b59c3); /* 53 */
+	d = II ( d, a, b, c, x[ 3], S42, 0x8f0ccc92); /* 54 */
+	c = II ( c, d, a, b, x[10], S43, 0xffeff47d); /* 55 */
+	b = II ( b, c, d, a, x[ 1], S44, 0x85845dd1); /* 56 */
+	a = II ( a, b, c, d, x[ 8], S41, 0x6fa87e4f); /* 57 */
+	d = II ( d, a, b, c, x[15], S42, 0xfe2ce6e0); /* 58 */
+	c = II ( c, d, a, b, x[ 6], S43, 0xa3014314); /* 59 */
+	b = II ( b, c, d, a, x[13], S44, 0x4e0811a1); /* 60 */
+	a = II ( a, b, c, d, x[ 4], S41, 0xf7537e82); /* 61 */
+	d = II ( d, a, b, c, x[11], S42, 0xbd3af235); /* 62 */
+	c = II ( c, d, a, b, x[ 2], S43, 0x2ad7d2bb); /* 63 */
+	b = II ( b, c, d, a, x[ 9], S44, 0xeb86d391); /* 64 */
+
+	state[0] +=a;
+	state[1] +=b;
+	state[2] +=c;
+	state[3] +=d;
+
+    }
+
+    function init() {
+	count[0]=count[1] = 0;
+	state[0] = 0x67452301;
+	state[1] = 0xefcdab89;
+	state[2] = 0x98badcfe;
+	state[3] = 0x10325476;
+	for (i = 0; i < digestBits.length; i++)
+	    digestBits[i] = 0;
+    }
+
+    function update(b) { 
+	var index,i;
+	
+	index = and(shr(count[0],3) , 0x3f);
+	if (count[0]<0xffffffff-7) 
+	  count[0] += 8;
+        else {
+	  count[1]++;
+	  count[0]-=0xffffffff+1;
+          count[0]+=8;
+        }
+	buffer[index] = and(b,0xff);
+	if (index  >= 63) {
+	    transform(buffer, 0);
+	}
+    }
+
+    function finish() {
+	var bits = new array(8);
+	var	padding; 
+	var	i=0, index=0, padLen=0;
+
+	for (i = 0; i < 4; i++) {
+	    bits[i] = and(shr(count[0],(i * 8)), 0xff);
+	}
+        for (i = 0; i < 4; i++) {
+	    bits[i+4]=and(shr(count[1],(i * 8)), 0xff);
+	}
+	index = and(shr(count[0], 3) ,0x3f);
+	padLen = (index < 56) ? (56 - index) : (120 - index);
+	padding = new array(64); 
+	padding[0] = 0x80;
+        for (i=0;i<padLen;i++)
+	  update(padding[i]);
+        for (i=0;i<8;i++) 
+	  update(bits[i]);
+
+	for (i = 0; i < 4; i++) {
+	    for (j = 0; j < 4; j++) {
+		digestBits[i*4+j] = and(shr(state[i], (j * 8)) , 0xff);
+	    }
+	} 
+    }
+
+/* End of the MD5 algorithm */
+
+function hexa(n) {
+ var hexa_h = "0123456789abcdef";
+ var hexa_c=""; 
+ var hexa_m=n;
+ for (hexa_i=0;hexa_i<8;hexa_i++) {
+   hexa_c=hexa_h.charAt(Math.abs(hexa_m)%16)+hexa_c;
+   hexa_m=Math.floor(hexa_m/16);
+ }
+ return hexa_c;
+}
+
+
+var ascii="01234567890123456789012345678901" +
+          " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
+          "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+
+function MD5(entree) 
+{
+ var l,s,k,ka,kb,kc,kd;
+
+ init();
+ for (k=0;k<entree.length;k++) {
+   l=entree.charAt(k);
+   update(ascii.lastIndexOf(l));
+ }
+ finish();
+ ka=kb=kc=kd=0;
+ for (i=0;i<4;i++) ka+=shl(digestBits[15-i], (i*8));
+ for (i=4;i<8;i++) kb+=shl(digestBits[15-i], ((i-4)*8));
+ for (i=8;i<12;i++) kc+=shl(digestBits[15-i], ((i-8)*8));
+ for (i=12;i<16;i++) kd+=shl(digestBits[15-i], ((i-12)*8));
+ s=hexa(kd)+hexa(kc)+hexa(kb)+hexa(ka);
+ return s; 
+}
+
+/* This implement the MD5 test suite */
+var testOk=false;
+function teste() {
+ if (testOk) return;
+ document.test.o1.value=MD5(document.test.i1.value);
+ document.test.o2.value=MD5(document.test.i2.value);
+ document.test.o3.value=MD5(document.test.i3.value);
+ document.test.o4.value=MD5(document.test.i4.value);
+ document.test.o5.value=MD5(document.test.i5.value);
+ document.test.o6.value=MD5(document.test.i6.value);
+ document.test.o7.value=MD5(document.test.i7.value);
+ testOk=true;
+}
+_$http://www.livejournal.com/js/md5.jsÓOB.ÿØÿà JFIF  H H  ÿáOExif  MM *                  b       j(       1       r2       †‡i       œ   È   H      H   Adobe Photoshop 7.0 2003:03:24 01:14:47         ÿÿ          d        d                          (             &      !       H      H   ÿØÿà JFIF  H H  ÿí Adobe_CM ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  d d" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? ì‚ÀÁ§uxPÑ‡[{”ïdÖª}dÎ³¦ı_¿2§²·Ó[‹M€–“û¾ßrœG› ÎüJbûYY-.ˆ¤uıÕÇõÏñŸõÎ£Í±-qdiùÍ°ı5æYık®uÛ›^MïÈ ÍuõGõT(ú½Õ¯vÚè'ÏHLXG¯ÚËDô·¸ã‰Õ·m]47Y:üQpÿ Ç0—}·§iù“çOo…Ã;êÏXc¢Êvy’«åt|Ìa¹ÍoˆLÄN—¿Ùıú¿Lÿ WòîfUnãÇ ækaÜ»\k±3)ãXÛkv¡Í2ÌÄAƒÊëş }tÈè]E¸Ù69İ?%Á¶taú"Á?ôÔ€ƒ¦Ç§e†/±fcƒ]š.S«PKò—kvÛ(/akÀsHÔW+×ÙÇÍÈ…”ó$(ŠB‹‚bäP%%(I%?ÿĞôOôkÿ å·êûh¥Åµ¼n¸$ígöœ»¾ÕõÛ¦·7êåí:: #ÈÃ¿è¹KÅİ„</Ôª´×‚ÌÜ–î»$ÁE¿šßí.Çöu´Àk‡	º}oû;Y[!­ Ú ®ı½¥ù1ƒÅbÌË$‰6lºÑ1³ÍgÕAqŸê•=»F ó£êYı×8¸ûò28Ù[~÷ÆÕÏu—ÔK}JkØî@ş	ĞÇ uÑ2#M^+ªb}÷?EuYlvF›‘TZÀCƒâ9‰…“™•^&;îµÁo™WñNã¯è´òÂ¤(nûçÔÜÿ Ú_Tp2Òô…nø×ú#ÿ P©ıdlcë*âÊÿ ±ô«z=ÎŞêîs«°n¿Iİü¶?cÖŸÖaúYXŒ„ Û^p”$…<¡
+Fp@³IM
+G#rH{½É"§ÿÑõöÂÍúÅutôl£cw´Ö[´rK´“èÿ ã-¹ùŒ¦ÊMoüó®«°È~6^+™c›úF}Í*I@Şû1Õã±:çZi%øc£Úç‘$VJÔêûúg¬Ùvá!¡cu«™9Ùy¹78âÖ[ézn Ÿô›ùc·±Û?àÕûºcÙÒÙN;v²†ì®O {Z7,©Š4Òˆı««uéĞ¹ôc>Æ<ã¿ìî}R×mz¦anæ»ÒUº7BëtZëóîc·¹€³>İ¯t p®¯©×-É³Ò¦ÎFóôZöÿ )tvcUé¹Õ˜#…šá kú]R@¯ìx¬t1–z›v“£ã…ÏôÀüµ]˜Õl²C[ßQù¿Ê]7Ö}Î®ÆN°W;„ÛN~¤H»ÔkX{‚ïdş*\CĞ|˜æ}Aìúu˜ç¥ôÜüYeõŠéµ:`wòë½l}l§S¼\d*]/¦`ô»)Ä9¡Ç‡Ş©{ÇçYÏ÷=GëGZé¹m5\ÒöAóVùX	K¤~n@Ê ~ˆÕË:´U[{«š8…Zæò¤k´uŞ’”{ÒJÔÿ ÿÒæ1±3·5´6_Û¶«¼ú±C›éãõë}<‹„ĞÇ:	²Àn¹–9†A
+ãns3qºCÍÏÂ’İÇHóSã DÜ±ÊÉ
+{S‡F>A®)€æë:÷åeæ³;&«pYw¦Ie€j ÿ ¿¬!ş1p®Îõm¸2¯£évoò†›–åµİcüWµÔİs»íw¹»V_3¤ô şn‡-!(ÓûZöaacšÜû}GÓk®q{šè‚ïë¢àf·2ğì{w2£¶ò'aó7ÏP=*Œ‚+±Î°¥ØT#f
+ñq=À­¬Ö·@$ôÜ³Ï„h	.7[¥¯mÀëµÆˆ\N{¬ÇÉc«qcÛîk‡ 6®§/=¿c°Ø}ÚÉ>K“°Y›sœ8ü•ŒB†½ù_ú±Òúsş¯`äÛKlºê›e¶:Kœç{œç8®Kë·Hé‚ö½•úv‡7nš)ı\úëKz]&OÚq°³‰ó›ûŞÕGëY7×½¤û`;ã¨Z nïf‹d¸’Ú¶LÄ¥ouG‡V~_‘NÎEsOóÒRzIZÿÓ`ĞªõgŠzfEœC|ÖF?ÖúívÓY
+=k¬3/¦ÙMNŸ¡ÁIÁ.ÅcÈ×­£Ì¯Jú×ìõ[Ó2	s`š\íxÿ Çî®¦fdİ·¡ïh˜ò¬ú¯Ò3*}½C)›N;\hh?IÁ®•\Bq1òód†NX}E††7{àO=—1õ—¬â×Y®§z–“£[©Pæõ>•‡›]ÎÙ‘Kö´À—v¡ê«}K1ØsóYñàĞ·M—‹}Yy¯%À¶¯İZ];¦l¡ÇjèoéUSTVİ{©FS†<SÎKïbâƒõªŠÜ×=ÜiÀq[Ymkn-µÄº­€ˆÓÜç5¥G
+~µQls§à× }oªêCréyikö¾8 ıÃù.WpÊà™cR.¯OwèÎ½‡÷#¾Úõi"|7HÊ¼ôÚ²X›‰eà‡I@êVŞëe@ëß’|´è°ëN×©^îBK‘ûfNıºÏ„I6ü
+hwÿÔà*è=X’\@$™E«¢õ‘Yp ¸4Ìø!ôú¾°g;n+­-:’CGöÊîz6ğk®œ›]}¯şvÂIû¬º¬µµı«¾£ìs:N6WLéy]G&¿Iígó#_kuŞïå.¯ÕZĞ")¸£Èª[¡Ÿ³2±Yîu´ØZ<C[¹Ê×E¨¿¤T×™s  ÿ e©’&Z”Z/õ%”3+êæIıc§XãP?aß[™ıG;ŞºsŠ`‰ë½+1Ï«®ô§z €GøFğVÎ]'Õß¬ØX0·Óú,º´ÉÅwÓ­Ü?Ñîú.YÙğğÈÈm/Í·‹'¨O•Cd|•LêÀ«hû–‰­îxŸ;pİe…±¢…•æpğ@ÍõˆÔ~"wÖl[
+öF¤>^åÒY^Ì› ÑŒ£Ìı'9QêµÒ`h[ªĞÃZ™dÉí£ÅıG¼Z2°^tkê\µßŠÓsê#F>k—ú»wØş±5œ5ïuGæ}«´È¨ı <s©OBÆå~Ïo©ÇÍ%©·İ¹$•OÿÕ±GØıÎÙüßO’vO¬f6O·Åy
+IëCë=kÛq6ñö|ÍşéV‡@Ÿ°³w[?æ1x²HôSïíı'î~t®#3Öÿ Tÿ Íiı§ÿ j6ÿ 7³Oé›ıeçÉ(²ü‡o«./œ?Gaúş“>Ù³×¿Ó›¿;fä[·zVzÎF‹æÄ•î2ëûl¿í[.ôvz³íõglÇçl\íï¶Û_lÚ}“ù¿Èô—"’Ò‡c¿Ów±·şmşØÆÙ¿×õI³÷ôÛêOò¿Ñ®§'nÿ ’òT“Á`}WÛéù¤¼©$Ô¿ÿÙÿíôPhotoshop 3.0 8BIM%                     8BIMí      H     H    8BIM&               ?€  8BIM        8BIM        8BIMó     	         8BIM
+       8BIM'     
+        8BIMõ     H /ff  lff       /ff  ¡™š       2    Z         5    -        8BIMø     p  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè    ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿè  8BIM          @  @    8BIM         8BIM    Q              d   d    r i c h _ a p a r t m e n t                                 d   d                                            null      boundsObjc         Rct1       Top long        Leftlong        Btomlong   d    Rghtlong   d   slicesVlLs   Objc        slice      sliceIDlong       groupIDlong       originenum   ESliceOrigin   autoGenerated    Typeenum   
+ESliceType    Img    boundsObjc         Rct1       Top long        Leftlong        Btomlong   d    Rghtlong   d   urlTEXT         nullTEXT         MsgeTEXT        altTagTEXT        cellTextIsHTMLbool   cellTextTEXT        	horzAlignenum   ESliceHorzAlign   default   	vertAlignenum   ESliceVertAlign   default   bgColorTypeenum   ESliceBGColorType    None   	topOutsetlong       
+leftOutsetlong       bottomOutsetlong       rightOutsetlong     8BIM      8BIM        8BIM    =      d   d  ,  u0  !  ÿØÿà JFIF  H H  ÿí Adobe_CM ÿî Adobe d€   ÿÛ „ 			
+ÿÀ  d d" ÿİ  ÿÄ?          	
+         	
+ 3 !1AQa"q2‘¡±B#$RÁb34r‚ÑC%’Sğáñcs5¢²ƒ&D“TdEÂ£t6ÒUâeò³„ÃÓuãóF'”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö7GWgw‡—§·Ç×ç÷ 5 !1AQaq"2‘¡±B#ÁRÑğ3$bár‚’CScs4ñ%¢²ƒ&5ÂÒD“T£dEU6teâò³„ÃÓuãóF”¤…´•ÄÔäô¥µÅÕåõVfv†–¦¶ÆÖæö'7GWgw‡—§·ÇÿÚ   ? ì‚ÀÁ§uxPÑ‡[{”ïdÖª}dÎ³¦ı_¿2§²·Ó[‹M€–“û¾ßrœG› ÎüJbûYY-.ˆ¤uıÕÇõÏñŸõÎ£Í±-qdiùÍ°ı5æYık®uÛ›^MïÈ ÍuõGõT(ú½Õ¯vÚè'ÏHLXG¯ÚËDô·¸ã‰Õ·m]47Y:üQpÿ Ç0—}·§iù“çOo…Ã;êÏXc¢Êvy’«åt|Ìa¹ÍoˆLÄN—¿Ùıú¿Lÿ WòîfUnãÇ ækaÜ»\k±3)ãXÛkv¡Í2ÌÄAƒÊëş }tÈè]E¸Ù69İ?%Á¶taú"Á?ôÔ€ƒ¦Ç§e†/±fcƒ]š.S«PKò—kvÛ(/akÀsHÔW+×ÙÇÍÈ…”ó$(ŠB‹‚bäP%%(I%?ÿĞôOôkÿ å·êûh¥Åµ¼n¸$ígöœ»¾ÕõÛ¦·7êåí:: #ÈÃ¿è¹KÅİ„</Ôª´×‚ÌÜ–î»$ÁE¿šßí.Çöu´Àk‡	º}oû;Y[!­ Ú ®ı½¥ù1ƒÅbÌË$‰6lºÑ1³ÍgÕAqŸê•=»F ó£êYı×8¸ûò28Ù[~÷ÆÕÏu—ÔK}JkØî@ş	ĞÇ uÑ2#M^+ªb}÷?EuYlvF›‘TZÀCƒâ9‰…“™•^&;îµÁo™WñNã¯è´òÂ¤(nûçÔÜÿ Ú_Tp2Òô…nø×ú#ÿ P©ıdlcë*âÊÿ ±ô«z=ÎŞêîs«°n¿Iİü¶?cÖŸÖaúYXŒ„ Û^p”$…<¡
+Fp@³IM
+G#rH{½É"§ÿÑõöÂÍúÅutôl£cw´Ö[´rK´“èÿ ã-¹ùŒ¦ÊMoüó®«°È~6^+™c›úF}Í*I@Şû1Õã±:çZi%øc£Úç‘$VJÔêûúg¬Ùvá!¡cu«™9Ùy¹78âÖ[ézn Ÿô›ùc·±Û?àÕûºcÙÒÙN;v²†ì®O {Z7,©Š4Òˆı««uéĞ¹ôc>Æ<ã¿ìî}R×mz¦anæ»ÒUº7BëtZëóîc·¹€³>İ¯t p®¯©×-É³Ò¦ÎFóôZöÿ )tvcUé¹Õ˜#…šá kú]R@¯ìx¬t1–z›v“£ã…ÏôÀüµ]˜Õl²C[ßQù¿Ê]7Ö}Î®ÆN°W;„ÛN~¤H»ÔkX{‚ïdş*\CĞ|˜æ}Aìúu˜ç¥ôÜüYeõŠéµ:`wòë½l}l§S¼\d*]/¦`ô»)Ä9¡Ç‡Ş©{ÇçYÏ÷=GëGZé¹m5\ÒöAóVùX	K¤~n@Ê ~ˆÕË:´U[{«š8…Zæò¤k´uŞ’”{ÒJÔÿ ÿÒæ1±3·5´6_Û¶«¼ú±C›éãõë}<‹„ĞÇ:	²Àn¹–9†A
+ãns3qºCÍÏÂ’İÇHóSã DÜ±ÊÉ
+{S‡F>A®)€æë:÷åeæ³;&«pYw¦Ie€j ÿ ¿¬!ş1p®Îõm¸2¯£évoò†›–åµİcüWµÔİs»íw¹»V_3¤ô şn‡-!(ÓûZöaacšÜû}GÓk®q{šè‚ïë¢àf·2ğì{w2£¶ò'aó7ÏP=*Œ‚+±Î°¥ØT#f
+ñq=À­¬Ö·@$ôÜ³Ï„h	.7[¥¯mÀëµÆˆ\N{¬ÇÉc«qcÛîk‡ 6®§/=¿c°Ø}ÚÉ>K“°Y›sœ8ü•ŒB†½ù_ú±Òúsş¯`äÛKlºê›e¶:Kœç{œç8®Kë·Hé‚ö½•úv‡7nš)ı\úëKz]&OÚq°³‰ó›ûŞÕGëY7×½¤û`;ã¨Z nïf‹d¸’Ú¶LÄ¥ouG‡V~_‘NÎEsOóÒRzIZÿÓ`ĞªõgŠzfEœC|ÖF?ÖúívÓY
+=k¬3/¦ÙMNŸ¡ÁIÁ.ÅcÈ×­£Ì¯Jú×ìõ[Ó2	s`š\íxÿ Çî®¦fdİ·¡ïh˜ò¬ú¯Ò3*}½C)›N;\hh?IÁ®•\Bq1òód†NX}E††7{àO=—1õ—¬â×Y®§z–“£[©Pæõ>•‡›]ÎÙ‘Kö´À—v¡ê«}K1ØsóYñàĞ·M—‹}Yy¯%À¶¯İZ];¦l¡ÇjèoéUSTVİ{©FS†<SÎKïbâƒõªŠÜ×=ÜiÀq[Ymkn-µÄº­€ˆÓÜç5¥G
+~µQls§à× }oªêCréyikö¾8 ıÃù.WpÊà™cR.¯OwèÎ½‡÷#¾Úõi"|7HÊ¼ôÚ²X›‰eà‡I@êVŞëe@ëß’|´è°ëN×©^îBK‘ûfNıºÏ„I6ü
+hwÿÔà*è=X’\@$™E«¢õ‘Yp ¸4Ìø!ôú¾°g;n+­-:’CGöÊîz6ğk®œ›]}¯şvÂIû¬º¬µµı«¾£ìs:N6WLéy]G&¿Iígó#_kuŞïå.¯ÕZĞ")¸£Èª[¡Ÿ³2±Yîu´ØZ<C[¹Ê×E¨¿¤T×™s  ÿ e©’&Z”Z/õ%”3+êæIıc§XãP?aß[™ıG;ŞºsŠ`‰ë½+1Ï«®ô§z €GøFğVÎ]'Õß¬ØX0·Óú,º´ÉÅwÓ­Ü?Ñîú.YÙğğÈÈm/Í·‹'¨O•Cd|•LêÀ«hû–‰­îxŸ;pİe…±¢…•æpğ@ÍõˆÔ~"wÖl[
+öF¤>^åÒY^Ì› ÑŒ£Ìı'9QêµÒ`h[ªĞÃZ™dÉí£ÅıG¼Z2°^tkê\µßŠÓsê#F>k—ú»wØş±5œ5ïuGæ}«´È¨ı <s©OBÆå~Ïo©ÇÍ%©·İ¹$•OÿÕ±GØıÎÙüßO’vO¬f6O·Åy
+IëCë=kÛq6ñö|ÍşéV‡@Ÿ°³w[?æ1x²HôSïíı'î~t®#3Öÿ Tÿ Íiı§ÿ j6ÿ 7³Oé›ıeçÉ(²ü‡o«./œ?Gaúş“>Ù³×¿Ó›¿;fä[·zVzÎF‹æÄ•î2ëûl¿í[.ôvz³íõglÇçl\íï¶Û_lÚ}“ù¿Èô—"’Ò‡c¿Ów±·şmşØÆÙ¿×õI³÷ôÛêOò¿Ñ®§'nÿ ’òT“Á`}WÛéù¤¼©$Ô¿ÿÙ 8BIM!     U       A d o b e   P h o t o s h o p    A d o b e   P h o t o s h o p   7 . 0    8BIM        ÿáHhttp://ns.adobe.com/xap/1.0/ <?xpacket begin='ï»¿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CR"?>
+<x:xapmeta xmlns:x='adobe:ns:meta/' x:xaptk='XMP toolkit 2.8.2-33, framework 1.5'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+
+ <rdf:Description about='uuid:96807ca3-5dbf-11d7-92a5-a4c71c03fbce'
+  xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/'>
+  <xapMM:DocumentID>adobe:docid:photoshop:96807ca1-5dbf-11d7-92a5-a4c71c03fbce</xapMM:DocumentID>
+ </rdf:Description>
+
+</rdf:RDF>
+</x:xapmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                       
+<?xpacket end='w'?>ÿî !Adobe d                 ÿÛ „ 		
+
+
+
+ÿÂ  d d ÿÄ ¾           	                    !1"A# 2$ 	     !1"AQaq2B‘¡ÁRb#r’²34%Ñ¢ÂÒCS$          !10A"QaB²ÿÚ    p=vG0 éã£;`ë:ãÆµ@8ªî„ˆ‡tÛK
+®Ş­˜bzçBÈ…avóUöÌ+UNŠ.†]¦¹t÷Z½òŞÂƒXán•Ó™`™Wô•Ã˜¬¨º	
+œ:ĞÓ6ñ Í‘^Ü–Çu+LîÃ3Ò¹œ±¢êD#°¡Ø±Kçı{1·¢!G/´WwPîÇĞùEÅ Q§)q-4ùäÜÇ£˜‚íÕŸ}/;xy•ì sÙ9Mó ›ÊoåÓĞgfäî¡)¢§\ie©Y¦šŒ|(‹VƒW>kÛŸ7è)ÚÅÊ‘Y·Rå;9L%VÉ#Ã;ŒÌ=ÎBŞ’É}ûšâÅ¨'§GD×š¨l™TĞë±4ød™ ]BmjäÎó›Vû¼“ ’›EhM8Ò^Ì¸55VµulUäÖJúø®2'¥}Lî®nÓ­¯‡˜¬Ï=;‰÷ 
+ö2°õŒ×:ıÙ¼ÀLÑÎ¶‡T:>ãfD«Ë´`R(¿ÓYÛ¶¥†îjb[(iBuÁÿÚ   "î4¢^ÆëÍ‚Rª7I¯ã§óMÛÉÉ&—-´×ß·MËBèBüÀ¢,:Z¼©5:QRÈ&…îÒ¬c¹p(ıKø¡]êıüíK¹RY*¡
+@@¤+Ä­a!™I]/â…_¢¿êâPšö(Ó>$Èu&˜$Ó†éBˆu/ÛÔ…R™&Šşİ]Éğ
+¤ S"—ñ	¢êÖ“cÕ•8IS9$bV ½éi™WfÓÙ&Ôâl@Õéµ”•Êò©ì‡P…©Ë"„Xö—âúÁ¢z¹t†é¶Å\S®^¢ªéôE[ aF½J¢Ù»]	W¸“æhª¡¬Ğ4´÷ZT+ÅT€±IRÅHÎ”*{ZSn°îUG¸µ^‚yH¥
+q  ëE¬j3~(.*İGÂ«µJññ¦ítüRoGæ¿ÿÚ   G@Ñ5é¯Ux)éüõˆ¤5I³Béq”*Ô¤Ñ«wÿ €=â²hšX§›è¡IúÚ’>¤ÚÊp
+R¯KMÂZQ2a)	OÏSğĞú’I ŠX 7åN
+Gb¡ıc±£ĞÜ®Ô‚JH¿€£wM$÷™#ÁçªÊl<T`(xZ’…ÙdŠ]jw½4«‘ÒÔ¡zK@TUúÔÂÀ.H¢®ë7£N²Jİº[¨éú+4£Û¹¤£´„Ø‘ÒÆ­J° EŠB¯I§ÄU…
+”;šJ“^i¥8)JI¦Û±Šç’/@Ğ©Jì€mÒÔTCÑ·
+
+/WìûJ&
+µuM‰{«å~VşUçnô+½ÿÚ   sÀ`@BpşüD$ï³üŠq?¸0Ö÷0yë¶ÚRn2f++1B£mp0Ö‘JM«À]Ö|£òFrN¿Çùı×wİ%Âãí¶k‹ã-½¥äôüÎ=
+IIàhŸ¥l3KoAßYğÆ©´Wˆ¹`z?h'e[ãşâ¸l`ÿ ÎAŠÖ~$9ŸÄÅuF'ì§WçÁÄ|’z“jpvòa°ZæÍm¼Çëì<1ß‰S¨Ùsºp±jûšË²äüF'’Ëe?Y¦ş'TäÔÿ ñ8š’l<Ï°£æÆ‰§bwÍ
+Øs¾İf9ÙiÚ.íW#Aa©:Ê]ÂîšäŒzõ~Xx±Q
+nX®şİ;öY¼¼÷ñ¹\VÃÇ9Î^f°óZÆ¥°¯1ül_¶äĞ·#á[”sú¾±ƒ×$òé­Îh©©ˆíãıØÜNl¹Æ0\l«C2Öw!F	X,Ú2Ó·hM<ÖyÇàäøËW×^ãŞlÔu;Tˆ’[û‘…ñSs]g4?b°²ó’£ÌÒµX×—KÜVW>ÃÈCùy¼sÍpÛÕ¹rFBn%Ğ¸ò;ïKb¶Ç„]j=Õ'ƒwùS
+€Ë|•¹b˜Œül¶]í{ZôÂÅâÒyS,ÓMÌ×İ;Ò˜ŞÇ³ËÑä¹¹îe5Ì&±˜ÈKâıG3äÃÌìZ¶3ŠÙR'êÑ!Æ¦bb1ø[òŸ.Å›:†Rjµ½TåÉüÎKİBÛT¨š^æˆú7)®kÇ"Hk‚²LÃeX´¶rpQ|äp"â0hFk“0f^ƒ§	({Ù›ş}¯~½3éØpÑ÷xM™Ó")İK{Õs{ù3½aõ»/ì‰#zr[TE½æş'çÆWßúş¸ˆû|¾÷s÷şg@¿àØõÖcï?õ\Gß}´ßoÛOü§§=şóóÿ óoö9_·èûÿÚ ? ƒ/'èı#ÕèíroÅfÌSÇ–ÿ $]È…®7OÍÎ²ÜS%‰iÜÙ‡,ƒØ(ƒÙŠ-ÆÆ£â”ò&`š3Éé[‚{’ûÛ’’ˆj<H{0dÅŒ‘Ÿ6-ÁªCkNÈ®)ƒBZ§—n_êÉ»u†Cªû£µ×4É‹ÿÚ ? UF¬Åè—·ÔB1IFQòOÊäj»=04ş.LM‰R+â·Êö–`•³VKÜï¦K0M^z,ÇSvüÓ&«=©øõd•ÓÍ>ŒS&5gÿÚ ? Ş5vTjÇ\Ì˜±Ù£2(‘•.«mÇ[{·Ö¤Ãí0ËŞr"Å#Åd†ËÅ–ByÔü;Eñ¾[PlyŞ{ëá QRXùtÚäÄqeÃÀ0p>ÚL^ë‰“Úz†Ë“ Wˆ\Û˜¡,¾ÛRfvéãÉÆ²FCEÿ ŸN>ª‘‡çF¿E€àk;»cO<Ø˜îèÙ ²µ‚ÙHm|-QAÜsgÎebq±A²¡"Ü [áÓsQH0­Å®-÷PYñ:7×s0·İAä@è~$<×Db8Š·÷‡“åîá"&J9¸‰(_‡Ã¿ôÑšG*‡F‚¤\i´ã%z«ÕV¢=´˜xnST/˜VÃr©²¥øó7‚şZƒ»÷ß™ÜÊ—û¸ˆ;T;š›b¤J5`´ÂàútÒŠ:x‘H ñ»ı‡=äË/ñã‘şÅ(2}­VµfÆ×Œ«*ÛƒY¿†ÒoQEØ£Uà6aj2ç0Š74İ·­ŸŸb8ñ;­í´{Mñqú.5U+[Äj’<üm¹q)YÊÖ¸ ú*×ƒ	›7&AQ9‰ñ'€ôÖWÊ¹Ne’¹^€Œî°dPÚÛz>Ç÷^¢™?
+"Ñjî‘š6€§Iov.l ·¬Ó{2ààF IXaoËrEy´-'QwC­½3`Mäd—´rtÃ)Ê ¥•º@ûÍü´ù½ï6)C©Àª½Á@5ô·½]}‚2Ü’íàE«~İŒ2rgÜ±F1Ü§İ?šÕòß{í…¢Î€A‡—ïr\,­nxÜï±\’çp>ÊVµ‹š5ê¨q20MÍc©à4§†gOßˆò1û¦³ûopËsÚ¡h¼·—©n&MâÅ:6Àû¿}yê\1Á„‚pI²ªª	:šÇíß1c^.á‘å°òG2‰I²«©á¸òî$°G
+ÈŒ‹±b=•Ùü³ÌÆ‘0âÎĞG²÷¬>Öùÿ øx;fÍIˆ/,à_u‡ÄïÌõ.6b4ñ·2csHA¸Ú5Ê'è<(ï6-¥Ïª±ğ>uÊèwÀN/!Tš=0ö«§1mN‡RIãY}šÏ.ìbì¨¼ñ†üµ$Ù]y°í$råHÒÈ’fk›óÿ f’L¾¤Ì#Í`IÕ´(€7{JÍ˜#­éÈbš3¾7SfV
+‘ÃÓ]‹?#22òñ£Ÿ+&K³É#ÌÌÄÜ’i&‹£’²3ÇÓ%nºq¡âÁ4ú-GèâÈx¤ˆîFSkWnïÙò¶\½ ˆHyvÛ[ĞÈÈËXql#òÖäMu`@ÜMG/nš90ò¶Èò|]7æ]¦ö#ÓB	å“ ­Ì–;Tëî‹pıUå EÇ!ûqÆ…°ğÕ9ÈkÉÍ¹‰×CÇì©$[ìRl}UƒòÆæÏµCÑhE—r¥ÈeüÜ¦±ÄÑûD<nuO¤)ûE½wîT¬´‹Røİ¯÷Ò|»Í${	Âw%­´ko»]iJ.á­¬,(ãã?[%šÉjÖ¶¤Úœ¸dÅ¹!?ÛR¶Á{éÃÂ°qäG$ïÀØèŒF¢<™I‹ÑGåıÙTƒFÆöQ÷\~UC š÷×í È}ZÔø˜ÒóX0:izéöøÖiP#Àâk+¾÷(ºmƒƒ’È¨Ä“¯º8WhîğæÉÑÎÄ†Y£CeèXmºëByØ5¼SÃÆôVæñ<N¦€#›_ª°r !Èû‡#`mõNë‰3ÆñÍÓ—iÑ‘‰*Xp;XV7qˆ€ìÑd§®¬I7õŞõ&F2‘¸Ó:‘a­l¹İùvµé–<}¶RK_ÀSºà4ˆŒ XØ[í®çßû†?•™"ÂRí¦¥ÛÄ7[Ò–ÃËRX«¶®ëÿ ¯ûƒÿ ˜vä|Eú˜3¶øÙ/Çc1Vü»–ˆVÚ§P/¥9¿Hñ¡·he°>¿Ä-Y°íç(ÄzŠó¼WsìÒ›)&;ÿ +[ıÚ›¨!Ôûkİúşº	Û_$ÆÚ4ìÅ# Ÿ:T½Ã*LÜ¹µÉÈwb¡Â€ğP?š»§m‡L¬<ƒúBFYÕX±Êo,J¥ñÑÿ UbüéòÌ­‰ó?kC)şş$×¥ øfÅ>[»cw>ÔæÓA Ğèu1–÷[ş*½4P)+mk$(´1*¢z¬ÔûVêP‚<8Tq¶9¥|fğcË÷Š-®F¾½k©§£Ã…E~•ôéô=Ûz­¥5íÑÜ:^ší=ß!İºÖá·Ê^Ş»TN4İìé%şúöék¾şÍ-Xü×úšßæ?ğı-/æ>~où¶Ô?Õº^`ët/Òßñlİ­Oäíæ6òßğı^ŠÌò/3sÓó;öo°÷¶koeõ‡õ‹oåş—ş§}6tÿ Í]³£ÖóŞk÷ú:ºmênÒÛ¿íĞ·£_¶¿UÿÙ_1http://www.livejournal.com/userpic/4360759/583389Zimage/jpegÓ !"OGIF89a  Ä      k ” ŞcïÿÆ÷R!!!)))11111­99ÎBBBRRŒZZ¥{{{„„„¥œœÎÆ½ÖÎÆçŞÎ÷ïŞÿ„               !ÿNETSCAPE2.0   !ù
+  ,       là&diŠLÊœ%c]Y¶²SYq<Ÿ6ï¦^NFşŠ·!°•Œ]–%,sĞPf-
+ 8- Ã€<0€Åh!pÜëf?8È7tn	 ˆe€
+ •–ŒW&!  ;_,http://stat.livejournal.com/img/userinfo.gifYimage/gifÓ$%"OXGIF89a  æ  ÌÌÌ„„„ÿÿÿ³³³²²²¹¹¹' ¯¯¯333™™™V  ±±±vzpñ÷è. (CQ† 3f 'B fffN XYWäïÔˆˆˆxxx$ ÆÜ¦‰Š† µµµwj2T BD@ SŠ 33 f™3Ft °°°åïÖÙêÀ‡‡‡% –¼^ÖàÆ0P * Hw - yyyUVT‰‰‰½½½óøì¼¼¼’¼Tn|Wfœ¸¸¸2 MNL·ÔŒªªªCL6Ôæ¸L~ Ïå¬~{™Ìf€k"f™                                                                                                                                                                !ù     ,       µ€‚ƒ„…† Š‹Œˆ‘‘’•Š”–	‰•*:Œ˜E-;A¦Œ	47(G.°‹˜8	 ,C2œ¾²'HD)B?9%J0Ë±‹&
+
+#ÚÍŒ5$1+è—²‹@/ õ œâ– Ä‚=:ğÚ&‰Á#D `ÀP’>’PàQ±Ò€:Y²4p¤© (Sª\É2@  ;_,http://stat.livejournal.com/img/btn_prev.gifÓ'("OªGIF89a  Õ  ÌÌÌÿÿÿ„„„   FFF»»»DDD}}}ººº···fff    ¬  ™  BBBf  |||µµµ  ÿææÿÌÌN      IIIï··3  Ç!!ÚPPì·ÈEEO  ©©©‡  Ìff©  ™™™¸ŞmmÀIIµ--Š  µáïwwïuu¡ÑCC®®  ßww¯--  R  L  Ì33                  !ù     ,       ÇÀ€pH, `0P:ŸP%RÉŒZH¦¶y…f·Ü.6¹'"Š€8("	)¹Ê6(¯Œ(s§ÖSO	v1B-) N$, ”0#J
+.('2*5«
+  
+93«·«¯d‘·%¸¬Ÿ½JƒÁ	° 7Ê·ÍÆNÔ+ÌÛrWÔ8!æÜèé6ïOÒOk÷ŞQ$˜E€Áƒ*4 ;_*http://stat.livejournal.com/img/memadd.gifÓ*+"O\GIF89a  æ  ÌÌÌ„„„ÿÿÿ³³³²²²¹¹¹# ±±±" R[E™™™¯¯¯i£™Ìf‚¹.ff3Œ¸K¼P f™ ¿J•ÄO‡‡‡ˆˆˆM[8BC@Q[Bfffµµµ­Ì~yyyU[L‘¾Nªªª 3f ~­8n $¼¼¼ÌÌ™QZC2S KT<‰‰‰¿ŞM€ xxxuª&ˆ½8U ’ÀMWl833 ¹Û„Œ‘„¸¸¸™™fQYD°°°% $ ½½½‚¶6AJ4éõØ4V ‰Œ…NOLMQGO„ 0 333•ÆJ$.JY3agV  ‡º:)E S\D                                                                                                                                       !ù     ,       ¹€‚ƒ„…† Š‹Œˆ‘‘’•Š”‹
+–—‰‹D7N–˜ B'4’¨(6,G/
+¨K9A
+&‹¿R310$%H#;ÍŸŠ	 PÒ-).ÛŒŞ@2#IJ+Œ¿:Q=<!|qK¥‚A"2(H'Ñ&Cñp *˜QğãÔ@ Äê„ªÓ£&›XÉ²¥Ë— ;_,http://stat.livejournal.com/img/btn_next.gifÓ-."O¼GIF89aD æ Œ³ÙÙåò³Ìæ›ÊáõÍ4f`“ÆYŒ¿L²@s¦6iœ¼ÒéS†¹c–É\ÂâìõpŸÏFy¬ƒ¬Öõùü ¿ß9lŸy¦Ò=p£ÅÙììòù–¹Ü9lM€ÏßïPƒ¶'M€Q€²Cv©V‰¼I|¯-`“ÌÌÌ
+<n©Æâ7i1c–&YŒ@sO~Fy S†+YŒa‘³&Py<f™Dv~®ÊAs:l¿ÂÆ™“‰Duœ¸§%Pƒ#M€k›»`YyGy=j0Fp\m{‘ÁÙd€›:l”M€³ K{Fs¦ˆ·Ò-]AnŸ=lŸ³Æ™¦³Ï†åìò³¹¿=Zt:m V†¹[Œ¿éëìFmÖº—{€‚æÃ›¨=pï“–,T†7`“.Pqüüü‰œ¯)\©Æ@Msp‰£fŒ³¯y‰lƒkvMlŒÂÆÉòõùŸs†N¤'S†ßŒ“¿€Œ)V‰ßæìïòõÒÒÒ @lp`|õõõ@c†3f™ 3fÿÿÿf™Ìÿÿÿ!ù   ,    D  ÿ€~‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÉ$||	Î×Ø ÒÓİ|{Ùáâ•$Şæ|ãêë‰-İ>hOxAİ!	
+{ÿ{Dğ€Á]î¦y§Ì9jŠ0°¢Å	ÜhK…Â.iºib…“iàˆ`±B‚F$Hp1`A8[!˜v§‹i+šôjÅI·tƒĞÄèA#"*TT "§UUÜäüä#J¡}êˆ‰1í¥ÿ.0hğˆT€Uÿ¯Êu@¡›ikn”°†‘s(î‰à`R–ÿF´ €ã•(8v¡†É$’Œy2äE0kVDáØ@‹zòèB­1c8QQì a^ 3E·_ë§Ï ã‰vòñ‚«Ş%Ìt3‘†‰i"Ü$Ô@‚™	F pJÈÀ‰€°ˆJ_ Û'7!ôk@Ÿ>{Şô¦õ×ÇúÉà ó% ‚ö1Áo‡48T„Ğ·Èş)baf8œqC)¢\sLDİdñaÄØÃQ…àÁ5¤€v„ ¶ˆ¨7Ô‰ØPÀ‘K2ÿXŸ’XÂ_„D&òaˆ†a”ˆ\Éà‚Fb…ıé§¡"ZJè!˜"G"r‰lĞ+¶ÈÂ1æ™CY ˜	 ĞÔúDğÖ
+ 9{TäzŠPqä‘^Ò”„X@_j…Li`•]²¹™˜`qæ˜‚xyjÚ…n–¨ˆX)êp¸’¸Hİ8]‹.˜@Cy²€RU€Àbˆ õOIÄ¬n­9i’…œß Üê‡§} ® °Úê "O‚Õ ø5A¨ç¦ê­úAà™…|xàqÄ™K_¹ùÎ;I9|ÌpÃ_|XÃÁÄÄuÔD@#"øóãÿ ‚!Uˆ– ‚„‘l'ˆ¦`ÙçG»jJ‰¯#ªûÑg2!-·Ló™x«oµÆ
+ç!Úö×ä©X^òzœ¤‚ lPDÃÌ8Æ8àlù!F‡p|Iº}4	6†*÷ûˆÍ1ƒÕ³½K3Ñ_Æë²¬>M¯œ®lé§ş¢šÉrò9ˆ|ÀØğ|˜ÉÖ{h|u×Õ"‚„”WqÊ\B@ß	‡€	Ú‚hÉå ¢“)7èw÷«¹ÜqÓ—Áˆt’n `÷m·%¼NCB!{µ±EB“£‚,ù‹|0)‡h°­ójw  Ô'ïP·ƒıvÚ±·î7êõúÑ­ÿÙ7Õvšé©ºZŞ:ö¼‚ÈãIìÃ(EÂxÖüs|+„òÄ<C¬n(¹áĞP^'½¹¯|ğ3Ä¦:¥¾÷}o^W¢ÀùFÁ ´2ôÂ…2Î™.‚œ8šjä4¨I‘ğ‡Sú—’Eî,@Á*È°j{t #P7A¢nòb÷4³Ö ]ï
+¡ø*OÑˆ¬à¦A¼ÁjˆSœ#hâ”ø/K74DwÄ}ÉàQDïÙ­f$ÕĞ:h¡ş¬¬ÀˆÄNL¡ŠDï†Õ0àq ,)ãmˆ<E¬ñz ÚV”Å$¢0ÿC¥²ŒÎØ>1	gnìIÊşÊ¡@àCÖó¤ß6á€
+x„ó+Dı†¿o<¢NaÜÿHˆK"â|Tä`Y	 %Â.\Ë<áiÁù‹=Sš «0ùÌÛ¡Î¸€FTÈÂ§5ì…TSMøa&oy‰¸ÔB	G)bòv¬"Û ¨ÈL<RóC`#æûØC2	‘úØL5GNˆG[äCA8Ã+Œ"CD?1‚Á¸Ó’ğDÄøúÉhBuZ"¤ X¥LY†¨”¥¢ÏÚP:!BbÒgC5q ôâÓH¤ z÷FÒ GKX#ö‚AĞÄM„1QP{zî¤óÿ×kªzEYšĞ‚Ş”)}öèDAŒô ƒ8_„ŞUHL„ó&V^.	ñ!à ‹0c"ı‘Q?x¤TØ.¤ˆ«>‚Ÿ·Ë”jƒÓúP•>ÛC¬4ı€Ó	Är ‚€€Z™YU1ÍÔ¥›@ Õ.€„ğa…„à€t€ƒ-è€ ÀÂ4–¶ˆ`MhÔ£"ÄPALõüìÃW7Ùv`P«ûÒ”Ú¹.B@rCX¯³Ì“DZ%3ÏŠ™7ÎÍ¦•0€Oa|0 pU-l×[ì0bGƒ0Ïv‹75†~<b"â˜FÒE¨ojâ}HUÉS	bƒ'$’bÑ:ÅÈ¬;cğÿ#$6(@c	@ä 6ö®¸\öpM‹Z¼µo`ôÜÂŠI i
+Y	\È*Â›íÏ)½'ˆUîØBUì!~ˆb ºÊ‹0€5Ûâ–¹d ^ëaHa‹¨ ´˜¦[úö§·~øíÿººÌyù@—¥q„f›KHÀ<öÃ‚ûĞU "hİ{&C»D$+‚Â\ªL»B\¡Ê°ÍÂ4&V(à&ı4!(0®JÀn“«oÆÕI Xz\×ÄeÓPSµ1Ù1" @L¦´¹q¥÷3®áÔ™šu!,Pé™J ÒÖãõ§ÅE‰4•É
+8ÄyuÿÇ š w…á!paBTÀÉsÉv'H4N£İ ‚­ƒi,Ù!¯FœNm»ûçöCÿú*ˆ[òjÀB•µ€×F?ÚÚØ~·À)a€-¢ê6„\`Õzx¶†°Z\1b¨üâ“ğÀÄskqE€›†¶ m ¸—;‰BùD1ÎòFÜæ9q;°o\ÁäeáÎæKˆ2ºå@GÕh"	0ü!ƒçËı[ıé %>ò 2½D8+5¨{Ş>6Ái~”T@Ò,‘ù××~–ocÂè|Cd^q¶Ûfl·/ĞõAävéw_{ŞGa5ÿ¾>ğfû'
+ß÷Ã~	ç„ÕãxÄÿ£ñš˜¼Ú+ïõHšçüáqùKŒØğ¢¼yö0qLt4˜O½¶ÿ@ûÚÛŞöPøÇÚpûŞû¾÷P8ÃÈğûâÿøÈO¾ò—Ïüæ;ÿùĞ¾ô£‡(Ò?B
+R0ƒé{ÿûà¿øÇOşòÛ)°>ö_%ìá60¿üçOÿúÛÿş¶ç@¸Ïü¼`)pø7€X€x€µ÷é÷/ğë÷{5°$ğ<ğ€x˜È|\0ñ<À5P3À;ğÿ;Ø‚.ø‚-È˜# 1ƒ8˜ƒ:8€3p‚‘/°3`;X„Fx„ ;_/http://stat.livejournal.com/xc/logocombined.gifÔ01234_WebResourceTextEncodingNameUUTF-8O'Ü<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><HEAD>  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>shutterbc: I think I just found what wiki to start with...</TITLE>
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/basic.css">
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/menu-normal.css">
+
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/normal-fonts.css">
+
+ 
+  
+  <LINK rel="stylesheet" type="text/css" href="http://stat.livejournal.com/xc/extended.css"> 
+  <LINK rel="home" title="Home" href="/">
+  <LINK rel="contents" title="Site Map" href="/site/">
+  <LINK rel="help" title="Technical Support" href="/support/">
+  <SCRIPT type="text/javascript" src="http://stat.livejournal.com/xc/layout.js"></SCRIPT>  
+<SCRIPT type="text/javascript" src="http://www.livejournal.com/js/md5.js"></SCRIPT><SCRIPT language="JavaScript" type="text/javascript">
+    <!--
+function sendForm (formid, checkuser)
+{
+    if (formid == null) formid = 'login';
+    // 'checkuser' is the element id name of the username textfield.
+    // only use it if you care to verify a username exists before hashing.
+
+    if (! document.getElementById) return true;
+    var loginform = document.getElementById(formid);
+    if (! loginform) return true;
+    
+    // Avoid accessing the password field if there is no username.
+    // This works around Opera < 7 complaints when commenting.
+    if (checkuser) {
+        var username = null;
+        for (var i = 0; username == null && i < loginform.elements.length; i++) {
+            if (loginform.elements[i].id == checkuser) username = loginform.elements[i];
+        }
+        if (username != null && username.value == "") return true;
+    }
+
+    if (! loginform.password || ! loginform.login_chal || ! loginform.login_response) return true;
+    var pass = loginform.password.value;
+    var chal = loginform.login_chal.value;
+    var res = MD5(chal + MD5(pass));
+    loginform.login_response.value = res;
+    loginform.password.value = "";  // dont send clear-text password!
+    return true;
+}
+// -->
+</SCRIPT>
+
+  <LINK href="/go.bml?journal=shutterbc&itemid=43558&dir=prev" rel="Previous"><LINK href="/go.bml?journal=shutterbc&itemid=43558&dir=next" rel="Next">
+
+</HEAD><BODY class="home">
+  
+
+
+  <DIV id="Content" onclick="unshow();">    
+    <H1></H1>
+
+        <P><TABLE><TBODY><TR valign="middle"><TD><IMG src="http://www.livejournal.com/userpic/4360759/583389" width="100" height="100" align="absmiddle" hspace="3" title="Rich Moffitt" alt=""></TD><TD>Rich Moffitt (<SPAN class="ljuser" style="white-space: nowrap;"><A href="http://www.livejournal.com/userinfo.bml?user=shutterbc"><IMG src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" width="17" height="17" style="vertical-align: bottom; border: 0;"></A><A href="http://www.livejournal.com/users/shutterbc/"><B>shutterbc</B></A></SPAN>) wrote,<BR><FONT size="-1">@ <A href="http://www.livejournal.com/users/shutterbc/2005/">2005</A>-<A href="http://www.livejournal.com/users/shutterbc/2005/05/">05</A>-<A href="http://www.livejournal.com/users/shutterbc/2005/05/24/">24</A> 14:38:00</FONT></TD></TR></TBODY></TABLE></P><DIV class="standout"><TABLE class="container"><TBODY><TR><TD>
+<TABLE><TBODY><TR><TD valign="middle"><A href="/go.bml?journal=shutterbc&itemid=43558&dir=prev"><IMG src="http://stat.livejournal.com/img/btn_prev.gif" width="22" height="20" alt="Previous Entry" title="Previous Entry" border="0" align="absmiddle"></A>Â Â <A href="/tools/memadd.bml?journal=shutterbc&itemid=43558"><IMG src="http://stat.livejournal.com/img/memadd.gif" width="22" height="20" alt="Add to memories!" title="Add to memories!" border="0" align="absmiddle"></A>Â Â <A href="/go.bml?journal=shutterbc&itemid=43558&dir=next"><IMG src="http://stat.livejournal.com/img/btn_next.gif" width="22" height="20" alt="Next Entry" title="Next Entry" border="0" align="absmiddle"></A></TD></TR></TBODY></TABLE>
+</TD></TR></TBODY></TABLE></DIV>
+<DIV style="margin-left: 30px"><FONT face="Arial,Helvetica" size="+1"><I><B>I think I just found what wiki to start with...</B></I></FONT><BR>
+Check out <A href="http://www.tiddlywiki.com">http://www.tiddlywiki.com</A> to see what I'm talking about.  It's a self-contained wiki-in-a-file!<BR><BR>What I'm a little concerned about is what if the data I put in here happens to get popular and I want to migrate it to another platform?  I'm not sure of the answer yet but I'll keep playing with it.  For now, I found my start.  I don't need to set up a web server so this is wicked easy. :)<BR><BR>There is a lot of remote work being done from my office and I am noticing that it's very hard to find out where things are documented.  There are MANY systems and some very well written ones... but for spur-of-the-moment issues everyone still relies on conference calls and a ton of email.  I have over 60 messages and it's my 3rd day here.  Ouch.</DIV><BR clear="all"><HR width="100%" size="2" align="center"><DIV id="Comments"><A name="comments"></A><FORM style="display: inline" method="post" action="/talkmulti.bml" name="multiform" id="multiform"><P class="lesstop" align="center"><B>(<A href="http://www.livejournal.com/users/shutterbc/43558.html?mode=reply">Post a new comment</A>)</B></P><INPUT type="hidden" name="ditemid" value="43558"><INPUT type="hidden" name="journal" value="shutterbc"></FORM><P><A name="comments"></A></P></DIV>
+
+    
+  </DIV>
+  <DIV id="Logo" onclick="unshow();"><A href="/"><IMG src="http://stat.livejournal.com/xc/logocombined.gif" alt="LiveJournal" border="0"></A></DIV>
+  <DIV id="NotLoggedInDiv" style="position: absolute; left: auto; right: 50px; top: 15px; width: auto; height: 20px; text-align: right; color: #FFF; background-color: transparent; font: 14px Arial, Helvetica, sans-serif;"><I>Not <A href="/login.bml" onclick="return xcShowLoginDiv();">logged in</A>.</I><DIV style="font-size: 12px; margin-top: 0.2em"><I>(<A href="/create.bml">Create</A> account.)</I></DIV></DIV>  <DIV id="LoginBox" class="nopic" style="display:none"><FORM id="login" action="/login.bml" method="post">  <INPUT type="hidden" name="mode" value="login">
+  <INPUT type="hidden" name="chal" id="login_chal" value="c0:1119780000:1366:300:gBwTMRisrYyPOeHeRiT7:080c44864b694adb610ec5e8089b59f8">
+  <INPUT type="hidden" name="response" id="login_response" value="">
+  <LABEL for="xc_user">Username:</LABEL> <INPUT type="text" name="user" size="15" maxlength="15" tabindex="1" id="xc_user" value="" style="background: url(http://stat.livejournal.com/img/userinfo.gif) no-repeat; background-color: #fff; background-position: 0px 1px; padding-left: 18px; color: #00C; font-weight: bold;">
+  <LABEL for="xc_password">Password:</LABEL> <INPUT type="password" name="password" size="10" tabindex="2" id="xc_password">
+<INPUT type="submit" onclick="return sendForm()" value="Login?" tabindex="3"></FORM></DIV>
+  <FORM id="Search" action="/multisearch.bml" method="post">    <LABEL for="SearchTerm">Search:</LABEL>    <INPUT id="SearchTerm" type="text" name="q" size="15" value="">
+    <LABEL for="SearchType">Category:</LABEL> <SELECT id="SearchType" name="type"><OPTION value="user" selected="selected">Username</OPTION><OPTION value="email">E-mail</OPTION><OPTION value="region">Region</OPTION><OPTION value="int">Interest</OPTION><OPTION value="aolim">AOL IM</OPTION><OPTION value="icq">ICQ Number</OPTION><OPTION value="yahoo">Yahoo! ID</OPTION><OPTION value="msn">MSN Username</OPTION><OPTION value="jabber">Jabber</OPTION></SELECT>
+    <INPUT type="submit" value="Search">
+  </FORM>   <H2 id="NavMenuListTitle">Navigate:</H2>
+
+  <UL id="NavMenuList">    <LI><A href="/doc/tour/" onmouseover="javascript:show(0)" onfocus="javascript:show(0)" id="Menu0" style="background-color: rgb(0, 51, 102); color: rgb(255, 255, 255); ">Welcome</A>
+      <UL class="NavSubMenuList" style="visibility: hidden; ">        <LI><A href="/login.bml">Login</A></LI>
+        <LI><A href="/create.bml">Create an Account</A></LI>
+        <LI><A href="/update.bml">Update Your Journal</A></LI>
+        <LI><A href="/manage/siteopts.bml" id="Setlang">English â€¢ EspaÃ±ol â€¢ Deutsch â€¢ Ğ ÑƒÑÑĞºĞ¸Ğ¹ â€¢ â†’</A></LI>
+    </UL></LI>
+    <LI><A href="/site/search.bml" onmouseover="javascript:show(1)" onfocus="javascript:show(1)" id="Menu1">Search</A>
+      <UL class="NavSubMenuList">        <LI><A href="/random.bml">Random</A></LI>
+        <LI><A href="/directory.bml">Region</A></LI>
+        <LI><A href="/interests.bml">Interests</A></LI>
+        <LI><A href="/directorysearch.bml">Advanced</A></LI>
+    </UL></LI>
+    <LI><A href="/support/" onmouseover="javascript:show(2)" onfocus="javascript:show(2)" id="Menu2">Help</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/">Ask a Question</A></LI>
+        <LI><A href="/lostinfo.bml">Lost Password</A></LI>
+        <LI><A href="/support/faq.bml"><ABBR title="Frequently Asked Questions">FAQ</ABBR></A></LI>
+        <LI><A href="/site/">Site Map</A></LI>
+        <LI><A href="/manage/siteopts.bml">Browse Options</A></LI>
+        <LI><A href="/press/staff.bml">ContactÂ Info</A></LI>
+    </UL></LI>
+    <LI><A href="/site/about.bml" onmouseover="javascript:show(3)" onfocus="javascript:show(3)" id="Menu3">About</A>
+      <UL class="NavSubMenuList">        <LI><A href="/support/faqbrowse.bml?faqcat=about">General Info</A></LI>
+        <LI><A href="/press/">Press</A></LI>
+        <LI><A href="/download/">Download</A></LI>
+        <LI><A href="/news.bml">Site News</A></LI>
+        <LI><A href="/paidaccounts/">Paid Accounts</A></LI>
+    </UL></LI>
+  </UL>
+
+  <UL id="FooterNav">    <LI><A id="menu-tos" href="/legal/tos.bml">Terms of Service</A></LI>
+    <LI><A id="menu-privacy" href="/legal/privacy.bml">Privacy Policy</A></LI>
+    <LI><A id="menu-legal" href="/legal/">Legal Information</A></LI>
+    <LI><A id="menu-sitemap" href="/site/">Site Map</A></LI>
+    <LI><A id="menu-siteopts" href="/manage/siteopts.bml">Browse Options</A></LI>
+  </UL>
+
+
+
+
+</BODY></HTML>_5http://www.livejournal.com/users/shutterbc/43558.htmlYtext/html    1 > E W f |,W`g,]dû-4..1.85Ù666&]]Å]ÌŸş 2 = D¡J¡y¡ƒ¡Š£æ¤¤¥Ê¥÷¥ş¨^¨¨”´T´†´´­´³Ü“ÜË             5              ÜÕ

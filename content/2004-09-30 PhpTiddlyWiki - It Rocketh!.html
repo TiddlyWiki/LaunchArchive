@@ -1,0 +1,2007 @@
+<!-- TiddlyWiki 1.0 copyright by Jeremy Ruston, 20 September 2004 -->
+<!-- jeremy@osmosoft.com -->
+<!-- PhpTiddlyWiki is an extension by Patrick Curry, September 2004 -->
+<!-- wiki (at) patrickcurry (dot) org -->
+<!-- This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License.
+     To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send
+     a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA. -->
+<html>
+<head>
+<title>TiddlyWiki</title>
+<script type="text/javascript">
+
+// ---------------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------------
+
+// PMC
+var modifierName = prompt("What's your name?  PutItInWikiFormat!");
+// end PMC
+
+function main()
+{
+    // Do the header, menu and sidebar
+    refreshAll();
+
+	// PMC
+	
+	var warning = document.getElementById("warning");
+	warning.style.visibility = 'hidden';
+    // Display the StartHere tiddler
+    displayTiddler(null,'StartHere',1);
+	// end PMC
+
+}
+
+// ---------------------------------------------------------------------------------
+// Tiddler functions
+// ---------------------------------------------------------------------------------
+
+// Display a tiddler with animation and scrolling, as though a link to it has been clicked on
+//  src = source element object (eg link) for animation effects and positioning
+//  title = title of tiddler to display
+//  state = 0 is default or current state, 1 is read only and 2 is edittable
+function displayTiddler(src,title,state)
+{
+	// PMC
+	if (title.substring(0,7) == "http://")
+	{
+		window.open(title);
+		return false;
+	}
+	// end PMC
+
+    // Figure out the tiddler this one must go after
+    var after = findContainingTiddler(src);
+    //alert(after);
+    // Create the tiddler if needed
+    var theTiddler = createTiddler(title,state,after);
+    // Make it invisible if we got here on an event
+    if(src != null)
+        theTiddler.style.opacity = 0;
+    // Ensure the new tiddler is visible
+    ensureVisible(theTiddler);
+    // Animate from the target of the event that followed the link
+    if(src)
+        {
+        // Set the text of the floater to match the title
+        var floater = document.getElementById("floater");
+        var floaterTitle = document.createTextNode(title);
+        floater.replaceChild(floaterTitle,floater.firstChild);
+        // Animate the floater from the link location to the location of the new tiddler  
+        startZoomer(floater,src,theTiddler);
+        }
+}
+
+// PMC
+function newTiddler()
+{
+	createTiddler("CreateNewTiddler",2);
+}
+
+// end PMC
+
+// Create a tiddler if it doesn't exist (with no fancy animating). The tiddler is invisible unless it was already visible
+//  title = title of tiddler to display
+//  state = 0 is default or current state, 1 is read only and 2 is edittable
+//  after = optional existing tiddler element to put the new one after
+function createTiddler(title,state,after)
+{
+    // See if the tiddler div is already there
+    var theTiddler = document.getElementById("tiddler" + title);
+    if(!theTiddler)
+        {
+        // If it's not there, create the tiddler header
+        theTiddler = createTiddlerHeader(title,after);
+        // Create the tiddler body appropriately
+        if(state != 2)
+            createTiddlerBody(theTiddler,title);
+        else
+            createTiddlerEditor(theTiddler,title);
+        }
+    else
+        {
+        // If the tiddler does exist, make sure that it's in the right state
+        var theBody = document.getElementById("body" + title);
+        var theEditor = document.getElementById("editor" + title);
+        // Create and delete as appropriate
+        switch (state)
+            {
+                case 0: // For default state, leave everything alone
+                break;
+                case 1: // For read-only state, delete any editor
+                    if(!theBody)
+                        {
+                        if(theEditor)
+                            theEditor.parentNode.removeChild(theEditor);
+                        createTiddlerBody(theTiddler,title);
+                        }
+                break;
+                case 2: // For editor state, delete any read-only body
+                    if(!theEditor)
+                        {
+                        if(theBody)
+                            theBody.parentNode.removeChild(theBody);
+                        createTiddlerEditor(theTiddler,title);
+                        }
+                break;
+            }
+        }
+    // Return the completed tiddler
+    return(theTiddler);
+}
+
+// Create an invisible common header section of a tiddler
+//  title = title of tiddler to display
+//  after = optional existing tiddler element to put the new one after
+function createTiddlerHeader(title,after)
+{
+    // Create the tiddler div
+    theTiddler = createTiddlyElement(null,"div","tiddler",null);
+    theTiddler.setAttribute("id","tiddler" + title);
+    theTiddler.onmouseover = onMouseOverTiddler;
+    theTiddler.onmouseout = onMouseOutTiddler;
+    theTiddler.ondblclick = onDblClickTiddler;
+    // Get the subtitle
+    var subtitle = getTiddlerSubtitle(title);
+    theTiddler.title = subtitle;
+    // Link it in
+    var place = document.getElementById("tiddlerDisplay");
+    if(after)
+        {
+        if(after.nextSibling)
+            place.insertBefore(theTiddler,after.nextSibling);
+        else
+            place.appendChild(theTiddler);
+        }
+    else
+        {
+        if(place.firstChild)
+            place.insertBefore(theTiddler,place.firstChild);
+        else
+            place.appendChild(theTiddler);
+        }
+    // Create the anchor
+    var theAnchor = createTiddlyElement(theTiddler,"a",null,null);
+    theAnchor.setAttribute("name","link" + title);
+    // Create the title
+    var theTitle = createTiddlyElement(theTiddler,"div","title",title);
+    theTitle.setAttribute("id","title" + title);
+    // Return the created tiddler
+    return(theTiddler);
+}
+
+// Create a tiddler toolbar according to whether it's an editor or not
+function createTiddlerToolbar(title,editor)
+{
+    // Delete any existing toolbar
+    var theToolbar = document.getElementById("toolbar" + title);
+    if(theToolbar)
+        theToolbar.parentNode.removeChild(theToolbar);
+    // Create the toolbar
+    var theTitle = document.getElementById("title" + title);
+    var theToolbar = createTiddlyElement(theTitle,"div","toolbar", String.fromCharCode(160));
+    theToolbar.setAttribute("id","toolbar" + title);
+    // Create each button in turn
+    if(!editor)
+        {
+        // Non-editor toolbar
+        createTiddlyButton(theToolbar,
+                           "close",
+                           "Close this tiddler",
+                           onClickToolbarClose);
+        theToolbar.appendChild(document.createTextNode(String.fromCharCode(160)));
+        createTiddlyButton(theToolbar,
+                           "link",
+                           "Permalink for this tiddler",
+                           onClickToolbarLink);
+        theToolbar.appendChild(document.createTextNode(String.fromCharCode(160)));
+        createTiddlyButton(theToolbar,
+                           "edit",
+                           "Edit this tiddler",
+                           onClickToolbarEdit);
+        }
+    else
+        {
+        // Editor toolbar
+        createTiddlyButton(theToolbar,
+                           "done",
+                           "Finish changing this tiddler",
+                           onClickToolbarSave);
+        theToolbar.appendChild(document.createTextNode(String.fromCharCode(160)));
+        createTiddlyButton(theToolbar,
+                           "undo",
+                           "Undo changes to this tiddler",
+                           onClickToolbarUndo);        
+        theToolbar.appendChild(document.createTextNode(String.fromCharCode(160)));
+        createTiddlyButton(theToolbar,
+                           "delete",
+                           "Delete this tiddler",
+                           onClickToolbarDelete);
+        }
+}
+
+// Create the body section of a read-only tiddler
+function createTiddlerBody(place,title)
+{
+    // Create the toolbar
+    createTiddlerToolbar(title,false);
+    // Get the body of the tiddler
+    var tiddlerText = getTiddlerText(title);
+    var tiddlerExists = (tiddlerText != null);
+    if(!tiddlerExists)
+        tiddlerText = "[This tiddler doesn't yet exist. Double-click to create it]";
+    // Create the body
+    var theBody = createTiddlyElement(place,"div","body",null);
+    theBody.setAttribute("id","body" + title);
+    if(!tiddlerExists)
+        theBody.style.fontStyle = "italic";
+    // Add the body text wikifing the links
+    wikify(tiddlerText,theBody);
+}
+
+// Create the body section of a read-only tiddler
+function createTiddlerEditor(place,title)
+{
+    // Create the toolbar
+    createTiddlerToolbar(title,true);
+    // Get the body of the tiddler
+    var tiddlerText = getTiddlerText(title);
+    var tiddlerExists = (tiddlerText != null);
+    if(!tiddlerExists)
+        tiddlerText = "Type the text for '" + title + "' here.";
+    // Create the editor div
+    var theEditor = createTiddlyElement(place,"div","editor",null);
+    theEditor.setAttribute("id","editor" + title);
+    // Create the title editor
+    var theTitle = createTiddlyElement(theEditor,"div",null,null);
+    var theTitleBox = createTiddlyElement(theTitle,"input",null,null);
+    theTitleBox.setAttribute("id","editorTitle" + title);
+    theTitleBox.setAttribute("type","text");
+    theTitleBox.value = title;
+    theTitleBox.setAttribute("size","40");
+    // Do the body
+    var theBody = createTiddlyElement(theEditor,"div",null,null);
+    var theBodyBox = createTiddlyElement(theBody,"textarea",null,null);
+    theBodyBox.value = tiddlerText;
+    theBodyBox.setAttribute("id","editorBody" + title);
+    theBodyBox.setAttribute("rows","10");
+    theBodyBox.setAttribute("cols","50");
+}
+
+// Create child text nodes and link elements to represent a wiki-fied version of some text
+function wikify(text,parent)
+{
+    // Link patterns
+    var upperLetter = "[A-Z]";
+    var lowerLetter = "[a-z]";
+    var anyLetter = "[A-Za-z_0-9]";
+    var linkPattern = upperLetter + "+" + lowerLetter + "+" + upperLetter + anyLetter + "*";
+    var urlPattern = "(?:http|https|mailto|ftp):\\S*";
+    var breakPattern = "\\n";
+    // Create the RegExp object
+    var theRegExp = new RegExp("(" + linkPattern + ")|(" + urlPattern + ")|(" + breakPattern + ")","mg");
+    // Set the position after the last match
+    var lastMatch = 0;
+    // Loop through the bits of the body text
+    do {
+        // Get the next match
+        var theMatch = theRegExp.exec(text);
+        if(theMatch)
+            {
+            // If so, dump out any text before the link
+            if(theMatch.index > lastMatch)
+                parent.appendChild(document.createTextNode(text.substring(lastMatch,theMatch.index)));
+            lastMatch = theRegExp.lastIndex;
+            // Dump out the link itself in the appropriate format
+            if(theMatch[1])
+                createTiddlyLink(parent,theMatch[0],true);
+            else if(theMatch[2])
+                createExternalLink(parent,theMatch[0]);
+            else if(theMatch[3])
+                parent.appendChild(document.createElement("br"));            }
+        else
+            {
+            // If no match, just dump out the remaining text
+            parent.appendChild(document.createTextNode(text.substring(lastMatch)));
+            }
+    } while(theMatch != null);
+}
+
+function saveTiddler(title)
+{
+    // Get the title and body text
+    var theNewTitle = document.getElementById("editorTitle" + title).value;
+    var theNewBody = document.getElementById("editorBody" + title).value;
+    // Remove any existing entry from the store
+    var theExisting = document.getElementById("store" + title);
+    if(theExisting)
+        theExisting.parentNode.removeChild(theExisting);
+    // Create the new entry in the store
+    var place = document.getElementById("storeArea");
+    var storeItem = createTiddlyElement(place,"div",null,theNewBody);
+    storeItem.setAttribute("id","store" + theNewTitle);
+    var now = new Date();
+    storeItem.setAttribute("modified",ConvertToYYYYMMDDHHMM(now));
+    storeItem.setAttribute("modifier",modifierName);
+
+	// PMC -- now save it to the web!
+	document.forms.invisiForm.msg.value = "save";
+	document.forms.invisiForm.title.value = theNewTitle;
+	document.forms.invisiForm.body.value = theNewBody;
+	document.forms.invisiForm.modifier.value = modifierName;
+	document.forms.invisiForm.submit();
+	// end PMC
+
+    // Display the new tiddler read-only
+    displayTiddler(null,theNewTitle,1,null);
+    // Refresh the menu and sidebars to take it into account
+    refreshAll();
+
+}
+
+function selectTiddler(title)
+{
+    // Change the background colour
+    var e = document.getElementById("tiddler" + title);
+    if(e != null)
+        e.className = "tiddlerSelected";
+    // Make the toolbar visible
+    e = document.getElementById("toolbar" + title);
+    if(e != null)
+        e.style.visibility = "visible";
+}
+
+function deselectTiddler(title)
+{
+    // Change the background colour
+    var e = document.getElementById("tiddler" + title);
+    if(e != null)
+        e.className = "tiddler";
+    // Make the toolbar invisible
+    e = document.getElementById("toolbar" + title);
+    if(e != null)
+        e.style.visibility = "hidden";
+}
+
+function deleteTiddler(title)
+{
+        // PMC -- now save it to the web!
+	var areYouSure = confirm("Are you sure you want to delete this tiddler?");
+	if (!areYouSure)
+	{
+		return false;
+	}
+
+        document.forms.invisiForm.msg.value = "delete";
+        document.forms.invisiForm.title.value = title;
+        document.forms.invisiForm.body.value = "";
+        document.forms.invisiForm.modifier.value = modifierName;
+        document.forms.invisiForm.submit();
+        // end PMC
+
+    // Remove the tiddler from the display
+    closeTiddler(title);
+    // Delete it from the store
+    var tiddler = document.getElementById("store" + title);
+    if(tiddler)
+        tiddler.parentNode.removeChild(tiddler);
+    // Refresh the menu and sidebars to take it into account
+    refreshAll();
+}
+
+function closeTiddler(title)
+{
+    var tiddler = document.getElementById("tiddler" + title);
+    if(tiddler != null)
+        tiddler.parentNode.removeChild(tiddler);
+}
+
+function closeAllTiddlers()
+{
+    // Delete all the elements in the displayArea
+    var e = document.getElementById("tiddlerDisplay");
+    while(e.firstChild != null)
+        e.removeChild(e.firstChild);
+}
+
+// ---------------------------------------------------------------------------------
+// Tiddler-related utility functions
+// ---------------------------------------------------------------------------------
+
+function getTiddlerText(title)
+{
+        // Attempt to retrieve it from the store
+        var tiddlerStore = document.getElementById("store" + title);
+        if(tiddlerStore != null)
+            return(tiddlerStore.firstChild.nodeValue);
+        else
+            return(null);
+}
+
+function getTiddlerSubtitle(title)
+{
+    var tiddlerStore = document.getElementById("store" + title);
+    if(tiddlerStore != null)
+        {
+        var theModifier = tiddlerStore.getAttribute("modifier");
+        if(!theModifier)
+            theModifier = "(unknown)";
+        var theModified = tiddlerStore.getAttribute("modified");
+        if(theModified)
+            theModified = ConvertFromYYYYMMDDHHMM(theModified);
+        else
+            theModified = "(unknown)";
+        return("Modified by " + theModifier + " on " + theModified);
+        }
+    else
+        return(null);
+}
+
+function createTiddlyElement(theParent,theElement,theClass,theText)
+{
+    var e = document.createElement(theElement);
+    if(theClass != null)
+        e.className = theClass;
+    if(theText != null)
+        e.appendChild(document.createTextNode(theText));
+    if(theParent != null)
+        theParent.appendChild(e);
+    return(e);
+}
+
+function createTiddlyButton(theParent,theText,theTooltip,theAction)
+{
+    var theButton = document.createElement("a");
+    theButton.onclick = theAction;
+    theButton.setAttribute("href","JavaScript:;");
+    theButton.setAttribute("title",theTooltip);
+    theButton.appendChild(document.createTextNode(theText));
+    theParent.appendChild(theButton);
+    return(theButton);
+}
+
+// Create a link to a tiddler
+function createTiddlyLink(place,title,styleIt)
+{
+    // Figure out if the wiki word exists
+    var btn;
+    if(getTiddlerText(title) == null)
+        {
+        // If it does not exist
+        btn = createTiddlyButton(place,title,
+                           title + " doesn't yet exist",
+                           onClickTiddlerLink);
+        if(styleIt)
+            btn.style.fontStyle = "italic";
+        }
+    else
+        {
+        // If it does exist
+        btn = createTiddlyButton(place,title,
+                           getTiddlerSubtitle(title),
+                           onClickTiddlerLink);
+        if(styleIt)
+            btn.style.fontWeight = "bold";
+        }
+}
+
+// Create an external link
+function createExternalLink(place,url)
+{
+    var theLink = document.createElement("a");
+    theLink.setAttribute("href",url);
+    theLink.setAttribute("title","External link to " + url);
+    theLink.setAttribute("target","_blank");
+    theLink.appendChild(document.createTextNode(url));
+    place.appendChild(theLink);
+}
+
+// Find the tiddler instance (if any) containing a specified element
+function findContainingTiddler(e)
+{
+    if(e == null)
+        return(null);
+    do {
+        if(e.id)
+            if(e.id.substr(0,7) == "tiddler")
+                return(e);
+        e = e.parentNode;
+    } while(e != document);
+    return(null);
+}
+
+// ---------------------------------------------------------------------------------
+// Menu and sidebar functions
+// ---------------------------------------------------------------------------------
+
+// Refresh everything
+function refreshAll()
+{
+    refreshHeader();
+    refreshMenu();
+    refreshSidebar();
+}
+
+// Refresh all parts of the header
+function refreshHeader()
+{
+    // Get the site title and subtitle
+    var theTitle = getTiddlerText("SiteTitle");
+    var theSubtitle = getTiddlerText("SiteSubtitle");
+    // Set the page title
+    document.title = theTitle + " - " + theSubtitle;
+    // Do the title
+    var place = document.getElementById("headerTitle");
+    while(place.firstChild != null)
+        place.removeChild(place.firstChild);
+    wikify(theTitle,place);
+    // Do the subtitle
+    var place = document.getElementById("headerSubtitle");
+    while(place.firstChild != null)
+        place.removeChild(place.firstChild);
+    wikify(theSubtitle,place);
+}
+
+// Refresh all parts of the main menu
+function refreshMenu()
+{
+    var place = document.getElementById("leftMenuMain");
+    while(place.firstChild != null)
+        place.removeChild(place.firstChild);
+    var theMenu = document.createElement("div");
+    place.appendChild(theMenu);
+    wikify(getTiddlerText("MainMenu"),theMenu);
+}
+
+// Refresh all parts of the sidebar
+function refreshSidebar()
+{
+    // Get names and dates of all tiddlers from the store
+    var allTiddlers = new Array(); // Will be an array of 2-entry arrays, where entry 0 = name, 1 = date
+    var storeNodes = document.getElementById("storeArea").childNodes;
+    for (var t = 0; t < storeNodes.length; t++)
+        {
+        var n = storeNodes[t];
+        if(n.id)
+            if(n.id.substr(0,5) == "store")
+                allTiddlers.push(new Array(n.id.substr(5),n.getAttribute("modified")));
+        }
+    // Sort the tiddlers by name
+    allTiddlers.sort(function (a,b) { if(a[0] == b[0]) return(0); else return (a[0] > b[0]) ? +1 : -1; });
+    // Delete any existing entries in the 'all' list
+    var place = document.getElementById("sidebarAllTiddlers");
+    while(place.firstChild != null)
+        place.removeChild(place.firstChild);
+    // Output the links
+    var separator = false;
+    for (t = 0; t < allTiddlers.length; t++)
+        {
+        if(separator)
+            place.appendChild(document.createElement("br"));
+        createTiddlyLink(place,allTiddlers[t][0],false)
+        separator = true;
+        }
+    // Sort the tiddlers by date
+    allTiddlers.sort(function (a,b) { if(a[1] == b[1]) return(1); else return (a[1] < b[1]) ? +1 : -1; });
+    // Delete any existing entries in the 'recent' list
+    var place = document.getElementById("sidebarRecentTiddlers");
+    while(place.firstChild != null)
+        place.removeChild(place.firstChild);
+    // Output the most recent few as links
+    var separator = false;
+    var inList = 5;
+    if (allTiddlers.length < inList)
+        inList = allTiddlers.length;
+    for (t = 0; t < inList; t++)
+        {
+        if(separator)
+            place.appendChild(document.createElement("br"));
+        createTiddlyLink(place,allTiddlers[t][0],false)
+        separator = true;
+        }
+}
+
+// ---------------------------------------------------------------------------------
+// Quine (http://www.google.com/search?q=quine&ie=UTF-8&oe=UTF-8)
+// ---------------------------------------------------------------------------------
+
+// Get the text of the TiddlyWiki HTML file itself, incorporating new edits
+function ShowSource()
+{
+    // Create the popup window
+    var srcWindow = window.open("","sourceWindow","width=700,height=600");
+    var srcDocument = srcWindow.document;
+    // Jam in the text template
+    srcDocument.write("<html><head></head><body>" +
+                      window.document.getElementById("saveMessage").innerHTML +
+                      "</body></html>");
+    srcDocument.close();
+    // Get a reference to the text area
+    var theTextBox = srcDocument.getElementById("source");
+    // Jam in the current source
+    //theTextBox.value = "<html>\n" + window.document.getElementsByTagName("html")[0].innerHTML + "\n</html>";
+    theTextBox.value = window.document.getElementById("storeArea").innerHTML; // Optionally, add .replace(/\n+/g, "\n");
+    // Select the text in the textbox
+    theTextBox.focus();
+    theTextBox.select();
+;
+}
+
+// ---------------------------------------------------------------------------------
+// Event handlers
+// ---------------------------------------------------------------------------------
+
+// Event handler for clicking on the logo
+function onClickLogo(e)
+{
+	closeAllTiddlers();
+	displayTiddler(document.getElementById("headerTitle"),"StartHere",1);
+}
+
+// Event handler for clicking on a tiddly link
+function onClickTiddlerLink(e)
+{
+	// Get the text of the link
+	var title;
+	if(this.firstChild)
+        title = this.firstChild.nodeValue;
+    else if (this.nodeValue)
+	   title = this.nodeValue; 
+	// Display that tiddler
+	if(title)
+		displayTiddler(this,title,0);
+}
+
+// Event handler for mouse over a tiddler
+function onMouseOverTiddler(e)
+{
+	// Get the name of this tiddler
+	var tiddler;
+	if(this.id.substr(0,7) == "tiddler")
+		tiddler = this.id.substr(7);
+	// Select that tiddler
+	if(tiddler)
+		selectTiddler(tiddler);
+}
+
+// Event handler for mouse out of a tiddler
+function onMouseOutTiddler(e)
+{
+	// Get the name of this tiddler
+	var tiddler;
+	if(this.id.substr(0,7) == "tiddler")
+		tiddler = this.id.substr(7);
+	// Deselect that tiddler
+	if(tiddler)
+		deselectTiddler(tiddler);
+}
+
+// Event handler for double click on a tiddler
+function onDblClickTiddler(e)
+{
+    // Empty the current selection
+    if(document.selection)
+        document.selection.empty();
+	// Get the name of this tiddler
+	var tiddler;
+	if(this.id.substr(0,7) == "tiddler")
+		tiddler = this.id.substr(7);
+	// Deselect that tiddler
+	if(tiddler)
+        displayTiddler(null,tiddler,2);
+}
+
+// Event handler for clicking on toolbar close
+function onClickToolbarClose(e)
+{
+	// Close that tiddler
+	if(this.parentNode.id)
+		closeTiddler(this.parentNode.id.substr(7));
+}
+
+// Event handler for clicking on toolbar close
+function onClickToolbarDelete(e)
+{
+	// Close that tiddler
+	if(this.parentNode.id)
+		deleteTiddler(this.parentNode.id.substr(7));
+}
+
+// Event handler for clicking on toolbar link
+function onClickToolbarLink(e)
+{
+	/* PMC
+	-- disabling old code...
+	
+	// Close all other tiddlers
+	if(this.parentNode.id)
+		{
+		closeAllTiddlers();
+		displayTiddler(null,this.parentNode.id.substr(7),1);
+		}
+
+	-- inserting new!
+	*/
+	document.location = "http://www.patrickcurry.com/tiddly/index.php?title=" + this.parentNode.id.substr(7);
+
+}
+
+// Event handler for clicking on toolbar close
+function onClickToolbarEdit(e)
+{
+	// Edit that tiddler
+	if(this.parentNode.id)
+		displayTiddler(null,this.parentNode.id.substr(7),2);
+}
+
+// Event handler for clicking on toolbar save
+function onClickToolbarSave(e)
+{
+	// Save that tiddler
+	if(this.parentNode.id)
+		saveTiddler(this.parentNode.id.substr(7));
+}
+
+// Event handler for clicking on toolbar save
+function onClickToolbarUndo(e)
+{
+	// Redisplay that tiddler in read-only mode
+	if(this.parentNode.id)
+		displayTiddler(null,this.parentNode.id.substr(7),1);
+}
+
+// ---------------------------------------------------------------------------------
+// Animation engine
+// ---------------------------------------------------------------------------------
+
+// Animation housekeeping
+var animating = 0; // Incremented at start of each animation, decremented afterwards. If zero, the interval timer is disabled
+var animaterID; // ID of the timer used for animating
+// 'zoomer' module of the animation engine that smoothly moves an element from the position/size of the start element to th etarget element
+var zoomerElement = null; // Element being shifted; null if none
+var zoomerStart; // Where we're shifting to
+var zoomerTarget; // Where we're shifting to
+var zoomerProgress; // 0..1 of how far we are
+var zoomerStep; // 0..1 of how much to shift each step
+
+// Start animation engine
+function startAnimating()
+{
+    if(animating++ == 0)
+        animaterID = window.setInterval("doAnimate();",25);
+}
+
+// Stop animation engine
+function stopAnimating()
+{
+    if(--animating == 0)
+        window.clearInterval(animaterID)
+}
+
+// Perform an animation engine tick, calling each of the known animation modules
+function doAnimate()
+{
+    if(zoomerElement != null)
+        doZoomer();
+}
+
+// Start moving the element 'e' from the position of the element 'start' to the position of the element 'target'
+function startZoomer(e,start,target)
+{
+    stopZoomer();
+    zoomerElement = e;
+    zoomerStart = start;
+    zoomerTarget = target;
+    zoomerProgress = 0;
+    zoomerStep = 0.08;
+    startAnimating();
+}
+
+// Stop any ongoing zoomer animation
+function stopZoomer()
+{
+    if(zoomerElement != null)
+        {
+        stopAnimating();
+        zoomerElement.style.visibility = "hidden"; 
+        zoomerElement = null;
+        }
+}
+
+// Perform a tick of the zoomer animation
+function doZoomer()
+{
+    zoomerProgress += zoomerStep;
+    if(zoomerProgress > 1.0)
+        stopZoomer();
+    else
+        {
+        zoomerTarget.style.opacity = zoomerProgress;
+        var f = slowInSlowOut(zoomerProgress);
+        var zoomerStartLeft = findPosX(zoomerStart);
+        var zoomerStartTop = findPosY(zoomerStart);
+        var zoomerStartWidth = zoomerStart.offsetWidth;
+        var zoomerStartHeight = zoomerStart.offsetHeight;
+        var zoomerTargetLeft = findPosX(zoomerTarget);
+        var zoomerTargetTop = findPosY(zoomerTarget);
+        var zoomerTargetWidth = zoomerTarget.offsetWidth;
+        var zoomerTargetHeight = zoomerTarget.offsetHeight;
+        zoomerElement.style.left = zoomerStartLeft + (zoomerTargetLeft-zoomerStartLeft) * f;
+        zoomerElement.style.top = zoomerStartTop + (zoomerTargetTop-zoomerStartTop) * f;
+        zoomerElement.style.width = zoomerStartWidth + (zoomerTargetWidth-zoomerStartWidth) * f;
+        zoomerElement.style.height = zoomerStartHeight + (zoomerTargetHeight-zoomerStartHeight) * f;
+        zoomerElement.style.visibility = "visible";
+        }
+}
+
+// ---------------------------------------------------------------------------------
+// Standalone utility functions
+// ---------------------------------------------------------------------------------
+
+// Return a date in UTC YYYYMMDDHHMM format
+function ConvertToYYYYMMDDHHMM(d)
+{
+    return(d.getFullYear() + '' + (d.getMonth() <= 9 ? '0' : '') + (d.getMonth() + 1) + '' + (d.getDate() <= 9 ? '0' : '') + d.getDate() + (d.getHours() <= 9 ? 
+'0' : '') + d.getHours() + (d.getMinutes() <= 9 ? '0' : '') + d.getMinutes());
+}
+
+// Convert a date in UTC YYYYMMDDHHMM format to printable local time
+function ConvertFromYYYYMMDDHHMM(d)
+{
+    var theDate = new Date(parseInt(d.substr(0,4),10),
+                            parseInt(d.substr(4,2),10)-1,
+                            parseInt(d.substr(6,2),10),
+                            parseInt(d.substr(8,2),10),
+                            parseInt(d.substr(10,2),10),0,0);
+    return(theDate.toLocaleString());
+}
+
+// Map a 0..1 value to 0..1, but slow down at the start and end
+function slowInSlowOut(progress)
+{
+    return(1-((Math.cos(progress * Math.PI)+1)/2));
+}
+
+// Scroll if necessary to ensure that a given element is visible
+function ensureVisible(e)
+{
+    // The position we're trying to scroll into view; the top of it...
+    var posY = findPosY(e);
+    // ...or, if the element will fit on the screen, the bottom of it
+    if(e.offsetHeight < window.innerHeight)
+        posY += e.offsetHeight;
+    // Make sure the chosen position is visible
+    if ((posY < window.scrollY) || (posY > (window.scrollY + window.innerHeight)))
+        window.scrollTo(0,posY);
+}
+
+// From QuirksMode.com
+function findPosX(obj)
+{
+        var curleft = 0;
+        if (obj.offsetParent)
+        {
+                while (obj.offsetParent)
+                {
+                        curleft += obj.offsetLeft
+                        obj = obj.offsetParent;
+                }
+        }
+        else if (obj.x)
+                curleft += obj.x;
+        return curleft;
+}
+
+// From QuirksMode.com
+function findPosY(obj)
+{
+        var curtop = 0;
+        if (obj.offsetParent)
+        {
+                while (obj.offsetParent)
+                {
+                        curtop += obj.offsetTop
+                        obj = obj.offsetParent;
+                }
+        }
+        else if (obj.y)
+                curtop += obj.y;
+        return curtop;
+}
+
+// ---------------------------------------------------------------------------------
+// End of scripts
+// ---------------------------------------------------------------------------------
+
+</script>
+<style type="text/css">
+
+body {
+	font-size: 9pt;
+    font-family: tahoma,arial,helvetica;
+    margin: 0px 0px 0px 0px;
+}
+
+img {
+	border: none;
+}
+
+/* PMC */
+#warning {
+	position: absolute;
+}
+/* end PMC */
+
+#header {
+    width: 789px;
+    margin: 0px 16px 16px 16px;
+    padding: 6px 6px 6px 6px;
+    border-bottom: 2px solid #4d5577;
+    background-color: #a2b3f9;
+    font-size: 16pt;
+    text-shadow: #4d5577 3px 3px 8px;
+}
+
+#headerTitle {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+#headerSubtitle {
+    font-family: georgia,times;
+    font-style: italic;
+    color: #4d5577;
+}
+
+#header a:link, #header a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+#leftMenu {
+    float: left;
+    width: 127px;
+    background: #fbe9a2;
+    color: black;
+    text-align: right;
+    border: 1px dotted #46412d;
+    margin: 0px 6px 16px 16px;
+}
+
+#leftMenu div {
+    font-size: 10pt;
+    padding: 6px 6px 6px 6px;
+    overflow: hidden;
+    line-height: 140%;
+}
+
+#leftMenu a:link, #leftMenu a:visited {
+    text-decoration: none;
+    color: #46412d;
+}
+
+#leftMenu a:hover {
+    color: #fbe9a2;
+    background-color: #46412d;
+}
+
+#sidebar {
+    float: left;
+    width: 145px;
+    margin: 0px 0px 0px 6px;
+    padding: 6px 6px 6px 6px;
+    color: #777777;
+    font-size: 8pt;
+    background-color: #ffffff;
+    border-left: 1px solid #777777;
+}
+
+#sidebar a:link, #sidebar a:visited {
+    color: #777777;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+#displayArea {
+    float: left;
+    width: 511px;
+}
+
+.tiddler {
+    font-family: georgia,times;
+    padding: 8px 8px 8px 8px;
+    background-color: #ffffff;
+}
+
+.tiddlerSelected {
+    font-family: georgia,times;
+    padding: 8px 8px 8px 8px;
+    background-color: #d5e7ff;
+}
+
+.title {
+    font-family: tahoma,arial,helvetica;
+    font-size: 10pt;
+    color: #5d1914;
+    font-weight: bold;
+    display: inline;
+    text-shadow: #AAAAAA 3px 3px 3px;
+}
+
+.body {
+    padding-top: 2px;
+    font-size: 10pt;
+}
+
+.body a:link, .body a:visited {
+    color: #482d94;
+    text-decoration: underline;
+}
+
+.body a:hover {
+    color: white;
+    background-color: #482d94;
+    text-decoration: none;
+}
+
+.editor {
+    font-size: 8pt;
+    color: #402C74;
+    font-weight: normal;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #999999;
+    margin-bottom: 0px;
+}
+
+.toolbar {
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 8pt;
+    margin-left: 6px;
+    padding: 0px 0px 0px 0px;
+    color: #aaaaaa;
+    display: inline;
+    visibility: hidden;
+}
+
+.toolbar A {
+    color: #888888;
+    text-decoration: none;
+}
+
+.toolbar A:hover {
+    color: #000000;
+}
+
+.toolbar A:active {
+    color: #666666;
+}
+
+#saveMessage {
+    display: none;
+}
+
+#storeArea {
+    display: none;
+}
+
+#floater {
+    font-size: 10pt;
+    visibility: hidden;
+    color: white;
+    background-color: #b8b896;
+    position: absolute;
+    padding: 8px 8px 8px 8px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+</style>
+</head>
+<body onload="main()">
+<!-- PMC -->
+<div id="warning">
+PhpTiddlyWiki uses JavaScript, CSS, DHTML, and a bunch of other buzz-words.  Check-back later for a low-end version.
+</div>
+<!-- end PMC -->
+    <div id="header">
+        <a id="headerTitle" href="JavaScript:;" onclick="onClickLogo()"></a> <span id="headerSubtitle"></span>
+
+    </div>
+    <div id="leftMenu">
+        <span id="leftMenuMain"></span>
+    </div>
+    <div id="displayArea">
+        <div id="tiddlerDisplay"></div>
+        &nbsp;
+    </div>
+        <div id="floater">&nbsp;</div>
+
+    <div id="sidebar">
+	<!-- PMC -->
+	<a href="javascript:newTiddler()"><strong>New</strong></a><br>
+	<a href="javascript:closeAllTiddlers();"><strong>Close All</strong></a><br>
+	<!-- end PMC -->
+        <a href="javascript:ShowSource()"><strong>Save All</strong></a>
+        <br> <br>
+        <strong>Recent tiddlers:</strong> <br>
+        <span id="sidebarRecentTiddlers"></span>
+        <br> <br>
+
+        <strong>All tiddlers:</strong> <br>
+        <span id="sidebarAllTiddlers"></span>
+        <br> <br>
+        <strong>License:</strong> <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+        <!-- <img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.gif" /></a><br /> -->
+
+This work is licensed under a <br> Creative Commons License</a>
+        <br><br><a href="rss.php"><img src="xml.gif" alt="RSS 2.0 Feed" border="0" /></a>
+
+    </div>
+    <div id="saveMessage">
+        <span style="font-size: 10pt; font-family: tahoma,arial,helvetica;">
+                <p style="font-size: 18pt;">Ouch.</p>
+                This is a bit of a hack. In an ideal world, clicking the save button should just give you
+                a file save dialogue box and let you choose where to save your spanking new personal TiddlyWiki. Unfortunately
+                doing stuff in web browsers is never that easy, and there's a couple of hoops to be jumped through. See below
+                for a quick guide. <br> <br>
+
+                <textarea id='source' rows='20' cols='80'>(source code goes here)</textarea><br><br>
+                The steps to save your changes as a new, standalone TiddlyWiki are simple, but can be error prone. <br> <br>
+                1. Make sure that all the text is selected in the edit box above. Copy it to the clipboard.<br>
+                2. Go back to the browser window showing your editted TiddlyWiki and save the HTML as a new file. <br>
+                3. Open the HTML file in a text editor like Notepad. Scroll to the bottom and locate the marker lines picked out with a row of asterisks.<br>
+                4. Select the text from just above that marker back up to the previous marker.<br>
+
+                5. Paste the new text in.<br>
+                6. Save the HTML file.<br>
+                Suggestions or improvements welcome.
+                <br> <br>
+
+                
+        </span>
+    </div>
+<!-- PMC -->
+<div id="invisiFormDiv" style="visibility:hidden">
+	<form name="invisiForm" action="/tiddly/index.php" method="post" target="invisiFormFrame">
+		<input type="hidden" name="msg" value="" />
+		<input type="hidden" name="title" value="" />
+		<input type="hidden" name="body" value="" />
+		<input type="hidden" name="modifier" value="" />
+	</form>
+</div>
+<iframe id="invisiFormFrame" name="invisiFormFrame" style="visibility:hidden"></iframe>
+
+<!-- end PMC -->
+
+    <div id="storeArea">
+
+<!-- ********************************************************************* -->
+<!-- Paste your TiddlyWiki content between this marker and the one below   -->
+<!-- ********************************************************************* -->
+
+
+
+
+
+<DIV id="storeMyFirstEntry" modified="200409230825" modifier="PatrickCurry" version="0">This is my very first entry into the PHP Tiddly Wiki.  In fact, it's so early I'm entering it directly into PhpMyAdmin.  Nutty!</DIV>
+<DIV id="storeMainMenu" modified="200409251412" modifier="PatrickCurry" version="0">StartHere
+SandBox
+RecentChanges
+DownloadCode
+WishList
+BugList
+</DIV>
+<DIV id="storeSiteSubtitle" modified="200409251249" modifier="BlogalVillager" version="0">It Rocketh!</DIV>
+<DIV id="storeSiteTitle" modified="200409230800" modifier="PatrickCurry" version="0">PhpTiddlyWiki</DIV>
+<DIV id="storeBugList" modified="200409300514" modifier="undefined" version="17">Please add new bugs to the bottom of this list: * Changing the title of a tiddler creates a new one, instead of replacing the original. This is a server-side bug. (is this a bug or not? hmmm...) -- No, I'm afraid that's a bug in my ropey JavaScript. Ouch. JeremyRuston -- I was thinking about it, and I think some users will edit an entry, then change their mind and make it a "new" one in their mind by changing what's in the title field. So maybe it's better to force them to delete the old one after the fact? PatrickCurry * The link parsing is pretty weird. Fixing it should also allow HTML tags (from PhpMarkdown, for example) to work properly. * You can create several tiddlers with the same name -- and things seem to go downhill from there (can you?) -- I haven't been able to do this -- PatrickCurry * I have just added a PatchForTheRegExp part of the parser, which solves lots of parsing problems. -- thanks for the patch! * When one creates a new tiddler and hits 'done', the text-box tiddler doesn't close * Every now and again, editing or creating a tiddler causes the page to scroll way down, moving the tiddler in question out of sight. (Under Firefox) * Quite often, horizontal lines appear going across the main tiddler area, crossing the line on the left... Under Firefox (I get this in Mozilla too) * If you are scrolled down and click on a new TiddlerLink then it jumps up, but only to the Tiddler below the one you opened. FixingSaveOnClientSide has ideas for allowing Save on the browser to save a working local Tiddly file.</DIV>
+<DIV id="storeTiddlyWiki" modified="200409282359" modifier="PatrickCurry" version="3">TiddlyWiki is the coolest thing I've seen on the web in a long, long time. Check it out: http://www.tiddlywiki.com/</DIV>
+<DIV id="storePatrickCurry" modified="200409270245" modifier="PatrickCurry" version="5">I wrote this PhP extension to TiddlyWiki.  If you like, feel free to email me: wiki (at) patrickcurry (dot) com.  Cheers!</DIV>
+<DIV id="storeWakaWaka" modified="200409281112" modifier="undefinedasas" version="5">WakaKlaka Testing. and so it is ClaudioBarbosa</DIV>
+<DIV id="storeCheddat" modified="200409250810" modifier="Jon" version="0">Type the text for 'CreateNewTiddler' here</DIV>
+<DIV id="storePhpTiddlyWiki" modified="200409251137" modifier="" version="0">It's TiddlyWiki with a PhP/MySql back-end.</DIV>
+<DIV id="storeGabrielJeffrey" modified="200409281130" modifier="gabe" version="1">Gabriel is a like-minded web/art/design/tech geek/entrepreneur. I think that's why we get along so well.
+
+He has the most amazing set of tits.</DIV>
+<DIV id="storePhP" modified="200409260147" modifier="MichaelRandall" version="1">PHP (all caps) is a very cool scripting language for making websites.  Check it out: http://www.php.net/</DIV>
+<DIV id="storeWishList" modified="200409300243" modifier="FrançoisParmentier" version="26">Features we'd like to see in PhpTiddlyWiki: 
+* Ability to refresh without losing history. 
+* Markdown formatting (PhpMarkdown) 
+* Versioning (VersioningUI) 
+* scrolling the tiddler list separately from the main page 
+* BackLinks, list which tiddlers refer to the current tiddler. Something I use rather a lot on Ward's Wiki 
+* An idea of mine: TiddlerThreading -- see PatricksThoughtsOnTiddlerThreading 
+* Tiddler search 
+* Closed (uneditable) tiddlers 
+* password-protected tiddlers 
+* tiddler organization by sections/pages 
+* When using the RIGHT navbar, it would be nice to have the screen jump back up to the top, when a tiddler is opened. (So we can see it.) 
+* Documentation for this version of WikiMarkup 
+* I think a way to close many tiddlies at once would be handy. They can stack up pretty quickly. (use the CloseAll button -- upper right) 
+* QuestionsQuestions Granted Wishes: 
+* The back-end part of versioning works. But there's no client-side interface yet. 
+* Can we get the source? --EvEnti
+* Can't we create WikiWord using non-ascii characters -- FrançoisParmentier</DIV>
+<DIV id="storePhpMyAdmin" modified="200409240802" modifier="PatrickCurry" version="0">PHP My Admin is an amazingly cool web-based interface to MySql that lets you create a database in about 2 seconds.  I used it to make this PhP version of TiddlyWiki.
+
+Check it out: http://www.phpmyadmin.net/</DIV>
+<DIV id="storeMySql" modified="200409272202" modifier="Craig" version="1">MySQL is a free database application. Hurrah for open-source! Check it out: http://www.mysql.com/</DIV>
+<DIV id="storeHellNaw" modified="200409251342" modifier="BlogalVillager" version="0">Welcome to the first Tiddler Spam. Eat at Joes!
+</DIV>
+<DIV id="storechadder" modified="200409250809" modifier="Jon" version="0">another page StartHere</DIV>
+<DIV id="storePhpMarkdown" modified="200409251511" modifier="PatrickCurry" version="1">A cool and simple way to turn plain-text into HTML: http://www.michelf.com/projects/php-markdown/</DIV>
+<DIV id="storeJeremyRuston" modified="200409241413" modifier="TrevorFilter" version="0">This is incredible -- I only put TiddlyWiki up a few hours ago, and you've done this already? I should have got you to do the original development as well...
+
+Thanks guys!</DIV>
+<DIV id="storeA New Thing" modified="200409262157" modifier="LelandPaul" version="7">What happens with non-wiki-format links?
+
+Why don't they work? I have absolutely no way of linking to "Blogs bring civil society to the USA and everywhere".
+
+That's silly, people. Very, very silly.</DIV>
+<DIV id="storeInterface" modified="200409271334" modifier="AlSanAn" version="1">The interface is really nice. cute name too. I agree. Soc valencia i me diuen AlfonSet.</DIV>
+<DIV id="storeJamesCraig" modified="200409240915" modifier="PatrickCurry" version="0">Yo PatrickCurry, this is a kickass tool you put together.
+---
+To be fair, I just did the back end.  JeremyRuston gets the real credit.</DIV>
+<DIV id="storeTomWarmbrodt" modified="200409241005" modifier="EmperorAmazing" version="0">This is a total chomp!</DIV>
+<DIV id="storeHtmlTest" modified="200409250311" modifier="PatrickCurry" version="0">I was messing around with HTML in tiddlers.  Doesn't work yet...
+
+Hmmm... <b>how</b> <i>about</i> <u>this</u>?</DIV>
+<DIV id="storeStopNow" modified="200409251319" modifier="BlogalVillager" version="0">YooHoo</DIV>
+<DIV id="storeThisIsCool" modified="200409261548" modifier="BlahHuff" version="2">You questioned the coolness of this? UnThinkable! This IS cool. The ultimate in cool? Who knows ..</DIV>
+<DIV id="storeSandBox" modified="200409300627" modifier="PatrickCurry" version="114">The SandBox has been SmoothedOut. Try out the ChooseYourOwnAdventure, and feel free to add to it! Hey, this is cool!</DIV>
+<DIV id="storeAAA" modified="200409281147" modifier="GraemeWilliams" version="0">Test of repeated tiddlers</DIV>
+<DIV id="storeABeautNewTiddler" modified="200409250041" modifier="PeterGallagher" version="0">This is a test.  If this had been a real tiddler ... It would be tiny. </DIV>
+<DIV id="storeFlavoursome" modified="200409241438" modifier="Chris Bunting" version="0">Another post
+</DIV>
+<DIV id="storeTiddly Diddily Doo!" modified="200409242114" modifier="ChrisWiki" version="0">This is awesome...fragmented, non-sequential noting system.</DIV>
+<DIV id="storeJeremyFrumkin" modified="200409251208" modifier="undefined" version="0">Nice adaptation.</DIV>
+<DIV id="storeGetSourceCode" modified="200409280759" modifier="jon" version="1">Where can we get your source code?  I checked your 'All tiddlers' list, but didn't see anything that seemed related to downloading source.
+
+UPDATE-- I just noticed in your WishList that you haven't released the source yet.
+
+Italy</DIV>
+<DIV id="storeBeginNow" modified="200409251318" modifier="BlogalVillager" version="0">StopNow WhatNow HellNaw.</DIV>
+<DIV id="storeSantiagoGala" modified="200409251147" modifier="SantiagoGala" version="0">Estuve probando por aquí. Los acentos y ñ funcionan, pero hay que parchearlo para los WikiNombres. Los enlaces externos, como http://memojo.com/memojowiki/Wiki.jsp?page=SantiagoGalaBlog ya funcionan. ¡Mola!
+
+A PatchForTheRegExp stuff, severely broken.
+
+I have more simple changes here, for instance to handle international characters better.
+
+Thanks, JeremyRuston and PatrickCurry, BTW, I found it great and I'll possibly use it.</DIV>
+<DIV id="storeAn interesting new wiki" modified="200409300256" modifier="FrançoisParmentier" version="6">Can this be saved. That is the question.
+
+Yes. That is the answer.
+
+How did you do that? That is the next question. -- FrancoisParmentier</DIV>
+<DIV id="storeA note" modified="200409291119" modifier="Peter" version="1">A great way to take notes on the web. Link like this: EditBox!</DIV>
+<DIV id="storeSortTiddlers" modified="200409281415" modifier="MiekalAnd" version="1">This Command should sort (descending or ascending) by name all the tiddlers that are selected/rendered on the main page.</DIV>
+<DIV id="storeAnyBodyGetThisToWork" modified="200409272108" modifier="JasonLove" version="2">I can't
+
+(As a matter of fact, you DID.)
+
+It's tricky, though, because "All tiddlers" doesn't really bring to mind the titles of the entries you just created.  I only just realized several of the entries I'd made came up over there.  Bizarre.</DIV>
+<DIV id="storeAspNetTiddler" modified="200409271029" modifier="NinaG" version="1">CaseyMarshall is working on an ASP.NET version.  I will probably use ObjectPrevalence for storage because databases are clunky and memory is cheap.  If I get it working I will provide a link.  TiddlyWiki is so freaking cool!
+
+-- Excellent, let me know how it goes!  (PatrickCurry)</DIV>
+<DIV id="storeCaseyMarshall" modified="200409242321" modifier="Gumby" version="0">I really should be working on more "important stuff", but this is too fun to pass up.  I discovered TiddlyWiki and PhpTiddlyWiki via del.icio.us.  TiddlyWiki is to wiki like GMail is to webmail!</DIV>
+<DIV id="storeMeaningOfTiddler" modified="200409250045" modifier="PeterGallagher" version="0">A 'tiddler' is a tiny fish, too small to land. The sort of thing that you don't admit to catching.
+
+A tippler is ... someone who gets a bit tiddly from time to time.
+
+Confusing language.. ain't it?
+</DIV>
+<DIV id="storeCloseAll" modified="200409250200" modifier="PatrickCurry" version="0">This Command should 'hide' all the tiddlers that are selected/rendered on the main page.</DIV>
+<DIV id="storeMasonsThoughtsOnHistory" modified="200409250206" modifier="PatrickCurry" version="0">"I kind of like the ability to get rid of my history list. It might just be social anxiety, but sometime histories stress me out. even if you fix the refresh issue, for users like me, please try to include a "clear history" button. --mason"</DIV>
+<DIV id="storeJavaScript" modified="200409250408" modifier="PatrickCurry" version="0">JavaScript is a ClientSide ScriptingLanguage, interpreted by WebBrowsers to do neato stuff like TiddlyWiki.</DIV>
+<DIV id="storeEditBoxModified" modified="200409262003" modifier="JasonWehmhoener" version="1">Yes, that TextInput above! Just trying... erp</DIV>
+<DIV id="storeEditBox" modified="200409272046" modifier="Piyush" version="8">Yo Baby, I like this! 
+Yeah its cool</DIV>
+<DIV id="storeTextInput" modified="200409251559" modifier="undefined" version="1">Whas it because the link was not yet created ? New try... Yes! It worked, and created a new entry! Cool ;-)</DIV>
+<DIV id="storeTextInputModified" modified="200409250423" modifier="DidierBelot" version="0">Whas it because the link was not yet created ? New try, changing TextInput to TextInputModified</DIV>
+<DIV id="storeGideonKlok" modified="200409250524" modifier="" version="0">Wow. Looks really great. Never knew that JavaScript is so able.
+
+This should be used more, client side code scales much beter then serverside code.</DIV>
+<DIV id="storethis is a new tiddler" modified="200409261500" modifier="Sligowaths" version="1">What a wonderfull wiki !!!!
+asd
+asd
+</DIV>
+<DIV id="storeTruth, Beauty etc" modified="200409250613" modifier="lorky" version="0">"Normal" is a dryer setting</DIV>
+<DIV id="storeWhat's next?" modified="200409251433" modifier="PatrickCurry" version="0">So I can adapt this wiki for my website? -- Soon.</DIV>
+<DIV id="storeRssBug" modified="200409251514" modifier="" version="1">The RSS feed has broken links. The question mark is in the wrong place. For example the feed gives http://www.patrickcurry.com/tiddly/title?=WishList instead of http://www.patrickcurry.com/tiddly/?title=WishList
+
+I think this is fixed.  If not, let me know -- PatrickCurry
+
+Looks fixed to me. :o)</DIV>
+<DIV id="storeHopeThisWorks" modified="200409250912" modifier="LelandPaul" version="0">If this works, I'm almost certainly going to be using it... Let us see!</DIV>
+<DIV id="storeDaveBabbitt" modified="200409291054" modifier="DerekSmith" version="1">Unknown for his renown, sometimes he would call out to those goading him" what do you think IAmABloodyWanker"</DIV>
+<DIV id="storeStand alone" modified="200409291119" modifier="Peter" version="1">Is there a stand alone version ---- Yup, try http://www.tiddlywiki.com </DIV>
+<DIV id="storeStartHere" modified="200409251418" modifier="PatrickCurry" version="0">I'm really glad people like PhpTiddlyWiki, but they still refuse to not delete the main menu and welcome page.  As such, I've locked down a couple of these pages.
+
+Just in case you don't know, PhpTiddlyWiki is an awesome front-end (TiddlyWiki) plus a PhP/MySql backend.  We're still working on it, but some day hope to release to source code, etc.
+
+Visit the SandBox to play around.</DIV>
+<DIV id="storeBlogalTiddly" modified="200409272115" modifier="" version="1">Yahoo! Google!</DIV>
+<DIV id="storePatchForTheRegExp" modified="200409281028" modifier="SantiagoGala" version="4">Substitute the relevant fragment in the original code by:
+
+if(theMatch[1] ) createTiddlyLink(parent,theMatch[0],true);
+ else if(theMatch[2] ) createExternalLink(parent,theMatch[0]);
+ else if(theMatch[3] ) parent.appendChild(document.createElement("br")); } 
+
+i.e. kill the '!= ""' part.
+
+I also changed the pattern for breaks to "\\n\\n" to need double LF for a br, more wiki-like
+
+</DIV>
+<DIV id="storedamidami" modified="200409271956" modifier="damidami" version="0">ƒCƒ“ƒ^ƒ‰ƒNƒeƒBƒu‚ç‚­‚ª‚«’ </DIV>
+<DIV id="storeRecentChanges" modified="200409281815" modifier="PatrickCurry" version="5">RecentChanges: Many pages have been deleted...
+
+* The PatchForTheRegExp has been applied, allowing for multiple paragraphs in a single tiddler.
+
+* Please visit the UserSurvey.  Thanks!</DIV>
+<DIV id="storeTestingVersioning" modified="200409262343" modifier="PatrickCurry" version="4">The ServerSide part is done.  Now I need some pretty HTML/JS for it.  :-)</DIV>
+<DIV id="storeWhyJustOneParagraph" modified="200409271426" modifier="PatrickCurry" version="2">You should be able to make tiddlers with more than one paragraph...
+
+You can now.</DIV>
+<DIV id="storeNewTestingTiddler" modified="200409270224" modifier="PatrickCurry" version="4">This is an entirely new entry.  Now I've updated it!  Now I've updated it for a second time!  And now I've gone and updated it a third time!  And a forth?  And a fifth!  Sixth?  Seventh!!!</DIV>
+<DIV id="storeAnotherNewEntry" modified="200409291630" modifier="SimonMeehan" version="4">I'm just testing away... I'm trying to add more to it. http://www.sandbox.com test test 1, 2, 1, 2.  Me too - SimonMeehan likes this very much</DIV>
+<DIV id="storeYetAnotherNewEntry" modified="200409251454" modifier="PatrickCurry" version="1">Test test test.  Isn't it fun to use half-completed software?  :-)  I think it is, especially since I'm writing it.  I'm going to have to go on vacation once I finish this.  Oh wait, I am on vacation.</DIV>
+<DIV id="storeSandBoxes" modified="200409251508" modifier="LelandPaul" version="1">SandBox SandBox SandBox SandBox SandBox SandBox SandBox
+
+Ain't sandboxes cool?</DIV>
+<DIV id="storeCreateNewTiddler" modified="200409300602" modifier="SamRowe" version="15">Don't forget to change the Tiddler Name above!</DIV>
+<DIV id="storeTEst" modified="200409290918" modifier="Martin" version="3">just to test a ... 
+I'm confuse how do you CreateALink?</DIV>
+<DIV id="storeHelloWorld" modified="200409261459" modifier="Sligowaths" version="3">Testing one two three. SmashedWikiSyntax
+
+Horray!
+</DIV>
+<DIV id="storeAnarchy" modified="200409291846" modifier="Ubi Nemo" version="3">Test well, the fact is, in order to make this kind of rapid evolutionary tool productive, people need to maintain Respect for the ideas and efforts of others, and resist the temptation for arbitrary destruction and exercise of unexpected and often unmerited freedom of expression that comes with such a powerful tool of free expression. so, please, maintain some Respect and do not seek to merely destroy because you can. 
+
+As a result, we may see some very interesting and productive expressive development of ideas. </DIV>
+<DIV id="storeChooseYourOwnAdventure" modified="200409291052" modifier="PaulHoffman" version="9">You wake up in a field. You're not exactly sure how you got here. To the north is a RockyPath leading into the mountains. To the south is a SmallStream, leading into the woods.</DIV>
+<DIV id="storeRespect" modified="200409252317" modifier="an algorithm little known, but credited to Fermat, and somehow not accounting for a prophesy by Nostradamus, which he predicted to occur" version="0">see Anarchy</DIV>
+<DIV id="storeLinkName" modified="200409272231" modifier="boogawookie" version="2">and <a href='foo'>make</a> a http://www.google.com -hyperlink??</DIV>
+<DIV id="storeTextFormat" modified="200409272137" modifier="MiekalAnd" version="3">bold or not?
+
+paragraph
+
+new paragraph
+
+Need some WikiStyle</DIV>
+<DIV id="storeWhat is this" modified="200409260526" modifier="motasem" version="1">Testing</DIV>
+<DIV id="storeCreateANewTiddler" modified="200409260908" modifier="DotanDimet" version="1">Just seeing what happens when I do 
+</DIV>
+<DIV id="storeBlogs bring civil society to the USA and everywhere" modified="200409290922" modifier="Martin" version="3">Meeting in cafes and arguing about politics is a strong tradition in SomeEuropeanCountries. Sadly, this tradition does not exist in the USA, where raising politics is often considered impolite. Should we surprised that so few people use their vote, or use it stupidly? What I (AlexHolcombe) am saying is that blogs and their successors bring old Europe CivilSociety to places that don't have them.</DIV>
+<DIV id="storeSomeEuropeanCountries" modified="200409260831" modifier="AlexHolcombe" version="1">these include Italy and Spain. I imagine there are others? help</DIV>
+<DIV id="storeCivilSociety" modified="200409260830" modifier="AlexHolcombe" version="0">n. voluntary associations, organizations, movements and networks that live and work in the social space outside the state and the private sector</DIV>
+<DIV id="storeAlexHolcombe" modified="200409270247" modifier="AlexD" version="1">http://www.cf.ac.uk/psych/holcombea/#king</DIV>
+<DIV id="storeRedStory" modified="200409292144" modifier="MiekalAnd" version="3">That is to say, the first untrue story, in which the TwoWaryAssassins are overly concerned with deciphering the code. "Nothing could be easier", they are told by the DarlingGirl watching from a passing motorcycle.</DIV>
+<DIV id="storeDamnCool" modified="200409271237" modifier="" version="0">Cool cool cool stuff!</DIV>
+<DIV id="storeExternalLink" modified="200409271925" modifier="TestName" version="3">external link: http://www.google.com
+
+(doesn't work with Opera?)</DIV>
+<DIV id="storeHelloLui" modified="200409262026" modifier="Makko" version="1">Testing testing testing
+http://www.lui.com</DIV>
+<DIV id="storeNo siempre tiene que ser un WikiNombre" modified="200409261528" modifier="SantiagoGala" version="1">I'm not sure how it'll work</DIV>
+<DIV id="storeUnThinkable" modified="200409261548" modifier="BlahHuff" version="0">Stop thinking immediately!</DIV>
+<DIV id="storeClientSide" modified="200409272007" modifier="Lerry" version="2">In a ClientServer relationship the code run (executed) on the client computer is said to be "client-side". On the WorldWideWeb the WebBrowser is the big piece of this, but you can also use JavaScript, SunJava and MacromediaFlash to run more advanced client-side apps.</DIV>
+<DIV id="storeScriptingLanguage" modified="200409261553" modifier="PatrickCurry" version="0">Generally scripting lanugages are looked down upon by "real programmers", but the fact is that they are extremely useful.  Scripting languages in the web world are usally ClientSide or ServerSide.  Some common scripting languages include JavaScript, PhP, Perl, and even DOS Batch.</DIV>
+<DIV id="storewiki" modified="200409261829" modifier="NAte" version="4">Type the text for 'CreateNewTiddler' here.</DIV>
+<DIV id="storeWhatIsWiki" modified="200409261829" modifier="NAte" version="0">Type the text for 'CreateNewTiddler' here.</DIV>
+<DIV id="storeSo how does it work?" modified="200409261908" modifier="Arjan" version="0">HELP!</DIV>
+<DIV id="storeTiddlerThreading" modified="200409262234" modifier="LelandPaul" version="2">We need tiddler threading: One should be able to create tiddlers "attached" to other tiddlers, in a thread-like format. Tiddlers not on the top level of a thread either don't appear on the "All Tiddlers" list, appear after one expands the main tiddler, or simply appear indented in the list.
+
+The idea is that the content in certain tiddlers is only relavent to the tiddler they are commenting on. For a good example of this, look over at the SandBox, SmoothedOut, and RedStory... I'm sure people scanning down the All Tiddlers list aren't going to care much there. But obviously those are three seperate entries, all linked to from the SandBox.
+
+The idea would be that in a tiddler, in the "roll over menu", there would be a "comment" option, or something to that extent, which would create a threaded tiddler. Obviously, the tiddler would probably work completely normally in all respects outside of the All Tiddlers list... But it'd be handy to have the list a little more organized.
+
+
+(I'm adding to my own idea at a later date: Perhaps a way to provide metadata keywords on tiddlers would be interesting... And then the All Tiddlers list could be sorted by keyword, or at the very least tiddlers with lists of every tiddler with a particular keyword could be created automatically... The idea is, more or less, to combine the best elements of the Wiki, the Blog, and the Forum.)
+
+-LelandPaul</DIV>
+<DIV id="storeSmoothedOut" modified="200409292157" modifier="" version="3">Like the sand-boxes the caligraphers are practicing in the RedStory of geewhiz shenanigans</DIV>
+<DIV id="storeWeWantSourceCode" modified="200409270257" modifier="KosnstantinLevinski" version="4">WeWantSourceCode, WeWantSourceCode, WeWantSourceCode, hurrah!
+
+More. And more. Yet more again.</DIV>
+<DIV id="storelalala" modified="200409271217" modifier="NoahV" version="1">this is cool...and editable!</DIV>
+<DIV id="storeWikeeed" modified="200409271220" modifier="The Whizzer" version="0">This site running out of things that use Wiki so had to go back to my rave days.  Top buzz 4 eva '9T2</DIV>
+<DIV id="storeLelandPaul" modified="200409262153" modifier="LelandPaul" version="0">A visitor who really very much wants the source code for this beautiful thing, as he hopes to use it for himself... He thinks it's an absolutely beautiful way to organize a personal web notepad, and share it with others. Wikis are awesome, but Tiddly's are better.
+
+And he's not crazy at all... He just likes talking about himself in the third person.</DIV>
+<DIV id="storePatricksThoughtsOnTiddlerThreading" modified="200409291207" modifier="NathanERasmussen" version="2">What I think of TiddlerThreading: I like the idea of a single interface with Wiki, Blog and BBS qualities. That's what attracted me to TiddlyWiki. I think with BackLinks and a UI trick or two we can make it easier to have WikiDiscourse without losing the beauty of Wiki.</DIV>
+<DIV id="storeBackLinks" modified="200409262319" modifier="PatrickCurry" version="0">A new "button" in each Tiddler that links to a dynamically generated list of links to the other tiddlers that link to the original.</DIV>
+<DIV id="storeVersioningUI" modified="200409262321" modifier="PatrickCurry" version="0">Each tiddler needs a new "button" to view its history (or "versions").  In that view each version would have a single button -- "Restore", which when clicked would replace the current entry with that classic one.  This is primarily to fight JerksWhoDeleteTiddlers.</DIV>
+<DIV id="storeMyNameIsFreddie" modified="200409271205" modifier="" version="0">Testing 123
+</DIV>
+<DIV id="storeATotallyNewTiddler" modified="200409262344" modifier="PatrickCurry" version="2">This is another test.  And I'm testing it!
+
+Whoo!  Testing is fun, fun, fun!!!</DIV>
+<DIV id="storeOneHundredPercentNewTiddler" modified="200409270226" modifier="PatrickCurry" version="5">Is this really new?  I think so.  Can it hold up?  Pass the test of time?  Can it rule the world?  Will it be all that I hope it will be?</DIV>
+<DIV id="storeRandolphPeeDiddyHearst" modified="200409271254" modifier="RandolphPeeDiddyHearst" version="0">What the heck am I to do with this thing.  Ahhh, it eating my arm!  Stop it!  Stop it!</DIV>
+<DIV id="storeMyPhpTiddlyWiki" modified="200409271305" modifier="BertFreudenberg" version="0">It's TiddlyWiki with a PhP/MySql back-end.</DIV>
+<DIV id="storeAlfonSet" modified="200409271335" modifier="AlSanAn" version="0">La meua pàgina és http://indiza.com.</DIV>
+<DIV id="storeLetsTestThis" modified="200409271831" modifier="jackurda" version="1">Broob... testing</DIV>
+<DIV id="storeSmallStream" modified="200409290341" modifier="OlleJonsson" version="0">The stream bucks when you try to wrangle it right, it is an unfriendly little trickle of a small river. Best give it a shot of fenedrine. There! Muuuch better.
+
+You can go back to that place you came from: ChooseYourOwnAdventure, or go SmallStreamBoating.</DIV>
+<DIV id="storeMyName" modified="200409280449" modifier="undefined" version="1">Type the text for 'MyName' here. Hello there My Name is secret :-)</DIV>
+<DIV id="storeun essai" modified="200409290656" modifier="GrMa" version="3">Un peu de texte.
+Et voila.
+
+Et apparemment on peut modifier le texte d'autrui sans lui demander son avis...
+
+Bah oui, on dirait
+
+Partons maintenant pour Uzès</DIV>
+<DIV id="storeLerry" modified="200409272008" modifier="Lerry" version="4">I am Lerry zou, I am the AnWEALINK of WealinkStaff.</DIV>
+<DIV id="storewealink" modified="200409272001" modifier="Lerry" version="0">what's wealink? 
+It's a online address book.
+http://www.wealink.com</DIV>
+<DIV id="storeI am LerryZou" modified="200409272011" modifier="Lerry" version="0">I am LerryZou. A WealinkStaff. </DIV>
+<DIV id="storeLerryZou" modified="200409272011" modifier="Lerry" version="0">I am LerryZou. A WealinkStaff. </DIV>
+<DIV id="storeÔ¡ÊÒ¿ªÕÅ" modified="200409272013" modifier="Lerry" version="0">½ñÌìÂ¥ÏÂµÄÓãµÄ³Ô¿ªÕÅÁË</DIV>
+<DIV id="storeMiekalAnd" modified="200409292041" modifier="MiekalAnd" version="6">Not sure why this tiddler keeps disappearing.  Have been doing a lot of top secret experimental writing in wikis for years.  This tool could be more useful than the PocketCalculator.
+
+I like everything but the name.  Hated TiddlyWinks when I was a kid.  A "tiddly" hardly seems like a useful synonym for a lexia of MicroContent.  Even TidBit would be more appropriate.</DIV>
+<DIV id="storeWabiSabi" modified="200409272048" modifier="MiekalAnd" version="0">http://c2.com/cgi/wiki?WabiSabi</DIV>
+<DIV id="storeYooHoo" modified="200409272059" modifier="Steve" version="0">Type the text for 'YooHoo' here.</DIV>
+<DIV id="storeExcellentQuestion" modified="200409272113" modifier="MiekalAnd" version="2">I'm curious as to whether single words without internal capitalization can make links.  Can they?  I really don't know.  Let's find out!
+
+Asmoranomardacaidastinaculdacar!</DIV>
+<DIV id="storeAsmoranomardacaidastinaculdacar" modified="200409272106" modifier="JasonLove" version="0">Well?  Did it work?</DIV>
+<DIV id="storeTestTiddler" modified="200409270457" modifier="CiaronLinstead" version="0">This is a new one. </DIV>
+<DIV id="storeWikityWikityWack2" modified="200409272151" modifier="boogawookie" version="2">A rubbish foofie</DIV>
+<DIV id="storeLearning about Video Blogging" modified="200409270532" modifier="Steve" version="3"> Video Blogging http://videoblogging.info is like  audio blogging http://audioblogger.com/, but with video.</DIV>
+<DIV id="storetesting" modified="200409270559" modifier="vegso" version="0">seeing what happens</DIV>
+<DIV id="storeJerksWhoDeleteTiddlers" modified="200409270715" modifier="AnDy" version="0">Just a moron</DIV>
+<DIV id="storeWikityWikityWack" modified="200409270850" modifier="RossSinger" version="0">This is very neat.  Makes me reevaluate my opinions of wikis.</DIV>
+<DIV id="storeFultonChain" modified="200409271023" modifier="AlSess" version="0">Just messing about.</DIV>
+<DIV id="storeObjectPrevalence" modified="200409271047" modifier="JeremyRice" version="1">www.prevayler.org
+
+Aparantly, the Wiki-style markup needs some documentation.  ;)</DIV>
+<DIV id="storeImageMaps" modified="200409292122" modifier="MiekalAnd" version="1">neat if it could bring up objects also. Imagine little 3-d universes or flash animations each linking to one another...
+I agree, something like http://www.touchgraph.com</DIV>
+<DIV id="storeCuco" modified="200409271049" modifier="Cuco" version="0">You're my last breath,
+you're a breath of fresh air for me</DIV>
+<DIV id="storeWakaKlaka" modified="200409271122" modifier="BernardoCarvalho" version="0">Attention please!
+
+Thanks for your attention.</DIV>
+<DIV id="storeAsmoranomardacaidastinaculdacarTwo" modified="200409272106" modifier="JasonLove" version="0">Well?  Did it work?</DIV>
+<DIV id="storeIAmABloodyWanker" modified="200409272123" modifier="AdamPlatti" version="0">Oy mate!  This is brilliant, in it?</DIV>
+<DIV id="storeQuestionsQuestions" modified="200409292057" modifier="MiekalAnd" version="14">*Won't there be a limit to the number of Tiddlers that can be loaded into a page? I know the beauty of this is everything is in one document, but it would be excellent to use this tool for extended textual works. Since you're using php/mysql anyway, everything doesn't have to be sitting on this page. Or am I missing something? --MiekalAnd
+
+You are correct.  I'm working on that.  PatrickCurry
+
+** Seems like XMLHttpRequest is *perfect* for the above. --SamRowe
+
+*Inline jpgs & gifs? -- Not right now.
+
+*A way to create links with NonWikiWords -- working on that too.
+
+ *Will the source be available? --EvEnti -- once I feel like it's in some kind of sustainable state.  Right now PhpTiddlyWiki is still chaos.
+
+** Release early! I'll be happy to help with the code! -SamRowe
+
+*Would be nice to have the option to turn on/turn off the effect of the highlighted box floating from location of click to target.  It gets pretty annoying if your actually reading in this system for more than a few minutes. --MiekalAnd
+
+*When I click on a link in the sidebar, it would save a step of the page jumped to target rather than having to manually scroll each time. --MiekalAnd
+
+*Why does the recent tiddlers function sometimes display correctly & other times it's blank?  When one is working online with a bunch of others, its the easiest way to know what's been updated.  In fact, it would be nice to know more than 5 or else have a way to see all RecentChanges & history. --MiekalAnd
+
+*Is there anyway to generate an anchor link If I wanted to send someone to a specific tiddler?</DIV>
+<DIV id="storeNonWikiWords" modified="200409280757" modifier="jon" version="3">I wanna be a link.
+
+[I wanna be a link.]
+
+{I wanna be a link.}
+
+SoFarICanBeALink
+
+SoFarICanBeALink
+
+SortTiddlers</DIV>
+<DIV id="storeI like that" modified="200409280858" modifier="Marc" version="0">This could be quite useful indeed.</DIV>
+<DIV id="storeThe Beginning" modified="200409272152" modifier="Tycho Hoogland" version="0">Now that's strange. </DIV>
+<DIV id="storeViens" modified="200409290930" modifier="" version="0">TurkuPupa celjoja uz Angliju
+Viens, divi triis, nu Tu esi briivs !</DIV>
+<DIV id="storeUzes" modified="200409272248" modifier="Sigalon" version="0">The medieval town of Uzès, with its lovely architecture and the famous Saturday market, is close to Nîmes (25km), Avignon (40km), Arles (45km), Pont du Gard (13km) and not far from the Cévennes and the Mediterranean. 
+It is an ideal base to discover and enjoy all the delights that this part of rural France has to offer; be it nature, history or gastronomy.
+</DIV>
+<DIV id="storeMacromediaFlash" modified="200409272252" modifier="undefined" version="1">It is software for creating multimedia presentations. Created by Madhav from CA.
+</DIV>
+<DIV id="storeReallyCool" modified="200409272256" modifier="AlikuHsiao" version="0">¯u¬O»Åªº¤£±o¤Fªºª±·N¨à</DIV>
+<DIV id="storeHaHa" modified="200409280539" modifier="FredFlintstone" version="2">A variant form of HeHe.</DIV>
+<DIV id="storeEvEnti" modified="200409281343" modifier="EvEnti" version="1">Boioioioioing...  Contact me at mailto://eventi@gmail.com</DIV>
+<DIV id="storereally" modified="200409280443" modifier="undefined" version="0">neat if it could bring up objects also. Imagine little 3-d universes or flash animations each linking to one another...</DIV>
+<DIV id="storeMinTest" modified="200409280528" modifier="Tommy" version="0">Så, här kan jag skriva saker. Och det är ju väldigt bra. åäöÅÄÖ.</DIV>
+<DIV id="storeTwistyLittlePassage1" modified="200409280635" modifier="WikiFormattedName" version="2">You are in a maze of TwistyLittlePassage2, all different.</DIV>
+<DIV id="storeHeHe" modified="200409280907" modifier="FrankSnow" version="1">Hay Hay
+
+HayHay </DIV>
+<DIV id="storeTwistyLittlePassage2" modified="200409280635" modifier="WikiFormattedName" version="0">You are in a little maze of TwistyPassages, all different.</DIV>
+<DIV id="storeone" modified="200409280640" modifier="undefined" version="0">neat if it could bring up objects also. Imagine little 3-d universes or flash animations each linking to one another...</DIV>
+<DIV id="storetwo" modified="200409280640" modifier="undefined" version="0">neat if it could bring up objects also. Imagine little 3-d universes or flash animations each linking to one another...</DIV>
+<DIV id="storeWikiMarkup" modified="200409281811" modifier="PatrickCurry" version="0">Currently, we only support WikiWord links, and paragraph-breaks.  But I want to add PhpMarkdown support soon.</DIV>
+<DIV id="storeTestPage" modified="200409281536" modifier="DickieWiki" version="5">
+</DIV>
+<DIV id="storepepe" modified="200409280756" modifier="JJ" version="0">hola</DIV>
+<DIV id="storeIE5" modified="200409280832" modifier="mIEKALaND" version="0">Is there a reason why this can't be set up to run on IE 5 for the Mac...?  Is it because certain functions are not supported or just because no one has gotten around to adding in a workaround?</DIV>
+<DIV id="storeHayHay" modified="200409280908" modifier="FrankSnow" version="0">Hay is a kind of DryGrass</DIV>
+<DIV id="storeDryGrass" modified="200409280908" modifier="FrankSnow" version="0">Grass that's Dessicated</DIV>
+<DIV id="storeDarlingGirl" modified="200409300837" modifier="" version="4">She is riding to work in a very cloudy city with a serious lack of anything to do.  All her life, ComplexAnomalies are very easy for her to figure out.  DayDreaming, she imagines herself standing on a small boat, moored in a stream, she is gazing out over the nearby fields waiting for her OneTrueLove .  Lately, this is her favourite place, the place she comes when she has the chance to "ChooseYourOwnAdventure." Soon she will make her OneTrueLove come to her.</DIV>
+<DIV id="storeCreateNewTiddler1" modified="200409280924" modifier="RomanIvanov" version="0">neat if it could bring up objects also. Imagine little 3-d universes or flash animations each linking to one another...</DIV>
+<DIV id="storeSandBoxen" modified="200409280931" modifier="GrinTheEvil" version="0">The test has just been SmoothedOut. Now we can fill it up again with useless, beautiful marks. It's a bit like a rock garden, but not quite so Zen. J'ajoute un peu de texte ici. hello. test WakaWaka WikityWikityWack WikityWikityWack2 MyName http://www.mysite.com Fiddling about. Et la. So does it store my content? How very interesting. I wonder if the textarea can be made larger. Good work, folks. Adding a test now Interesting that the box floating over it says who edited it last. How are conflict resolved? This Wiki is *neat*! yeah baby woo HaHa ---- Beautiful Good
+
+
+This is my first TestPage.
+
+Why is to TightPacked?
+</DIV>
+<DIV id="storeAAB" modified="200409281147" modifier="GraemeWilliams" version="0">Test of repeated tiddlers</DIV>
+<DIV id="storeSuitCase" modified="200409291119" modifier="Peter" version="2">A SuitCase is a very nice thing. I own a SuitCase, but I never use it. Instead I use a BackPack.</DIV>
+<DIV id="storeBackPack" modified="200409281002" modifier="ScottMurphy" version="1">A BackPack is a very nice thing. I own a BackPack, but I rarely use it because I never go anywhere. If I traveled more, I might use a SuitCase.</DIV>
+<DIV id="storeWaveletAnalysisoffMRIData" modified="200409281036" modifier="AlexWiltschko" version="0">For any curve, instead of dampening the 'noise' of the data, just isolate the various component wavelets, and then analyze based on frequency.</DIV>
+<DIV id="storerandom" modified="200409281036" modifier="AlexWiltschko" version="0">this is another test</DIV>
+<DIV id="storerandom2" modified="200409281036" modifier="AlexWiltschko" version="0">this is another test</DIV>
+<DIV id="storerandom3" modified="200409281036" modifier="AlexWiltschko" version="0">this is another test</DIV>
+<DIV id="storeClaudio Barbosa" modified="200409281054" modifier="undefinedasas" version="0">Será q funciona mesmo??!?</DIV>
+<DIV id="storeClaudioBarbosa" modified="200409281113" modifier="undefinedasas" version="0">E funciona mesmo!!!</DIV>
+<DIV id="storeTidBit" modified="200409281339" modifier="MiekalAnd" version="0">A logical name for an SemanticUnit of information.</DIV>
+<DIV id="storeMicroContent" modified="200409281340" modifier="MiekalAnd" version="0">The opposite of an epic.  A TidBit of information.  A SemanticUnit.</DIV>
+<DIV id="storeHyperlink" modified="200409281342" modifier="Thierry" version="0">Comment créer des hyperliens ? Vers Anarchy par exemple ?</DIV>
+<DIV id="storeTiddlerLink" modified="200409281345" modifier="EvEnti" version="0">A Link to the Tiddler... Anything in WikiWord style will become a TiddlerLink</DIV>
+<DIV id="storeWikiWord" modified="200409281347" modifier="EvEnti" version="1">Just start a word with two capital letters, like EVenti WikiWord, and PhP</DIV>
+<DIV id="storeSemanticUnit" modified="200409281410" modifier="MiekalAnd" version="1">A paragraph, a phrase, an equation, a joke, an anecdote, a zen koan, an epitaph.</DIV>
+<DIV id="storeModifierLabel" modified="200409281423" modifier="JustinBrown" version="1">How do you change the ModifierLabel to show your own name?
+
+Answered my own question... It's based on the name you gave when you arrived at the site of course.</DIV>
+<DIV id="storeInlineHTMLfromPHPMarkdown" modified="200409281423" modifier="TimMatheny" version="0"><h2>This is my test of PHP Markdown with HTML inline</h2>
+
+<p><TABLE BORDER=1>
+<TR>
+<TH>Type of Show</TH>
+<TH>HTMLTitle</TH>
+<TH>Date of Show</TH>
+<TH>Time of Show</TH>
+<TH>Running Time</TH>
+<TH>Channel</TH>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> Harvey </TD>
+<TD>Monday, Sep 27</TD>
+<TD>3:15 AM</TD>
+<TD>1:45</TD>
+<TD>Turner Classic Movies (52)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Monster House</FONT>: Race Car House Revisited</TD>
+<TD>Monday, Sep 27</TD>
+<TD>11:00 AM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> America's Sweethearts </TD>
+<TD>Monday, Sep 27</TD>
+<TD>3:00 PM</TD>
+<TD>2:00</TD>
+<TD>FX (69)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Monster Garage</FONT>: Rolls Royce - John </TD>
+<TD>Monday, Sep 27</TD>
+<TD>8:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Inside the Actors' Studio</FONT>: Drew Barrymore </TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>4:00 AM</TD>
+<TD>1:00</TD>
+<TD>Bravo (70)</TD>
+</TR>
+<TR>
+<TD>Soccer</TD>
+<TD><FONT COLOR="RED"> AS Roma vs. Real Madrid </FONT></TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>1:30 PM</TD>
+<TD>2:15</TD>
+<TD>ESPN 2 (30)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Dream Job </FONT></TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>6:00 PM</TD>
+<TD>1:00</TD>
+<TD>ESPN (29)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> 101 Most Unforgettable SNL Moments </TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>7:00 PM</TD>
+<TD>1:00</TD>
+<TD>E! (58)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Rodney </FONT></TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>8:30 PM</TD>
+<TD>0:30</TD>
+<TD>WKRN (2)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Wing Nuts </FONT></TD>
+<TD>Tuesday, Sep 28</TD>
+<TD>9:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Inside the Actors' Studio</FONT>: Spike Lee</TD>
+<TD>Wednesday, Sep 29</TD>
+<TD>5:00 AM</TD>
+<TD>1:00</TD>
+<TD>Bravo (70)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Monster Garage </FONT>: Suburban/Wedding Chapel</TD>
+<TD>Wednesday, Sep 29</TD>
+<TD>3:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Smallville </FONT></TD>
+<TD>Wednesday, Sep 29</TD>
+<TD>7:00 PM</TD>
+<TD>1:00</TD>
+<TD>WNAB (11)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Spider-Man </FONT></TD>
+<TD>Wednesday, Sep 29</TD>
+<TD>8:30 PM</TD>
+<TD>0:30</TD>
+<TD>Toon Disney (62)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> MythBusters</FONT>: Ancient Death Ray </TD>
+<TD>Wednesday, Sep 29</TD>
+<TD>11:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> Brady Bunch 35th Anniversary Special </TD>
+<TD>Thursday, Sep 30</TD>
+<TD>12:00 AM</TD>
+<TD>1:00</TD>
+<TD>TV Land (64)</TD>
+</TR>
+<TR>
+<TD>Soccer</TD>
+<TD><FONT COLOR="RED"> Premiership Soccer Teams TBA </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>2:00 AM</TD>
+<TD>2:00</TD>
+<TD>Fox Sports South (55)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> Winning </TD>
+<TD>Thursday, Sep 30</TD>
+<TD>5:30 AM</TD>
+<TD>2:30</TD>
+<TD>AMC (23)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Monster Garage</FONT>: Mercedes - Handicap Car</TD>
+<TD>Thursday, Sep 30</TD>
+<TD>3:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Totally Football </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>6:00 PM</TD>
+<TD>0:30</TD>
+<TD>Fox Sports South (55)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Joey </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>7:00 PM</TD>
+<TD>0:30</TD>
+<TD>WSMV (4)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Blue Collar TV </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>7:30 PM</TD>
+<TD>0:30</TD>
+<TD>WNAB (11)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Pimp My Ride </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>8:00 PM</TD>
+<TD>0:30</TD>
+<TD>MTV (39)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Spider-Man </FONT></TD>
+<TD>Thursday, Sep 30</TD>
+<TD>8:30 PM</TD>
+<TD>0:30</TD>
+<TD>Toon Disney (62)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> The Whole Nine Yards </TD>
+<TD>Thursday, Sep 30</TD>
+<TD>9:10 PM</TD>
+<TD>2:10</TD>
+<TD>WTBS (44)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> Whale Rider </TD>
+<TD>Friday, Oct 1</TD>
+<TD>1:00 PM</TD>
+<TD>2:00</TD>
+<TD>Oxygen (78)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> Monster Garage </FONT>: Switchblade</TD>
+<TD>Friday, Oct 1</TD>
+<TD>3:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Soccer</TD>
+<TD><FONT COLOR="RED"> Florida women vs. Tennessee </FONT></TD>
+<TD>Friday, Oct 1</TD>
+<TD>6:30 PM</TD>
+<TD>2:00</TD>
+<TD>Fox Sports South (55)</TD>
+</TR>
+<TR>
+<TD>Series TV</TD>
+<TD><FONT COLOR="GREEN"> American Hotrod </FONT></TD>
+<TD>Friday, Oct 1</TD>
+<TD>9:00 PM</TD>
+<TD>1:00</TD>
+<TD>Discovery Channel (31)</TD>
+</TR>
+<TR>
+<TD>Movie/Event</TD>
+<TD> The Scorpion King </TD>
+<TD>Saturday, Oct 2</TD>
+<TD>7:00 PM</TD>
+<TD>2:00</TD>
+<TD>USA (65)</TD>
+</TR>
+</TABLE></p></DIV>
+<DIV id="storeOrThis" modified="200409281430" modifier="JonathanRagan-Kelley" version="0">Type the text for 'OrThis' here.</DIV>
+<DIV id="storeThisIsWeird" modified="200409281438" modifier="ElaineNelson" version="0">Basically, my reaction to stuff like PhpTiddlyWiki.  if it makes my brain hurt, it goes here.</DIV>
+<DIV id="storeI must be stupid" modified="200409282006" modifier="TimBoucher" version="1">Everybody goes crazy over this thing but I don't really get it.
+
+....
+
+Yeah, I agree. Like I mean, I see the potential and stuff. But I don't know. I just don't really FEEL it</DIV>
+<DIV id="storeAntherTiddlerIfAnyWhereNeeded" modified="200409281618" modifier="null" version="0">could this one be necessary</DIV>
+<DIV id="storeNewnanCrossing" modified="200409281631" modifier="DaleLyles" version="1">Newnan Crossing Elementary School is a school in Newnan, GA, that is interested in using a  Wiki of some kind for students to post book reviews in the MediaCenter.</DIV>
+<DIV id="storeCheck out this cool link!" modified="200409281627" modifier="" version="0">A new article on wikis!
+
+http://wikipedia.org</DIV>
+<DIV id="storeMediaCenter" modified="200409281630" modifier="DaleLyles" version="0">A "media center" is education-speak for "school library."</DIV>
+<DIV id="storeIAmAnAstronaut" modified="200409281743" modifier="GregSadetsky" version="1">oh yeah!asd</DIV>
+<DIV id="storeDownloadCode" modified="200409281758" modifier="PatrickCurry" version="0">Right now we have NOT released the back-end source code to PhpTiddlyWiki.  There are still some features I view as must-have before this becomes usable by the public.  Namely versioning.
+
+If you want to be emailed when we do release the source, please email me: wiki (at) patrickcurry (dot) com.
+
+Thanks!</DIV>
+<DIV id="storeUserSurvey" modified="200409291640" modifier="SimonMeehan" version="11">Several people have requested the PhpTiddlyWiki source. That's rad. I'm glad you're interested in it! But I'm curious, what do you want to use it for? Just put your answers below: --------------- I want to create a Wiki that my company can use on its IntraNet. ----------- InterWriting experiments with other poets & writers. ----------- Several things: Homepage, Blog, discussion form with those who read my blog (my close friends), online notepad of sorts... That's most of it. --------------- I want to use it to take notes on the web, and I don't want a blog for that. This wiki looks like a Notepad with Hypertext witch is just perfect for me. Guillaume --------------- The great thing would be the ability to save the page seamlessly (after all, one can generate a 'printer-friendly' version of many pages) and either post it elsewhere or use it locally. Oh, well, you just keep coding it up, dudes. ColinFromBklyn -------------- I just think that the concept is so cool. Remi ------------ I want to use it as a personal notebook on the web, for thoughts that are more interconnected and less related to time than a blog. My idea for this would require that only certain users be allowed to edit all pages, while leaving some pages editable for discussion by anyone. JustinBrown I think some people really just want the client side code, which you can get through "save" on your browser (though that bit is a little messed up because all of the style sheets have been applied, and the content has been added to the viewable part). I emailed you and Jeremy some changes that could make the browsers "save" work better for TiddlyWiki.
+-----I want to use it for a project wiki on my company's intranet.  Multiple developers in multiple timezones - I think it could work well with a fairly small footprint.  I've already tried WikiServer by EddieEdwards ( http://www.tinyted.net/eddie/wiki/ )</DIV>
+<DIV id="storeJust checking this" modified="200409281859" modifier="Test" version="0">hmmm...
+
+more later
+
+what about links
+http://wikiserver.michelvandewetering.nl/?Download</DIV>
+<DIV id="storeWikiEdit" modified="200409281952" modifier="RomanIvanov" version="0">Javascript editor for wiki texts, with toolbar, shortcuts and autoindent.
+
+See http://wackowiki.com/WikiEdit </DIV>
+<DIV id="storeRomanIvanov" modified="200409281953" modifier="RomanIvanov" version="0">Maintainer of WackoWiki.
+
+See http://wackowiki.com/RomanIvanov</DIV>
+<DIV id="storeWikiTest" modified="200409282005" modifier="TimBoucher" version="0">This is what you call a wiki that is being tested
+</DIV>
+<DIV id="storeTiddlyWinks" modified="200409282014" modifier="MiekalAnd" version="0">Don't you have something better to do.  That's what the game has always meant to me.</DIV>
+<DIV id="storeKlingonsForKerry" modified="200409282032" modifier="MiekalAnd" version="1">EXCLUSIVE: Straw-poll shocker! Fierce warrior race strongly backs Democrat. 
+
+Even as John Kerry struggles to establish national-security credentials nationally, an exclusive WW straw poll shows his campaign dominating one skeptical, warlike demographic: Klingons. 
+
+The poll, conducted when the DVD release of the Star Trek fan documentary Trekkies 2 attracted Portland's Klingon community to Tower Records on Southeast 102nd Avenue, may spell trouble for President George W. Bush. 
+
+The incumbent has staked his campaign on the war on terror. But those who speak the language of the Trek warrior race--known to disdain dishonor, or quvHa'ghach --seem alienated by Iraq and other issues. 
+
+According to the poll of eight local Klingons, a whopping 75 percent support the Democratic nominee. 
+
+Two Klingons polled--or 25 percent --said they planned to write in Satan. 
+
+Bush scored an abysmal zero percent in the poll. 
+
+"A good war is based on honor, not deception," says K'tok (Earth name: Clyde Lewis), a 40-year-old Klingon from Lair Hill. "The first warrior, President Bush, deceived us all with this war." 
+
+Portland Klingon speakers are increasingly influential. Last year, Multnomah County's mental-health services opened a search for a Klingon interpreter to work with speakers of the language.* Though the Klingons polled all appeared to be registered voters, they emulate an unfamiliar political system. 
+
+"On the home world, if there had been a contested election between Gore and Bush, the honorable thing would be for Gore to kill Bush," explained Khraanik (Earth name: Jason Lewis), a 38-year-old from Southeast Portland. "Or the other way around. And then ascend to the head of the High Council." 
+
+It's too early for Kerry to chill the ceremonial bloodwine, but Portland Klingons are clearly warming to the cerebral Massachusetts Democrat. 
+
+"Kerry has shown his prowess," says 33-year-old Neqha (Earth name: Eric King) of Tigard. "He saved his fellow warrior under the gun, and has been commended and awarded medals." 
+
+Neither the Bush nor Kerry campaigns were immediately available for comment on the poll results. 
+
+http://www.wweek.com/story.php?story=5539</DIV>
+<DIV id="storeInterWriting" modified="200409282036" modifier="MiekalAnd" version="1">The link below is a relatively new project.  There is about 20 people working in here from 4 or 5 countries.  
+
+http://www.lewislacook.com/wiki/index.php</DIV>
+<DIV id="storeMakeaPoopie" modified="200409282050" modifier="" version="0">I eat a taco and then I MakeaPoopie!</DIV>
+<DIV id="storeDonaldNoyes" modified="200409282057" modifier="DonaldNoyes" version="0">Trying this PhpVersion - 20040928</DIV>
+<DIV id="storeSamRowe" modified="200409282059" modifier="" version="0">I'd love for this to work with some sort of XMLHttpRequest transport medium. I've got a project that it's *perfect* for.</DIV>
+<DIV id="storeIntraNet" modified="200409291156" modifier="TinTin" version="1">Intranets are networks inside of an organization.</DIV>
+<DIV id="storeJohnKerry" modified="200409291329" modifier="KeithWright" version="2">John Kerry will be a fine replacement for that lying bastard Bush. Read Al Franken's latest book, you can't dispute it.
+
+Nonsense, Kerry is going to be crushed, and Franken is a clown.</DIV>
+<DIV id="storeCreatemyTiddler" modified="200409282354" modifier="shantanuo" version="0">This is my new test wiki</DIV>
+<DIV id="storeRockyPath" modified="200409290448" modifier="" version="3">You are on a rocky path.  To the north is the MountainRange.  To the south is the field where you woke up (ChooseYourOwnAdventure).  There is also a SteepCliff to the west.</DIV>
+<DIV id="storeSteepCliff" modified="200409290017" modifier="PatrickCurry" version="0">You are on a ledge, half-way up the cliff.  Far below you is the RockyPath.  You can see a forest, a lake, and the mountains from here.  Above you is TheCave.</DIV>
+<DIV id="storeTheCave" modified="200409290021" modifier="PatrickCurry" version="2">You are in the entrance of a very dark cave.  Outside the cave there is a small ledge on the SteepCliff.  DeepInTheCave is darkness.</DIV>
+<DIV id="storeDeepInTheCave" modified="200409290022" modifier="PatrickCurry" version="0">You are deep in the cave.  It is very dark.  You can barely make out a light in TheCave, it must be the entrance.  DeeperInTheCave is more darkness.</DIV>
+<DIV id="storeDeeperInTheCave" modified="200409290023" modifier="PatrickCurry" version="0">It is pitch black here in the cave.  You've gotten turned around.  You could try to GoForwardInTheCave, GoBackwardsInTheCave, GoLeftInTheCave or GoRightInTheCave...</DIV>
+<DIV id="storeGoForwardInTheCave" modified="200409290024" modifier="PatrickCurry" version="0">You walk forward and trip over yourself.  You find that you are still DeeperInTheCave.</DIV>
+<DIV id="storeGoBackwardsInTheCave" modified="200409290024" modifier="PatrickCurry" version="0">You take a couple steps backwards and TripOverSomething... this time it's not your feet.</DIV>
+<DIV id="storeTripOverSomething" modified="200409290025" modifier="PatrickCurry" version="0">You hold something in your hands, it feels like some kind of SmallBox.</DIV>
+<DIV id="storeSmallBox" modified="200409290025" modifier="PatrickCurry" version="0">You fumble with the box, and finally get it open.  You reach inside, and find what feels like a SingleMatch.</DIV>
+<DIV id="storePooTiddler" modified="200409290026" modifier="MikiWiki" version="0">neat if it could MakeaPoopie</DIV>
+<DIV id="storeSingleMatch" modified="200409290027" modifier="PatrickCurry" version="1">After a couple attempts you are finally able to get the match to light.  You realize you are DeeperInTheCave.  There is a gust of wind and the match burns out.</DIV>
+<DIV id="storeGoLeftInTheCave" modified="200409290027" modifier="PatrickCurry" version="0">You walk in the darkness for a bit, and now you think that you're EvenDeeperInTheCave.</DIV>
+<DIV id="storeGoRightInTheCave" modified="200409300001" modifier="undefined" version="1">You take a couple steps to the right and bump your head. "Ouch!" You hold out your hand and realize the ceiling is sloping here. You think you might be able to crawl into a CaveCrawlSpace.</DIV>
+<DIV id="storeCaveCrawlSpace" modified="200409290034" modifier="PatrickCurry" version="0">You get on your hands and knees and squeeze into a small crawl space.  The ground is cold and wet, and it's completely dark here.  There is a cold breeze coming from DeeperInTheCave, and TotalDarkness ahead.</DIV>
+<DIV id="storeTotalDarkness" modified="200409291105" modifier="PaulHoffman" version="1">You continue through the tunnel... the ground is getting damper.  The air is so thick it's hard to breathe.  The tunnel is especially narrow here.  You can turn back towards the CaveCrawlSpace, or PushThroughTheTunnel.</DIV>
+<DIV id="storePushThroughTheTunnel" modified="200409290039" modifier="PatrickCurry" version="0">You wedge yourself in-between the tunnel "walls".  They feel like mud, but you push forward.  You reach out to get a grip on one of the walls, but you find what feels like a very firm rope in your hand.  It must be the RootsOfATree.</DIV>
+<DIV id="storeRootsOfATree" modified="200409290041" modifier="PatrickCurry" version="0">You pull yourself through the mud cave by holding onto the tree's roots.  You try to make your way "up" whichever way that is.  You slowly make it out of the mud, into what looks like a WoodTeepee.</DIV>
+<DIV id="storeWoodTeepee" modified="200409290042" modifier="PatrickCurry" version="0">You realize you're actually inside of a giant, HollowTree.</DIV>
+<DIV id="storeHollowTree" modified="200409290043" modifier="PatrickCurry" version="0">The inside of this tree is HUGE!  It reminds you of a WoodTeepee.  Below you is some StinkyMud.  Above you there is light coming from a KnotHole.</DIV>
+<DIV id="storeKnotHole" modified="200409290917" modifier="Martin" version="1">You are at the entrace of the GreatTree. Below you is the HollowTree. Outside is the SmallMeadow. Above you are ManyBranches.</DIV>
+<DIV id="storeColinFromBklyn" modified="200409290526" modifier="ColinBrayton" version="0">I'm this guy: http://blogalization.org/reorganization</DIV>
+<DIV id="storeHellooooo" modified="200409290541" modifier="Karen" version="0">OOOh this is different.  Bit scary!</DIV>
+<DIV id="storeSmallStreamBoating" modified="200409291228" modifier="JohnSands" version="1">The leaf drifts left and right and falls without weight. Well not much, anyway. Up from underwater caddis flies consider embarking, but are concerned, "the leaf is red!" The rapids approach. YourAdventureEnds.</DIV>
+<DIV id="storePrettyFlowers" modified="200409291103" modifier="PaulHoffman" version="2">The scent of many flowers overpowers you, and you sleep. After uncounted hours you awake to find yourself in a PosterBed.</DIV>
+<DIV id="storeCreateALink" modified="200409290919" modifier="Martin" version="1">Mmm apparently you just BunchUp a couple of words together to make a link.</DIV>
+<DIV id="storeBunchUp" modified="200409290920" modifier="Martin" version="0">...and two word is Enough to CreateALink cool :)</DIV>
+<DIV id="storeTurkuPupa" modified="200409290932" modifier="" version="2">ViensI , divi triis, nu Tu esi briivs !</DIV>
+<DIV id="storeViensI" modified="200409290932" modifier="" version="0">TurkuPupa celjoja uz Angliju
+ViensI, divi triis, nu Tu esi briivs !</DIV>
+<DIV id="storeKarlOkeeffe" modified="200409291000" modifier="KarlOkeeffe" version="1">http://www.monket.net/</DIV>
+<DIV id="storeSmallMeadow" modified="200409291825" modifier="PatrickCurry" version="1">You are in a meadow full of LongGrasses and PrettyFlowers, stirred by a warm breeze.  A GreatTree is nearby.  You see a long fence with a WoodenGate in it.</DIV>
+<DIV id="storeGreatTree" modified="200409291100" modifier="PaulHoffman" version="1">An immense, ancient, gnarled oak fills your view.  Just above your ahead is a large KnotHole.</DIV>
+<DIV id="storecan macs tiddle?" modified="200409291010" modifier="Tiq!" version="0">Really cool stuff, will my apple learn to tiddle?/ HMM</DIV>
+<DIV id="storeOneTrueLove" modified="200409291050" modifier="DerekSmith" version="2">DaveBabbitt had a really 'grey' life.  He only 'really' lived in his dreams.  Sometimes 'She' would be there in his dreams, other times, no matter how hard he tried, he could not make her come to him.  It was almost as if she came when she chose, or did he go to her when DarlingGirl called him to her own dreams?</DIV>
+<DIV id="storeMountainRange" modified="200409291108" modifier="JensAlfke" version="0">The trail is steep, littered with debris, and the view down is dizzying. Only the bravest will prevail and reach the LoftyPeak; many are those who've turned back to the RockyPath.</DIV>
+<DIV id="storeRemi" modified="200409291133" modifier="" version="0">Awesome!
+Whoa!
+Simply beautiful.
+http://www.cafe151.co.uk/notebook/</DIV>
+<DIV id="storeYourAdventureEnds" modified="200409291228" modifier="JohnSands" version="0">ThatsIt.</DIV>
+<DIV id="storeThatsIt" modified="200409291228" modifier="JohnSands" version="0">MoveAlong</DIV>
+<DIV id="storeMoveAlong" modified="200409291228" modifier="JohnSands" version="0">NothingToSeeHere</DIV>
+<DIV id="storeMove Along" modified="200409291229" modifier="JohnSands" version="0">NothingToSeeHere</DIV>
+<DIV id="storeFixingSaveOnClientSide" modified="200409300602" modifier="KeithWright" version="1">I tried this on a local copy, and it seems to work.  The idea is to have the browser's "save" function save a functioning TiddlyWiki (client version, not server version, but this is the only TiddlyWiki I can save changes to online to post this).  I have only tested on FireFox .9.2 for windows.
+
+- To the function refreshAll(), I added a call to a new function
+writeBody() to the very first line
+- The new function writeBody() looks for a div called "layoutArea",
+clears it, and into it copies the contents of a div called "siteLayout"
+- There is a style setting "siteLayout" to "display:none"
+- The portion of the main html from before div id="copyright" to after
+the license text is enclosed in a div called "layoutArea"
+- After the "saveMessage" div is a div called "siteLayout" that has
+the html for layout before the scripts run their magic.
+
+The modification simply blows away the contents of the new div 
+"layoutArea" and copies the contents of "siteLayout" into it whenever "refreshAll" is called. Seems to be working for me, though I certainly can't
+guarantee that it is bug free.
+
+UPDATE:  While this works well for Firefox, it apparently doesn't do crap for Safari, which doesn't save the changed DOM at all, it always saves the original source.</DIV>
+<DIV id="storeKeithWright" modified="200409291347" modifier="KeithWright" version="1">I love TiddlyWiki for use as a personal wiki notebook. I have attempted FixingSaveOnClientSide.  I can be emailed at keithxw@gmxil.com (replace both x with a)</DIV>
+<DIV id="storeLoftyPeak" modified="200409291822" modifier="PatrickCurry" version="1">From the LoftyPeak, through the clouds lying like spilled marshmallows you see an expansive vista. Paths lead down from here through RollingHills towards the far ocean.  Or you can go back to the RockyPath.</DIV>
+<DIV id="storeNothingToSeeHere" modified="200409292054" modifier="MiekalAnd" version="2">You're seeing it RightInFrontOfYou.  Either that or there is always the RedStory.</DIV>
+<DIV id="storeSimonMeehan" modified="200409291631" modifier="SimonMeehan" version="0">Software developer in NewZealand, working with JadeProgrammingLanguage</DIV>
+<DIV id="storeNewZealand" modified="200409291631" modifier="SimonMeehan" version="0">Island paradise in the SouthPacific</DIV>
+<DIV id="storeJadeProgrammingLanguage" modified="200409291632" modifier="SimonMeehan" version="1">ObjectOriented software development tool - it's a OneStopShop for development - see at http://www.jadeworld.com</DIV>
+<DIV id="storeRollingHills" modified="200409300639" modifier="PatrickCurry" version="1">There are hills all around you.  There's a small wooden fence with a WoodenGate, along the DustyRoad.  You can make out the LoftyPeak from here.</DIV>
+<DIV id="storeTiddlyWikiDevelopment" modified="200409300633" modifier="KeithWright" version="3">Anyone else playing around with the TiddlyWiki client side source and making changes?
+
+I've worked on FixingSaveOnClientSide (for Firefox) --KeithWright
+
+It looks like SamRowe has created AnotherPort using XMLHttpRequest functionality.  He has also turned the recent and All tiddlers sidebar into drop lists.</DIV>
+<DIV id="storeWoodenGate" modified="200409291824" modifier="PatrickCurry" version="0">You see a gate in the long wooden fence.  On one side of the gate are RollingHills.  On the other is a SmallMeadow.</DIV>
+<DIV id="storeWhatNow" modified="200409292010" modifier="undefined" version="0">Salut comment ca va?</DIV>
+<DIV id="storeComplexAnomalies" modified="200409292023" modifier="MiekalAnd" version="0">The is the portal where the story goes into another dimension which cannot be explained by consensus reality.  One is required to make a LeapOfFaith.</DIV>
+<DIV id="storeLeapOfFaith" modified="200409292030" modifier="MiekalAnd" version="0">Not every reader is capable of a LeapOfFaith, but someone who is ready for such attention to detail will have MoreThanAClue.</DIV>
+<DIV id="storeMoreThanAClue" modified="200409292113" modifier="MiekalAnd" version="0">Something happened but we can't really tell you. But someone actually does know the answer.  The QuestionsQuestions is who?</DIV>
+<DIV id="storeDayDreaming" modified="200409292115" modifier="MiekalAnd" version="1">Does a computer dream in code?  Is an IdleCodeMonkey DayDreaming at EveryOpportunity.</DIV>
+<DIV id="storeIdleCodeMonkey" modified="200409292117" modifier="MiekalAnd" version="0">There's a reason why homo sapiens & chimpanzees share 99.9% of the same DNA.</DIV>
+<DIV id="storeEveryOpportunity" modified="200409292118" modifier="MiekalAnd" version="0">DarlingGirl is retelling to FauxGeek the RedStory she had heard earlier while riding a motorcycle.</DIV>
+<DIV id="storeFauxGeek" modified="200409292119" modifier="MiekalAnd" version="0">These are the ones you just want to strangle because you always feeling like they're wasting your time.</DIV>
+<DIV id="storeRightInFrontOfYou" modified="200409292346" modifier="faris" version="0">Suddenly there it was, that cup of coffee I had been avoding for more than a month.  With the work deadlines filling me with anxiety, I finally gave in to my craving.  Now here I am at Midnight wired for sound!</DIV>
+<DIV id="storeRolePlaying" modified="200409300044" modifier="MaxLambertini" version="0">Nice socialising activity</DIV>
+<DIV id="storeInterestingIdea" modified="200409300553" modifier="RicardoBlane" version="0">Quite a fun little application. Competes with CMSimple http://www.cmsimple.dk/
+</DIV>
+<DIV id="storeSearch Function" modified="200409300558" modifier="RicardoBlane" version="0">It would be neat to be able to search. All the text is present on the page, but the browser search function can't find it!</DIV>
+<DIV id="storeAnotherPort" modified="200409300630" modifier="PatrickCurry" version="1">I added XMLHttpRequest functionality to PhpTiddleyWiki. You can see it here:
+
+http://www.samrowe.com/tiddley/
+
+It removes the hidden form and the empty iframe, but it also bumps the browser requirements.
+
+You can see it working by making a modification (save/delete a tiddler) and looking at 
+
+http://www.samrowe.com/tiddley/out
+
+which is written by 
+
+http://www.samrowe.com/tiddley/modtid.phps
+
+modtid.php is simply a proof-of-concept. You could add whatever type of store on the backend, of course.
+
+--------
+
+Cool stuff.  I'll take a look at this and see what we can incorporate.  PatrickCurry</DIV>
+
+
+
+
+
+
+<!-- ********************************************************************* -->
+<!-- Paste your TiddlyWiki content between this marker and the one above   -->
+<!-- ********************************************************************* -->
+		</div>
+	</body>
+</html>
+

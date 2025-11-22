@@ -1,0 +1,462 @@
+bplist00Ó!_WebSubresources_WebMainResource_WebSubframeArchives¥Ô	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓ	OjGIF89aX  æ  øñèÿf  CzÿÿÿèÜËÈµŸïæÙíãÕìâÔîäÖôëáóëàôìâõíâòéŞóêßñéİñèÛğçÚBq—¶ÃËÿ³€çåá!Z‰O„ µÿÙ¿ÿ  ÿŒ@S}ŸM€×ÚÙt”­ÿ–PW†2f<l“ÆÎÒ<l’ÿpc‰¦;k‘Ap–µ¿Ä•«¼´¾Âµ¿ÃùàËÿÆŸüšWÒÒÎµ¿ÅÕÖÓ;l’ÿâÏJv˜ù–RÄÊËşnğÔ»Kw™—«¸¶ÀÆKv™ÕÕÒÄÉÉ³¿ÆÿìßñÖ¾Z€ù•Q†¯‡Ÿ°ÿoQ{¥´½ÄÊÊx•ªi‹¥ÔÔÑ•©µÿƒ0˜«¹äàÚ,aŒÔÖÔKv˜-b‡ ²x–«³¾ÆÿõïhŠ£§¶¿–«¸¤³»´ÀÆÃÉÌÿŸ`–©¶ÃÈÈy–¬jŒ¦Ju—i‹¤³½Á                                                                  !ù   ,    X   ÿ€„…†‡ˆ‰Š‹Œˆ‚ƒ“”•–—˜™š›œ—ƒ¢£¤¥¦§¨©ª«¬¨	±;Fµ¶·¸¶F;±½¾¿ÀÁÂÃÄÁ¯D:¹ÌÌ:DÈÑ))PÑ\)g_ÑÛÜİŞßàÑÇ8Íæ¸8Üi)Û)GG"áòóó¯çù¶÷ü-5üj´!@Æ"È ¹!Án`Ø‚JA€3j¼÷*Bf!*ˆ)æ„9(]˜@ÁD+=,Ac"ˆ¬4)²DD.\ˆÂ²¨Ñ£(_A€€ë„†P£Ø¢ÙÒ«+L\…`Ë
+L@X!V€“~xÉ" íŠ¬[ÿãÊ»õ•¸Jİ…Ùİ¿3Hüu@bÆ_Oz&á¡‡9rˆ ,x°åË˜ÿ¾zğàVˆ½ a0ãLúŠ)¤Iø mÆƒ€.Ê ÂÃçÚ€ø Aº·ïßÀ¼Z°àV…¨08(ÿu3âĞ£K‡NcÊôè4h\ßÎ]ú+
+ŒG­ZëÄ¨&q_Ï¾½–0íãËŸOŸş+ÄGµ¡A¯TÜ‚ß€J¨` Bà'„ *èàƒF(á„ø½Ò@úZ·\èa[ 
+PE`0èá‰(¦¨âŠ,^ø
+  d¨¡TÚãm`Ad  LpãDiä‘HÂøbÿŒ¶·_ıÙ@ã-Dæ =ş$Œ Ğ
+ÀXÂ€A\N$| c& dà%D.™!yEUc-Uö„	¤ ¨y™ˆ’yAœÀè%¡mQ  \0Â– ´õ¨¥CêÙ$rÊ•Ê~R9dˆeÂx¨``qZğA¬ZF
+ ™%Ğ*€¥›ºIf˜m}0g¨ÀØçŒ{hãª¿R°)Z
+ùj¢Ñrj¥•jZÚVé­®EŠj‹Ìj€K ®æøêµİ^»­®İväøºie¹É2i‹SÌ AzÏâ¨kîniA¬³Öz+¹ÂÈ«¯À
+PÇ»FšëÙHWàìºĞâÛš@bà£¢ŒJ,ÀJš)™¿€0°ã¾yö«>DB:òœ›¢¹ãÏb’‰¥®¨YsÌ2ÃÜ›@œq¿1ìlNIf$Î0Ö«5¿0¾„Õ¹$ñÂ×_³`&ˆ‰BG»‰6²7¾P5ÙµÄpöÜYóØxÊ"µ|ß¸dáˆó]ÀŒËxøå˜g®d$tîùç ‡.úè¤—núé¡G¢úê¬·îúë°Ç.ûì‚ ;_-http://buttons.blogger.com/bloggerbutton1.gifYimage/gifÓ	OÿØÿà JFIF      ÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ   u" ÿÄ              ÿÄ 3       !1"AQa2Rq3B¡4Cb‚¢ÿÄ              ÿÄ %          !Qa1AÁÑğÿÚ   ? á–¥ŒAiæc-ÌvBwÛ½½ñK)V*À†ÄL<r
+	*_Â¹^W£XªIŠÇq °ìM\—.}=ty;VÁ<’Ë=EÃH>¦Êèâ÷ R‡oøókkÑò¿¹8Z$1d0Ë1ao!U,Û›ÜŸŒ}+S‘dù†±ÔÓWä´õ/ÔtÑ¨‡quhÁ&Å€“mŞG±¾¿JäÙ~Y¤ke  9g Í’J‚/&ØçØˆZö¶Ñÿ ŸŞó¹Tô„¼(Éò:‘M˜d™eDò™·Í=<,Ïidå…ø°Ûl{N²Ó“¦²rŸ£ƒÌn>0Ë–5ÊtY©4k	‚¤î¬Ğÿ :OÈ~ÿ æØ•D
+™#ÒÇœÅ3MáNÈ»‰‚.¿'¿ß/0ã‰%ç±_N(<“MéåX^]1”„érh ‹sÛç®ŸÓ’Ç4i¬¡£€E‹úayªµQ¨ê²GD«¨Èh^ùA u¶õ·•¹>¤cI˜ÓÔÕ¶ —BAVºuÖ!*&ı¬Ä‹„Ìy½Ç±#µ±2ÓãŸ‘¹¯a¼r6Y‚éÌ›‰@ÿ IãaLar4Ä*éÌ˜±›h’‘~İ°¡š³FºÔQQeõK,u{M#<'pò´]›··¹Æ· ‰æŸMš*lÕªå‹ê$w1ÎFÂ¤‹ñmÄ¾ãºiÓì5‹dlŠ–M7“mÑIúH<¼‹ƒÆ§ôØ¾ÛÉ¶‚©úH,E‡°™IªŸ3®Èª ëÔÕç%ª¢¦k+ˆØîEÜG›‚HÅuìàE§¾ŠE’—8=j—ÿ nOÆ6 ürAş®ø7L5<±§ôçL?Ûy6Ó9MßI­sÇl`dz^Y£§2b¨ŒZÔpn,{~øFçÏMMO]KQğúçÌ"i2ÀÓ#GRw_Í}Ã±ı»Œlsi´“éºŠZ	’½Wu<sˆä+ø©YˆîÜßØú`Y§Ïèµo¹fUN2#–å”TÒRæš$yòwÙŞß=¯ƒŞ£Ÿí?-6^Ô}Q3?˜HÃb—c·Ó6rÒrÂLM×“”ƒPç0SÓÁo˜Ç9İiRê±yPäö÷8¥³|É¨^‰³
+ÃFí½ 37Mš÷¹[Ø›ó|1é¢èû—=ë´ÿ Æ³>³F!2}T›ŠH[Şûy<väâš\ï5¤¥jZ\Îº
+f¦(êP†ü…·6÷Áƒ« ¨àğçYiÜ³Hdôy•\qUS	·ƒ­bÒ9ŠØÇ×-7‰V*tßWÈŠâİ)¹$‚?£y¥—‹m²”Ú-¦ñHD^¶2V2ğÍrÜÃãÔø‹¤fÜdAÑˆèÍØz~0amaÛìÄ>"éU’@õñ2õU”ôfäoÑñ‰Aâ6’Ú]ë#Wi·b˜ÙoÀü0`Á¶‡l/f*|EÒ3>²0­"±»úcx‹¥RI•ñ2õU”ôfäoÑñƒ´;a{%ˆÚKf÷¬]¦ŞAŠceô&%UâF’”6ÊÈÖèÉü™½Hçğö¾6°í…ì[ø³©r|àå#(ªI8È6“·2cÛï(Æˆ–êÿÙ_+http://blogshares.com/images/blogshares.jpgZimage/jpegÓ	OìGIF89a) & õ>      ! 5&*))%9JNkn*(U)%p*VQ%%X"c&QPLLtttjhfaMf©$²-&Í9BŒ1B¥S+ww˜ii¶RM¢RMÖpoÍdkãsŒçŒ11ªelÎZZšcššaœ{ÆÒy”„{”••¯¯’š¯®²¥„½†ˆØ¥œóŸíÈ˜ğ·¹à¡¦Õ²ÎÏÏıŞçÿóÏ×ıççÿ÷÷ÿÿÿ÷ÿÿ!ù   @ ,    ) &  ş@€pH,H£oÉl:ŸĞ(SèKZ¯G
+‡ğáÛÅ´€jÒ¸+pwX¸¢ÕÇ@›Ò‚ùÿ-cuHwy`~...~-…‡[El}.*~„†EˆE`/
+
+¢¦ ¹ºªY™C±³
+	¥»"Ë"10«%+B¯Bz-.Å	¤"22442Í1/'6L<%gÁ ‹0Æ¥B,›A e7vÜ0²é© ÃCÇşeÀP9p¬À1ã –„ì°1 >Fû0.@¶QCˆ u¬H¨bş/ @èa¢^a\´ €ñX©l’ ùã7d8‡Ò€Œª™ÃÓhBµ‰3GÕWc0Ci¢=±CÀ<;óß…lsZİÄ27°y¥g/Fş2üeû1ÇŠ;V<ä "…gj¬ï,d¿€)Ï@Ñ#‡ˆ=^¤àÁB+ÆzKó³¥q-Û¬qÈ ‘ØcDr€bü2>…ÚÁDˆxàX&¡FŠ’cÖ¼,ôZ¼ı2¸Ñ#víæ@t íÀí`øZ,=Ÿ^2ƒ>ìĞAv8èÂ$–Ü· @`BÏíÖß„µG!ó`-şøBD6Àõ‚ğgË< İ=D°là€õı¢°™@‘İ1
+HĞ
+ô°Â‹0°‡„¸’‰>¬Ÿ>€À–Bì½ˆ€.¼ “GÀh ÀyUJ`˜5Ğ€W½€ ‚—|¸ÅPE1¨&/X`A î ÁEû˜ğY
+(å©çQI0„İ±ØffAW€œØp–ĞÌQ\uƒ,ÂÉÃ5˜€‚~è7	&˜@ˆ£ªAB
+-AğÑÉ2‡Ù`€Á†šnDKˆ£˜,¸†_d›­xqëm®ß†û¨”kî¹è¦«îºåŠënA  ;_http://w1.extreme-dm.com/i.gifÓ	O+GIF89a  €        !ù    ,       D 
+_Bhttp://w0.extreme-dm.com/0.gif?tag=radekjed&j=y&srw=1280&srb=32&l=Ô	 UUTF-8O<HTML><HEAD><TITLE>Tamtam um nix: TiddlyWiki - a reusable non-linear personal web notebook</TITLE>
+        <STYLE type="text/css" media="screen">
+                h1 {border-bottom:dotted 1px #000000;margin-bottom:0px;}
+                h2 {margin-bottom:0px;}
+                h2#archives { padding-top:10px;margin-top:40px;border-top:dotted 1px #999999;}
+                h3 {padding-top:30px;color:#555555;padding-bottom:0px;margin-bottom:0px;}
+                body {font-family:Georgia,Serif;font-size:1em;margin:3%;padding:0px;background:#ffffff;color:#000000;}
+                div.blogPost {padding-left:5%;padding-right:10%;}
+                div.byline {color:#555555;}
+                p#bloggerBug {padding-top:20px;}
+                .blogComments {padding-top:30px;color:#555555;padding-bottom:0px;margin-bottom:0px;font-weight:bold}
+                .blogComments .byline {font-size:1em;font-weight:normal;color:#555555;margin-right:10px;display:inline}
+                .blogComment {font-size:1em;margin:3%;color:#000000;font-weight:normal}
+        .deleted-comment {font-style:italic;color:gray;}
+        </STYLE>
+  <META http-equiv="Content-Type" content="text/html; charset=windows-1252"><META name="MSSmartTagsPreventParsing" content="true"><META name="generator" content="Blogger"><LINK rel="alternate" type="application/atom+xml" title="Tamtam um nix" href="http://www.jedrasiak.at/radek/blog/atom.xml"><LINK rel="service.post" type="application/atom+xml" title="Tamtam um nix" href="http://www.blogger.com/atom/5065819"><LINK rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=5065819"><STYLE type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?blogID=5065819");
+</STYLE>
+
+</HEAD><BODY>
+<H1>Tamtam um nix</H1>
+
+Ein Versuch, und nur der zÃ¤hlt am Schluss...
+<BR><BR>
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-5874415713395461";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-5874415713395461&dt=1117745327974&format=728x90_as&output=html&url=http%3A%2F%2Fwww.jedrasiak.at%2Fradek%2Fblog%2F2005%2F06%2Ftiddlywiki-reusable-non-linear.html&cc=89&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+
+     
+          <H3>Mittwoch, Juni 01, 2005</H3>
+     
+     <A name="111761609738760931">Â </A>
+     <H2><A href="http://tiddlywiki.com/">      TiddlyWiki - a reusable non-linear personal web notebook</A></H2>
+
+                <DIV class="blogPost">          It's pure selfcontained CSS, HTML and JS magic. Check this out!<BR>
+          <DIV class="byline">posted by <A href="http://www.jedrasiak.at/radek/blog/2005/06/tiddlywiki-reusable-non-linear.html" title="permanent link">RadekÂ Â # 10:54</A> <SPAN class="item-action"><A href="http://www.blogger.com/email-post.g?blogID=5065819&postID=111761609738760931" title="Email Post"><SPAN class="email-post-icon">Â </SPAN></A></SPAN><SPAN class="item-control admin-1793197237 pid-2002054351"><A style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=5065819&postID=111761609738760931&quickEdit=true" title="Edit Post"><SPAN class="quick-edit-icon">Â </SPAN></A></SPAN> </DIV>
+                </DIV>
+ 
+  <DIV class="blogComments">
+        <A name="comments"></A>
+                        Comments:
+                        
+                        <A class="comment-link" href="http://www.blogger.com/comment.g?blogID=5065819&postID=111761609738760931">Post a Comment</A>
+        
+        <BR> <BR>
+        <A href="http://www.jedrasiak.at/radek/blog/index.html">&lt;&lt; Home</A>
+    </DIV>
+
+
+
+
+
+<H2 id="archives">Archives</H2>
+<P>        <A href="http://www.jedrasiak.at/radek/blog/2004_03_01_radekjed_archive.html">MÃ¤rz 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_04_01_radekjed_archive.html">April 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_05_01_radekjed_archive.html">Mai 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_06_01_radekjed_archive.html">Juni 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_07_01_radekjed_archive.html">Juli 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_08_01_radekjed_archive.html">August 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_09_01_radekjed_archive.html">September 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_10_01_radekjed_archive.html">Oktober 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_11_01_radekjed_archive.html">November 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2004_12_01_radekjed_archive.html">Dezember 2004</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_01_01_radekjed_archive.html">JÃ¤nner 2005</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_02_01_radekjed_archive.html">Februar 2005</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_03_01_radekjed_archive.html">MÃ¤rz 2005</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_04_01_radekjed_archive.html">April 2005</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_05_01_radekjed_archive.html">Mai 2005</A>Â Â 
+
+        <A href="http://www.jedrasiak.at/radek/blog/2005_06_01_radekjed_archive.html">Juni 2005</A>Â Â 
+
+                        <SCRIPT type="text/javascript" language="Javascript">if (location.href.indexOf("archive")!=-1) document.write("<strong><a href=\"http://www.jedrasiak.at/radek/blog/index.html\">Current Posts</a></strong>");</SCRIPT></P>
+
+
+<P id="bloggerBug"><A href="http://www.blogger.com"><IMG width="88" height="31" src="http://buttons.blogger.com/bloggerbutton1.gif" border="0" alt="This page is powered by Blogger. Isn't yours?"></A></P>
+<A href="http://blogshares.com/blogs.php?blog=http%3A%2F%2Fwww.jedrasiak.at%2Fradek%2Fblog%2Findex.html&user=15669"><IMG src="http://blogshares.com/images/blogshares.jpg" alt="Listed on BlogShares" width="117" height="23"></A>
+<FONT size="1" color="white"><A target="_top" href="http://w.extreme-dm.com/?login=radekjed">
+<IMG src="http://w1.extreme-dm.com/i.gif" height="38" border="0" width="41" alt=""></A><SCRIPT language="javascript1.2"><!--
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+</SCRIPT><SCRIPT language="javascript"><!--
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=\"http://w0.extreme-dm.com",
+"/0.gif?tag=radekjed&j=y&srw="+EXw+"&srb="+EXb+"&",
+"l="+escape(EXd.referrer)+"\" height=1 width=1>");//-->
+</SCRIPT><IMG src="http://w0.extreme-dm.com/0.gif?tag=radekjed&j=y&srw=1280&srb=32&l=" height="1" width="1">
+</FONT>
+
+</BODY></HTML>_Nhttp://www.jedrasiak.at/radek/blog/2005/06/tiddlywiki-reusable-non-linear.htmlYtext/html¡"Ñ#Õ	$ %&'_WebResourceFrameNameOT<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #0000ff }a.ad:visited { color: #0000ff }a.ad:hover { color: #0000ff }a.ad:active { color: #0000ff }a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }a.attribution:link { color: #ffffff }a.attribution:visited { color: #ffffff }a.attribution:hover { color: #ffffff }a.attribution:active { color: #ffffff }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#336699"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu www.algovision.de','aw0')" onmouseover="ss('gehe zu www.algovision.de','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?adurl=http://www.algovision.de/index.php%3Fdatei_name%3Dwebhosting%26headline%3Dblog%2Bhosting&sa=l&ai=B_EJhj3CfQrLoCaC8wgG4zaDND4CsugqcjsudAcCNtwGA4gkQARgBIK2X8AIoBECKFkiUOaAB6uPN_gOyARB3d3cuamVkcmFzaWFrLmF0ugEJNzI4eDkwX2FzyAEB2gFOaHR0cDovL3d3dy5qZWRyYXNpYWsuYXQvcmFkZWsvYmxvZy8yMDA1LzA2L3RpZGRseXdpa2ktcmV1c2FibGUtbm9uLWxpbmVhci5odG1s6AEB&num=1&client=ca-pub-5874415713395461" onfocus="ss('gehe zu www.algovision.de','aw0')" onclick="ha('aw0')" onmouseover="return ss('gehe zu www.algovision.de','aw0')" onmouseout="cs()"><B>Blog Hosting</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Wo gibt es gute Hosting Provider? Vergleichen Sie die Angebote! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu forum4bloggers.com','aw1')" onmouseover="ss('gehe zu forum4bloggers.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?sa=l&ai=BZu81j3CfQrLoCaC8wgG4zaDND56I7wjiuYyNAcCNtwHQhgMQAhgCIK2X8AIoBECKFkiMObIBEHd3dy5qZWRyYXNpYWsuYXS6AQk3Mjh4OTBfYXPIAQHaAU5odHRwOi8vd3d3LmplZHJhc2lhay5hdC9yYWRlay9ibG9nLzIwMDUvMDYvdGlkZGx5d2lraS1yZXVzYWJsZS1ub24tbGluZWFyLmh0bWzoAQE&num=2&adurl=http://forum4bloggers.com/index.php%3Fsource%3DFromGoggleAd&client=ca-pub-5874415713395461" onfocus="ss('gehe zu forum4bloggers.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('gehe zu forum4bloggers.com','aw1')" onmouseout="cs()"><B>Free - Forum4Bloggers</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Where Bloggers Meet to Talk about Blogging! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu MapName.com','aw2')" onmouseover="ss('gehe zu MapName.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?sa=l&ai=B917zj3CfQrLoCaC8wgG4zaDND8XZ2Qr3nbm4AcCNtwHQhgMQAxgDIK2X8AIoBECKFkiMObIBEHd3dy5qZWRyYXNpYWsuYXS6AQk3Mjh4OTBfYXPIAQHaAU5odHRwOi8vd3d3LmplZHJhc2lhay5hdC9yYWRlay9ibG9nLzIwMDUvMDYvdGlkZGx5d2lraS1yZXVzYWJsZS1ub24tbGluZWFyLmh0bWzoAQE&num=3&adurl=http://mapname.com/ref695.cgi%3Fgoogle-1a-4c&client=ca-pub-5874415713395461" onfocus="ss('gehe zu MapName.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('gehe zu MapName.com','aw2')" onmouseout="cs()"><B>Name and Map Your Blog</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Map Your Blog to Your Domain Name Make It Easy to Remember </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#ffffff" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu www.caspio.com','aw3')" onmouseover="ss('gehe zu www.caspio.com','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.caspio.com/%3Fa%3D458&sa=l&ai=BjCGnj3CfQrLoCaC8wgG4zaDND-z0lweE-_6bAcCNtwHQhgMQBBgEIK2X8AIoBECKFkiaOaAB7qOl_wOyARB3d3cuamVkcmFzaWFrLmF0ugEJNzI4eDkwX2FzyAEB2gFOaHR0cDovL3d3dy5qZWRyYXNpYWsuYXQvcmFkZWsvYmxvZy8yMDA1LzA2L3RpZGRseXdpa2ktcmV1c2FibGUtbm9uLWxpbmVhci5odG1s6AEB&num=4&client=ca-pub-5874415713395461" onfocus="ss('gehe zu www.caspio.com','aw3')" onclick="ha('aw3')" onmouseover="return ss('gehe zu www.caspio.com','aw3')" onmouseout="cs()"><B>Feature-Rich Web Database</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Build dynamic database-driven forms and apps without coding. Try! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#336699"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.jedrasiak.at/radek/blog/2005/06/tiddlywiki-reusable-non-linear.html&hl=de&client=ca-pub-5874415713395461&adU=www.algovision.de&adT=Blog+Hosting&adU=forum4bloggers.com&adT=Free+-+Forum4Bloggers&adU=MapName.com&adT=Name+and+Map+Your+Blog&adU=www.caspio.com&adT=Feature-Rich+Web+Database&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Goooooogle-Anzeigen</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_Chttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-5874415713395461&dt=1117745327974&format=728x90_as&output=html&url=http%3A%2F%2Fwww.jedrasiak.at%2Fradek%2Fblog%2F2005%2F06%2Ftiddlywiki-reusable-non-linear.html&cc=89&u_h=854&u_w=1280&u_ah=784&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=7&u_nmime=123   ! 3 I O X v ˆ — ­ ³'n'¨'º'Á-/-_-i-p3‡3µ3À3Ç7·7Ø7ß88R8[8aT|TÍT×TÙTÜTçTşsVsi             (              t°

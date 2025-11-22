@@ -1,0 +1,1375 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives£”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeO$/*  
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.5
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+
+	*** REGARDING IMAGES ***
+	All CSS that involves the use of images, can be found in the 'index.php' file.
+	This is to ease installation inside subdirectories of a server.
+
+	Have fun, and don't be afraid to contact me if you have questions.
+*/
+
+
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background-color: #d5d6d7;
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background-color: #73a0c5;
+	}
+
+#content {
+	font-size: 1.2em
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background-color: #eee;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+.description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 200px;
+	width: 100%;
+	background-color: #73a0c5;
+	}
+
+#headerimg {
+        visibility: hidden;
+	margin: 0;
+	height: 200px;
+	width: 100%;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+.description {
+	text-align: center;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	list-style: none;
+	padding-left: 10px;
+	text-indent: -10px;
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+#google {
+padding-top: 15px;
+padding-bottom: 0;
+text-align: center;
+}
+
+_6http://www.sh2.com/wp-content/themes/default/style.cssXtext/css‘_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascript”O˙var sc_width=screen.width;		
+var sc_referer = ""+document.referrer;
+// var sc_referer = parent.document.referrer;
+var sc_title = "";
+var sc_url = "";
+var sc_unique = 0;
+var sc_returning = 0;
+var sc_returns = 0;
+var sc_agent = navigator.appName+' '+navigator.appVersion;
+var sc_base_dir;
+var sc_error=0;
+var sc_remove=0;
+var sc_http_url="http";
+var sc_link_back_start = "";
+var sc_link_back_end = "";
+var sc_security_code = "";
+
+
+if(window.sc_https) {
+	if(sc_https==1) {
+		sc_doc_loc = ''+document.location;
+		myRE = new RegExp("^https", "i")
+		if(sc_doc_loc.match(myRE)) {
+			sc_http_url = "https";
+		}
+		else {
+			sc_http_url = "http";
+		}
+	}
+	else
+		sc_http_url = "http";
+}
+
+
+if(window.sc_partition) {
+	if(sc_partition==1)
+		sc_base_dir = sc_http_url+"://c2.statcounter.com/";
+	else if(sc_partition==2)
+		sc_base_dir = sc_http_url+"://c3.statcounter.com/";
+	else if(sc_partition==3)
+		sc_base_dir = sc_http_url+"://c4.statcounter.com/";
+	else if(sc_partition==4)
+		sc_base_dir = sc_http_url+"://c5.statcounter.com/";
+	else if(sc_partition==5)
+		sc_base_dir = sc_http_url+"://c6.statcounter.com/";
+	else if(sc_partition==6)
+		sc_base_dir = sc_http_url+"://c7.statcounter.com/";
+	else
+		sc_base_dir = sc_http_url+"://c1.statcounter.com/";
+}
+else {
+	sc_base_dir = sc_http_url+"://c1.statcounter.com/";
+	var sc_partition=0;
+}
+
+if(window.sc_text)
+	sc_base_dir += "text.php?";
+else
+	sc_base_dir += "t.php?";
+
+if(window.sc_project) {
+	sc_base_dir += "sc_project="+sc_project;
+	if(sc_project=="610695")
+		sc_remove=1;
+}
+else if(window.usr) {
+	sc_base_dir += "usr="+usr;
+}
+else {
+	sc_error = 1;
+}
+
+if(window.sc_remove_link) {
+	sc_link_back_start = "";
+	sc_link_back_end = "";
+}
+else {
+	sc_link_back_start = "<a href=\"http://www.StatCounter.com\" target=\"_blank\">";
+	sc_link_back_end = "<\/a>";
+}
+
+sc_date = new Date();
+sc_time = sc_date.getTime();
+sc_agent = sc_agent.toUpperCase();
+
+sc_time_difference = 60*60*1000;
+
+sc_title = ""+document.title;
+sc_url = ""+document.location;
+sc_referer = sc_referer.substring(0, 150);
+sc_title = sc_title.substring(0, 150);
+sc_url = sc_url.substring(0, 150);
+sc_referer = escape(sc_referer);
+sc_title = escape(sc_title);
+sc_url = escape(sc_url);
+
+if (window.sc_security) {
+	sc_security_code = sc_security;
+}
+
+var sc_tracking_url = sc_base_dir+"&resolution="+sc_width+"&camefrom="+sc_referer+"&u="+sc_url+"&t="+sc_title+"&java=1&security="+sc_security_code+"&sc_random="+Math.random();
+
+// if no usr or project set then display visibile
+
+// if usr=="someuser" then display visibile
+
+if(sc_error==1) {
+		document.writeln("Code corrupted. Insert fresh copy.");
+}
+else if(sc_remove==1) {
+		document.writeln("<b>StatCounter cannot track a high volume website like yours for free. This was stated several times during the sign up process. Please remove the code ASAP.</b>");
+}
+//else if(sc_partition==1) {
+	// down at the moment
+//}
+else if (window.sc_text) {
+	document.writeln('<scr' + 'ipt language="JavaScript"' + ' src=' + sc_tracking_url + '></scr' + 'ipt>');
+}
+else if (window.sc_invisible) {
+	if(window.sc_invisible==1) {
+	sc_img = new Image();
+	sc_img.src = sc_tracking_url;
+	}
+	else {
+		document.writeln(sc_link_back_start+"<IMG SRC=\""+sc_tracking_url+"\" ALT=\"StatCounter - Free Web Tracker and Counter\" BORDER=\"0\">"+sc_link_back_end);
+	}
+}
+else {
+	document.writeln(sc_link_back_start+"<IMG SRC=\""+sc_tracking_url+"\" ALT=\"StatCounter - Free Web Tracker and Counter\" BORDER=\"0\">"+sc_link_back_end);
+}
+_-http://www.statcounter.com/counter/counter.js_application/x-javascript‘UUTF-8OW¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/11"><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <TITLE>Tuesday Roundup  -  Shawn Hartley - sh2.com</TITLE>
+        
+        <META name="generator" content="WordPress 1.5.1">
+
+        <LINK rel="stylesheet" href="http://www.sh2.com/wp-content/themes/default/style.css" type="text/css" media="screen">
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.sh2.com/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://www.sh2.com/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.sh2.com/feed/atom/">
+        <LINK rel="pingback" href="http://www.sh2.com/xmlrpc.php">
+
+        <STYLE type="text/css" media="screen">
+        
+                /* BEGIN IMAGE CSS */
+                        /*      To accomodate differing install paths of WordPress, images are referred only here,
+                                and not in the wp-layout.css file. If you prefer to use only CSS for colors and what
+                                not, then go right ahead and delete the following lines, and the image files. */
+                        
+                body            { background: url("http://www.sh2.com/wp-content/themes/default/images/kubrickbgcolor.jpg"); }                          #page           { background: url("http://www.sh2.com/wp-content/themes/default/images/kubrickbgwide.jpg") repeat-y top; border: none; }                        #header         { background: url("http://www.sh2.com/wp-content/themes/default/images/kubrickheader.jpg") no-repeat bottom center; }
+                        #footer         { background: url("http://www.sh2.com/wp-content/themes/default/images/kubrickfooter.jpg") no-repeat bottom; border: none;}
+                        
+                        
+                        /*      Because the template is slightly different, size-wise, with images, this needs to be set here
+                                If you don't want to use the template's images, you can also delete the following two lines. */
+                        
+                        #header         { margin: 0 !important; margin: 0 0 0 1px; padding: 1px; height: 198px; width: 758px; }
+                        #headerimg      { margin: 7px 9px 0; height: 192px; width: 740px; } 
+                /* END IMAGE CSS */
+                
+        
+                /*      To ease the insertion of a personal header image, I have done it in such a way,
+                        that you simply drop in an image called 'personalheader.jpg' into your /images/
+                        directory. Dimensions should be at least 760px x 200px. Anything above that will
+                        get cropped off of the image. */
+                
+                /*
+                #headerimg      { background: url('http://www.sh2.com/wp-content/themes/default/images/personalheader.jpg') no-repeat top;}
+                */
+
+        </STYLE>
+
+                <LINK rel="archives" title="June 2005" href="http://www.sh2.com/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://www.sh2.com/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://www.sh2.com/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://www.sh2.com/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://www.sh2.com/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://www.sh2.com/2005/01/">
+        <LINK rel="archives" title="December 2004" href="http://www.sh2.com/2004/12/">
+        <LINK rel="archives" title="November 2004" href="http://www.sh2.com/2004/11/">
+        <LINK rel="archives" title="October 2004" href="http://www.sh2.com/2004/10/">
+        <LINK rel="archives" title="September 2004" href="http://www.sh2.com/2004/09/">
+        <LINK rel="archives" title="August 2004" href="http://www.sh2.com/2004/08/">
+        <LINK rel="archives" title="July 2004" href="http://www.sh2.com/2004/07/">
+        <LINK rel="archives" title="June 2004" href="http://www.sh2.com/2004/06/">
+        <LINK rel="archives" title="May 2004" href="http://www.sh2.com/2004/05/">
+        <LINK rel="archives" title="April 2004" href="http://www.sh2.com/2004/04/">
+        <LINK rel="archives" title="March 2004" href="http://www.sh2.com/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://www.sh2.com/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://www.sh2.com/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://www.sh2.com/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://www.sh2.com/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://www.sh2.com/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://www.sh2.com/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://www.sh2.com/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://www.sh2.com/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://www.sh2.com/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://www.sh2.com/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://www.sh2.com/2003/04/">
+        <LINK rel="archives" title="March 2003" href="http://www.sh2.com/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://www.sh2.com/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://www.sh2.com/2003/01/">
+        <LINK rel="archives" title="December 2002" href="http://www.sh2.com/2002/12/">
+        <LINK rel="archives" title="November 2002" href="http://www.sh2.com/2002/11/">
+        <LINK rel="archives" title="October 2002" href="http://www.sh2.com/2002/10/">
+        <LINK rel="archives" title="September 2002" href="http://www.sh2.com/2002/09/">
+        <LINK rel="archives" title="August 2002" href="http://www.sh2.com/2002/08/">
+        <LINK rel="archives" title="July 2002" href="http://www.sh2.com/2002/07/">
+        <LINK rel="archives" title="June 2002" href="http://www.sh2.com/2002/06/">
+        <LINK rel="archives" title="May 2002" href="http://www.sh2.com/2002/05/">
+        <LINK rel="archives" title="April 2002" href="http://www.sh2.com/2002/04/">
+        <LINK rel="archives" title="March 2002" href="http://www.sh2.com/2002/03/">
+        <LINK rel="archives" title="February 2002" href="http://www.sh2.com/2002/02/">
+        <LINK rel="archives" title="January 2002" href="http://www.sh2.com/2002/01/">
+        <LINK rel="archives" title="December 2001" href="http://www.sh2.com/2001/12/">
+        <LINK rel="archives" title="November 2001" href="http://www.sh2.com/2001/11/">
+        <LINK rel="archives" title="October 2001" href="http://www.sh2.com/2001/10/">
+        <LINK rel="archives" title="August 2001" href="http://www.sh2.com/2001/08/">
+        <LINK rel="archives" title="July 2001" href="http://www.sh2.com/2001/07/">
+        <LINK rel="archives" title="June 2001" href="http://www.sh2.com/2001/06/">
+
+        </HEAD><BODY>
+
+<DIV id="page">
+
+<DIV id="header">        <DIV id="headerimg">                <H1><A href="http://www.sh2.com">Shawn Hartley - sh2.com</A></H1>
+                <DIV class="description">marketing, seo and web development operating in Omaha, Nebraska</DIV>
+        </DIV>
+</DIV>
+<HR>
+
+        <DIV id="content" class="narrowcolumn">                                
+        
+                <DIV class="navigation">                        <DIV class="alignleft">¬´ <A href="http://www.sh2.com/2005/06/12/nebraska-back-to-the-college-world-series/">Nebraska back to the College World Series</A></DIV>
+                        <DIV class="alignright"> <A href="http://www.sh2.com/2005/06/21/abcs-lost-is-really-zork/">ABC‚Äôs Lost is really Zork</A> ¬ª</DIV>
+                </DIV>
+        
+                <DIV class="post"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-8594383005282184";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="6396367863";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "000000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="468" height="60" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8594383005282184&dt=1119506816261&format=468x60_as&output=html&channel=6396367863&url=http%3A%2F%2Fwww.sh2.com%2F2005%2F06%2F21%2Ftuesday-roundup%2F&color_bg=FFFFFF&color_text=000000&color_link=000000&color_url=000000&color_border=FFFFFF&cc=30&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+                        <H2 id="post-336"><A href="http://www.sh2.com/2005/06/21/tuesday-roundup/" rel="bookmark" title="Permanent Link: Tuesday Roundup">Tuesday Roundup</A></H2>
+        
+                        <DIV class="entrytext">                                        <P>Time get a little roundup post to get just to get myself back online. It‚Äôs been a struggle lately finding time to sit at the computer after work, let alone getting online.</P>
+        <P><A href="http://www.huskerzone.com/2005/06/21/cws-arizona-state-8-nebraska-7-f-11/">Nebraska lost this afternoon</A> in the <A href="http://www.cwsomaha.com/">College World Series</A>. Disappointing the manner in which they lost, but judging by the attendance - or lack thereof - in the night game, it is readily apparent why the CWS doesn‚Äôt want a relatively local team in the series despite their lip service to the contrary. Rosenblatt lost about half the crowd for the night game.</P>
+        <P><A href="http://www.tiddlywiki.com/">TiddlyWiki</A> has been updated. Among the major features added are support for tags and and extra keyboard shortcuts. There is also a gallery of how other people are adapting and using TiddlyWiki.</P>
+        <P>Summer is in full swing today and mother nature is on top of it as we are hitting our first heat wave of the year. Mid-90‚Äôs all week and humid. Yet another reason why I‚Äôm ready to get out of Omaha. On the other hand, it might just be a blessing that we sold our CWS tickets for the year.</P>
+        <P>Macintouch, the long-time Apple news site, is <A href="http://www.macintouch.com/#2005.06.21.survey"><STRONG>conducting a survey</STRONG></A> on the failure experiences of the G5 iMacs. Early numbers seem to confirm my thoughts resulting from my experiences (<A href="http://www.sh2.com/2005/02/06/the-imac-repair-saga/">1</A>, <A href="http://www.sh2.com/2005/02/11/the-g5-imac-repair-saga-continues/">2</A>, <A href="http://www.sh2.com/2005/02/15/imac-repair-saga-part-3/">3</A>, <A href="http://www.sh2.com/2005/02/20/imac-repair-saga-conclusion/">4</A>).</P>
+        
+                                        
+                                <P class="postmetadata alt">                                        <SMALL>                                                This entry was posted
+                                                 
+                                                on Tuesday, June 21st, 2005 at 4:07 pm                                         and is filed under <A href="http://www.sh2.com/category/apple/" title="View all posts in Apple" rel="category tag">Apple</A>,  <A href="http://www.sh2.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</A>,  <A href="http://www.sh2.com/category/baseball/" title="View all posts in Baseball" rel="category tag">Baseball</A>.
+                                                You can follow any responses to this entry through the <A href="http://www.sh2.com/2005/06/21/tuesday-roundup/feed/">RSS 2.0</A> feed. 
+                                                
+                                                                                                        You can <A href="#respond">leave a response</A>, or <A href="http://www.sh2.com/2005/06/21/tuesday-roundup/trackback/">trackback</A> from your own site.
+                                                
+                                                                                                
+                                        </SMALL>
+                                </P>
+        
+                        </DIV>
+                </DIV>
+                
+        
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://www.sh2.com/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="336">
+</P>
+
+</FORM>
+
+
+        
+                
+        </DIV>
+
+        <DIV id="sidebar">                <UL>                        
+                        <LI>                                <FORM method="get" id="searchform" action="/index.php"><DIV><INPUT type="text" value="" name="s" id="s">
+<INPUT type="submit" id="searchsubmit" value="Search">
+</DIV>
+</FORM>                        </LI>
+
+                        
+                        <LI>                                                </LI>
+                                        <LI id="linkcat-1"><H2>Navigate</H2>
+        <UL><LI><A href="http://www.sh2.com">sh2.com Home</A></LI>
+<LI><A href="http://www.sh2.com/bio.php">Bio</A></LI>
+<LI><A href="http://www.sh2.com/portfolio.php">Portfolio</A></LI>
+<LI><A href="http://www.sh2.com/contact.php">Contact</A></LI>
+<LI><A href="http://www.sh2.com/linkworthy.php">Link Worthy Archives</A></LI>
+<LI><A href="http://www.sh2.com/specialsauce.html">Special Sauce</A></LI>
+<LI><A href="http://www.sh2.com/colophon.php">Colophon</A></LI>
+
+        </UL>
+                        
+                        </LI><LI><H2>Categories</H2>
+                                <UL>                                        <LI><A href="http://www.sh2.com/category/apple/" title="View all posts filed under Apple">Apple</A> (13)
+</LI>
+        <LI><A href="http://www.sh2.com/category/baseball/" title="View all posts filed under Baseball">Baseball</A> (3)
+</LI>
+        <LI><A href="http://www.sh2.com/category/blogging/" title="View all posts filed under Blogging">Blogging</A> (8)
+</LI>
+        <LI><A href="http://www.sh2.com/category/books/" title="View all posts filed under Books">Books</A> (2)
+</LI>
+        <LI><A href="http://www.sh2.com/category/business/" title="View all posts filed under Business">Business</A> (8)
+</LI>
+        <LI><A href="http://www.sh2.com/category/email-marketing/" title="View all posts filed under Email Marketing">Email Marketing</A> (1)
+</LI>
+        <LI><A href="http://www.sh2.com/category/general/" title="View all posts filed under General">General</A> (276)
+</LI>
+        <LI><A href="http://www.sh2.com/category/links/" title="View all posts filed under Links">Links</A> (2)
+</LI>
+        <LI><A href="http://www.sh2.com/category/apple/os-x-tips-and-apps/" title="View all posts filed under OS X Tips and Apps">OS X Tips and Apps</A> (1)
+</LI>
+        <LI><A href="http://www.sh2.com/category/personal/" title="View all posts filed under Personal">Personal</A> (7)
+</LI>
+        <LI><A href="http://www.sh2.com/category/search/" title="View all posts filed under Search">Search</A> (8)
+</LI>
+        <LI><A href="http://www.sh2.com/category/site-news/" title="View all posts filed under Site News">Site News</A> (3)
+</LI>
+        <LI><A href="http://www.sh2.com/category/technology/" title="View all posts filed under Technology">Technology</A> (10)
+</LI>
+        <LI><A href="http://www.sh2.com/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</A> (1)
+</LI>
+        <LI><A href="http://www.sh2.com/category/way-off-topic/" title="View all posts filed under Way Off Topic">Way Off Topic</A> (2)
+</LI>
+                                </UL>
+                        </LI>
+                        </UL>
+<UL>                        <LI><H2>Archives</H2>
+                                <UL>                                        <LI><A href="http://www.sh2.com/2005/06/" title="June 2005">June 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2005/05/" title="May 2005">May 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2005/04/" title="April 2005">April 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2005/03/" title="March 2005">March 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2005/02/" title="February 2005">February 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2005/01/" title="January 2005">January 2005</A></LI>
+        <LI><A href="http://www.sh2.com/2004/12/" title="December 2004">December 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/11/" title="November 2004">November 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/10/" title="October 2004">October 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/09/" title="September 2004">September 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/08/" title="August 2004">August 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/07/" title="July 2004">July 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/06/" title="June 2004">June 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/05/" title="May 2004">May 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/04/" title="April 2004">April 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/03/" title="March 2004">March 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/02/" title="February 2004">February 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2004/01/" title="January 2004">January 2004</A></LI>
+        <LI><A href="http://www.sh2.com/2003/12/" title="December 2003">December 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/11/" title="November 2003">November 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/10/" title="October 2003">October 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/09/" title="September 2003">September 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/08/" title="August 2003">August 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/07/" title="July 2003">July 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/06/" title="June 2003">June 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/05/" title="May 2003">May 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/04/" title="April 2003">April 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/03/" title="March 2003">March 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/02/" title="February 2003">February 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2003/01/" title="January 2003">January 2003</A></LI>
+        <LI><A href="http://www.sh2.com/2002/12/" title="December 2002">December 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/11/" title="November 2002">November 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/10/" title="October 2002">October 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/09/" title="September 2002">September 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/08/" title="August 2002">August 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/07/" title="July 2002">July 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/06/" title="June 2002">June 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/05/" title="May 2002">May 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/04/" title="April 2002">April 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/03/" title="March 2002">March 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/02/" title="February 2002">February 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2002/01/" title="January 2002">January 2002</A></LI>
+        <LI><A href="http://www.sh2.com/2001/12/" title="December 2001">December 2001</A></LI>
+        <LI><A href="http://www.sh2.com/2001/11/" title="November 2001">November 2001</A></LI>
+        <LI><A href="http://www.sh2.com/2001/10/" title="October 2001">October 2001</A></LI>
+        <LI><A href="http://www.sh2.com/2001/08/" title="August 2001">August 2001</A></LI>
+        <LI><A href="http://www.sh2.com/2001/07/" title="July 2001">July 2001</A></LI>
+        <LI><A href="http://www.sh2.com/2001/06/" title="June 2001">June 2001</A></LI>
+                                </UL>
+                        </LI>
+                        
+                </UL>
+        </DIV>
+
+
+<HR>
+<DIV id="footer">        <P>¬© 1996 - 2005 :: Shawn Hartley &amp; sh2 design (sh2dotcom)<BR>
+Reproduction or other usage is licensed under a <A href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons License</A><BR>
+                Shawn Hartley - sh2.com is proudly powered by 
+                <A href="http://wordpress.org">WordPress</A>
+                <BR><A href="feed:http://www.sh2.com/feed/">Entries (RSS)</A>
+                and <A href="feed:http://www.sh2.com/comments/feed/">Comments (RSS)</A>.
+                </P>
+</DIV>
+</DIV>
+
+
+                        
+
+<SCRIPT type="text/javascript" language="javascript">
+var sc_project=606290; 
+var sc_partition=4; 
+var sc_security="a52b7438"; 
+var sc_invisible=1; 
+</SCRIPT>
+
+<SCRIPT type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></SCRIPT>
+
+</BODY></HTML>_.http://www.sh2.com/2005/06/21/tuesday-roundup/Ytext/html°—’ !_WebResourceFrameNameO	a<HTML><HEAD><STYLE type="text/css"><!--
+.ch{cursor:pointer; cursor:hand;}.textcolor{color: #000000 }//--></STYLE><SCRIPT type="text/javascript"><!--
+function ss(w,id) {window.status = w;return true;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href}}function cs(){window.status='';}//--></SCRIPT></HEAD><BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE height="60" width="468" cellspacing="1" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD><TABLE height="58" width="466" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff"><TBODY><TR><TD id="taw0" class="ch" onfocus="ss('go to msaa.com','aw0')" onmouseover="return ss('go to msaa.com','aw0')" onmouseout="cs()" onclick="ga(this,event)" align="center" valign="middle"><DIV style="overflow:hidden; word-wrap: break-word; width:464;"><FONT style="font-size:20px" face="impact, poster bodoni, geneva"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=Bkl2eSVG6QrT8HKz0aOKI7PIFkc5Y79WnAeq0WwAQARgBIAAoAjAAOABA2o6XAYIBF2NhLXB1Yi04NTk0MzgzMDA1MjgyMTg0iAEBkAGG_AWqAQo2Mzk2MzY3ODYzsgELd3d3LnNoMi5jb226AQk0Njh4NjBfYXPAAQLaAS5odHRwOi8vd3d3LnNoMi5jb20vMjAwNS8wNi8yMS90dWVzZGF5LXJvdW5kdXAv6AEB&num=1&adurl=http://msaa.com/%3Fas_grant&client=ca-pub-8594383005282184" onfocus="ss('go to msaa.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to msaa.com','aw0')" onmouseout="cs()" class="textcolor" style="text-decoration:none">MSAA needs your support</A></FONT><BR><FONT style="font-size:14px" class="textcolor" face="arial,sans-serif">to help people with MS lead  a better life. Help us today!</FONT><BR><FONT style="font-size:16px" class="textcolor" face="arial,sans-serif"><SCRIPT type="text/javascript"><!--
+if(0) {document.write("msaa.com");}//--></SCRIPT></FONT></DIV></TD></TR><TR><TD height="1" bgcolor="#ffffff" align="right"><FONT style="font-size:10px" class="textcolor" face="arial,sans-serif">¬†Public Service Ads by Google¬†</FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_èhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8594383005282184&dt=1119506816261&format=468x60_as&output=html&channel=6396367863&url=http%3A%2F%2Fwww.sh2.com%2F2005%2F06%2F21%2Ftuesday-roundup%2F&color_bg=FFFFFF&color_text=000000&color_link=000000&color_url=000000&color_border=FFFFFF&cc=30&u_h=854&u_w=1280&u_ah=785&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124   ! 3 I M T f u ã%%G%P%Y%w%}L8LrLÑLãZâZπZ‘Z›Z„≤ß≤ÿ≤‚≤‰≤Á≤Ú≥	ºnºÅ             "              æ

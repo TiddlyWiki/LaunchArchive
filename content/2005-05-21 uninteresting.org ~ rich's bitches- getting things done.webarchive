@@ -1,0 +1,384 @@
+bplist00“_WebSubresources_WebMainResource°”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOµ	body {
+		margin:0px 0px 10px 0px;
+		background:#333;
+		}
+
+	A			{ color:#99CCFF; text-decoration:none; }
+	A:link		{ color:#99CCFF; text-decoration:none; }
+	A:visited	{ color:#99CCFF; text-decoration:none; }
+	A:active	{ color:#99CC66; }
+	A:hover		{ color:#99CC66; }
+
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#banner {
+		font-family:courier new;
+		color:#FFF;
+		font-size:x-large;
+		font-weight:normal;
+		border-bottom:1px dotted #999;
+		border-top:3px dotted #999;
+		background:#000;
+		padding:15px;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family:courier new;
+		font-size: x-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+
+	.description {
+		font-family:courier new;
+		color:#999;
+		font-size:x-small;
+		font-weight:bold;
+		background:#000;
+		text-transform:none;
+		letter-spacing:normal;
+		}
+
+	#content {
+		float:left;
+		width:65%;
+		background:#333;
+		border-right:1px dotted #999;
+		margin-right:15px;
+		padding-bottom:20px;
+		}
+
+	#links {
+		padding-right:15px;
+		}
+
+	.blog {
+		padding-left:15px;
+		padding-top:15px;
+		padding-right:15px;
+		}
+
+	.blogbody {
+		font-family:courier new;
+		color:#CCC;
+		font-size:small;
+		font-weight:normal;
+		background:#333;
+		line-height:110%;
+		padding-left:10px;
+		padding-right:10px;
+		padding-top:10px;
+		}
+
+	.title {
+		font-family:verdana, arial;
+		font-size:small;
+		color:#CCC;
+		text-transform:uppercase;
+		font-weight:bold;
+		}
+
+	#menu {
+		margin-bottom:15px;
+		background:#333;
+		}
+
+	.date {
+		font-family:courier new;
+		font-size:small;
+		color:#CCC;
+		border:1px solid #CCC;
+		padding:5px;
+		margin-bottom:10px;
+		font-weight:normal;
+		}
+
+	.posted	{
+		font-family:courier new;
+		font-size:x-small;
+		color:#CCC;
+		margin-bottom:15px;
+		}
+
+	.calendar {
+		font-family:courier new;
+		color:#666;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		text-align:center;
+		}
+
+	.calendarhead {
+		font-family:courier new;
+		color:#CCC;
+		font-size:x-small;
+		font-weight:bold;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		}
+
+	.side {
+		font-family:courier new;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		line-height:140%;
+		padding:2px;
+		}
+
+	.sidetitle {
+		font-family:courier new;
+		color:#999;
+		font-size:x-small;
+		font-weight:bold;
+		line-height:140%;
+		padding:2px;
+		margin-top:10px;
+		text-align:left;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+
+	.syndicate {
+		font-family:courier new;
+		font-size:xx-small;
+		line-height:140%;
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		}
+
+	.powered {
+		font-family:courier new;
+		color:#CCC;
+		font-size:xx-small;
+		font-weight:bold;
+		border-top:1px solid #CCC;
+		border-bottom:1px solid #CCC;
+		line-height:140%;
+		text-transform:uppercase;
+		padding:2px;
+		margin-top:10px;
+		text-align:center;
+		letter-spacing:.2em;
+		}
+
+	.comments-body {
+		font-family:courier new;
+		color:#CCC;
+		font-size:small;
+		font-weight:normal;
+		background:#333;
+		line-height:12px;
+		padding-left:10px;
+		padding-right:10px;
+		padding-bottom:15px;
+		}
+
+	.comments-post {
+		font-family:courier new;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+		background:#333;
+		}
+
+	.comments-head {
+		font-family:courier new;
+		font-size: small;
+		color: #CCC;
+		border:1px solid #999;
+		padding:5px;
+		font-weight:normal;
+		margin-top:10px;
+		}
+
+	#banner-commentspop {
+		font-family:courier new;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-bottom:1px dotted #999;
+		border-top:3px dotted #999;
+		background:#000;
+		padding:15px;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+		}
+		
+		
+	 .trackback-body {
+		font-family:courier new;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#333;
+  		line-height:140%;	
+  		padding-top:15px;				
+		}		
+
+	.trackback-url {
+		font-family:courier new;
+		color:#999;
+		font-size:small;
+		font-weight:normal;
+  		background:#333;
+  		line-height:140%;	
+  		padding:5px;
+  		border:1px dashed #999; 				
+		}
+
+	.trackback-post {
+		font-family:courier new;
+		color:#999;
+		font-size:x-small;
+		font-weight:normal;
+  		background:#333;
+  		margin-bottom:20px;
+		}
+
+
+
+
+_-http://uninteresting.org/blog/styles-site.cssXtext/css‘_WebResourceTextEncodingNameUUTF-8O%<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>uninteresting.org ~ rich's bitches: getting things done</TITLE>
+
+<LINK rel="stylesheet" href="http://uninteresting.org/blog/styles-site.css" type="text/css"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://uninteresting.org/blog/index.rdf">
+
+<LINK rel="start" href="http://uninteresting.org/blog/" title="Home"><LINK rel="prev" href="http://uninteresting.org/blog/archives/000757.html" title="paulie got married">
+
+<LINK rel="next" href="http://uninteresting.org/blog/archives/000760.html" title="star bore">
+
+
+<SCRIPT type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'uninteresting.org';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</SCRIPT>
+
+
+
+
+
+</HEAD><BODY>
+<DIV id="banner"><H1><A href="http://uninteresting.org/blog/" accesskey="1">uninteresting.org ~ rich's bitches</A></H1>
+<SPAN class="description">i'm bipolar. are you? i'm not.</SPAN>
+</DIV>
+
+<DIV id="container">
+<DIV class="blog">
+<DIV id="menu"><A href="http://uninteresting.org/blog/archives/000757.html">¬´ paulie got married</A> |
+
+<A href="http://uninteresting.org/blog/">Main</A>
+| <A href="http://uninteresting.org/blog/archives/000760.html">star bore ¬ª</A>
+
+</DIV>
+
+</DIV>
+
+
+<DIV class="blog">
+<H2 class="date">May 17, 2005</H2>
+
+<DIV class="blogbody">
+<H3 class="title">getting things done</H3>
+
+<P>7 habits is back on the backburner (i swear i'll finish it), as my attention shifted to <A href="http://www.amazon.com/exec/obidos/tg/detail/-/0142000280/qid=1116350175/sr=8-1/ref=pd_csp_1/002-2306209-9608045?v=glance&s=books&n=507846">getting things done</A>, by david allen. it's much more tangible, outlining a system for, well, getting things done. all things. things at work and in your personal life. it's a system for capturing everything that you want/need to do in life, and ensuring that it's acted on. so at any given moment, you can feel confident that you're working on the right thing, and that everything else is in the system and will be acted on at the appropriate time &amp; place. here's <A href="http://www.gyford.com/phil/notes/2005/01/03/getting_things_don.php">this guy's summary of the book</A>, which he was nice enough to post online.</P>
+
+<P>so while the book defines how the system works, there are many different ways it can be implemented. <A href="http://www.43folders.com/">43folders</A> is a great blog about tricks &amp; tips to implementing. you can use your PDA, or tons of different software apps, day planners, or just pen &amp; paper. one of the most popular methods is the <A href="http://www.hipsterpda.com">hipster pda</A>, which uses index cards to implement the system.</P>
+
+<P>i'm not an analog guy, so my tools are my Treo/Palm (which syncs to Outlook on my laptop) and a new tool i just discovered, <A href="http://www.TiddlyWiki.com">TiddlyWiki's</A>. through some amazing coding, they are self-contained web pages that organically grow &amp; change based on the content you put into it. i'm using TiddlyWiki's to manage all my projects at work now. </P>
+
+<P>a 'wiki' is "A community developed documentation project." it's analagous to open-source software, except for content. the most famous is <A href="http://en.wikipedia.org/wiki/Main_Page">wikipedia</A>, an online encyclopedia that is constantly evolving based on user contributions. </P>
+
+<A name="more"></A>
+
+
+<SPAN class="posted">Posted by rich at May 17, 2005 01:36 PM
+
+<BR></SPAN>
+
+</DIV>
+
+
+</DIV>
+</DIV>
+
+</BODY></HTML>_2http://uninteresting.org/blog/archives/000758.htmlYtext/html    1 3 : L [ q*Zcläê'π'Ó                           '¯

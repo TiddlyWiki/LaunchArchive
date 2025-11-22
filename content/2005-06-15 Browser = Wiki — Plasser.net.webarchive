@@ -1,0 +1,2311 @@
+bplist00”OS_WebSubresources_WebMainResource_WebSubframeArchivesØ!$'*+./0147:;<=>?EHK”	
+_WebResourceData^WebResourceURL_WebResourceMIMETypeOó/* 
+** Plone style sheet for Netscape 4 and other non-CSS2-compatible browsers.
+** Copyright Alexander Limi, 2002-2003 - http://www.plonesolutions.com
+** Please reuse whatever you find useful here, and credit where credit is due :)
+*/
+
+/* <!-- compression status: 1 --> (this is for http compression) */
+/* Do not remove this, it's required to get the variables needed to render the CSS
+*/
+
+/* Don't remove this either, this is a CSS trick to hide things from all browsers 
+   that are not Netscape 4 - aka. Fabrice's Inversion (google it :) 
+   Any standards-compliant browser will ignore the styles below, unless you insert
+   a comment in them (which you shouldn't do).
+   */
+
+/*/*//*/ 
+
+body, p, table, td, th, ul, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, div, span, input {
+    font-family: Verdana;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p, ul, li, dt, dd, dl, table, td, th, .documentDescription, #portal-breadcrumbs, .documentDescription, #portal-footer, #portal-colophon, div.content, div.documentByLine, input, textarea {
+    font-size: 14px;
+}
+
+.documentDescription {
+    font-weight: bold;
+}
+
+#portal-columns{
+}
+
+#portal-columns #portal-column-one {
+    float: left;
+    clear: left;
+    width: 15%;
+    padding: 2em 0em 1em 2em;
+}
+
+#portal-columns #portal-column-two {
+    float: left;
+    clear: right;
+    width: 15%;
+    padding: 2em 2em 1em 0em;
+}
+
+#portal-columns #portal-column-content {
+    float: left;
+    clear: none;
+    width: 62%;
+    padding: 0.5em 2em 1em 2em;
+}
+
+#portal-globalnav li, 
+#personalbar li, 
+.contentViews li,
+#itemMenu li {
+    display: none;
+}
+
+/* End of Fabrice's Inversion: */
+
+/* */
+
+   
+/* End of the variable inclusion
+*/
+
+_#http://www.plasser.net/ploneNS4.cssXtext/css”O™/*
+** Plone Print style sheet for CSS2-capable browsers.
+** Copyright Alexander Limi, 2001-2003 - http://www.plonesolutions.com
+**
+** Style sheet documentation can be found at http://plone.org/documentation
+**
+** You should preferrably use ploneCustom.css to add your own CSS classes and to
+** customize your portal, as these are the base fundaments of Plone, and will 
+** change and be refined in newer versions. Keeping your changes in
+** ploneCustom.css will make it easier to upgrade. 
+**
+** Feel free to use whole or parts of this for your own designs, but give credit
+** where credit is due.
+**
+*/
+
+/* <!-- compression status: 1 --> (this is for http compression) */
+/* Thanks to A List Apart (http://alistapart.com/) for useful extras */
+
+body {
+    font-family: Georgia, Garamond, Times, serif;
+    font-size: 11pt !important;
+}
+
+div.top,
+#portal-logo,
+#portal-siteactions,
+.hiddenStructure,
+#portal-searchbox,
+#portal-globalnav,
+#portal-personaltools,
+#portal-breadcrumbs,
+#portal-column-one,
+#portal-column-two,
+.contentViews,
+.contentActions,
+.help,
+.legend,
+div.portalMessage,
+div.documentActions,
+.documentByLine,
+.netscape4,
+#portal-footer,
+#portal-colophon,
+input,
+.skipnav,
+.visualNoPrint {
+    /* Hides all the elements irrelevant for presentations */
+    display: none;
+}
+
+ul { 
+    list-style-type: square;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    border: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.documentDescription {
+    font-weight: bold;
+}
+
+pre {
+    border: 1pt dashed black;
+    white-space: pre;
+    font-size: 8pt;
+    overflow: auto;
+    padding: 1em 0;
+}
+
+table.listing,
+table.listing td {
+    border: 1pt solid black;
+    border-collapse: collapse;
+}
+
+a {
+    color: Black !important;
+    padding: 0 !important
+}
+
+a:link, a:visited {
+    color: #520;
+    background: transparent;
+    text-decoration: underline;
+}
+
+#content a:link:after, 
+#content a:visited:after {
+   content: " [" attr(href) "] ";
+}
+_%http://www.plasser.net/plonePrint.css”O˝/*  */
+/* */
+
+
+.BlogByLine 
+{font-size:80%;
+color: #999999;
+text-transform: lowercase;
+margin-bottom:1em;
+}
+
+.BlogCommandLine {
+color:#999999;
+text-transform: lowercase;
+margin-bottom:1em;
+}
+
+.BlogCommandLine form {
+display: inline;
+}
+
+.noMargin {margin-bottom:0}
+
+.simpleBlogLinkButtons {
+display:block;
+margin-bottom:1em;
+}
+
+.simpleBlogEntry {}
+
+.simpleBlogDescription {
+margin: 0.5em 0em 1em 0em;
+line-height: 1.5em;
+}
+
+.simpleBlogDescriptionOnly {
+margin-top:0em;
+margin-bottom:1em;
+line-height: 1.5em;
+}
+
+.simpleBlogTitle {}
+
+.simpleBlogBody {}
+
+.simpleBlogBylineCats {}
+
+.simpleBlogCalendar {
+border: 1px solid #6E8A8B;
+margin: 1em 0em;
+border:none;
+margin: 1em;
+}
+
+
+.simpleBlogCalendar a {
+text-decoration: none;
+}
+.simpleBlogCalendar a:hover {
+text-decoration: none;
+}
+
+.simpleBlogCalendar th {
+background-color: transparent;
+font-weight: bold;
+text-align: center;
+padding: 2px;
+}
+
+.simpleBlogCalendar td {
+background-color: transparent;
+width: 1.5em;
+text-align: right;
+padding: 2px;
+}
+
+.simpleBlogCalendar .weekdays td {
+background-color: transparent;
+border: 1px solid #6E8A8B;
+border-style: solid none;
+text-align: center;
+padding: 2px;
+}
+.simpleBlogCalendar .event {
+background-color: #DEE7EC;
+font-weight: bold;
+}
+.simpleBlogCalendar .todayevent {
+background-color: #DEE7EC;
+border: 2px solid #ffa500;
+font-weight: bold;
+}
+.simpleBlogCalendar .todaynoevent {
+border-collapse: collapse;
+border: 2px solid #ffa500;
+}
+
+/*  */_(http://www.plasser.net/SimpleBlogCSS.css”Op// Global Plone variables that need to be accessible to the Javascripts
+
+portal_url = 'http://www.plasser.net';
+_4http://www.plasser.net/plone_javascript_variables.js_application/x-javascript”Ojs
+
+// Heads up! August 2003  - Geir BÊkholt
+// This file now requires the javascript variable portal_url to be set 
+// in the plone_javascript_variables.js file. Any other variables from Plone
+// that you want to pass into these scripts should be placed there.
+
+/* <dtml-var "enableHTTPCompression(request=REQUEST, debug=1, js=1)"> (this is for http compression) */
+
+function registerPloneFunction(func){
+    // registers a function to fire onload. 
+	// Turned out we kept doing this all the time
+	// Use this for initilaizing any javascript that should fire once the page has been loaded. 
+	// 
+    if (window.addEventListener) window.addEventListener("load",func,false);
+    else if (window.attachEvent) window.attachEvent("onload",func);   
+  }
+
+function unRegisterPloneFunction(func){
+    // uregisters a previous function to fire onload. 
+    if (window.removeEventListener) window.removeEventListener("load",func,false);
+    else if (window.detachEvent) window.detachEvent("onload",func);   
+  }
+
+function getContentArea(){
+	// to end all doubt on where the content sits. It also felt a bit silly doing this over and over in every
+	// function, even if it is a tiny operation. Just guarding against someone changing the names again, in the name
+	// of semantics or something.... ;)
+	node =  document.getElementById('region-content')
+	if (! node){
+		node = document.getElementById('content')
+		}
+	return node
+	}
+
+function wrapNode(node, wrappertype, wrapperclass){
+    // utility function to wrap a node "node" in an arbitrary element of type "wrappertype" , with a class of "wrapperclass"
+    wrapper = document.createElement(wrappertype)
+    wrapper.className = wrapperclass;
+    innerNode = node.parentNode.replaceChild(wrapper,node);
+    wrapper.appendChild(innerNode)
+}
+  
+
+
+
+
+
+
+
+
+
+
+// The calendar popup show/hide:
+
+    function showDay(date) {
+        document.getElementById('day' + date).style.visibility = 'visible';
+        return true;
+    }    
+    function hideDay(date) {
+        document.getElementById('day' + date).style.visibility = 'hidden';
+        return true;
+    }
+
+
+
+	
+// Focus on error or tabindex=1 
+function setFocus() {
+    var xre = new RegExp(/\berror\b/);
+    // Search only forms to avoid spending time on regular text
+    for (var f = 0; (formnode = document.getElementsByTagName('form').item(f)); f++) {
+        // Search for errors first, focus on first error if found
+        for (var i = 0; (node = formnode.getElementsByTagName('div').item(i)); i++) {
+            if (xre.exec(node.className)) {
+                for (var j = 0; (inputnode = node.getElementsByTagName('input').item(j)); j++) {
+                    inputnode.focus();
+                    return;   
+                }
+            }
+        }
+        // If no error, focus on input element with tabindex 1
+        
+        
+        // uncomment to reactivate
+        // this part works as intended, but there are too many places where this function causes pain, moving 
+        // focus away from a field in whuch the user is already typing
+        
+        //for (var i = 0; (node = formnode.getElementsByTagName('input').item(i)); i++) {
+         //   if (node.getAttribute('tabindex') == 1) {
+         //       node.focus();
+         //        return;   
+         //   }
+        //}
+    }
+}
+registerPloneFunction(setFocus)
+
+
+
+
+
+/********* Table sorter script *************/
+// Table sorter script, thanks to Geir BÊkholt for this.
+// DOM table sorter originally made by Paul Sowden 
+
+function compare(a,b)
+{
+    au = new String(a);
+    bu = new String(b);
+
+    if (au.charAt(4) != '-' && au.charAt(7) != '-')
+    {
+    var an = parseFloat(au)
+    var bn = parseFloat(bu)
+    }
+    if (isNaN(an) || isNaN(bn))
+        {as = au.toLowerCase()
+         bs = bu.toLowerCase()
+        if (as > bs)
+            {return 1;}
+        else
+            {return -1;}
+        }
+    else {
+    return an - bn;
+    }
+}
+
+
+
+function getConcatenedTextContent(node) {
+    var _result = "";
+	  if (node == null) {
+		    return _result;
+	  }
+    var childrens = node.childNodes;
+    var i = 0;
+    while (i < childrens.length) {
+        var child = childrens.item(i);
+        switch (child.nodeType) {
+            case 1: // ELEMENT_NODE
+            case 5: // ENTITY_REFERENCE_NODE
+                _result += getConcatenedTextContent(child);
+                break;
+            case 3: // TEXT_NODE
+            case 2: // ATTRIBUTE_NODE
+            case 4: // CDATA_SECTION_NODE
+                _result += child.nodeValue;
+                break;
+            case 6: // ENTITY_NODE
+            case 7: // PROCESSING_INSTRUCTION_NODE
+            case 8: // COMMENT_NODE
+            case 9: // DOCUMENT_NODE
+            case 10: // DOCUMENT_TYPE_NODE
+            case 11: // DOCUMENT_FRAGMENT_NODE
+            case 12: // NOTATION_NODE
+                // skip
+                break;
+        }
+        i ++;
+    }
+  	return _result;
+}
+
+function sort(e) {
+    var el = window.event ? window.event.srcElement : e.currentTarget;
+
+    // a pretty ugly sort function, but it works nonetheless
+    var a = new Array();
+    // check if the image or the th is clicked. Proceed to parent id it is the image
+    // NOTE THAT nodeName IS UPPERCASE
+    if (el.nodeName == 'IMG') el = el.parentNode;
+    //var name = el.firstChild.nodeValue;
+    // This is not very robust, it assumes there is an image as first node then text
+    var name = el.childNodes.item(1).nodeValue;
+    var dad = el.parentNode;
+    var node;
+    
+    // kill all arrows
+    for (var im = 0; (node = dad.getElementsByTagName("th").item(im)); im++) {
+        // NOTE THAT nodeName IS IN UPPERCASE
+        if (node.lastChild.nodeName == 'IMG')
+        {
+            lastindex = node.getElementsByTagName('img').length - 1;
+            node.getElementsByTagName('img').item(lastindex).setAttribute('src',portal_url + '/arrowBlank.gif');
+        }
+    }
+    
+    for (var i = 0; (node = dad.getElementsByTagName("th").item(i)); i++) {
+        var xre = new RegExp(/\bnosort\b/);
+        // Make sure we are not messing with nosortable columns, then check second node.
+        if (!xre.exec(node.className) && node.childNodes.item(1).nodeValue == name) 
+        {
+            //window.alert(node.childNodes.item(1).nodeValue;
+            lastindex = node.getElementsByTagName('img').length -1;
+            node.getElementsByTagName('img').item(lastindex).setAttribute('src',portal_url + '/arrowUp.gif');
+            break;
+        }
+    }
+
+    var tbody = dad.parentNode.parentNode.getElementsByTagName("tbody").item(0);
+    for (var j = 0; (node = tbody.getElementsByTagName("tr").item(j)); j++) {
+
+        // crude way to sort by surname and name after first choice
+        a[j] = new Array();
+        a[j][0] = getConcatenedTextContent(node.getElementsByTagName("td").item(i));
+        a[j][1] = getConcatenedTextContent(node.getElementsByTagName("td").item(1));
+        a[j][2] = getConcatenedTextContent(node.getElementsByTagName("td").item(0));		
+        a[j][3] = node;
+    }
+
+    if (a.length > 1) {
+	
+        a.sort(compare);
+
+        // not a perfect way to check, but hell, it suits me fine
+        if (a[0][0] == getConcatenedTextContent(tbody.getElementsByTagName("tr").item(0).getElementsByTagName("td").item(i))
+	       && a[1][0] == getConcatenedTextContent(tbody.getElementsByTagName("tr").item(1).getElementsByTagName("td").item(i))) 
+        {
+            a.reverse();
+            lastindex = el.getElementsByTagName('img').length - 1;
+            el.getElementsByTagName('img').item(lastindex).setAttribute('src', portal_url + '/arrowDown.gif');
+        }
+
+    }
+	
+    for (var j = 0; j < a.length; j++) {
+        tbody.appendChild(a[j][3]);
+    }
+}
+    
+function initalizeTableSort(e) {
+    var tbls = document.getElementsByTagName('table');
+    for (var t = 0; t < tbls.length; t++)
+        {
+        // elements of class="listing" can be sorted
+        var re = new RegExp(/\blisting\b/)
+        // elements of class="nosort" should not be sorted
+        var xre = new RegExp(/\bnosort\b/)
+        if (re.exec(tbls[t].className) && !xre.exec(tbls[t].className))
+        {
+            try {
+                var tablename = tbls[t].getAttribute('id');
+                var thead = document.getElementById(tablename).getElementsByTagName("thead").item(0);
+                var node;
+                // set up blank spaceholder gifs
+                blankarrow = document.createElement('img');
+                blankarrow.setAttribute('src', portal_url + '/arrowBlank.gif');
+                blankarrow.setAttribute('height',6);
+                blankarrow.setAttribute('width',9);
+                // the first sortable column should get an arrow initially.
+                initialsort = false;
+                for (var i = 0; (node = thead.getElementsByTagName("th").item(i)); i++) {
+                    // check that the columns does not have class="nosort"
+                    if (!xre.exec(node.className)) {
+                        node.insertBefore(blankarrow.cloneNode(1), node.firstChild);
+                        if (!initialsort) {
+                            initialsort = true;
+                            uparrow = document.createElement('img');
+                            uparrow.setAttribute('src', portal_url + '/arrowUp.gif');
+                            uparrow.setAttribute('height',6);
+                            uparrow.setAttribute('width',9);
+                            node.appendChild(uparrow);
+                        } else {
+                            node.appendChild(blankarrow.cloneNode(1));
+                        }
+    
+                        if (node.addEventListener) node.addEventListener("click",sort,false);
+                        else if (node.attachEvent) node.attachEvent("onclick",sort);
+                    }
+                }
+            } catch(er) {}
+        }
+    }
+}   
+// **** End table sort script ***
+registerPloneFunction(initalizeTableSort)   
+
+
+// Actions used in the folder_contents view
+function submitFolderAction(folderAction) {
+    document.folderContentsForm.action = document.folderContentsForm.action+'/'+folderAction;
+    document.folderContentsForm.submit();
+}
+
+function submitFilterAction() {
+    document.folderContentsForm.action = document.folderContentsForm.action+'/folder_contents';
+    filter_selection=document.getElementById('filter_selection');
+    for (var i =0; i < filter_selection.length; i++){
+        if (filter_selection.options[i].selected) {
+            if (filter_selection.options[i].value=='#') {
+                document.folderContentsForm.filter_state.value='clear_view_filter';
+            }
+            else {
+                document.folderContentsForm.filter_state.value='set_view_filter';
+            }
+        }						
+    }
+    document.folderContentsForm.submit();
+}
+    
+
+// Functions for selecting all checkboxes in folder_contents/search_form view
+
+function selectAll(id, formName) {
+  // get the elements. if formName is p rovided, get the elements inside the form
+  if (formName==null) {
+     checkboxes = document.getElementsByName(id)
+     for (i = 0; i < checkboxes.length; i++)
+         checkboxes[i].checked = true ;
+  } else {
+     for (i=0; i<document.forms[formName].elements.length;i++)
+	 {
+	   if (document.forms[formName].elements[i].name==id) 
+            document.forms[formName].elements[i].checked=true;
+	  }
+  }
+}
+
+function deselectAll(id, formName) {
+  if (formName==null) {
+     checkboxes = document.getElementsByName(id)
+     for (i = 0; i < checkboxes.length; i++)
+         checkboxes[i].checked = false ;
+  } else {
+     for (i=0; i<document.forms[formName].elements.length;i++)
+	 {
+	   if (document.forms[formName].elements[i].name==id) 
+            document.forms[formName].elements[i].checked=false;
+	  }
+  }
+}
+
+function toggleSelect(selectbutton, id, initialState, formName) {
+  // required selectbutton: you can pass any object that will function as a toggle
+  // optional id: id of the the group of checkboxes that needs to be toggled (default=ids:list
+  // optional initialState: initial state of the group. (default=false)
+  //   e.g. folder_contents is false, search_form=true because the item boxes
+  //   are checked initially.
+  // optional formName: name of the form in which the boxes reside, use this if there are more
+  //   forms on the page with boxes with the same name
+
+  id=id || 'ids:list'  // defaults to ids:list, this is the most common usage
+
+  if (selectbutton.isSelected==null)
+  {
+      initialState=initialState || false;
+	  selectbutton.isSelected=initialState;
+  }
+  
+  // create and use a property on the button itself so you don't have to 
+  // use a global variable and we can have as much groups on a page as we like.
+  if (selectbutton.isSelected == false) {
+    selectbutton.setAttribute('src', portal_url + '/select_none_icon.gif');
+    selectbutton.isSelected=true;
+    return selectAll(id, formName);
+  }
+  else {
+    selectbutton.setAttribute('src',portal_url + '/select_all_icon.gif');
+    selectbutton.isSelected=false;
+    return deselectAll(id, formName);
+  }
+}
+
+ 
+
+// script for detecting external links.
+// sets their target-attribute to _blank , and adds a class external
+
+function scanforlinks(){
+    // securing against really old DOMs 
+    
+    if (! document.getElementsByTagName){return false};
+    if (! document.getElementById){return false};
+    // Quick utility function by Geir BÊkholt
+    // Scan all links in the document and set classes on them dependant on 
+    // whether they point to the current site or are external links
+    
+    contentarea = getContentArea()
+    if (! contentarea){return false}
+    
+    links = contentarea.getElementsByTagName('a');
+    for (i=0; i < links.length; i++){      
+        if ((links[i].getAttribute('href'))&&(links[i].className.indexOf('link-plain')==-1 )){
+            var linkval = links[i].getAttribute('href')
+            // check if the link href is a relative link, or an absolute link to the current host.
+			if (linkval.toLowerCase().indexOf(window.location.protocol+'//'+window.location.host)==0) {
+                // we are here because the link is an absolute pointer internal to our host
+                // do nothing
+            } else if (linkval.indexOf('http:') != 0){
+                // not a http-link. Possibly an internal relative link, but also possibly a mailto ot other snacks
+                // add tests for all relevant protocols as you like.
+                
+                protocols = ['mailto', 'ftp', 'news', 'irc', 'h323', 'sip', 'callto', 'https']
+                // h323, sip and callto are internet telephony VoIP protocols
+                
+                for (p=0; p < protocols.length; p++){  
+                     if (linkval.indexOf(protocols[p]+':') == 0){
+                    // this link matches the protocol . add a classname protocol+link
+                    //links[i].className = 'link-'+protocols[p]
+                        wrapNode(links[i], 'span', 'link-'+protocols[p])
+                        break;
+                    }
+                }
+            }else{
+                // we are in here if the link points to somewhere else than our site.
+                if ( links[i].getElementsByTagName('img').length == 0 ){
+					// we do not want to mess with those links that already have images in them
+                    //links[i].className = 'link-external'
+                    wrapNode(links[i], 'span', 'link-external')
+                    //links[i].setAttribute('target','_blank')
+                    }
+                
+                
+                
+                
+            }
+        }
+    }
+}
+registerPloneFunction(scanforlinks)   
+
+
+function climb(node, word){
+	 // traverse childnodes
+    if (! node){return false}
+    if (node.hasChildNodes) {
+		var i;
+		for (i=0;i<node.childNodes.length;i++) {
+            climb(node.childNodes[i],word);
+		}
+        if (node.nodeType == 3){
+            checkforhighlight(node, word);
+           // check all textnodes. Feels inefficient, but works
+        }
+}
+function checkforhighlight(node,word) {
+        ind = node.nodeValue.toLowerCase().indexOf(word.toLowerCase())
+		if (ind != -1) {
+            if (node.parentNode.className != "highlightedSearchTerm"){
+                par = node.parentNode;
+                contents = node.nodeValue;
+			
+                // make 3 shiny new nodes
+                hiword = document.createElement("span");
+				hiword.className = "highlightedSearchTerm";
+				hiword.appendChild(document.createTextNode(contents.substr(ind,word.length)));
+				
+                par.insertBefore(document.createTextNode(contents.substr(0,ind)),node);
+				par.insertBefore(hiword,node);
+				par.insertBefore(document.createTextNode(contents.substr(ind+word.length)),node);
+
+                par.removeChild(node);
+		        }
+        	} 
+		}
+  
+}
+
+
+function correctPREformatting(){
+        // small utility thing to correct formatting for PRE-elements and some others
+        // thanks to Michael Zeltner for CSS-guruness and research ;) 
+		// currently not activated
+        contentarea = getContentArea();
+        if (! contentarea){return false}
+        
+        pres = contentarea.getElementsByTagName('pre');
+        for (i=0;i<pres.length;i++){
+           wrapNode(pres[i],'div','visualOverflow')
+			}
+               
+        //tables = contentarea.getElementsByTagName('table');
+        // for (i=0;i<tables.length;i++){
+        //   if (tables[i].className=="listing"){
+        //   wrapNode(tables[i],'div','visualOverflow')
+		//  }
+        //}      
+}
+//registerPloneFunction(correctPREformatting);
+
+function highlightSearchTerm() {
+        // search-term-highlighter function --  Geir BÊkholt
+        query = window.location.search
+        // _robert_ ie 5 does not have decodeURI 
+        if (typeof decodeURI != 'undefined'){
+            query = unescape(decodeURI(query)) // thanks, Casper 
+        }
+        else {
+            return false
+        }
+        if (query){
+            var qfinder = new RegExp()
+            qfinder.compile("searchterm=([^&]*)","gi")
+            qq = qfinder.exec(query)
+            if (qq && qq[1]){
+                query = qq[1]
+                
+                // the cleaner bit is not needed anymore, now that we travese textnodes. 
+                //cleaner = new RegExp
+                //cleaner.compile("[\\?\\+\\\\\.\\*]",'gi')
+                //query = query.replace(cleaner,'')
+                
+                if (!query){return false}
+                queries = query.replace(/\+/g,' ').split(/\s+/)
+                
+                // make sure we start the right place and not higlight menuitems or breadcrumb
+                contentarea = getContentArea();
+				for (q=0;q<queries.length;q++) {
+                                       // don't highlight reserved catalog search terms
+                                       if (queries[q].toLowerCase() != 'not'
+                                               && queries[q].toLowerCase() != 'and'
+                                               && queries[q].toLowerCase() != 'or') {
+                       climb(contentarea,queries[q]);
+                                       }
+                }
+            }
+        }
+}
+registerPloneFunction(highlightSearchTerm);
+
+
+// ----------------------------------------------
+// StyleSwitcher functions written by Paul Sowden
+// http://www.idontsmoke.co.uk/ss/
+// - - - - - - - - - - - - - - - - - - - - - - -
+// For the details, visit ALA:
+// http://www.alistapart.com/stories/alternate/
+// ----------------------------------------------
+
+function setActiveStyleSheet(title, reset) {
+  var i, a, main;
+  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+      a.disabled = true;
+      if(a.getAttribute("title") == title) a.disabled = false;
+    }
+  }
+  if (reset == 1) {
+  createCookie("wstyle", title, 365);
+  }
+}
+
+function setStyle() {
+var style = readCookie("wstyle");
+if (style != null) {
+setActiveStyleSheet(style, 0);
+}
+}
+
+function createCookie(name,value,days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else expires = "";
+  document.cookie = name+"="+escape(value)+expires+"; path=/;";
+}
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return unescape(c.substring(nameEQ.length,c.length));
+  }
+  return null;
+}
+registerPloneFunction(setStyle);
+
+
+
+
+
+// jscalendar glue -- Leonard NorrgÂrd <vinsci@*>
+// This function gets called when the user clicks on some date.
+function onJsCalendarDateUpdate(cal) {
+    var year   = cal.params.input_id_year;
+    var month  = cal.params.input_id_month;
+    var day    = cal.params.input_id_day;
+    // var hour   = cal.params.input_id_hour;
+    // var minute = cal.params.input_id_minute;
+
+    // cal.params.inputField.value = cal.date.print('%Y/%m/%d %H:%M'); // doesn't work in Opera, don't use time now
+    //cal.params.inputField.value = cal.date.print('%Y/%m/%d'); // doesn't work in Opera
+    var daystr = '' + cal.date.getDate();
+    if (daystr.length == 1)
+    	daystr = '0' + daystr;
+    var monthstr = '' + (cal.date.getMonth()+1);
+    if (monthstr.length == 1)
+	monthstr = '0' + monthstr;
+    cal.params.inputField.value = '' + cal.date.getFullYear() + '/' + monthstr + '/' + daystr
+
+    year.value  = cal.params.inputField.value.substring(0,4);
+    month.value = cal.params.inputField.value.substring(5,7);
+    day.value   = cal.params.inputField.value.substring(8,10);
+    // hour.value  = cal.params.inputField.value.substring(11,13);
+    // minute.value= cal.params.inputField.value.substring(14,16);
+}
+
+
+function showJsCalendar(input_id_anchor, input_id, input_id_year, input_id_month, input_id_day, input_id_hour, input_id_minute, yearStart, yearEnd) {
+    // do what jscalendar-x.y.z/calendar-setup.js:Calendar.setup would do
+    var input_id_anchor = document.getElementById(input_id_anchor);
+    var input_id = document.getElementById(input_id);
+    var input_id_year = document.getElementById(input_id_year);
+    var input_id_month = document.getElementById(input_id_month);
+    var input_id_day = document.getElementById(input_id_day);
+    // var input_id_hour = document.getElementById(input_id_hour);
+    // var input_id_minute = document.getElementById(input_id_minute);
+    var format = 'y/mm/dd';
+
+    var dateEl = input_id;
+    var mustCreate = false;
+    var cal = window.calendar;
+
+    var params = {
+	'range' : [yearStart, yearEnd],
+	inputField : input_id,
+        input_id_year : input_id_year,
+	input_id_month: input_id_month,
+	input_id_day  : input_id_day
+	// input_id_hour : input_id_hour,
+	// input_id_minute: input_id_minute
+    };
+
+    function param_default(pname, def) { if (typeof params[pname] == "undefined") { params[pname] = def; } };
+
+    param_default("inputField",     null);
+    param_default("displayArea",    null);
+    param_default("button",         null);
+    param_default("eventName",      "click");
+    param_default("ifFormat",       "%Y/%m/%d");
+    param_default("daFormat",       "%Y/%m/%d");
+    param_default("singleClick",    true);
+    param_default("disableFunc",    null);
+    param_default("dateStatusFunc", params["disableFunc"]); // takes precedence if both are defined
+    param_default("mondayFirst",    true);
+    param_default("align",          "Bl");
+    param_default("range",          [1900, 2999]);
+    param_default("weekNumbers",    true);
+    param_default("flat",           null);
+    param_default("flatCallback",   null);
+    param_default("onSelect",       null);
+    param_default("onClose",        null);
+    param_default("onUpdate",       null);
+    param_default("date",           null);
+    param_default("showsTime",      false);
+    param_default("timeFormat",     "24");
+
+    if (!window.calendar) {
+	window.calendar = cal = new Calendar(true, //params.mondayFirst,
+	     null,
+	     onJsCalendarDateUpdate,
+	     function(cal) { cal.hide(); });
+	cal.time24 = true;
+	cal.weekNumbers = true;
+	mustCreate = true;
+    } else {
+	cal.hide();
+    }
+    cal.setRange(yearStart,yearEnd);
+    cal.params = params;
+    cal.setDateStatusHandler(null);
+    cal.setDateFormat(format);
+    if (mustCreate)
+	cal.create();
+    cal.parseDate(dateEl.value || dateEl.innerHTML);
+    cal.refresh();
+    cal.showAtElement(input_id_anchor, null);
+    return false;
+}
+
+
+// This function updates a hidden date field with the current values of the widgets
+function update_date_field(field, year, month, day, hour, minute, ampm)
+{
+    var field  = document.getElementById(field)
+    var date   = document.getElementById(date)
+    var year   = document.getElementById(year)
+    var month  = document.getElementById(month)
+    var day    = document.getElementById(day)
+    var hour   = document.getElementById(hour)
+    var minute = document.getElementById(minute)
+    var ampm   = document.getElementById(ampm)
+
+    if (0 < year.value)
+    {
+        // Return ISO date string
+        // Note: This relies heavily on what date_components_support.py puts into the form.
+        field.value = year.value + "-" + month.value + "-" + day.value + " " + hour.value + ":" + minute.value
+        // Handle optional AM/PM
+        if (ampm && ampm.value)
+            field.value = field.value + " " + ampm.value
+    } 
+    else 
+    {
+        // Return empty string
+        field.value = ''
+        // Reset widgets
+        month.options[0].selected = 1
+        day.options[0].selected = 1
+        hour.options[0].selected = 1
+        minute.options[0].selected = 1
+        if (ampm && ampm.options)
+            ampm.options[0].selected = 1
+    }
+}
+
+
+
+function fullscreenMode() {
+    if (document.getElementById('portal-top').style.display == 'none') {
+        document.getElementById('portal-top').style.display = 'block';
+        document.getElementById('portal-column-one').style.display = 'block';
+        document.getElementById('portal-column-two').style.display = 'block';
+        }
+    else {
+        document.getElementById('portal-top').style.display = 'none';
+        document.getElementById('portal-column-one').style.display = 'none';
+        document.getElementById('portal-column-two').style.display = 'none';
+    }
+}
+
+
+// and finally : Mike Malloch's fixes for Internet Explorer 5 - 
+// These should be considered temporary, as they actually add functionality to IE5, while we just want it to not blurt errormessages... 
+//
+
+function hackPush(el){
+        this[this.length] = el;
+}
+
+function hackPop(){
+        var N = this.length - 1, el = this[N];
+        this.length = N
+        return el;
+}
+
+function hackShift(){
+        var one = this[0], N = this.length;
+        for (var i = 1; i < N; i++){
+                this[i-1] = this[i];
+        }
+        this.length = N-1
+        return one;
+}
+
+var testPushPop = new Array();
+if (testPushPop.push){
+}else{
+        Array.prototype.push = hackPush
+        Array.prototype.pop = hackPop
+        Array.prototype.shift =hackShift;
+}
+
+_+http://www.plasser.net/plone_javascripts.js””O<GIF89a  ’% ¨+¸˜˜’íå≥<0ÎÃ…˘ÔﬂÆ©Û·ﬂ›©§„∏¥ˆËÁÒ‹Ÿ…tkÆ0#µA6Ë≈¡Ÿüôÿúñ˛¸¸∑F;Úﬁ‹€§ûÔ◊‘Àyq±7+Ó‘—⁄°úÈ«ƒﬁ¨¶ø[QΩVKıÊ‰–Ü~√e[“ãÑÊ¿º´(ˇˇˇ                                                                              !˘  % ,       Y¿ípH,àÒK£iJ≈Ä
+ƒuKu(Ñ wÃ&∆„â FS/CCÌ¡	°Ò@‡4nO$ ODSåC_í% ëòùûíA ;_%http://www.plasser.net/entry_icon.gifYimage/gif” OMGIF89a  ’: ∑–h[Î Œh[Î" Œ21Œ Œ&$öŒfYÎ<4ŒgZÎ=4ŒXJŒB6ﬁŒ_QÎI9ÎG8–&$Î1/√ŒTEŒF7Œ63ŒcVÎfYŒ0/Œ0.–ú–K<ÎN?Œ\NŒN?Î52ÎWH–[M– Œ<4†ÎB6Œ-,–RDÎM>Î/.–cVÎXJ‘ŒK<–gZÎ_Q“ ÎÎh[û‘ Î&$ˇˇˇ               !˘  : ,       j@ùpH,è»$«l:õ(°¿F•jf/êDëMÅp@Ê*≠>ù ƒ#µ’µ8âïz¿∫B√`üÄ4D'moq#-x:z!1*ÖR9ü†°ü^:47ß®©®J¨≠ÆØEA ;_$http://www.plasser.net/mail_icon.gif”"#OPGIF89a  ’. Î ‘aS–/.Œ83Î,+Œ Îh[Î83Î–‘‘– ÎfYÎgZ†¥‚ ‘&$Î0/≠‘ Ë ŒcVŒ_QŒ\NÎ/-· Œ¶ŒaSÎ32±Æ∑Î*)∑‚h[·WH‘83⁄ öú€ Î/.ËaSˇˇˇ                                                   !˘  . ,       m@ópH,èHîrâÍ #•®4Ñ‹òÆXäq≈ÌzπCKkL.è!¬J‡ƒnü$P‡!X¯º˛@2	*ÇÉÇ	*C$, #
+,$}D")F îG)≠Æ†H±≤HA ;_%http://www.plasser.net/print_icon.gif”%&O7GIF89a  Êk ¯éyˆMP¯èz¯ON›◊++Å˜
+˜	•˙yhÂ‡AJ¬$JÆ˙\Uì%B¯Î:R¨€++Î=R˜˙WP¶%E´&EÛDNÚab˚^U§¯¸]Qs˙]U¥++Ë1P“>Iü±=E¡¸]S›ò¯êzﬁ8L¯oeΩ0EÎ	¯ãxèºù2?«CH¬4F∞++È«0Jp˜SSt˜RS˘QQÏOMw˚]Uı	ÌLNÚON¯_Zú$C˛]QˆPS˙rd≤++º(FÏ;M∏%GËΩ++˘TQ®Ω‚@J∑0Eùì"E˙TO∫/EÍAL 3H˜ANÿ++–3J¯åwˆZPƒ%H…+IÔET∏(E⁄5J“+L≥ÌM[œ4H˘ti˚j]ˇˇˇ                                                            !˘  k ,       îÄkÇÉÑÖÜáàk INT âMQ<$92áO!V=GXh'Ö 	_Z4R,;ÑC@FHD3KPÑ":>(i-
+/.a1Ñ6Bj
+)WL≤&gS8E%Ñ^	[]A7Ye ±Ñ5b#dUáfcJ¿4P1!.?tXë®°√CÅ  ;_$http://www.plasser.net/site_icon.gif”()OBGIF89a  ÊW †Î‘/.€úÎgZÎeWŒ/.Î0/ûŒgZ“83ŒŒG8ŒbT◊PA“-,¥ËWH–/.ÎWH©Ë=4Œ83–h[–‘[Mø	ÎQB“21ÎB6‹‘Ë–Œ@5Î-,“G8ÎG8“'%“_Q“<4ŒÎ.-“–æÎ63Î/-ÎfYË21ŒÎ_Q‘PA“?5Œ(&Î,*Î“aSÎ §	–B6Î21–gZÈÎ52Î=4Î0.“/.ŒfY–?5ŒÎ10«“=4ÎPA–J;Œ=4Ëh[Î<4ÎTEÎK<öÎ/.Îh[£∑ˇˇˇ                                                                                                                        !˘  W ,       üÄWÇÉÑÖÑàÜÖ!N2ãÉ ó öö5ÉT†T1/B°VKÇ-?L	<"F=ÇüVΩæ9SVÇ
+ER… .MRπ+æVI$O¬ƒ
+#*3G7Œπ4@V;PQ&A⁄W,:(%'6J)à$»5e
+H| @0§ ΩU"JúÒ¡§ã ;_*http://www.plasser.net/simpleblog_icon.gif””,-O[GIF89a  ’> ÎËÎeWÎK<ÎG8ÎB6ÎQBÎTEŒbTöŒN?Î_QŒ=4ŒI9ŒÎ\NÎZKŒ_QŒWHŒ/.ÎgZÎ<4Œ\NÎ[M“Î^PŒC6“aS‘h[û–WH“N?Î52“I9–Œ83úŒD6“RD“/.“<4“C6ŒgZ“WHŒfY‘=4“_QÎh[‘21“[MŒTE‘“21†ŒRDÎaS“83‘WH∑–h[£Î/.ˇˇˇ   !˘  > ,       x@üpH,è«Ä2ÄŒ8π¨÷Ù.ΩlO«ÂEª∞xÏ!/ä‡ñπBa+t®XààE"S4J	B joqt>y{6~#ÇÑáâpr é.1+&!)(84'ÑZ≤≥:C<∑∏π∑UºΩ>A ;_&http://www.plasser.net/folder_icon.gif”,-”,-”,-”23O<!--
+document.write('<div class=\'technorati\'><p><a href=\'http://www.technorati.com/profile/plasser\'>Technorati Profile</a>');
+document.write('<a href=\'http://www.technorati.com/cosmos/search.html?url=http&#37;3A&#37;2F&#37;2Fwww&#46;plasser&#46;net&#37;2Fblog\'><img src=\'http://static.technorati.com/images/bubble_icon.gif\' align=\'absmiddle\' hspacing=\'5\' height=\'20\' width=\'24\' alt=\'Get Conversations about Plasser&#46;net &#45; Small World Blog\' /></a>');
+document.write('</p>');
+document.write('</div>');
+// -->_(http://technorati.com/embed/hc4jq8gq5.js”56O1GIF89a  ’     ˇˇˇˇˇ˛ë£¨˝¸˝6w›<{ﬁ-s€0tÿ2u›6y‹7y◊:|‡9zŸBﬁ<|’EÇ”QáÕ8y IÑŒZí’På“hò–z§“à±⁄œ‘Ÿ≈ŸÎπ»÷¨øœüØΩ≥Œ‚çùßë£≠è°´ì§Æï•ÆsäïÖò°î°¶“‰Íï¶´‰ÔÚ·ÎÌÈıˆ˝ˇˇ˛ˇˇÒ˜Û˘˝˙ÌÒÓ˝˛˝¯¸˜˙˚¯ˇˇ¸˛¸Ùˇ˛˙‚·ﬁıÛÓÔÎÁˇ¸˘ÍÈËÈ‰‡‡ﬁ›ÊÊÊ⁄⁄⁄,       ˇ¿ÃoH¸ın»dØ8Ïï|Å®Tê“XØ)öT
+Ç
+TœÖY Â‚qÅøh¿Ê© 	D„Ò0„'-qsV	ZÜY_Q40Ç;2,`[¥ ;76É¢∂62";∂∂_ä)#—”’-»RÑî+ﬁ?¬n‰Q_0
+/–9
+‹\‡É?Ω‚Ë‡0Ìü*dƒà!CÖá~DPQ»&8pP`AÖ0\®∞ …	å≈†§Æë8ÄG¡V¥tcc√Éëˆ@X¡¬Ö0∂"x!AÅ.pÿ !C:ÊE1$`ÉÑ	Zy‘Xªñ@-„∆Fêa√ç«^Qb@à&Pà@∏∞·√H ;_3http://static.technorati.com/images/bubble_icon.gif”89OÀGIF89aP  ë  ˇf fffâéyˇˇˇ!˘     ,    P   úåè©ÀÌœò¥⁄ã≥ﬁºõ
+‚HñÊâ¶ÁÅú
+«≤…Ó;Á:›R¿?É@Ààr$Mî•S∞Ñäê”h≠"ƒŸ,U
+nN«·§ŸJNO{DﬂˆÁ˝ œjµ∏âØä°˚Î•˚∂5WFvWe7ñVr«áÂıh§wdµ«◊ávgŸ«vs±#∫„ä1ä*Sj:ôÍ∫Ú…*;a{ãõ´P  ;_/http://www.bloglines.com/images/sub_modern4.gif”””””‘@ABCD_WebResourceTextEncodingNameUutf-8O&∑google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.jsYtext/html”FGO+GIF89aX  Ê     ´±™ˇˇˇ¨≤´@@@ÄÄÄ≠≥¨ØµÆ≤∑±Æ¥≠∞∂Ø   ∑º∂µ∫¥¥π≥πæ∏ﬂﬂﬂÆ≥≠±∑∞œ“Œppp∏Ω∑üüü000ª¿∫Œ—Õ√«¬Ø¥Æƒ»√```Õ–Ã∂ªµÔÔÔ¬∆¡Õ—Ã∆ ≈…Õ»≥∏≤èèèøøø±∂∞PPP»Ã««À«øƒøΩ¬Ω≈…≈—‘–ÀŒ Œ“Œª¿ª∫øπÃœÀ¿≈¿≥π≤ Œ ∞µØº¡º–”œÃ–ÀÀœ æ¬Ωº¡ª≈…ƒ¿≈ø Õ…¡≈¿«À∆–‘–æ√Ωæ√æœ”œ…Õ…œœœƒ…ƒØØØ≤∏±»Ã»¡∆¡∫ø∫øƒæ∆ ∆¬«¬ Œ…Ω¬ºÃ–Ãƒ«√454¿ƒø—‘—πæπ565NON¥∫≥“’—(((™≠™≈»ƒuwuëìêikiø√æ(('¬≈¡BCB\^\vwuOPN∏∫∑∂πµvwvÇÑÇÉÖÉ555gigNPNtvt\]\∂π∂hjhÇÑÅµ∏¥ÑÖÉACA]^\!˘     ,    X   ˇÄ ÉÑÖÜáàâäãåçâÇ íìîóó	
+&:GA"$D%B15V##<51BN,$"6G: &
+9	öòóïìÑ“ï–ö	û)¢4?FY™$,%8<#2Ô2#∏IºæAF?4&(8ê Ç&hñ™§P“5l"t˙
+ÑÖR.Z<Y≈"I+¯|—Bàã84|Ë!dE/Q\+v,Ÿü]S»∞°%LŒ8ÂËvcT∏Gll “™«uI PÅÄÑAzê»—#	ëÜ„ÁÔÇDX≠ß¬kŸˇ∂)ò–‰∆™§§˘ÄÑæp’Õbîê‚´ÖÃ˛4H–‡Cûë¬ç(wÇ	0≈Q˙ÇÖêÓ ¿B∞k îA¢ÅGK aıÒ3Ül Œµò0kﬁ,—Ç¢‡†Ë@3dUâ#‘êT‚∫∫ ZÆP°∏◊ì(:†kÄ,≈Õf:É∑Õ<<”¶Cèè*UÔíV®˜ ®  ƒâ( A@ Ä »±É5xµÑéS÷YÀ‰¥”zÌë'x3_>d1,P¡É~ @~P¿UH 
+ ∞Q<P¡S·¬ê˝PZ¿EÉaÜAqË!ˇ) ±¡+‡X   ç¸˝ J(0P+ÄÑ@2`Ãêïóê4nI3¿OÓu∂‰3¯@Zî#Pi%çX  (àaé@&	ú9CjDzó¡…ûúõŸÈ §‰π't~BBå @¿j*   ¨ëhNÄeÉi
+9iës˘4ú)iWûNB)%e  
+*h¿Ñ ' GòcñπÅh)iZñ]XIúò∫˜ﬁ\wf‡B#ñxb ,–ZuÇÖ€E»ê„éSdÒXdg)¿Æπ~{©5ƒ¡G‘áıâp_®ÌÄ *¿+X™l±`ˇ%Ò`UHÿÄY)TËå∑îÄK∞Üú–ç	X§\Õë\üW§a™°ÇA¿¢d‹»ùΩAˆvÆ¬eQqsUdA„±‘
+B†Wà1à
+'†P@™ xA¥’ ≤ÍV&Lj![ñ˙ÙPØs’≈È]
+Î√S;¿–Üp—G0,hN0a«⁄N∆-“∫ I'DÔ≈á\8ßH]Z	N…ÄD[å1«få∆E–∂R	;^{ƒ>˝|L!A#√-∞‹ôN‰Ÿ¶Oõ´—*T;•;√Ò0±CJ+%·RO8§ˇ≠VzFÆÁ»ˆ‹wÔ˝ˆ'V¿ˇ‘¡X≥ÅY)˛ Ç1a%_)Å Ã“/X¯ÙBÄ`U	F ˛Úˇ¥?p}˙ÉVƒe•@»ÄÇ¿©!¡àΩZÛ€_˝L¡XêÉ ﬂ˛(ËA˚%0Ñ`B<Ç≤~êh`†¨
+®@ÄﬁW	éPÇ˘˝F8¬NpÑÅr°±@CÇpY!(@cË√Æ&0`†˝ # ¿®OÇÏå˚ÄH !
+Ñ¿b˚”øÙ•Q Y<† ˙wÅ)¶ØäÑê 0pÅŸpé´‚)XÅ]–Å$¢ ˆÿ«ÓÔJd§Ÿ≈˘A¿JƒcÎß≈$û/àÇ|·5xHE6–ÖH"9	âT†5Ë£`,± .^≤5+î 
+î√Ûâî\$£)myBO¶ñÅÒ„']$àÓÔòÇT A„ÛÄ0®2Np|x8ØπMLr≥]Éí 5i9(TÄõZÄ:«ß¨x∂≥TTAß=„˘Ω~˙Ûüç ;_9http://creativecommons.org/images/public/somerights20.gif”IJO•GIF89aP  ˜     Bcscccsî•sú•{îú{ú≠Ñ•µÑ≠µå≠µå≠Ωµ∆ŒµŒ÷ΩŒ÷ΩŒﬁΩ÷ﬁ∆÷÷∆÷ﬁŒ÷ﬁŒﬁﬁ÷ﬁÁ÷ÁÁﬁÁÔﬁÔÔÁÔÔÔÔÔÔÔ˜Ô˜˜˜˜ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ,    P   ˛ H∞†¡É*\»p`Üá$P ¢≈ã3j‹»±cFÅ
+H¥`°Ö HTπRÂDó,_∂lôÅ§Õõ8sÍ‹I2H0hJaBÑ /ì∆ÑŸR)ÃöJJçJu™’™XØZ) "Ü0y¥)S≥he&®…≥≠€ú\lÂê!¡ 4HySÆÃæÄm™¨	†0 Ü&©ÿ0b«â/Êö¿¬Wñà∞∑rÇ ~_Z¯l!tÈ—ü'fåòµ‚÷ãY√æπ¯p‹
+A3`ò`` |mÇ^Y⁄oÒ—RKØï¸zˆÎ»éô∑nóí@‡<¥ —,¡ãü˛ÓY¢ÍÈ≤üœ∂Y˝t€ L»;` ˜î†E<RÆÂãE›ÄÖΩ']t\E¥]p∆`Jf}Ê“DI)ï⁄y$EÖìÜ;i»aá	Rÿ@,ÄRZL95Ö±≈aUjeìáZi¢Ñ(·ó‚éh°’å7}∏·[3&Ë—ëH&©‰G5È‰ìP  ;_(http://www.plasser.net/plone_powered.gif”LMNO'âPNG
+
+   IHDR   P      ¸´ﬂÿ   gAMA  ±é|˚Qì    cHRM  z%  ÄÉ  ˘ˇ  ÄË  u0  Í`  :ó  oó©ô‘  ≤IDATxúbLKKcI  ÄÄ˛O=@]”®ÄŒ <aqÒ“ìÉÁü~˛˘Âœqv&i.6Gmc˙D	u@ a˜Œ=W¶¨ø∞Û„V)!Qa%qFÆˇ_æù{˚ÈﬂØ_≥?Ê^w%FA¨8…l»y Äò ‘óO åáﬂÖg,ÙhZ∑ı˘˚?åˇ~~¯ŒÙ˛3–∑Ï|‹lB üæöH˝≥5c`d_ﬂ∑¥r√⁄ùÂtÚ @ Ac¯ÍÏlÛ‚•¿àı/Z‚p˝ˇ˙É·7ª¢ËﬂØﬂø¸~˚âÖãùÅÖΩø¸ﬁ{ÒÛØøZøô7˙lñP;˙zÕÜWäq⁄∆ñò¶322B¿¸Éãç©¬Ö3–ƒq·¢iGc@ AcÿË˚ûù>±ì˛æ~DÏæÒ±¸[û¿⁄¶|ı˚üèπ9˛|˚˘Â›gêâ_æ1˛˘√˜ÌΩÔ_û/RlÖDç?h=Ø=π{¶o·•‹e62	»*1≈ëΩái ‹.∏∑!4ﬂ@ Ac¯Î«ˇ™f¯®Y™Îä»±?|˜5PÒ±·ÎÔR[%?ôK20¸x¯‚˚◊ÔLø~ì7õ¶»€'|”/|ΩÚ˘oçÂ7ô«åˆ⁄J;∑30¯a:-‡1˝âU%q"Ñ¯S
+ Ä†~tÒßé$€:èå<o±Ú∞r>ˇsÔ˛ÑG‚oı√Xeæ}ˇ∆ƒ¬Ùüá˝//–Ô˛˝cê˛tÜiœyæ˚ﬁ’Ö˛©+⁄)ÍÓé’X0.ïM@SÜ«@ào1˝@Pãˇa¯ˇ·’ıˇ˛ddaf`f‚ÂQxpG_Ëƒe5›ﬂÃl¨¿öâÂÔÔˇˇˇ¸˙ˇÎ7HèûÊ/Ó˚ˇŸîÍØ~|”wzRÏ&√IXä5rH»N«jö]p≈ò~ ®áE9ˇ˝¯…˝$0ﬂ|ˇ*≈˛£˙‹ÏÔˆ/˘Øp≈.Ôø†ƒ´L_?ˇ˚…¿¿«˘_SÖ·◊_&!·…WÇ6<w0ƒ‚P¨l‚πh"ƒ£ Ä†˛¡∆ ˆ˘¥cÜ
+
+Hq+¢PWqÈœ|Ÿè|j˛	ˇ˜„√ô+åb¬ˇ%ƒòæ˛d˛Ù9îÔ∫_+  ®ﬂ8ÄQ« DL?Ce8ÿ%î˘˛Yª∑=Ô;Ú˙É*–∑WÔ2ºˇ» »œ˝˚ˇáOò9πÅ
+¸≈ÚÔ©É˙üÅÚI  Ä†ñúˆóä* *ÜÛúq®2=Ä biΩ%Ä  Qû˚†√Úˆµ    IENDÆB`Ç_Xhttp://www.spreadfirefox.com/community/images/affiliates/Buttons/80x15/firefox_80x15.pngYimage/png‘@PQRDUUTF-8Oà<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><HEAD>    <META http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <TITLE>
+        Browser = Wiki
+        ‚Äî
+        Plasser.net
+    </TITLE>
+
+    
+        
+            <BASE href="http://www.plasser.net/blog/tiddlywiki/">
+        
+    
+
+    <META name="generator" content="Plone - http://plone.org">
+
+    <META content="TiddlyWiki l√§uft v√∂llig ohne serverseitige Logik." name="description">
+    <META content="TiddlyWiki l√§uft v√∂llig ohne serverseitige Logik." name="DC.description">
+    <META content="plasser" name="DC.creator">
+    <META content="2005-05-24 01:00:38" name="DC.date.created">
+    <META content="2005-05-24 01:19:54" name="DC.date.modified">
+    <META content="Blog Entry" name="DC.type">
+    <META content="text/structured" name="DC.format">
+    <META content="de" name="DC.language">
+
+        <LINK rel="Stylesheet" type="text/css" href="http://www.plasser.net/ploneNS4.css">
+
+        <STYLE type="text/css" media="screen"><!-- @import url(http://www.plasser.net/ploneColumns.css); --></STYLE>
+
+        <STYLE type="text/css" media="screen"><!-- @import url(http://www.plasser.net/plone.css); --></STYLE>
+
+        
+
+        <LINK rel="alternate stylesheet" type="text/css" media="screen" href="http://www.plasser.net/ploneTextSmall.css" title="Small Text">
+    <LINK rel="alternate stylesheet" type="text/css" media="screen" href="http://www.plasser.net/ploneTextLarge.css" title="Large Text">
+
+        <LINK rel="stylesheet" type="text/css" media="print" href="http://www.plasser.net/plonePrint.css">
+
+        <LINK rel="stylesheet" type="text/css" media="projection" href="http://www.plasser.net/plonePresentation.css">
+
+        
+
+        <STYLE type="text/css" media="all"><!-- @import url(http://www.plasser.net/ploneCustom.css); --></STYLE>
+
+    <LINK rel="shortcut icon" href="http://www.plasser.net/favicon.ico" type="image/x-icon">
+
+    <LINK rel="search" href="http://www.plasser.net/search_form" title="Search this site">
+
+    
+
+    <LINK rel="up" href="http://www.plasser.net/blog" title="Up one level">
+
+    
+
+        <META http-equiv="imagetoolbar" content="no">
+
+    
+              
+        <LINK rel="stylesheet" type="text/css" media="screen" href="http://www.plasser.net/SimpleBlogCSS.css">
+    
+    
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+
+
+    
+          
+
+    
+              
+    
+
+    
+        
+
+        <SCRIPT type="text/javascript" src="http://www.plasser.net/plone_javascript_variables.js">
+    </SCRIPT>
+    <SCRIPT type="text/javascript" src="http://www.plasser.net/plone_javascripts.js">
+    </SCRIPT>
+    
+
+            
+
+    
+  <LINK rel="stylesheet" type="text/css" media="screen" href="http://www.plasser.net/SimpleBlogCSS.css"></HEAD><BODY class="section-blog">
+<DIV id="visual-portal-wrapper">
+<DIV id="portal-top">
+    <A href="#documentContent" class="hiddenStructure">Skip to content.</A>
+
+    <DIV id="portal-skinswitcher">  
+</DIV>
+
+    <UL id="portal-siteactions">
+    <LI id="siteaction-small_text"><A href="javascript:setActiveStyleSheet('Small Text', 1);" title="Small Text">Small Text</A></LI>
+    <LI id="siteaction-normal_text"><A href="javascript:setActiveStyleSheet('', 1);" title="Normal Text">Normal Text</A></LI>
+    <LI id="siteaction-large_text"><A href="javascript:setActiveStyleSheet('Large Text', 1);" title="Large Text">Large Text</A></LI>
+
+</UL>
+
+    <DIV id="portal-searchbox">    <FORM name="searchform" action="http://www.plasser.net/search">        <LABEL for="searchGadget" class="hiddenStructure">Search</LABEL>
+        <INPUT id="searchGadget" name="SearchableText" type="text" size="20" alt="Search" title="Search" accesskey="s" class="visibility:visible" tabindex="30001">
+        <INPUT class="searchButton" type="submit" value="Search" accesskey="s" tabindex="30002">
+    </FORM>
+</DIV>
+
+    <H1 id="portal-logo">    <A href="http://www.plasser.net">Plasser.net</A>
+</H1>
+
+    
+    <H5 class="hiddenStructure">Sections</H5>
+
+    <UL id="portal-globalnav">        
+        <LI id="portaltab-index_html" class="plain">            <A href="http://www.plasser.net" accesskey="t">Home</A>
+        </LI>
+        
+        
+        <LI id="portaltab-news" class="plain">            <A href="http://www.plasser.net/news" accesskey="t">News</A>
+        </LI>
+        
+        
+        <LI id="portaltab-weblog" class="plain">            <A href="http://www.plasser.net/blog" accesskey="t">Weblog</A>
+        </LI>
+        
+        
+        <LI id="portaltab-shop" class="plain">            <A href="http://www.plasser.net/shop" accesskey="t">Shop</A>
+        </LI>
+        
+        
+        <LI id="portaltab-sitemap" class="plain">            <A href="http://www.plasser.net/blog/tiddlywiki/sitemap" accesskey="t">SiteMap</A>
+        </LI>
+        
+    </UL>
+
+
+
+    
+
+<H5 class="hiddenStructure">Personal tools</H5>
+
+<UL id="portal-personaltools">    
+
+    <LI class="portalNotLoggedIn">              You are not logged in
+    </LI>
+
+       
+    
+        <LI>            <A href="http://www.plasser.net/login_form" accesskey="u">               Log in
+            </A>
+        </LI>
+    
+
+</UL>
+
+
+    <DIV id="portal-breadcrumbs">
+    You are here:
+    
+            <A href="http://www.plasser.net/">Home</A>
+            <SPAN class="breadcrumbSeparator">¬ª</SPAN>
+    
+    
+    <SPAN>        
+            <A href="http://www.plasser.net/blog/" accesskey="accesskeys-breadcrumbs">Small World Blog</A>
+            <SPAN class="breadcrumbSeparator"> ¬ª </SPAN>
+            
+         
+    </SPAN>
+    <SPAN>        
+            
+            
+            <SPAN>Browser = Wiki</SPAN>
+         
+    </SPAN>
+</DIV>
+</DIV>
+
+<DIV class="visualClear"></DIV>
+
+<DIV id="portal-columns" class="visualColumnHideNone">
+
+        <DIV id="visual-column-wrapper">
+                <DIV id="portal-column-content">
+            <DIV id="content" class="">
+                
+
+                <DIV class="documentContent" id="region-content">
+                    <A name="documentContent"></A>
+
+                    
+
+                    
+
+                    <DIV>    
+        
+
+                
+                <DIV>                
+                        
+                        <H1 class="noMargin">                                  <IMG src="http://www.plasser.net/entry_icon.gif" alt="Browser = Wiki">
+                                  Browser = Wiki
+                        </H1>
+        
+        
+                <DIV class="documentActions">
+    <H5 class="hiddenStructure">Document Actions</H5>
+
+    <UL>    
+        <LI>            <A href="http://www.plasser.net/blog/tiddlywiki/sendto_form">            
+                <IMG src="http://www.plasser.net/mail_icon.gif" alt="Send this page to somebody" title="Send this page to somebody" height="16" width="16">
+            </A>
+        </LI>
+    
+    
+        <LI>            <A href="javascript:this.print();">            
+                <IMG src="http://www.plasser.net/print_icon.gif" alt="Print this page" title="Print this page" height="16" width="16">
+            </A>
+        </LI>
+    
+
+    </UL>
+
+    
+
+</DIV>
+                        
+                        <DIV class="BlogByLine">        Submitted by <A href="http://www.plasser.net/Members/plasser">plasser</A>.
+        on 24.05.2005 01:19.
+        <SPAN class="simpleBlogBylineCats">                
+                        <STRONG><A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Internet" title="category">Internet</A></STRONG>
+                
+        </SPAN>
+</DIV>
+                        
+                        <DIV class="documentDescription description">TiddlyWiki l√§uft v√∂llig ohne serverseitige Logik.</DIV>
+                        <P><SPAN class="link-external"><A href="http://www.tiddlywiki.com/">TiddlyWiki</A></SPAN> ist WikiWikiWeb f√ºr Mikrocontent und es kommt v√∂llig ohne Serverlogik aus, da es auf HTML, CSS und Javascript basiert.</P>
+<P>Kein Problem <SPAN class="link-external"><A href="http://www.tiddlywiki.com/empty.html">das</A></SPAN> auf einen USB-Stick samt Firefox zu installieren.</P>
+
+                        
+                        
+                </DIV>
+
+        
+
+                
+</DIV>
+
+                    
+                        <DIV class="discussion">
+    
+
+        <FORM name="reply" action="http://www.plasser.net/blog/tiddlywiki/discussion_reply_form" method="post">
+            <INPUT class="standalone" type="submit" value="Add Comment">
+        </FORM>
+
+        
+
+        <A name="comments"> </A>
+
+
+    
+
+</DIV>
+                    
+
+                </DIV>
+
+            </DIV>
+
+        </DIV>
+        
+                <DIV id="portal-column-one">            <DIV class="visualPadding">                
+                    
+
+    
+
+        
+            
+    <DIV class="portlet" id="portlet-navigation-tree">    <DIV>        <H5>Navigation</H5>
+        <DIV class="portletBody">            <DIV class="portletContent odd">                
+                
+                    
+                        
+
+                        <A href="http://www.plasser.net/" accesskey="n" class="navItem navRootItem" title="Plasser.net">                            <IMG src="http://www.plasser.net/site_icon.gif" height="16" width="16" alt="" class="navIconRoot" title="Plone Site">
+                            <SPAN class="navItemText">                                  Home
+                            </SPAN>
+                        </A>
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/blog/simpleblog_view" accesskey="n" class="navItem navLevel1" title="We live in a small world interconnected. A weblog by J√ºrgen R. Plasser, a small part of a complex system. <q>Make everything as simple as possible, but not simpler.</q> (Albert Einstein)">                            <IMG src="http://www.plasser.net/simpleblog_icon.gif" height="16" width="16" alt="" class="navIcon" title="Blog">
+                            <SPAN class="navItemText">Small World Blog</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/blog/tiddlywiki/blogentry_view" accesskey="n" class="navItem navLevel2 currentNavItem" title="TiddlyWiki l√§uft v√∂llig ohne serverseitige Logik.">                            <IMG src="http://www.plasser.net/entry_icon.gif" height="16" width="16" alt="" class="navIcon" title="Blog Entry">
+                            <SPAN class="navItemText">Browser = Wiki</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/code/" accesskey="n" class="navItem navLevel1" title="Source Codes">                            <IMG src="http://www.plasser.net/folder_icon.gif" height="16" width="16" alt="" class="navIcon" title="Folder">
+                            <SPAN class="navItemText">Code</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/privates/" accesskey="n" class="navItem navLevel1" title="Private Dinge">                            <IMG src="http://www.plasser.net/folder_icon.gif" height="16" width="16" alt="" class="navIcon" title="Folder">
+                            <SPAN class="navItemText">Privates</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/about/" accesskey="n" class="navItem navLevel1" title="Angaben zu meiner Person und √ºber die Website.">                            <IMG src="http://www.plasser.net/folder_icon.gif" height="16" width="16" alt="" class="navIcon" title="Folder">
+                            <SPAN class="navItemText">About</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+                    
+                        <A href="http://www.plasser.net/business/" accesskey="n" class="navItem navLevel1" title="Business related">                            <IMG src="http://www.plasser.net/folder_icon.gif" height="16" width="16" alt="" class="navIcon" title="Folder">
+                            <SPAN class="navItemText">Business</SPAN>
+                        </A>
+
+                        
+                    
+                
+                
+            </DIV>
+        </DIV>
+    </DIV>
+</DIV>
+
+        
+
+        
+    
+    
+
+        
+            
+        
+
+        
+    
+    
+
+        
+            
+        
+
+        
+    
+    
+
+        
+            <DIV>  <DIV class="portlet"><SCRIPT type="text/javascript" src="http://technorati.com/embed/hc4jq8gq5.js"> </SCRIPT><DIV class="technorati"><P><A href="http://www.technorati.com/profile/plasser">Technorati Profile</A><A href="http://www.technorati.com/cosmos/search.html?url=http%3A%2F%2Fwww.plasser.net%2Fblog"><IMG src="http://static.technorati.com/images/bubble_icon.gif" align="absmiddle" hspacing="5" height="20" width="24" alt="Get Conversations about Plasser.net - Small World Blog"></A></P></DIV>
+  </DIV>
+</DIV>
+        
+
+        
+    
+    
+
+        
+            
+
+<P><A href="http://www.bloglines.com/sub/http://www.plasser.net/blog/RSS"><IMG src="http://www.bloglines.com/images/sub_modern4.gif" border="0" alt="Subscribe with Bloglines">
+</A>
+</P>
+<P><A href="http://www.bloglines.com/public/plasser" target="_blank">Blogroll</A>
+</P>
+
+        
+
+        
+    
+
+                
+                ¬†
+            </DIV>
+        </DIV>
+        
+    </DIV>
+    
+        <DIV id="portal-column-two">        <DIV class="visualPadding">            
+                
+
+    
+        
+            
+                    
+                <DIV class="portlet">                <H5>Blog</H5>
+                        <DIV class="portletBody">                        
+    
+
+    <TABLE cellspacing="0" class="simpleBlogCalendar" id="thePloneCalendar" summary="Calendar">        <THEAD><TR><TH id="calendar-previous">                    <A href="http://www.plasser.net/blog/tiddlywiki/blogentry_view?month:int=5&year:int=2005">¬´</A>
+                </TH><TH colspan="5">                    
+                        <SPAN id="calendar-month-June">June</SPAN>
+                        <SPAN id="calendar-year-2005">2005</SPAN>
+                    
+                 </TH><TH id="calendar-next">                    <A href="http://www.plasser.net/blog/tiddlywiki/blogentry_view?month:int=7&year:int=2005">¬ª</A>
+                </TH></TR><TR class="weekdays"><TD>Su</TD><TD>Mo</TD><TD>Tu</TD><TD>We</TD><TD>Th</TD><TD>Fr</TD><TD>Sa</TD></TR></THEAD>
+        <TBODY><TR><TD>                    ¬†
+                  </TD><TD>                    ¬†
+                  </TD><TD>                    ¬†
+                  </TD><TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD></TR><TR><TD>5</TD><TD>6</TD><TD class="event" onmouseover="javascript:showDay('20050607')" onmouseout="javascript:hideDay('20050607')">                    
+                      
+                      <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogDaySearch?startdate=2005-06-07%2000%3A00%3A00">                        7
+                      </A>
+                      
+                    
+                  </TD><TD>8</TD><TD>9</TD><TD>10</TD><TD>11</TD></TR><TR><TD>12</TD><TD>13</TD><TD>14</TD><TD class="todaynoevent">15</TD><TD>16</TD><TD>17</TD><TD>18</TD></TR><TR><TD>19</TD><TD>20</TD><TD>21</TD><TD>22</TD><TD>23</TD><TD>24</TD><TD>25</TD></TR><TR><TD>26</TD><TD>27</TD><TD>28</TD><TD>29</TD><TD>30</TD><TD>                    ¬†
+                  </TD><TD>                    ¬†
+                  </TD></TR></TBODY>
+    </TABLE>
+
+
+        
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+        
+      
+        
+      
+        <DIV class="dayPopup" id="day20050607">             <DIV class="date">07. June 2005</DIV>
+             
+             <DIV class="appointment">00:04-00:04 Im Apfel  ist (bald) der Wurm drin</DIV>
+             
+             
+             <DIV class="appointment">01:17-01:17 Ein M√§nnerratgeber?</DIV>
+             
+        </DIV>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+
+                                <DIV>        
+    
+                
+                <DIV class="portletContent content even">                        
+                                <A href="http://www.plasser.net/blog" title="Small World Blog"><STRONG>Small World Blog:</STRONG></A>
+                                
+                        
+                        
+                </DIV>
+            <DIV class="portletContent content odd">                    <A href="http://www.plasser.net/blog/maennerratgeber" title="Ein M√§nnerratgeber?"><IMG src="http://www.plasser.net/entry_icon.gif" alt="Ein M√§nnerratgeber?"> <SPAN>Ein M√§nnerratgeber?</SPAN></A>
+                </DIV>
+                
+                
+                
+        
+    
+                
+                
+            <DIV class="portletContent content even">                    <A href="http://www.plasser.net/blog/apple_shifts_to_intel" title="Im Apfel  ist (bald) der Wurm drin"><IMG src="http://www.plasser.net/entry_icon.gif" alt="Im Apfel  ist (bald) der Wurm drin"> <SPAN>Im Apfel  ist (bald) der Wurm drin</SPAN></A>
+                </DIV>
+                
+                
+                
+        
+    
+                
+                
+            <DIV class="portletContent content odd">                    <A href="http://www.plasser.net/blog/tiddlywiki" title="Browser = Wiki"><IMG src="http://www.plasser.net/entry_icon.gif" alt="Browser = Wiki"> <SPAN>Browser = Wiki</SPAN></A>
+                </DIV>
+                
+                
+                
+        
+    
+                
+                
+            <DIV class="portletContent content even">                    <A href="http://www.plasser.net/blog/fund_raiser" title="Community-Fund-Raiser"><IMG src="http://www.plasser.net/entry_icon.gif" alt="Community-Fund-Raiser"> <SPAN>Community-Fund-Raiser</SPAN></A>
+                </DIV>
+                
+                
+                
+        
+    
+                
+                
+            <DIV class="portletContent content odd">                    <A href="http://www.plasser.net/blog/in_search_for_nielsbohr" title="In Search For NielsBohr"><IMG src="http://www.plasser.net/entry_icon.gif" alt="In Search For NielsBohr"> <SPAN>In Search For NielsBohr</SPAN></A>
+                </DIV>
+                <DIV class="portletMore portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogFullSearch" title="more...">More...</A>
+                </DIV>
+                
+                
+        
+        
+        
+</DIV>
+                                
+        
+        
+                <DIV class="portletContent content odd">                        <STRONG>Categories:</STRONG>
+                </DIV>
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=AI" title="AI"><SPAN>AI</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Apple" title="Apple"><SPAN>Apple</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Architektur" title="Architektur"><SPAN>Architektur</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Astronomie" title="Astronomie"><SPAN>Astronomie</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Blogosphere" title="Blogosphere"><SPAN>Blogosphere</SPAN></A> (<SPAN>2</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Blues" title="Blues"><SPAN>Blues</SPAN></A> (<SPAN>2</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Business" title="Business"><SPAN>Business</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <SPAN>B√ºcher</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Computer" title="Computer"><SPAN>Computer</SPAN></A> (<SPAN>8</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <SPAN>Fotographie</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Gesellschaft" title="Gesellschaft"><SPAN>Gesellschaft</SPAN></A> (<SPAN>19</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Gesundheit" title="Gesundheit"><SPAN>Gesundheit</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Hardware" title="Hardware"><SPAN>Hardware</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Interna" title="Interna"><SPAN>Interna</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Internet" title="Internet"><SPAN>Internet</SPAN></A> (<SPAN>16</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <SPAN>Kino</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Kochen" title="Kochen"><SPAN>Kochen</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Kommunikation" title="Kommunikation"><SPAN>Kommunikation</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <SPAN>Konstruktivismus</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Kryptographie" title="Kryptographie"><SPAN>Kryptographie</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Kunst" title="Kunst"><SPAN>Kunst</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Linux" title="Linux"><SPAN>Linux</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Logik" title="Logik"><SPAN>Logik</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Marketing" title="Marketing"><SPAN>Marketing</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Mathematik" title="Mathematik"><SPAN>Mathematik</SPAN></A> (<SPAN>2</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Medizin" title="Medizin"><SPAN>Medizin</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Musik" title="Musik"><SPAN>Musik</SPAN></A> (<SPAN>8</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Open Source" title="Open Source"><SPAN>Open Source</SPAN></A> (<SPAN>2</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Philosophie" title="Philosophie"><SPAN>Philosophie</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Physik" title="Physik"><SPAN>Physik</SPAN></A> (<SPAN>6</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Plone" title="Plone"><SPAN>Plone</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Politik" title="Politik"><SPAN>Politik</SPAN></A> (<SPAN>4</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Privat" title="Privat"><SPAN>Privat</SPAN></A> (<SPAN>9</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <SPAN>Python</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Recht" title="Recht"><SPAN>Recht</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Security" title="Security"><SPAN>Security</SPAN></A> (<SPAN>15</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Skeptiker" title="Skeptiker"><SPAN>Skeptiker</SPAN></A> (<SPAN>6</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Small World" title="Small World"><SPAN>Small World</SPAN></A> (<SPAN>4</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Software" title="Software"><SPAN>Software</SPAN></A> (<SPAN>5</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Technik" title="Technik"><SPAN>Technik</SPAN></A> (<SPAN>6</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Texte" title="Texte"><SPAN>Texte</SPAN></A> (<SPAN>4</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Umwelt" title="Umwelt"><SPAN>Umwelt</SPAN></A> (<SPAN>3</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Unterhaltung" title="Unterhaltung"><SPAN>Unterhaltung</SPAN></A> (<SPAN>6</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Werbung" title="Werbung"><SPAN>Werbung</SPAN></A> (<SPAN>1</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content even">                        <A href="http://www.plasser.net/blog/tiddlywiki/SimpleBlogCatSearch?category=Wissenschaft" title="Wissenschaft"><SPAN>Wissenschaft</SPAN></A> (<SPAN>9</SPAN>)
+                </DIV>
+                
+        
+        
+                
+        <DIV class="portletContent content odd">                        <SPAN>Zope</SPAN> (<SPAN>0</SPAN>)
+                </DIV>
+                
+        
+
+                        </DIV>
+                </DIV>   
+    
+        
+
+        
+    
+
+            
+            ¬†
+        </DIV>
+    </DIV>
+    
+    <DIV class="visualClear">¬†</DIV>
+
+</DIV>
+
+<HR class="netscape4">
+
+<DIV id="portal-footer"><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-3653070729150679";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+google_ad_type = "text_image";
+google_color_border = "8CACBB";
+google_color_bg = "DEE7EC";
+google_color_link = "E43524";
+google_color_url = "436976";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3653070729150679&dt=1118855415975&format=728x90_as&output=html&url=http%3A%2F%2Fwww.plasser.net%2Fblog%2Ftiddlywiki&color_bg=DEE7EC&color_text=000000&color_link=E43524&color_url=436976&color_border=8CACBB&ad_type=text_image&cc=100&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+
+</DIV>
+
+<DIV id="portal-colophon">
+
+<A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/at/"><IMG alt="Creative Commons-Lizenzvertrag" border="0" src="http://creativecommons.org/images/public/somerights20.gif"></A><BR>
+Diese Inhalte sind unter einer <A rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/at/">Creative Commons-Lizenz</A> lizenziert.
+
+
+<P>
+<A href="http://plone.org"><IMG src="http://www.plasser.net/plone_powered.gif" height="15" width="80" alt="Powered by Plone" title="This Plone site was built using the Plone Content Management System. Click for more information.">
+</A>
+<A href="http://www.spreadfirefox.com/?q=affiliates&id=0&t=85"><IMG border="0" alt="Get Firefox!" title="Get Firefox!" src="http://www.spreadfirefox.com/community/images/affiliates/Buttons/80x15/firefox_80x15.png"></A>
+ 
+</P></DIV>
+
+</DIV>
+
+
+
+</BODY></HTML>_&http://www.plasser.net/blog/tiddlywiki°T—U’@VDWPXY_WebResourceFrameNameO˚<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #e43524 }a.ad:visited { color: #e43524 }a.ad:hover { color: #e43524 }a.ad:active { color: #e43524 }a.search:link { color: #000000 }a.search:visited { color: #000000 }a.search:hover { color: #000000 }a.search:active { color: #000000 }a.attribution:link { color: #000000 }a.attribution:visited { color: #000000 }a.attribution:hover { color: #000000 }a.attribution:active { color: #000000 }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#8cacbb"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#dee7ec"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#dee7ec"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#dee7ec" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu springer.de','aw0')" onmouseover="ss('gehe zu springer.de','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BgMZRymCwQqmQAoK0aNiqmcoK1bCgC4ung6wBwI23AbC9EBABGAEghPX_ASgEQIoWSJc5sgEPd3d3LnBsYXNzZXIubmV0ugEJNzI4eDkwX2FzyAEB2gEmaHR0cDovL3d3dy5wbGFzc2VyLm5ldC9ibG9nL3RpZGRseXdpa2noAQE&num=1&adurl=http://www.springer.de/googleyellowsale&client=ca-pub-3653070729150679" onfocus="ss('gehe zu springer.de','aw0')" onclick="ha('aw0')" onmouseover="return ss('gehe zu springer.de','aw0')" onmouseout="cs()"><B>Mathematik Buch</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Gro√üe Titelauswahl! Sie sparen bis zu 50% </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#dee7ec" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu www.MeinBu.ch','aw1')" onmouseover="ss('gehe zu www.MeinBu.ch','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://www.meinbu.ch/html/Idee.shtml&sa=l&ai=BCjJYymCwQqmQAoK0aNiqmcoK4ZK0CfmUiqMBwI23AcCLERACGAIghPX_ASgEQIoWSIw5oAGw1rr_A7IBD3d3dy5wbGFzc2VyLm5ldLoBCTcyOHg5MF9hc8gBAdoBJmh0dHA6Ly93d3cucGxhc3Nlci5uZXQvYmxvZy90aWRkbHl3aWtp6AEB&num=2&client=ca-pub-3653070729150679" onfocus="ss('gehe zu www.MeinBu.ch','aw1')" onclick="ha('aw1')" onmouseover="return ss('gehe zu www.MeinBu.ch','aw1')" onmouseout="cs()"><B>Wir ver√∂ffentl. Ihr Buch</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">In 30 Tagen zum eigenen Buch Kostenlose Autorenmappe bestellen </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#dee7ec" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu msn.co.uk/spaces','aw2')" onmouseover="ss('gehe zu msn.co.uk/spaces','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?sa=l&ai=Bls50ymCwQqmQAoK0aNiqmcoK9famCuuml6oBwI23AaD-ChADGAMghPX_ASgEQIoWSJQ5sgEPd3d3LnBsYXNzZXIubmV0ugEJNzI4eDkwX2FzyAEB2gEmaHR0cDovL3d3dy5wbGFzc2VyLm5ldC9ibG9nL3RpZGRseXdpa2noAQE&num=3&adurl=http://clk.atdmt.com/GBL/go/msnkxusp0020000004gbl/direct/01/&client=ca-pub-3653070729150679" onfocus="ss('gehe zu msn.co.uk/spaces','aw2')" onclick="ha('aw2')" onmouseover="return ss('gehe zu msn.co.uk/spaces','aw2')" onmouseout="cs()"><B>Get Blogging</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Spaces from MSN One place for your photos and blogs </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#dee7ec" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('gehe zu BookButler.de','aw3')" onmouseover="ss('gehe zu BookButler.de','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://de.bookbutler.info/%3Fpid%3Dgoogle.de.003&sa=l&ai=Bvq5tymCwQqmQAoK0aNiqmcoK1P36AfzZ8QjAjbcB0IYDEAQYBCCE9f8BKARAihZIiTmgAbfjmf8DsgEPd3d3LnBsYXNzZXIubmV0ugEJNzI4eDkwX2FzyAEB2gEmaHR0cDovL3d3dy5wbGFzc2VyLm5ldC9ibG9nL3RpZGRseXdpa2noAQE&num=4&client=ca-pub-3653070729150679" onfocus="ss('gehe zu BookButler.de','aw3')" onclick="ha('aw3')" onmouseover="return ss('gehe zu BookButler.de','aw3')" onmouseout="cs()"><B>Buch finden &amp; sparen</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">√úber 50 Anbieter wie Amazon, Bol, Libri vergleichen und Geld sparen! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#8cacbb"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.plasser.net/blog/tiddlywiki&hl=de&client=ca-pub-3653070729150679&adU=springer.de&adT=Mathematik+Buch&adU=www.MeinBu.ch&adT=Wir+ver%C3%B6ffentl.+Ihr+Buch&adU=msn.co.uk/spaces&adT=Get+Blogging&adU=BookButler.de&adT=Buch+finden+%26amp%3B+sparen&exp=Ads+by+Goooooooogle&done=1" target="_blank"><SCRIPT><!--
+nw='#000000';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Goooooogle-Anzeigen</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_Çhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-3653070729150679&dt=1118855415975&format=728x90_as&output=html&url=http%3A%2F%2Fwww.plasser.net%2Fblog%2Ftiddlywiki&color_bg=DEE7EC&color_text=000000&color_link=E43524&color_url=436976&color_border=8CACBB&ad_type=text_image&cc=100&u_h=854&u_w=1280&u_ah=783&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124      !  3  I  h  o  Å  ê  ¶ A g p w % M T U Ä á ˙ 1 L S Ä  Ä¯ Äˇ Å ÇF Çn Çx Ç É– É˜ É˛ ÖR Öz ÖÅ áº á„ áÍ ä0 ä] äd äk ã  ãÛ ã˙ å å å é& éQ éX êç ê√ ê  ëò ë  ë— ëÿ ëﬂ ëÊ ëÌ ëˆ í í ∏’ π π π  ¿O ¿ã ¿í ≈; ≈f ≈m …ò …Û …˝    R)RRRTRWRbRyoxoã             Z             q

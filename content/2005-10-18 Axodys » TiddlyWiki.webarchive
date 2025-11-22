@@ -1,0 +1,570 @@
+bplist00”_WebSubresources_WebMainResource_WebSubframeArchives°’	
+_WebResourceMIMEType_WebResourceData_WebResourceResponse_WebResourceTextEncodingName^WebResourceURLYtext/htmlO.«(function(){
+// NOTE: This file is intended to be compiled with JSCompiler. If you are
+// getting a compiler error when using a JavaScript built-in, please update
+// google3/contentads/frontend/externs.js
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(d, ad_url, tracker_event) {
+  var qloc = ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc + 1 < ad_url.length) {
+    img_src += '&' + ad_url.substring(qloc + 1);
+  }
+  var img_tag = '<img height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  d.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value, random) {
+  if (value && typeof(value) == 'object') {
+    value = value[random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data(w, date) {
+  var screen = w.screen;
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -date.getTimezoneOffset();
+
+  if (screen) {
+    google_append_url("u_h", screen.height);
+    google_append_url("u_w", screen.width);
+    google_append_url("u_ah", screen.availHeight);
+    google_append_url("u_aw", screen.availWidth);
+    google_append_url("u_cd", screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_modify_client(client) {
+  client = client.toLowerCase();
+  if (client.substring(0, 3) != 'ca-') {
+     client = 'ca-' + client;
+  }
+  return client;
+}
+
+function google_write_iframe(w, d, ad_url) {
+  ad_url = ad_url.substring(0, 1000);
+  ad_url = ad_url.replace(/%\w?$/, '');
+
+  if (w.google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    d.write('<script language="JavaScript1.1"' +
+            ' src=' + quoted(ad_url) + '></' + 'script>');
+  } else if (w.google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker(d, ad_url, 'reboundredirect');
+    } else {
+      d.write('<iframe' +
+              ' name="google_ads_frame"' +
+              ' width=' + quoted(w.google_ad_width) +
+              ' height=' + quoted(w.google_ad_height) +
+              ' frameborder=' + quoted(w.google_ad_frameborder) +
+              ' src=' + quoted(ad_url) +
+              ' marginwidth="0"' +
+              ' marginheight="0"' +
+              ' vspace="0"' +
+              ' hspace="0"' +
+              ' allowtransparency="true"' +
+              ' scrolling="no">');
+      google_write_tracker(d, ad_url, 'noiframe');
+      d.write('</iframe>');
+    }
+  }
+}
+
+function google_show_ad() {
+  var nullvalue = null;
+  var w = window;
+  var d = document;
+  var date = new Date();
+  var random = date.getTime();
+  var num_slots_by_client = w.google_num_slots_by_client;
+  var num_slots_by_channel = w.google_num_slots_by_channel;
+  var prev_ad_formats = w.google_prev_ad_formats_by_region;
+  var format = w.google_ad_format;
+
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == nullvalue && w.google_ad_section != nullvalue) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  var region = (w.google_ad_region == nullvalue) ? '' : w.google_ad_region;
+
+  var is_zero_ad_format = false;
+  if (format) {
+    is_zero_ad_format = ((format).indexOf('_0ads')) > 0;
+  }
+
+  if (is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots + 1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots > 1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      prev_ad_formats[region] = nullvalue;
+      if (w.google_num_slot_to_show == nullvalue) {
+        w.google_num_slot_to_show = random % w.google_num_slots_to_rotate + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && region == '') {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_url += 'client=' + 
+                     escape(google_modify_client(w.google_ad_client));
+  google_append_url('dt', date.getTime());
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', 
+                                 w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  var client = w.google_ad_client;
+  if (!num_slots_by_client[client]) {
+    num_slots_by_client[client] = 1;
+    num_slots_by_client.length += 1;
+  } else {
+    num_slots_by_client[client] += 1;
+  }
+
+  if (prev_ad_formats[region]) {
+    google_append_url_esc('prev_fmts',
+                          prev_ad_formats[region].toLowerCase());
+    if (num_slots_by_client.length > 1) {
+      google_append_url('slot', num_slots_by_client[client]);
+    }
+  }
+
+  if (format) {
+    google_append_url_esc('format', format.toLowerCase());
+    if (prev_ad_formats[region]) {
+      prev_ad_formats[region] = prev_ad_formats[region] + ',' + format;
+    } else {
+      prev_ad_formats[region] = format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!num_slots_by_channel[ch]) {
+        num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg, random);
+  google_append_color('text', w.google_color_text, random);
+  google_append_color('link', w.google_color_link, random);
+  google_append_color('url', w.google_color_url, random);
+  google_append_color('border', w.google_color_border, random);
+  google_append_color('line', w.google_color_line, random);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', 
+                    w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  google_append_url('bid', w.google_bid);
+
+  if (google_onpage(w, d) && d.body) {
+    var scr_h = d.body.scrollHeight;
+    var clt_h = d.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h * 100 / scr_h));
+    }
+  }
+
+  google_get_user_data(w, date);
+  google_write_iframe(w, d, w.google_ad_url);
+
+  w.google_ad_frameborder = nullvalue;
+  w.google_ad_format = nullvalue;
+  w.google_page_url = nullvalue;
+  w.google_language = nullvalue;
+  w.google_gl = nullvalue;
+  w.google_country = nullvalue;
+  w.google_region = nullvalue;
+  w.google_city = nullvalue;
+  w.google_hints = nullvalue;
+  w.google_safe = nullvalue;
+  w.google_encoding = nullvalue;
+  w.google_ad_output = nullvalue;
+  w.google_max_num_ads = nullvalue;
+  w.google_ad_channel = nullvalue;
+  w.google_contents = nullvalue;
+  w.google_alternate_ad_url = nullvalue;
+  w.google_alternate_color = nullvalue;
+  w.google_color_bg = nullvalue;
+  w.google_color_text = nullvalue;
+  w.google_color_link = nullvalue;
+  w.google_color_url = nullvalue;
+  w.google_color_border = nullvalue;
+  w.google_color_line = nullvalue;
+  w.google_adtest = nullvalue;
+  w.google_kw_type = nullvalue;
+  w.google_kw = nullvalue;
+  w.google_num_radlinks = nullvalue;
+  w.google_max_radlink_len = nullvalue;
+  w.google_rl_filtering = nullvalue;
+  w.google_rl_mode = nullvalue;
+  w.google_rt = nullvalue;
+  w.google_ad_type = nullvalue;
+  w.google_image_size = nullvalue;
+  w.google_feedback = nullvalue;
+  w.google_skip = nullvalue;
+  w.google_page_location = nullvalue;
+  w.google_referrer_url = nullvalue;
+  w.google_ad_region = nullvalue;
+  w.google_ad_section = nullvalue;
+  w.google_bid = nullvalue;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+function google_onpage(w, d) {
+  return w.top.location == d.location;
+}
+
+function google_in_adframe(w, d) {
+  var documentElement = d.documentElement;
+
+  if (google_onpage(w, d)) return false;
+
+  if (w.google_ad_width && w.google_ad_height) {
+    var wd = 1;
+    var ht = 1;
+    if (w.innerHeight) {
+      wd = w.innerWidth;
+      ht = w.innerHeight;
+    } else if (documentElement && documentElement.clientHeight) {
+      wd = documentElement.clientWidth;
+      ht = documentElement.clientHeight;
+    } else if (d.body) {
+      wd = d.body.clientWidth;
+      ht = d.body.clientHeight;
+    }
+
+    if (ht > 2 * w.google_ad_height || wd > 2 * w.google_ad_width) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function google_init_globals() {
+  var w = window;
+  var d = document;
+  var location = d.location;
+  var referrer = d.referrer;
+  var nullvalue = null;
+
+  w.google_org_error_handler = w.onerror;
+  w.onerror = google_error_handler;
+
+  if (w.google_ad_frameborder == nullvalue) {
+    w.google_ad_frameborder = 0;
+  }
+
+  if (w.google_ad_output == nullvalue) {
+    w.google_ad_output = 'html';
+  }
+
+  if (w.google_ad_format == nullvalue && w.google_ad_output == 'html') {
+    w.google_ad_format = w.google_ad_width + 'x' + w.google_ad_height;
+  }
+
+  if (w.google_page_url == nullvalue) {
+    w.google_page_url = referrer;
+    if (!google_in_adframe(w, d)) {
+      w.google_page_url = location;
+      w.google_last_modified_time = Date.parse(d.lastModified) / 1000;
+      w.google_referrer_url = referrer;
+    }
+  } else {
+    w.google_page_location = referrer;
+    if (!google_in_adframe(w, d)) {
+      w.google_page_location = location;
+    }
+  }
+
+  if (w.google_num_slots_by_channel == nullvalue) {
+    w.google_num_slots_by_channel = new Array();
+  }
+
+  if (w.google_num_slots_by_client == nullvalue) {
+    w.google_num_slots_by_client = new Array();
+  }
+
+  if (w.google_prev_ad_formats_by_region == nullvalue) {
+    w.google_prev_ad_formats_by_region = new Array();
+  }
+} 
+
+google_init_globals();
+google_show_ad();
+})()Obplist00‘
+Y$archiverX$versionT$topX$objects_NSKeyedArchiver Ü†—	_WebResourceResponseÄØ(./67;?CYZ[\]^_`abcdefghimpU$nullﬂ !"#$%&'R$6S$10R$2S$13R$7R$3S$11R$8R$4R$9R$0V$classR$5S$12R$1ÄÄÄ#A¢	õìÓ_˙ #A°ˇNú{âÄ#A¢ ÷Â6#Ä”)*+,-WNS.base[NS.relativeÄ ÄÄ_7http://pagead2.googlesyndication.com/pagead/show_ads.js“0123X$classesZ$classname£345UNSURLV%NSURLXNSObjectYtext/html“89:YNS.stringUutf-8Ä“01<=£=>5_NSMutableStringXNSString”@ABÄ	Ä»”DEFOXZNS.objectsWNS.keys®GHIJKLMNÄÄÄÄÄÄÄÄ®PQRSTUVWÄ
+ÄÄÄÄÄÄÄÄVServer_Content-Encoding]Last-Modified]Cache-ControlTDate^Content-Length\Content-TypeSP3pXCAFE/1.0Tgzip_Tue, 11 Oct 2005 16:24:57 GMT_private, x-gzip-ok=""_Tue, 18 Oct 2005 06:29:30 GMTQ0_text/html; charset=UTF-8_lpolicyref="http://www.googleadservices.com/pagead/p3p.xml", CP="NOI DEV PSA PSD IVA PVD OTP OUR OTR IND OTC"“01jk£kl5_NSMutableDictionary\NSDictionary“01no¢o5_NSHTTPURLResponseInternal“01qr£rs5_NSHTTPURLResponse]NSURLResponse    $ ) 2 D I L b d Ñ ä ´ Æ ≤ µ π º ø √ ∆ … Ã œ ÷ Ÿ › ‡ ‚ ‰ Ê Ë Í Û ı ˛ (*,.hmvÅÖãíõ•™¥∫º¡≈◊‡ÁÈÎÌÙˇ )+-/13579;BUcqvÖíñü§ƒ‹¸˛àçëß¥πºÿ›·ı             t              Uutf-8_7http://pagead2.googlesyndication.com/pagead/show_ads.js‘	
+UUTF-8O2‘<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1">
+        <TITLE>Axodys ¬ª TiddlyWiki</TITLE>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <META name="generator" content="WordPress 1.5.2">
+        <STYLE type="text/css" media="screen">
+                @import url( http://axodys.com/wp-content/themes/axodys-connections/style.css );
+        </STYLE>
+        <LINK rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://axodys.com/feed/">
+        <LINK rel="alternate" type="text/xml" title="RSS .92" href="http://axodys.com/feed/rss/">
+        <LINK rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://axodys.com/feed/atom/">
+        <LINK rel="pingback" href="http://axodys.com/xmlrpc.php">
+        <LINK rel="archives" title="October 2005" href="http://axodys.com/2005/10/">
+        <LINK rel="archives" title="September 2005" href="http://axodys.com/2005/09/">
+        <LINK rel="archives" title="August 2005" href="http://axodys.com/2005/08/">
+        <LINK rel="archives" title="July 2005" href="http://axodys.com/2005/07/">
+        <LINK rel="archives" title="June 2005" href="http://axodys.com/2005/06/">
+        <LINK rel="archives" title="May 2005" href="http://axodys.com/2005/05/">
+        <LINK rel="archives" title="April 2005" href="http://axodys.com/2005/04/">
+        <LINK rel="archives" title="March 2005" href="http://axodys.com/2005/03/">
+        <LINK rel="archives" title="February 2005" href="http://axodys.com/2005/02/">
+        <LINK rel="archives" title="January 2005" href="http://axodys.com/2005/01/">
+        <LINK rel="archives" title="May 2004" href="http://axodys.com/2004/05/">
+        <LINK rel="archives" title="March 2004" href="http://axodys.com/2004/03/">
+        <LINK rel="archives" title="February 2004" href="http://axodys.com/2004/02/">
+        <LINK rel="archives" title="January 2004" href="http://axodys.com/2004/01/">
+        <LINK rel="archives" title="December 2003" href="http://axodys.com/2003/12/">
+        <LINK rel="archives" title="November 2003" href="http://axodys.com/2003/11/">
+        <LINK rel="archives" title="October 2003" href="http://axodys.com/2003/10/">
+        <LINK rel="archives" title="September 2003" href="http://axodys.com/2003/09/">
+        <LINK rel="archives" title="August 2003" href="http://axodys.com/2003/08/">
+        <LINK rel="archives" title="July 2003" href="http://axodys.com/2003/07/">
+        <LINK rel="archives" title="June 2003" href="http://axodys.com/2003/06/">
+        <LINK rel="archives" title="May 2003" href="http://axodys.com/2003/05/">
+        <LINK rel="archives" title="April 2003" href="http://axodys.com/2003/04/">
+        <LINK rel="archives" title="March 2003" href="http://axodys.com/2003/03/">
+        <LINK rel="archives" title="February 2003" href="http://axodys.com/2003/02/">
+        <LINK rel="archives" title="January 2003" href="http://axodys.com/2003/01/">
+        <LINK rel="archives" title="December 2002" href="http://axodys.com/2002/12/">
+        <LINK rel="archives" title="November 2002" href="http://axodys.com/2002/11/">
+        <LINK rel="archives" title="October 2002" href="http://axodys.com/2002/10/">
+        <LINK rel="archives" title="September 2002" href="http://axodys.com/2002/09/">
+        <LINK rel="archives" title="August 2002" href="http://axodys.com/2002/08/">
+        <LINK rel="archives" title="July 2002" href="http://axodys.com/2002/07/">
+        <LINK rel="archives" title="June 2002" href="http://axodys.com/2002/06/">
+        <LINK rel="archives" title="May 2002" href="http://axodys.com/2002/05/">
+        <LINK rel="archives" title="April 2002" href="http://axodys.com/2002/04/">
+        <LINK rel="archives" title="March 2002" href="http://axodys.com/2002/03/">
+        <LINK rel="archives" title="February 2002" href="http://axodys.com/2002/02/">
+        <LINK rel="archives" title="January 2002" href="http://axodys.com/2002/01/">
+        <LINK rel="archives" title="December 2001" href="http://axodys.com/2001/12/">
+        <LINK rel="archives" title="November 2001" href="http://axodys.com/2001/11/">
+        <LINK rel="archives" title="October 2001" href="http://axodys.com/2001/10/">
+        <LINK rel="archives" title="September 2001" href="http://axodys.com/2001/09/">
+        <LINK rel="archives" title="August 2001" href="http://axodys.com/2001/08/">
+        <LINK rel="archives" title="July 2001" href="http://axodys.com/2001/07/">
+        <LINK rel="archives" title="June 2001" href="http://axodys.com/2001/06/">
+        <LINK rel="archives" title="May 2001" href="http://axodys.com/2001/05/">
+        <LINK rel="archives" title="April 2001" href="http://axodys.com/2001/04/">
+        <LINK rel="archives" title="March 2001" href="http://axodys.com/2001/03/">
+        <LINK rel="archives" title="February 2001" href="http://axodys.com/2001/02/">
+        <LINK rel="archives" title="January 2001" href="http://axodys.com/2001/01/">
+        <LINK rel="archives" title="December 2000" href="http://axodys.com/2000/12/">
+        <LINK rel="archives" title="November 2000" href="http://axodys.com/2000/11/">
+        <LINK rel="archives" title="September 2000" href="http://axodys.com/2000/09/">
+        <LINK rel="archives" title="August 2000" href="http://axodys.com/2000/08/">
+        <LINK rel="archives" title="July 2000" href="http://axodys.com/2000/07/">
+        <LINK rel="archives" title="June 2000" href="http://axodys.com/2000/06/">
+        <LINK rel="archives" title="May 2000" href="http://axodys.com/2000/05/">
+        <LINK rel="archives" title="April 2000" href="http://axodys.com/2000/04/">
+        <LINK rel="archives" title="March 2000" href="http://axodys.com/2000/03/">
+        <LINK rel="archives" title="February 2000" href="http://axodys.com/2000/02/">
+        <LINK rel="archives" title="January 2000" href="http://axodys.com/2000/01/">
+        <LINK rel="archives" title="December 1999" href="http://axodys.com/1999/12/">
+        <LINK rel="archives" title="November 1999" href="http://axodys.com/1999/11/">
+        <LINK rel="archives" title="October 1999" href="http://axodys.com/1999/10/">
+        <LINK rel="archives" title="September 1999" href="http://axodys.com/1999/09/">
+        <LINK rel="archives" title="June 1999" href="http://axodys.com/1999/06/">
+        <LINK rel="archives" title="May 1999" href="http://axodys.com/1999/05/">
+        <LINK rel="archives" title="April 1999" href="http://axodys.com/1999/04/">
+        <LINK rel="archives" title="March 1999" href="http://axodys.com/1999/03/">
+        <LINK rel="archives" title="February 1999" href="http://axodys.com/1999/02/">
+        <LINK rel="archives" title="January 1999" href="http://axodys.com/1999/01/">
+        </HEAD><BODY>
+<DIV id="rap">        <DIV id="header">        <UL id="topnav">                <LI><A href="http://axodys.com" id="navHome" title="Posted Recently" accesskey="h">Home |</A></LI>
+                <LI><A href="/about" id="navAbout" title="About Axodys" accesskey="a">About |</A></LI>
+                <LI><A href="/faq" id="navArchives" title="Frequently Asked Questions" accesskey="r">FAQ |</A></LI>
+                <LI><A href="#" id="navLinks" title="Recommended Links" accesskey="l">Links |</A></LI>
+                <LI><A href="#" id="navContact" title="Contact the Author" accesskey="c">Contact</A></LI>
+        </UL>
+        <H1><A href="http://axodys.com" title="Axodys">Axodys</A></H1>                
+        <DIV id="desc">Positively Orbital</DIV>
+</DIV>
+        
+        <DIV id="main">        <DIV id="content">                                                <DIV class="post">                                <P class="post-date">Mon 17 Oct 2005</P>
+<DIV class="post-info"><H2 class="post-title"><A href="http://axodys.com/2005/10/17/tiddlywiki" rel="bookmark" title="Permanent Link: TiddlyWiki">TiddlyWiki</A></H2>
+Posted by Jason under <A href="http://axodys.com/category/software/" title="View all posts in Software" rel="category tag">Software</A> ,  <A href="http://axodys.com/category/interweb/" title="View all posts in InterWeb" rel="category tag">InterWeb</A><BR>¬†</DIV>
+<DIV class="post-content">                <P>I first came across <A href="http://tiddlywiki.com" title="">TiddlyWiki</A>, an experimental MicroContent WikiWikiWeb built by <A href="http://tiddlywiki.com/#JeremyRuston" title="">Jeremy Ruston</A> about a year ago, but I hadn‚Äôt really paid attention to it until I came across a <A href="http://www.mikemcbrideonline.com/2005_10_09_archives.html#112934024604451417" title="">reference to a <SPAN class="caps">GTD</SPAN> variation</A> yesterday.  What sets TiddlyWiki apart from your standard Wiki is that it‚Äôs written in <SPAN class="caps">HTML</SPAN>, CSS and JavaScript to run on any modern browser without needing any server side logic.  This is cool on so many levels I don‚Äôt really know where to begin other than to say go check it out.  There‚Äôs been a lot of progress since I first looked at it last year and <A href="http://tiddlywiki.com/#TiddlyWikiAdaptations" title="">impressive community of adaptations</A> has sprung up.  I‚Äôm definitely going to be playing with this more</P>
+ <DIV class="ttag">tags: <A href="http://www.technorati.com/tag/javascript" rel="tag">javascript</A> <A href="http://www.technorati.com/tag/tiddlywiki" rel="tag">tiddlywiki</A> <A href="http://www.technorati.com/tag/wiki" rel="tag">wiki</A></DIV> 
+        <DIV class="post-info">                                                                                                        
+        </DIV>
+                <DIV class="post-footer">¬†</DIV>
+</DIV>                                
+
+
+   
+                                
+         
+
+
+<H3 id="respond">Leave a Reply</H3>
+
+
+<FORM action="http://axodys.com/wp-comments-post.php" method="post" id="commentform">
+
+<P><INPUT type="text" name="author" id="author" value="" size="22" tabindex="1">
+<LABEL for="author"><SMALL>Name (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="email" id="email" value="" size="22" tabindex="2">
+<LABEL for="email"><SMALL>Mail (will not be published) (required)</SMALL></LABEL></P>
+
+<P><INPUT type="text" name="url" id="url" value="" size="22" tabindex="3">
+<LABEL for="url"><SMALL>Website</SMALL></LABEL></P>
+
+
+
+<P><TEXTAREA name="comment" id="comment" cols="100%" rows="10" tabindex="4"></TEXTAREA></P>
+
+<P><INPUT name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<INPUT type="hidden" name="comment_post_ID" value="1711">
+</P>
+
+</FORM>
+
+
+                        </DIV>
+                                        <P align="center"></P>                
+        </DIV>
+        <DIV id="sidebar">                <H2>Archived Entry</H2>
+        <UL>        <LI><STRONG><A href="http://axodys.com/category/software/" title="View all posts in Software" rel="category tag">Software</A> and  <A href="http://axodys.com/category/interweb/" title="View all posts in InterWeb" rel="category tag">InterWeb</A></STRONG></LI>
+        <LI>                                                        You can <A href="#respond">leave a response</A>, or <A href="http://axodys.com/2005/10/17/tiddlywiki/trackback/">trackback</A> from your own site.
+                                                
+                                                </LI>
+
+        <LI>                        <BR>                        <SCRIPT type="text/javascript"><!--
+						google_ad_client = "pub-2503406804388421";
+						google_ad_width = 160;
+						google_ad_height = 600;
+						google_ad_format = "160x600_as";
+						google_ad_type = "text";
+						google_ad_channel ="4736733040";
+						google_color_border = "E9EAF4";
+						google_color_bg = "E9EAF4";
+						google_color_link = "313C8B";
+						google_color_url = "313C8B";
+						google_color_text = "000000";
+						//--></SCRIPT>
+                                                <SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+						</SCRIPT><IFRAME name="google_ads_frame" width="160" height="600" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-2503406804388421&dt=1129616970025&format=160x600_as&output=html&channel=4736733040&url=http%3A%2F%2Faxodys.com%2F2005%2F10%2F17%2Ftiddlywiki&color_bg=E9EAF4&color_text=000000&color_link=313C8B&color_url=313C8B&color_border=E9EAF4&ad_type=text&cc=21&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=12&u_nmime=140" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME></LI>
+        </UL>
+                
+        </DIV>
+<P id="footer">Design downloaded from <A href="http://www.vanillamist.com" title="Vanilla Mist">www.vanillamist.com</A> and remixed by Jason Gilman.  ¬© 1999-2005</P>
+</DIV>
+</DIV>
+
+</BODY></HTML>_'http://axodys.com/2005/10/17/tiddlywiki°—’	
+_WebResourceFrameNameO<HTML><HEAD><STYLE type="text/css"><!--
+.ch{cursor:pointer; cursor:hand;}.textcolor{color: #000000 }//--></STYLE><SCRIPT type="text/javascript"><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';} function jcc(a) {pha=document.getElementById(a); nc=pha.href.indexOf('&jca='); if(nc>=1) return; jca=(8600)-(232)-(65); if (a=='aw0') {jca+=(-2049);} else {jca=0;} phb=pha.href+'&jca='+jca; pha.href=phb;} function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb; jcc(a); }function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb; jcc(a); top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb; jcc(a); top.location.href=document.getElementById(a).href;}}//--></SCRIPT></HEAD><BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE height="600" width="160" cellspacing="1" cellpadding="0" border="0" bgcolor="#e9eaf4"><TBODY><TR><TD><TABLE height="598" width="158" cellspacing="0" cellpadding="0" border="0" bgcolor="#e9eaf4"><TBODY><TR><TD id="taw0" class="ch" onfocus="ss('go to www.BushClintonKatrinaFund.org','aw0')" onmouseover="return ss('go to www.BushClintonKatrinaFund.org','aw0')" onmouseout="cs()" onclick="ga(this,event)" align="center" valign="middle"><DIV style="overflow:hidden; word-wrap: break-word; width:145;"><FONT style="font-size:25px" face="impact, poster bodoni, geneva"><A id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=B-OsAS5ZUQ_u1H4jgiQLw5MjwD-re_gGnnE_9xFIAEAEYASAAKAUwADgAQOOMpgGCARdjYS1wdWItMjUwMzQwNjgwNDM4ODQyMYgBAZABoyaqAQo0NzM2NzMzMDQwsgEaYnVzaGNsaW50b25rYXRyaW5hZnVuZC5vcme6AQoxNjB4NjAwX2FzwAEC2gEmaHR0cDovL2J1c2hjbGludG9ua2F0cmluYWZ1bmQub3JnP2dvb2c&num=1&adurl=http://bushclintonkatrinafund.org%3Fgoog&client=ca-pub-2503406804388421" onfocus="ss('go to www.BushClintonKatrinaFund.org','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.BushClintonKatrinaFund.org','aw0')" onmouseout="cs()" class="textcolor" style="text-decoration:none">Make Your Donation Today</A></FONT><BR><BR><BR><FONT style="font-size:18px" class="textcolor" face="arial,sans-serif">Help Rebuild Lives &amp; Communities in Hurricane Affected States.</FONT><BR><FONT style="font-size:16px" class="textcolor" face="arial,sans-serif"><SCRIPT type="text/javascript"><!--
+if(0) {document.write("www.BushClintonKatrinaFund.org");}//--></SCRIPT></FONT></DIV></TD></TR><TR><TD height="1" bgcolor="#e9eaf4" align="center"><FONT style="font-size:12px" class="textcolor" face="arial,sans-serif">¬†Public Service Ads by Google¬†</FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_ïhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-2503406804388421&dt=1129616970025&format=160x600_as&output=html&channel=4736733040&url=http%3A%2F%2Faxodys.com%2F2005%2F10%2F17%2Ftiddlywiki&color_bg=E9EAF4&color_text=000000&color_link=313C8B&color_url=313C8B&color_border=E9EAF4&ad_type=text&cc=21&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=12&u_nmime=140   ! 3 I K V l ~ î ≤ ¡ À/ñ4•4´4Â4Ó4ÙgÃgˆg¯g˚hht5tH                           u·

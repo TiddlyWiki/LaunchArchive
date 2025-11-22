@@ -1,0 +1,944 @@
+bplist00Ó_WebSubresources_WebMainResource_WebSubframeArchives£Ô	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUutf-8O&·google_ad_url = '';
+google_date = new Date();
+google_random = google_date.getTime();
+google_org_error_handler = window.onerror;
+
+function quoted(str) {
+  return (str != null) ? '"' + str + '"' : '""';
+}
+
+function google_encodeURIComponent(str) {
+  if (typeof(encodeURIComponent) == 'function') {
+    return encodeURIComponent(str);
+  } else {
+    return escape(str);
+  }
+}
+
+function google_write_tracker(tracker_event) {
+  var qloc = window.google_ad_url.indexOf('?');
+  var img_src = 'http://pagead2.googlesyndication.com/pagead/imp.gif?event=';
+  img_src += tracker_event;
+  if (qloc != -1 && qloc+1 < window.google_ad_url.length) {
+    img_src += '&' + window.google_ad_url.substring(qloc+1);
+  }
+  var img_tag = '<i' + 'mg height="1" width="1" border="0" ' +
+                'src=' + quoted(img_src) +
+                ' />';
+  document.write(img_tag);
+}
+
+function google_append_url(param, value) {
+  if (value) {
+    window.google_ad_url += '&' + param + '=' + value;
+  }
+}
+
+function google_append_url_esc(param, value) {
+  if (value) {
+    google_append_url(param, google_encodeURIComponent(value));
+  }
+}
+
+function google_append_color(param, value) {
+  if (value && typeof(value) == 'object') {
+    value = value[window.google_random % value.length];
+  }
+  google_append_url('color_' + param, value);
+}
+
+function google_get_user_data() {
+  var javaEnabled = navigator.javaEnabled();
+  var tz = -google_date.getTimezoneOffset();
+
+  if (window.screen) {
+    google_append_url("u_h", window.screen.height);
+    google_append_url("u_w", window.screen.width);
+    google_append_url("u_ah", window.screen.availHeight);
+    google_append_url("u_aw", window.screen.availWidth);
+    google_append_url("u_cd", window.screen.colorDepth);
+  }
+
+  google_append_url("u_tz", tz);
+  google_append_url("u_his", history.length);
+  google_append_url("u_java", javaEnabled);
+
+  if (navigator.plugins) {
+    google_append_url("u_nplug", navigator.plugins.length);
+  }
+  if (navigator.mimeTypes) {
+    google_append_url("u_nmime", navigator.mimeTypes.length);
+  }
+}
+
+function google_show_ad() {
+  var w = window;
+  w.onerror = w.google_org_error_handler;
+
+  if (w.google_ad_region == null && w.google_ad_section != null) {
+    w.google_ad_region = w.google_ad_section;
+  }
+
+  if (w.google_ad_format) {
+    google_is_zero_ad_format=((w.google_ad_format).indexOf('_0ads'))>0;
+  } else {
+    google_is_zero_ad_format=false;
+  }
+
+  if (google_is_zero_ad_format) {
+    if (w.google_num_0ad_slots) {
+      w.google_num_0ad_slots = w.google_num_0ad_slots +1;
+    } else {
+      w.google_num_0ad_slots = 1;
+    }
+
+    if (w.google_num_0ad_slots>1) {
+      return;
+    }
+  } else {
+    if (w.google_num_ad_slots) {
+      w.google_num_ad_slots = w.google_num_ad_slots + 1;
+    } else {
+      w.google_num_ad_slots = 1;
+    }
+
+    if (w.google_num_slots_to_rotate) {
+      w.google_prev_ad_formats = null;
+      if (w.google_num_slot_to_show == null) {
+        w.google_num_slot_to_show = w.google_random % w.google_num_slots_to_rotate
+                                    + 1;
+      }
+      if (w.google_num_slot_to_show != w.google_num_ad_slots) {
+        return;
+      }
+    } else if (w.google_num_ad_slots > 3 && w.google_ad_region == null) {
+      return;
+    }
+  }
+
+  w.google_ad_url = 'http://pagead2.googlesyndication.com/pagead/ads?';
+  w.google_ad_client = w.google_ad_client.toLowerCase();
+  if (w.google_ad_client.substring(0,3) != 'ca-') {
+     w.google_ad_client = 'ca-' + w.google_ad_client;
+  }
+  w.google_ad_url += 'client=' + escape(w.google_ad_client) +
+                     '&dt=' + w.google_date.getTime();
+
+  google_append_url('hl', w.google_language);
+  if (w.google_country) {
+    google_append_url('gl', w.google_country);
+  } else {
+    google_append_url('gl', w.google_gl);
+  }
+  google_append_url('gr', w.google_region);
+  google_append_url_esc('gcs', w.google_city);
+  google_append_url_esc('hints', w.google_hints);
+  google_append_url('adsafe', w.google_safe);
+  google_append_url('oe', w.google_encoding);
+  google_append_url('lmt', w.google_last_modified_time);
+  google_append_url_esc('alternate_ad_url', w.google_alternate_ad_url);
+  google_append_url('alt_color', w.google_alternate_color);
+  google_append_url("skip", w.google_skip);
+
+  if (w.google_prev_ad_formats) {
+    google_append_url_esc('prev_fmts', w.google_prev_ad_formats.toLowerCase());
+  }
+
+  if (w.google_ad_format) {
+    google_append_url_esc('format', w.google_ad_format.toLowerCase());
+    if (w.google_prev_ad_formats) {
+      w.google_prev_ad_formats = w.google_prev_ad_formats + ',' + w.google_ad_format;
+    } else {
+      w.google_prev_ad_formats = w.google_ad_format;
+    }
+  }
+
+  google_append_url('num_ads', w.google_max_num_ads);
+  google_append_url('output', w.google_ad_output);
+  google_append_url('adtest', w.google_adtest);
+
+  if (w.google_ad_channel) {
+    var chnl = w.google_ad_channel.toLowerCase();
+    google_append_url_esc('channel', chnl);
+    var pv_ch = '';
+    var arr = chnl.split('+');
+    for (var i = 0; i < arr.length; i++) {
+      var ch = arr[i];
+      if (!w.google_num_slots_by_channel[ch]) {
+        w.google_num_slots_by_channel[ch] = 1;
+      } else {
+        pv_ch += ch + '+';
+      }
+    }
+    google_append_url_esc('pv_ch', pv_ch);
+  }
+
+  google_append_url_esc('url', w.google_page_url);
+  google_append_color('bg', w.google_color_bg);
+  google_append_color('text', w.google_color_text);
+  google_append_color('link', w.google_color_link);
+  google_append_color('url', w.google_color_url);
+  google_append_color('border', w.google_color_border);
+  google_append_color('line', w.google_color_line);
+  google_append_url('kw_type', w.google_kw_type);
+  google_append_url_esc('kw', w.google_kw);
+  google_append_url_esc('contents', w.google_contents);
+  google_append_url('num_radlinks', w.google_num_radlinks);
+  google_append_url('max_radlink_len', w.google_max_radlink_len);
+  google_append_url('rl_filtering', w.google_rl_filtering);
+  google_append_url('rl_mode', w.google_rl_mode);
+  google_append_url('rt', w.google_rt);
+  google_append_url('ad_type', w.google_ad_type);
+  google_append_url('image_size', w.google_image_size);
+  google_append_url('region', w.google_ad_region);
+  google_append_url('feedback_link', w.google_feedback);
+  google_append_url_esc('ref', w.google_referrer_url);
+  google_append_url_esc('loc', w.google_page_location);
+  if (document.body) {
+    var scr_h = document.body.scrollHeight;
+    var clt_h = document.body.clientHeight;
+    if (clt_h && scr_h) {
+      google_append_url_esc('cc', Math.round(clt_h*100/scr_h));
+    }
+  }
+  google_get_user_data();
+
+  w.google_ad_url = w.google_ad_url.substring(0, 1000);
+  w.google_ad_url = w.google_ad_url.replace(/%\w?$/, '');
+
+  if (google_ad_output == 'js' &&
+      (w.google_ad_request_done || w.google_radlink_request_done)) {
+    document.write('<scr' + 'ipt language="JavaScript1.1"' +
+                   ' src=' + quoted(google_ad_url) +
+                   '></scr' + 'ipt>');
+  } else if (google_ad_output == 'html') {
+    if (w.name == 'google_ads_frame') {
+      google_write_tracker('reboundredirect');
+    } else {
+      document.write('<ifr' + 'ame' +
+                     ' name="google_ads_frame"' +
+                     ' width=' + quoted(w.google_ad_width) +
+                     ' height=' + quoted(w.google_ad_height) +
+                     ' frameborder=' + quoted(w.google_ad_frameborder) +
+                     ' src=' + quoted(w.google_ad_url) +
+                     ' marginwidth="0"' +
+                     ' marginheight="0"' +
+                     ' vspace="0"' +
+                     ' hspace="0"' +
+                     ' allowtransparency="true"' +
+                     ' scrolling="no">');
+      google_write_tracker('noiframe');
+      document.write('</ifr' + 'ame>');
+    }
+  }
+
+  w.google_ad_frameborder = null;
+  w.google_ad_format = null;
+  w.google_page_url = null;
+  w.google_language = null;
+  w.google_gl = null;
+  w.google_country = null;
+  w.google_region = null;
+  w.google_city = null;
+  w.google_hints = null;
+  w.google_safe = null;
+  w.google_encoding = null;
+  w.google_ad_output = null;
+  w.google_max_num_ads = null;
+  w.google_ad_channel = null;
+  w.google_contents = null;
+  w.google_alternate_ad_url = null;
+  w.google_alternate_color = null;
+  w.google_color_bg = null;
+  w.google_color_text = null;
+  w.google_color_link = null;
+  w.google_color_url = null;
+  w.google_color_border = null;
+  w.google_color_line = null;
+  w.google_adtest = null;
+  w.google_kw_type = null;
+  w.google_kw = null;
+  w.google_num_radlinks = null;
+  w.google_max_radlink_len = null;
+  w.google_rl_filtering = null;
+  w.google_rl_mode = null;
+  w.google_rt = null;
+  w.google_ad_type = null;
+  w.google_image_size = null;
+  w.google_feedback = null;
+  w.google_skip = null;
+  w.google_page_location = null;
+  w.google_referrer_url = null;
+  w.google_ad_region = null;
+  w.google_ad_section = null;
+}
+
+function google_error_handler(message, url, line) {
+  google_show_ad();
+  return true;
+}
+
+window.onerror = google_error_handler;
+
+if (window.google_ad_frameborder == null) {
+  google_ad_frameborder = 0;
+}
+
+if (window.google_ad_output == null) {
+  google_ad_output = 'html';
+}
+
+if (window.google_ad_format == null && window.google_ad_output == 'html') {
+  google_ad_format = google_ad_width + 'x' + google_ad_height;
+}
+
+if (window.google_page_url == null) {
+  google_page_url = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_url = document.location;
+    google_last_modified_time = Date.parse(document.lastModified) / 1000;
+    google_referrer_url = document.referrer;
+  }
+} else {
+  google_page_location = document.referrer;
+  if (window.top.location == document.location) {
+    google_page_location = document.location;
+  }
+}
+
+if (window.google_num_slots_by_channel == null) {
+  google_num_slots_by_channel = new Array();
+}
+
+google_show_ad();
+
+
+
+_7http://pagead2.googlesyndication.com/pagead/show_ads.js_text/javascriptÓ	O.êÿØÿà JFIF  H H  ÿá¬Exif  II*         ª       ¸       È              â       ê   (     ?1    ò   2    ø        ÿÿ˜‚      i‡    (  ¤       ¦  IM000452.JPG Hewlett-Packard hp PhotoSmart 43x series ÿH      H      1.400 2003:08:05 17:29:38 Copyright 2002-2003 d   d    š‚    6  ‚    >  'ˆ    d ss     0220    F      Z  ‘     ‘    n  ’
+    v  ’    ~  ’
+    †  ’      ’    –  ’     qq’      qq	’     qq
+’            0100      ts     È        –   ¢      rr       ¯         2003:08:05 17:29:38 2003:08:05 17:29:38 `;   0 |Òz/ áõ          
+               7  d               ô      ü  (                        H      H      ÿØÿÛ C 
+		
+ÿÛ CÿÀ  x  ! ÿÄ           	
+ÿÄ µ    ~ !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ    z !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? úÎxŞUWŒ ^
+Ö­¶œ«2”AÍzsgrİÌ*²JtÚô:=›Ë"¼;FHÏ-Q´_+¹òíñÊ‘¢xsriĞüÓÌxi¤ôìÔı+æûk6»o6a…ôõ¬‡eÕš©pŒ(‚ê}ÅsÍ„˜Víša·VàŒ×3•ÍÒ3ï´E¸Rpk9tIbC·Ô
+#+Jèèô½4Å,eò#Ü2}+íoÙnõ¥²Õ`–2‘·–ÑœåXà‚=ük¥Júœôhàt¢¨’' ÛÚ5,xÎ+;]ğíˆ­#¶ÔP˜Ñ·.Ã‚JÒ”$¤ºÊ1’q}LıÀºF…x×–öáîqµ$nJ.1Å6ñ4¾ÒşÕoh×R±Ú €OJêç–6¼Tİ¯¡‡"ÃR|¨µıŒ‘ËæKƒ¸óíZ1ÙÂ‰ò­c*—Ø˜Ó³³3îôâÍ¹NàkçÚ_ÅW~Ñ ÒìÛÊûvC¶y*1ÓÓÿ «MJèÍÃ[Ü¿Ún c…Ï5¬›R µDøœÒ*“Šä™ÛTJ‘PàõÎÑĞ‹H â®Eœdf¡1³VÆÚ3 Ü Šú»öq³K8æf1%FX»le# „Üc]1gU©ô¹ˆQ@^1^mñZ¶´Ğ˜¹0Ş—Gk TçŒóĞœV´ş4eQû¥ãâKµ%dmÁ½i£]Iag’á£+ø×_"[_´ovmØjQ!'?R3_~Õ*“Zñÿ \y66éª±#sÇñäf°kS¢.í#À!˜¼çšÚF;@5œB$2^EbG ÒRÎ1\ò:bÉã¿ğ)Ï½^ŠU~†¹dìvGRÒm<ƒÒ´ íjPÚ7tøƒ²õôçìåµÖ¢®øHQ\/«®":è†§cèj+s ¢€25­~ÛG¶•İ¼É‘r±Œåá^â½'Sñœ·÷«rmWÊ%‘•²êàƒóAã«hi©ËRwv:ıKTUİÅ´Ğ²ãvÜı:ú×?& ^6ıéóøUWÚ™ÿ €IÏNk­³Í±4Ú‚$rKg$–ÚÄ›­ÿ x¬£†bª~¿—zøoâ>ºuoê÷ÁüË‡Á Œõ•`Ş§UdsšB4­¼ô«·÷R!òâà÷5„™ê%v‘Öï6Y˜“ôª“éó”bG¡®ÍÜïŒSDag· ò+ Ó/ä'æ=+)JèÙ+3¤†ã(ïWÒè&Üšˆ²ä3UˆJ£w5õ_ìåsÆ§¨ØöNFÛ\Zí¦¬yuä›>ˆ¢¶125[iûÖÊäöõ¬;?XêVò=ÜßÙAr~w]År ÇÖ©#ÎÎÆF©2\Ù5í½Ì×–÷?.Ñ&Å+Îvgîÿ ½ŸÎ£× ±Óü35äÆkhŠ02—vaÊò@ÏpH=Ç8mècs\Ï×tëµº3İ#rLCn÷³ëşÃøŸ[]ÄÂ5ÜSÊr¹‘Pó ?5Õ'¦‡·³8ùu;»[½FÖÊe´‚ÚTHâPêÌsÀ!à@Îr@Å|i«LòÌÙ9y“\ıÎê+SnÖ5Ól”JŒ×>X‡_«zU[†i´ª CšÂ£²=
+zÈ¯!„aˆTCU‡?+ık†w{Œrqp“œ+gÔZ#ÁPW5Š×CW¦¦ÜDÆ±íÎi{;²Fzr}©ÇF);£_M±2å…{‡ÁÍvx«L˜¥•a•¼ŒpGëŸÂ»!>‡—VO·ë#Äº£éEÅÔHdtSÀÉ#ßÒ·2zWöı&y,'×.¶G!2,R¢¨e# m’3§<q\Ş©k¥ºŞhİ˜e…· `Ø7Û¼ ç³Ù¦ïkœÚrxëÃÒb’ëËºF@6®Ïò©àäœqùäsÅx›öŸ:–ƒeeojİœFÀü«µ‰ÀëÇ^¥%}D“è{‡ş)é–šD©ÉÕdc«nşñèqô5ó¿‰~ ë#Ùn,T4RÛ0r îzùW¥4•Ó8XÉ©-[/‹ÚŸ¨Á&¥ä3Û½«’¬»ÔŒñœ‘‘Î9çšùÆMJâÎYÚQ&nV(?Ùô>õÍW–2²;°ôä×3ØİÒ–I,‘åbÌÃ$ÒImÃ85çÕm¥;&eÏ¦+6]XšlZ\9ù‰¸e+hwÅ]\›ì‚?vÍ·Ór%båBã#Ş”uc–Èé-ì¡x6•ã­g	$µ¤>æíÔZrØ†Í?Xeu‡Ê½ÏàµŒ^'ñ–‘e+0ˆËæ¹Cƒ„°éÓ­h£k4rÔ•ÓLûQõHtı¢öäY–5’b¨wHÉàs€>¿Zò‰ÿ ¡Ó'k(Ùgå‘²ß7q€~ï¿NµÙÊyîièrZ¯ÿ v‘j«­Í¼l7G	”´\çr ps‘ù×“üJÔoP\éßk­Ù#Ä6ÌÃ+–ÂÈXî…yõ=:Tõ±š<“U¹&(â7fìñ·×æë&m¤•æ>D1Œ1Ã<a‡CøV·±gÒúÇ<C.«$ºÅ½Çò«ôÏNÕGÅÔt»˜ìõ!(ˆ®Qy 63œ}+êÜéÎVƒÜù¤¥®e±âÿ  	ªÅkåÇ„Á'9''óÍy~¬Oš‰qé_)[LD“î}¥4¾§M®«õ:Ë ©g@¨ÜóŠç¨:jìfÁ×¥8 ®	ñ@ê r4è\{{UCRœlmØ·n´³D$ùI ãÖ®dò–¬ì”°ıÚ¸ö¯qølúMş­ª[L¶×–Mäæ!ÜÄ/ 3É?Û½LE’¹ô¶£¢Zø‡L‚;İi1*3£‚â@1·ÉíÛŞ¼óÆ–kK‹5V)Äk3¢* àm}9üë¾M_CÇí©åßlŠ©$†(-eX	i"Ly£›!›¯§ô®ÆSÍ{|×Åö‹yşãÃ?PHUå[
+sÏoz£Gœ2O{±`@|¡ºdŒyü+2]1±q×AP€i 1V¨Òçêº¤ojÖsÍúÑÉ"&òx^Ü•óçÄ)ïtÉî¦ÅÅÌ° c×$3Ü~•ëàeìæÓG\é4|ëñ%/5Oìıbê T0*À¤*…é‘ØœŸÊ¼rş ¹kÍÄÅª×>‡QK£ÛOÄè4»±=Š‘ÔqS“\“:i­EšqÃ6zpDI·©5$A‰5¥%¥Ç3jÍ•E_m¬U‡SÖ”äµBQĞÒ°„HËÆkêÙ§HS©j“Ì‹$khkŒŒ—¡ÿ v-Î,Z´O¢µ;û}.Ñ®.W(½ &¾añßŒ.µ½^vH#’Ø@ãîçß>İk¾Ç7Ğó}BK«VUd•›qLdíÿ …`O¯‹K+ËK‹š)ÔìlÑ8Ï*Äd`àşŸFd4¸ÔZ;©$UTË/
+¹ê íÿ Ô¬™€»–c½bT’IàŸ`:Ğk±÷¥¾±kâŸ\É²A-¼î¶Ó;=HPUÁõíÇªMü7ñF¹šæÕšë"6‚i¥³ ®v¿8> ÷×Í(j?–3vkSÏ¾#xÆîÁìí´WÓ“”“ù¨bVÁÚYºœ‘Œğ:q’sòw‹´)ôƒ=–¡	†xù Öu¤åi7vuá]¯Xæü5qû¹¢'A­–p;×Wd{·/SÕ‰¯6lõièŠ³¹@ÍÈ¨ŸR“pD[ß5¢“JÆ–RÔÑ·½*ŠNTŸÒ¶´ëtx9ÅbİØt:İ*¸f¾–ø5Õ¾¥qUËŒ\dŸæ+ª†²<Ü~¹éŞ ñk‹´W‰A-–ášäÉ¨\»Ájæ7s°í'iôüö¯Dùû·«mğïXÕPİÅ§Ü,ø„E‰ú
+óßxböÅ$"€Ì¥ÛØcş‡¦;T©+w<£XÒ®´õgıA¸0à„şGjYà‰- H"H£¡óX1.Ø€¹­b¹Š”­©ÕY|RÔmà‘&‘^Iİ|ØÒİ6:€FyÈŸNÂ°£øŸ­Úêmym©Í ·²¤ç*x=O>õ¶&IF)ƒ §96{—†?l{+iâÿ Ë+HåâÉ£
+2?çS/®{ôÇ¥x7Äi^1»iô)"hc.‰¶#l,J‡_P3ÏNµÎ¬ÕË9Sª&Ñ§1]Í“Ó­të `2z×%}BäË„êi²jCÁ"¸d¶=JåR7$TÖûkÔö­¨Ö74à¢ #ë]V…,eTp	¬’ÑŠR±èºDBSA’q_c|8ğ4šw„ì|ù2\/Ã¿ÍÓôÅtá–§™—2Q4u¯%ìĞ‰gc~lALşÍÒ4Ki&¼‚Õ-ãm‘’›Ü°è¥v´å¡ã[—s†ñ/‰¯ÌØè·rÜÌçsMèÄj{mcÏ×ŒW”_ë—úKji%ärG2fâ+ˆ‡ïzŒ©ÆFzp3ïĞ×u<+ä¼9â•£©àş%Öâ9-|¯.7“ÌXÎß•3Î:{væ“Á:•ÕÂÜYÅgivUO$mPz`uc×z){’ĞÒªR¦ÎoVñ›§Nmü35ÓHˆRk‰p71`€dœ÷çÚ¹›d¬ÒÈ@n@ôú×—Z¯<´Øúœ%eOŞİŒ7¹À,MCktÚ{ÈÑ()!®zoJÆ5yYÕWªÇÌÍ†õb¸“+´·'<WKgz²Æ­Õ­Wty±N.ÌY¿h<²Ÿpõ¬&»fgÚÛzW¬ÎúKBdmÀnb¦¯Z¢ùŠÒ8*=)=Õbáâš0#ûÀğM[Ó.ÙFrÂœİZë•\÷O†ºmÆ½©YÚÄ¤´GaÜşU÷F“¤N–q#ÊÈˆ¡T@8¯BŒyn|ş"N¤ÒF¤—ööp|ò‡d‰¯/ñ>©s¯Læ-ğ@Puìs^“o™V*¼TyÀêyÑQ€v·Yç˜ÈT/wæ¼³ÇZ…©Ø‰yı¯$-¾Y„œßÁ¸`tã äwÁ®ú“PVgŸF.rº8rÃIÔ¬ZDSıøÉ_›vxR¹Ï§Óñ5Èé×vŞ×a¿B}˜	$·”Ÿ3 …š>œ?8ö®FãtÑØ¹šq‘ãWS•˜ÉÇ4ä»ó—rOZùÓôGŒì§äù€ìiÉqü¹¬Ş¦‰	*Ep0@?ÓéUã7Lvè{wãU	ÛFs×ÃóûÑÜÕ‚ò;ø‘dù¶õö5¥ÙÕ0 b²”}ã‘;+yq·1mÇ¡§ù10ùãæ›ge9İy– ‚.Åšİ°µ‰pÄÕA«èaˆzT~ÌÚî‡¥ê«y,S‘;d“Œâ 3Àãë_QI¨Ïp›wa}¸Í}QqRgÄb«Î5ËMâ]=µ	,Ê›” <r{SU&I¤¸"Ğ&@ÉÜ2@®şusËä”¬xÄ\.©(šì\K²§îÁÇœdã©5åRê-e©F±À”îÙ'ÌNpÏæÎ|îìö)ÁB6E¨|9<>#}±b¹w"7Xr£…lƒÈ#>õñFÕæÕ¦¹¸°o>ıÙ\‚±‰^%Ã€£»&>RK'4F^é®tßcç§%³ÇÊûW‰sôRXçÇ©§°WïRÊD`Èœ˜~µ*\#'ĞÖlØV‰%ù”Pp?ñ©bš{r71@íÁÿ êÕ)ôgl?3æã¿´ŸzœŒR®©&á—àSq¹Â®[-BI8·¥tO¨-¨f ÉôAkc
+¯BmÄÏÒ»6Æ'<û[áÇ«[í>Ä2yÊypêYsÓp?Ïó¯mIòY3çêAsó4wWÿ ­â…uæíeÜd“;İ²rF8éÍ]{k9mRşk™&Œ	"‰CÊ¼OÓ·_Ã¥c)½Œyu¹ógí%w–ò(]a¹;âfQœ	é×òç½¼½8¯J.ÖÛ°ŒA w61ëKšú³E¶‡cs¦İ|>Ô.¥}DiÓ,tH£áGXó82FzŒdW?ñ+ãW…ü_àèôÈl5	u¸6†îIö%»GÑ‚Œä¿ËÆ	$u¥ó;Š0»R>[a"ƒšGÀô>ò.èŒŒıiRB§¥–N²ÁéCF®3Y-FaÓ•;ªTºÆ†=KÔ²fMÁãüş•Z7TlëÏëN3åÑœÕè*ŠësFÊìÙ©&2O¨æ«_êw7¡"“jÿ ²y5Ñ^÷<Z´§Ğëk‹ˆT<‘º§@Ägë]ÿ †|dö±ÅnV2»÷nÚ7çıî¸öé]ÉİdáÜúóà§ÆYµ»?ê÷>bc·‘ˆWä`!>™ÇÒ¾‚¸ğäwhË%ü‘SæH3}ÎqùÖN\¬äœ.ì|åñ
+ÿ Eğö™{a%ÜZ…­Û,+=]sòH™å{q_=jş8-ÿ a´‚ÚY3ËŸ™Ië· vÆ P®õ`£c–ñ'Äm{ÅWO6­w5íÃ ` õ ÀíÓÒ¹ˆ¼3«j.$Tõfùr*'Z‘V¶‡é×Eã õª®Vu™õ˜ióÓLw¦0ÏÖ²;ÈàÔÑÊç¥C4DÄ8â‘•X`ŒÔ\ÖÂˆ?+SÅ@,E'¨l]S‘“ózypí5ˆl™.ÊaI;0
+›íê µ_8}ÖFÀüEtS¨âìN5#ÌËº‰ï,å
+›ÄÛ²[Ÿ—ñ¯TO‰:¯l-¥u1Qò©'>¤šî”¢šR>vT¤ÓœJ3i·Ú‡3Ëå)íÔšÌ·Ñ,îx¯\ÈñFO§Ûó®˜®kªg2‰|Ëe§  ·XÁş"Õ­g'ƒ'¦Ñ\K{²¬‘ÿÙ   Qò©'¤>îš¢”ÿÛ C 		
+ $.' ",#(7),01444'9=82<.342ÿÛ C			2!!22222222222222222222222222222222222222222222222222ÿÀ  – È" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? õ¼+
+ªP=*$So?ìŠí36à0Ê­Giõ»‘Ê¢Ù&"ÆşùÔ$áGüU©c`¤(ªmÔŞåZÄójvö¨²*{‘^SñÆĞİ–ÒtöF‰Ne˜óAíVş x•¬á:}³âGûíí^C<…ßäÒ±q¼·#ù®$>™ëŠµ*ƒ ÏÒ–Â%9j–ÍìoÊ›‘íùSãKY¶jîoÒšS=qùS€â”
+‹•b¼–Á‡AùU³e$ÇÒ¶ÀÈ§ˆÁê)&;°@MkXÄD£$ŒñVİ3£5nPügÕ¢•Ì¤Zøet%²¹„®ß˜:‚:ŒWŠóï‡Á$”&ÅƒÕ»d{W ÓFaH@#dRÑL„AÀUüª§¤[ê<ì‚™Á«øÍ-R“‹ºŠjÌÆ³ğå½Ğ¸té÷2:{Ö¬²,14÷Tf¤¨æÇ”ÙéƒMÍÉŞBQQZªx–}OZŠÂÈã-ó¹8h¨4ûxu	¢’Ü!²¯ŞùQZÔ’½ ¬Œ “ø÷:³w|»±Æi¢õFqÍbLNáØåP­ñƒ†{Tò öŒèøHØ¾*R#Á=8ï\ğÕŒ[¥hË(aÊŒãğ£RÖa]"æpÀ˜Ô–LòxÍKCæîxŸµ½ñ-áıZ9E÷½rÁ²ù©¯§2ÎîNK1,}ê¤Gsõ¡šÁhh£|´L^E-ÂÆ8äÔ3TXÆy§Va¿aéH5•ÑÃà+6;õcéWcœ69¬ÙiqR ¨‘²jT9¤;jåºÕR2­\3 j‘œMğâUHÿ å¤{†}TŸ˜Ş×Ÿü;Â\İ&91‚ã^Z#¢Š)€QE5Pe˜îhÕÍxŸW6ğ­¼,C3a›nEhŞê†‡ÌÛ÷Y¹Ç­rñY5üÊò¸˜%Y\áßëV•µ3”¯¢0ü:ZûZD(bäe‡ Œı@¢®Oµñ$<¦VóYIÀl)VsĞ­Û"Æåä×KåH°£ vâ¨Ÿ4Ë¹­Jî9áwøV£o+Ê¯>I `\u5™<ÅPB¥•3dƒíêkFdEäqÊvÌ ·!
+ƒ¶5ã@
+kÔ‹Ë.Åe|óèGÒ›-İÃ–‹ËißxÆ<ûW1ã÷]
+ßN&BRRw1Æ@Á¢³l´?Nµ5¢gæªr’Ò+UZÀ<Ìï#åŒu?_JLèZ!—@
+;õª^ãS»;ıõÊš(Éâ²“5ŠĞŒÀéP›6ê¹«-pƒ½ ¸Rx?‘¬›6H¨bt5jİÈ<•(“xÁ9ö4İ«œƒJ÷Æ„2dTèøïU#F
+)ìØ^´‡râÜïW¬ïñ+"ynqWí `FkHØÆwg¯|;¸[Ù€a»ÊéëÈ¯E¯ğÍìšf©mp÷\gÜ¢½Ğr3Z˜2IR!ó°Î3ŞŸ\¾©¨™u/²dÙƒò¦»_x…”bØ®ã¤úÿ œÓSÄvi„4Àgj¸î*¦lŠİ‰ ÚÀúûÿ JÆ	-Éi“{;ó@ÏËõÇåNä»´º´ó xÕÜüªHÜÇÔ÷«– ŞX1‡Bï"qù×&º›¥Z†œ[ïãËŒç=ûô¬qñ>(RèD ,Jë—¯\şïq-Š¯Œz½´ñÄÂ°&I#'ïÜgÆŠäµJçÄHÒ$øHc' ©Îx=h¢Ì,™ï—×¶e’wºDD3ƒÚ¼ÚûÆ6“¬±}œ;( 0NÀö5¬ês^Ü,Vğì‡‚Ê>PN:š¡$Q,Lòæ€#àWgÕí£9½­õ"‡ZHd„ÂVIË xnœéPøëÄ‘k”mË˜%}ü}àG\Ôw0·’çj(…KŒ§?Q×šä.d’Vo4ä¤Ömc¦7QstE½·N~ôÎß`?­_€³ÄºI¬©B‰v¨ã=«r$jÉ³dŠì	cïUe‰›‚H«ìi„gĞÖÚ&aµçïT‰fzîwÊµ(Œ{Ô]šX¨¨ÊØ'"¦R7×Ö¥1/Z~ŸZ©bÚ èw¢Xü¹‘v±©¡88©¤E,…†Fjš°Š¢ä+rjõ­Ú–<Õl7`‚1ëVb´î…bes°ğõ¹Ôu;[T8i$>ƒ½{’<á&eqığ1î+Å¾”ƒ]K›‚Å F|"–,q€>µê¯¨‹­;Í‚Î„ #-?ZÖç›³/ê7ĞYÚ¼“IµGP?…p—(·V|~lD09Ş´.ôíY4TY¸ûMÆxh8Ú¾çŒ×ÖvĞÜèBÊs¹†ş~‚„6twzÄRæÚÜ²DÙ-»‘¼g }k‰×µK¹­šØƒiLIˆ®?FÜO<ğ~¹­û}Ac²\…TVaº8òŞçÛ¯õ®;TšK‰œ—ó‰"Bs¸‘íÜùæ„Î¸f¶#0ÚœƒŞ²ÄÒ™Ø*,ŒÜà®*ÄÎ	d$à7ª’LÉ2íÙëUq‹%áƒ÷fCª’~\öÏz+:ü»HKÆ2Í4T92’GÓSø+O•üëWıÖŞ„î…¬iúm­¢ZC…¸FË|]lú´6qà#}›hËB2¥`ëŠ²¢´w1M1lù€Ç×ší¥RN^ó8ªÆ){§ªi²6™vÀ¡‰bb2@9úW›Nàqœ×{%¡—Ue”ÊĞƒĞ)ã>ÕÆj–FŞæh@ß)=Åg‰W|ÇVj1p}L#ş¼ë[q¶c±îÅ‚F_³½¸ö®u±»µÉ›“M¥Í²fÑAŠ^”A5›5Hi9¥R ¨Ëe±R(ÇZ¸ŠH³Z+¹*¤NZIhAGãìjÜ(	û¿•WCÏ~ÕrÂ¢âqĞî<k4òŞÛÛ¾Ç’xã#¸¯M´Óµ¼@ÒÆ»W?tZã~B‹=Óñ¸Fë]ôÒˆ¢gë]Øâ’W¹Îë­
+ù÷·+0çldmã\.©6çÜ–éL1µkcÄ×—W’s…@+—h•÷$cú
+v3d-,ÑÇ‹vRêIŞ>ñ„w¬ûİ3Ì¶7°f8Aıâ«‚UºLÓå…‰fFÛèzf³î¤¹‚6O1‚:zõ¦?–ªJIË«Ş˜¦İÌ©(Âà/*G$ŠL™ óÁ9ïPfevĞ~o\ĞQÌvÁªÉÙ¯ÒŠ–kk™h¢‘c?)aÆH¢¥¡Ü÷í3X}BÚè?—+®ØÈÈ*Tzÿ õUÑõkuÕ?²î­£&/lÇ%¹ÚOç¥y¿Š.#YĞÇ#(]›s¸zcªwŞ$¹’@!¸xãÇÊåÇÂ·Ÿº®e9JÇ¶jl-´2y¸×ıœŒäuúWœø£@–îY[ÇoscÊVÎä# Õ]âEÎšé ¿i„H­½Uw€88õãõÔë_|1®èòÇÇ—p¿2Eu#ßß§Zk«éÊç‹jiˆÈ#‘UôÉ>VCZºùY®î$ˆ(V%¶ƒ>†¹ë++†mtmMİÍ06i@æ°“ÔéÃÁÉ§v¦‚ZC:õŸSTô#c±óLiä'´:ˆMÎMXÓ.C#mËŒ°“üÀsš¤’f=Õ=«†“j7a{.à­[T#B×i#+fÖ=Î -ÉmXï<’Ei<Ãì§ÿ ®ºyî¦pÃñ¨ô=[m"İ>éeÜ~§ššûH’HJîçë]kcÍ•Û¹Éj×Íq.ÄŒ^„r+.+;›Ù
+ÇnìÌpOl×wo¢ÅlDbYçqşÂ¥¹òm˜-¬–ĞËØ¢ìV8©¼%{%¥…—?ÄXm_­r:Æ›"³,dmFÆLûJî5}^êîå–	¤H”`î9R~¸éX¨İÛXKbÓÊè‡¶jÔ%k“ÏœöŸ41¬¹ÌL7gÓëL¤û&b X»*Õõğ0Í‚"s’ä7øVm…á‚ënÍÙè˜'&„»½•f¼ÒFŸ37_ÒŠÒÕ4“§‹x0cnÙÇ~zQVÔQ1m¢­Õ›ii—<€2Â-·Ş°®îZ[‚êŠ¡İQ€*•ÅÔrÏ#,ri|àËøŸZæG#Ó¥AAy–|Ö†ã!çÔUs#É$P²qÖ³æhÕÓOrÜ
+–¾SŸ›iú§‘¹ëJpÀôªï+nCøµRû˜ÊƒZÄØ‰Ã ©Ëíˆ¶sŠÄ·»(Û#ëWÒu‘v¨–š’Ù/x'?…WûAni«;ŸJŸìcŒu¨¹²²–8§.YÀÅ(€ƒÄT‚9B Ñ$\XÀˆÅG”r)ˆ³ T¢''’?
+2Zö70»oÂ×Wğ"Œå‡å\-„².kÚşèIö&Ô§`ù3ZÆ8êNÊÇm÷€Ç°«h¥ãıàæ™çÅa9ôªÉu!ÎJèPläu#·©ÜÁk#ın0 =+Œ¼I¦¡õÀÉæ·®â!v9Èîk>òKKkv‘Ütè95Ñ(œÓ¨æô1æ¢CI¸^ŒJ×+¬ÆRuIJB_‡QĞÇ¯áWo5{˜g-nËƒ”P2ÇÜÖ7Û%Ûs0Vs¹Ç_ZR¨‹…6µ!¿ĞÙv‘€(#8ÿ çZÙ×Ê™k»P3•‘{~5®n\7«ÁœÁ8ôü)u›HK[fÈè.ˆÊ,«÷HaÇ5ORõZ3¤°x¯¼+ˆİ™€>u”tçÔ+”ğî©s&¬lÊı©·2³mÛ ë®(«æO¡‹¼C»ëQ«•4¤M#¼ÓélK¼HWƒÍD:SÃç­ æc¯œpç¥4àŠfÂ9R(‘£W÷şbš¦H[‚Xzw¤W‚?x|ğy¢í*q‘b+¥8
+yïV|ŒŠÏ1«œ÷ıiA’1€wCÁüèĞÊT¤*°ù‡ãN££ÖVò_’Tö—ÌçœñE‰RhØFıêµ	P}MbE)f©lJ‚íß¥ŠRv5c˜Fwôxå †+Ôá$AÈúõã·›¤Ú¬@wOÔn9®ºO”à¯}Ïª!ŒÏÈ˜(Ã!³ÁË_ø‚TÔLvà<1œ1şõr>ñÜ¶J¶—Lf³n	äjôØ¡²ÕlRhâŠ8\Làÿ .kGQ£ŸØ­ŒáuÅ¢H²Äå‡(îšÏñ‰k§í‰19è:JÔMÚÚ&k”}¤ü€McëÌóC·†4²g“ƒÔTJ£c4;º™Úv387|Üu5–Q…Óe·¤x9ƒÍljö²Z\í”—€9Õ•g—HcaÒXcŒğO¶jy,iDb»ÔÇØğÌe! ã¦OãZ:Ç…¢Ô,f¸[„ûR.aÃ àdd/ó¨µm.×G½_´Æò$£,Xñ¼éÎGåXV¿õ'·³¶¶^»—vÓëB—byw9[×Hîà»µgÛÀRQ÷¹úóøÑTïõ	/nå¸—ærí´`n=x¢‡#ND÷2U÷
+STà—rŠ´­‘X4zñ•ÕÂÓ±IRP+SÃTF”5&R&À4ÂœR+sRqH¤01^¢¤IsÁäSp)
+xàÒ.†?CLhxùN?QL‡z•KzÑv‰”·	1J“ô©d¾!H )‹“×÷üéó:	ìÊ^d„äƒëÒ¬Ç3!ÜT»ğÃşu/˜²a\_CÚ´UL¥†}©a¬Hˆ‘
+÷q^ƒáMc ¶2“m&7+s·ÜzW•í¶æV‘Y„òOiª»c¥itö9¥M­Ï«c·î¹şPPîì{ûÖ>¿¤ZAd.ŞêH¦WQ±Ê=7gµxş“ãMR5ŠÆŒmØ¹nÙÏœÔZˆuEÊÜ]Í?=?*Z˜¸Šux­.NcA~ÈO-ƒG´÷SêEq—ºÜÒA²(â‰T|Ãõ]\rFlÔvúbÎ‚G‘ééPçÅ+Ínòî_2âæi¤«3“ŠÎ6÷WlvÄÇ=ñÒºu³²·çb“NyÕåÀ³è‡c›}åmYØeÇEè­‰/FìOĞQSíP±çvìCb¯#QEo=Îêİ&ŒQEft¡1Í&Ú(¤Pb„ÑE&4.)ET”8S‚æŠ(<d{ÓÁœQEÏ|PIÍPÆ„Áæ”ºg{F	úÑE4Ù3„^­Cpò7\ÕÖè‡íP0 nCŒôQSQèrÖK”ÕkS´ÕˆÊ!@ääh¢²‹9Â<RH¿+*ı'öyà¼›³E2“$ØQHéETİÿÙ_/http://www.latedecember.com/common/img/davy.jpgZimage/jpegÓ	OjGIF89aX  æ  øñèÿf  CzÿÿÿèÜËÈµŸïæÙíãÕìâÔîäÖôëáóëàôìâõíâòéŞóêßñéİñèÛğçÚBq—¶ÃËÿ³€çåá!Z‰O„ µÿÙ¿ÿ  ÿŒ@S}ŸM€×ÚÙt”­ÿ–PW†2f<l“ÆÎÒ<l’ÿpc‰¦;k‘Ap–µ¿Ä•«¼´¾Âµ¿ÃùàËÿÆŸüšWÒÒÎµ¿ÅÕÖÓ;l’ÿâÏJv˜ù–RÄÊËşnğÔ»Kw™—«¸¶ÀÆKv™ÕÕÒÄÉÉ³¿ÆÿìßñÖ¾Z€ù•Q†¯‡Ÿ°ÿoQ{¥´½ÄÊÊx•ªi‹¥ÔÔÑ•©µÿƒ0˜«¹äàÚ,aŒÔÖÔKv˜-b‡ ²x–«³¾ÆÿõïhŠ£§¶¿–«¸¤³»´ÀÆÃÉÌÿŸ`–©¶ÃÈÈy–¬jŒ¦Ju—i‹¤³½Á                                                                  !ù   ,    X   ÿ€„…†‡ˆ‰Š‹Œˆ‚ƒ“”•–—˜™š›œ—ƒ¢£¤¥¦§¨©ª«¬¨	±;Fµ¶·¸¶F;±½¾¿ÀÁÂÃÄÁ¯D:¹ÌÌ:DÈÑ))PÑ\)g_ÑÛÜİŞßàÑÇ8Íæ¸8Üi)Û)GG"áòóó¯çù¶÷ü-5üj´!@Æ"È ¹!Án`Ø‚JA€3j¼÷*Bf!*ˆ)æ„9(]˜@ÁD+=,Ac"ˆ¬4)²DD.\ˆÂ²¨Ñ£(_A€€ë„†P£Ø¢ÙÒ«+L\…`Ë
+L@X!V€“~xÉ" íŠ¬[ÿãÊ»õ•¸Jİ…Ùİ¿3Hüu@bÆ_Oz&á¡‡9rˆ ,x°åË˜ÿ¾zğàVˆ½ a0ãLúŠ)¤Iø mÆƒ€.Ê ÂÃçÚ€ø Aº·ïßÀ¼Z°àV…¨08(ÿu3âĞ£K‡NcÊôè4h\ßÎ]ú+
+ŒG­ZëÄ¨&q_Ï¾½–0íãËŸOŸş+ÄGµ¡A¯TÜ‚ß€J¨` Bà'„ *èàƒF(á„ø½Ò@úZ·\èa[ 
+PE`0èá‰(¦¨âŠ,^ø
+  d¨¡TÚãm`Ad  LpãDiä‘HÂøbÿŒ¶·_ıÙ@ã-Dæ =ş$Œ Ğ
+ÀXÂ€A\N$| c& dà%D.™!yEUc-Uö„	¤ ¨y™ˆ’yAœÀè%¡mQ  \0Â– ´õ¨¥CêÙ$rÊ•Ê~R9dˆeÂx¨``qZğA¬ZF
+ ™%Ğ*€¥›ºIf˜m}0g¨ÀØçŒ{hãª¿R°)Z
+ùj¢Ñrj¥•jZÚVé­®EŠj‹Ìj€K ®æøêµİ^»­®İväøºie¹É2i‹SÌ AzÏâ¨kîniA¬³Öz+¹ÂÈ«¯À
+PÇ»FšëÙHWàìºĞâÛš@bà£¢ŒJ,ÀJš)™¿€0°ã¾yö«>DB:òœ›¢¹ãÏb’‰¥®¨YsÌ2ÃÜ›@œq¿1ìlNIf$Î0Ö«5¿0¾„Õ¹$ñÂ×_³`&ˆ‰BG»‰6²7¾P5ÙµÄpöÜYóØxÊ"µ|ß¸dáˆó]ÀŒËxøå˜g®d$tîùç ‡.úè¤—núé¡G¢úê¬·îúë°Ç.ûì‚ ;_-http://buttons.blogger.com/bloggerbutton1.gifYimage/gifÔ	UUTF-8O:c<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><HEAD>
+  <TITLE>Davy Mitchell: Python USB</TITLE>
+
+  <META http-equiv="Content-Type" content="text/html; charset=windows-1252"><META name="MSSmartTagsPreventParsing" content="true"><META name="generator" content="Blogger"><LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://www.latedecember.com/sites/personal/dmitchel/index.rdf"><LINK rel="service.post" type="application/atom+xml" title="Davy Mitchell" href="https://www.blogger.com/atom/3264159"><LINK rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=3264159"><STYLE type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?blogID=3264159");
+</STYLE>
+
+
+  <STYLE type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Rounders 2
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     27 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#ccc;
+  margin:0;
+  padding:20px 10px;
+  text-align:center;
+  font:x-small/1.5em "Trebuchet MS",Verdana,Arial,Sans-serif;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+
+
+/* Page Structure
+----------------------------------------------- */
+/* The images which help create rounded corners depend on the 
+   following widths and measurements. If you want to change 
+   these measurements, the images will also need to change.
+   */
+#content {
+  width:740px;
+  margin:0 auto;
+  text-align:left;
+  }
+#main {
+  width:485px;
+  float:left;
+  background:#fff url("http://www.blogblog.com/rounders2/corners_main_bot.gif") no-repeat left bottom;
+  margin:15px 0 0;
+  padding:0 0 10px;
+  color:#000;
+  font-size:97%;
+  line-height:1.5em;
+  }
+#main2 {
+  float:left;
+  width:100%;
+  background:url("http://www.blogblog.com/rounders2/corners_main_top.gif") no-repeat left top;
+  padding:10px 0 0;
+  }
+#main3 {
+  background:url("http://www.blogblog.com/rounders2/rails_main.gif") repeat-y;
+  padding:0;
+  }
+#sidebar {
+  width:240px;
+  float:right;
+  margin:15px 0 0;
+  font-size:97%;
+  line-height:1.5em;
+  }
+
+
+/* Links
+----------------------------------------------- */
+a:link {
+  color:#b30;
+  }
+a:visited {
+  color:#666;
+  }
+a:hover {
+  color:#c63;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Blog Header
+----------------------------------------------- */
+#header {
+  background:#710 url("http://www.blogblog.com/rounders2/corners_cap_top.gif") no-repeat left top;
+  margin:0 0 0;
+  padding:8px 0 0;
+  color:#fff;
+  }
+#header div {
+  background:url("http://www.blogblog.com/rounders2/corners_cap_bot.gif") no-repeat left bottom;
+  padding:0 15px 8px;
+  }
+#blog-title {
+  margin:0;
+  padding:10px 30px 5px;
+  font-size:200%;
+  line-height:1.2em;
+  }
+#blog-title a {
+  text-decoration:none;
+  color:#fff;
+  }
+#description {
+  margin:0;
+  padding:5px 30px 10px;
+  font-size:94%;
+  line-height:1.5em;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+.date-header {
+  margin:0 28px 0 43px;
+  font-size:85%;
+  line-height:2em;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#810;
+  }
+.post {
+  margin:.3em 0 25px;
+  padding:0 13px;
+  border:1px dotted #bbb;
+  border-width:1px 0;
+  }
+.post-title {
+  margin:0;
+  font-size:135%;
+  line-height:1.5em;
+  background:url("http://www.blogblog.com/rounders2/icon_arrow.gif") no-repeat 10px .5em;
+  display:block;
+  border:1px dotted #bbb;
+  border-width:0 1px 1px;
+  padding:2px 14px 2px 29px;
+  color:#333;
+  }
+a.title-link, .post-title strong {
+  text-decoration:none;
+  display:block;
+  }
+a.title-link:hover {
+  background-color:#eee;
+  color:#000;
+  }
+.post-body {
+  border:1px dotted #bbb;
+  border-width:0 1px 1px;
+  border-bottom-color:#fff;
+  padding:10px 14px 1px 29px;
+  }
+html>body .post-body {
+  border-bottom-width:0;
+  }
+.post p {
+  margin:0 0 .75em;
+  }
+p.post-footer {
+  background:#eee;
+  margin:0;
+  padding:2px 14px 2px 29px;
+  border:1px dotted #bbb;
+  border-width:1px;
+  border-bottom:1px solid #eee;
+  font-size:100%;
+  line-height:1.5em;
+  color:#666;
+  text-align:right;
+  }
+html>body p.post-footer {
+  border-bottom-color:transparent;
+  }
+p.post-footer em {
+  display:block;
+  float:left;
+  text-align:left;
+  font-style:normal;
+  }
+a.comment-link {
+  /* IE5.0/Win doesn't apply padding to inline elements,
+     so we hide these two declarations from it */
+  background/* */:/**/url("http://www.blogblog.com/rounders2/icon_comment.gif") no-repeat 0 45%;
+  padding-left:14px;
+  }
+html>body a.comment-link {
+  /* Respecified, for IE5/Mac's benefit */
+  background:url("http://www.blogblog.com/rounders2/icon_comment.gif") no-repeat 0 45%;
+  padding-left:14px;
+  }
+.post img {
+  margin:0 0 5px 0;
+  padding:4px;
+  border:1px solid #ccc;
+  }
+blockquote {
+  margin:.75em 0;
+  border:1px dotted #ccc;
+  border-width:1px 0;
+  padding:5px 15px;
+  color:#666;
+  }
+.post blockquote p {
+  margin:.5em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments {
+  margin:-25px 13px 0;
+  border:1px dotted #ccc;
+  border-width:0 1px 1px;
+  padding:20px 0 15px 0;
+  }
+#comments h4 {
+  margin:0 0 10px;
+  padding:0 14px 2px 29px;
+  border-bottom:1px dotted #ccc;
+  font-size:120%;
+  line-height:1.4em;
+  color:#333;
+  }
+#comments-block {
+  margin:0 15px 0 9px;
+  }
+.comment-data {
+  background:url("http://www.blogblog.com/rounders2/icon_comment.gif") no-repeat 2px .3em;
+  margin:.5em 0;
+  padding:0 0 0 20px;
+  color:#666;
+  }
+.comment-poster {
+  font-weight:bold;
+  }
+.comment-body {
+  margin:0 0 1.25em;
+  padding:0 0 0 20px;
+  }
+.comment-body p {
+  margin:0 0 .5em;
+  }
+.comment-timestamp {
+  margin:0 0 .5em;
+  padding:0 0 .75em 20px;
+  color:#666;
+  }
+.comment-timestamp a:link {
+  color:#666;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  background:#999 url("http://www.blogblog.com/rounders2/corners_prof_bot.gif") no-repeat left bottom;
+  margin:0 0 15px;
+  padding:0 0 10px;
+  color:#fff;
+  }
+#profile-container h2 {
+  background:url("http://www.blogblog.com/rounders2/corners_prof_top.gif") no-repeat left top;
+  padding:10px 15px .2em;
+  margin:0;
+  border-width:0;
+  font-size:115%;
+  line-height:1.5em;
+  color:#fff;
+  }
+.profile-datablock {
+  margin:0 15px .5em;
+  border-top:1px dotted #ccc;
+  padding-top:8px;
+  }
+.profile-img {display:inline;}
+.profile-img img {
+  float:left;
+  margin:0 10px 5px 0;
+  border:4px solid #ccc;
+  }
+.profile-data strong {
+  display:block;
+  }
+#profile-container p {
+  margin:0 15px .5em;
+  }
+#profile-container .profile-textblock {
+  clear:left;
+  }
+#profile-container a {
+  color:#fff;
+  }
+.profile-link a {
+  background:url("http://www.blogblog.com/rounders2/icon_profile.gif") no-repeat 0 .1em;
+  padding-left:15px;
+  font-weight:bold;
+  }
+ul.profile-datablock {
+  list-style-type:none;
+  }
+
+
+/* Sidebar Boxes
+----------------------------------------------- */
+.box {
+  background:#fff url("http://www.blogblog.com/rounders2/corners_side_top.gif") no-repeat left top;
+  margin:0 0 15px;
+  padding:10px 0 0;
+  color:#666;
+  }
+.box2 {
+  background:url("http://www.blogblog.com/rounders2/corners_side_bot.gif") no-repeat left bottom;
+  padding:0 13px 8px;
+  }
+.sidebar-title {
+  margin:0;
+  padding:0 0 .2em;
+  border-bottom:1px dotted #fa0;
+  font-size:115%;
+  line-height:1.5em;
+  color:#333;
+  }
+.box ul {
+  margin:.5em 0 1.25em;
+  padding:0 0px;
+  list-style:none;
+  }
+.box ul li {
+  background:url("http://www.blogblog.com/rounders2/icon_arrow_sm.gif") no-repeat 2px .25em;
+  margin:0;
+  padding:0 0 3px 16px;
+  margin-bottom:3px;
+  border-bottom:1px dotted #eee;
+  line-height:1.4em;
+  }
+.box p {
+  margin:0 0 .6em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  clear:both;
+  margin:0;
+  padding:15px 0 0;
+  }
+#footer div {
+  background:#710 url("http://www.blogblog.com/rounders2/corners_cap_top.gif") no-repeat left top;
+  padding:8px 0 0;
+  color:#fff;
+  }
+#footer div div {
+  background:url("http://www.blogblog.com/rounders2/corners_cap_bot.gif") no-repeat left bottom;
+  padding:0 15px 8px;
+  }
+#footer hr {display:none;}
+#footer p {margin:0;}
+#footer a {color:#fff;} 
+  </STYLE>
+
+
+</HEAD><BODY>
+<CENTER><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-7707788829454373";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="";
+google_page_url = document.location;
+google_color_border = "000000";
+google_color_bg = "F0F0F0";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></SCRIPT>
+<SCRIPT type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</SCRIPT><IFRAME name="google_ads_frame" width="728" height="90" frameborder="0" src="http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7707788829454373&dt=1120026294516&format=728x90_as&output=html&url=http%3A%2F%2Fwww.latedecember.com%2Fsites%2Fpersonal%2Fdmitchel%2F2005%2F06%2Fpython-usb.php&color_bg=F0F0F0&color_text=000000&color_link=0000FF&color_url=008000&color_border=000000&loc=http%3A%2F%2Fwww.latedecember.com%2Fsites%2Fpersonal%2Fdmitchel%2F2005%2F06%2Fpython-usb.php&cc=6&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></IFRAME>
+</CENTER>
+
+
+<DIV id="content">
+
+
+
+<DIV id="header"><DIV>
+  <H1 id="blog-title">    <A href="http://www.latedecember.com/sites/personal/dmitchel/">  Davy Mitchell
+        </A>
+  </H1>
+  <P id="description">Davy Mitchell</P>
+
+</DIV></DIV>
+
+
+
+
+
+
+<DIV id="main"><DIV id="main2"><DIV id="main3">
+
+
+    
+  <H2 class="date-header">Tuesday, June 28, 2005</H2>
+  
+
+         
+  <DIV class="post"><A name="111999030061908074"></A>
+
+     
+         
+    <H3 class="post-title">     Python USB
+    </H3>
+         
+    
+
+    <DIV class="post-body">
+      <P>      </P><DIV style="clear:both;"></DIV>Tonight I have been poking around various Python packages such as Twisted, Portable Python and various wiki engines. Lots of stuff but I didn't find quite what I was looking for. Yes I am in the middle of Spidertime but the next project idea is forming in the odd place called my mind. I used to used MS Onenote until the install messed itself up. Not a bad application. As a replacement I was considering a more general purpose database for anything I could copy and paste into it.<BR><BR>Never mind all that just found... <A href="http://tiddlywiki.com/">TiddlyWiki - a reusable non-linear personal web notebook</A>: "TiddlyWiki"<DIV style="clear:both; padding-bottom: 0.25em;"></DIV>
+    <P></P>
+
+    </DIV>
+    <P class="post-footer">      <EM>posted by Davy @ <A href="http://www.latedecember.com/sites/personal/dmitchel/2005/06/python-usb.php" title="permanent link">9:13 PM</A></EM> Â 
+
+      
+         <A class="comment-link" href="http://www.blogger.com/comment.g?blogID=3264159&postID=111999030061908074" location.href="http://www.blogger.com/comment.g?blogID=3264159&postID=111999030061908074;">0 comments</A>
+        <SPAN class="item-action"><A href="http://www.blogger.com/email-post.g?blogID=3264159&postID=111999030061908074" title="Email Post"><SPAN class="email-post-icon">Â </SPAN></A></SPAN><SPAN class="item-control admin-244824815 pid-797727963"><A style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=3264159&postID=111999030061908074&quickEdit=true" title="Edit Post"><SPAN class="quick-edit-icon">Â </SPAN></A></SPAN>
+    </P>
+
+    </DIV>
+
+  
+    
+ 
+  <DIV id="comments">
+        <A name="comments"></A>
+
+    <H4>0 Comments:</H4>
+
+    <DL id="comments-block">      
+    </DL>
+
+                <P class="comment-timestamp">    <A class="comment-link" href="http://www.blogger.com/comment.g?blogID=3264159&postID=111999030061908074">Post a Comment</A>
+    </P>
+    
+                <P style="padding-left:20px;">        <A href="http://www.latedecember.com/sites/personal/dmitchel/">&lt;&lt; Home</A>
+    </P>
+    </DIV>
+
+
+
+  
+
+
+
+
+</DIV></DIV></DIV>
+
+
+
+
+
+
+
+
+
+
+<DIV id="sidebar">
+    
+            <DIV id="profile-container"> <H2 class="sidebar-title">About Me</H2> <DL class="profile-datablock">   <DT class="profile-img"> <A href="http://www.blogger.com/profile/442260"> <IMG width="80" alt="My Photo" height="60" src="http://www.latedecember.com/common/img/davy.jpg"> </A> </DT>   <DD class="profile-data"> <STRONG>Name:</STRONG>Davy </DD>  <DD class="profile-data"> <STRONG>Location:</STRONG>United Kingdom </DD>  </DL>  <P class="profile-link"> <A href="http://www.blogger.com/profile/442260">View my complete profile</A> </P> </DIV>  
+
+  
+
+
+    
+  <DIV class="box"><DIV class="box2"><DIV class="box3">    
+        
+
+      <H2 class="sidebar-title">Previous Posts</H2>
+    <UL id="recently">    
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/06/check-for-mushroom.php">Check For Mushroom</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/06/spiders-and-dragons.php">Spiders and Dragons</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/06/no-fingerprints.php">No Fingerprints</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/05/fiddle-plone-and-zope.php">Fiddle, Plone and Zope</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/05/bach-history-and-future.php">Bach, History and Future</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/05/prophecy-news-watch-biblical-prophecy.php">Prophecy News Watch - Biblical Prophecy in the News</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2005/05/return-of-blog.php">Return of the Blog</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2003/09/blogging-has-revived-homepage.html">Blogging has revived the homepage.
+
+When the web...</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2003/09/september-19-2003-less-than-24-hours.html"> September 19, 2003: "
+Less than 24 hours after f...</A></LI>
+     
+
+        <LI><A href="http://www.latedecember.com/sites/personal/dmitchel/2003/09/lockergnome-free-technology-e-mail.html">Lockergnome - Free Technology E-mail Newsletters: ...</A></LI>
+     
+  </UL>
+    
+      <P id="powered-by"><A href="http://www.blogger.com"><IMG src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger"></A></P>
+
+        
+    </DIV></DIV></DIV>
+
+  
+
+
+
+
+</DIV>
+
+
+
+
+
+
+
+
+
+
+<DIV id="footer"><DIV><DIV><HR>
+
+
+
+  <P>Â </P>
+
+
+
+</DIV></DIV></DIV>
+
+
+
+
+
+
+
+
+
+
+</DIV>
+
+
+
+
+
+
+</BODY></HTML>_Jhttp://www.latedecember.com/sites/personal/dmitchel/2005/06/python-usb.phpYtext/html¡ÑÕ	 !_WebResourceFrameNameOø<HTML><HEAD><STYLE><!--
+.ch{cursor:pointer;cursor:hand}a.ad:link { color: #0000ff }a.ad:visited { color: #0000ff }a.ad:hover { color: #0000ff }a.ad:active { color: #0000ff }a.search:link { color: #ffffff }a.search:visited { color: #ffffff }a.search:hover { color: #ffffff }a.search:active { color: #ffffff }a.attribution:link { color: #ffffff }a.attribution:visited { color: #ffffff }a.attribution:hover { color: #ffffff }a.attribution:active { color: #ffffff }  //--></STYLE><SCRIPT><!--
+function ss(w,id) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  pha=document.getElementById(a); nhi=pha.href.indexOf("&nh=");if(nhi < 1) {phb=pha.href+"&nh=1";} pha.href=phb;}function ca(a) {  pha=document.getElementById(a); nci=pha.href.indexOf("&nc=");if(nci < 1) {phb=pha.href+"&nc=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;pha=document.getElementById(a); nbi=pha.href.indexOf("&nb=");if(nbi < 1) {phb=pha.href+"&nb=1";} pha.href=phb;top.location.href=document.getElementById(a).href;}}
+//-->
+</SCRIPT></HEAD><BODY bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><TABLE width="728" height="90" cellspacing="1" cellpadding="0" border="0" bgcolor="#000000"><TBODY><TR><TD><TABLE width="726" height="88" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0"><TBODY><TR><TD width="" height=""><TABLE width="726" height="76" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0"><TBODY><TR><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f0f0f0" id="taw0" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.DatingDirect.com','aw0')" onmouseover="ss('go to www.DatingDirect.com','aw0')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw0" target="_top" href="/pagead/iclk?sa=l&ai=BMuHLfD7CQur2O4GCaJjW6PEJm_njCs-ugaUBwI23AfCiBBABGAEg19OZAigEQIoWSJM5sgEUd3d3LmxhdGVkZWNlbWJlci5jb226AQk3Mjh4OTBfYXPIAQHaAUpodHRwOi8vd3d3LmxhdGVkZWNlbWJlci5jb20vc2l0ZXMvcGVyc29uYWwvZG1pdGNoZWwvMjAwNS8wNi9weXRob24tdXNiLnBocOgBAQ&num=1&adurl=http://eu.decdna.net/n/14200/7145/www.datingdirect.com/a3ad28f900250300000000080000876b03d64ff900583bba00000000000000000000000100/i/c%3F0&client=ca-pub-7707788829454373" onfocus="ss('go to www.DatingDirect.com','aw0')" onclick="ha('aw0')" onmouseover="return ss('go to www.DatingDirect.com','aw0')" onmouseout="cs()"><B>Adult Personals UK</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Meet singles in your area - browse our huge database of UK members! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f0f0f0" id="taw1" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.girlsdateforfree.com','aw1')" onmouseover="ss('go to www.girlsdateforfree.com','aw1')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw1" target="_top" href="/pagead/iclk?adurl=http://eu.decdna.net/n/7739/7753/www.girlsdateforfree.com/a14213eb00250300000000080000928105d47ffd00583bba00000000000000000000000100/i/c%3F0%26pq%3D%252findex%252ecfm%253fsc%253d247search%2526se%253dgoogle%2526kg%253dother%2526kw%253dpersonal&sa=l&ai=BnmXPfD7CQur2O4GCaJjW6PEJhbLiCp2SqaUBwI23AaDvDxACGAIg19OZAigEQIoWSJE5oAGTpar-A7IBFHd3dy5sYXRlZGVjZW1iZXIuY29tugEJNzI4eDkwX2FzyAEB2gFKaHR0cDovL3d3dy5sYXRlZGVjZW1iZXIuY29tL3NpdGVzL3BlcnNvbmFsL2RtaXRjaGVsLzIwMDUvMDYvcHl0aG9uLXVzYi5waHDoAQE&num=2&client=ca-pub-7707788829454373" onfocus="ss('go to www.girlsdateforfree.com','aw1')" onclick="ha('aw1')" onmouseover="return ss('go to www.girlsdateforfree.com','aw1')" onmouseout="cs()"><B>Personal</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Meet 1000s of exciting singles now Girls go free, guys are welcome! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f0f0f0" id="taw2" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.pocado.com','aw2')" onmouseover="ss('go to www.pocado.com','aw2')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw2" target="_top" href="/pagead/iclk?adurl=http://eu.decdna.net/n/7739/7741/www.pocado.com/3c58a88d00250300000000080000b59905a919cf00583bba00000000000000000000000100/i/c%3F0%26pq%3D%252findex%252ecfm%253fsc%253d247search%2526se%253dgoogle%2526kg%253dother%2526kw%253dpersonal&sa=l&ai=BX3wafD7CQur2O4GCaJjW6PEJpJWZCrqg0KABwI23AZChDxADGAMg19OZAigEQIoWSJA5oAGKu6n-A7IBFHd3dy5sYXRlZGVjZW1iZXIuY29tugEJNzI4eDkwX2FzyAEB2gFKaHR0cDovL3d3dy5sYXRlZGVjZW1iZXIuY29tL3NpdGVzL3BlcnNvbmFsL2RtaXRjaGVsLzIwMDUvMDYvcHl0aG9uLXVzYi5waHDoAQE&num=3&client=ca-pub-7707788829454373" onfocus="ss('go to www.pocado.com','aw2')" onclick="ha('aw2')" onmouseover="return ss('go to www.pocado.com','aw2')" onmouseout="cs()"><B>Personal</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Meet 1000s of singles near you Quality online dating and advice </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD width="1"><IMG alt="" height="1" width="1"></TD><TD><TABLE border="0" cellpadding="2" cellspacing="0" width="179"><TBODY><TR><TD bgcolor="#f0f0f0" id="taw3" class="ch" width="179" height="76" align="left" valign="top" onfocus="ss('go to www.meetic.co.uk','aw3')" onmouseover="ss('go to www.meetic.co.uk','aw3')" onmouseout="cs()" onclick="ga(this,event)"><FONT style="line-height:12px; font-size:11px; font-family:verdana,arial,sans-serif;"><A class="ad" id="aw3" target="_top" href="/pagead/iclk?adurl=http://www.meetic.co.uk/signup/index.php%3Fmtcmk%3D085000&sa=l&ai=BCb7mfD7CQur2O4GCaJjW6PEJ35-zCO35k7kBwI23AZD0HRAEGAQg19OZAigEQIoWSJA5oAH06Pj-A7IBFHd3dy5sYXRlZGVjZW1iZXIuY29tugEJNzI4eDkwX2FzyAEB2gFKaHR0cDovL3d3dy5sYXRlZGVjZW1iZXIuY29tL3NpdGVzL3BlcnNvbmFsL2RtaXRjaGVsLzIwMDUvMDYvcHl0aG9uLXVzYi5waHDoAQE&num=4&client=ca-pub-7707788829454373" onfocus="ss('go to www.meetic.co.uk','aw3')" onclick="ha('aw3')" onmouseover="return ss('go to www.meetic.co.uk','aw3')" onmouseout="cs()"><B>Personal on Meetic</B></A></FONT><BR><FONT style="line-height:12px; font-size:10px; font-family:verdana,arial,sans-serif; color:#000000">Millions of singles The biggest dating site in Europe! </FONT></TD></TR></TBODY></TABLE></TD><TD width="1"><IMG alt="" height="1" width="1"></TD></TR></TBODY></TABLE></TD></TR><TR><TD width="726" height="10" align="right" bgcolor="#000000"><A class="attribution" href="http://services.google.com/feedback/abg?url=http://www.latedecember.com/sites/personal/dmitchel/2005/06/python-usb.php&hl=en&client=ca-pub-7707788829454373&adU=www.DatingDirect.com&adT=Adult+Personals+UK&adU=www.girlsdateforfree.com&adT=Personal&adU=www.pocado.com&adT=Personal&adU=www.meetic.co.uk&adT=Personal+on+Meetic&done=1" target="_blank"><SCRIPT><!--
+nw='#ffffff';nw=nw.slice(1);if('')document.write('<img border=0 align=left height=13 width=13 src="http://pagead2.googlesyndication.com/pagead/'+nw+'_new_ico.gif" alt=""/>');//--></SCRIPT><FONT style="line-height:;font-size:10px; font-family:verdana,arial,sans-serif;">Ads by Google</FONT></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>_google_ads_frame_úhttp://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7707788829454373&dt=1120026294516&format=728x90_as&output=html&url=http%3A%2F%2Fwww.latedecember.com%2Fsites%2Fpersonal%2Fdmitchel%2F2005%2F06%2Fpython-usb.php&color_bg=F0F0F0&color_text=000000&color_link=0000FF&color_url=008000&color_border=000000&loc=http%3A%2F%2Fwww.latedecember.com%2Fsites%2Fpersonal%2Fdmitchel%2F2005%2F06%2Fpython-usb.php&cc=6&u_h=854&u_w=1280&u_ah=786&u_aw=1280&u_cd=32&u_tz=60&u_his=1&u_java=true&u_nplug=8&u_nmime=124   ! 3 I M V t † • « ±'l'¦'¸'¿V­VßVêVñ\_\\™\¢\¨——\—f—h—k—v—·‰·œ             "              ¹š

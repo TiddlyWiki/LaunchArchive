@@ -1,0 +1,211 @@
+bplist00—_WebMainResource‘	
+_WebResourceTextEncodingName_WebResourceData^WebResourceURL_WebResourceMIMETypeUUTF-8O?“<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://gmpg.org/xfn/1"><TITLE>Surf*Mind*Musings ¬ª Pushing the back button on my blog</TITLE>
+        
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <META name="generator" content="WordPress 1.5.1.3">
+        
+        <STYLE type="text/css" media="screen">
+                @import url( http://surfmind.com/muzings/wp-content/themes/bionicjive/style.css );
+        </STYLE></HEAD><BODY bgcolor="#efefef" leftmargin="0" topmargin="0" marginleft="0" margintop="0">
+<TABLE width="845" cellpadding="0" cellspacing="0"><TBODY><TR><TD valign="top"><A href="http://surfmind.com/muzings"><H1 style="padding:10px;">Surf * Mind * Musings</H1></A>
+</TD><TD align="right" valign="bottom">
+</TD></TR></TBODY></TABLE>
+<TABLE width="100%" cellpadding="10" cellspacing="0"><TBODY><TR><TD width="60%" valign="top"> <DIV class="post">
+  <TABLE width="90%" style="border:1px dashed #cccccc;" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff">  <DIV class="title" id="post-52"><A class="titleLink" href="http://surfmind.com/muzings/?p=52" rel="bookmark">Pushing the back button on my blog</A>
+  </DIV>
+  Posted on    07.24.05 by andyed @ 9:59 am 
+   <DIV class="storycontent">     <P>It‚Äôs been a while eh?  Nifty new wordpress install here.  We‚Äôll see how it goes.  Old news here, but these are some of the things that have tipped the scales between dedicating energy elsewhere and participating in the generative &amp; evolving technical commons.</P>
+        <UL>        <LI>StartPlane: An <A href="http://www.startplane.com/" title="(though I wish he'd link to the source categories back at del.icio.us)">exploratory del.icio.us zeitgeist</A> </LI>
+        <LI><A href="http://www.twingine.com/">Twingine</A> is a frame based meta-search engine.</LI>
+        </UL>
+        <P>The <A href="http://tiddlywiki.com/">Tiddly Wiki</A> deserves a bit more detail.  This is a javascript wiki *application*.  Yes, it edits and saves itself.  This means that you have to load it from file:// not http://.  </P>
+        <P>It‚Äôs a rapid-response, personal, associative/referential external working memory.  Thus, it‚Äôs default state is for an audience of 1.  That could be changed though with a presentation layer customization that showed only the read-only UI.  This could be a great way to maintain interactive readmes and FAQs, not to mention the fun, rapid response *web* interface.  It‚Äôd be fun to revive my <A href="/lab/hive/about.cfm">hierarchical browsing UI </A>within this app.
+</P>
+   </DIV>
+     <BR>Filed under: <A href="http://surfmind.com/muzings/index.php?cat=1" title="View all posts in General" rel="category tag">General</A> and <A href="http://surfmind.com/muzings/index.php?cat=5" title="View all posts in Visualization" rel="category tag">Visualization</A> and <A href="http://surfmind.com/muzings/index.php?cat=12" title="View all posts in DHTML" rel="category tag">DHTML</A> and <A href="http://surfmind.com/muzings/index.php?cat=15" title="View all posts in Search" rel="category tag">Search</A> 
+      <BR>Comments: <TABLE width="100%" cellpadding="0" cellspacing="0"><TBODY><TR><TD align="left">
+      
+
+
+   
+<H2 id="comments">No Comments 
+        <A href="#postcomment" title="Leave a comment">¬ª</A>
+</H2>
+
+        <P>No comments yet.</P>
+
+<P><A href="http://surfmind.com/muzings/?feed=rss2&p=52"><ABBR title="Really Simple Syndication">RSS</ABBR> feed for comments on this post.</A> 
+        <A href="http://surfmind.com/muzings/wp-trackback.php?p=52" rel="trackback">TrackBack <ABBR title="Uniform Resource Identifier">URI</ABBR></A>
+</P>
+
+<H2 id="postcomment">Leave a comment</H2>
+
+<P>Line and paragraph breaks automatic, e-mail address never displayed, <ACRONYM title="Hypertext Markup Language">HTML</ACRONYM> allowed: <CODE>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </CODE></P>
+
+<FORM action="http://surfmind.com/muzings/wp-comments-post.php" method="post" id="commentform">
+        <P>          <INPUT type="text" name="author" id="author" class="textarea" value="" size="28" tabindex="1">
+           <LABEL for="author">Name</LABEL> (required)    <INPUT type="hidden" name="comment_post_ID" value="52">
+        <INPUT type="hidden" name="redirect_to" value="/muzings/index.php?p=52">
+        </P>
+
+        <P>          <INPUT type="text" name="email" id="email" value="" size="28" tabindex="2">
+           <LABEL for="email">E-mail</LABEL> (required)    </P>
+
+        <P>          <INPUT type="text" name="url" id="url" value="" size="28" tabindex="3">
+           <LABEL for="url"><ACRONYM title="Uniform Resource Identifier">URI</ACRONYM></LABEL>
+        </P>
+
+        <P>          <LABEL for="comment">Your Comment</LABEL>
+        <BR>
+          <TEXTAREA name="comment" id="comment" cols="50" rows="4" tabindex="4"></TEXTAREA>        </P>
+
+        <P>          <INPUT name="submit" id="submit" type="submit" tabindex="5" value="Say It!">
+        </P>
+        </FORM>
+
+</TD></TR></TBODY></TABLE>
+</TD></TR></TBODY></TABLE>
+<BR>
+  
+<TABLE width="60%" cellpadding="0" cellspacing="0"><TBODY><TR><TD align="left"></TD><TD align="right"></TD></TR></TBODY></TABLE>
+
+
+</DIV></TD><TD valign="top">
+<TABLE width="335" cellpadding="5" cellspacing="0" style="border:1px dashed #cccccc;"><TBODY><TR><TD bgcolor="#ffffff">This is the blog of Andy Edmonds, a HCI professional, web hacker, and cognitive science enthusiast.
+I have a <A href="http://jodi.ecs.soton.ac.uk/Articles/v05/i01/Edmonds/">blog manifesto</A> and my own <A href="/web">search engine</A>.  These days I work for <SPAN>M</SPAN>SN Search and the opinions here are expressly mine.
+<BR>
+<BR>
+
+
+<TABLE width="335" cellpadding="0" cellspacing="0"><TBODY><TR><TD width="50%" valign="top"><TABLE width="40%" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff" style="border: 1px dashed #cccccc;" valign="top"><B>Main Menu</B><BR>
+<A href="http://surfmind.com/muzings/?feed=rss2" title="Syndicate this site using RSS"><ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A><BR>
+
+<A href="http://surfmind.com/muzings">Home</A><BR>
+                <A href="http://surfmind.com/muzings/index.php?cat=1" title="View all posts filed under General">General</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=2" title="View all posts filed under Mozilla">Mozilla</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=4" title="View all posts filed under AddOns">AddOns</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=3" title="View all posts filed under HCI">HCI</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=16" title="View all posts filed under Cognitive Psy">Cognitive Psy</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=5" title="View all posts filed under Visualization">Visualization</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=6" title="View all posts filed under Blogging">Blogging</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=8" title="View all posts filed under WebDev">WebDev</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=9" title="View all posts filed under ColdFusion">ColdFusion</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=11" title="View all posts filed under Flash">Flash</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=12" title="View all posts filed under DHTML">DHTML</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=10" title="View all posts filed under Academic">Academic</A><BR>
+        <A href="http://surfmind.com/muzings/index.php?cat=15" title="View all posts filed under Search">Search</A><BR>
+</TD></TR></TBODY></TABLE>
+
+<BR>
+
+<TABLE width="40%" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff" style="border: 1px dashed #cccccc;">
+<FORM id="searchform" method="get" action=""><B>Search</B><BR>
+ <INPUT type="text" class="input" name="s" id="search" size="15" onfocus="form.s.value=""">
+</FORM>
+<TABLE width="100%" cellpadding="0" cellspacing="0"><TBODY><TR><TD></TD></TR></TBODY></TABLE>
+</TD></TR></TBODY></TABLE>
+
+<BR>
+<TABLE width="40%" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff" style="border: 1px dashed #cccccc;">
+<DIV class="normalText">
+</DIV>
+        <LI id="linkcat-7"><H2>BlogRoll</H2>
+        <UL><LI><A href="http://web-graphics.com">Web Graphics Collective</A></LI>
+
+        </UL>
+</LI>
+        <LI id="linkcat-1"><H2>Links</H2>
+        <UL><LI><A href="http://surfmind.com/musings/2003/">03</A></LI>
+<LI><A href="http://surfmind.com/musings/2004/">04</A></LI>
+<LI><A href="http://www.surfmind.com/musings/archives2/archives.cfm">99-02</A></LI>
+<LI><A href="http://surfmind.com/coldfusion/">Old Cold Fusion Blog</A></LI>
+<LI><A href="http://surfmind.com/musings/">Old Musings Home</A></LI>
+<LI><A href="http://surfmind.com/web/">Surf*Mind*Web</A></LI>
+
+        </UL>
+</LI>
+        <LI id="linkcat-6"><H2>MS</H2>
+        <UL><LI><A href="http://selberg.org/">Erik Selberg</A></LI>
+<LI><A href="http://blogs.msdn.com/msnsearch">MSN Search Weblog</A></LI>
+<LI><A href="http://spaces.msn.com/members/andyed">My spaces blog</A></LI>
+<LI><A href="http://spaces.msn.com/members/siteexperts/PersonalSpace.aspx" rel="co-worker">SiteExperts</A></LI>
+
+        </UL>
+</LI>
+        <LI id="linkcat-3"><H2>Online Aggregators</H2>
+        <UL><LI><A href="http://www.thedesignexperience.org/mynews/26202?">Design Experience</A></LI>
+<LI><A href="http://blogs.law.harvard.edu/vgondi/Aggregator/">Design Media</A></LI>
+
+        </UL>
+</LI>
+</TD></TR></TBODY></TABLE>
+
+
+
+<BR>
+<TABLE width="40%" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff" style="border: 1px dashed #cccccc;">
+<B>Syndication</B><BR>
+<A href="http://surfmind.com/muzings/?feed=rss2" title="Syndicate this site using RSS"><ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A><BR>
+<A href="http://surfmind.com/muzings/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments <ABBR title="Really Simple Syndication">RSS</ABBR> 2.0</A><BR>
+<A href="http://wordpress.org/" title="Powered by WordPress; state-of-the-art semantic personal publishing platform.">WordPress</A>
+</TD></TR></TBODY></TABLE>
+<BR>
+
+<TABLE width="40%" cellpadding="5" cellspacing="0"><TBODY><TR><TD bgcolor="#ffffff" style="border: 1px dashed #cccccc;">
+<B>Credits</B><BR>
+Proudly powered by <A href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><STRONG>WordPress</STRONG></A>.
+
+Theme by <A href="http://www.thoughtmechanics.com/">Theron Parlin</A>
+</TD></TR></TBODY></TABLE>
+<BR>
+
+
+</TD><TD width="50%" valign="top" align="right">
+
+<TABLE width="15%" cellpadding="5" cellspacing="0"><TBODY><TR><TD align="left" bgcolor="#ffffff" style="border: 1px dashed #cccccc;width:98%;">
+<B>Archives</B><BR>
+        <A href="http://surfmind.com/muzings/?m=200507" title="July 2005">July 2005</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200504" title="April 2005">April 2005</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200503" title="March 2005">March 2005</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200502" title="February 2005">February 2005</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200501" title="January 2005">January 2005</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200412" title="December 2004">December 2004</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200411" title="November 2004">November 2004</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200410" title="October 2004">October 2004</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200409" title="September 2004">September 2004</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200408" title="August 2004">August 2004</A><BR>
+        <A href="http://surfmind.com/muzings/?m=200407" title="July 2004">July 2004</A><BR>
+</TD></TR></TBODY></TABLE>
+
+<BR>
+<TABLE width="15%" cellpadding="5" cellspacing="0"><TBODY><TR><TD align="left" bgcolor="#ffffff" style="border: 1px dashed #cccccc;width:98%;">
+<B>Recent Entries</B><BR>
+<A href="http://surfmind.com/muzings/?p=56" rel="bookmark" title="Permanent Link: Today's del.icio.us bookmarks">Today's del.icio.us bookmarks</A><BR><A href="http://surfmind.com/muzings/?p=55" rel="bookmark" title="Permanent Link: SharpMT compatible with Wordpress">SharpMT compatible with Wordpress</A><BR><A href="http://surfmind.com/muzings/?p=52" rel="bookmark" title="Permanent Link: Pushing the back button on my blog">Pushing the back button on my blog</A><BR><A href="http://surfmind.com/muzings/?p=50" rel="bookmark" title="Permanent Link: Interaction Hijinx & Ajax Implementation">Interaction Hijinx &amp; Ajax Implementation</A><BR><A href="http://surfmind.com/muzings/?p=49" rel="bookmark" title="Permanent Link: The Dock Does it All Wrong">The Dock Does it All Wrong</A><BR><A href="http://surfmind.com/muzings/?p=48" rel="bookmark" title="Permanent Link: CHI 2005">CHI 2005</A><BR><A href="http://surfmind.com/muzings/?p=47" rel="bookmark" title="Permanent Link: Settling for Just-Good-Enough">Settling for Just-Good-Enough</A><BR><A href="http://surfmind.com/muzings/?p=46" rel="bookmark" title="Permanent Link: Moving Forward with Folksonomies">Moving Forward with Folksonomies</A><BR><A href="http://surfmind.com/muzings/?p=45" rel="bookmark" title="Permanent Link: Expressive Typography in UI">Expressive Typography in UI</A><BR><A href="http://surfmind.com/muzings/?p=43" rel="bookmark" title="Permanent Link: Concentration hampers simple tasks">Concentration hampers simple tasks</A><BR><A href="http://surfmind.com/muzings/?p=42" rel="bookmark" title="Permanent Link: NIMIQ vs Doppler: Windows Audio Blog Aggregation">NIMIQ vs Doppler: Windows Audio Blog Aggregation</A><BR><A href="http://surfmind.com/muzings/?p=41" rel="bookmark" title="Permanent Link: LinkFest: Del.ico.us Excerpt enhanced with McSearchPreview">LinkFest: Del.ico.us Excerpt enhanced with McSearchPreview</A><BR><A href="http://surfmind.com/muzings/?p=39" rel="bookmark" title="Permanent Link: Doron nailed it...">Doron nailed it...</A><BR><A href="http://surfmind.com/muzings/?p=36" rel="bookmark" title="Permanent Link: WinHEC 2004 Longhorn Prototypes Gallery">WinHEC 2004 Longhorn Prototypes Gallery</A><BR><A href="http://surfmind.com/muzings/?p=34" rel="bookmark" title="Permanent Link: blogathyant: Feed reading belongs in the browser">blogathyant: Feed reading belongs in the browser</A><BR> 
+</TD></TR></TBODY></TABLE>
+
+<BR>
+<BR>
+<H2>Best of the Blog</H2>
+        <P><A href="http://www.surfmind.com/musings/archives2/2000_08_06_archives.cfm">08/00 Customization Drawbacks</A><BR>
+<A href="http://www.surfmind.com/musings/archives2/2000_12_24_archives.cfm">12/00 Fish-eye Craigslist (IE)</A><BR>
+
+<A href="http://www.surfmind.com/musings/archives2/2001_07_08_archives.cfm">07/01 Smart webserver log analysis</A><BR>
+<A href="http://www.surfmind.com/musings/archives2/2002_03_31_archives.cfm">03/02 Redefining the Tree Widget</A><BR>
+<A href="http://www.surfmind.com/musings/2003/03/17/">03/03 Junkie: Adaptive Freshness</A><BR>
+<A href="http://www.surfmind.com/musings/2003/04/20/">04/03 Cascading Fish-eye Menus</A><BR>
+<A href="http://www.surfmind.com/musings/2003/05/11/">05/03 Browser Maps (dhtml)</A></P>
+        <P><A href="http://www.surfmind.com/musings/2003/10/31/">01/03 GOMS in Bugzilla.mozilla?</A></P>
+        <P><A href="http://www.surfmind.com/musings/2003/10/11/">10/03 CSS Link Markers</A><BR>
+<A href="http://www.surfmind.com/musings/2004/01/05/">01/04 Blog Mountain</A><BR>
+
+<A href="http://www.surfmind.com/musings/2003/04/21/">03/04 Personal Web Information Manager</A></P>
+        <P><A href="http://www.surfmind.com/musings/2004/04/11/">04/04 Mousing Behavior in Windows</A><BR>
+<A href="http://www.surfmind.com/musings/2004/06/24/index.cfm">06/04 DHTML Multi-Select Widget</A></P>
+   
+<BR>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></BODY></HTML>_!http://surfmind.com/muzings/?p=52Ytext/html    & D V e { Å@W@{                           @Ö
